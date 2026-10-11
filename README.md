@@ -4,7 +4,7 @@
 
 基于 **Phaser 4 + TypeScript + Vite**，同时提供 **Capacitor Android** 工程。
 
-![小羊快跑游戏画面](docs/images/gameplay.png)
+![小羊快跑主菜单](docs/images/menu.jpg)
 
 ## 游戏内容
 
@@ -18,9 +18,23 @@
 - **小邮局与送信旅程**：阅读欢迎信和晚安信，体验「把晚安送到山坡上」的送信路线。
 - **本地存档**：保存最高分、星星、金币、皮肤、收藏、成就和阅读记录。
 
-![牧场风景手账](docs/images/postcards.png)
+## 界面预览
 
-预览图来自项目内的浏览器验收截图。
+**加载画面**
+
+![小羊快跑加载画面](docs/images/loading.jpg)
+
+**给催眠羊留的小饭桌**
+
+![小饭桌互动界面](docs/images/picnic.jpg)
+
+**小羊衣橱**
+
+![小羊衣橱与皮肤选择](docs/images/wardrobe.jpg)
+
+**本局结算**
+
+![本局得分与金币结算](docs/images/result.jpg)
 
 ## 操作
 
