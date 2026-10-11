@@ -1,0 +1,76 @@
+{
+  "date": "2026-10-10",
+  "mode": "built-in image_gen",
+  "intent": "precise-object-edit",
+  "expectedCatalogCount": 22,
+  "outputDirectory": "assets/skins/runtime-v3/",
+  "reviewDirectory": "docs/skin-review/2026-10-10-theme-batch/",
+  "referencePaths": [
+    "assets/skins/runtime-v1/white-sheet.png",
+    "assets/skins/generated-v3/theme-concept.png"
+  ],
+  "conceptPrompt": "Use case: stylized-concept. Asset: four new Sheep Run cosmetic skin designs. Reference image 1 is the existing game's 15-pose sheep sheet; use its SAME sheep anatomy, cream-peach face, small dark-brown hooves and cute dark eyes, side-view facing right, round quadrupedal body. Create exactly FOUR isolated idle sheep in ONE horizontal row on a TRUE transparent background, equal size, equal grounded feet baseline, comfortably separated. No text. Left to right: 1 Peach Sheep: pale muted peach-pink fluffy wool, warm cream face, a tiny soft sage leaf attached to its forehead wool tuft, no other accessories. 2 Milk Tea Sheep: muted milky beige wool, small cocoa-brown curls at the wool edges, warm caramel ears and cream face, a little creamy forehead curl, no hat or accessories. 3 Cloud Sheep: mostly ivory-white wool with subtle powder-blue scallops at the edges, pale sky-blue ear tips and normal peach face, cloud-shaped wool tuft attached to the head, no floating clouds or accessories. 4 Bear Hat Sheep: regular cream-wool sheep wearing ONLY a small cocoa-beige soft bear-eared cap, two round bear ears joined to the hat, cream brim, no clothes, scarf or bow. Style must match the reference: flat 2D pastoral pixel art, crisp stepped dark brown outlines and 2-3 flat shades per color, no 3D volume or glossy gradients. Preserve the original body's scale/proportions and normal eyes. NO clothes, dress, pajamas, collar, bell, stars, moons, spirals, effects, scenery, ground shadow, text or watermark. Every leaf, curl and hat is attached to its own sheep, no detached objects. Exactly four sheep, one row, equal scale; transparent margin around all silhouettes.",
+  "skins": [
+    {
+      "id": "peach",
+      "name": "蜜桃羊",
+      "cost": 80,
+      "preview": 16770005,
+      "palette": {
+        "wool": "#f7d4c2",
+        "woolShade": "#dda998",
+        "face": "#eeb081"
+      },
+      "design": "Use ONLY the FIRST (leftmost) sheep from image 2: muted pale peach-pink fluffy wool, warm cream-peach face and cocoa hooves, a tiny soft sage-green double leaf joined by its stem to the forehead wool tuft. The leaf is small and attached, not floating; no other accessories. Keep the same pale peach color and leaf design in all 15 poses.",
+      "prompt": "Use case: precise-object-edit. Asset: Sheep Run gameplay skin sprite sheet. Image 1 is the original sheep pose, silhouette and animation-order reference. Image 2 is a four-design concept strip. Create exactly ONE 15-pose sheet of the specified single skin. Keep the sheep's original quadrupedal body, cream-peach face, dark brown hooves, normal cute dark eyes, head and body proportions, facing RIGHT in side view. Match image 1's flat pastoral pixel art, crisp stepped dark brown outline, 2-3 flat color shades, NO 3D volume or glossy lighting. Do not add clothes, collars, bells, bows, stars, moons, floating effects or scenery. Exactly FIVE columns by THREE rows with equal scale and generous transparent gaps between every complete sprite, all silhouettes at least 18 pixels away from each cell's edges. Row 1: idle, running contact, running passing, running extended, running recovery. Row 2: jumping tucked legs, falling legs down, hit/dizzy compressed, dash extended, lying fallen. Row 3: second idle sleepy smile, two additional distinct running leg poses, second dash, settled lying fallen. Preserve the pose shapes and grounded feet baseline from image 1, same scale in every frame, fallen sheep must not enlarge. All accessories stay attached to the sheep and follow the head in every pose including fallen. NO text, labels, ground shadow, grid, watermark or stray objects. TRUE transparent background. Exactly 15 separated sprite characters, no extra poses; preferably 1280x768. Skin design: Use ONLY the FIRST (leftmost) sheep from image 2: muted pale peach-pink fluffy wool, warm cream-peach face and cocoa hooves, a tiny soft sage-green double leaf joined by its stem to the forehead wool tuft. The leaf is small and attached, not floating; no other accessories. Keep the same pale peach color and leaf design in all 15 poses.",
+      "source": "assets/skins/generated-v3/peach-source.png",
+      "runtime": "assets/skins/runtime-v3/peach-sheet.png"
+    },
+    {
+      "id": "milktea",
+      "name": "奶茶羊",
+      "cost": 80,
+      "preview": 15785924,
+      "palette": {
+        "wool": "#e6cba5",
+        "woolShade": "#bc956f",
+        "face": "#eeb081"
+      },
+      "design": "Use ONLY the SECOND sheep from image 2: milky beige/caramel wool, small cocoa curl-shaped wool markings around the lower fluff, a soft creamy forehead curl, warm caramel ears, normal cream-peach face and cocoa hooves. No hat and no accessories. Keep these muted cream/beige colors and wool markings consistent across all 15 poses.",
+      "prompt": "Use case: precise-object-edit. Asset: Sheep Run gameplay skin sprite sheet. Image 1 is the original sheep pose, silhouette and animation-order reference. Image 2 is a four-design concept strip. Create exactly ONE 15-pose sheet of the specified single skin. Keep the sheep's original quadrupedal body, cream-peach face, dark brown hooves, normal cute dark eyes, head and body proportions, facing RIGHT in side view. Match image 1's flat pastoral pixel art, crisp stepped dark brown outline, 2-3 flat color shades, NO 3D volume or glossy lighting. Do not add clothes, collars, bells, bows, stars, moons, floating effects or scenery. Exactly FIVE columns by THREE rows with equal scale and generous transparent gaps between every complete sprite, all silhouettes at least 18 pixels away from each cell's edges. Row 1: idle, running contact, running passing, running extended, running recovery. Row 2: jumping tucked legs, falling legs down, hit/dizzy compressed, dash extended, lying fallen. Row 3: second idle sleepy smile, two additional distinct running leg poses, second dash, settled lying fallen. Preserve the pose shapes and grounded feet baseline from image 1, same scale in every frame, fallen sheep must not enlarge. All accessories stay attached to the sheep and follow the head in every pose including fallen. NO text, labels, ground shadow, grid, watermark or stray objects. TRUE transparent background. Exactly 15 separated sprite characters, no extra poses; preferably 1280x768. Skin design: Use ONLY the SECOND sheep from image 2: milky beige/caramel wool, small cocoa curl-shaped wool markings around the lower fluff, a soft creamy forehead curl, warm caramel ears, normal cream-peach face and cocoa hooves. No hat and no accessories. Keep these muted cream/beige colors and wool markings consistent across all 15 poses.",
+      "source": "assets/skins/generated-v3/milktea-source.png",
+      "runtime": "assets/skins/runtime-v3/milktea-sheet.png"
+    },
+    {
+      "id": "cloud",
+      "name": "云朵羊",
+      "cost": 80,
+      "preview": 14937842,
+      "palette": {
+        "wool": "#f4f0df",
+        "woolShade": "#b4cddb",
+        "face": "#eeb081"
+      },
+      "design": "Use ONLY the THIRD sheep from image 2: mostly ivory-white cloud-fluffy wool with subtle powder-blue scallops at the wool edges, pale blue ear tips, one cloud-shaped wool tuft attached on the forehead, a normal peach face and cocoa hooves. It is a solid sheep silhouette, no floating clouds, no hat or accessories. Keep the ivory/powder-blue colors across all 15 poses.",
+      "prompt": "Use case: precise-object-edit. Asset: Sheep Run gameplay skin sprite sheet. Image 1 is the original sheep pose, silhouette and animation-order reference. Image 2 is a four-design concept strip. Create exactly ONE 15-pose sheet of the specified single skin. Keep the sheep's original quadrupedal body, cream-peach face, dark brown hooves, normal cute dark eyes, head and body proportions, facing RIGHT in side view. Match image 1's flat pastoral pixel art, crisp stepped dark brown outline, 2-3 flat color shades, NO 3D volume or glossy lighting. Do not add clothes, collars, bells, bows, stars, moons, floating effects or scenery. Exactly FIVE columns by THREE rows with equal scale and generous transparent gaps between every complete sprite, all silhouettes at least 18 pixels away from each cell's edges. Row 1: idle, running contact, running passing, running extended, running recovery. Row 2: jumping tucked legs, falling legs down, hit/dizzy compressed, dash extended, lying fallen. Row 3: second idle sleepy smile, two additional distinct running leg poses, second dash, settled lying fallen. Preserve the pose shapes and grounded feet baseline from image 1, same scale in every frame, fallen sheep must not enlarge. All accessories stay attached to the sheep and follow the head in every pose including fallen. NO text, labels, ground shadow, grid, watermark or stray objects. TRUE transparent background. Exactly 15 separated sprite characters, no extra poses; preferably 1280x768. Skin design: Use ONLY the THIRD sheep from image 2: mostly ivory-white cloud-fluffy wool with subtle powder-blue scallops at the wool edges, pale blue ear tips, one cloud-shaped wool tuft attached on the forehead, a normal peach face and cocoa hooves. It is a solid sheep silhouette, no floating clouds, no hat or accessories. Keep the ivory/powder-blue colors across all 15 poses.",
+      "source": "assets/skins/generated-v3/cloud-source.png",
+      "runtime": "assets/skins/runtime-v3/cloud-sheet.png"
+    },
+    {
+      "id": "bearcap",
+      "name": "小熊帽羊",
+      "cost": 80,
+      "preview": 15062459,
+      "palette": {
+        "wool": "#f4ebd8",
+        "woolShade": "#c5b4a0",
+        "face": "#eeb081",
+        "hat": "#b99264"
+      },
+      "design": "Use ONLY the FOURTH (rightmost) sheep from image 2: the original cream-wool body wearing ONLY a small cocoa-beige soft bear-eared cap. Two round ears are joined to the cap, tiny dark brown ear centers, cream brim. The cap stays small and follows the head in every pose. Normal cute dark brown sheep eyes and peach face, not a bear face. No sleeping cap, no clothes or other accessories.",
+      "prompt": "Use case: precise-object-edit. Asset: Sheep Run gameplay skin sprite sheet. Image 1 is the original sheep pose, silhouette and animation-order reference. Image 2 is a four-design concept strip. Create exactly ONE 15-pose sheet of the specified single skin. Keep the sheep's original quadrupedal body, cream-peach face, dark brown hooves, normal cute dark eyes, head and body proportions, facing RIGHT in side view. Match image 1's flat pastoral pixel art, crisp stepped dark brown outline, 2-3 flat color shades, NO 3D volume or glossy lighting. Do not add clothes, collars, bells, bows, stars, moons, floating effects or scenery. Exactly FIVE columns by THREE rows with equal scale and generous transparent gaps between every complete sprite, all silhouettes at least 18 pixels away from each cell's edges. Row 1: idle, running contact, running passing, running extended, running recovery. Row 2: jumping tucked legs, falling legs down, hit/dizzy compressed, dash extended, lying fallen. Row 3: second idle sleepy smile, two additional distinct running leg poses, second dash, settled lying fallen. Preserve the pose shapes and grounded feet baseline from image 1, same scale in every frame, fallen sheep must not enlarge. All accessories stay attached to the sheep and follow the head in every pose including fallen. NO text, labels, ground shadow, grid, watermark or stray objects. TRUE transparent background. Exactly 15 separated sprite characters, no extra poses; preferably 1280x768. Skin design: Use ONLY the FOURTH (rightmost) sheep from image 2: the original cream-wool body wearing ONLY a small cocoa-beige soft bear-eared cap. Two round ears are joined to the cap, tiny dark brown ear centers, cream brim. The cap stays small and follows the head in every pose. Normal cute dark brown sheep eyes and peach face, not a bear face. No sleeping cap, no clothes or other accessories.",
+      "source": "assets/skins/generated-v3/bearcap-source.png",
+      "runtime": "assets/skins/runtime-v3/bearcap-sheet.png"
+    }
+  ]
+}

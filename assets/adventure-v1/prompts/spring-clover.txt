@@ -1,0 +1,6 @@
+Mode: built-in image_gen
+transparent_background: true
+Master: masters/spring-clover-source.png
+Runtime: runtime/spring-clover.png
+Generation prompt:
+ONE collectible pasture badge: a fresh green four-leaf lucky clover with four heart-shaped leaves and a tiny stem, mounted at the center of a small round warm gold medallion with a thick dark orange rim. Cute original GBA pixel art matching golden star collectibles. Clear silhouette on 32x32 logical grid, badge fits30x30 centered, enlarged nearest-neighbor. Flat limited colors and a small cream highlight. No blur, no glow, no gradients, no antialias, no text, no backdrop, no ribbon, no other icons. Fully transparent background.

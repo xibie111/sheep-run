@@ -1,0 +1,69 @@
+{
+  "mode": "builtin image_gen only",
+  "date": "2026-10-11",
+  "runtime": "runtime/animals-atlas.png",
+  "processing": "processing.json",
+  "frames": "frames.json",
+  "generations": [
+    {
+      "id": "scene-board-v1",
+      "source": "previews/scene-board-v1.png",
+      "prompt": "prompts/scene-board-v1.txt",
+      "references": [
+        "docs/hud-brightness-review/2026-10-10/screenshots/playing-896x414.png"
+      ],
+      "transparent_background": false,
+      "status": "concept preview",
+      "sourceSha256": "e4733b2d392dda0d4dee2b16cb28d2060b6862925518a11d131b6e2def7fc777"
+    },
+    {
+      "id": "ducks-v1",
+      "source": "sources/ducks-v1.png",
+      "prompt": "prompts/ducks-v1.txt",
+      "references": [
+        "docs/hud-brightness-review/2026-10-10/screenshots/playing-896x414.png",
+        "previews/scene-board-v1.png"
+      ],
+      "transparent_background": true,
+      "status": "source retained; halo cleanup in v2",
+      "sourceSha256": "20eba7cabe6a158064f7c80b3b7a2b90d6ea9183deeb402e95ab873506c3662e"
+    },
+    {
+      "id": "squirrel-v1",
+      "source": "sources/squirrel-v1.png",
+      "prompt": "prompts/squirrel-v1.txt",
+      "references": [
+        "docs/hud-brightness-review/2026-10-10/screenshots/playing-896x414.png",
+        "previews/scene-board-v1.png"
+      ],
+      "transparent_background": true,
+      "status": "source retained; halo cleanup in v2",
+      "sourceSha256": "23208aa125f8d52560d9b5d6fa01f52420f7eb2778738d22a1525bd9fdfdf15c"
+    },
+    {
+      "id": "rabbit-v1",
+      "source": "sources/rabbit-v1.png",
+      "prompt": "prompts/rabbit-v1.txt",
+      "references": [
+        "docs/hud-brightness-review/2026-10-10/screenshots/playing-896x414.png",
+        "previews/scene-board-v1.png"
+      ],
+      "transparent_background": true,
+      "status": "source retained; halo cleanup in v2",
+      "sourceSha256": "67cfb2ca5f93f2b4f9d6586d23eb64fb145f742c00f1dfc83a030f79c611fcf0"
+    },
+    {
+      "id": "animals-clean-v2",
+      "source": "sources/animals-clean-v2.png",
+      "prompt": "prompts/clean-atlas-v2.txt",
+      "references": [
+        "sources/ducks-v1.png",
+        "sources/squirrel-v1.png",
+        "sources/rabbit-v1.png"
+      ],
+      "transparent_background": true,
+      "status": "runtime source",
+      "sourceSha256": "98afe6f8941c6bf7b10e2d77845332157be6f20029da06ba1cb6b5d3df926975"
+    }
+  ]
+}

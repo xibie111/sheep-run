@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-10",
+  "tool": "built-in image_gen",
+  "asset": "atlas.png",
+  "width": 1254,
+  "height": 1254,
+  "prompt": "Use case: stylized-concept. Asset type: ONE production RGBA puddle sprite atlas for Sheep Run, exactly four equal horizontal rows in a square 1024x1024 canvas. Reference image 1 is ONLY the game road palette, pixel-art detail and low side-view ground perspective; ignore all UI, sheep, birds, houses and landscape objects. Reference image 2 is ONLY the prior obstacle style; replace its thick outlined puddle with a shallow patch of water sunk into the road. In each row place ONE same-size extremely low, wide puddle centered with generous transparent padding: visible subject about 760 pixels wide by 140 pixels high (roughly 5.4:1), viewed obliquely along a flat dirt road. Each puddle has a naturally irregular flattened silhouette, quiet blue/cyan water reflections, a very thin broken warm-orange/brown damp-soil rim compatible with the reference road, tiny crisp pixel ripples; crisp detailed 2D game pixel art. Never a raised bowl, rock ring, grass island, dark black outline, broad halo, pasted ground rectangle, or scenery backdrop. Outside the puddle/damp rim is genuine fully transparent alpha, no glow and no shadow cloud. Top row SPRING: same thin dirt puddle, two tiny subtle pink petals; second row SUMMER: same shape, clean water; third row AUTUMN: same shape, two small russet leaves; bottom row WINTER: same low shape and warm soil edge with a thin pale-blue icy skin and one delicate crack, no tall snow piles. Keep all four silhouettes, widths, heights, pixel density and road perspective matched, all on the same left-right horizontal baseline within their row. No labels, text, separators, borders, HUD, characters, non-puddle obstacles, background, extra subjects, smooth painting or blur. The actual game will reduce each subject uniformly to 38 pixels wide and about 7 pixels high, so keep the water readable and rim restrained. This atlas contains only four puddles and transparency.",
+  "frames": {
+    "spring": {
+      "x": 106,
+      "y": 211,
+      "width": 1043,
+      "height": 140
+    },
+    "summer": {
+      "x": 107,
+      "y": 512,
+      "width": 1041,
+      "height": 139
+    },
+    "autumn": {
+      "x": 106,
+      "y": 812,
+      "width": 1042,
+      "height": 139
+    },
+    "winter": {
+      "x": 106,
+      "y": 1087,
+      "width": 1042,
+      "height": 141
+    }
+  },
+  "notes": [
+    "Frame bounds measured from opaque subject pixels; generated row positions are not exactly equal quarters.",
+    "Runtime preserves a uniform scale, the 38x13 display frame and existing 34x7 collision box. Water art is confined to at most 7 logical pixels above the unchanged 218 foot baseline."
+  ],
+  "outputHint": "Generated images are saved to C:\\Users\\mechrevo\\.codex\\generated_images\\01a11c31-65eb-7a23-b8d1-0908369f8b42 as C:\\Users\\mechrevo\\.codex\\generated_images\\01a11c31-65eb-7a23-b8d1-0908369f8b42\\exec-a24d4ae7-cb11-4b11-8508-5556826569e3.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+}

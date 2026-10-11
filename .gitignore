@@ -1,0 +1,35 @@
+# Dependencies and build output
+/node_modules/
+/dist/
+/builds/
+/coverage/
+*.tsbuildinfo
+
+# Downloaded Android toolchains and local Gradle state
+/tools/android/toolchain/
+**/.gradle/
+**/local.properties
+
+# Local review evidence and historical build snapshots
+/docs/*
+!/docs/images/
+
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+*.jks
+*.keystore
+*.pem
+*.key
+google-services.json
+
+# Editor and OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.log
+__pycache__/
+*.pyc

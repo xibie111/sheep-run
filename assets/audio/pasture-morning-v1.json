@@ -1,0 +1,25 @@
+{
+  "title": "牧场晨光 / Pasture Morning",
+  "composition": "Original melody, arrangement and generated instruments for Sheep Run",
+  "source": "tools/build-pasture-music.py",
+  "thirdPartySamples": [],
+  "tempoBpm": 104,
+  "key": "D major",
+  "meter": "4/4",
+  "bars": 32,
+  "instruments": {
+    "bass": 64,
+    "guitar": 256,
+    "piano": 178,
+    "flute": 80
+  },
+  "durationSeconds": 73.84616780045351,
+  "sampleRate": 22050,
+  "channels": 2,
+  "format": "PCM 16-bit WAV",
+  "peak": 0.7400000000000001,
+  "rmsDbfs": -16.90174079898092,
+  "loopBoundaryDelta": 0.009130577285062526,
+  "loop": "32 bars; release and reverb tails wrap into the next lap",
+  "sha256": "58e354fa2f0a6fd0b71e38c5c7bf347e96ac31e782644e0a5fc7b0db4c6c9997"
+}

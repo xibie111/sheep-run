@@ -1,0 +1,6 @@
+Mode: built-in image_gen
+transparent_background: true
+Master: masters/double-star-source.png
+Runtime: runtime/double-star.png
+Generation prompt:
+A single original production-ready transparent sprite for a cute GBA pixel game, crisp square steps, dark burnt-orange outline, bright flat colors and tiny cream shine. 24x24 logical pixel grid enlarged nearest-neighbor, subject fits 22x22 pixels centered. No blur, no soft glow, no antialiasing, no gradient, no labels, no face, no backdrop, no detached decorations. Transparent background. Two overlapping plump golden five-point stars, a slightly smaller star behind at upper-right; distinct orange outlines and cream highlights on each star. No number.

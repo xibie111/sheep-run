@@ -1,0 +1,64 @@
+{
+  "tool": "builtin image_gen",
+  "reference": "assets/backgrounds/run-pasture-v1.png",
+  "assets": [
+    {
+      "name": "forest",
+      "source": "sources/forest.png",
+      "prompt": "prompts/forest.txt",
+      "runtime": "runtime/forest.png",
+      "sha256": "3cf249b34430cb4115c2bd2344f8fd9bbebcc8a8e2af3f089c264331ddd10414",
+      "generatedOriginal": "exec-bd3f6b40-0464-4714-85ed-9802b224eb81.png",
+      "sourceSize": [
+        2172,
+        724
+      ],
+      "runtimeSize": [
+        960,
+        320
+      ],
+      "crop": null,
+      "resampling": "NEAREST",
+      "transparent_background": false
+    },
+    {
+      "name": "hill",
+      "source": "sources/hill.png",
+      "prompt": "prompts/hill.txt",
+      "runtime": "runtime/hill.png",
+      "sha256": "afab817747595087df4785e28efbc9e5b15b341eeeca96ab4f0528140c33153b",
+      "generatedOriginal": "exec-85f02643-3294-4faa-bc85-045ab23433e7.png",
+      "sourceSize": [
+        2172,
+        724
+      ],
+      "runtimeSize": [
+        960,
+        320
+      ],
+      "crop": null,
+      "resampling": "NEAREST",
+      "transparent_background": false
+    },
+    {
+      "name": "postcard",
+      "source": "sources/postcard.png",
+      "prompt": "prompts/postcard.txt",
+      "runtime": "runtime/postcard.png",
+      "sha256": "4d9e47902d32feed526a0a89eaf0f279df5ce24e41ce3d5b3a21a897650524e1",
+      "generatedOriginal": "exec-2dc2d48f-aeb1-49b0-bcec-b7c02752ced2.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "runtimeSize": [
+        600,
+        400
+      ],
+      "crop": null,
+      "resampling": "NEAREST",
+      "transparent_background": false
+    }
+  ],
+  "runtimeFrames": "Landscapes: upper 75 percent of full image; lower 25 percent becomes the scrolling road. No repainting."
+}

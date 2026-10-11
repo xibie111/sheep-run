@@ -1,0 +1,33 @@
+:root {
+  color-scheme: light;
+  --safe-left: var(--safe-area-inset-left, env(safe-area-inset-left, 0px));
+  --safe-right: var(--safe-area-inset-right, env(safe-area-inset-right, 0px));
+  --safe-top: var(--safe-area-inset-top, env(safe-area-inset-top, 0px));
+  --safe-bottom: var(--safe-area-inset-bottom, env(safe-area-inset-bottom, 0px));
+  background: #73b95b;
+}
+* { box-sizing: border-box; }
+html, body {
+  width: 100%; height: 100%;
+  margin: 0; padding: 0;
+  overflow: hidden; overscroll-behavior: none; touch-action: none;
+}
+.game-shell, #game-container {
+  position: fixed; inset: 0;
+  width: 100%; height: 100%; height: 100dvh;
+  overflow: hidden; touch-action: none;
+  user-select: none; -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+#game-container canvas {
+  position: absolute; inset: 0; display: block;
+  /* Phaser owns uniform canvas scaling and touch-coordinate mapping. */
+  padding: 0; border: 0; border-radius: 0; box-shadow: none;
+  image-rendering: crisp-edges; image-rendering: pixelated; touch-action: none;
+}
+.sr-only {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+

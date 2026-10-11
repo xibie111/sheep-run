@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#355b52" />
+    <meta name="description" content="小羊快跑：一款适合手机触摸游玩的温暖农场像素跑酷游戏。" />
+    <title>小羊快跑 | SHEEP RUN</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preload" href="assets/cartoon-sheep-pixel-design_61878-536.avif" as="image" type="image/avif" />
+  </head>
+  <body>
+    <main class="game-app">
+      <section class="game-stage" id="gameStage" aria-label="小羊快跑游戏区域">
+        <div class="game-brand" aria-hidden="true">
+          <span class="brand-mark">SR</span>
+          <span class="brand-name">小羊快跑</span>
+          <span class="brand-line"></span>
+          <span class="brand-place">牧场一号</span>
+        </div>
+
+        <div class="score-hud" aria-label="游戏分数">
+          <div class="score-block">
+            <span class="hud-label">SCORE</span>
+            <strong id="scoreValue">00000</strong>
+          </div>
+          <div class="score-block score-block-best">
+            <span class="hud-label">BEST</span>
+            <strong id="bestValue">00000</strong>
+          </div>
+        </div>
+
+        <canvas id="gameCanvas" width="960" height="540" aria-label="像素风跑酷画面"></canvas>
+
+        <div class="screen-overlay" id="startOverlay">
+          <div class="overlay-card overlay-card-start">
+            <p class="eyebrow">SPRING DAY / PASTURE</p>
+            <h1>小羊快跑</h1>
+            <p class="overlay-copy">跑过田埂，追上闪亮的星星。</p>
+            <button class="primary-button" id="startButton" type="button">
+              <span class="button-icon" aria-hidden="true">▶</span>
+              <span>开始奔跑</span>
+            </button>
+            <p class="micro-copy">点击画面或按空格也可以起跑</p>
+          </div>
+        </div>
+
+        <div class="screen-overlay is-hidden" id="gameOverOverlay">
+          <div class="overlay-card">
+            <p class="eyebrow">RUN COMPLETE</p>
+            <h2>这次跑了 <strong id="finalScore">00000</strong> 分</h2>
+            <p class="overlay-copy" id="bestMessage">新的牧场纪录。</p>
+            <button class="primary-button" id="restartButton" type="button">
+              <span class="button-icon" aria-hidden="true">↻</span>
+              <span>再跑一次</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="portrait-hint" id="portraitHint" role="status">
+          <span class="rotate-icon" aria-hidden="true">↔</span>
+          <span>横屏体验更舒展</span>
+        </div>
+
+        <button class="jump-button" id="jumpButton" type="button" aria-label="跳跃">
+          <span class="jump-arrow" aria-hidden="true">↑</span>
+          <span>跳跃</span>
+        </button>
+
+        <p class="sr-only" id="gameStatus" aria-live="polite">准备开始</p>
+      </section>
+
+      <footer class="game-footer" aria-hidden="true">
+        <span class="footer-dot"></span>
+        <span>KEEP RUNNING</span>
+        <span class="footer-rule"></span>
+        <span>星星会记住你的纪录</span>
+      </footer>
+    </main>
+    <script src="game.js" defer></script>
+  </body>
+</html>

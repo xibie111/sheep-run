@@ -1,0 +1,170 @@
+[
+  {
+    "slug": "magnet",
+    "prompt": "A single original production-ready transparent sprite for a cute GBA pixel game, crisp square steps, dark burnt-orange outline, bright flat colors and tiny cream shine. 24x24 logical pixel grid enlarged nearest-neighbor, subject fits 22x22 pixels centered. No blur, no soft glow, no antialiasing, no gradient, no labels, no face, no backdrop, no detached decorations. Transparent background. A red and pink U-shaped horseshoe magnet with two cream/silver pole tips and a clear open center.",
+    "master": "masters/magnet-source.png",
+    "runtime": "runtime/magnet.png",
+    "promptFile": "prompts/magnet.txt",
+    "generatedFrom": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11760-9d97-77c1-924c-cefdf4e6c788\\exec-2eb92e84-3811-46ad-b434-b5d4fada755d.png"
+  },
+  {
+    "slug": "shield",
+    "prompt": "Create a single original sky-blue shield power-up sprite for a cute pixel game. Gold/orange border, cyan flat center, tiny cream upper-left shine, rounded top and a lower shield point. Crisp GBA-style square pixels, 24x24 logical pixel grid enlarged nearest-neighbor. No text, no blur, no gradient, no antialias, no faces. Standalone centered 22x22-pixel shield with transparent padding and a fully transparent background.",
+    "master": "masters/shield-source.png",
+    "runtime": "runtime/shield.png",
+    "promptFile": "prompts/shield.txt",
+    "generatedFrom": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11760-9d97-77c1-924c-cefdf4e6c788\\exec-44cf3252-83d8-463f-b023-175660a76a93.png"
+  },
+  {
+    "slug": "double-star",
+    "prompt": "A single original production-ready transparent sprite for a cute GBA pixel game, crisp square steps, dark burnt-orange outline, bright flat colors and tiny cream shine. 24x24 logical pixel grid enlarged nearest-neighbor, subject fits 22x22 pixels centered. No blur, no soft glow, no antialiasing, no gradient, no labels, no face, no backdrop, no detached decorations. Transparent background. Two overlapping plump golden five-point stars, a slightly smaller star behind at upper-right; distinct orange outlines and cream highlights on each star. No number.",
+    "master": "masters/double-star-source.png",
+    "runtime": "runtime/double-star.png",
+    "promptFile": "prompts/double-star.txt",
+    "generatedFrom": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11760-9d97-77c1-924c-cefdf4e6c788\\exec-92356229-149c-4ea2-af47-b9119f9bdf53.png"
+  },
+  {
+    "slug": "shield-bubble",
+    "prompt": "ONE production transparent pixel-art protective bubble RING for a cute GBA game. Icy-cyan rounded oval rim with dark-blue outline and two small cream/white pixel shine marks upper-left. The entire large central hole is transparent, no filled disk, no sheep or icon inside. Exact 64x64 logical grid, ring fits58x58 centered, enlarged nearest neighbor. Flat colors, square stepped pixels, no antialias, no blur, no glow, no shadow, no text. Fully transparent exterior and interior.",
+    "master": "masters/shield-bubble-source.png",
+    "runtime": "runtime/shield-bubble.png",
+    "promptFile": "prompts/shield-bubble.txt",
+    "generatedFrom": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11760-9d97-77c1-924c-cefdf4e6c788\\exec-72a49dca-d4a3-4aa2-b0c5-166fecc85c78.png"
+  },
+  {
+    "slug": "sparkle",
+    "prompt": "ONE tiny four-point gold and cream sparkle sprite for a cute GBA pixel game. Cross shaped starburst with dark-orange edge, warm yellow points and cream-white middle, 12x12 logical pixels enlarged nearest neighbor. Single centered sparkle, transparent padding, entirely transparent background. Crisp square pixels, flat colors, no glow, no soft edge, no blur, no gradient, no text, no second sparkle.",
+    "master": "masters/sparkle-source.png",
+    "runtime": "runtime/sparkle.png",
+    "promptFile": "prompts/sparkle.txt",
+    "generatedFrom": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11760-9d97-77c1-924c-cefdf4e6c788\\exec-5fb51db7-cb91-4c91-b060-276f2fb5a0e9.png"
+  },
+  {
+    "slug": "dust",
+    "prompt": "ONE small low wide puff of landing dust for a cute side-scrolling pixel farm game. Three connected rounded cloud lobes forming one dust puff, warm pale cream and tan with brown lower edge and tiny light highlight. Shape fits a24x12 logical grid, transparent margin, enlarged nearest-neighbor. Crisp flat GBA pixel art, no gradients, no blur, no soft shadow, no soil or sheep, no text. Standalone sprite and fully transparent background.",
+    "master": "masters/dust-source.png",
+    "runtime": "runtime/dust.png",
+    "promptFile": "prompts/dust.txt",
+    "generatedFrom": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11760-9d97-77c1-924c-cefdf4e6c788\\exec-2740b6da-07dc-46f0-99a4-41485d5b3963.png"
+  },
+  {
+    "slug": "album-book",
+    "prompt": "Edit this blank open scrapbook UI panel. Keep the exact wide two-page silhouette, brown cover edges, gold corners, small flowers and clovers at the outer corners, center fold and transparent exterior. Replace BOTH page interiors with CLEAN OPAQUE PALE CREAM flat parchment. Remove ALL dark patches, cloudy shadows, transparent holes, stains, symbols and mottling from the page interiors. Both pages must be empty, evenly light cream, suitable for clear dark programmatically drawn text. No writing, no extra objects, no gradients. Preserve crisp pixel-art edges and transparent exterior. Only clean up the two blank cream page interiors.",
+    "master": "masters/album-book-source.png",
+    "runtime": "runtime/album-book.png",
+    "promptFile": "prompts/album-book.txt",
+    "generatedFrom": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11760-9d97-77c1-924c-cefdf4e6c788\\exec-77e3fe83-d52a-4347-8ba7-d1c45779ac7e.png"
+  },
+  {
+    "slug": "album-icon",
+    "prompt": "ONE standalone transparent menu icon of a small closed keepsake scrapbook, green/teal cover with a single pink heart on it, warm brown/gold leather spine and cream page edges, tiny cream highlight. Original cute GBA pixel art with dark brown outline, crisp square steps and flat colors. Draw on48x48 logical grid enlarged nearest-neighbor, centered with transparent margin, no writing, no labels, no backdrop, no other objects, no blur or antialias. Fully transparent background.",
+    "master": "masters/album-icon-source.png",
+    "runtime": "runtime/album-icon.png",
+    "promptFile": "prompts/album-icon.txt",
+    "generatedFrom": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11760-9d97-77c1-924c-cefdf4e6c788\\exec-4ca8dba3-8ba5-4696-8e41-765da793216c.png"
+  },
+  {
+    "slug": "spring-flower",
+    "prompt": "ONE collectible pasture badge: a pink five-petal cherry blossom with a yellow heart-shaped center, mounted at the center of a small round warm gold medallion with a thick dark orange rim. Cute original GBA pixel art matching golden star collectibles. Clear silhouette on 32x32 logical grid, badge fits30x30 centered, enlarged nearest-neighbor. Flat limited colors and a small cream highlight. No blur, no glow, no gradients, no antialias, no text, no backdrop, no ribbon, no other icons. Fully transparent background.",
+    "master": "masters/spring-flower-source.png",
+    "runtime": "runtime/spring-flower.png",
+    "promptFile": "prompts/spring-flower.txt",
+    "generatedFrom": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11760-9d97-77c1-924c-cefdf4e6c788\\exec-dec150da-9deb-4144-8473-0e0aeb81f4b1.png"
+  },
+  {
+    "slug": "spring-butterfly",
+    "prompt": "ONE collectible pasture badge: a small pastel pink butterfly with a short dark body and symmetrical rounded wings, mounted at the center of a small round warm gold medallion with a thick dark orange rim. Cute original GBA pixel art matching golden star collectibles. Clear silhouette on 32x32 logical grid, badge fits30x30 centered, enlarged nearest-neighbor. Flat limited colors and a small cream highlight. No blur, no glow, no gradients, no antialias, no text, no backdrop, no ribbon, no other icons. Fully transparent background.",
+    "master": "masters/spring-butterfly-source.png",
+    "runtime": "runtime/spring-butterfly.png",
+    "promptFile": "prompts/spring-butterfly.txt",
+    "generatedFrom": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11760-9d97-77c1-924c-cefdf4e6c788\\exec-e614962f-8362-4852-ad33-affbea4ccba6.png"
+  },
+  {
+    "slug": "spring-clover",
+    "prompt": "ONE collectible pasture badge: a fresh green four-leaf lucky clover with four heart-shaped leaves and a tiny stem, mounted at the center of a small round warm gold medallion with a thick dark orange rim. Cute original GBA pixel art matching golden star collectibles. Clear silhouette on 32x32 logical grid, badge fits30x30 centered, enlarged nearest-neighbor. Flat limited colors and a small cream highlight. No blur, no glow, no gradients, no antialias, no text, no backdrop, no ribbon, no other icons. Fully transparent background.",
+    "master": "masters/spring-clover-source.png",
+    "runtime": "runtime/spring-clover.png",
+    "promptFile": "prompts/spring-clover.txt",
+    "generatedFrom": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11760-9d97-77c1-924c-cefdf4e6c788\\exec-4bb30ca9-7648-4ed1-bb9c-fc50fe064372.png"
+  },
+  {
+    "slug": "summer-sunflower",
+    "prompt": "One original collectible badge for a cute GBA pixel-art farm game: a bright sunflower with golden petals, brown center and one green leaf centered inside a round warm golden medallion with burnt-orange rim and tiny cream shine. 32x32 logical grid enlarged nearest-neighbor, badge fits30x30 centered. Crisp flat limited colors, no gradients, no blur, no antialias, no words, no ribbon, no other assets. Fully transparent background.",
+    "master": "masters/summer-sunflower-source.png",
+    "runtime": "runtime/summer-sunflower.png",
+    "promptFile": "prompts/summer-sunflower.txt",
+    "generatedFrom": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11760-9d97-77c1-924c-cefdf4e6c788\\exec-144a9a64-444b-4ccc-b642-6e689524c96a.png"
+  },
+  {
+    "slug": "summer-watermelon",
+    "prompt": "One original collectible badge for a cute GBA pixel-art farm game: a juicy triangular watermelon slice with pink/red face, dark seeds and a green rind centered inside a round warm golden medallion with burnt-orange rim and tiny cream shine. 32x32 logical grid enlarged nearest-neighbor, badge fits30x30 centered. Crisp flat limited colors, no gradients, no blur, no antialias, no words, no ribbon, no other assets. Fully transparent background.",
+    "master": "masters/summer-watermelon-source.png",
+    "runtime": "runtime/summer-watermelon.png",
+    "promptFile": "prompts/summer-watermelon.txt",
+    "generatedFrom": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11760-9d97-77c1-924c-cefdf4e6c788\\exec-2d44784e-9ee6-4122-807e-b37adfac06cc.png"
+  },
+  {
+    "slug": "summer-shell",
+    "prompt": "ONE original collectible medallion sprite for a cute GBA pixel farm game: a pastel pink seashell fan with pale cream ribs in the center of a round warm golden badge with burnt-orange rim and cream highlight. 32x32 logical pixel grid, object fits30x30 centered, enlarged nearest neighbor. Crisp square pixels, few flat colors, no soft effects, no gradient, no blur, no words, no ribbon, no background, no other icons. Fully transparent background.",
+    "master": "masters/summer-shell-source.png",
+    "runtime": "runtime/summer-shell.png",
+    "promptFile": "prompts/summer-shell.txt",
+    "generatedFrom": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11760-9d97-77c1-924c-cefdf4e6c788\\exec-6cc5e64e-5a1f-4df0-badb-83b863c45573.png"
+  },
+  {
+    "slug": "autumn-maple",
+    "prompt": "ONE original collectible medallion sprite for a cute GBA pixel farm game: a warm red-orange five-point maple leaf with a short brown stem in the center of a round warm golden badge with burnt-orange rim and cream highlight. 32x32 logical pixel grid, object fits30x30 centered, enlarged nearest neighbor. Crisp square pixels, few flat colors, no soft effects, no gradient, no blur, no words, no ribbon, no background, no other icons. Fully transparent background.",
+    "master": "masters/autumn-maple-source.png",
+    "runtime": "runtime/autumn-maple.png",
+    "promptFile": "prompts/autumn-maple.txt",
+    "generatedFrom": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11760-9d97-77c1-924c-cefdf4e6c788\\exec-1a14cd6e-66fa-40ef-a522-799a5ed02469.png"
+  },
+  {
+    "slug": "autumn-acorn",
+    "prompt": "ONE collectible badge sprite for a cute GBA pixel farm game: a plump brown acorn with a textured tan cap and short stem, centered on a round golden medallion with thick burnt-orange outline and a tiny cream highlight. Design on32x32 logical pixels, medallion fits30x30 centered, enlarge nearest-neighbor. Original clean pixel artwork, flat few colors, crisp square edges. No gradient, antialias, blur, glow, words, ribbons, background, or extra icons. Fully transparent background.",
+    "master": "masters/autumn-acorn-source.png",
+    "runtime": "runtime/autumn-acorn.png",
+    "promptFile": "prompts/autumn-acorn.txt",
+    "generatedFrom": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11760-9d97-77c1-924c-cefdf4e6c788\\exec-b66c8f2d-ffe5-4652-b6fd-e5791960f1f5.png"
+  },
+  {
+    "slug": "autumn-pumpkin",
+    "prompt": "ONE collectible badge sprite for a cute GBA pixel farm game: a small warm orange pumpkin with a short green stem, no face, centered on a round golden medallion with thick burnt-orange outline and a tiny cream highlight. Design on32x32 logical pixels, medallion fits30x30 centered, enlarge nearest-neighbor. Original clean pixel artwork, flat few colors, crisp square edges. No gradient, antialias, blur, glow, words, ribbons, background, or extra icons. Fully transparent background.",
+    "master": "masters/autumn-pumpkin-source.png",
+    "runtime": "runtime/autumn-pumpkin.png",
+    "promptFile": "prompts/autumn-pumpkin.txt",
+    "generatedFrom": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11760-9d97-77c1-924c-cefdf4e6c788\\exec-9f1efd4a-ab8f-4ba3-976a-a1c4514dd1e4.png"
+  },
+  {
+    "slug": "winter-snowflake",
+    "prompt": "ONE collectible badge sprite for a cute GBA pixel farm game: an icy blue and cream six-point snowflake, centered on a round golden medallion with thick burnt-orange outline and tiny cream highlight. Design on 32x32 logical pixels, medallion fits 30x30 centered, enlarge nearest-neighbor. Original clean pixel artwork, flat few colors, crisp square edges. No gradient, antialias, blur, glow, words, ribbons, background, or extra icons. Fully transparent background.",
+    "master": "masters/winter-snowflake-source.png",
+    "runtime": "runtime/winter-snowflake.png",
+    "promptFile": "prompts/winter-snowflake.txt",
+    "generatedFrom": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11760-9d97-77c1-924c-cefdf4e6c788\\exec-65b4466a-f1fa-4158-bbc0-2518a78b4898.png"
+  },
+  {
+    "slug": "winter-mitten",
+    "prompt": "ONE collectible badge sprite for a cute GBA pixel farm game: a cozy pink-red knitted mitten with a cream cuff, centered on a round golden medallion with thick burnt-orange outline and tiny cream highlight. Design on 32x32 logical pixels, medallion fits 30x30 centered, enlarge nearest-neighbor. Original clean pixel artwork, flat few colors, crisp square edges. No gradient, antialias, blur, glow, words, ribbons, background, or extra icons. Fully transparent background.",
+    "master": "masters/winter-mitten-source.png",
+    "runtime": "runtime/winter-mitten.png",
+    "promptFile": "prompts/winter-mitten.txt",
+    "generatedFrom": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11760-9d97-77c1-924c-cefdf4e6c788\\exec-91b0f843-9d85-4f39-9591-36b4c0bb4eac.png"
+  },
+  {
+    "slug": "winter-cocoa",
+    "prompt": "ONE collectible badge sprite for a cute GBA pixel farm game: warm brown cocoa in a small cream ceramic cup, a tiny pink heart on the cup and two blocky steam wisps, centered on a round golden medallion with thick burnt-orange outline and tiny cream highlight. Design on 32x32 logical pixels, medallion fits 30x30 centered, enlarge nearest-neighbor. Original clean pixel artwork, flat few colors, crisp square edges. No gradient, antialias, blur, glow, words, ribbons, background, or extra icons. Fully transparent background.",
+    "master": "masters/winter-cocoa-source.png",
+    "runtime": "runtime/winter-cocoa.png",
+    "promptFile": "prompts/winter-cocoa.txt",
+    "generatedFrom": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11760-9d97-77c1-924c-cefdf4e6c788\\exec-164da9fb-b27c-4f4a-9340-1881d6178934.png"
+  },
+  {
+    "slug": "album-button",
+    "prompt": "ONE reusable blank pixel-art game UI button base for a sweet farm runner. Compact nearly square landscape rectangle, logical canvas 56x48 pixels enlarged nearest-neighbor. Thick dark brown wooden outer border, warm orange-gold beveled inner rim, CLEAN PALE CREAM flat empty center. A tiny pink flower and two green leaves at just the top-left and bottom-right outer corners, restrained decorations. The empty center must have space for a separate book icon in its upper half and short programmatically drawn Chinese label in its lower half. NO book drawn, NO icon, NO letters, NO words, NO numbers, NO screenshot, NO scene. Original crisp GBA-style square pixel art, flat limited colors, no blur, no antialias, no glow, no soft shadow. Fully transparent exterior.",
+    "master": "masters/album-button-source.png",
+    "runtime": "runtime/album-button.png",
+    "promptFile": "prompts/album-button.txt",
+    "generatedFrom": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11760-9d97-77c1-924c-cefdf4e6c788\\exec-a986c428-d7d7-4ac5-894e-0b7ac3326891.png"
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "season": "spring",
+    "frame": {
+      "x": 0,
+      "y": 64,
+      "width": 1977,
+      "height": 374
+    },
+    "holes": 0,
+    "sha256": "a6f1e502e30b4b454bb5f86499fa640167ff95373202c27088e375c751971625",
+    "bytes": 1528734
+  },
+  {
+    "season": "summer",
+    "frame": {
+      "x": 0,
+      "y": 64,
+      "width": 1977,
+      "height": 374
+    },
+    "holes": 0,
+    "sha256": "a603f915a1fa68331f67317055db458e987b00a1dc62905e236e28e2e7f4b37c",
+    "bytes": 1517618
+  },
+  {
+    "season": "autumn",
+    "frame": {
+      "x": 0,
+      "y": 64,
+      "width": 1977,
+      "height": 374
+    },
+    "holes": 0,
+    "sha256": "4b717a6e1107d1045f0a1dacdb4ff9f403e3a73b610ff195d8b64d9fa21b326b",
+    "bytes": 1512867
+  },
+  {
+    "season": "winter",
+    "frame": {
+      "x": 0,
+      "y": 64,
+      "width": 1977,
+      "height": 374
+    },
+    "holes": 0,
+    "sha256": "019a0a1627305c196133242e9fd33653e1ff42c9e1d111edd2ed93dbe534aeaa",
+    "bytes": 1562695
+  }
+]

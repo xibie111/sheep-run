@@ -1,0 +1,303 @@
+{
+  "source": "sources/animals-clean-v2.png",
+  "sourceSha256": "98afe6f8941c6bf7b10e2d77845332157be6f20029da06ba1cb6b5d3df926975",
+  "sourceSize": [
+    1774,
+    887
+  ],
+  "runtimeSize": [
+    1024,
+    296
+  ],
+  "operations": "Crop, uniform nearest-neighbor resize at 4x logical display size (one scale per animation group), and pack. No repainting or recoloring. Source retained untouched. Runtime uses existing hard-alpha >=128 convention.",
+  "frames": [
+    {
+      "name": "duck-0",
+      "sourceBounds": [
+        28,
+        97,
+        269,
+        271
+      ],
+      "nearestScale": 0.3218390804597701,
+      "packed": {
+        "x": 2,
+        "y": 2,
+        "width": 78,
+        "height": 56
+      }
+    },
+    {
+      "name": "duck-1",
+      "sourceBounds": [
+        344,
+        98,
+        588,
+        271
+      ],
+      "nearestScale": 0.3218390804597701,
+      "packed": {
+        "x": 84,
+        "y": 2,
+        "width": 79,
+        "height": 56
+      }
+    },
+    {
+      "name": "duckling-0",
+      "sourceBounds": [
+        685,
+        135,
+        838,
+        252
+      ],
+      "nearestScale": 0.20512820512820512,
+      "packed": {
+        "x": 167,
+        "y": 2,
+        "width": 31,
+        "height": 24
+      }
+    },
+    {
+      "name": "duckling-1",
+      "sourceBounds": [
+        934,
+        147,
+        1073,
+        258
+      ],
+      "nearestScale": 0.20512820512820512,
+      "packed": {
+        "x": 202,
+        "y": 2,
+        "width": 29,
+        "height": 23
+      }
+    },
+    {
+      "name": "pond",
+      "sourceBounds": [
+        1161,
+        119,
+        1532,
+        272
+      ],
+      "nearestScale": 0.8366013071895425,
+      "packed": {
+        "x": 235,
+        "y": 2,
+        "width": 310,
+        "height": 128
+      }
+    },
+    {
+      "name": "ripple",
+      "sourceBounds": [
+        1598,
+        184,
+        1738,
+        258
+      ],
+      "nearestScale": 0.10810810810810811,
+      "packed": {
+        "x": 549,
+        "y": 2,
+        "width": 15,
+        "height": 8
+      }
+    },
+    {
+      "name": "squirrel-run-0",
+      "sourceBounds": [
+        19,
+        358,
+        286,
+        556
+      ],
+      "nearestScale": 0.35294117647058826,
+      "packed": {
+        "x": 2,
+        "y": 136,
+        "width": 94,
+        "height": 70
+      }
+    },
+    {
+      "name": "squirrel-run-1",
+      "sourceBounds": [
+        347,
+        357,
+        601,
+        561
+      ],
+      "nearestScale": 0.35294117647058826,
+      "packed": {
+        "x": 100,
+        "y": 136,
+        "width": 90,
+        "height": 72
+      }
+    },
+    {
+      "name": "squirrel-dig",
+      "sourceBounds": [
+        646,
+        361,
+        884,
+        562
+      ],
+      "nearestScale": 0.35294117647058826,
+      "packed": {
+        "x": 194,
+        "y": 136,
+        "width": 84,
+        "height": 71
+      }
+    },
+    {
+      "name": "squirrel-pat",
+      "sourceBounds": [
+        951,
+        364,
+        1183,
+        562
+      ],
+      "nearestScale": 0.35294117647058826,
+      "packed": {
+        "x": 282,
+        "y": 136,
+        "width": 82,
+        "height": 70
+      }
+    },
+    {
+      "name": "acorn",
+      "sourceBounds": [
+        1310,
+        401,
+        1403,
+        524
+      ],
+      "nearestScale": 0.13008130081300814,
+      "packed": {
+        "x": 368,
+        "y": 136,
+        "width": 12,
+        "height": 16
+      }
+    },
+    {
+      "name": "soil",
+      "sourceBounds": [
+        1531,
+        471,
+        1721,
+        525
+      ],
+      "nearestScale": 0.2222222222222222,
+      "packed": {
+        "x": 384,
+        "y": 136,
+        "width": 42,
+        "height": 12
+      }
+    },
+    {
+      "name": "rabbit-idle",
+      "sourceBounds": [
+        37,
+        626,
+        266,
+        828
+      ],
+      "nearestScale": 0.33663366336633666,
+      "packed": {
+        "x": 2,
+        "y": 216,
+        "width": 77,
+        "height": 68
+      }
+    },
+    {
+      "name": "rabbit-hop",
+      "sourceBounds": [
+        337,
+        620,
+        588,
+        812
+      ],
+      "nearestScale": 0.33663366336633666,
+      "packed": {
+        "x": 83,
+        "y": 216,
+        "width": 84,
+        "height": 65
+      }
+    },
+    {
+      "name": "rabbit-land",
+      "sourceBounds": [
+        670,
+        642,
+        918,
+        827
+      ],
+      "nearestScale": 0.33663366336633666,
+      "packed": {
+        "x": 171,
+        "y": 216,
+        "width": 83,
+        "height": 62
+      }
+    },
+    {
+      "name": "rabbit-run",
+      "sourceBounds": [
+        987,
+        633,
+        1242,
+        827
+      ],
+      "nearestScale": 0.33663366336633666,
+      "packed": {
+        "x": 258,
+        "y": 216,
+        "width": 86,
+        "height": 65
+      }
+    },
+    {
+      "name": "butterfly-open",
+      "sourceBounds": [
+        1338,
+        677,
+        1497,
+        784
+      ],
+      "nearestScale": 0.21052631578947367,
+      "packed": {
+        "x": 348,
+        "y": 216,
+        "width": 33,
+        "height": 23
+      }
+    },
+    {
+      "name": "butterfly-closed",
+      "sourceBounds": [
+        1624,
+        677,
+        1707,
+        791
+      ],
+      "nearestScale": 0.21052631578947367,
+      "packed": {
+        "x": 385,
+        "y": 216,
+        "width": 17,
+        "height": 24
+      }
+    }
+  ]
+}

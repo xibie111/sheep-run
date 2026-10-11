@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-10",
+  "mode": "built-in image_gen",
+  "reference": "game-reference.png",
+  "atlas": "hud-atlas.png",
+  "referencePrompt": "请以图1《小羊快跑》实际游戏截图为编辑对象，图2只参考清晰的粗体数字和精致二维像素木质画风。生成一张完整1672×941横屏游戏运行画面。严格保留图1的二维像素牧场、蓝天云山湖、风车农舍、跑道和左下小羊的构图与画风，禁止三维体积感。\n用户最新布局要求：只要两块计数牌，不要四块。左上是“分数”木牌，右上是“最高分”木牌。这两块木牌必须等宽等高，顶边、底边、标签字号、数字字号、数字基线全部一致，保留图1木牌顶部的小木质标题栏、绿叶和白花。分数示例00036，最高分12345。左右木牌约404×136像素，x28和1240，统一y28。\n暂停键移到屏幕顶部正中央（x836为中心），一个精致112×112像素正方形木按钮，y28，只有两根深棕色竖条，图案完全居中，绝对不要“暂停”文字。删除原来右上角的暂停按钮。\n星星数量和连星仍在原来的屏幕上方中央这一列，沿用图1：星星是一个金色星图标加短小数值胶囊，不要新增“星星”标题，不要改成和分数一样的大木牌；连星是胶囊下方一行居中的深棕字“连星 ×12”，没有边框没有计数牌。为中央暂停按钮留出空间，星星胶囊仅向下微调到y156左右（宽284高86、水平中心x836），连星一行放在它下方y263左右，两个数值都显示12，使用相同的粗体数字与相同的数字高度。保留它们原本上下排列、居中的关系。若画面中有里程碑“星星×10”，本稿删去以保持清晰。\n数字用图2粗厚深棕像素字，中文标签用相同的粗厚童趣字形，所有控件是统一暖橙木框、淡奶油金底、清晰阶梯像素轮廓、细小绿叶白花。不要增加任何其他牌子、说明文字、游戏标题、设置、衣橱、音乐音效按钮。必须是最终完整游戏画面，不是UI素材拼图。",
+  "atlasPrompt": "Use case: background-extraction. Asset type: transparent game UI sprite sheet derived exactly from the supplied final Sheep Run screenshot. Extract/recreate only its UI controls with true transparent alpha. Match source shapes, leaves, flowers, borders, pixel edges and chunky dark-brown lettering exactly. Do not redesign. No background scenery, no sky, no opaque checkerboard.\nArrange separated components on a clean 1536x1024 transparent atlas with generous 40px gaps. Top row: (left) the exact wide score plaque with the wood title reading 分数, leave the lower pale-gold number field completely BLANK; (right) the exact same-size high-score plaque with the title 最高分, leave its lower number field BLANK. Both plaques must be identical overall width and height and aligned. Middle row: (left) the exact golden-star + short gold capsule from the screenshot, number field BLANK, no 星星 title; (right) the exact square top-center pause button including the two centered dark-brown pause bars. Maintain source aspect ratios and ornaments, no caption under pause. Another separated component: the chunky dark brown unframed Chinese prefix 连星 × with no number, same source letter shapes. Bottom row: ten isolated dark-brown numeric glyphs, in ascending order 0 1 2 3 4 5 6 7 8 9, in precisely the same bold block pixel digit style as the screenshot's 00036 and 12345. Glyphs all share same cap height and baseline with equal spacing. Also isolated prefix 星星 × for existing milestone feedback in the same size and dark brown style. Every object must be fully surrounded by transparent padding, no touching or overlapping. All pixels with alpha are only the UI artwork or glyphs. No decorative tile background. Flat 2D pixel-art, no 3D volume or perspective.",
+  "sources": [
+    "C:/Users/mechrevo/.codex/generated_images/01a11bdb-d0cb-7f30-aa81-e08acb61df39/exec-edab9f64-8f26-4cad-945b-84ebe525a58a.png",
+    "C:/Users/mechrevo/.codex/generated_images/01a11bdb-d0cb-7f30-aa81-e08acb61df39/exec-5ea16844-19a8-4ac9-945a-e8ea4268f521.png"
+  ],
+  "alphaPreserved": true,
+  "atlasSize": {
+    "width": 1536,
+    "height": 1024
+  },
+  "layout": "score plaque left, best plaque right, pause top center, existing star capsule and unframed streak below in the central column",
+  "liveDigits": "All ten generated glyphs are copied from the atlas at render time; no static score is baked into a live count."
+}

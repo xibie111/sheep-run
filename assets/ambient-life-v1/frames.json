@@ -1,0 +1,110 @@
+{
+  "duck-0": {
+    "x": 2,
+    "y": 2,
+    "width": 78,
+    "height": 56
+  },
+  "duck-1": {
+    "x": 84,
+    "y": 2,
+    "width": 79,
+    "height": 56
+  },
+  "duckling-0": {
+    "x": 167,
+    "y": 2,
+    "width": 31,
+    "height": 24
+  },
+  "duckling-1": {
+    "x": 202,
+    "y": 2,
+    "width": 29,
+    "height": 23
+  },
+  "pond": {
+    "x": 235,
+    "y": 2,
+    "width": 310,
+    "height": 128
+  },
+  "ripple": {
+    "x": 549,
+    "y": 2,
+    "width": 15,
+    "height": 8
+  },
+  "squirrel-run-0": {
+    "x": 2,
+    "y": 136,
+    "width": 94,
+    "height": 70
+  },
+  "squirrel-run-1": {
+    "x": 100,
+    "y": 136,
+    "width": 90,
+    "height": 72
+  },
+  "squirrel-dig": {
+    "x": 194,
+    "y": 136,
+    "width": 84,
+    "height": 71
+  },
+  "squirrel-pat": {
+    "x": 282,
+    "y": 136,
+    "width": 82,
+    "height": 70
+  },
+  "acorn": {
+    "x": 368,
+    "y": 136,
+    "width": 12,
+    "height": 16
+  },
+  "soil": {
+    "x": 384,
+    "y": 136,
+    "width": 42,
+    "height": 12
+  },
+  "rabbit-idle": {
+    "x": 2,
+    "y": 216,
+    "width": 77,
+    "height": 68
+  },
+  "rabbit-hop": {
+    "x": 83,
+    "y": 216,
+    "width": 84,
+    "height": 65
+  },
+  "rabbit-land": {
+    "x": 171,
+    "y": 216,
+    "width": 83,
+    "height": 62
+  },
+  "rabbit-run": {
+    "x": 258,
+    "y": 216,
+    "width": 86,
+    "height": 65
+  },
+  "butterfly-open": {
+    "x": 348,
+    "y": 216,
+    "width": 33,
+    "height": 23
+  },
+  "butterfly-closed": {
+    "x": 385,
+    "y": 216,
+    "width": 17,
+    "height": 24
+  }
+}

@@ -1,0 +1,6 @@
+Mode: built-in image_gen
+transparent_background: true
+Master: masters/dust-source.png
+Runtime: runtime/dust.png
+Generation prompt:
+ONE small low wide puff of landing dust for a cute side-scrolling pixel farm game. Three connected rounded cloud lobes forming one dust puff, warm pale cream and tan with brown lower edge and tiny light highlight. Shape fits a24x12 logical grid, transparent margin, enlarged nearest-neighbor. Crisp flat GBA pixel art, no gradients, no blur, no soft shadow, no soil or sheep, no text. Standalone sprite and fully transparent background.

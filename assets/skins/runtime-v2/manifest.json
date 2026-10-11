@@ -1,0 +1,1823 @@
+{
+  "frameWidth": 128,
+  "frameHeight": 128,
+  "frameCount": 15,
+  "packing": "15 separate alpha subjects, ordered in 5 columns and 3 rows",
+  "visibleFrame": {
+    "width": 128,
+    "height": 112,
+    "topPadding": 16
+  },
+  "skins": [
+    {
+      "id": "sleepy-blue",
+      "name": "催眠羊",
+      "source": "assets/skins/generated-v2/sleepy-blue-source.png",
+      "runtime": "assets/skins/runtime-v2/sleepy-blue-sheet.png",
+      "sourceHash": "eb6bc20a31c3bd6dc3c9a6b67362b7f0a1ff37c495445d2da602a76fb81dbe68",
+      "runtimeHash": "d3166d886847acc15cefecd1085e69508b9d248f21476aeca5c68f6b6e4f5f31",
+      "sourceSize": [
+        1619,
+        971
+      ],
+      "scale": 0.39344262295081966,
+      "sourceBounds": [
+        {
+          "i": 0,
+          "component": 2,
+          "area": 42810,
+          "bounds": [
+            30,
+            86,
+            307,
+            311
+          ]
+        },
+        {
+          "i": 1,
+          "component": 1,
+          "area": 42541,
+          "bounds": [
+            348,
+            83,
+            622,
+            311
+          ]
+        },
+        {
+          "i": 2,
+          "component": 3,
+          "area": 42287,
+          "bounds": [
+            670,
+            89,
+            947,
+            311
+          ]
+        },
+        {
+          "i": 3,
+          "component": 5,
+          "area": 41713,
+          "bounds": [
+            991,
+            96,
+            1273,
+            310
+          ]
+        },
+        {
+          "i": 4,
+          "component": 4,
+          "area": 40555,
+          "bounds": [
+            1327,
+            91,
+            1599,
+            311
+          ]
+        },
+        {
+          "i": 5,
+          "component": 6,
+          "area": 41678,
+          "bounds": [
+            30,
+            385,
+            306,
+            614
+          ]
+        },
+        {
+          "i": 6,
+          "component": 7,
+          "area": 41342,
+          "bounds": [
+            355,
+            405,
+            630,
+            630
+          ]
+        },
+        {
+          "i": 7,
+          "component": 9,
+          "area": 37114,
+          "bounds": [
+            684,
+            419,
+            938,
+            630
+          ]
+        },
+        {
+          "i": 8,
+          "component": 8,
+          "area": 43133,
+          "bounds": [
+            988,
+            416,
+            1293,
+            626
+          ]
+        },
+        {
+          "i": 9,
+          "component": 10,
+          "area": 25522,
+          "bounds": [
+            1327,
+            513,
+            1605,
+            630
+          ]
+        },
+        {
+          "i": 10,
+          "component": 11,
+          "area": 41145,
+          "bounds": [
+            30,
+            708,
+            305,
+            924
+          ]
+        },
+        {
+          "i": 11,
+          "component": 13,
+          "area": 40706,
+          "bounds": [
+            351,
+            711,
+            627,
+            924
+          ]
+        },
+        {
+          "i": 12,
+          "component": 12,
+          "area": 39945,
+          "bounds": [
+            676,
+            708,
+            946,
+            924
+          ]
+        },
+        {
+          "i": 13,
+          "component": 14,
+          "area": 42299,
+          "bounds": [
+            995,
+            719,
+            1281,
+            924
+          ]
+        },
+        {
+          "i": 14,
+          "component": 15,
+          "area": 26626,
+          "bounds": [
+            1329,
+            799,
+            1605,
+            924
+          ]
+        }
+      ],
+      "frames": [
+        {
+          "i": 0,
+          "x": 9,
+          "y": 39,
+          "width": 109,
+          "height": 89,
+          "bottom": 128,
+          "visiblePixels": 6664,
+          "firstRow": 39,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 1,
+          "x": 10,
+          "y": 38,
+          "width": 108,
+          "height": 90,
+          "bottom": 128,
+          "visiblePixels": 6613,
+          "firstRow": 38,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 2,
+          "x": 9,
+          "y": 41,
+          "width": 109,
+          "height": 87,
+          "bottom": 128,
+          "visiblePixels": 6524,
+          "firstRow": 41,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 3,
+          "x": 8,
+          "y": 44,
+          "width": 111,
+          "height": 84,
+          "bottom": 128,
+          "visiblePixels": 6443,
+          "firstRow": 44,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 4,
+          "x": 10,
+          "y": 41,
+          "width": 107,
+          "height": 87,
+          "bottom": 128,
+          "visiblePixels": 6312,
+          "firstRow": 41,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 5,
+          "x": 9,
+          "y": 30,
+          "width": 109,
+          "height": 90,
+          "bottom": 120,
+          "visiblePixels": 6454,
+          "firstRow": 30,
+          "lastRow": 119,
+          "softAlpha": 0
+        },
+        {
+          "i": 6,
+          "x": 10,
+          "y": 39,
+          "width": 108,
+          "height": 89,
+          "bottom": 128,
+          "visiblePixels": 6424,
+          "firstRow": 39,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 7,
+          "x": 14,
+          "y": 45,
+          "width": 100,
+          "height": 83,
+          "bottom": 128,
+          "visiblePixels": 5749,
+          "firstRow": 45,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 8,
+          "x": 4,
+          "y": 45,
+          "width": 120,
+          "height": 83,
+          "bottom": 128,
+          "visiblePixels": 6724,
+          "firstRow": 45,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 9,
+          "x": 9,
+          "y": 82,
+          "width": 109,
+          "height": 46,
+          "bottom": 128,
+          "visiblePixels": 3936,
+          "firstRow": 82,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 10,
+          "x": 10,
+          "y": 43,
+          "width": 108,
+          "height": 85,
+          "bottom": 128,
+          "visiblePixels": 6344,
+          "firstRow": 43,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 11,
+          "x": 9,
+          "y": 44,
+          "width": 109,
+          "height": 84,
+          "bottom": 128,
+          "visiblePixels": 6344,
+          "firstRow": 44,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 12,
+          "x": 11,
+          "y": 43,
+          "width": 106,
+          "height": 85,
+          "bottom": 128,
+          "visiblePixels": 6167,
+          "firstRow": 43,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 13,
+          "x": 7,
+          "y": 47,
+          "width": 113,
+          "height": 81,
+          "bottom": 128,
+          "visiblePixels": 6600,
+          "firstRow": 47,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 14,
+          "x": 9,
+          "y": 79,
+          "width": 109,
+          "height": 49,
+          "bottom": 128,
+          "visiblePixels": 4125,
+          "firstRow": 79,
+          "lastRow": 127,
+          "softAlpha": 0
+        }
+      ]
+    },
+    {
+      "id": "sleepy-cream",
+      "name": "月夜羊",
+      "source": "assets/skins/generated-v2/sleepy-cream-source.png",
+      "runtime": "assets/skins/runtime-v2/sleepy-cream-sheet.png",
+      "sourceHash": "6342aceab77c0f0e324d80b297bd61721d00d29d9b30bd8790093e811e975779",
+      "runtimeHash": "703790c3d1dd027f93d5406e210705d2f1405590a77ddfadd859366b7a707ffc",
+      "sourceSize": [
+        1619,
+        971
+      ],
+      "scale": 0.3883495145631068,
+      "sourceBounds": [
+        {
+          "i": 0,
+          "component": 2,
+          "area": 41253,
+          "bounds": [
+            28,
+            81,
+            296,
+            303
+          ]
+        },
+        {
+          "i": 1,
+          "component": 1,
+          "area": 43006,
+          "bounds": [
+            341,
+            77,
+            618,
+            303
+          ]
+        },
+        {
+          "i": 2,
+          "component": 3,
+          "area": 42628,
+          "bounds": [
+            670,
+            81,
+            949,
+            303
+          ]
+        },
+        {
+          "i": 3,
+          "component": 5,
+          "area": 43551,
+          "bounds": [
+            987,
+            87,
+            1282,
+            307
+          ]
+        },
+        {
+          "i": 4,
+          "component": 4,
+          "area": 41122,
+          "bounds": [
+            1327,
+            84,
+            1601,
+            308
+          ]
+        },
+        {
+          "i": 5,
+          "component": 6,
+          "area": 38240,
+          "bounds": [
+            31,
+            381,
+            293,
+            596
+          ]
+        },
+        {
+          "i": 6,
+          "component": 7,
+          "area": 41545,
+          "bounds": [
+            349,
+            390,
+            625,
+            614
+          ]
+        },
+        {
+          "i": 7,
+          "component": 9,
+          "area": 37132,
+          "bounds": [
+            675,
+            416,
+            940,
+            617
+          ]
+        },
+        {
+          "i": 8,
+          "component": 8,
+          "area": 42754,
+          "bounds": [
+            981,
+            411,
+            1287,
+            617
+          ]
+        },
+        {
+          "i": 9,
+          "component": 10,
+          "area": 27240,
+          "bounds": [
+            1311,
+            492,
+            1600,
+            616
+          ]
+        },
+        {
+          "i": 10,
+          "component": 13,
+          "area": 41074,
+          "bounds": [
+            26,
+            694,
+            298,
+            911
+          ]
+        },
+        {
+          "i": 11,
+          "component": 11,
+          "area": 42015,
+          "bounds": [
+            341,
+            690,
+            613,
+            911
+          ]
+        },
+        {
+          "i": 12,
+          "component": 12,
+          "area": 41562,
+          "bounds": [
+            670,
+            691,
+            945,
+            911
+          ]
+        },
+        {
+          "i": 13,
+          "component": 14,
+          "area": 43973,
+          "bounds": [
+            975,
+            706,
+            1284,
+            920
+          ]
+        },
+        {
+          "i": 14,
+          "component": 15,
+          "area": 28654,
+          "bounds": [
+            1311,
+            785,
+            1603,
+            914
+          ]
+        }
+      ],
+      "frames": [
+        {
+          "i": 0,
+          "x": 12,
+          "y": 42,
+          "width": 104,
+          "height": 86,
+          "bottom": 128,
+          "visiblePixels": 6198,
+          "firstRow": 42,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 1,
+          "x": 10,
+          "y": 40,
+          "width": 108,
+          "height": 88,
+          "bottom": 128,
+          "visiblePixels": 6541,
+          "firstRow": 40,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 2,
+          "x": 10,
+          "y": 42,
+          "width": 108,
+          "height": 86,
+          "bottom": 128,
+          "visiblePixels": 6398,
+          "firstRow": 42,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 3,
+          "x": 6,
+          "y": 43,
+          "width": 115,
+          "height": 85,
+          "bottom": 128,
+          "visiblePixels": 6558,
+          "firstRow": 43,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 4,
+          "x": 11,
+          "y": 41,
+          "width": 106,
+          "height": 87,
+          "bottom": 128,
+          "visiblePixels": 6183,
+          "firstRow": 41,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 5,
+          "x": 13,
+          "y": 37,
+          "width": 102,
+          "height": 83,
+          "bottom": 120,
+          "visiblePixels": 5743,
+          "firstRow": 37,
+          "lastRow": 119,
+          "softAlpha": 0
+        },
+        {
+          "i": 6,
+          "x": 10,
+          "y": 41,
+          "width": 107,
+          "height": 87,
+          "bottom": 128,
+          "visiblePixels": 6254,
+          "firstRow": 41,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 7,
+          "x": 12,
+          "y": 50,
+          "width": 103,
+          "height": 78,
+          "bottom": 128,
+          "visiblePixels": 5604,
+          "firstRow": 50,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 8,
+          "x": 4,
+          "y": 48,
+          "width": 119,
+          "height": 80,
+          "bottom": 128,
+          "visiblePixels": 6472,
+          "firstRow": 48,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 9,
+          "x": 8,
+          "y": 80,
+          "width": 112,
+          "height": 48,
+          "bottom": 128,
+          "visiblePixels": 4094,
+          "firstRow": 80,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 10,
+          "x": 11,
+          "y": 44,
+          "width": 106,
+          "height": 84,
+          "bottom": 128,
+          "visiblePixels": 6201,
+          "firstRow": 44,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 11,
+          "x": 11,
+          "y": 42,
+          "width": 106,
+          "height": 86,
+          "bottom": 128,
+          "visiblePixels": 6359,
+          "firstRow": 42,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 12,
+          "x": 10,
+          "y": 43,
+          "width": 107,
+          "height": 85,
+          "bottom": 128,
+          "visiblePixels": 6234,
+          "firstRow": 43,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 13,
+          "x": 4,
+          "y": 45,
+          "width": 120,
+          "height": 83,
+          "bottom": 128,
+          "visiblePixels": 6640,
+          "firstRow": 45,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 14,
+          "x": 7,
+          "y": 78,
+          "width": 113,
+          "height": 50,
+          "bottom": 128,
+          "visiblePixels": 4306,
+          "firstRow": 78,
+          "lastRow": 127,
+          "softAlpha": 0
+        }
+      ]
+    },
+    {
+      "id": "sleepy-pink",
+      "name": "柔粉睡羊",
+      "source": "assets/skins/generated-v2/sleepy-pink-source.png",
+      "runtime": "assets/skins/runtime-v2/sleepy-pink-sheet.png",
+      "sourceHash": "ce192b6df1d4971ddb089d307144ec2cfb44c0b70186a770bd94738203176408",
+      "runtimeHash": "fb6541326268a9fa7f19419541256ea99fdf6f71df81afc6d4289d8f51c79f66",
+      "sourceSize": [
+        1619,
+        971
+      ],
+      "scale": 0.3761755485893417,
+      "sourceBounds": [
+        {
+          "i": 0,
+          "component": 1,
+          "area": 44019,
+          "bounds": [
+            29,
+            71,
+            310,
+            302
+          ]
+        },
+        {
+          "i": 1,
+          "component": 2,
+          "area": 44826,
+          "bounds": [
+            347,
+            71,
+            631,
+            307
+          ]
+        },
+        {
+          "i": 2,
+          "component": 3,
+          "area": 43535,
+          "bounds": [
+            675,
+            75,
+            954,
+            302
+          ]
+        },
+        {
+          "i": 3,
+          "component": 5,
+          "area": 43305,
+          "bounds": [
+            989,
+            79,
+            1282,
+            300
+          ]
+        },
+        {
+          "i": 4,
+          "component": 4,
+          "area": 43454,
+          "bounds": [
+            1331,
+            76,
+            1614,
+            307
+          ]
+        },
+        {
+          "i": 5,
+          "component": 6,
+          "area": 40474,
+          "bounds": [
+            34,
+            385,
+            304,
+            602
+          ]
+        },
+        {
+          "i": 6,
+          "component": 7,
+          "area": 41995,
+          "bounds": [
+            358,
+            390,
+            632,
+            619
+          ]
+        },
+        {
+          "i": 7,
+          "component": 9,
+          "area": 40158,
+          "bounds": [
+            683,
+            408,
+            954,
+            623
+          ]
+        },
+        {
+          "i": 8,
+          "component": 8,
+          "area": 44510,
+          "bounds": [
+            987,
+            402,
+            1306,
+            618
+          ]
+        },
+        {
+          "i": 9,
+          "component": 10,
+          "area": 32932,
+          "bounds": [
+            1317,
+            474,
+            1618,
+            619
+          ]
+        },
+        {
+          "i": 10,
+          "component": 11,
+          "area": 43501,
+          "bounds": [
+            27,
+            688,
+            304,
+            914
+          ]
+        },
+        {
+          "i": 11,
+          "component": 12,
+          "area": 43311,
+          "bounds": [
+            347,
+            692,
+            632,
+            915
+          ]
+        },
+        {
+          "i": 12,
+          "component": 13,
+          "area": 42492,
+          "bounds": [
+            675,
+            695,
+            955,
+            916
+          ]
+        },
+        {
+          "i": 13,
+          "component": 14,
+          "area": 44287,
+          "bounds": [
+            989,
+            705,
+            1291,
+            914
+          ]
+        },
+        {
+          "i": 14,
+          "component": 15,
+          "area": 31332,
+          "bounds": [
+            1318,
+            781,
+            1615,
+            921
+          ]
+        }
+      ],
+      "frames": [
+        {
+          "i": 0,
+          "x": 11,
+          "y": 41,
+          "width": 106,
+          "height": 87,
+          "bottom": 128,
+          "visiblePixels": 6252,
+          "firstRow": 41,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 1,
+          "x": 10,
+          "y": 39,
+          "width": 107,
+          "height": 89,
+          "bottom": 128,
+          "visiblePixels": 6362,
+          "firstRow": 39,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 2,
+          "x": 11,
+          "y": 43,
+          "width": 105,
+          "height": 85,
+          "bottom": 128,
+          "visiblePixels": 6147,
+          "firstRow": 43,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 3,
+          "x": 9,
+          "y": 45,
+          "width": 110,
+          "height": 83,
+          "bottom": 128,
+          "visiblePixels": 6074,
+          "firstRow": 45,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 4,
+          "x": 11,
+          "y": 41,
+          "width": 106,
+          "height": 87,
+          "bottom": 128,
+          "visiblePixels": 6125,
+          "firstRow": 41,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 5,
+          "x": 13,
+          "y": 38,
+          "width": 102,
+          "height": 82,
+          "bottom": 120,
+          "visiblePixels": 5777,
+          "firstRow": 38,
+          "lastRow": 119,
+          "softAlpha": 0
+        },
+        {
+          "i": 6,
+          "x": 12,
+          "y": 42,
+          "width": 103,
+          "height": 86,
+          "bottom": 128,
+          "visiblePixels": 5910,
+          "firstRow": 42,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 7,
+          "x": 13,
+          "y": 47,
+          "width": 102,
+          "height": 81,
+          "bottom": 128,
+          "visiblePixels": 5690,
+          "firstRow": 47,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 8,
+          "x": 4,
+          "y": 47,
+          "width": 120,
+          "height": 81,
+          "bottom": 128,
+          "visiblePixels": 6276,
+          "firstRow": 47,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 9,
+          "x": 7,
+          "y": 73,
+          "width": 113,
+          "height": 55,
+          "bottom": 128,
+          "visiblePixels": 4691,
+          "firstRow": 73,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 10,
+          "x": 12,
+          "y": 43,
+          "width": 104,
+          "height": 85,
+          "bottom": 128,
+          "visiblePixels": 6133,
+          "firstRow": 43,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 11,
+          "x": 10,
+          "y": 44,
+          "width": 107,
+          "height": 84,
+          "bottom": 128,
+          "visiblePixels": 6113,
+          "firstRow": 44,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 12,
+          "x": 11,
+          "y": 45,
+          "width": 105,
+          "height": 83,
+          "bottom": 128,
+          "visiblePixels": 5978,
+          "firstRow": 45,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 13,
+          "x": 7,
+          "y": 49,
+          "width": 114,
+          "height": 79,
+          "bottom": 128,
+          "visiblePixels": 6326,
+          "firstRow": 49,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 14,
+          "x": 8,
+          "y": 75,
+          "width": 112,
+          "height": 53,
+          "bottom": 128,
+          "visiblePixels": 4468,
+          "firstRow": 75,
+          "lastRow": 127,
+          "softAlpha": 0
+        }
+      ]
+    },
+    {
+      "id": "sleepy-mint",
+      "name": "薄荷睡羊",
+      "source": "assets/skins/generated-v2/sleepy-mint-source.png",
+      "runtime": "assets/skins/runtime-v2/sleepy-mint-sheet.png",
+      "sourceHash": "cc7885c0ae62c6dd1af373b1157c86c9daa2f6c3ffebcc7afea680ab13b09a80",
+      "runtimeHash": "dc3c466cf3d9cc305c3f42d206d28fa28800aa16ab7dba72e27b2c18f4ec6fe3",
+      "sourceSize": [
+        1619,
+        971
+      ],
+      "scale": 0.4013377926421405,
+      "sourceBounds": [
+        {
+          "i": 0,
+          "component": 2,
+          "area": 40918,
+          "bounds": [
+            29,
+            85,
+            304,
+            306
+          ]
+        },
+        {
+          "i": 1,
+          "component": 1,
+          "area": 43454,
+          "bounds": [
+            346,
+            81,
+            628,
+            310
+          ]
+        },
+        {
+          "i": 2,
+          "component": 3,
+          "area": 40096,
+          "bounds": [
+            672,
+            90,
+            946,
+            306
+          ]
+        },
+        {
+          "i": 3,
+          "component": 5,
+          "area": 41280,
+          "bounds": [
+            986,
+            95,
+            1273,
+            310
+          ]
+        },
+        {
+          "i": 4,
+          "component": 4,
+          "area": 40825,
+          "bounds": [
+            1322,
+            90,
+            1597,
+            312
+          ]
+        },
+        {
+          "i": 5,
+          "component": 6,
+          "area": 38883,
+          "bounds": [
+            34,
+            380,
+            301,
+            598
+          ]
+        },
+        {
+          "i": 6,
+          "component": 7,
+          "area": 41514,
+          "bounds": [
+            352,
+            394,
+            631,
+            618
+          ]
+        },
+        {
+          "i": 7,
+          "component": 9,
+          "area": 37814,
+          "bounds": [
+            680,
+            410,
+            946,
+            618
+          ]
+        },
+        {
+          "i": 8,
+          "component": 8,
+          "area": 41959,
+          "bounds": [
+            986,
+            406,
+            1285,
+            617
+          ]
+        },
+        {
+          "i": 9,
+          "component": 10,
+          "area": 25691,
+          "bounds": [
+            1317,
+            500,
+            1600,
+            618
+          ]
+        },
+        {
+          "i": 10,
+          "component": 11,
+          "area": 40985,
+          "bounds": [
+            29,
+            689,
+            300,
+            909
+          ]
+        },
+        {
+          "i": 11,
+          "component": 12,
+          "area": 41011,
+          "bounds": [
+            351,
+            689,
+            628,
+            909
+          ]
+        },
+        {
+          "i": 12,
+          "component": 13,
+          "area": 41135,
+          "bounds": [
+            672,
+            692,
+            946,
+            915
+          ]
+        },
+        {
+          "i": 13,
+          "component": 14,
+          "area": 42610,
+          "bounds": [
+            986,
+            697,
+            1278,
+            907
+          ]
+        },
+        {
+          "i": 14,
+          "component": 15,
+          "area": 26309,
+          "bounds": [
+            1317,
+            798,
+            1600,
+            917
+          ]
+        }
+      ],
+      "frames": [
+        {
+          "i": 0,
+          "x": 9,
+          "y": 39,
+          "width": 110,
+          "height": 89,
+          "bottom": 128,
+          "visiblePixels": 6601,
+          "firstRow": 39,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 1,
+          "x": 7,
+          "y": 36,
+          "width": 113,
+          "height": 92,
+          "bottom": 128,
+          "visiblePixels": 7007,
+          "firstRow": 36,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 2,
+          "x": 9,
+          "y": 41,
+          "width": 110,
+          "height": 87,
+          "bottom": 128,
+          "visiblePixels": 6493,
+          "firstRow": 41,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 3,
+          "x": 6,
+          "y": 42,
+          "width": 115,
+          "height": 86,
+          "bottom": 128,
+          "visiblePixels": 6616,
+          "firstRow": 42,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 4,
+          "x": 9,
+          "y": 39,
+          "width": 110,
+          "height": 89,
+          "bottom": 128,
+          "visiblePixels": 6561,
+          "firstRow": 39,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 5,
+          "x": 10,
+          "y": 33,
+          "width": 107,
+          "height": 87,
+          "bottom": 120,
+          "visiblePixels": 6213,
+          "firstRow": 33,
+          "lastRow": 119,
+          "softAlpha": 0
+        },
+        {
+          "i": 6,
+          "x": 8,
+          "y": 38,
+          "width": 112,
+          "height": 90,
+          "bottom": 128,
+          "visiblePixels": 6708,
+          "firstRow": 38,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 7,
+          "x": 10,
+          "y": 45,
+          "width": 107,
+          "height": 83,
+          "bottom": 128,
+          "visiblePixels": 6068,
+          "firstRow": 45,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 8,
+          "x": 4,
+          "y": 43,
+          "width": 120,
+          "height": 85,
+          "bottom": 128,
+          "visiblePixels": 6790,
+          "firstRow": 43,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 9,
+          "x": 7,
+          "y": 81,
+          "width": 114,
+          "height": 47,
+          "bottom": 128,
+          "visiblePixels": 4120,
+          "firstRow": 81,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 10,
+          "x": 9,
+          "y": 40,
+          "width": 109,
+          "height": 88,
+          "bottom": 128,
+          "visiblePixels": 6599,
+          "firstRow": 40,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 11,
+          "x": 8,
+          "y": 40,
+          "width": 111,
+          "height": 88,
+          "bottom": 128,
+          "visiblePixels": 6567,
+          "firstRow": 40,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 12,
+          "x": 9,
+          "y": 39,
+          "width": 110,
+          "height": 89,
+          "bottom": 128,
+          "visiblePixels": 6581,
+          "firstRow": 39,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 13,
+          "x": 5,
+          "y": 44,
+          "width": 117,
+          "height": 84,
+          "bottom": 128,
+          "visiblePixels": 6836,
+          "firstRow": 44,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 14,
+          "x": 7,
+          "y": 80,
+          "width": 114,
+          "height": 48,
+          "bottom": 128,
+          "visiblePixels": 4285,
+          "firstRow": 80,
+          "lastRow": 127,
+          "softAlpha": 0
+        }
+      ]
+    },
+    {
+      "id": "dream",
+      "name": "梦境羊",
+      "source": "assets/skins/generated-v2/dream-source.png",
+      "runtime": "assets/skins/runtime-v2/dream-sheet.png",
+      "sourceHash": "40bf4b9733e7bcfee2d185d4b6e4ec61938fb63d099de9fe69edded3e1a0d561",
+      "runtimeHash": "2a9ead49102e0621ad8a140c674d888ea9384d8fdc33e814d36e00cb9925d62e",
+      "sourceSize": [
+        1619,
+        971
+      ],
+      "scale": 0.39087947882736157,
+      "sourceBounds": [
+        {
+          "i": 0,
+          "component": 2,
+          "area": 43410,
+          "bounds": [
+            23,
+            104,
+            304,
+            323
+          ]
+        },
+        {
+          "i": 1,
+          "component": 1,
+          "area": 43862,
+          "bounds": [
+            347,
+            94,
+            628,
+            324
+          ]
+        },
+        {
+          "i": 2,
+          "component": 3,
+          "area": 43636,
+          "bounds": [
+            670,
+            104,
+            955,
+            323
+          ]
+        },
+        {
+          "i": 3,
+          "component": 5,
+          "area": 43346,
+          "bounds": [
+            992,
+            108,
+            1280,
+            324
+          ]
+        },
+        {
+          "i": 4,
+          "component": 4,
+          "area": 41605,
+          "bounds": [
+            1316,
+            105,
+            1595,
+            324
+          ]
+        },
+        {
+          "i": 5,
+          "component": 6,
+          "area": 40137,
+          "bounds": [
+            24,
+            411,
+            300,
+            630
+          ]
+        },
+        {
+          "i": 6,
+          "component": 7,
+          "area": 42737,
+          "bounds": [
+            347,
+            424,
+            626,
+            650
+          ]
+        },
+        {
+          "i": 7,
+          "component": 9,
+          "area": 37143,
+          "bounds": [
+            677,
+            445,
+            943,
+            648
+          ]
+        },
+        {
+          "i": 8,
+          "component": 8,
+          "area": 43466,
+          "bounds": [
+            979,
+            436,
+            1286,
+            648
+          ]
+        },
+        {
+          "i": 9,
+          "component": 10,
+          "area": 27784,
+          "bounds": [
+            1310,
+            530,
+            1604,
+            650
+          ]
+        },
+        {
+          "i": 10,
+          "component": 11,
+          "area": 42918,
+          "bounds": [
+            22,
+            723,
+            303,
+            942
+          ]
+        },
+        {
+          "i": 11,
+          "component": 12,
+          "area": 41793,
+          "bounds": [
+            348,
+            723,
+            623,
+            942
+          ]
+        },
+        {
+          "i": 12,
+          "component": 13,
+          "area": 42343,
+          "bounds": [
+            669,
+            723,
+            949,
+            942
+          ]
+        },
+        {
+          "i": 13,
+          "component": 14,
+          "area": 43097,
+          "bounds": [
+            983,
+            735,
+            1282,
+            942
+          ]
+        },
+        {
+          "i": 14,
+          "component": 15,
+          "area": 28463,
+          "bounds": [
+            1310,
+            819,
+            1604,
+            941
+          ]
+        }
+      ],
+      "frames": [
+        {
+          "i": 0,
+          "x": 9,
+          "y": 42,
+          "width": 110,
+          "height": 86,
+          "bottom": 128,
+          "visiblePixels": 6668,
+          "firstRow": 42,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 1,
+          "x": 9,
+          "y": 38,
+          "width": 110,
+          "height": 90,
+          "bottom": 128,
+          "visiblePixels": 6705,
+          "firstRow": 38,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 2,
+          "x": 8,
+          "y": 42,
+          "width": 111,
+          "height": 86,
+          "bottom": 128,
+          "visiblePixels": 6673,
+          "firstRow": 42,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 3,
+          "x": 7,
+          "y": 44,
+          "width": 113,
+          "height": 84,
+          "bottom": 128,
+          "visiblePixels": 6629,
+          "firstRow": 44,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 4,
+          "x": 9,
+          "y": 42,
+          "width": 109,
+          "height": 86,
+          "bottom": 128,
+          "visiblePixels": 6388,
+          "firstRow": 42,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 5,
+          "x": 10,
+          "y": 34,
+          "width": 108,
+          "height": 86,
+          "bottom": 120,
+          "visiblePixels": 6173,
+          "firstRow": 34,
+          "lastRow": 119,
+          "softAlpha": 0
+        },
+        {
+          "i": 6,
+          "x": 9,
+          "y": 40,
+          "width": 109,
+          "height": 88,
+          "bottom": 128,
+          "visiblePixels": 6514,
+          "firstRow": 40,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 7,
+          "x": 12,
+          "y": 49,
+          "width": 104,
+          "height": 79,
+          "bottom": 128,
+          "visiblePixels": 5662,
+          "firstRow": 49,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 8,
+          "x": 4,
+          "y": 45,
+          "width": 120,
+          "height": 83,
+          "bottom": 128,
+          "visiblePixels": 6649,
+          "firstRow": 45,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 9,
+          "x": 6,
+          "y": 81,
+          "width": 115,
+          "height": 47,
+          "bottom": 128,
+          "visiblePixels": 4281,
+          "firstRow": 81,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 10,
+          "x": 9,
+          "y": 42,
+          "width": 110,
+          "height": 86,
+          "bottom": 128,
+          "visiblePixels": 6604,
+          "firstRow": 42,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 11,
+          "x": 10,
+          "y": 42,
+          "width": 107,
+          "height": 86,
+          "bottom": 128,
+          "visiblePixels": 6399,
+          "firstRow": 42,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 12,
+          "x": 9,
+          "y": 42,
+          "width": 109,
+          "height": 86,
+          "bottom": 128,
+          "visiblePixels": 6463,
+          "firstRow": 42,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 13,
+          "x": 5,
+          "y": 47,
+          "width": 117,
+          "height": 81,
+          "bottom": 128,
+          "visiblePixels": 6611,
+          "firstRow": 47,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 14,
+          "x": 6,
+          "y": 80,
+          "width": 115,
+          "height": 48,
+          "bottom": 128,
+          "visiblePixels": 4382,
+          "firstRow": 80,
+          "lastRow": 127,
+          "softAlpha": 0
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+Mode: built-in image_gen
+transparent_background: true
+Master: masters/magnet-source.png
+Runtime: runtime/magnet.png
+Generation prompt:
+A single original production-ready transparent sprite for a cute GBA pixel game, crisp square steps, dark burnt-orange outline, bright flat colors and tiny cream shine. 24x24 logical pixel grid enlarged nearest-neighbor, subject fits 22x22 pixels centered. No blur, no soft glow, no antialiasing, no gradient, no labels, no face, no backdrop, no detached decorations. Transparent background. A red and pink U-shaped horseshoe magnet with two cream/silver pole tips and a clear open center.

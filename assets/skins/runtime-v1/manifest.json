@@ -1,0 +1,2358 @@
+{
+  "generatedAt": "2026-10-08",
+  "skins": [
+    {
+      "id": "white",
+      "source": "image_gen",
+      "frameWidth": 128,
+      "frameHeight": 128,
+      "frameCount": 15,
+      "renderFrameWidth": 128,
+      "renderFrameHeight": 112,
+      "topPadding": 16,
+      "columns": 5,
+      "rows": 3,
+      "file": "white-sheet.png",
+      "sha256": "b1aceac87739a99c77cf97f4083a7e613720c24c817485575dde2ef51b896856",
+      "frames": [
+        {
+          "index": 0,
+          "pose": "idle_1",
+          "bbox": [
+            9,
+            39,
+            119,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 1,
+          "pose": "run_1",
+          "bbox": [
+            10,
+            36,
+            118,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 2,
+          "pose": "run_2",
+          "bbox": [
+            9,
+            39,
+            119,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 3,
+          "pose": "run_3",
+          "bbox": [
+            8,
+            41,
+            120,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 4,
+          "pose": "run_4",
+          "bbox": [
+            10,
+            39,
+            118,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 5,
+          "pose": "jump",
+          "bbox": [
+            11,
+            31,
+            117,
+            120
+          ],
+          "footBaseline": 120
+        },
+        {
+          "index": 6,
+          "pose": "fall",
+          "bbox": [
+            9,
+            39,
+            118,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 7,
+          "pose": "hit",
+          "bbox": [
+            13,
+            47,
+            115,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 8,
+          "pose": "dash_1",
+          "bbox": [
+            4,
+            43,
+            124,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 9,
+          "pose": "dead",
+          "bbox": [
+            7,
+            82,
+            121,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 10,
+          "pose": "idle_2",
+          "bbox": [
+            9,
+            39,
+            118,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 11,
+          "pose": "run_5",
+          "bbox": [
+            11,
+            39,
+            117,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 12,
+          "pose": "run_6",
+          "bbox": [
+            9,
+            39,
+            118,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 13,
+          "pose": "dash_2",
+          "bbox": [
+            5,
+            45,
+            122,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 14,
+          "pose": "dead_settled",
+          "bbox": [
+            7,
+            78,
+            121,
+            128
+          ],
+          "footBaseline": 128
+        }
+      ]
+    },
+    {
+      "id": "black",
+      "source": "image_gen",
+      "frameWidth": 128,
+      "frameHeight": 128,
+      "frameCount": 15,
+      "renderFrameWidth": 128,
+      "renderFrameHeight": 112,
+      "topPadding": 16,
+      "columns": 5,
+      "rows": 3,
+      "file": "black-sheet.png",
+      "sha256": "98dd3d756fe12743c2259d62ab6402e339e4d73bea16fb705790396fa3e8903e",
+      "frames": [
+        {
+          "index": 0,
+          "pose": "idle_1",
+          "bbox": [
+            9,
+            38,
+            119,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 1,
+          "pose": "run_1",
+          "bbox": [
+            10,
+            34,
+            118,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 2,
+          "pose": "run_2",
+          "bbox": [
+            9,
+            38,
+            118,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 3,
+          "pose": "run_3",
+          "bbox": [
+            8,
+            40,
+            120,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 4,
+          "pose": "run_4",
+          "bbox": [
+            10,
+            38,
+            117,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 5,
+          "pose": "jump",
+          "bbox": [
+            11,
+            30,
+            117,
+            120
+          ],
+          "footBaseline": 120
+        },
+        {
+          "index": 6,
+          "pose": "fall",
+          "bbox": [
+            9,
+            36,
+            118,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 7,
+          "pose": "hit",
+          "bbox": [
+            13,
+            46,
+            114,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 8,
+          "pose": "dash_1",
+          "bbox": [
+            4,
+            42,
+            124,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 9,
+          "pose": "dead",
+          "bbox": [
+            7,
+            79,
+            121,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 10,
+          "pose": "idle_2",
+          "bbox": [
+            9,
+            39,
+            119,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 11,
+          "pose": "run_5",
+          "bbox": [
+            11,
+            38,
+            116,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 12,
+          "pose": "run_6",
+          "bbox": [
+            10,
+            39,
+            118,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 13,
+          "pose": "dash_2",
+          "bbox": [
+            6,
+            44,
+            121,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 14,
+          "pose": "dead_settled",
+          "bbox": [
+            7,
+            77,
+            120,
+            128
+          ],
+          "footBaseline": 128
+        }
+      ]
+    },
+    {
+      "id": "brown",
+      "source": "image_gen",
+      "frameWidth": 128,
+      "frameHeight": 128,
+      "frameCount": 15,
+      "renderFrameWidth": 128,
+      "renderFrameHeight": 112,
+      "topPadding": 16,
+      "columns": 5,
+      "rows": 3,
+      "file": "brown-sheet.png",
+      "sha256": "30d773c662508f0cb95294d24666666cebb58c15ce2b577d4c16db4c4c76580c",
+      "frames": [
+        {
+          "index": 0,
+          "pose": "idle_1",
+          "bbox": [
+            9,
+            38,
+            119,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 1,
+          "pose": "run_1",
+          "bbox": [
+            10,
+            35,
+            118,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 2,
+          "pose": "run_2",
+          "bbox": [
+            9,
+            38,
+            118,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 3,
+          "pose": "run_3",
+          "bbox": [
+            8,
+            41,
+            119,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 4,
+          "pose": "run_4",
+          "bbox": [
+            10,
+            39,
+            117,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 5,
+          "pose": "jump",
+          "bbox": [
+            11,
+            30,
+            116,
+            120
+          ],
+          "footBaseline": 120
+        },
+        {
+          "index": 6,
+          "pose": "fall",
+          "bbox": [
+            9,
+            39,
+            118,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 7,
+          "pose": "hit",
+          "bbox": [
+            13,
+            47,
+            115,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 8,
+          "pose": "dash_1",
+          "bbox": [
+            4,
+            43,
+            124,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 9,
+          "pose": "dead",
+          "bbox": [
+            7,
+            80,
+            121,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 10,
+          "pose": "idle_2",
+          "bbox": [
+            9,
+            40,
+            118,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 11,
+          "pose": "run_5",
+          "bbox": [
+            11,
+            39,
+            117,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 12,
+          "pose": "run_6",
+          "bbox": [
+            10,
+            40,
+            118,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 13,
+          "pose": "dash_2",
+          "bbox": [
+            6,
+            45,
+            122,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 14,
+          "pose": "dead_settled",
+          "bbox": [
+            7,
+            79,
+            121,
+            128
+          ],
+          "footBaseline": 128
+        }
+      ]
+    },
+    {
+      "id": "golden",
+      "source": "image_gen",
+      "frameWidth": 128,
+      "frameHeight": 128,
+      "frameCount": 15,
+      "renderFrameWidth": 128,
+      "renderFrameHeight": 112,
+      "topPadding": 16,
+      "columns": 5,
+      "rows": 3,
+      "file": "golden-sheet.png",
+      "sha256": "f7e66cd713494799c0dddb9e862a3c6cd7ce96d54b71f8180d746b7dcc7f01bf",
+      "frames": [
+        {
+          "index": 0,
+          "pose": "idle_1",
+          "bbox": [
+            9,
+            38,
+            119,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 1,
+          "pose": "run_1",
+          "bbox": [
+            10,
+            35,
+            118,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 2,
+          "pose": "run_2",
+          "bbox": [
+            9,
+            38,
+            118,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 3,
+          "pose": "run_3",
+          "bbox": [
+            8,
+            41,
+            120,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 4,
+          "pose": "run_4",
+          "bbox": [
+            10,
+            39,
+            117,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 5,
+          "pose": "jump",
+          "bbox": [
+            11,
+            30,
+            117,
+            120
+          ],
+          "footBaseline": 120
+        },
+        {
+          "index": 6,
+          "pose": "fall",
+          "bbox": [
+            9,
+            39,
+            118,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 7,
+          "pose": "hit",
+          "bbox": [
+            13,
+            47,
+            114,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 8,
+          "pose": "dash_1",
+          "bbox": [
+            4,
+            44,
+            124,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 9,
+          "pose": "dead",
+          "bbox": [
+            7,
+            81,
+            121,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 10,
+          "pose": "idle_2",
+          "bbox": [
+            9,
+            39,
+            118,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 11,
+          "pose": "run_5",
+          "bbox": [
+            11,
+            39,
+            117,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 12,
+          "pose": "run_6",
+          "bbox": [
+            9,
+            39,
+            118,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 13,
+          "pose": "dash_2",
+          "bbox": [
+            6,
+            45,
+            122,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 14,
+          "pose": "dead_settled",
+          "bbox": [
+            7,
+            78,
+            121,
+            128
+          ],
+          "footBaseline": 128
+        }
+      ]
+    },
+    {
+      "id": "farmer",
+      "source": "image_gen",
+      "frameWidth": 128,
+      "frameHeight": 128,
+      "frameCount": 15,
+      "renderFrameWidth": 128,
+      "renderFrameHeight": 112,
+      "topPadding": 16,
+      "columns": 5,
+      "rows": 3,
+      "file": "farmer-sheet.png",
+      "sha256": "002272f320622293a3b349bc4da51d06a0173aafd0378c39ff99a339b5c81895",
+      "frames": [
+        {
+          "index": 0,
+          "pose": "idle_1",
+          "bbox": [
+            9,
+            40,
+            119,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 1,
+          "pose": "run_1",
+          "bbox": [
+            9,
+            37,
+            118,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 2,
+          "pose": "run_2",
+          "bbox": [
+            9,
+            40,
+            118,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 3,
+          "pose": "run_3",
+          "bbox": [
+            8,
+            42,
+            120,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 4,
+          "pose": "run_4",
+          "bbox": [
+            10,
+            40,
+            117,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 5,
+          "pose": "jump",
+          "bbox": [
+            11,
+            30,
+            117,
+            120
+          ],
+          "footBaseline": 120
+        },
+        {
+          "index": 6,
+          "pose": "fall",
+          "bbox": [
+            9,
+            40,
+            118,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 7,
+          "pose": "hit",
+          "bbox": [
+            13,
+            48,
+            115,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 8,
+          "pose": "dash_1",
+          "bbox": [
+            4,
+            44,
+            124,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 9,
+          "pose": "dead",
+          "bbox": [
+            7,
+            82,
+            121,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 10,
+          "pose": "idle_2",
+          "bbox": [
+            9,
+            40,
+            119,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 11,
+          "pose": "run_5",
+          "bbox": [
+            11,
+            39,
+            117,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 12,
+          "pose": "run_6",
+          "bbox": [
+            10,
+            40,
+            118,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 13,
+          "pose": "dash_2",
+          "bbox": [
+            5,
+            45,
+            122,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 14,
+          "pose": "dead_settled",
+          "bbox": [
+            7,
+            79,
+            121,
+            128
+          ],
+          "footBaseline": 128
+        }
+      ]
+    },
+    {
+      "id": "mint",
+      "source": "image_gen",
+      "frameWidth": 128,
+      "frameHeight": 128,
+      "frameCount": 15,
+      "renderFrameWidth": 128,
+      "renderFrameHeight": 112,
+      "topPadding": 16,
+      "columns": 5,
+      "rows": 3,
+      "file": "mint-sheet.png",
+      "sha256": "f70c6f984e7f397fb087c9fa62169cc9ffa8f316c4e95b9ed5a542c87658aadc",
+      "frames": [
+        {
+          "index": 0,
+          "pose": "idle_1",
+          "bbox": [
+            9,
+            39,
+            119,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 1,
+          "pose": "run_1",
+          "bbox": [
+            10,
+            36,
+            118,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 2,
+          "pose": "run_2",
+          "bbox": [
+            9,
+            39,
+            119,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 3,
+          "pose": "run_3",
+          "bbox": [
+            8,
+            40,
+            120,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 4,
+          "pose": "run_4",
+          "bbox": [
+            10,
+            39,
+            117,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 5,
+          "pose": "jump",
+          "bbox": [
+            11,
+            30,
+            117,
+            120
+          ],
+          "footBaseline": 120
+        },
+        {
+          "index": 6,
+          "pose": "fall",
+          "bbox": [
+            10,
+            38,
+            118,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 7,
+          "pose": "hit",
+          "bbox": [
+            13,
+            47,
+            115,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 8,
+          "pose": "dash_1",
+          "bbox": [
+            4,
+            43,
+            124,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 9,
+          "pose": "dead",
+          "bbox": [
+            7,
+            80,
+            121,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 10,
+          "pose": "idle_2",
+          "bbox": [
+            9,
+            39,
+            119,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 11,
+          "pose": "run_5",
+          "bbox": [
+            11,
+            39,
+            117,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 12,
+          "pose": "run_6",
+          "bbox": [
+            10,
+            39,
+            118,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 13,
+          "pose": "dash_2",
+          "bbox": [
+            6,
+            45,
+            122,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 14,
+          "pose": "dead_settled",
+          "bbox": [
+            7,
+            78,
+            121,
+            128
+          ],
+          "footBaseline": 128
+        }
+      ]
+    },
+    {
+      "id": "rose",
+      "source": "image_gen",
+      "frameWidth": 128,
+      "frameHeight": 128,
+      "frameCount": 15,
+      "renderFrameWidth": 128,
+      "renderFrameHeight": 112,
+      "topPadding": 16,
+      "columns": 5,
+      "rows": 3,
+      "file": "rose-sheet.png",
+      "sha256": "56becde30489757fad70778d1518ea2aea621a356484dccd6dedf2ebe2d40b67",
+      "frames": [
+        {
+          "index": 0,
+          "pose": "idle_1",
+          "bbox": [
+            9,
+            38,
+            119,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 1,
+          "pose": "run_1",
+          "bbox": [
+            10,
+            35,
+            118,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 2,
+          "pose": "run_2",
+          "bbox": [
+            9,
+            38,
+            118,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 3,
+          "pose": "run_3",
+          "bbox": [
+            8,
+            40,
+            120,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 4,
+          "pose": "run_4",
+          "bbox": [
+            10,
+            39,
+            117,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 5,
+          "pose": "jump",
+          "bbox": [
+            11,
+            31,
+            116,
+            120
+          ],
+          "footBaseline": 120
+        },
+        {
+          "index": 6,
+          "pose": "fall",
+          "bbox": [
+            10,
+            39,
+            118,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 7,
+          "pose": "hit",
+          "bbox": [
+            13,
+            46,
+            115,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 8,
+          "pose": "dash_1",
+          "bbox": [
+            4,
+            43,
+            124,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 9,
+          "pose": "dead",
+          "bbox": [
+            7,
+            81,
+            121,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 10,
+          "pose": "idle_2",
+          "bbox": [
+            9,
+            38,
+            119,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 11,
+          "pose": "run_5",
+          "bbox": [
+            10,
+            39,
+            117,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 12,
+          "pose": "run_6",
+          "bbox": [
+            9,
+            39,
+            118,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 13,
+          "pose": "dash_2",
+          "bbox": [
+            5,
+            45,
+            122,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 14,
+          "pose": "dead_settled",
+          "bbox": [
+            7,
+            78,
+            121,
+            128
+          ],
+          "footBaseline": 128
+        }
+      ]
+    },
+    {
+      "id": "blueberry",
+      "source": "image_gen",
+      "frameWidth": 128,
+      "frameHeight": 128,
+      "frameCount": 15,
+      "renderFrameWidth": 128,
+      "renderFrameHeight": 112,
+      "topPadding": 16,
+      "columns": 5,
+      "rows": 3,
+      "file": "blueberry-sheet.png",
+      "sha256": "5260df3b065b37c17807c7a6f13ba04e84c8304426d704a1d87a936b24d1d552",
+      "frames": [
+        {
+          "index": 0,
+          "pose": "idle_1",
+          "bbox": [
+            9,
+            37,
+            119,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 1,
+          "pose": "run_1",
+          "bbox": [
+            10,
+            35,
+            118,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 2,
+          "pose": "run_2",
+          "bbox": [
+            9,
+            38,
+            119,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 3,
+          "pose": "run_3",
+          "bbox": [
+            8,
+            39,
+            120,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 4,
+          "pose": "run_4",
+          "bbox": [
+            10,
+            38,
+            117,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 5,
+          "pose": "jump",
+          "bbox": [
+            11,
+            29,
+            117,
+            120
+          ],
+          "footBaseline": 120
+        },
+        {
+          "index": 6,
+          "pose": "fall",
+          "bbox": [
+            10,
+            38,
+            118,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 7,
+          "pose": "hit",
+          "bbox": [
+            13,
+            46,
+            115,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 8,
+          "pose": "dash_1",
+          "bbox": [
+            4,
+            43,
+            124,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 9,
+          "pose": "dead",
+          "bbox": [
+            7,
+            79,
+            121,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 10,
+          "pose": "idle_2",
+          "bbox": [
+            9,
+            40,
+            119,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 11,
+          "pose": "run_5",
+          "bbox": [
+            11,
+            40,
+            117,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 12,
+          "pose": "run_6",
+          "bbox": [
+            9,
+            40,
+            118,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 13,
+          "pose": "dash_2",
+          "bbox": [
+            6,
+            45,
+            122,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 14,
+          "pose": "dead_settled",
+          "bbox": [
+            6,
+            77,
+            121,
+            128
+          ],
+          "footBaseline": 128
+        }
+      ]
+    },
+    {
+      "id": "lavender",
+      "source": "image_gen",
+      "frameWidth": 128,
+      "frameHeight": 128,
+      "frameCount": 15,
+      "renderFrameWidth": 128,
+      "renderFrameHeight": 112,
+      "topPadding": 16,
+      "columns": 5,
+      "rows": 3,
+      "file": "lavender-sheet.png",
+      "sha256": "4051f621c2392b2ef08e8bfd198d96bf190947f52791e5dcc428c34418818259",
+      "frames": [
+        {
+          "index": 0,
+          "pose": "idle_1",
+          "bbox": [
+            9,
+            39,
+            118,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 1,
+          "pose": "run_1",
+          "bbox": [
+            9,
+            36,
+            118,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 2,
+          "pose": "run_2",
+          "bbox": [
+            9,
+            39,
+            119,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 3,
+          "pose": "run_3",
+          "bbox": [
+            8,
+            41,
+            120,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 4,
+          "pose": "run_4",
+          "bbox": [
+            10,
+            39,
+            117,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 5,
+          "pose": "jump",
+          "bbox": [
+            11,
+            30,
+            117,
+            120
+          ],
+          "footBaseline": 120
+        },
+        {
+          "index": 6,
+          "pose": "fall",
+          "bbox": [
+            9,
+            39,
+            118,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 7,
+          "pose": "hit",
+          "bbox": [
+            13,
+            47,
+            115,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 8,
+          "pose": "dash_1",
+          "bbox": [
+            4,
+            44,
+            124,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 9,
+          "pose": "dead",
+          "bbox": [
+            7,
+            81,
+            120,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 10,
+          "pose": "idle_2",
+          "bbox": [
+            9,
+            39,
+            118,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 11,
+          "pose": "run_5",
+          "bbox": [
+            10,
+            39,
+            117,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 12,
+          "pose": "run_6",
+          "bbox": [
+            9,
+            39,
+            118,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 13,
+          "pose": "dash_2",
+          "bbox": [
+            6,
+            45,
+            122,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 14,
+          "pose": "dead_settled",
+          "bbox": [
+            6,
+            78,
+            121,
+            128
+          ],
+          "footBaseline": 128
+        }
+      ]
+    },
+    {
+      "id": "pumpkin",
+      "source": "image_gen",
+      "frameWidth": 128,
+      "frameHeight": 128,
+      "frameCount": 15,
+      "renderFrameWidth": 128,
+      "renderFrameHeight": 112,
+      "topPadding": 16,
+      "columns": 5,
+      "rows": 3,
+      "file": "pumpkin-sheet.png",
+      "sha256": "0e53e459c022aa26d57efcfb9679cdd5fa0f9d6528c67afbba3e2cd705750f4d",
+      "frames": [
+        {
+          "index": 0,
+          "pose": "idle_1",
+          "bbox": [
+            10,
+            39,
+            118,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 1,
+          "pose": "run_1",
+          "bbox": [
+            10,
+            36,
+            118,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 2,
+          "pose": "run_2",
+          "bbox": [
+            9,
+            39,
+            118,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 3,
+          "pose": "run_3",
+          "bbox": [
+            8,
+            41,
+            119,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 4,
+          "pose": "run_4",
+          "bbox": [
+            10,
+            40,
+            117,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 5,
+          "pose": "jump",
+          "bbox": [
+            11,
+            32,
+            116,
+            120
+          ],
+          "footBaseline": 120
+        },
+        {
+          "index": 6,
+          "pose": "fall",
+          "bbox": [
+            10,
+            40,
+            118,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 7,
+          "pose": "hit",
+          "bbox": [
+            13,
+            48,
+            114,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 8,
+          "pose": "dash_1",
+          "bbox": [
+            4,
+            44,
+            124,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 9,
+          "pose": "dead",
+          "bbox": [
+            7,
+            81,
+            120,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 10,
+          "pose": "idle_2",
+          "bbox": [
+            9,
+            40,
+            118,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 11,
+          "pose": "run_5",
+          "bbox": [
+            11,
+            40,
+            117,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 12,
+          "pose": "run_6",
+          "bbox": [
+            10,
+            41,
+            118,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 13,
+          "pose": "dash_2",
+          "bbox": [
+            6,
+            46,
+            121,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 14,
+          "pose": "dead_settled",
+          "bbox": [
+            7,
+            79,
+            120,
+            128
+          ],
+          "footBaseline": 128
+        }
+      ]
+    },
+    {
+      "id": "forest",
+      "source": "image_gen",
+      "frameWidth": 128,
+      "frameHeight": 128,
+      "frameCount": 15,
+      "renderFrameWidth": 128,
+      "renderFrameHeight": 112,
+      "topPadding": 16,
+      "columns": 5,
+      "rows": 3,
+      "file": "forest-sheet.png",
+      "sha256": "2b47964d5046335ba6665ebce263a3e1e4d05efeb383e1eeb3e7869dee9af166",
+      "frames": [
+        {
+          "index": 0,
+          "pose": "idle_1",
+          "bbox": [
+            8,
+            37,
+            119,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 1,
+          "pose": "run_1",
+          "bbox": [
+            9,
+            35,
+            119,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 2,
+          "pose": "run_2",
+          "bbox": [
+            8,
+            37,
+            119,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 3,
+          "pose": "run_3",
+          "bbox": [
+            7,
+            38,
+            120,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 4,
+          "pose": "run_4",
+          "bbox": [
+            9,
+            37,
+            118,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 5,
+          "pose": "jump",
+          "bbox": [
+            10,
+            29,
+            118,
+            120
+          ],
+          "footBaseline": 120
+        },
+        {
+          "index": 6,
+          "pose": "fall",
+          "bbox": [
+            9,
+            38,
+            118,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 7,
+          "pose": "hit",
+          "bbox": [
+            12,
+            43,
+            116,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 8,
+          "pose": "dash_1",
+          "bbox": [
+            4,
+            43,
+            124,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 9,
+          "pose": "dead",
+          "bbox": [
+            6,
+            79,
+            122,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 10,
+          "pose": "idle_2",
+          "bbox": [
+            9,
+            38,
+            119,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 11,
+          "pose": "run_5",
+          "bbox": [
+            10,
+            39,
+            118,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 12,
+          "pose": "run_6",
+          "bbox": [
+            9,
+            39,
+            118,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 13,
+          "pose": "dash_2",
+          "bbox": [
+            6,
+            46,
+            122,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 14,
+          "pose": "dead_settled",
+          "bbox": [
+            6,
+            77,
+            121,
+            128
+          ],
+          "footBaseline": 128
+        }
+      ]
+    },
+    {
+      "id": "chestnut",
+      "source": "image_gen",
+      "frameWidth": 128,
+      "frameHeight": 128,
+      "frameCount": 15,
+      "renderFrameWidth": 128,
+      "renderFrameHeight": 112,
+      "topPadding": 16,
+      "columns": 5,
+      "rows": 3,
+      "file": "chestnut-sheet.png",
+      "sha256": "76180aa8cbf4342775e7b4eb756b8ce4ba67f996fa96f424e9de6938f52e3478",
+      "frames": [
+        {
+          "index": 0,
+          "pose": "idle_1",
+          "bbox": [
+            9,
+            37,
+            119,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 1,
+          "pose": "run_1",
+          "bbox": [
+            10,
+            34,
+            118,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 2,
+          "pose": "run_2",
+          "bbox": [
+            9,
+            37,
+            119,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 3,
+          "pose": "run_3",
+          "bbox": [
+            8,
+            39,
+            120,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 4,
+          "pose": "run_4",
+          "bbox": [
+            10,
+            39,
+            117,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 5,
+          "pose": "jump",
+          "bbox": [
+            11,
+            29,
+            117,
+            120
+          ],
+          "footBaseline": 120
+        },
+        {
+          "index": 6,
+          "pose": "fall",
+          "bbox": [
+            9,
+            37,
+            118,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 7,
+          "pose": "hit",
+          "bbox": [
+            12,
+            44,
+            115,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 8,
+          "pose": "dash_1",
+          "bbox": [
+            4,
+            43,
+            124,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 9,
+          "pose": "dead",
+          "bbox": [
+            7,
+            78,
+            121,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 10,
+          "pose": "idle_2",
+          "bbox": [
+            9,
+            37,
+            119,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 11,
+          "pose": "run_5",
+          "bbox": [
+            10,
+            37,
+            117,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 12,
+          "pose": "run_6",
+          "bbox": [
+            9,
+            37,
+            119,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 13,
+          "pose": "dash_2",
+          "bbox": [
+            6,
+            44,
+            122,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 14,
+          "pose": "dead_settled",
+          "bbox": [
+            7,
+            78,
+            121,
+            128
+          ],
+          "footBaseline": 128
+        }
+      ]
+    },
+    {
+      "id": "sunset",
+      "source": "image_gen",
+      "frameWidth": 128,
+      "frameHeight": 128,
+      "frameCount": 15,
+      "renderFrameWidth": 128,
+      "renderFrameHeight": 112,
+      "topPadding": 16,
+      "columns": 5,
+      "rows": 3,
+      "file": "sunset-sheet.png",
+      "sha256": "839a7b42bfee6929262a887dd9c9b7e25cf29876131c08afcf2e611469a2ebdb",
+      "frames": [
+        {
+          "index": 0,
+          "pose": "idle_1",
+          "bbox": [
+            9,
+            37,
+            118,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 1,
+          "pose": "run_1",
+          "bbox": [
+            10,
+            35,
+            118,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 2,
+          "pose": "run_2",
+          "bbox": [
+            9,
+            38,
+            118,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 3,
+          "pose": "run_3",
+          "bbox": [
+            8,
+            41,
+            120,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 4,
+          "pose": "run_4",
+          "bbox": [
+            10,
+            39,
+            117,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 5,
+          "pose": "jump",
+          "bbox": [
+            11,
+            31,
+            116,
+            120
+          ],
+          "footBaseline": 120
+        },
+        {
+          "index": 6,
+          "pose": "fall",
+          "bbox": [
+            10,
+            38,
+            118,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 7,
+          "pose": "hit",
+          "bbox": [
+            13,
+            46,
+            115,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 8,
+          "pose": "dash_1",
+          "bbox": [
+            4,
+            43,
+            124,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 9,
+          "pose": "dead",
+          "bbox": [
+            7,
+            82,
+            121,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 10,
+          "pose": "idle_2",
+          "bbox": [
+            9,
+            39,
+            118,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 11,
+          "pose": "run_5",
+          "bbox": [
+            11,
+            39,
+            117,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 12,
+          "pose": "run_6",
+          "bbox": [
+            10,
+            40,
+            118,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 13,
+          "pose": "dash_2",
+          "bbox": [
+            6,
+            45,
+            121,
+            128
+          ],
+          "footBaseline": 128
+        },
+        {
+          "index": 14,
+          "pose": "dead_settled",
+          "bbox": [
+            7,
+            78,
+            121,
+            128
+          ],
+          "footBaseline": 128
+        }
+      ]
+    }
+  ]
+}

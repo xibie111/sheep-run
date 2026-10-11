@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#355b52" />
+    <meta name="description" content="小羊快跑：手机优先的像素农场无尽跑酷游戏。" />
+    <title>小羊快跑 | SHEEP RUN</title>
+    <link rel="icon" type="image/png" href="./assets/ui/icons/icon_star.png" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./loading.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <section id="game-container" aria-label="小羊快跑游戏区域"></section>
+      <p class="sr-only" id="game-status" aria-live="polite">正在加载牧场……</p>
+    </main>
+    <section id="loading-screen" aria-label="小羊快跑加载页面">
+      <div class="loading-stage">
+        <img class="loading-title" src="./assets/ui/menu-reference-v2/title-v2.png" alt="小羊快跑" />
+        <p class="loading-caption" role="status">正在准备牧场…</p>
+        <div class="loading-progress" role="progressbar" aria-label="牧场资源加载进度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <div class="loading-progress-journey"><canvas class="loading-sheep" width="128" height="112" aria-hidden="true"></canvas></div>
+          <canvas class="loading-progress-art" width="176" height="36" aria-hidden="true"></canvas>
+        </div>
+        <button class="loading-retry" type="button" hidden>触摸重试</button>
+      </div>
+      <aside class="loading-tips">
+        <canvas class="loading-tips-art" width="640" height="240" aria-hidden="true"></canvas>
+        <div class="loading-tips-copy">
+          <strong class="sr-only">小贴士</strong><p class="loading-tip-text sr-only">上滑可以跳得更高。</p>
+          <canvas class="loading-tip-text-art" aria-hidden="true"></canvas>
+        </div>
+      </aside>
+    </section>
+    <script type="module" src="./src/loading.ts"></script>
+  </body>
+</html>

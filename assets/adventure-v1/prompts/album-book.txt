@@ -1,0 +1,8 @@
+Mode: built-in image_gen
+transparent_background: true
+Master: masters/album-book-source.png
+Runtime: runtime/album-book.png
+Original generation prompt:
+A single reusable BLANK game UI panel shaped like an open keepsake scrapbook for a cute pixel-art farm game, front view perfectly flat. Very wide horizontal silhouette, aspect ratio about 1.84:1. Two large clean cream parchment pages side by side, slim dark brown wood/leather cover outline, small warm gold corners, a subtle central vertical fold, tiny pink flower and green clover accents ONLY at the outer corners. Most of both pages must be plain light cream empty space for programmatically drawn Chinese text and icons. No writing, no symbols on the pages, no card slots, no grid, no numbers, no buttons, no characters. Crisp GBA-style square pixel art with limited flat colors, draw on 430x234 logical pixels enlarged nearest-neighbor, no blur or antialias, no photorealism. Fully transparent surrounding background, no scene, no screenshot.
+Edit prompt:
+Edit this blank open scrapbook UI panel. Keep the exact wide two-page silhouette, brown cover edges, gold corners, small flowers and clovers at the outer corners, center fold and transparent exterior. Replace BOTH page interiors with CLEAN OPAQUE PALE CREAM flat parchment. Remove ALL dark patches, cloudy shadows, transparent holes, stains, symbols and mottling from the page interiors. Both pages must be empty, evenly light cream, suitable for clear dark programmatically drawn text. No writing, no extra objects, no gradients. Preserve crisp pixel-art edges and transparent exterior. Only clean up the two blank cream page interiors.

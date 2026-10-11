@@ -1,0 +1,64 @@
+{
+  "tool": "builtin image_gen",
+  "reference": "docs/ambient-life-review/2026-10-11/screenshots/after-remove-squirrel.png",
+  "note": "An initial parallel request failed with a network error. These three sequential calls succeeded.",
+  "assets": [
+    {
+      "id": "rainbow",
+      "source": "sources\\rainbow.png",
+      "generatedOriginal": "exec-ae6fe812-da27-4e34-a5b9-ad5a990e04f9.png",
+      "sourceSha256": "085570ac5cf2aaaeef444d4d6405b85c0ac821c10ff63f13d379aea338ca5518",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "runtime": "runtime/rainbow.png",
+      "runtimeSize": [
+        600,
+        400
+      ],
+      "resampling": "NEAREST",
+      "crop": null,
+      "prompt": "prompts/rainbow.txt",
+      "transparent_background": false
+    },
+    {
+      "id": "meteors",
+      "source": "sources\\meteors.png",
+      "generatedOriginal": "exec-baef6d2f-38f5-4aac-9bd7-de8d48115290.png",
+      "sourceSha256": "1922049559108ab6f8ad121074a3ae9023210606af5d54e8b5af167ab2a7e41e",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "runtime": "runtime/meteors.png",
+      "runtimeSize": [
+        600,
+        400
+      ],
+      "resampling": "NEAREST",
+      "crop": null,
+      "prompt": "prompts/meteors.txt",
+      "transparent_background": false
+    },
+    {
+      "id": "fireflies",
+      "source": "sources\\fireflies.png",
+      "generatedOriginal": "exec-f373b6f9-4e40-4d51-8ee4-61dc3e20bae0.png",
+      "sourceSha256": "d635d85a2a2f475a02e27b7265f8901e8097ec3e340a76d70f4d1843995f0a69",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "runtime": "runtime/fireflies.png",
+      "runtimeSize": [
+        600,
+        400
+      ],
+      "resampling": "NEAREST",
+      "crop": null,
+      "prompt": "prompts/fireflies.txt",
+      "transparent_background": false
+    }
+  ]
+}

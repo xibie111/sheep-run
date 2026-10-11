@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<font>
+<info face="Result Gold Generated Digits" size="186"/>
+<common lineHeight="186" base="186" scaleW="1536" scaleH="1024" pages="1" packed="0"/>
+<pages><page id="0" file="score-glyphs.png"/></pages>
+<chars count="10">
+<char id="48" x="105" y="552" width="153" height="185" xoffset="0" yoffset="1" xadvance="159" page="0" chnl="15"/>
+<char id="49" x="406" y="552" width="137" height="185" xoffset="0" yoffset="1" xadvance="143" page="0" chnl="15"/>
+<char id="50" x="693" y="551" width="154" height="186" xoffset="0" yoffset="0" xadvance="160" page="0" chnl="15"/>
+<char id="51" x="970" y="551" width="152" height="186" xoffset="0" yoffset="0" xadvance="158" page="0" chnl="15"/>
+<char id="52" x="1254" y="551" width="164" height="186" xoffset="0" yoffset="0" xadvance="170" page="0" chnl="15"/>
+<char id="53" x="110" y="784" width="154" height="186" xoffset="0" yoffset="0" xadvance="160" page="0" chnl="15"/>
+<char id="54" x="398" y="784" width="154" height="185" xoffset="0" yoffset="1" xadvance="160" page="0" chnl="15"/>
+<char id="55" x="677" y="784" width="170" height="185" xoffset="0" yoffset="1" xadvance="176" page="0" chnl="15"/>
+<char id="56" x="962" y="784" width="156" height="185" xoffset="0" yoffset="1" xadvance="162" page="0" chnl="15"/>
+<char id="57" x="1258" y="783" width="158" height="186" xoffset="0" yoffset="0" xadvance="164" page="0" chnl="15"/>
+</chars>
+<kernings count="0"/>
+</font>

@@ -1,0 +1,7 @@
+{
+  "tool": "built-in image_gen",
+  "file": "D:/DSH workspace/sheep-run/assets/ui/pause/pause-dialog-reference-v1.png",
+  "reference": "User-supplied pause interface",
+  "prompt": "Use case: background-extraction.\nAsset type: exact pause dialog artwork for a real game interface.\nInput image is the edit target. Extract ONLY the COMPLETE CENTRAL PAUSE DIALOG onto TRUE TRANSPARENT alpha. Preserve the full original 1672x941 canvas and original dialog position/scale. Do not redraw, reinterpret, restyle, sharpen, recenter or crop. Preserve the existing pixel artwork as faithfully as possible.\nRetain the entire cream panel and orange wooden border, every corner flower and leaf, the curved wooden title sign, the tiny sheep mascot on top, the exact existing Chinese title \"暂停\", and ALL THREE existing buttons including their original graphics, icons and Chinese lettering: \"继续游戏\", \"重新开始\", \"返回首页\". Preserve exact colors, texture, highlight pixels, outlines and typography.\nRemove everything OUTSIDE this central dialog to transparent alpha: all game scenery, sky, clouds, HUD, stars at upper left, distance and pause button upper right, sheep and obstacles in the game world, and the dim overlay. The entire dialog and its attached flowers/mascot remain opaque. Follow the irregular silhouette carefully. No opaque rectangular background behind the object, no checkerboard painted into pixels, no black or white background. This is a production transparent game UI asset. Canvas 1672x941, no extra objects or text.",
+  "transparent_background": true
+}

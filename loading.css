@@ -1,0 +1,77 @@
+#loading-screen {
+  position: fixed; inset: 0; z-index: 100; overflow: hidden;
+  background: #65b6d1 url("./assets/backgrounds/menu-pasture-v1.png") center / cover no-repeat;
+  touch-action: none; user-select: none; color: #4c2d16;
+  font-family: "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+  --loading-unit: min(calc(100vw / 480), calc(100dvh / 270));
+}
+#loading-screen[hidden] { display: none; }
+.loading-stage {
+  position: absolute; left: 50%; top: 50%;
+  width: calc(480 * var(--loading-unit)); height: calc(270 * var(--loading-unit));
+  transform: translate(-50%, -50%);
+}
+.loading-title {
+  position: absolute; left: 50%; top: calc(10 * var(--loading-unit));
+  width: calc(210 * var(--loading-unit)); height: auto;
+  transform: translateX(-50%); image-rendering: pixelated;
+}
+.loading-sheep {
+  /* Match PLAYER.displayWidth/displayHeight, retaining the existing ground anchor. */
+  position: absolute; left: var(--loading-progress, 0%); top: 0;
+  width: calc(48 * var(--loading-unit)); height: calc(42 * var(--loading-unit));
+  transform: translateX(-50%); image-rendering: pixelated;
+}
+.loading-caption {
+  position: absolute; top: calc(204 * var(--loading-unit)); left: calc(-20 * var(--loading-unit)); width: 100%; margin: 0;
+  text-align: center; font-size: calc(11 * var(--loading-unit)); font-weight: 900; color: #fff3d6;
+  text-shadow: -2px 0 #533017, 2px 0 #533017, 0 -2px #533017, 0 2px #533017;
+}
+.loading-progress {
+  position: absolute; top: calc(204 * var(--loading-unit)); left: calc(50% - 20 * var(--loading-unit));
+  width: calc(176 * var(--loading-unit)); height: calc(36 * var(--loading-unit));
+  transform: translateX(-50%);
+}
+.loading-progress-art { display: block; width: 100%; height: 100%; image-rendering: pixelated; }
+.loading-progress-journey {
+  position: absolute; left: calc(24 * var(--loading-unit)); right: calc(24 * var(--loading-unit));
+  top: calc(-47.5 * var(--loading-unit)); height: calc(42 * var(--loading-unit));
+}
+#loading-screen[data-progress-font="ready"] .loading-caption {
+  width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+.loading-tips {
+  position: absolute;
+  right: max(calc(10 * var(--loading-unit)), calc(var(--safe-area-inset-right, env(safe-area-inset-right, 0px)) + 6px));
+  bottom: max(calc(10 * var(--loading-unit)), calc(var(--safe-area-inset-bottom, env(safe-area-inset-bottom, 0px)) + 6px));
+  width: calc(156 * var(--loading-unit)); aspect-ratio: 320 / 120;
+  image-rendering: pixelated;
+  text-align: center; pointer-events: none;
+}
+.loading-tips-art { width: 100%; height: 100%; image-rendering: pixelated; }
+.loading-tips-copy {
+  position: absolute; left: 14%; right: 10%; top: 22%; bottom: 24%;
+  overflow: hidden;
+}
+.loading-tip-text-art { position: absolute; inset: 0; width: 100%; height: 100%; image-rendering: pixelated; }
+.loading-retry {
+  position: absolute; top: calc(241 * var(--loading-unit)); left: 50%; transform: translateX(-50%);
+  padding: calc(4 * var(--loading-unit)) calc(18 * var(--loading-unit));
+  color: #fff3d6; background: #725b48; border: 2px solid #4c2d16;
+  font: bold calc(10 * var(--loading-unit)) sans-serif; touch-action: none;
+}
+.loading-retry[hidden] { display: none; }
+/* Preserve a readable native pixel size when rotating or using a small screen. */
+@media (orientation: portrait), (max-height: 359px) {
+  .loading-tips { width: max(216px, calc(156 * var(--loading-unit))); }
+}
+@media (max-height: 359px) and (max-width: 620px) {
+  .loading-progress { left: calc(50% - 74 * var(--loading-unit)); width: calc(144 * var(--loading-unit)); }
+  .loading-caption { left: calc(-74 * var(--loading-unit)); }
+}
+@media (orientation: portrait) {
+  .loading-progress { left: 50%; width: calc(192 * var(--loading-unit)); }
+  .loading-caption { left: 0; }
+}
+

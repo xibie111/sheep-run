@@ -1,0 +1,8 @@
+{
+  "tool": "image_gen.imagegen",
+  "reference": "assets/skins/generated-v1/white-source.png",
+  "prompt": "Use case: stylized-concept. Asset type: Android launcher icon foreground for the pixel-art game 小羊快跑 / Sheep Run. Reference image is the game's character sprite sheet; use it ONLY for the identity and pixel style of the cream-white sheep, not its layout. Draw ONE original delightful chunky cream-white fluffy sheep running toward the right, in a lively leaping pose with four small dark-brown hooves, warm peach face, dark brown ears, a tiny happy black eye, and warm dark-brown pixel outline, same friendly character identity. Add one small golden pixel sparkle above the sheep's rump, close to its silhouette. True 2D cozy farm pixel artwork, clean deliberate square pixel clusters, crisp stepped edges, restrained shading, readable at 48 pixels. Composition: square 1024x1024 canvas, one large centered sheep including legs fully visible, compact horizontal silhouette, generous transparent margin of about 15 percent each side; silhouette must be compact enough for a circular Android adaptive-icon mask. Actual transparent background; no colored background, no floor, no landscape, no text, no letters, no phone/mockup, no border, no extra sheep, no sheet, no blur, no gradient, no watermark. The sheep itself is the app brand icon.",
+  "source": "sheep-icon-source.png",
+  "background": "#527D43",
+  "packingScript": "tools/android/build-icons.py"
+}

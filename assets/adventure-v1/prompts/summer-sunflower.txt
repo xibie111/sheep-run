@@ -1,0 +1,6 @@
+Mode: built-in image_gen
+transparent_background: true
+Master: masters/summer-sunflower-source.png
+Runtime: runtime/summer-sunflower.png
+Generation prompt:
+One original collectible badge for a cute GBA pixel-art farm game: a bright sunflower with golden petals, brown center and one green leaf centered inside a round warm golden medallion with burnt-orange rim and tiny cream shine. 32x32 logical grid enlarged nearest-neighbor, badge fits30x30 centered. Crisp flat limited colors, no gradients, no blur, no antialias, no words, no ribbon, no other assets. Fully transparent background.

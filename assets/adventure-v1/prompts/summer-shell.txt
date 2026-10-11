@@ -1,0 +1,6 @@
+Mode: built-in image_gen
+transparent_background: true
+Master: masters/summer-shell-source.png
+Runtime: runtime/summer-shell.png
+Generation prompt:
+ONE original collectible medallion sprite for a cute GBA pixel farm game: a pastel pink seashell fan with pale cream ribs in the center of a round warm golden badge with burnt-orange rim and cream highlight. 32x32 logical pixel grid, object fits30x30 centered, enlarged nearest neighbor. Crisp square pixels, few flat colors, no soft effects, no gradient, no blur, no words, no ribbon, no background, no other icons. Fully transparent background.

@@ -1,0 +1,14 @@
+{
+  "family": "Pasture Display",
+  "sourceFamily": "ZCOOL KuaiLe",
+  "license": "SIL OFL 1.1",
+  "source": "https://github.com/googlefonts/zcool-kuaile",
+  "sha256": "812a6fc1fe54b6d73a419245c32dfeba8aa33104d5be90d1cf6af082007cb71d",
+  "sizes": [
+    12,
+    20,
+    40,
+    64
+  ],
+  "reference": "Visual reconstruction; source typeface of screenshot unknown"
+}

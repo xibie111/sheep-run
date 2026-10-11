@@ -1,0 +1,34 @@
+{
+  "stage": "approved-for-local-integration",
+  "approval": "用户在四季预览图生成后回复：继续",
+  "references": [
+    "docs/hud-brightness-review/2026-10-10/screenshots/playing-896x414.png",
+    "assets/seasons/additional-obstacles-v1/atlas.png"
+  ],
+  "mode": "builtin image_gen",
+  "transparent_background": true,
+  "generations": [
+    {
+      "name": "initial-six",
+      "timestamp": "2026-10-11T06:23:12.995Z",
+      "promptFile": "prompts/initial-six.txt",
+      "source": "sources/initial-six-preview.png",
+      "sourceSha256": "64826cedad485c2643698b8f94260c0fc45b58aed871690da47e97f3ea061e58",
+      "references": [
+        "docs/hud-brightness-review/2026-10-10/screenshots/playing-896x414.png",
+        "assets/seasons/additional-obstacles-v1/atlas.png"
+      ]
+    },
+    {
+      "name": "four-seasons",
+      "timestamp": "2026-10-11T06:27:52.742Z",
+      "promptFile": "prompts/four-seasons.txt",
+      "source": "sources/four-seasons-approved.png",
+      "sourceSha256": "36d9e81996e690b45c986f0fe9771222ebf5829c78e850c97cb63736f003b12d",
+      "references": [
+        "sources/initial-six-preview.png",
+        "assets/seasons/additional-obstacles-v1/atlas.png"
+      ]
+    }
+  ]
+}

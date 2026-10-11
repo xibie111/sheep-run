@@ -1,0 +1,11 @@
+{
+  "tool": "image_gen.imagegen",
+  "reference": [
+    "assets/skins/generated-v1/white-source.png",
+    "assets/backgrounds/menu-pasture-v1.png"
+  ],
+  "prompt": "Use case: stylized-concept. Asset type: final Android launcher icon for the cozy pixel-art mobile game 小羊快跑 / Sheep Run. Generate ONE full-bleed SQUARE illustrated app icon, not a sprite sheet. Reference image 1 is the game's cream-white sheep character identity. Reference image 2 is the actual in-game pasture environment and palette. Redraw them as ONE cohesive original pixel-art scene: a happy fluffy cream-white sheep with peach face, dark brown ear, hooves and crisp dark brown outline joyfully running toward the right along a sunlit honey-colored farm path; its hooves and a tiny natural shadow/dust interact with the path. Behind it, bright turquoise sky, one soft pixel cloud, rolling green meadow, a small distant red barn and wooden fence, yellow-white meadow flowers in the lower corners. Background and sheep share the SAME deliberate square pixel-cluster art style and warm sunny lighting, the sheep belongs in the landscape, no sticker edge or pasted badge. Composition for Android adaptive icon: all important sheep pixels fully inside the central 56 percent width and central 56 percent height of the whole square, centered at x50/y53; reserve the outer 18 percent each side as expendable scenery so a circle crop of the central two-thirds keeps the whole sheep, including feet, visible. Sheep large and clear within that safe central area; countryside remains recognizable and deliberately simpler than reference so the face reads at small launcher sizes. Blue sky in the upper third, green meadow and honey farm path in lower two thirds, clear visual depth. Beautiful polished 2D chunky pixel artwork, crisp stepped edges, controlled colors and coherent pixels. Opaque full canvas of scenery to every edge. No text, no letters, no watermark, no frame, no rounded corners baked in, no solid-color panel, no gradient flat background, no giant star, no extra sheep, no mockup. Exact square canvas.",
+  "source": "sheep-pasture-icon-source-v2.png",
+  "packingScript": "tools/android/build-icons.py",
+  "reason": "Android adaptive icons render transparent background areas on an opaque backing; user requested a newly drawn integrated game landscape as fallback."
+}

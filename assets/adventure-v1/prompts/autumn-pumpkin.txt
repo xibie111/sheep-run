@@ -1,0 +1,6 @@
+Mode: built-in image_gen
+transparent_background: true
+Master: masters/autumn-pumpkin-source.png
+Runtime: runtime/autumn-pumpkin.png
+Generation prompt:
+ONE collectible badge sprite for a cute GBA pixel farm game: a small warm orange pumpkin with a short green stem, no face, centered on a round golden medallion with thick burnt-orange outline and a tiny cream highlight. Design on32x32 logical pixels, medallion fits30x30 centered, enlarge nearest-neighbor. Original clean pixel artwork, flat few colors, crisp square edges. No gradient, antialias, blur, glow, words, ribbons, background, or extra icons. Fully transparent background.

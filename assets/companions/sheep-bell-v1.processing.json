@@ -1,0 +1,78 @@
+{
+  "tool": "built-in image_gen",
+  "transparentBackground": true,
+  "originalCopiedWithoutChanges": true,
+  "prompt": "sheep-bell-v1.prompt.txt",
+  "sourceSha256": "a8cfff30f4ec40701f19cf28a6309d0cce607cf0a60748a0695295402cb90a53",
+  "runtimeSha256": "d00e71291252d27eba26733b47b3daa6aaa5955951b6423fcf054ea0e671193d",
+  "source": {
+    "width": 1161,
+    "height": 1355
+  },
+  "crop": {
+    "x": 142,
+    "y": 106,
+    "width": 877,
+    "height": 1138
+  },
+  "runtime": {
+    "width": 28,
+    "height": 32,
+    "subjectWidth": 22,
+    "subjectHeight": 28,
+    "interpolation": "nearest",
+    "alphaThreshold": 128,
+    "palette": [
+      [
+        65,
+        35,
+        18
+      ],
+      [
+        113,
+        62,
+        24
+      ],
+      [
+        182,
+        102,
+        27
+      ],
+      [
+        235,
+        150,
+        36
+      ],
+      [
+        255,
+        197,
+        65
+      ],
+      [
+        255,
+        225,
+        128
+      ],
+      [
+        255,
+        248,
+        212
+      ],
+      [
+        50,
+        70,
+        15
+      ],
+      [
+        95,
+        125,
+        27
+      ],
+      [
+        153,
+        183,
+        57
+      ]
+    ]
+  }
+}

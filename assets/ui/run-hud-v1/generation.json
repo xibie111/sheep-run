@@ -1,0 +1,11 @@
+{
+  "mode": "built-in image_gen",
+  "intent": "generate",
+  "prompt": "Use case: ui-mockup\nAsset type: a single transparent game HUD sprite atlas for the Chinese 2D pastoral pixel-art game 小羊快跑.\nInput image 1 is a STYLE REFERENCE ONLY: match its warm orange wooden frames, pale gold faces, chunky dark-brown Chinese lettering, crisp stair-step pixel outlines, small green leaves and white daisies. Flat 2D illustrated pixel art, no rendered 3D volume.\nGenerate ONE coherent atlas with exactly THREE separate wide horizontal HUD plaques stacked vertically, with generous transparent spacing, each complete and unclipped. Top plaque: label \"分数\" in bold dark brown at the upper center, with a large perfectly EMPTY pale-gold number space below, wide enough for 5 live digits. Middle plaque: a prominent golden five-point star attached to the left end of a matching compact horizontal wooden counter, and a perfectly EMPTY number space to its right, wide enough for 3 digits; no text. Bottom plaque: label \"最高分\" at upper center with an EMPTY number space below for 5 live digits, matching the top plaque. Plaques have essentially the same width, roughly a 3:1 width-to-height ratio. Keep decorations subtle and confined to outside corners; never put leaves into number space. Front-on, orthographic, minimal drop shadow like reference. Palette golden honey, cream, chestnut dark brown, bright leaf green, warm orange.\nExact text only \"分数\" and \"最高分\". NO baked numbers, zeroes, English, captions, guides, borders around sheet, character mascot, scenery, extra controls. Pure transparent background. Do not copy the pause panel itself. These three plaques will be cropped directly from this atlas and faithfully displayed in the running game's top HUD, with live numeric glyphs drawn inside the reserved blank spaces.",
+  "references": [
+    "D:\\DSH workspace\\sheep-run\\assets\\ui\\pause\\pause-dialog-reference-v1.png"
+  ],
+  "source": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39\\exec-7b8fd2cf-23fb-4459-bb36-a62ab87bbde2.png",
+  "asset": "D:\\DSH workspace\\sheep-run\\assets\\ui\\run-hud-v1\\hud-atlas-v1.png",
+  "notes": "Original generated pixels copied unchanged. Three direct crops scaled uniformly. Live values use the common Pasture Display bitmap font."
+}

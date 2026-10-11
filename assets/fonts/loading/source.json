@@ -1,0 +1,12 @@
+{
+  "family": "Pasture Loading Pixel",
+  "upstream": "Ark Pixel Font",
+  "version": "2026.09.25",
+  "size": 12,
+  "license": "SIL OFL 1.1",
+  "subsetGlyphs": 270,
+  "sourceBdfSha256": "1e8310ffcc750739b26c6f8d8b8f0881bf842c6fa5252028cd0add5c070abfa0",
+  "atlasSha256": "a11a4742f9b030bf5c933443942ddef2d9ab65c217c9c7d78147493e53241cb7",
+  "construction": "Exact BDF bits, no font rasterization or smoothing",
+  "source": "https://github.com/TakWolf/ark-pixel-font/releases/tag/2026.09.25"
+}

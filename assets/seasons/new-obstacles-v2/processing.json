@@ -1,0 +1,400 @@
+{
+  "sourceSha256": "36d9e81996e690b45c986f0fe9771222ebf5829c78e850c97cb63736f003b12d",
+  "sourceSize": [
+    1448,
+    1086
+  ],
+  "runtimeSize": [
+    1680,
+    928
+  ],
+  "sourceUnmodified": true,
+  "resampling": "none during packing; nearest-neighbor uniform fit at runtime",
+  "alpha": "preserved during packing; runtime uses existing >=128 hard-edge convention",
+  "frames": [
+    {
+      "season": "spring",
+      "kind": "WoodBarrel",
+      "sourceBounds": [
+        25,
+        132,
+        225,
+        331
+      ],
+      "frame": {
+        "x": 2,
+        "y": 2,
+        "width": 200,
+        "height": 199
+      }
+    },
+    {
+      "season": "spring",
+      "kind": "MilkChurn",
+      "sourceBounds": [
+        248,
+        112,
+        406,
+        331
+      ],
+      "frame": {
+        "x": 282,
+        "y": 2,
+        "width": 158,
+        "height": 219
+      }
+    },
+    {
+      "season": "spring",
+      "kind": "FruitBasket",
+      "sourceBounds": [
+        434,
+        186,
+        668,
+        334
+      ],
+      "frame": {
+        "x": 562,
+        "y": 2,
+        "width": 234,
+        "height": 148
+      }
+    },
+    {
+      "season": "spring",
+      "kind": "MushroomCluster",
+      "sourceBounds": [
+        678,
+        187,
+        879,
+        334
+      ],
+      "frame": {
+        "x": 842,
+        "y": 2,
+        "width": 201,
+        "height": 147
+      }
+    },
+    {
+      "season": "spring",
+      "kind": "Bramble",
+      "sourceBounds": [
+        894,
+        197,
+        1150,
+        336
+      ],
+      "frame": {
+        "x": 1122,
+        "y": 2,
+        "width": 256,
+        "height": 139
+      }
+    },
+    {
+      "season": "spring",
+      "kind": "HangingBranch",
+      "sourceBounds": [
+        1157,
+        189,
+        1430,
+        337
+      ],
+      "frame": {
+        "x": 1402,
+        "y": 2,
+        "width": 273,
+        "height": 148
+      }
+    },
+    {
+      "season": "summer",
+      "kind": "WoodBarrel",
+      "sourceBounds": [
+        23,
+        363,
+        217,
+        558
+      ],
+      "frame": {
+        "x": 2,
+        "y": 234,
+        "width": 194,
+        "height": 195
+      }
+    },
+    {
+      "season": "summer",
+      "kind": "MilkChurn",
+      "sourceBounds": [
+        248,
+        343,
+        406,
+        559
+      ],
+      "frame": {
+        "x": 282,
+        "y": 234,
+        "width": 158,
+        "height": 216
+      }
+    },
+    {
+      "season": "summer",
+      "kind": "FruitBasket",
+      "sourceBounds": [
+        434,
+        411,
+        668,
+        559
+      ],
+      "frame": {
+        "x": 562,
+        "y": 234,
+        "width": 234,
+        "height": 148
+      }
+    },
+    {
+      "season": "summer",
+      "kind": "MushroomCluster",
+      "sourceBounds": [
+        678,
+        412,
+        879,
+        559
+      ],
+      "frame": {
+        "x": 842,
+        "y": 234,
+        "width": 201,
+        "height": 147
+      }
+    },
+    {
+      "season": "summer",
+      "kind": "Bramble",
+      "sourceBounds": [
+        893,
+        421,
+        1154,
+        565
+      ],
+      "frame": {
+        "x": 1122,
+        "y": 234,
+        "width": 261,
+        "height": 144
+      }
+    },
+    {
+      "season": "summer",
+      "kind": "HangingBranch",
+      "sourceBounds": [
+        1159,
+        411,
+        1433,
+        565
+      ],
+      "frame": {
+        "x": 1402,
+        "y": 234,
+        "width": 274,
+        "height": 154
+      }
+    },
+    {
+      "season": "autumn",
+      "kind": "WoodBarrel",
+      "sourceBounds": [
+        27,
+        585,
+        213,
+        781
+      ],
+      "frame": {
+        "x": 2,
+        "y": 466,
+        "width": 186,
+        "height": 196
+      }
+    },
+    {
+      "season": "autumn",
+      "kind": "MilkChurn",
+      "sourceBounds": [
+        248,
+        569,
+        406,
+        780
+      ],
+      "frame": {
+        "x": 282,
+        "y": 466,
+        "width": 158,
+        "height": 211
+      }
+    },
+    {
+      "season": "autumn",
+      "kind": "FruitBasket",
+      "sourceBounds": [
+        433,
+        635,
+        667,
+        782
+      ],
+      "frame": {
+        "x": 562,
+        "y": 466,
+        "width": 234,
+        "height": 147
+      }
+    },
+    {
+      "season": "autumn",
+      "kind": "MushroomCluster",
+      "sourceBounds": [
+        676,
+        635,
+        879,
+        782
+      ],
+      "frame": {
+        "x": 842,
+        "y": 466,
+        "width": 203,
+        "height": 147
+      }
+    },
+    {
+      "season": "autumn",
+      "kind": "Bramble",
+      "sourceBounds": [
+        893,
+        649,
+        1154,
+        790
+      ],
+      "frame": {
+        "x": 1122,
+        "y": 466,
+        "width": 261,
+        "height": 141
+      }
+    },
+    {
+      "season": "autumn",
+      "kind": "HangingBranch",
+      "sourceBounds": [
+        1158,
+        641,
+        1433,
+        790
+      ],
+      "frame": {
+        "x": 1402,
+        "y": 466,
+        "width": 275,
+        "height": 149
+      }
+    },
+    {
+      "season": "winter",
+      "kind": "WoodBarrel",
+      "sourceBounds": [
+        21,
+        808,
+        217,
+        1014
+      ],
+      "frame": {
+        "x": 2,
+        "y": 698,
+        "width": 196,
+        "height": 206
+      }
+    },
+    {
+      "season": "winter",
+      "kind": "MilkChurn",
+      "sourceBounds": [
+        248,
+        794,
+        406,
+        1014
+      ],
+      "frame": {
+        "x": 282,
+        "y": 698,
+        "width": 158,
+        "height": 220
+      }
+    },
+    {
+      "season": "winter",
+      "kind": "FruitBasket",
+      "sourceBounds": [
+        433,
+        860,
+        668,
+        1015
+      ],
+      "frame": {
+        "x": 562,
+        "y": 698,
+        "width": 235,
+        "height": 155
+      }
+    },
+    {
+      "season": "winter",
+      "kind": "MushroomCluster",
+      "sourceBounds": [
+        678,
+        859,
+        880,
+        1015
+      ],
+      "frame": {
+        "x": 842,
+        "y": 698,
+        "width": 202,
+        "height": 156
+      }
+    },
+    {
+      "season": "winter",
+      "kind": "Bramble",
+      "sourceBounds": [
+        894,
+        885,
+        1156,
+        1022
+      ],
+      "frame": {
+        "x": 1122,
+        "y": 698,
+        "width": 262,
+        "height": 137
+      }
+    },
+    {
+      "season": "winter",
+      "kind": "HangingBranch",
+      "sourceBounds": [
+        1157,
+        868,
+        1429,
+        1023
+      ],
+      "frame": {
+        "x": 1402,
+        "y": 698,
+        "width": 272,
+        "height": 155
+      }
+    }
+  ]
+}

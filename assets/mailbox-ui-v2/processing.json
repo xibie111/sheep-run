@@ -1,0 +1,83 @@
+[
+  {
+    "source": "letter-panel-original.png",
+    "sha256": "15c59b7cb1743c336b710b6963c34851c82f0904eec462c7a63ae16ec2e7336d",
+    "sourceSize": [
+      1380,
+      1140
+    ],
+    "region": [
+      0,
+      0,
+      1380,
+      1140
+    ],
+    "alphaBounds": [
+      98,
+      27,
+      1273,
+      1109
+    ],
+    "runtime": "mail-letter-panel.png",
+    "runtimeSize": [
+      940,
+      866
+    ],
+    "resampling": "NEAREST",
+    "alpha": "preserved; threshold used for bounding box only"
+  },
+  {
+    "source": "letter-buttons-original.png",
+    "sha256": "24bf1c3a31d39e6455d2915c5c347e486eac0cb1a5ab9b29dc2b75438c3ed529",
+    "sourceSize": [
+      1619,
+      971
+    ],
+    "region": [
+      0,
+      0,
+      1619,
+      470
+    ],
+    "alphaBounds": [
+      398,
+      149,
+      1213,
+      395
+    ],
+    "runtime": "mail-button-plain.png",
+    "runtimeSize": [
+      328,
+      99
+    ],
+    "resampling": "NEAREST",
+    "alpha": "preserved; threshold used for bounding box only"
+  },
+  {
+    "source": "letter-buttons-original.png",
+    "sha256": "24bf1c3a31d39e6455d2915c5c347e486eac0cb1a5ab9b29dc2b75438c3ed529",
+    "sourceSize": [
+      1619,
+      971
+    ],
+    "region": [
+      0,
+      470,
+      1619,
+      971
+    ],
+    "alphaBounds": [
+      332,
+      106,
+      1287,
+      364
+    ],
+    "runtime": "mail-button-floral.png",
+    "runtimeSize": [
+      380,
+      103
+    ],
+    "resampling": "NEAREST",
+    "alpha": "preserved; threshold used for bounding box only"
+  }
+]

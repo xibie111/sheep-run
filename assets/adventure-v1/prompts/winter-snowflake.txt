@@ -1,0 +1,6 @@
+Mode: built-in image_gen
+transparent_background: true
+Master: masters/winter-snowflake-source.png
+Runtime: runtime/winter-snowflake.png
+Generation prompt:
+ONE collectible badge sprite for a cute GBA pixel farm game: an icy blue and cream six-point snowflake, centered on a round golden medallion with thick burnt-orange outline and tiny cream highlight. Design on 32x32 logical pixels, medallion fits 30x30 centered, enlarge nearest-neighbor. Original clean pixel artwork, flat few colors, crisp square edges. No gradient, antialias, blur, glow, words, ribbons, background, or extra icons. Fully transparent background.

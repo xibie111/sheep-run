@@ -1,0 +1,36 @@
+{
+  "generatedAt": "2026-10-08",
+  "styleReference": "User-supplied mint/sheep_sprites/sheep-sheet.png",
+  "assets": [
+    {
+      "id": "white",
+      "method": "built-in image_gen",
+      "prompt": "Use case: stylized-concept. Asset type: a production-ready transparent pixel-art animation sprite sheet for the original Chinese mobile game 小羊快跑 (Sheep Run). Canvas: 1920 by 1152 pixels, landscape, EXACTLY FIVE EQUAL COLUMNS and THREE EQUAL ROWS (15 cells, each 384x384). Treat it as 128x128 native pixel cells enlarged exactly 3x with nearest neighbor. No visible grid, borders, labels, numbers, captions, text, watermark, backgrounds, ground, cast shadows, particle trails, separate props, or UI. Only 15 separate copies of the SAME cute chubby baby sheep, all RIGHT FACING profile with slight 3/4 face, consistent shape and scale, warm dark-brown pixel outlines, big round fluffy scalloped wool, little peach face and droopy ears, tiny brown hooves, shiny black bead eyes, sweet small mouth. Crisp low-resolution square pixels, hard alpha, flat tightly limited palette with 3 wool shades and tiny stepped highlights; absolutely no smooth strokes, blur, semi-transparent edges, gradients or 3D rendering. Each sheep is fully inside its cell including ears/hat/feet, centered horizontally, consistent head-right orientation, transparent safety margin at least 24px on every side. The character occupies approximately 320px width and 300px height inside each 384px cell. Hooves touch a common baseline near cell y=350 for grounded poses. Animation order is row-major left to right, top to bottom: row 1: (0) standing neutral idle; (1) run stride A forelegs extended front and hindlegs back; (2) run stride B contact; (3) run stride C opposite legs extended; (4) run stride D recoil. Row 2: (5) rising jump tucked legs alert eyes, body lifted; (6) falling landing legs reaching down; (7) hit recoil compressed wool dizzy eyes but no icons; (8) fast dash leaning forward running stretched legs; (9) defeated sheep lying low horizontally with closed eyes, no gore. Row 3: (10) idle gentle breathe/blink same ground position; (11) run passing pose E; (12) run passing pose F; (13) fast dash second stride leaning forward; (14) defeated relaxed settled lying pose. Every cell contains exactly one sheep; no duplication inside cells, no missing cells. These are animation frames of one character, NOT a character gallery. Preserve morphology across all poses.\nInput image 1: supplied mint sheep sprite sheet, use as a CHARACTER/PIXEL STYLE reference. Make the sheep same cute rounded wool-and-face identity and right-facing viewpoint as the reference, but CREAM-WHITE wool (#fff7da, #ded4b7), peach face (#c28d6a), NO FLOWERS, NO LEAVES, NO ACCESSORY. Rebuild with all FIFTEEN specified action frames in an exact FIVE BY THREE grid, correcting frame registration and making the hooves share a stable baseline. Preserve a clean genuinely transparent background. This is the white master for five consistent production skins.",
+      "source": "white-source.png"
+    },
+    {
+      "id": "black",
+      "method": "built-in image_gen",
+      "prompt": "Use case: identity-preserve. Edit target Image 1 is the cream-white master sprite sheet for Sheep Run. Change ONLY the wool palette to warm charcoal-black: highlights #70615b, body #514944, shadow #342f2c; preserve peach face #c28d6a. Keep every one of the 15 characters, their exact poses, positions, identical outlines and right-facing direction. Keep the exact 5 columns by 3 rows layout, transparent canvas, crisp square pixel style, and all animations. Do NOT add accessory, text, labels, glow, background, shadow, new frames or remove frames. Each character must be fully visible inside its own cell, with ample transparent padding. Genuinely transparent hard-edge alpha.",
+      "source": "black-source.png"
+    },
+    {
+      "id": "brown",
+      "method": "built-in image_gen",
+      "prompt": "Use case: identity-preserve. Edit target Image 1 is the cream-white master sprite sheet for Sheep Run. Change ONLY the wool palette to warm chestnut-brown: highlight #cf9962, body #a96d43, shadow #78472f; preserve peach face #dba078. Keep every one of the 15 characters, their exact poses, positions, identical outlines and right-facing direction. Keep the exact 5 columns by 3 rows layout, transparent canvas, crisp square pixel style, and all animations. Do NOT add accessory, text, labels, glow, background, shadow, new frames or remove frames. Each character must be fully visible inside its own cell, with ample transparent padding. Genuinely transparent hard-edge alpha.",
+      "source": "brown-source.png"
+    },
+    {
+      "id": "golden",
+      "method": "built-in image_gen",
+      "prompt": "Use case: identity-preserve. Edit target Image 1 is the cream-white master sprite sheet for Sheep Run. Change ONLY the wool palette to honey-gold: highlight #ffe998, body #e4aa38, shadow #b97b25; preserve peach face #d28d58. Make the stepped wool highlights polished and golden, but no glow and no external sparkles. Keep every one of the 15 characters, their exact poses, positions, identical outlines and right-facing direction. Keep the exact 5 columns by 3 rows layout, transparent canvas, crisp square pixel style, and all animations. Do NOT add accessory, text, labels, background, shadow, new frames or remove frames. Each character must be fully visible inside its own cell, with ample transparent padding. Genuinely transparent hard-edge alpha.",
+      "source": "golden-source.png"
+    },
+    {
+      "id": "farmer",
+      "method": "built-in image_gen",
+      "prompt": "Use case: precise-object-edit. Edit target Image 1 is the cream-white master sprite sheet for Sheep Run. Keep cream wool (#eee5cb/#c9bda1), peach face #bd805e, body/eyes/feet identity, all fifteen poses and exact positions unchanged. Add one small green farmer cap (#4f8150), with short brim above the face, to the head of EACH sheep. The cap follows the head orientation and tilts appropriately on hit and defeated poses. No tools or other accessories. Keep exact 5 columns by 3 rows layout, genuine transparent background, crisp square pixel style, all fifteen animations. Each character including hat must stay fully inside its own cell with transparent padding. No text, labels, shadows, glow, background, extra or missing frames. Hard-edge alpha.",
+      "source": "farmer-source.png"
+    }
+  ]
+}

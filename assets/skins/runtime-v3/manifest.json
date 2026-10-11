@@ -1,0 +1,1461 @@
+{
+  "frameWidth": 128,
+  "frameHeight": 128,
+  "frameCount": 15,
+  "packing": "15 separate alpha subjects, ordered in 5 columns and 3 rows",
+  "visibleFrame": {
+    "width": 128,
+    "height": 112,
+    "topPadding": 16
+  },
+  "skins": [
+    {
+      "id": "peach",
+      "name": "蜜桃羊",
+      "source": "assets/skins/generated-v3/peach-source.png",
+      "runtime": "assets/skins/runtime-v3/peach-sheet.png",
+      "sourceHash": "4d2129a5a18618e8d2f9d61a5629fcb50b8871bba8425dfa8ce089b54c320b5d",
+      "runtimeHash": "bdf0932b61e8a7c16afdcf43c4568925ce67daafba68755d50f7d2bb9023da0a",
+      "sourceSize": [
+        1619,
+        971
+      ],
+      "scale": 0.39603960396039606,
+      "sourceBounds": [
+        {
+          "i": 0,
+          "component": 1,
+          "area": 43983,
+          "bounds": [
+            23,
+            82,
+            304,
+            309
+          ]
+        },
+        {
+          "i": 1,
+          "component": 2,
+          "area": 43185,
+          "bounds": [
+            352,
+            82,
+            629,
+            308
+          ]
+        },
+        {
+          "i": 2,
+          "component": 3,
+          "area": 42069,
+          "bounds": [
+            676,
+            87,
+            952,
+            309
+          ]
+        },
+        {
+          "i": 3,
+          "component": 5,
+          "area": 42433,
+          "bounds": [
+            994,
+            93,
+            1281,
+            309
+          ]
+        },
+        {
+          "i": 4,
+          "component": 4,
+          "area": 43180,
+          "bounds": [
+            1322,
+            87,
+            1608,
+            309
+          ]
+        },
+        {
+          "i": 5,
+          "component": 6,
+          "area": 39613,
+          "bounds": [
+            27,
+            385,
+            302,
+            598
+          ]
+        },
+        {
+          "i": 6,
+          "component": 7,
+          "area": 41812,
+          "bounds": [
+            351,
+            400,
+            629,
+            623
+          ]
+        },
+        {
+          "i": 7,
+          "component": 9,
+          "area": 36459,
+          "bounds": [
+            680,
+            428,
+            940,
+            623
+          ]
+        },
+        {
+          "i": 8,
+          "component": 8,
+          "area": 42325,
+          "bounds": [
+            985,
+            416,
+            1288,
+            616
+          ]
+        },
+        {
+          "i": 9,
+          "component": 10,
+          "area": 28338,
+          "bounds": [
+            1315,
+            500,
+            1607,
+            623
+          ]
+        },
+        {
+          "i": 10,
+          "component": 11,
+          "area": 41474,
+          "bounds": [
+            24,
+            696,
+            301,
+            912
+          ]
+        },
+        {
+          "i": 11,
+          "component": 12,
+          "area": 41036,
+          "bounds": [
+            347,
+            696,
+            626,
+            914
+          ]
+        },
+        {
+          "i": 12,
+          "component": 13,
+          "area": 40480,
+          "bounds": [
+            675,
+            696,
+            945,
+            912
+          ]
+        },
+        {
+          "i": 13,
+          "component": 14,
+          "area": 41105,
+          "bounds": [
+            994,
+            711,
+            1285,
+            908
+          ]
+        },
+        {
+          "i": 14,
+          "component": 15,
+          "area": 29559,
+          "bounds": [
+            1315,
+            788,
+            1608,
+            914
+          ]
+        }
+      ],
+      "frames": [
+        {
+          "i": 0,
+          "x": 8,
+          "y": 38,
+          "width": 111,
+          "height": 90,
+          "bottom": 128,
+          "visiblePixels": 6893,
+          "firstRow": 38,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 1,
+          "x": 9,
+          "y": 38,
+          "width": 110,
+          "height": 90,
+          "bottom": 128,
+          "visiblePixels": 6823,
+          "firstRow": 38,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 2,
+          "x": 9,
+          "y": 40,
+          "width": 109,
+          "height": 88,
+          "bottom": 128,
+          "visiblePixels": 6599,
+          "firstRow": 40,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 3,
+          "x": 7,
+          "y": 42,
+          "width": 114,
+          "height": 86,
+          "bottom": 128,
+          "visiblePixels": 6700,
+          "firstRow": 42,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 4,
+          "x": 7,
+          "y": 40,
+          "width": 113,
+          "height": 88,
+          "bottom": 128,
+          "visiblePixels": 6764,
+          "firstRow": 40,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 5,
+          "x": 9,
+          "y": 36,
+          "width": 109,
+          "height": 84,
+          "bottom": 120,
+          "visiblePixels": 6200,
+          "firstRow": 36,
+          "lastRow": 119,
+          "softAlpha": 0
+        },
+        {
+          "i": 6,
+          "x": 9,
+          "y": 40,
+          "width": 110,
+          "height": 88,
+          "bottom": 128,
+          "visiblePixels": 6502,
+          "firstRow": 40,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 7,
+          "x": 12,
+          "y": 51,
+          "width": 103,
+          "height": 77,
+          "bottom": 128,
+          "visiblePixels": 5697,
+          "firstRow": 51,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 8,
+          "x": 4,
+          "y": 49,
+          "width": 120,
+          "height": 79,
+          "bottom": 128,
+          "visiblePixels": 6600,
+          "firstRow": 49,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 9,
+          "x": 6,
+          "y": 79,
+          "width": 116,
+          "height": 49,
+          "bottom": 128,
+          "visiblePixels": 4478,
+          "firstRow": 79,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 10,
+          "x": 9,
+          "y": 42,
+          "width": 110,
+          "height": 86,
+          "bottom": 128,
+          "visiblePixels": 6556,
+          "firstRow": 42,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 11,
+          "x": 9,
+          "y": 42,
+          "width": 110,
+          "height": 86,
+          "bottom": 128,
+          "visiblePixels": 6373,
+          "firstRow": 42,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 12,
+          "x": 10,
+          "y": 42,
+          "width": 107,
+          "height": 86,
+          "bottom": 128,
+          "visiblePixels": 6380,
+          "firstRow": 42,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 13,
+          "x": 6,
+          "y": 50,
+          "width": 115,
+          "height": 78,
+          "bottom": 128,
+          "visiblePixels": 6424,
+          "firstRow": 50,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 14,
+          "x": 6,
+          "y": 78,
+          "width": 116,
+          "height": 50,
+          "bottom": 128,
+          "visiblePixels": 4646,
+          "firstRow": 78,
+          "lastRow": 127,
+          "softAlpha": 0
+        }
+      ]
+    },
+    {
+      "id": "milktea",
+      "name": "奶茶羊",
+      "source": "assets/skins/generated-v3/milktea-source.png",
+      "runtime": "assets/skins/runtime-v3/milktea-sheet.png",
+      "sourceHash": "353f6aec960efc836e16f2bdad319fdfd1c7ab6bc45a7887067623986617298c",
+      "runtimeHash": "d40dc1f6407d5bc9a86c2cb4149c1569a870f5349c172d2f8e0ae0c18866939a",
+      "sourceSize": [
+        1619,
+        971
+      ],
+      "scale": 0.38338658146964855,
+      "sourceBounds": [
+        {
+          "i": 0,
+          "component": 2,
+          "area": 43307,
+          "bounds": [
+            21,
+            84,
+            297,
+            312
+          ]
+        },
+        {
+          "i": 1,
+          "component": 1,
+          "area": 41686,
+          "bounds": [
+            342,
+            83,
+            611,
+            312
+          ]
+        },
+        {
+          "i": 2,
+          "component": 4,
+          "area": 42747,
+          "bounds": [
+            671,
+            89,
+            951,
+            312
+          ]
+        },
+        {
+          "i": 3,
+          "component": 5,
+          "area": 43672,
+          "bounds": [
+            985,
+            94,
+            1281,
+            312
+          ]
+        },
+        {
+          "i": 4,
+          "component": 3,
+          "area": 42346,
+          "bounds": [
+            1337,
+            84,
+            1611,
+            312
+          ]
+        },
+        {
+          "i": 5,
+          "component": 6,
+          "area": 40248,
+          "bounds": [
+            25,
+            384,
+            297,
+            604
+          ]
+        },
+        {
+          "i": 6,
+          "component": 7,
+          "area": 44248,
+          "bounds": [
+            345,
+            398,
+            627,
+            632
+          ]
+        },
+        {
+          "i": 7,
+          "component": 9,
+          "area": 37844,
+          "bounds": [
+            676,
+            419,
+            943,
+            628
+          ]
+        },
+        {
+          "i": 8,
+          "component": 8,
+          "area": 43303,
+          "bounds": [
+            978,
+            414,
+            1291,
+            624
+          ]
+        },
+        {
+          "i": 9,
+          "component": 10,
+          "area": 26510,
+          "bounds": [
+            1323,
+            507,
+            1610,
+            628
+          ]
+        },
+        {
+          "i": 10,
+          "component": 12,
+          "area": 41498,
+          "bounds": [
+            22,
+            704,
+            296,
+            922
+          ]
+        },
+        {
+          "i": 11,
+          "component": 13,
+          "area": 40184,
+          "bounds": [
+            343,
+            704,
+            612,
+            922
+          ]
+        },
+        {
+          "i": 12,
+          "component": 11,
+          "area": 42079,
+          "bounds": [
+            666,
+            701,
+            944,
+            922
+          ]
+        },
+        {
+          "i": 13,
+          "component": 14,
+          "area": 42692,
+          "bounds": [
+            979,
+            708,
+            1283,
+            917
+          ]
+        },
+        {
+          "i": 14,
+          "component": 15,
+          "area": 28755,
+          "bounds": [
+            1318,
+            792,
+            1610,
+            919
+          ]
+        }
+      ],
+      "frames": [
+        {
+          "i": 0,
+          "x": 11,
+          "y": 41,
+          "width": 106,
+          "height": 87,
+          "bottom": 128,
+          "visiblePixels": 6338,
+          "firstRow": 41,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 1,
+          "x": 12,
+          "y": 40,
+          "width": 103,
+          "height": 88,
+          "bottom": 128,
+          "visiblePixels": 6121,
+          "firstRow": 40,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 2,
+          "x": 10,
+          "y": 43,
+          "width": 107,
+          "height": 85,
+          "bottom": 128,
+          "visiblePixels": 6221,
+          "firstRow": 43,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 3,
+          "x": 7,
+          "y": 44,
+          "width": 113,
+          "height": 84,
+          "bottom": 128,
+          "visiblePixels": 6443,
+          "firstRow": 44,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 4,
+          "x": 11,
+          "y": 41,
+          "width": 105,
+          "height": 87,
+          "bottom": 128,
+          "visiblePixels": 6190,
+          "firstRow": 41,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 5,
+          "x": 12,
+          "y": 36,
+          "width": 104,
+          "height": 84,
+          "bottom": 120,
+          "visiblePixels": 5883,
+          "firstRow": 36,
+          "lastRow": 119,
+          "softAlpha": 0
+        },
+        {
+          "i": 6,
+          "x": 10,
+          "y": 38,
+          "width": 108,
+          "height": 90,
+          "bottom": 128,
+          "visiblePixels": 6520,
+          "firstRow": 38,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 7,
+          "x": 13,
+          "y": 48,
+          "width": 102,
+          "height": 80,
+          "bottom": 128,
+          "visiblePixels": 5538,
+          "firstRow": 48,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 8,
+          "x": 4,
+          "y": 47,
+          "width": 120,
+          "height": 81,
+          "bottom": 128,
+          "visiblePixels": 6394,
+          "firstRow": 47,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 9,
+          "x": 9,
+          "y": 82,
+          "width": 110,
+          "height": 46,
+          "bottom": 128,
+          "visiblePixels": 3860,
+          "firstRow": 82,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 10,
+          "x": 11,
+          "y": 44,
+          "width": 105,
+          "height": 84,
+          "bottom": 128,
+          "visiblePixels": 6133,
+          "firstRow": 44,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 11,
+          "x": 12,
+          "y": 44,
+          "width": 103,
+          "height": 84,
+          "bottom": 128,
+          "visiblePixels": 5926,
+          "firstRow": 44,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 12,
+          "x": 10,
+          "y": 43,
+          "width": 107,
+          "height": 85,
+          "bottom": 128,
+          "visiblePixels": 6226,
+          "firstRow": 43,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 13,
+          "x": 5,
+          "y": 48,
+          "width": 117,
+          "height": 80,
+          "bottom": 128,
+          "visiblePixels": 6294,
+          "firstRow": 48,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 14,
+          "x": 8,
+          "y": 79,
+          "width": 112,
+          "height": 49,
+          "bottom": 128,
+          "visiblePixels": 4258,
+          "firstRow": 79,
+          "lastRow": 127,
+          "softAlpha": 0
+        }
+      ]
+    },
+    {
+      "id": "cloud",
+      "name": "云朵羊",
+      "source": "assets/skins/generated-v3/cloud-source.png",
+      "runtime": "assets/skins/runtime-v3/cloud-sheet.png",
+      "sourceHash": "b76295095ff8bebe40158a8d177b107d9b030a3ceee7f0de7b595fbd519d5f5d",
+      "runtimeHash": "0c438f42766a2bdeda2c33c996abb8074286416aeeadba395d6d091babccfd87",
+      "sourceSize": [
+        1619,
+        971
+      ],
+      "scale": 0.39473684210526316,
+      "sourceBounds": [
+        {
+          "i": 0,
+          "component": 2,
+          "area": 40907,
+          "bounds": [
+            23,
+            78,
+            292,
+            296
+          ]
+        },
+        {
+          "i": 1,
+          "component": 1,
+          "area": 42052,
+          "bounds": [
+            333,
+            73,
+            605,
+            299
+          ]
+        },
+        {
+          "i": 2,
+          "component": 3,
+          "area": 41553,
+          "bounds": [
+            659,
+            78,
+            934,
+            296
+          ]
+        },
+        {
+          "i": 3,
+          "component": 4,
+          "area": 42649,
+          "bounds": [
+            979,
+            78,
+            1267,
+            295
+          ]
+        },
+        {
+          "i": 4,
+          "component": 5,
+          "area": 40252,
+          "bounds": [
+            1316,
+            81,
+            1590,
+            298
+          ]
+        },
+        {
+          "i": 5,
+          "component": 6,
+          "area": 40623,
+          "bounds": [
+            23,
+            363,
+            296,
+            587
+          ]
+        },
+        {
+          "i": 6,
+          "component": 7,
+          "area": 41516,
+          "bounds": [
+            336,
+            380,
+            609,
+            607
+          ]
+        },
+        {
+          "i": 7,
+          "component": 9,
+          "area": 39822,
+          "bounds": [
+            660,
+            400,
+            935,
+            607
+          ]
+        },
+        {
+          "i": 8,
+          "component": 8,
+          "area": 43736,
+          "bounds": [
+            967,
+            395,
+            1271,
+            603
+          ]
+        },
+        {
+          "i": 9,
+          "component": 10,
+          "area": 29664,
+          "bounds": [
+            1306,
+            480,
+            1597,
+            607
+          ]
+        },
+        {
+          "i": 10,
+          "component": 13,
+          "area": 41378,
+          "bounds": [
+            23,
+            676,
+            296,
+            891
+          ]
+        },
+        {
+          "i": 11,
+          "component": 11,
+          "area": 41293,
+          "bounds": [
+            340,
+            672,
+            611,
+            896
+          ]
+        },
+        {
+          "i": 12,
+          "component": 12,
+          "area": 42064,
+          "bounds": [
+            659,
+            675,
+            937,
+            896
+          ]
+        },
+        {
+          "i": 13,
+          "component": 14,
+          "area": 42602,
+          "bounds": [
+            972,
+            688,
+            1268,
+            895
+          ]
+        },
+        {
+          "i": 14,
+          "component": 15,
+          "area": 29464,
+          "bounds": [
+            1305,
+            770,
+            1597,
+            898
+          ]
+        }
+      ],
+      "frames": [
+        {
+          "i": 0,
+          "x": 11,
+          "y": 42,
+          "width": 106,
+          "height": 86,
+          "bottom": 128,
+          "visiblePixels": 6357,
+          "firstRow": 42,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 1,
+          "x": 10,
+          "y": 39,
+          "width": 107,
+          "height": 89,
+          "bottom": 128,
+          "visiblePixels": 6518,
+          "firstRow": 39,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 2,
+          "x": 9,
+          "y": 42,
+          "width": 109,
+          "height": 86,
+          "bottom": 128,
+          "visiblePixels": 6517,
+          "firstRow": 42,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 3,
+          "x": 7,
+          "y": 42,
+          "width": 114,
+          "height": 86,
+          "bottom": 128,
+          "visiblePixels": 6709,
+          "firstRow": 42,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 4,
+          "x": 10,
+          "y": 42,
+          "width": 108,
+          "height": 86,
+          "bottom": 128,
+          "visiblePixels": 6292,
+          "firstRow": 42,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 5,
+          "x": 10,
+          "y": 32,
+          "width": 108,
+          "height": 88,
+          "bottom": 120,
+          "visiblePixels": 6311,
+          "firstRow": 32,
+          "lastRow": 119,
+          "softAlpha": 0
+        },
+        {
+          "i": 6,
+          "x": 10,
+          "y": 38,
+          "width": 108,
+          "height": 90,
+          "bottom": 128,
+          "visiblePixels": 6511,
+          "firstRow": 38,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 7,
+          "x": 9,
+          "y": 46,
+          "width": 109,
+          "height": 82,
+          "bottom": 128,
+          "visiblePixels": 6243,
+          "firstRow": 46,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 8,
+          "x": 4,
+          "y": 46,
+          "width": 120,
+          "height": 82,
+          "bottom": 128,
+          "visiblePixels": 6809,
+          "firstRow": 46,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 9,
+          "x": 6,
+          "y": 78,
+          "width": 115,
+          "height": 50,
+          "bottom": 128,
+          "visiblePixels": 4615,
+          "firstRow": 78,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 10,
+          "x": 10,
+          "y": 43,
+          "width": 108,
+          "height": 85,
+          "bottom": 128,
+          "visiblePixels": 6470,
+          "firstRow": 43,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 11,
+          "x": 10,
+          "y": 40,
+          "width": 107,
+          "height": 88,
+          "bottom": 128,
+          "visiblePixels": 6412,
+          "firstRow": 40,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 12,
+          "x": 9,
+          "y": 41,
+          "width": 110,
+          "height": 87,
+          "bottom": 128,
+          "visiblePixels": 6552,
+          "firstRow": 41,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 13,
+          "x": 5,
+          "y": 46,
+          "width": 117,
+          "height": 82,
+          "bottom": 128,
+          "visiblePixels": 6674,
+          "firstRow": 46,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 14,
+          "x": 6,
+          "y": 77,
+          "width": 115,
+          "height": 51,
+          "bottom": 128,
+          "visiblePixels": 4630,
+          "firstRow": 77,
+          "lastRow": 127,
+          "softAlpha": 0
+        }
+      ]
+    },
+    {
+      "id": "bearcap",
+      "name": "小熊帽羊",
+      "source": "assets/skins/generated-v3/bearcap-source.png",
+      "runtime": "assets/skins/runtime-v3/bearcap-sheet.png",
+      "sourceHash": "1766a24af7b7fe5af2ed1c1cd5c9e06cce51d5f0ff409d665b9a76a6c0627eec",
+      "runtimeHash": "ab5527145bbe18690e1b41383429529f156c6331768ba30a3824af3f8c41f6ab",
+      "sourceSize": [
+        1619,
+        971
+      ],
+      "scale": 0.3858520900321543,
+      "sourceBounds": [
+        {
+          "i": 0,
+          "component": 3,
+          "area": 42242,
+          "bounds": [
+            24,
+            91,
+            297,
+            322
+          ]
+        },
+        {
+          "i": 1,
+          "component": 1,
+          "area": 43103,
+          "bounds": [
+            345,
+            86,
+            617,
+            322
+          ]
+        },
+        {
+          "i": 2,
+          "component": 2,
+          "area": 43858,
+          "bounds": [
+            664,
+            87,
+            943,
+            322
+          ]
+        },
+        {
+          "i": 3,
+          "component": 5,
+          "area": 43430,
+          "bounds": [
+            984,
+            96,
+            1273,
+            322
+          ]
+        },
+        {
+          "i": 4,
+          "component": 4,
+          "area": 39686,
+          "bounds": [
+            1334,
+            91,
+            1597,
+            322
+          ]
+        },
+        {
+          "i": 5,
+          "component": 6,
+          "area": 38484,
+          "bounds": [
+            33,
+            373,
+            294,
+            604
+          ]
+        },
+        {
+          "i": 6,
+          "component": 7,
+          "area": 42019,
+          "bounds": [
+            346,
+            391,
+            625,
+            627
+          ]
+        },
+        {
+          "i": 7,
+          "component": 9,
+          "area": 36652,
+          "bounds": [
+            681,
+            427,
+            943,
+            636
+          ]
+        },
+        {
+          "i": 8,
+          "component": 8,
+          "area": 41881,
+          "bounds": [
+            975,
+            425,
+            1286,
+            635
+          ]
+        },
+        {
+          "i": 9,
+          "component": 10,
+          "area": 27490,
+          "bounds": [
+            1312,
+            500,
+            1590,
+            637
+          ]
+        },
+        {
+          "i": 10,
+          "component": 11,
+          "area": 41657,
+          "bounds": [
+            24,
+            678,
+            293,
+            910
+          ]
+        },
+        {
+          "i": 11,
+          "component": 12,
+          "area": 41257,
+          "bounds": [
+            346,
+            682,
+            622,
+            912
+          ]
+        },
+        {
+          "i": 12,
+          "component": 13,
+          "area": 40538,
+          "bounds": [
+            667,
+            688,
+            942,
+            912
+          ]
+        },
+        {
+          "i": 13,
+          "component": 14,
+          "area": 42538,
+          "bounds": [
+            980,
+            698,
+            1286,
+            910
+          ]
+        },
+        {
+          "i": 14,
+          "component": 15,
+          "area": 28936,
+          "bounds": [
+            1312,
+            778,
+            1597,
+            919
+          ]
+        }
+      ],
+      "frames": [
+        {
+          "i": 0,
+          "x": 11,
+          "y": 39,
+          "width": 105,
+          "height": 89,
+          "bottom": 128,
+          "visiblePixels": 6274,
+          "firstRow": 39,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 1,
+          "x": 11,
+          "y": 37,
+          "width": 105,
+          "height": 91,
+          "bottom": 128,
+          "visiblePixels": 6410,
+          "firstRow": 37,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 2,
+          "x": 10,
+          "y": 37,
+          "width": 108,
+          "height": 91,
+          "bottom": 128,
+          "visiblePixels": 6585,
+          "firstRow": 37,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 3,
+          "x": 8,
+          "y": 41,
+          "width": 112,
+          "height": 87,
+          "bottom": 128,
+          "visiblePixels": 6471,
+          "firstRow": 41,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 4,
+          "x": 13,
+          "y": 39,
+          "width": 101,
+          "height": 89,
+          "bottom": 128,
+          "visiblePixels": 5878,
+          "firstRow": 39,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 5,
+          "x": 13,
+          "y": 31,
+          "width": 101,
+          "height": 89,
+          "bottom": 120,
+          "visiblePixels": 5733,
+          "firstRow": 31,
+          "lastRow": 119,
+          "softAlpha": 0
+        },
+        {
+          "i": 6,
+          "x": 10,
+          "y": 37,
+          "width": 108,
+          "height": 91,
+          "bottom": 128,
+          "visiblePixels": 6258,
+          "firstRow": 37,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 7,
+          "x": 13,
+          "y": 47,
+          "width": 101,
+          "height": 81,
+          "bottom": 128,
+          "visiblePixels": 5483,
+          "firstRow": 47,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 8,
+          "x": 4,
+          "y": 47,
+          "width": 120,
+          "height": 81,
+          "bottom": 128,
+          "visiblePixels": 6213,
+          "firstRow": 47,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 9,
+          "x": 10,
+          "y": 75,
+          "width": 107,
+          "height": 53,
+          "bottom": 128,
+          "visiblePixels": 4110,
+          "firstRow": 75,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 10,
+          "x": 12,
+          "y": 38,
+          "width": 104,
+          "height": 90,
+          "bottom": 128,
+          "visiblePixels": 6270,
+          "firstRow": 38,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 11,
+          "x": 11,
+          "y": 39,
+          "width": 106,
+          "height": 89,
+          "bottom": 128,
+          "visiblePixels": 6110,
+          "firstRow": 39,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 12,
+          "x": 11,
+          "y": 42,
+          "width": 106,
+          "height": 86,
+          "bottom": 128,
+          "visiblePixels": 6005,
+          "firstRow": 42,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 13,
+          "x": 5,
+          "y": 46,
+          "width": 118,
+          "height": 82,
+          "bottom": 128,
+          "visiblePixels": 6340,
+          "firstRow": 46,
+          "lastRow": 127,
+          "softAlpha": 0
+        },
+        {
+          "i": 14,
+          "x": 9,
+          "y": 74,
+          "width": 110,
+          "height": 54,
+          "bottom": 128,
+          "visiblePixels": 4287,
+          "firstRow": 74,
+          "lastRow": 127,
+          "softAlpha": 0
+        }
+      ]
+    }
+  ]
+}

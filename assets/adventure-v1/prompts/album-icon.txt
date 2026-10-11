@@ -1,0 +1,6 @@
+Mode: built-in image_gen
+transparent_background: true
+Master: masters/album-icon-source.png
+Runtime: runtime/album-icon.png
+Generation prompt:
+ONE standalone transparent menu icon of a small closed keepsake scrapbook, green/teal cover with a single pink heart on it, warm brown/gold leather spine and cream page edges, tiny cream highlight. Original cute GBA pixel art with dark brown outline, crisp square steps and flat colors. Draw on48x48 logical grid enlarged nearest-neighbor, centered with transparent margin, no writing, no labels, no backdrop, no other objects, no blur or antialias. Fully transparent background.

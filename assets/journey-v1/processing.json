@@ -1,0 +1,82 @@
+[
+  {
+    "season": "spring",
+    "master": "assets\\journey-v1\\sources\\spring.png",
+    "runtime": "assets\\journey-v1\\runtime\\spring.png",
+    "sourceSize": [
+      1536,
+      1024
+    ],
+    "runtimeSize": [
+      288,
+      192
+    ],
+    "resize": "uniform nearest neighbor",
+    "alphaRange": [
+      0,
+      254
+    ],
+    "sourceSha256": "8c7435e8c3efc74831a7665a02177623cd87f1b18e1f93ede752d94ba46db8f8",
+    "runtimeSha256": "dccf8bddf905a4abc3f30917cdf462089d3e7ca102adb2e835d66dbe55ab1fab"
+  },
+  {
+    "season": "summer",
+    "master": "assets\\journey-v1\\sources\\summer.png",
+    "runtime": "assets\\journey-v1\\runtime\\summer.png",
+    "sourceSize": [
+      1536,
+      1024
+    ],
+    "runtimeSize": [
+      288,
+      192
+    ],
+    "resize": "uniform nearest neighbor",
+    "alphaRange": [
+      0,
+      254
+    ],
+    "sourceSha256": "9944916c2bfaac4dc85c9c3a31d586a208ac76f426748bf38fa0d69680f412d9",
+    "runtimeSha256": "1e84b9138019ec99a7b456d1f2e3101c0e40aa718148cf1cfec33862badb4eb6"
+  },
+  {
+    "season": "autumn",
+    "master": "assets\\journey-v1\\sources\\autumn.png",
+    "runtime": "assets\\journey-v1\\runtime\\autumn.png",
+    "sourceSize": [
+      1536,
+      1024
+    ],
+    "runtimeSize": [
+      288,
+      192
+    ],
+    "resize": "uniform nearest neighbor",
+    "alphaRange": [
+      0,
+      254
+    ],
+    "sourceSha256": "f1a3a7ae765804f2cb9184326aefdd3b554f49b1995899a850fc4290c3270e8e",
+    "runtimeSha256": "7dcb51218b121d66f7cdb51a0cb21b4c4009ace6982a1927d533345f36b1abaf"
+  },
+  {
+    "season": "winter",
+    "master": "assets\\journey-v1\\sources\\winter.png",
+    "runtime": "assets\\journey-v1\\runtime\\winter.png",
+    "sourceSize": [
+      1536,
+      1024
+    ],
+    "runtimeSize": [
+      288,
+      192
+    ],
+    "resize": "uniform nearest neighbor",
+    "alphaRange": [
+      0,
+      254
+    ],
+    "sourceSha256": "3e88b188e9405a425a5eccc520a0f1ae3c050b7f99dd03ff07b59b45cacadd82",
+    "runtimeSha256": "2cd60a7a34c4a86fd58ff45ab56050a96ac48cd9b4ee92c79aef7554dc2bad5a"
+  }
+]

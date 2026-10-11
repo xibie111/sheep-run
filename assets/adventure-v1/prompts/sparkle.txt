@@ -1,0 +1,6 @@
+Mode: built-in image_gen
+transparent_background: true
+Master: masters/sparkle-source.png
+Runtime: runtime/sparkle.png
+Generation prompt:
+ONE tiny four-point gold and cream sparkle sprite for a cute GBA pixel game. Cross shaped starburst with dark-orange edge, warm yellow points and cream-white middle, 12x12 logical pixels enlarged nearest neighbor. Single centered sparkle, transparent padding, entirely transparent background. Crisp square pixels, flat colors, no glow, no soft edge, no blur, no gradient, no text, no second sparkle.

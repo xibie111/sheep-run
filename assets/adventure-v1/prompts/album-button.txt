@@ -1,0 +1,6 @@
+Mode: built-in image_gen
+transparent_background: true
+Master: masters/album-button-source.png
+Runtime: runtime/album-button.png
+Generation prompt:
+ONE reusable blank pixel-art game UI button base for a sweet farm runner. Compact nearly square landscape rectangle, logical canvas 56x48 pixels enlarged nearest-neighbor. Thick dark brown wooden outer border, warm orange-gold beveled inner rim, CLEAN PALE CREAM flat empty center. A tiny pink flower and two green leaves at just the top-left and bottom-right outer corners, restrained decorations. The empty center must have space for a separate book icon in its upper half and short programmatically drawn Chinese label in its lower half. NO book drawn, NO icon, NO letters, NO words, NO numbers, NO screenshot, NO scene. Original crisp GBA-style square pixel art, flat limited colors, no blur, no antialias, no glow, no soft shadow. Fully transparent exterior.

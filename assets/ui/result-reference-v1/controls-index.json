@@ -1,0 +1,38 @@
+{
+  "retry": {
+    "x": 62,
+    "y": 124,
+    "width": 750,
+    "height": 190
+  },
+  "home": {
+    "x": 868,
+    "y": 125,
+    "width": 606,
+    "height": 188
+  },
+  "record": {
+    "x": 212,
+    "y": 419,
+    "width": 1136,
+    "height": 186
+  },
+  "coin": {
+    "x": 200,
+    "y": 726,
+    "width": 198,
+    "height": 200
+  },
+  "retryIcon": {
+    "x": 671,
+    "y": 733,
+    "width": 192,
+    "height": 192
+  },
+  "homeIcon": {
+    "x": 1130,
+    "y": 732,
+    "width": 196,
+    "height": 183
+  }
+}

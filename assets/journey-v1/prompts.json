@@ -1,0 +1,26 @@
+{
+  "tool": "built-in image_gen",
+  "transparent_background": true,
+  "assets": [
+    {
+      "season": "spring",
+      "prompt": "Use case: illustration-story. Asset type: permanent reward illustration card for a cozy mobile pixel art sheep runner game. Style: flat 2D pixel art, crisp square pixel clusters and dark brown outlines, warm gentle pasture palette, cute cream wool sheep with pink cheeks, no realistic volume, no 3D, no rendered shine, no gradients, no text, no lettering, no UI, no watermark. Composition: single charming horizontal 3:2 narrative vignette with transparent outer corners. Keep all subjects inside the canvas. Transparent background outside the vignette. Spring letter: one little sheep comfortably lying among pink and cream wildflowers in a spring pasture, a small butterfly and soft distant green hedges. Peaceful affectionate mood.",
+      "generatedPath": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39\\exec-d0637acd-dc23-4eae-a8c2-3a504229fac1.png"
+    },
+    {
+      "season": "summer",
+      "prompt": "Use case: illustration-story. Asset type: permanent reward illustration card for a cozy mobile pixel art sheep runner game. Style: flat 2D pixel art, crisp square pixel clusters and dark brown outlines, warm gentle pasture palette, cute cream wool sheep with pink cheeks, no realistic volume, no 3D, no rendered shine, no gradients, no text, no lettering, no UI, no watermark. Composition: single charming horizontal 3:2 narrative vignette with transparent outer corners. Keep all subjects inside the canvas. Transparent background outside the vignette. Summer evening: one cute sheep sitting under a leafy tree enjoying a slice of watermelon, mellow coral sunset over a pastoral field. Cool shade and gentle evening breeze.",
+      "generatedPath": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39\\exec-7364d3d4-22db-44cc-88d7-fdc9a7f72f58.png"
+    },
+    {
+      "season": "autumn",
+      "prompt": "Use case: illustration-story. Asset type: permanent reward illustration card for a cozy mobile pixel art sheep runner game. Style: flat 2D pixel art, crisp square pixel clusters and dark brown outlines, warm gentle pasture palette, cute cream wool sheep with pink cheeks, no realistic volume, no 3D, no rendered shine, no gradients, no text, no lettering, no UI, no watermark. Composition: single charming horizontal 3:2 narrative vignette with transparent outer corners. Keep all subjects inside the canvas. Transparent background outside the vignette. Autumn dinner: two cute little sheep sharing a small wooden outdoor table with bowls of warm rice and vegetables, gentle steam, amber leaves nearby, rustic pasture behind. Companionship and a welcoming home.",
+      "generatedPath": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39\\exec-0c5e331b-a479-4709-ac33-edb6b39d9fb4.png"
+    },
+    {
+      "season": "winter",
+      "prompt": "Use case: illustration-story. Asset type: permanent reward illustration card for a cozy mobile pixel art sheep runner game. Style: flat 2D pixel art, crisp square pixel clusters and dark brown outlines, warm gentle pasture palette, cute cream wool sheep with pink cheeks, no realistic volume, no 3D, no rendered shine, no gradients, no text, no lettering, no UI, no watermark. Composition: single charming horizontal 3:2 narrative vignette with transparent outer corners. Keep all subjects inside the canvas. Transparent background outside the vignette. Winter goodnight: a cute sheep wrapped in a soft beige blanket holding a mug of hot cocoa beside a warm cottage window, a snowy blue pasture outside. Tender bedtime mood.",
+      "generatedPath": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39\\exec-88b0815d-6d83-4919-890e-bbdd04e3ddb5.png"
+    }
+  ]
+}

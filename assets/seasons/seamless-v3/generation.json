@@ -1,0 +1,64 @@
+{
+  "date": "2026-10-10",
+  "tool": "built-in image_gen",
+  "reason": "Repair incompatible hill/sky splice within each season; original imagery retained.",
+  "assets": [
+    {
+      "season": "spring",
+      "source": "spring-source.png",
+      "runtime": "spring-far.png",
+      "prompt": "Use case: compositing. Asset type: a production SPRING countryside two-layer tile atlas for the pixel-art Sheep Run game. Image 1 is the EDIT TARGET far panorama: it has a bad vertical splice at roughly x=450 where two incompatible hills were joined. Image 2 is the near panorama reference, including the single windmill/red barn farm and orange running road. Repair into ONE coherent continuous countryside, not a collage. Output one wide 2688x1080 atlas containing EXACTLY two equally tall horizontal bands: top half is the fully opaque FAR layer (blue sky, white pixel clouds, distant green mountains, spring forest, a quiet lake valley, no buildings); bottom half is the NEAR layer with genuine transparent sky above pink blossom trees, meadow and the one existing windmill/red barn farm. The bottom band's short grass running verge must be perfectly level at local y=422 of 540 (78.15%); warm orange flat dirt road from y=436 of 540 (80.75%) to the bottom. Keep crisp detailed square-pixel 2D game art, original scale relationships and joyful spring palette. The mountain skyline and meadow slopes must flow naturally across the entire band without a vertical step, rectangular pasted area, color boundary, sliced trees, sliced clouds or cutoff fences. Keep sky color consistent across the entire width. Each band's LEFT AND RIGHT EDGES MUST MATCH as a horizontally seamless cyclic tile: matching sky gradient, hill elevation, meadow height and road color. Keep edges quiet with no tree/building/cloud touching the sides; do not mirror the artwork. One farm only in the near layer at about 30% width, trees irregularly spaced, varied shapes. No characters, sheep, stars, obstacles, HUD, lettering, watermarks, border or separator line, checkerboard, blur, 3D shading, volume or painterly smearing. Preserve reference style; change only what is needed to make smooth continuous scenery.",
+      "outputHint": "Generated images are saved to C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39 as C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39\\exec-4c3b8408-ea15-43c4-9b79-ed0e7f0c3e3a.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "selectedFrame": {
+        "x": 0,
+        "y": 64,
+        "width": 1977,
+        "height": 374
+      },
+      "used": "Opaque far panorama only; retain existing near meadow/buildings/road artwork. Deterministic atlas extraction drops unused bottom band and upper transparent margin."
+    },
+    {
+      "season": "summer",
+      "source": "summer-source.png",
+      "runtime": "summer-far.png",
+      "prompt": "Use case: lighting-weather. EDIT TARGET image 1 is the repaired continuous two-band spring Sheep Run scenery atlas. Image 2 is the game's SUMMER far landscape COLOR reference only. Change ONLY the season of image 1 to SUMMER, while preserving EXACT canvas dimensions, row positions and boundaries, all silhouettes, tree and cloud positions, lake shape, farm buildings, road height, transparent areas and pixel texture. Turn pink blossom trees into lush green leafy trees, green summer mountains and meadows, modest yellow summer flowers; keep the orange running road and blue sky. Preserve the repaired naturally continuous terrain across the full panorama and edge-to-edge horizontal tile compatibility. Crisp square-pixel flat 2D game art, no volume/3D rendering, blur, lighting bloom, added buildings, characters, UI, writing or watermarks. Keep every geometric feature exactly in place. Output the same full two-band atlas as image 1 with only seasonal colors/foliage altered.",
+      "outputHint": "Generated images are saved to C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39 as C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39\\exec-6e5183c6-eaa0-4759-b398-5bf4e15e2b82.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "selectedFrame": {
+        "x": 0,
+        "y": 64,
+        "width": 1977,
+        "height": 374
+      },
+      "used": "Opaque far panorama only; retain existing near meadow/buildings/road artwork. Deterministic atlas extraction drops unused bottom band and upper transparent margin."
+    },
+    {
+      "season": "autumn",
+      "source": "autumn-source.png",
+      "runtime": "autumn-far.png",
+      "prompt": "Use case: lighting-weather. EDIT TARGET image 1 is the repaired continuous two-band spring Sheep Run scenery atlas. Image 2 is the game's AUTUMN far landscape COLOR reference only. Change ONLY the season of image 1 to AUTUMN. Preserve EXACT canvas dimensions, row boundaries, terrain geometry, all mountain and cloud silhouettes, tree locations, lake shape, farm buildings, level running road height, transparent areas and crisp square pixel texture. Convert pink blossom trees and green deciduous trees to rich orange, red and gold autumn foliage, warm harvest meadows and distant autumn forest matching reference 2; keep the orange running road and gentle blue sky. Preserve smooth continuous landscape across the whole panorama and seamless cyclic left/right compatibility. Flat detailed 2D pixel-art game scenery without volume or 3D rendering. Do not move anything, add landmarks, recolor clouds orange, introduce a vertical splice, blur, bloom, UI, writing, characters or watermarks. Output exactly the same complete two-band atlas as image 1 with only seasonal colors/foliage changed.",
+      "outputHint": "Generated images are saved to C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39 as C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39\\exec-9eaccff0-cf3b-4ec2-ba39-d0e820913bb5.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "selectedFrame": {
+        "x": 0,
+        "y": 64,
+        "width": 1977,
+        "height": 374
+      },
+      "used": "Opaque far panorama only; retain existing near meadow/buildings/road artwork. Deterministic atlas extraction drops unused bottom band and upper transparent margin."
+    },
+    {
+      "season": "winter",
+      "source": "winter-source.png",
+      "runtime": "winter-far.png",
+      "prompt": "Use case: lighting-weather. EDIT TARGET image 1 is the repaired continuous two-band spring Sheep Run scenery atlas. Image 2 is the game's WINTER far landscape COLOR reference only. Change ONLY the season of image 1 to WINTER. Preserve EXACT dimensions, band boundaries, mountain and cloud positions/silhouettes, tree locations, lake shape, farm buildings, level running road height, transparency masks and square pixel texture. Snow-covered blue-white mountains and meadows, snow-laden evergreen trees, bare snowy deciduous trees and a calm icy blue lake, matching image 2's winter palette. White snow-covered running road in the exact same place. Keep clear blue sky. Preserve the repaired naturally continuous panorama with seamless cyclic left/right compatibility. Flat detailed 2D pixel-art game art, no 3D/volume, blurred painting, bloom, particles, new buildings, characters, UI, writing or watermark. Do not change geometry or composition. Output exactly the same full two-band atlas as image 1 with only seasonal colors and foliage/snow altered.",
+      "outputHint": "Generated images are saved to C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39 as C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39\\exec-bfe0c386-696d-460f-b475-f797f8a58a11.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "selectedFrame": {
+        "x": 0,
+        "y": 64,
+        "width": 1977,
+        "height": 374
+      },
+      "used": "Opaque far panorama only; retain existing near meadow/buildings/road artwork. Deterministic atlas extraction drops unused bottom band and upper transparent margin."
+    }
+  ]
+}
+

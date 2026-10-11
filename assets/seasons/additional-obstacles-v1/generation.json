@@ -1,0 +1,54 @@
+{
+  "date": "2026-10-10",
+  "mode": "built-in image_gen",
+  "styleReference": "assets/seasons/generated-v1/spring-obstacles.png",
+  "selected": [
+    {
+      "file": "atlas.png",
+      "source": "C:/Users/mechrevo/.codex/generated_images/01a11760-9d97-77c1-924c-cefdf4e6c788/exec-f7eb7dff-8bc0-4ad3-a9ba-5cd7130bea3c.png",
+      "prompt": "Use case: stylized-concept.\nAsset type: transparent pixel-art sprite atlas for an existing side scrolling pastoral sheep game.\nInput image 1 is ONLY a style reference: match its rustic pixel-art materials, warm dark brown stepped outlines, chunky readable clusters, side view and lighting. Create NEW objects, never copy the original five.\nPrimary request: A single FOUR ROWS by THREE COLUMNS sprite atlas, 1536x1536, genuinely transparent background. Each equal row is one season, top to bottom SPRING, SUMMER, AUTUMN, WINTER. Each row contains the same three silhouettes and proportions, centered in their own equal cells with generous transparent gutters:\nColumn 1: one WIDE LOW horizontal fallen log, side view, width-to-height ratio 2.67:1, ends cut cleanly, a continuous sturdy solid trunk, subtle moss/flowers spring, lush green summer, orange leaves autumn, snow winter. It sits on its bottom.\nColumn 2: one TALL NARROW tower of three stacked farm crates or hay bundles, width-to-height ratio 0.38:1. Flat broad bases, continuous solid stacked silhouette, spring flower crates, summer fruit crates, autumn hay bundles, winter snow topped crates. No objects off to the sides.\nColumn 3: one narrow VERTICAL hanging hazard, width-to-height ratio 0.7:1. It hangs in midair, nothing on the ground. Spring flowering dangling vine, summer hanging beehive from short vine, autumn hanging pinecones from short vine, winter dangling cluster of icicles from a short frozen vine. Fill most of its bounding box width near its dangerous bottom; no horizontal support beam or support posts. Bottom edge is well defined and not ragged.\nMaintain identical proportional bounding boxes for each column across seasons; each object completely isolated. Include exactly twelve objects, exactly one object in each cell. Front/side view sprites, orthographic, no perspective ground.\nStyle: crisp nearest-neighbor pixel game artwork, no smoothing, no anti-aliasing, no blur, no gradients, bold small-scale silhouettes, limited palette but detailed wood grain. Intended logical sizes: log 64x24, tower 36x94, hanging object 28x40.\nConstraints: true alpha outside the sprites, no checkerboard, no captions, no numbers, no labels, no typography, no grass platforms, no ground strips, no cast shadows, no UI, no scenery, no characters, no extra sprites.",
+      "usage": "Only measured WideLog and HangingVine cutouts are used. Original middle tower column discarded because proportions did not match high-jump geometry."
+    },
+    {
+      "file": "towers-source.png",
+      "source": "C:/Users/mechrevo/.codex/generated_images/01a11760-9d97-77c1-924c-cefdf4e6c788/exec-08833cd9-0974-469f-a8c0-a0d227cdd018.png",
+      "prompt": "Use case: stylized-concept. Asset type: transparent pixel-art sprite atlas for a side scrolling sheep farm game.\nInput image 1 is a style reference ONLY. Match the warm outlined pixel art of its stacked crate/hay towers. Create a NEW horizontal row of exactly FOUR VERY TALL, SLENDER towers, seasons left to right spring, summer, autumn, winter.\nCanvas landscape 1536x1024. Four equal columns, one object per column with clear transparent gutters.\nCRITICAL SILHOUETTE: each tower is THREE NARROW CRATES or hay bundles stacked VERTICALLY. Each complete tower has maximum visible bounding width 220 pixels and visible height 600 pixels, width/height about 0.36. Each individual crate is tall and narrow, around 210 wide and 190 high. Do not use normal wide square crates. Every seasonal tower has the same visible proportions. No leaves or snow protruding far outside the narrow silhouette. Completely solid continuous stack, flat bottom and sufficiently flat top.\nColumn 1 spring: three tall narrow wooden crates, tiny pink blossoms on corners only.\nColumn 2 summer: three tall narrow wooden produce crates, two small red apples confined INSIDE the crate openings.\nColumn 3 autumn: three tall narrow golden hay bales held by brown rope.\nColumn 4 winter: three tall narrow wooden crates with thin snow caps, no exaggerated wide snow edges.\nCrisp nearest-neighbor pixel art, hard stepped edges, dark brown outlines, readable at logical 36x94 pixels. Orthographic side view, no ground perspective.\nTrue alpha background, no text, no labels, no numerals, no grass, no ground, no cast shadows, no extra objects, no blurry edges. Each of the four towers fully visible and isolated, roughly equal top/bottom baselines.",
+      "usage": "Four measured TallStack cutouts, uniform scale and bottom alignment."
+    }
+  ],
+  "formatting": "No screenshot/composite backgrounds. Source alpha bounds measured at >=128; runtime individual cutouts uniformly scaled with nearest-neighbor, alpha snapped at 128. Atlas sources released after creating twelve seasonal textures and three base aliases.",
+  "geometry": {
+    "WideLog": {
+      "width": 64,
+      "height": 24,
+      "hitbox": {
+        "width": 54,
+        "height": 18,
+        "offsetX": 5,
+        "offsetY": 4
+      }
+    },
+    "TallStack": {
+      "width": 36,
+      "height": 94,
+      "hitbox": {
+        "width": 20,
+        "height": 88,
+        "offsetX": 8,
+        "offsetY": 3
+      }
+    },
+    "HangingVine": {
+      "width": 28,
+      "height": 40,
+      "groundOffset": 20,
+      "minimumSpeed": 270,
+      "hitbox": {
+        "width": 18,
+        "height": 36,
+        "offsetX": 5,
+        "offsetY": 2
+      }
+    }
+  }
+}

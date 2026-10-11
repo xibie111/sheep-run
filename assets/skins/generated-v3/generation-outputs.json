@@ -1,0 +1,29 @@
+{
+  "mode": "built-in image_gen",
+  "concept": {
+    "workspace": "assets/skins/generated-v3/theme-concept.png",
+    "original": "exec-1112692e-19f0-469f-a3e9-01c08b9793e5.png"
+  },
+  "skins": [
+    {
+      "id": "peach",
+      "workspace": "assets/skins/generated-v3/peach-source.png",
+      "original": "exec-a6e12620-927f-461d-8b82-34e7872cc655.png"
+    },
+    {
+      "id": "milktea",
+      "workspace": "assets/skins/generated-v3/milktea-source.png",
+      "original": "exec-23c8ac44-7d72-49c1-af67-1f6f2aa85bab.png"
+    },
+    {
+      "id": "cloud",
+      "workspace": "assets/skins/generated-v3/cloud-source.png",
+      "original": "exec-4a50603e-64e2-4231-8e9b-63f3083c79c2.png"
+    },
+    {
+      "id": "bearcap",
+      "workspace": "assets/skins/generated-v3/bearcap-source.png",
+      "original": "exec-6a445610-6cef-4065-b45e-cad5ade97250.png"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+Mode: built-in image_gen
+transparent_background: true
+Master: masters/shield-bubble-source.png
+Runtime: runtime/shield-bubble.png
+Generation prompt:
+ONE production transparent pixel-art protective bubble RING for a cute GBA game. Icy-cyan rounded oval rim with dark-blue outline and two small cream/white pixel shine marks upper-left. The entire large central hole is transparent, no filled disk, no sheep or icon inside. Exact 64x64 logical grid, ring fits58x58 centered, enlarged nearest neighbor. Flat colors, square stepped pixels, no antialias, no blur, no glow, no shadow, no text. Fully transparent exterior and interior.

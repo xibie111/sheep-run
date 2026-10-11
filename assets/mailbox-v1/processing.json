@@ -1,0 +1,37 @@
+{
+  "generator": "built-in image_gen",
+  "source": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39\\exec-373a1108-55c2-40f3-a84d-20706f2c2ba6.png",
+  "masterSHA256": "371cb8be8534c99c113fb009403a8bd22e85e33ac83c07c4879eab7c8d10b628",
+  "sourceSize": [
+    989,
+    1590
+  ],
+  "alphaCrop": [
+    185,
+    169,
+    806,
+    1466
+  ],
+  "cropDetection": "alpha >= 64 removes only near-transparent margin speckles; pixel alpha inside crop is unchanged",
+  "runtimeSize": [
+    28,
+    58
+  ],
+  "uniformRatio": 0.04471858134155744,
+  "contentSize": [
+    28,
+    58
+  ],
+  "resampling": "NEAREST",
+  "alpha": "preserved inside crop, no pixel threshold or background removal",
+  "anchor": "bottom-center",
+  "flagPivot": [
+    16,
+    13
+  ],
+  "envelopeSlot": [
+    4,
+    7
+  ],
+  "stateLayers": "code-native static pixel flag and envelope, shared mailbox base"
+}

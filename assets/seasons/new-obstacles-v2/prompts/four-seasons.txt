@@ -1,0 +1,18 @@
+Use case: stylized-concept.
+Asset type: ONE complete FOUR-SEASON approval sheet of pixel-art obstacles for Sheep Run.
+Input image 1 is the DESIGN reference: the six new obstacles in a 3-by-2 arrangement. Retain these six obstacle identities, but REMOVE every glow and volumetric lighting effect, simplify to flatter colored pixel clusters.
+Input image 2 is the existing game's SEASONAL STYLE reference. Match its warm stepped brown outlines and seasonal color changes.
+Create a new comprehensive atlas with EXACTLY FOUR ROWS and SIX COLUMNS, 24 fully isolated sprites, one object in each evenly spaced cell. Landscape 2048x1536 if possible, generous transparent gutters. Entire image background is genuinely alpha=0 transparent, no colored glows or shadows outside the crisp outlined objects, no blur, no haze, no fake checkerboard. No labels, no letters, no numerals, no text.
+COLUMN ORDER is identical in all four rows:
+1 squat wooden farm BARREL with two dark iron hoops.
+2 ONE upright cream enamel MILK CHURN with lid, two compact handles and small brass heart.
+3 TIPPED WICKER APPLE BASKET with 3 apples touching its opening, all one compact silhouette.
+4 tightly packed THREE STOUT MUSHROOMS with caps and thick short stems.
+5 LOW DENSE BRAMBLE SHRUB with thick brown twigs and a few small embedded berries.
+6 LOW HANGING HORIZONTAL TREE BOUGH with a thick horizontal wooden branch and leaves hanging beneath, no trunk, no posts, no ground.
+Each column must preserve the same side view, footprint, dimensions and silhouette across all four seasons. All ground sprites share a clear bottom baseline within each row. The sixth column floats as a hanging hazard, no attachment to a ground object. Barrel/churn look solid, basket/mushrooms/shrub look low and compact, branch looks horizontally broad enough to duck beneath.
+ROW 1 SPRING: warm honey wood; tiny pink blossoms and fresh light green leaves on barrel/rim of basket, milk churn cream with a tiny pink ribbon, red-pink mushrooms with ivory dots, fresh green bramble with restrained pink blossoms, fresh green branch with a few small pink flowers.
+ROW 2 SUMMER: the same six objects; bright warm wood with just a couple lush green leaves, cream milk churn with muted sage ribbon, fresh red apples, warm red mushrooms, lush medium green bramble with a few red berries, leafy deep-green hanging branch. Do not turn these into new object categories.
+ROW 3 AUTUMN: same six objects; russet brown wood, tiny amber maple leaves tucked close to barrel and basket, milk churn with a small rust-colored ribbon, ripe copper-red apples, russet-orange mushrooms, olive-and-ochre bramble, hanging branch with orange and ochre leaves. No disconnected drifting leaves.
+ROW 4 WINTER: same six objects, same bounding sizes; thin clean white snow caps on barrel and milk-churn lid and basket rim, lightly snow-dusted red apples, red mushroom caps with small white snow caps, dense muted blue-green bramble with snow along top, hanging branch with snowy blue-green leaves and only tiny ice details staying within its outline. No big snow mounds, no detached snowflakes or particles.
+Style: compact readable 2D orthographic side-view game sprites, cute flat hand-placed pixel clusters, deliberate limited palette, strong clean dark-brown stepped outline, few modest highlights, nearest-neighbor hard edges. Avoid 3D volume, shiny rendering, gradients and cast shadows. Keep decorations small so collision silhouettes remain obvious. No existing crates/fences/logs copied from reference 2. No extra sprites, no UI or scenery. Exactly 24 objects: 4 seasonal rows by 6 archetype columns, all aligned consistently.

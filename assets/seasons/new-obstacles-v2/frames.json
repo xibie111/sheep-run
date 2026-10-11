@@ -1,0 +1,154 @@
+{
+  "spring": {
+    "WoodBarrel": {
+      "x": 2,
+      "y": 2,
+      "width": 200,
+      "height": 199
+    },
+    "MilkChurn": {
+      "x": 282,
+      "y": 2,
+      "width": 158,
+      "height": 219
+    },
+    "FruitBasket": {
+      "x": 562,
+      "y": 2,
+      "width": 234,
+      "height": 148
+    },
+    "MushroomCluster": {
+      "x": 842,
+      "y": 2,
+      "width": 201,
+      "height": 147
+    },
+    "Bramble": {
+      "x": 1122,
+      "y": 2,
+      "width": 256,
+      "height": 139
+    },
+    "HangingBranch": {
+      "x": 1402,
+      "y": 2,
+      "width": 273,
+      "height": 148
+    }
+  },
+  "summer": {
+    "WoodBarrel": {
+      "x": 2,
+      "y": 234,
+      "width": 194,
+      "height": 195
+    },
+    "MilkChurn": {
+      "x": 282,
+      "y": 234,
+      "width": 158,
+      "height": 216
+    },
+    "FruitBasket": {
+      "x": 562,
+      "y": 234,
+      "width": 234,
+      "height": 148
+    },
+    "MushroomCluster": {
+      "x": 842,
+      "y": 234,
+      "width": 201,
+      "height": 147
+    },
+    "Bramble": {
+      "x": 1122,
+      "y": 234,
+      "width": 261,
+      "height": 144
+    },
+    "HangingBranch": {
+      "x": 1402,
+      "y": 234,
+      "width": 274,
+      "height": 154
+    }
+  },
+  "autumn": {
+    "WoodBarrel": {
+      "x": 2,
+      "y": 466,
+      "width": 186,
+      "height": 196
+    },
+    "MilkChurn": {
+      "x": 282,
+      "y": 466,
+      "width": 158,
+      "height": 211
+    },
+    "FruitBasket": {
+      "x": 562,
+      "y": 466,
+      "width": 234,
+      "height": 147
+    },
+    "MushroomCluster": {
+      "x": 842,
+      "y": 466,
+      "width": 203,
+      "height": 147
+    },
+    "Bramble": {
+      "x": 1122,
+      "y": 466,
+      "width": 261,
+      "height": 141
+    },
+    "HangingBranch": {
+      "x": 1402,
+      "y": 466,
+      "width": 275,
+      "height": 149
+    }
+  },
+  "winter": {
+    "WoodBarrel": {
+      "x": 2,
+      "y": 698,
+      "width": 196,
+      "height": 206
+    },
+    "MilkChurn": {
+      "x": 282,
+      "y": 698,
+      "width": 158,
+      "height": 220
+    },
+    "FruitBasket": {
+      "x": 562,
+      "y": 698,
+      "width": 235,
+      "height": 155
+    },
+    "MushroomCluster": {
+      "x": 842,
+      "y": 698,
+      "width": 202,
+      "height": 156
+    },
+    "Bramble": {
+      "x": 1122,
+      "y": 698,
+      "width": 262,
+      "height": 137
+    },
+    "HangingBranch": {
+      "x": 1402,
+      "y": 698,
+      "width": 272,
+      "height": 155
+    }
+  }
+}

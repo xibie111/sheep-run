@@ -1,0 +1,6 @@
+Mode: built-in image_gen
+transparent_background: true
+Master: masters/spring-flower-source.png
+Runtime: runtime/spring-flower.png
+Generation prompt:
+ONE collectible pasture badge: a pink five-petal cherry blossom with a yellow heart-shaped center, mounted at the center of a small round warm gold medallion with a thick dark orange rim. Cute original GBA pixel art matching golden star collectibles. Clear silhouette on 32x32 logical grid, badge fits30x30 centered, enlarged nearest-neighbor. Flat limited colors and a small cream highlight. No blur, no glow, no gradients, no antialias, no text, no backdrop, no ribbon, no other icons. Fully transparent background.

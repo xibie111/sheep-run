@@ -1,0 +1,98 @@
+{
+  "date": "2026-10-10",
+  "mode": "built-in image_gen",
+  "intent": "precise-object-edit",
+  "design": "Cream wool sheep with only a muted sleeping cap; no clothing or body decorations.",
+  "referencePaths": [
+    "assets/skins/runtime-v1/white-sheet.png",
+    "assets/skins/generated-v2/sleep-cap-colors.png"
+  ],
+  "conceptPrompt": "Use case: precise-object-edit. Make a color comparison of FOUR cute cream-wool Sheep Run characters wearing ONLY FLOPPY SLEEPING CAPS. Image 1 is the true body/style reference: retain its normal fluffy cream wool, peach face/ears, rounded quadrupedal sheep anatomy and short dark brown hooves. Image 2 references only the four muted sleeping-cap colors; ignore and REMOVE ALL its clothes. No dress, skirt, shirt, jacket, pajamas, collar, ribbon, bow, bell, trousers, cloth sleeves or cuffs anywhere on the sheep body. Entire rounded body must be exposed fluffy cream wool exactly like image 1. The ONLY accessory is a small floppy fabric sleeping cap on its head, with cream brim and a cream pom-pom hanging backward. Four caps left-to-right: misty powder blue, warm oatmeal cream, soft dusty blush pink, pale sage/mint green. No star or moon patterns, no spirals or magic. The four sheep have exactly the same naked cream wool body, dark brown hooves, peach face, cute sleepy but open eyes and same idle right-facing side-view pose; only cap color changes. Flat 2D pastoral pixel art with crisp stepped dark-brown outlines, consistent scale, no 3D volume. One horizontal row of four complete characters with generous transparent separation, TRUE transparent background, no scenery/grid/text/labels/shadows. This is a comparison image, not an animation sheet.",
+  "skins": [
+    {
+      "id": "sleepy-blue",
+      "name": "催眠羊",
+      "cost": 80,
+      "color": "misty powder BLUE, just like the leftmost sheep in image 2; cream collar/cuffs/hem and a slightly darker muted blue bow. Dress and cap have the same soft blue color.",
+      "preview": 14476783,
+      "palette": {
+        "wool": "#f4ebd8",
+        "woolShade": "#c5b4a0",
+        "face": "#eeb081",
+        "hat": "#acbdd3"
+      },
+      "prompt": "Image 1 is the pose/grid reference to EDIT. Image 2 shows the exact final accessory design and muted colors. Generate ONE complete Sheep Run skin animation sheet. Keep the normal cream-wool body exactly like image 1 and the small floppy SLEEPING CAP from image 2. The ONLY accessory is the sleeping cap: NO clothes, pajamas, dress, skirt, shirts, collars, bows, bells, cuffs, pants or fabric on the body. The entire rounded quadrupedal body remains fluffy cream wool; peach face/ears, dark brown hooves, normal cute dark-brown eyes with sleepy idle expression. No stars/moons, spirals, wool markings or floating effects. Cap has cream brim and small cream pom-pom falling backward to shoulder, identical cloth design and small scale in all poses. Color of this one cap: soft muted powder BLUE, matching the FIRST sheep in image 2.\nMatch the existing flat 2D pastoral pixel art with hard stepped dark brown outlines, no 3D volume. Use EXACTLY FIVE COLUMNS by THREE ROWS, 15 separated right-facing side-view sprite poses in identical frame order to image 1. Row 1: idle, run contact, run passing, run extended, run recovery. Row 2: jump tucked legs, falling legs out, hit dizzy compressed, dash extended, lying fallen. Row 3: second idle sleepy smile, two additional distinct running leg poses, second dash, settled lying fallen. Keep the original body, head, leg shapes, grounded feet baseline and pose proportions; cap follows the head in every pose and lies down with the fallen sheep. Same scale in all frames, fallen sheep never enlarge. Every sprite entirely inside its regular grid cell with transparent margin, no touching, no extra items, no ground shadow. TRUE transparent background, no scenery/grid/text/labels. Exactly one 15-sprite sheet, five per row, three rows, preferably 1280x768.",
+      "source": "assets/skins/generated-v2/sleepy-blue-source.png",
+      "runtime": "assets/skins/runtime-v2/sleepy-blue-sheet.png",
+      "generatedOriginal": "exec-29e035cd-f7b4-4fee-9750-58eec9678925.png"
+    },
+    {
+      "id": "sleepy-cream",
+      "name": "月夜羊",
+      "cost": 80,
+      "color": "warm OATMEAL/IVORY CREAM, just like the second sheep in image 2; cream-white collar/cuffs/scalloped hem and a muted dusty mauve bow and very subtle piping. Cap is warm oatmeal cream. No celestial patterns.",
+      "preview": 15656406,
+      "palette": {
+        "wool": "#f4ebd8",
+        "woolShade": "#c5b4a0",
+        "face": "#eeb081",
+        "hat": "#dacbb4"
+      },
+      "prompt": "Image 1 is the pose/grid reference to EDIT. Image 2 shows the exact final accessory design and muted colors. Generate ONE complete Sheep Run skin animation sheet. Keep the normal cream-wool body exactly like image 1 and the small floppy SLEEPING CAP from image 2. The ONLY accessory is the sleeping cap: NO clothes, pajamas, dress, skirt, shirts, collars, bows, bells, cuffs, pants or fabric on the body. The entire rounded quadrupedal body remains fluffy cream wool; peach face/ears, dark brown hooves, normal cute dark-brown eyes with sleepy idle expression. No stars/moons, spirals, wool markings or floating effects. Cap has cream brim and small cream pom-pom falling backward to shoulder, identical cloth design and small scale in all poses. Color of this one cap: warm OATMEAL CREAM, matching the SECOND sheep in image 2.\nMatch the existing flat 2D pastoral pixel art with hard stepped dark brown outlines, no 3D volume. Use EXACTLY FIVE COLUMNS by THREE ROWS, 15 separated right-facing side-view sprite poses in identical frame order to image 1. Row 1: idle, run contact, run passing, run extended, run recovery. Row 2: jump tucked legs, falling legs out, hit dizzy compressed, dash extended, lying fallen. Row 3: second idle sleepy smile, two additional distinct running leg poses, second dash, settled lying fallen. Keep the original body, head, leg shapes, grounded feet baseline and pose proportions; cap follows the head in every pose and lies down with the fallen sheep. Same scale in all frames, fallen sheep never enlarge. Every sprite entirely inside its regular grid cell with transparent margin, no touching, no extra items, no ground shadow. TRUE transparent background, no scenery/grid/text/labels. Exactly one 15-sprite sheet, five per row, three rows, preferably 1280x768.",
+      "source": "assets/skins/generated-v2/sleepy-cream-source.png",
+      "runtime": "assets/skins/runtime-v2/sleepy-cream-sheet.png",
+      "generatedOriginal": "exec-7ff21e4c-fe1b-4ff9-98d8-ac6509991800.png"
+    },
+    {
+      "id": "sleepy-pink",
+      "name": "柔粉睡羊",
+      "cost": 80,
+      "color": "soft DUSTY BLUSH PINK, just like the third sheep in image 2; cream collar/cuffs/scalloped hem and a muted dusty rose bow. Cap is the same soft pink. Avoid hot pink.",
+      "preview": 15719644,
+      "palette": {
+        "wool": "#f4ebd8",
+        "woolShade": "#c5b4a0",
+        "face": "#eeb081",
+        "hat": "#d7afa9"
+      },
+      "prompt": "Image 1 is the pose/grid reference to EDIT. Image 2 shows the exact final accessory design and muted colors. Generate ONE complete Sheep Run skin animation sheet. Keep the normal cream-wool body exactly like image 1 and the small floppy SLEEPING CAP from image 2. The ONLY accessory is the sleeping cap: NO clothes, pajamas, dress, skirt, shirts, collars, bows, bells, cuffs, pants or fabric on the body. The entire rounded quadrupedal body remains fluffy cream wool; peach face/ears, dark brown hooves, normal cute dark-brown eyes with sleepy idle expression. No stars/moons, spirals, wool markings or floating effects. Cap has cream brim and small cream pom-pom falling backward to shoulder, identical cloth design and small scale in all poses. Color of this one cap: soft muted dusty BLUSH PINK, matching the THIRD sheep in image 2.\nMatch the existing flat 2D pastoral pixel art with hard stepped dark brown outlines, no 3D volume. Use EXACTLY FIVE COLUMNS by THREE ROWS, 15 separated right-facing side-view sprite poses in identical frame order to image 1. Row 1: idle, run contact, run passing, run extended, run recovery. Row 2: jump tucked legs, falling legs out, hit dizzy compressed, dash extended, lying fallen. Row 3: second idle sleepy smile, two additional distinct running leg poses, second dash, settled lying fallen. Keep the original body, head, leg shapes, grounded feet baseline and pose proportions; cap follows the head in every pose and lies down with the fallen sheep. Same scale in all frames, fallen sheep never enlarge. Every sprite entirely inside its regular grid cell with transparent margin, no touching, no extra items, no ground shadow. TRUE transparent background, no scenery/grid/text/labels. Exactly one 15-sprite sheet, five per row, three rows, preferably 1280x768.",
+      "source": "assets/skins/generated-v2/sleepy-pink-source.png",
+      "runtime": "assets/skins/runtime-v2/sleepy-pink-sheet.png",
+      "generatedOriginal": "exec-88d04c8d-c0fc-4e76-a987-d1ddc05ee2cf.png"
+    },
+    {
+      "id": "sleepy-mint",
+      "name": "薄荷睡羊",
+      "cost": 80,
+      "color": "pale SAGE/MINT GREEN, just like the fourth sheep in image 2; cream collar/cuffs/scalloped hem and a muted sage bow. Cap is the same pale soft sage. Avoid lime green.",
+      "preview": 14674139,
+      "palette": {
+        "wool": "#f4ebd8",
+        "woolShade": "#c5b4a0",
+        "face": "#eeb081",
+        "hat": "#afc1ad"
+      },
+      "prompt": "Image 1 is the pose/grid reference to EDIT. Image 2 shows the exact final accessory design and muted colors. Generate ONE complete Sheep Run skin animation sheet. Keep the normal cream-wool body exactly like image 1 and the small floppy SLEEPING CAP from image 2. The ONLY accessory is the sleeping cap: NO clothes, pajamas, dress, skirt, shirts, collars, bows, bells, cuffs, pants or fabric on the body. The entire rounded quadrupedal body remains fluffy cream wool; peach face/ears, dark brown hooves, normal cute dark-brown eyes with sleepy idle expression. No stars/moons, spirals, wool markings or floating effects. Cap has cream brim and small cream pom-pom falling backward to shoulder, identical cloth design and small scale in all poses. Color of this one cap: pale muted SAGE/MINT GREEN, matching the FOURTH sheep in image 2.\nMatch the existing flat 2D pastoral pixel art with hard stepped dark brown outlines, no 3D volume. Use EXACTLY FIVE COLUMNS by THREE ROWS, 15 separated right-facing side-view sprite poses in identical frame order to image 1. Row 1: idle, run contact, run passing, run extended, run recovery. Row 2: jump tucked legs, falling legs out, hit dizzy compressed, dash extended, lying fallen. Row 3: second idle sleepy smile, two additional distinct running leg poses, second dash, settled lying fallen. Keep the original body, head, leg shapes, grounded feet baseline and pose proportions; cap follows the head in every pose and lies down with the fallen sheep. Same scale in all frames, fallen sheep never enlarge. Every sprite entirely inside its regular grid cell with transparent margin, no touching, no extra items, no ground shadow. TRUE transparent background, no scenery/grid/text/labels. Exactly one 15-sprite sheet, five per row, three rows, preferably 1280x768.",
+      "source": "assets/skins/generated-v2/sleepy-mint-source.png",
+      "runtime": "assets/skins/runtime-v2/sleepy-mint-sheet.png",
+      "generatedOriginal": "exec-f80a3372-f22e-415d-90ba-ffb525a1c26a.png"
+    }
+  ],
+  "additionalSkins": [
+    {
+      "id": "dream",
+      "name": "梦境羊",
+      "cost": 100,
+      "preview": 15392754,
+      "palette": {
+        "wool": "#dcc7ef",
+        "woolShade": "#b599c8",
+        "face": "#eeb081"
+      },
+      "source": "assets/skins/generated-v2/dream-source.png",
+      "runtime": "assets/skins/runtime-v2/dream-sheet.png",
+      "generatedOriginal": "exec-f9e88933-ba92-4274-b03a-a9b9baaa6d6f.png",
+      "prompt": "Edit the supplied Sheep Run sprite sheet into ONE new cosmetic skin: a soft rainbow-dream sheep. Keep exactly the same 5 columns by 3 rows, 15 separated sprites, frame order, right-facing side-view proportions, pose silhouettes, feet positions and expressive animation of the reference. Crisp flat 2D pastoral pixel art, hard stepped dark brown outlines, no 3D lighting. Design: fluffy cream wool arranged into a few LARGE readable pastel pink, lavender, baby blue and mint tufts creating a soft rainbow across its back; peach face and ears, small teal collar with a tiny gold bell, lilac curled forelock like a little cloud, dark brown eyes with a subtle teal accent. Clear shapes readable at 48x42 game size. All poses show exactly the same colors, rainbow order, collar, bell, forelock and face. Row 1: idle, run contact, run passing, run extended, run recovery. Row 2: jump tucked legs, falling legs out, hit dizzy compressed, dash extended, lying dead. Row 3: second idle, two different additional running frames, second dash, settled lying dead. No wings, horns, balloons, background rainbow, floating clouds or particle effects. Same scale across all poses; lying sheep never grow larger. Every sprite stays inside its regular grid cell with transparent padding. True transparent background. No grid, text, labels, shadows or scenery. Output exactly one sheet, preferably 1280x768, all sprites fully visible."
+    }
+  ]
+}

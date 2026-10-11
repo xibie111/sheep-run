@@ -1,0 +1,6 @@
+Mode: built-in image_gen
+transparent_background: true
+Master: masters/shield-source.png
+Runtime: runtime/shield.png
+Generation prompt:
+Create a single original sky-blue shield power-up sprite for a cute pixel game. Gold/orange border, cyan flat center, tiny cream upper-left shine, rounded top and a lower shield point. Crisp GBA-style square pixels, 24x24 logical pixel grid enlarged nearest-neighbor. No text, no blur, no gradient, no antialias, no faces. Standalone centered 22x22-pixel shield with transparent padding and a fully transparent background.
