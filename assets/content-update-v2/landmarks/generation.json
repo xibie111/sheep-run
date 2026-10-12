@@ -1,0 +1,16 @@
+{
+  "generator": "built-in image_gen",
+  "generatedDate": "2026-10-12",
+  "kind": "new transparent pixel-art landmarks, no text",
+  "references": [
+    { "path": "assets/seasons/generated-v1/spring-near.png", "role": "style and materials reference" },
+    { "path": "assets/seasons/seamless-v3/spring-far.png", "role": "landscape palette reference" },
+    { "path": "assets/skins/generated-v1/white-source.png", "role": "viewed character reference; no characters in these assets" }
+  ],
+  "assets": [
+    { "source": "sources/windmill-v1.png", "prompt": "prompts/windmill-v1.txt", "runtime": "runtime/windmill.png", "generationId": "exec-539ad510-c9d6-44ac-91f1-3329481d6832" },
+    { "source": "sources/barn-v1.png", "prompt": "prompts/barn-v1.txt", "runtime": "runtime/barn.png", "generationId": "exec-92e806ca-c479-429d-a5f2-84038b194d38" },
+    { "source": "sources/bridge-v1.png", "prompt": "prompts/bridge-v1.txt", "runtime": "runtime/bridge.png", "generationId": "exec-d4d3b128-5148-45d9-bf79-4831b5b1cf9d" }
+  ],
+  "processing": "Run python tools/content-v2/landmarks-pack.py; see processing.json. Generated sources retained unmodified."
+}

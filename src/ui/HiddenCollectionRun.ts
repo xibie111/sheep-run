@@ -3,7 +3,7 @@ import type { Sheep } from "../entities/Sheep";
 import { CollectionSchedule, COLLECTION_SEASON_NAMES, type CollectionBadge } from "../data/pastureCollections";
 import { collectionStore } from "../systems/CollectionStore";
 import { journeyStore } from "../systems/JourneyStore";
-import { collectionRewards } from "../data/journeyBook";
+import { collectionRewards, type AchievementId } from "../data/journeyBook";
 import { WORLD } from "../game/Constants";
 import { runViewportRight, viewportSizeFromScale } from "../game/Viewport";
 import { createDisplayOverlay } from "./DisplayOverlay";
@@ -21,7 +21,9 @@ export class HiddenCollectionRun {
   private phase=0;
   private readonly unlocked=new Set(collectionStore.load().ids);
   private readonly surface:ReturnType<typeof createDisplayOverlay>;
-  constructor(private readonly scene:Phaser.Scene,private readonly sheep:Sheep,private readonly feedback:RunFeedback){
+  constructor(private readonly scene:Phaser.Scene,private readonly sheep:Sheep,private readonly feedback:RunFeedback,
+    private readonly onAchievements:(ids:AchievementId[])=>void=()=>{},
+    private readonly onCollected:(id:string)=>void=()=>{}){
     this.image=scene.add.image(0,0,"collection-spring-flower").setDisplaySize(23,23).setDepth(7).setVisible(false).setName("hidden-collection");
     const text=displayCanvasText(scene,"#fff5d6"),outline=displayCanvasText(scene,"#4a382f");
     this.surface=createDisplayOverlay(scene,"collection-toast",ctx=>{
@@ -51,11 +53,12 @@ export class HiddenCollectionRun {
     if(body.enable&&body.x<x+9&&body.right>x-9&&body.y<y+9&&body.bottom>y-9){
       const previousRewards=collectionRewards([...this.unlocked]);
       const result=collectionStore.unlock(this.badge.id);
+      if(result.added)this.onCollected(this.badge.id);
       this.unlocked.add(this.badge.id);
       this.feedback.collect(x,y);
       this.message=result.saved?`发现 ${this.badge.name} · 收藏册点亮了`:`发现 ${this.badge.name} · 暂未保存`;
       const ids=collectionStore.load().ids,newRewards=collectionRewards(ids).filter(id=>!previousRewards.includes(id));
-      journeyStore.reconcile([],ids);
+      this.onAchievements(journeyStore.reconcile([],ids));
       if(result.added&&newRewards.length)this.message=result.saved
         ?newRewards.includes("all")?"四季收藏完成，完整来信已送达。":`${COLLECTION_SEASON_NAMES[this.badge.season]}收藏完成，来信已送达。`
         :"收藏完成 · 暂未保存，请稍后再试";

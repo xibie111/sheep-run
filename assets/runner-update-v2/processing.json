@@ -1,0 +1,236 @@
+{
+  "tool": "tools/pack-runner-update-v2.py",
+  "artworkMode": "Built-in image_gen; originals/prompts saved separately",
+  "resampling": "NEAREST",
+  "visibleAlphaThreshold": 16,
+  "sourceCropMarginPx": 1,
+  "panelMaxWidth": 232,
+  "iconTile": [
+    32,
+    32
+  ],
+  "iconContentMaxEdge": 28,
+  "alpha": "Sampled original RGBA retained. No color key, recolouring, alpha replacement or drawing on artwork.",
+  "entries": [
+    {
+      "id": "goal-panel",
+      "source": "sources/goal-panel.png",
+      "sourceSize": [
+        2172,
+        724
+      ],
+      "sourceSha256": "3bdc91eb859fef7bdb86eb3abc4497b6f22d5420a6c1b5fd61b17d64f1105f0a",
+      "sourceAlphaExtrema": [
+        0,
+        255
+      ],
+      "visibleBounds": [
+        251,
+        240,
+        1921,
+        484
+      ],
+      "crop": [
+        250,
+        239,
+        1922,
+        485
+      ],
+      "contentSize": [
+        232,
+        34
+      ],
+      "position": [
+        0,
+        0
+      ],
+      "runtime": "runtime/goal-panel.png",
+      "runtimeSize": [
+        232,
+        34
+      ],
+      "runtimeSha256": "f0f937becf51bfcf3c883b6c282d7a7151cb655c583446480131b7fc39636af5",
+      "runtimeAlphaExtrema": [
+        0,
+        255
+      ],
+      "note": "Original generated RGBA retained"
+    },
+    {
+      "id": "goal-stamp",
+      "source": "sources/goal-stamp.png",
+      "sourceSize": [
+        1295,
+        1214
+      ],
+      "sourceSha256": "0cd74e18c89fe77f2d19888cabc0c0f450428b7d703911399d8a43260a975267",
+      "sourceAlphaExtrema": [
+        0,
+        255
+      ],
+      "visibleBounds": [
+        294,
+        248,
+        1000,
+        958
+      ],
+      "crop": [
+        293,
+        247,
+        1001,
+        959
+      ],
+      "contentSize": [
+        28,
+        28
+      ],
+      "position": [
+        2,
+        2
+      ],
+      "runtime": "runtime/goal-stamp.png",
+      "runtimeSize": [
+        32,
+        32
+      ],
+      "runtimeSha256": "5dc711b6671cb6a48ae651252d24b5da085db93a5821e63fb532d0156e0f37a0",
+      "runtimeAlphaExtrema": [
+        0,
+        255
+      ],
+      "note": "Original generated RGBA retained"
+    },
+    {
+      "id": "response-star",
+      "source": "sources/response-star.png",
+      "sourceSize": [
+        1302,
+        1208
+      ],
+      "sourceSha256": "d56c2c8ab35e11ccfbcf03f093486baf86d02f489a75211a80526e5625af08c3",
+      "sourceAlphaExtrema": [
+        0,
+        255
+      ],
+      "visibleBounds": [
+        390,
+        366,
+        912,
+        859
+      ],
+      "crop": [
+        389,
+        365,
+        913,
+        860
+      ],
+      "contentSize": [
+        28,
+        26
+      ],
+      "position": [
+        2,
+        3
+      ],
+      "runtime": "runtime/response-star.png",
+      "runtimeSize": [
+        32,
+        32
+      ],
+      "runtimeSha256": "506a76b085ed1df7757b0626223f5921b30872f014ca2da5268a4d137061e9d1",
+      "runtimeAlphaExtrema": [
+        0,
+        255
+      ],
+      "note": "Original generated RGBA retained"
+    },
+    {
+      "id": "response-crown",
+      "source": "sources/response-crown.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "sourceSha256": "b2b432bf08d3cb37aaa62c9c68fa95e0508f3cfa74fdf7146fb14e7e3096480f",
+      "sourceAlphaExtrema": [
+        0,
+        254
+      ],
+      "visibleBounds": [
+        532,
+        352,
+        1005,
+        676
+      ],
+      "crop": [
+        531,
+        351,
+        1006,
+        677
+      ],
+      "contentSize": [
+        28,
+        19
+      ],
+      "position": [
+        2,
+        6
+      ],
+      "runtime": "runtime/response-crown.png",
+      "runtimeSize": [
+        32,
+        32
+      ],
+      "runtimeSha256": "0d671839a5a0f5c3161aa59f12a21acf743c495df2cda78e1212f65ef5129503",
+      "runtimeAlphaExtrema": [
+        0,
+        254
+      ],
+      "note": "Original alpha maximum 254 retained; faint outside glow excluded by framing only"
+    },
+    {
+      "id": "response-heart",
+      "source": "sources/response-heart.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "sourceSha256": "797e3ecd86faaed5cdce1f3fb58d40de76043c61e303e5fccc1ea7a4b7638077",
+      "sourceAlphaExtrema": [
+        0,
+        254
+      ],
+      "visibleBounds": [
+        578,
+        331,
+        957,
+        676
+      ],
+      "crop": [
+        577,
+        330,
+        958,
+        677
+      ],
+      "contentSize": [
+        28,
+        26
+      ],
+      "position": [
+        2,
+        3
+      ],
+      "runtime": "runtime/response-heart.png",
+      "runtimeSize": [
+        32,
+        32
+      ],
+      "runtimeSha256": "d675878c8798bf026332f3d58974551237898b2d92afd28510b550a90d83f474",
+      "runtimeAlphaExtrema": [
+        0,
+        254
+      ],
+      "note": "Original alpha maximum 254 retained; faint outside glow excluded by framing only"
+    }
+  ]
+}

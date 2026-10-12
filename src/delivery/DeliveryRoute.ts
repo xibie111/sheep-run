@@ -1,47 +1,37 @@
 import { RUN } from '../game/Constants';
-import { WoodFence, Pumpkin, Rock, WideLog, MushroomCluster, HangingBranch, Bramble, TallStack, type ObstacleDefinition } from '../game/ObstacleDefinitions';
-
-export const DELIVERY_ID = 'hill-goodnight-v1';
-export const DELIVERY_TITLE = '把晚安送到山坡上';
-export const DELIVERY_LENGTH = 18000;
-export const DELIVERY_SEED = 0x6e696768;
-export type DeliveryPhase = 'pasture' | 'forest' | 'hill' | 'arrival';
-export const DELIVERY_PHASES = [
-  { id: 'pasture', start: 0, label: '牧场出发' },
-  { id: 'forest', start: 5200, label: '林间小路' },
-  { id: 'hill', start: 11700, label: '星空山坡' },
-  { id: 'arrival', start: 16700, label: '即将送达' },
-] as const;
-const plan: readonly (readonly [number, ObstacleDefinition])[] = [
-  [600, Rock], [1900, Pumpkin], [3200, WoodFence], [4450, Rock],
-  [5650, MushroomCluster], [6500, WideLog], [7350, HangingBranch],
-  [8450, Bramble], [9300, MushroomCluster], [10400, TallStack],
-  [11900, Rock], [13100, HangingBranch], [14300, WideLog], [15400, Pumpkin],
-];
-// Authored distances and a route-only seed never draw from the endless spawner.
-export const DELIVERY_OBSTACLES = plan.map(([at, definition], index) => ({
-  at, definition, phase: (((DELIVERY_SEED ^ Math.imul(index + 1, 0x9e3779b9)) >>> 0) / 0x100000000) * Math.PI * 2,
-}));
+import { defaultDeliveryChapter, getDeliveryChapter, type DeliveryChapterId, type DeliveryObstacleRequest } from './DeliveryChapters';
+export { DELIVERY_CHAPTERS, defaultDeliveryChapter, getDeliveryChapter, isDeliveryChapterId, DELIVERY_V2_TEXT } from './DeliveryChapters';
+export type { DeliveryChapter, DeliveryChapterId, DeliveryPhase, DeliveryPhaseDefinition, DeliveryObstacleRequest } from './DeliveryChapters';
+const original = defaultDeliveryChapter();
+export const DELIVERY_ID = original.id;
+export const DELIVERY_TITLE = original.title;
+export const DELIVERY_LENGTH = original.length;
+export const DELIVERY_SEED = original.seed;
+export const DELIVERY_PHASES = original.phases;
+export const DELIVERY_OBSTACLES = original.obstacles;
 
 export class DeliveryRoute {
+  readonly chapter;
   distance = 0;
   endingMs = 0;
   state: 'running' | 'ending' | 'complete' | 'failed' = 'running';
   private next = 0;
-  get phase() { return [...DELIVERY_PHASES].reverse().find(phase => this.distance >= phase.start)!; }
-  advance(deltaMs: number, speed: number) {
+  constructor(chapterId: DeliveryChapterId | string = DELIVERY_ID) { this.chapter = getDeliveryChapter(chapterId) ?? defaultDeliveryChapter(); }
+  get phase() { return [...this.chapter.phases].reverse().find(phase => this.distance >= phase.start)!; }
+  advance(deltaMs: number, speed: number): DeliveryObstacleRequest[] {
     const delta = Number.isFinite(deltaMs) ? Math.max(0, Math.min(deltaMs, RUN.simulationDeltaCapMs)) : 0;
     if (this.state === 'ending') {
-      this.endingMs = Math.min(4200, this.endingMs + delta);
-      if (this.endingMs >= 4200) this.state = 'complete';
+      this.endingMs = Math.min(this.chapter.endingDurationMs, this.endingMs + delta);
+      if (this.endingMs >= this.chapter.endingDurationMs) this.state = 'complete';
       return [];
     }
     if (this.state !== 'running' || !Number.isFinite(speed) || speed <= 0) return [];
-    this.distance = Math.min(DELIVERY_LENGTH, this.distance + speed * delta / 1000);
-    const requests: typeof DELIVERY_OBSTACLES = [];
-    while (this.next < DELIVERY_OBSTACLES.length && DELIVERY_OBSTACLES[this.next].at <= this.distance) requests.push(DELIVERY_OBSTACLES[this.next++]);
-    if (this.distance >= DELIVERY_LENGTH) this.state = 'ending';
+    this.distance = Math.min(this.chapter.length, this.distance + speed * delta / 1000);
+    const requests: DeliveryObstacleRequest[] = [];
+    while (this.next < this.chapter.obstacles.length && this.chapter.obstacles[this.next].at <= this.distance) requests.push(this.chapter.obstacles[this.next++]);
+    if (this.distance >= this.chapter.length) this.state = 'ending';
     return requests;
   }
   fail() { if (this.state === 'running') this.state = 'failed'; }
 }
+export function createDeliveryRoute(chapterId?: DeliveryChapterId | string): DeliveryRoute { return new DeliveryRoute(chapterId); }

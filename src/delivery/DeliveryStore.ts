@@ -1,4 +1,4 @@
-import { DELIVERY_ID } from './DeliveryRoute';
+import { isDeliveryChapterId } from './DeliveryChapters';
 export const DELIVERY_STORAGE_KEY = 'sheep-run-delivery-v1';
 type Port = Pick<Storage, 'getItem' | 'setItem'>;
 
@@ -19,7 +19,7 @@ export class DeliveryStore {
   }
   load() { const { ids, port } = this.read(); return { completedIds: [...new Set([...ids, ...this.session])], saveFailed: this.dirty || !port }; }
   complete(id: string) {
-    if (id !== DELIVERY_ID) return { added: false, saved: false };
+    if (!isDeliveryChapterId(id)) return { added: false, saved: false };
     const { ids, port } = this.read(), added = !ids.includes(id) && !this.session.has(id);
     this.session.add(id);
     if (!added && !this.dirty && port) return { added, saved: true };

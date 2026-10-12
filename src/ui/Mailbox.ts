@@ -13,11 +13,12 @@ import { MailReader } from "./MailReader";
 import { mailLayout } from "./MailLayout";
 import { acquireMenuModal, menuModalOwner, MENU_MODAL_CHANGE } from "./MenuModal";
 import { createDeliveryPanel } from '../delivery/DeliveryPanel';
-import { DELIVERY_ID } from '../delivery/DeliveryRoute';
+import { DELIVERY_ID, type DeliveryChapterId } from '../delivery/DeliveryRoute';
+import { validateDeliveryV2Textures } from '../delivery/DeliveryV2Assets';
 import { SCENE } from '../game/Constants';
 
 /** A small pasture prop and a touch-only reader on the existing display surface. */
-export function attachMailbox(scene: Phaser.Scene, initiallyOpen = false): void {
+export function attachMailbox(scene: Phaser.Scene, initiallyOpen = false, options: { onDeliveryStart?: (chapterId: DeliveryChapterId) => void } = {}): void {
   if (!scene.game.canvas?.parentElement || !scene.game.events) return;
   const text = displayCanvasText(scene), muted = displayCanvasText(scene, "#8a725e");
   const reader = new MailReader(MAIL_LETTERS, mailReadStore);
@@ -31,7 +32,10 @@ export function attachMailbox(scene: Phaser.Scene, initiallyOpen = false): void 
   const prev = target("mailbox-prev", 242), next = target("mailbox-next", 242), keep = target("mailbox-keep", 242);
   const letters = MAIL_LETTERS.map(letter => target(`mailbox-letter:${letter.id}`, 242));
   const delivery = target('mailbox-delivery', 242);
-  const trip = createDeliveryPanel(scene, { start: () => scene.scene.start(SCENE.run, { deliveryId: DELIVERY_ID }) }, true);
+  const trip = createDeliveryPanel(scene, { start: id => {
+    if (options.onDeliveryStart) options.onDeliveryStart(id);
+    else scene.scene.start(SCENE.run, { deliveryId: id ?? DELIVERY_ID });
+  } }, true);
   const modal = [blocker, close, back, prev, next, keep, delivery, ...letters];
   const sound = () => { const audio = scene.registry.get("audioSystem") as AudioSystem | undefined; audio?.initializeAfterGesture(); audio?.play("button"); };
   const place = (object: Phaser.GameObjects.Container, box: ArtRect) => {
@@ -149,7 +153,7 @@ export function attachMailbox(scene: Phaser.Scene, initiallyOpen = false): void 
     release = lease; open = true; reader.back(); sound(); changed();
   };
   bindTouchTarget(scene, entry, 44, 66, showMailbox, feedback(entry.name));
-  bindTouchTarget(scene, delivery, 1, 1, () => { sound(); trip.show('brief'); }, feedback(delivery.name));
+  bindTouchTarget(scene, delivery, 1, 1, () => { sound(); trip.show(validateDeliveryV2Textures(scene).length ? 'brief' : 'select'); }, feedback(delivery.name));
   bindTouchTarget(scene, blocker, 1, 1, () => {}, () => {});
   bindTouchTarget(scene, close, 144, 32, () => { open = false; reader.back(); release?.(); release = undefined; sound(); changed(); }, feedback(close.name));
   letters.forEach((object, i) => bindTouchTarget(scene, object, 1, 1, () => { if (reader.open(MAIL_LETTERS[i].id)) { sound(); changed(); } }, feedback(object.name)));

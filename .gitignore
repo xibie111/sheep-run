@@ -2,6 +2,7 @@
 /node_modules/
 /dist/
 /builds/
+/releases/
 /coverage/
 *.tsbuildinfo
 

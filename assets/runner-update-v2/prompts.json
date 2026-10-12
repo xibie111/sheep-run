@@ -1,0 +1,43 @@
+{
+  "reference": {
+    "prompt": "Use case: ui-mockup. Asset type: reference only for touch pixel farm runner UI, not a runtime background. Input image: style and layout reference for the existing game. Create a landscape gameplay screen reference matching the flat two-dimensional warm pixel pasture, cocoa outlines, cream wood UI and sheep proportions. Preserve top-left score plaque, top-right best-score plaque, central top pause button, central stars count, road and lead sheep position. Add ONLY a small wide cream parchment objective strip directly underneath the top-right best-score plaque, about 116 by22 in a480 by270 layout, empty text area with a tiny golden completed stamp on its left. Show a small three-star arc in a clear road gap. Show a companion sheep85% of lead size behind/left of the lead with a tiny pink heart response above its head. Warm spring grass and layered mountains. Flat pixel art, no extra volume. No Chinese, no letters, no numbers, no pseudo-text, no watermark. This is a visual UI layout reference; actual titles and dynamic values are drawn by game fonts.",
+    "original": "C:/Users/mechrevo/.codex/generated_images/01a11bdb-d0cb-7f30-aa81-e08acb61df39/exec-cf4c1acf-1be7-46b8-9b88-2db07ad920a5.png"
+  },
+  "assets": [
+    {
+      "id": "goal-panel",
+      "prompt": "Use case: stylized-concept. Production asset for a flat 2D mobile pixel farm runner. Reference image is style/layout reference only. Warm cream, cocoa brown outline, limited pastel palette, crisp coarse pixel edges, no 3D volume, no blur. True transparent background. No words, letters, numbers, pseudo-text or watermark. A single isolated complete object, centered with transparent margin. A very small wide horizontal parchment strip, roughly 5.3:1 width to height. Cream paper, thin cocoa pixel border, few warm-gold corner pixels, subtly irregular short ends. Large completely blank flat cream interior for dynamically rendered text, no icons or stamp. Flat minimal frame appropriate below a farm scoreboard.",
+      "reference": "C:/Users/mechrevo/.codex/generated_images/01a11bdb-d0cb-7f30-aa81-e08acb61df39/exec-cf4c1acf-1be7-46b8-9b88-2db07ad920a5.png",
+      "transparent_background": true,
+      "output_hint": "Generated images are saved to C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39 as C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39\\exec-6c5ef3d8-13c8-49d7-8462-cae244b8f6f8.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "id": "goal-stamp",
+      "prompt": "Use case: stylized-concept. Production asset for a flat 2D mobile pixel farm runner. Reference image is style/layout reference only. Warm cream, cocoa brown outline, limited pastel palette, crisp coarse pixel edges, no 3D volume, no blur. True transparent background. No words, letters, numbers, pseudo-text or watermark. A single isolated complete object, centered with transparent margin. One tiny warm golden achievement wax/paper seal, scalloped circular rim and a simple dark cocoa checkmark in its center. Clean simple silhouette readable at16pixels. A little golden highlight, no ribbon, no writing.",
+      "reference": "C:/Users/mechrevo/.codex/generated_images/01a11bdb-d0cb-7f30-aa81-e08acb61df39/exec-cf4c1acf-1be7-46b8-9b88-2db07ad920a5.png",
+      "transparent_background": true,
+      "output_hint": "Generated images are saved to C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39 as C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39\\exec-4c1c2ce7-8227-4064-a51e-6ab95c4690d6.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "id": "response-star",
+      "prompt": "Use case: stylized-concept. Production asset for a flat 2D mobile pixel farm runner. Reference image is style/layout reference only. Warm cream, cocoa brown outline, limited pastel palette, crisp coarse pixel edges, no 3D volume, no blur. True transparent background. No words, letters, numbers, pseudo-text or watermark. A single isolated complete object, centered with transparent margin. One tiny five-point happy golden star, simple symmetrical flat shape, clear cocoa outline, cream highlight. No face, no other objects. Readable at16pixels above companion sheep.",
+      "reference": "C:/Users/mechrevo/.codex/generated_images/01a11bdb-d0cb-7f30-aa81-e08acb61df39/exec-cf4c1acf-1be7-46b8-9b88-2db07ad920a5.png",
+      "transparent_background": true,
+      "output_hint": "Generated images are saved to C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39 as C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39\\exec-a5519099-22c6-43eb-83c0-825d832174d6.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "id": "response-crown",
+      "prompt": "Use case: stylized-concept. Production asset for a flat 2D mobile pixel farm runner. Reference image is style/layout reference only. Warm cream, cocoa brown outline, limited pastel palette, crisp coarse pixel edges, no 3D volume, no blur. True transparent background. No words, letters, numbers, pseudo-text or watermark. A single isolated complete object, centered with transparent margin. One tiny three-point golden crown, rounded points, dark cocoa outline, warm yellow fill, a single pale shine and tiny blush jewel. Clean simple silhouette, flat2D. Readable at16pixels above a sheep.",
+      "reference": "C:/Users/mechrevo/.codex/generated_images/01a11bdb-d0cb-7f30-aa81-e08acb61df39/exec-cf4c1acf-1be7-46b8-9b88-2db07ad920a5.png",
+      "transparent_background": true,
+      "output_hint": "Generated images are saved to C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39 as C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39\\exec-63bb061a-55c5-4d7d-bee6-a2af7d814eff.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    },
+    {
+      "id": "response-heart",
+      "prompt": "Use case: stylized-concept. Production asset for a flat 2D mobile pixel farm runner. Reference image is style/layout reference only. Warm cream, cocoa brown outline, limited pastel palette, crisp coarse pixel edges, no 3D volume, no blur. True transparent background. No words, letters, numbers, pseudo-text or watermark. A single isolated complete object, centered with transparent margin. One tiny pink heart, warm blush fill, clear cocoa outline and a couple cream highlight pixels. Simple symmetrical silhouette, no face, no other objects. Readable at16pixels above a sheep.",
+      "reference": "C:/Users/mechrevo/.codex/generated_images/01a11bdb-d0cb-7f30-aa81-e08acb61df39/exec-cf4c1acf-1be7-46b8-9b88-2db07ad920a5.png",
+      "transparent_background": true,
+      "output_hint": "Generated images are saved to C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39 as C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39\\exec-8c1a6222-2f4c-4156-993d-936289263fe8.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link."
+    }
+  ]
+}

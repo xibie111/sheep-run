@@ -22,11 +22,14 @@ import { RUN_STAR_ART } from "../data/collectibleArtAssets";
 import { ADVENTURE_ASSETS } from "../data/adventureArtAssets";
 import { COMPANION_BELL_ART } from "../companions/companionAssets";
 import { JOURNEY_ART_ASSETS } from "../data/journeyArtAssets";
+import { ACHIEVEMENT_ICON_ASSETS } from "../data/achievementIconAssets";
 import { MAILBOX_ASSETS } from "../data/mailboxAssets";
 import { NEW_OBSTACLE_ART, createNewObstacleTextures, newObstacleRuntimeKeys } from "../data/newObstacleArt";
 import { ANIMAL_SOURCE, ANIMAL_TEXTURE, prepareAnimalArt } from "../ambient/animalAssets";
 import { SCENERY_ASSETS } from "../scenery/sceneryAssets";
 import { DELIVERY_ASSETS } from '../delivery/deliveryAssets';
+import { RUNNER_V2_ASSETS } from '../runner-v2/runnerAssets';
+import { CONTENT_V2_ASSETS, prepareContentV2Textures, validateContentV2Textures } from '../content-v2';
 
 export class PreloadScene extends Phaser.Scene {
   private preparationGeneration = 0;
@@ -46,8 +49,11 @@ export class PreloadScene extends Phaser.Scene {
     this.load.image(ANIMAL_SOURCE.key, ANIMAL_SOURCE.url);
     for (const asset of ADVENTURE_ASSETS) if (!this.textures.exists(asset.key)) this.load.image(asset.key, asset.url);
     for (const asset of JOURNEY_ART_ASSETS) if (!this.textures.exists(asset.key)) this.load.image(asset.key, asset.url);
+    for (const asset of ACHIEVEMENT_ICON_ASSETS) if (!this.textures.exists(asset.key)) this.load.image(asset.key, asset.url);
     for (const asset of SCENERY_ASSETS) if (!this.textures.exists(asset.key)) this.load.image(asset.key, asset.url);
     for (const asset of DELIVERY_ASSETS) if (!this.textures.exists(asset.key)) this.load.image(asset.key, asset.url);
+    for (const asset of RUNNER_V2_ASSETS) if (!this.textures.exists(asset.key)) this.load.image(asset.key, asset.url);
+    for (const asset of CONTENT_V2_ASSETS) if (!this.textures.exists(asset.key)) this.load.image(asset.key, asset.url);
     for (const asset of MAILBOX_ASSETS) if (!this.textures.exists(asset.key)) this.load.image(asset.key, asset.url);
     if (!this.textures.exists(RUN_STAR_ART.key)) this.load.image(RUN_STAR_ART.key, RUN_STAR_ART.url);
     if (!this.textures.exists(COMPANION_BELL_ART.key)) this.load.image(COMPANION_BELL_ART.key, COMPANION_BELL_ART.url);
@@ -76,6 +82,7 @@ export class PreloadScene extends Phaser.Scene {
         () => prepareAnimalArt(this),
         () => createResultArtTextures(this), () => registerPauseDialogFrames(this),
         () => createGameplayTextures(this),
+        () => prepareContentV2Textures(this),
       ];
       loadingScreen?.setPreparing(0, steps.length);
       for (let index = 0; index < steps.length; index++) {
@@ -113,8 +120,11 @@ export class PreloadScene extends Phaser.Scene {
     requiredKeys.push(COMPANION_BELL_ART.key);
     requiredKeys.push(...ADVENTURE_ASSETS.map(asset => asset.key));
     requiredKeys.push(...JOURNEY_ART_ASSETS.map(asset => asset.key));
+    requiredKeys.push(...ACHIEVEMENT_ICON_ASSETS.map(asset => asset.key));
     requiredKeys.push(...SCENERY_ASSETS.map(asset => asset.key));
     requiredKeys.push(...DELIVERY_ASSETS.map(asset => asset.key));
+    requiredKeys.push(...RUNNER_V2_ASSETS.map(asset => asset.key));
+    requiredKeys.push(...CONTENT_V2_ASSETS.map(asset => asset.key));
     requiredKeys.push(...MAILBOX_ASSETS.map(asset => asset.key));
     requiredKeys.push(...SEASON_SOURCE_KEYS);
     requiredKeys.push(ADDITIONAL_OBSTACLE_ART.key, ADDITIONAL_TOWER_ART.key);
@@ -124,6 +134,8 @@ export class PreloadScene extends Phaser.Scene {
     for (const key of requiredKeys) {
       if (!this.textures.exists(key)) throw new Error(`Required local UI image failed to load: ${key}`);
     }
+    const invalidContent = validateContentV2Textures(this);
+    if (invalidContent.length) throw new Error(`Invalid content v2 textures: ${invalidContent.join(', ')}`);
   }
 
   private showLocalAssetError(): void {
@@ -161,8 +173,11 @@ export class PreloadScene extends Phaser.Scene {
       COMPANION_BELL_ART.key,
       ...ADVENTURE_ASSETS.map(asset => asset.key),
       ...JOURNEY_ART_ASSETS.map(asset => asset.key),
+      ...ACHIEVEMENT_ICON_ASSETS.map(asset => asset.key),
       ...SCENERY_ASSETS.map(asset => asset.key),
       ...DELIVERY_ASSETS.map(asset => asset.key),
+      ...RUNNER_V2_ASSETS.map(asset => asset.key),
+      ...CONTENT_V2_ASSETS.map(asset => asset.key),
       ...MAILBOX_ASSETS.map(asset => asset.key),
       ...Object.keys(SKIN_SHEET_URLS).map(id => sheepTextureKey(id as SkinId)),
       ...Object.values(DISPLAY_FONTS).map(font => font.key),

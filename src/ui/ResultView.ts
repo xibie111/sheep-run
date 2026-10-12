@@ -7,12 +7,15 @@ import { addDisplayText } from "./DisplayText";
 import { registerDisplayText } from "./DisplayTextLayer";
 import { formatHudNumber } from "./DisplayCanvasText";
 import type { ArtRect } from "./MenuArtLayout";
-import { RESULT_BOXES, resultPlacement } from "./ResultLayout";
+import { RESULT_BOXES, resultPlacement, resultTripEntry } from "./ResultLayout";
 import { addSceneButton } from "./SceneButton";
 import { addUiIcon } from "./UiIcon";
 import { safeUiInsets } from "./UiLayout";
 import { resultWhisper } from "../data/easterEggs";
 import { addRecordCelebration } from "./RecordCelebration";
+import { CONTENT_V2_KEYS, createTripCard } from '../content-v2';
+import { toTripCardInput } from '../runner-v2/TripInput';
+import { AudioSystem } from '../systems/AudioSystem';
 
 /** Center complete bitmap ink, and shrink long values inside their own field. */
 function fitText(text: Phaser.GameObjects.BitmapText, box: ArtRect): Phaser.GameObjects.BitmapText {
@@ -72,5 +75,20 @@ export function addResultView(scene: Phaser.Scene, result: ResultSceneData): Pha
     const placement = resultPlacement(size, safeUiInsets(scene));
     root.setScale(placement.scale).setPosition(placement.x, placement.y);
   });
+  const trip = createTripCard(scene, result.travel ? toTripCardInput(result.travel, result.leadSkin) : {});
+  const entry = addSceneButton(scene, 0, 0, '查看这次旅行', () => {
+    if (!trip.show()) return;
+    const audio = scene.registry.get('audioSystem') as AudioSystem | undefined;
+    audio?.initializeAfterGesture(); audio?.play('button');
+  }, { width: 128, height: 34, font: 'display', fontSize: '12',
+    art: { key: CONTENT_V2_KEYS.tripEntry, width: 480, height: 154 } });
+  // The generated entry already contains a book; reserve its left-hand ink.
+  const words = entry.list[1] as Phaser.GameObjects.BitmapText;
+  words.setX(words.x + 7);
+  watchViewport(scene, size => {
+    const box = resultTripEntry(size, safeUiInsets(scene));
+    entry.setPosition(box.x + box.width / 2, box.y + box.height / 2);
+  });
+  scene.events.once('shutdown', () => trip.destroy());
   return root;
 }

@@ -3,14 +3,26 @@ import { SEASON_ORDER } from "../environment/SeasonProgress";
 import type { ThemeId } from "../environment/types";
 
 export const ACHIEVEMENTS = [
-  {id:"first-run",name:"第一次出发",goal:1,condition:"完成第一局跑酷",message:"出发的这一小步，也值得留下纪念。",icon:"play"},
-  {id:"first-friend",name:"有你陪跑",goal:1,condition:"第一次召唤伙伴",message:"今天的路，有朋友一起走。",icon:"bell"},
-  {id:"five-friends",name:"熟悉的朋友",goal:5,condition:"累计召唤伙伴五次",message:"每次铃声响起，都有熟悉的朋友赶来。",icon:"bell"},
-  {id:"ten-stars",name:"满口袋星光",goal:10,condition:"单局收集十颗星星",message:"把今天的小小星光，好好装进口袋。",icon:"star"},
-  {id:"twenty-obstacles",name:"轻巧的小羊",goal:20,condition:"单局成功越过二十个障碍",message:"一步一跳，路上的难题慢慢留在身后。",icon:"arrow-right"},
-  {id:"first-record",name:"又进步一点",goal:1,condition:"第一次刷新个人最高分",message:"比昨天多走一点，也值得开心。",icon:"check"},
-  {id:"four-seasons",name:"走过四季",goal:4,condition:"跑酷中到达春夏秋冬",message:"春夏秋冬，都想和你一起。",icon:"flower"},
-  {id:"five-skins",name:"今天穿什么",goal:5,condition:"拥有五款小羊皮肤",message:"不管换成什么模样，你都是可爱的小羊。",icon:"shirt"},
+  {id:"first-run",metric:"runs",name:"第一次出发",goal:1,condition:"完成第一局跑酷",message:"出发的这一小步，也值得留下纪念。",icon:"play"},
+  {id:"first-friend",metric:"summons",name:"有你陪跑",goal:1,condition:"第一次召唤伙伴",message:"今天的路，有朋友一起走。",icon:"bell"},
+  {id:"five-friends",metric:"summons",name:"熟悉的朋友",goal:5,condition:"累计召唤伙伴五次",message:"每次铃声响起，都有熟悉的朋友赶来。",icon:"bell"},
+  {id:"ten-stars",metric:"stars",name:"满口袋星光",goal:10,condition:"单局收集十颗星星",message:"把今天的小小星光，好好装进口袋。",icon:"star"},
+  {id:"twenty-obstacles",metric:"obstacles",name:"轻巧的小羊",goal:20,condition:"单局成功越过二十个障碍",message:"一步一跳，路上的难题慢慢留在身后。",icon:"arrow-right"},
+  {id:"first-record",metric:"record",name:"又进步一点",goal:1,condition:"第一次刷新个人最高分",message:"比昨天多走一点，也值得开心。",icon:"check"},
+  {id:"four-seasons",metric:"seasons",name:"走过四季",goal:4,condition:"跑酷中到达春夏秋冬",message:"春夏秋冬，都想和你一起。",icon:"flower"},
+  {id:"five-skins",metric:"skins",name:"今天穿什么",goal:5,condition:"拥有五款小羊皮肤",message:"不管换成什么模样，你都是可爱的小羊。",icon:"shirt"},
+  {id:"five-runs",metric:"runs",name:"常来牧场",goal:5,condition:"累计完成五局跑酷",message:"每次回到牧场，都有小羊在等你。",icon:"play"},
+  {id:"twenty-runs",metric:"runs",name:"牧场老朋友",goal:20,condition:"累计完成二十局跑酷",message:"这条熟悉的小路，已经留下好多你的脚印。",icon:"home"},
+  {id:"twenty-friends",metric:"summons",name:"铃声又响起",goal:20,condition:"累计召唤伙伴二十次",message:"铃声一响，今天也有人陪你一起跑。",icon:"bell"},
+  {id:"twenty-five-stars",metric:"stars",name:"一捧星河",goal:25,condition:"单局收集二十五颗星星",message:"一颗一颗收好，夜空也装进了口袋。",icon:"star"},
+  {id:"fifty-stars",metric:"stars",name:"星光满满",goal:50,condition:"单局收集五十颗星星",message:"满满一口袋星光，都是今天努力的纪念。",icon:"star"},
+  {id:"fifty-obstacles",metric:"obstacles",name:"一路轻盈",goal:50,condition:"单局越过五十个障碍",message:"前面还有风景，身后的难题已走过好多。",icon:"arrow-right"},
+  {id:"ten-skins",metric:"skins",name:"百变小羊",goal:10,condition:"拥有十款小羊皮肤",message:"十种可爱的模样，都想陪你去看牧场。",icon:"shirt"},
+  {id:"spring-collector",metric:"spring",name:"春日收藏家",goal:1,condition:"集齐春季三枚徽章",message:"春天的花和小小心意，都为你收好了。",icon:"flower"},
+  {id:"summer-collector",metric:"summer",name:"夏日收藏家",goal:1,condition:"集齐夏季三枚徽章",message:"把夏天的阳光，留在这页暖暖的手账里。",icon:"flower"},
+  {id:"autumn-collector",metric:"autumn",name:"秋日收藏家",goal:1,condition:"集齐秋季三枚徽章",message:"秋天慢慢走过，三份小纪念都在这里。",icon:"flower"},
+  {id:"winter-collector",metric:"winter",name:"冬日收藏家",goal:1,condition:"集齐冬季三枚徽章",message:"冬夜虽冷，收好的回忆一直暖暖的。",icon:"flower"},
+  {id:"all-collections",metric:"all",name:"四季都陪你",goal:1,condition:"集齐全部十二枚四季徽章",message:"十二枚徽章，记着春夏秋冬一起走过的路。",icon:"flower"},
 ] as const;
 export type AchievementId = typeof ACHIEVEMENTS[number]["id"];
 export type RewardId = ThemeId | "all";

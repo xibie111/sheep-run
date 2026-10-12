@@ -1,0 +1,23 @@
+{
+  "generationTool": "built-in image_gen",
+  "date": "2026-10-12",
+  "uiCompositionReference": "../ui/sources/pages-reference.png",
+  "referenceRoles": {
+    "../../backgrounds/menu-pasture-v1.png": "style and environment",
+    "../../skins/generated-v1/white-source.png": "character identity",
+    "sources/dusk-pasture.png": "chapter palette and road height",
+    "sources/field.png": "chapter palette and environment",
+    "sources/cottage.png": "ending environment",
+    "sources/dinner-ending.png": "lunchbox object design"
+  },
+  "assets": [
+    { "name": "dusk-pasture", "source": "sources/dusk-pasture.png", "prompt": "prompts/dusk-pasture.txt", "runtime": "runtime/dusk-pasture.png", "transparentBackground": false, "originalFilename": "exec-14b86ad0-1ed1-472e-bbd8-aa9639d9a24d.png" },
+    { "name": "field", "source": "sources/field.png", "prompt": "prompts/field.txt", "runtime": "runtime/field.png", "transparentBackground": false, "originalFilename": "exec-e34bd2d9-905d-43db-95ad-1993153b5778.png" },
+    { "name": "cottage", "source": "sources/cottage.png", "prompt": "prompts/cottage.txt", "runtime": "runtime/cottage.png", "transparentBackground": false, "originalFilename": "exec-2dc78d65-8723-4544-9765-895558cc1f53.png" },
+    { "name": "dinner-ending", "source": "sources/dinner-ending.png", "prompt": "prompts/dinner-ending.txt", "runtime": "runtime/dinner-ending.png", "transparentBackground": false, "originalFilename": "exec-7111c653-6bb0-46c8-b105-74bcdc0ce63d.png" },
+    { "name": "lunchbox", "source": "sources/lunchbox.png", "prompt": "prompts/lunchbox.txt", "runtime": "runtime/lunchbox.png", "transparentBackground": true, "originalFilename": "exec-a6adcd5e-ffdd-4bd4-9831-ae97df7e2a42.png" }
+  ],
+  "postcard": { "runtime": "runtime/dinner-postcard.png", "illustration": "runtime/dinner-ending.png", "frame": "shared generated content-v2-chapter-card at runtime" },
+  "processing": "processing.json",
+  "runtimeDependsOnWorkspaceExternalPaths": false
+}

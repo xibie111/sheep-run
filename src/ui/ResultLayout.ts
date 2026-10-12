@@ -17,6 +17,11 @@ export const RESULT_BOXES = {
   home: { x: 255, y: 206, width: 86, height: 32 },
 } as const satisfies Record<string, ArtRect>;
 
+/** Opposite the existing achievement entry, above the result title and actions. */
+export function resultTripEntry(size: ViewportSize, safe: MenuSafeInsets): ArtRect {
+  return { x: size.width - safe.right - 135, y: safe.top + 5, width: 128, height: 34 };
+}
+
 /** Safe-area adjustments move and uniformly scale the UI; never resize the Canvas. */
 export function resultPlacement(size: ViewportSize, safe: MenuSafeInsets): { x: number; y: number; scale: number } {
   const width = Math.max(1, size.width - safe.left - safe.right);

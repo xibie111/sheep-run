@@ -26,4 +26,26 @@ describe('independent delivery postcards', () => {
     expect(store.complete(DELIVERY_ID).saved).toBe(false); expect(store.load().completedIds).toContain(DELIVERY_ID);
     fails = false; expect(store.complete(DELIVERY_ID)).toEqual({ added: false, saved: true }); expect(store.load().saveFailed).toBe(false);
   });
+  it('unlocks the new postcard independently and keeps original and unknown future records on each write', () => {
+    const port = storage(JSON.stringify({ version: 1, completedIds: ['future-route', DELIVERY_ID] })), store = new DeliveryStore(() => port);
+    expect(store.complete('dinner-for-you-v1')).toEqual({ added: true, saved: true });
+    expect(store.complete('dinner-for-you-v1')).toEqual({ added: false, saved: true });
+    expect(new DeliveryStore(() => port).load().completedIds).toEqual(['future-route', DELIVERY_ID, 'dinner-for-you-v1']);
+    expect([...port.values.keys()]).toEqual([DELIVERY_STORAGE_KEY]);
+  });
+  it('keeps both postcards in this session while storage fails, then flushes them without duplicate completion', () => {
+    const port = storage(); let fails = true;
+    const store = new DeliveryStore(() => ({ getItem: port.getItem, setItem: (key, value) => { if (fails) throw Error('quota'); port.setItem(key, value); } }));
+    expect(store.complete('dinner-for-you-v1')).toEqual({ added: true, saved: false });
+    expect(store.complete(DELIVERY_ID)).toEqual({ added: true, saved: false });
+    expect(store.load().completedIds).toEqual(['dinner-for-you-v1', DELIVERY_ID]);
+    fails = false; expect(store.complete('dinner-for-you-v1')).toEqual({ added: false, saved: true });
+    expect(new DeliveryStore(() => port).load().completedIds).toEqual(['dinner-for-you-v1', DELIVERY_ID]);
+  });
+  it('does not overwrite a future schema when the dinner chapter is completed', () => {
+    const raw = JSON.stringify({ version: 2, completedIds: ['future-route'], futureField: true }), port = storage(raw);
+    const store = new DeliveryStore(() => port);
+    expect(store.complete('dinner-for-you-v1')).toEqual({ added: true, saved: false });
+    expect(port.getItem(DELIVERY_STORAGE_KEY)).toBe(raw); expect(store.load().completedIds).toContain('dinner-for-you-v1');
+  });
 });

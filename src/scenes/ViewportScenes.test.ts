@@ -24,6 +24,11 @@ vi.mock("../ui/PastureUi", () => ({
   addCurrencyBadge: (scene: Harness, x: number, y: number, amount: number) => scene.add.bitmapText(x, y, "font", String(amount), 12),
 }));
 vi.mock("../ui/ViewportBackdrop", () => ({ addTiledPastureBackdrop: (scene: Harness) => scene.add.container(0, 0, []) }));
+// Keep B's real content keys/catalogs; its canvas modal has separate browser and component checks.
+vi.mock('../content-v2', async importOriginal => ({
+  ...await importOriginal<typeof import('../content-v2')>(),
+  createTripCard: vi.fn(() => ({ show: vi.fn(() => true), hide: vi.fn(), destroy: vi.fn() })),
+}));
 
 import { MenuScene } from "./MenuScene";
 import { WardrobeScene } from "./WardrobeScene";
@@ -31,6 +36,7 @@ import { PauseScene } from "./PauseScene";
 import { ResultScene } from "./ResultScene";
 import { SCENE } from "../game/Constants";
 import type { ResultSceneData } from "../game/GameState";
+import { createTripCard } from '../content-v2';
 
 class Events {
   readonly listeners = new Map<string, Set<(...args: any[]) => void>>();
@@ -164,6 +170,7 @@ describe("scene viewport layout", () => {
     }
     scene.events.emit("shutdown");
     expect(scene.scale.listeners.get("resize")?.size).toBe(0);
+    if (SceneClass === ResultScene) expect(vi.mocked(createTripCard).mock.results.at(-1)!.value.destroy).toHaveBeenCalledOnce();
   });
 
   it("covers the entire pause viewport while preserving centered panel dimensions", () => {
@@ -188,6 +195,11 @@ describe("scene viewport layout", () => {
     expect(scene.scene.start).toHaveBeenLastCalledWith(SCENE.run);
     press(named(scene, "button:返回牧场"), true);
     expect(scene.scene.start).toHaveBeenLastCalledWith(SCENE.menu);
+    const trip = vi.mocked(createTripCard).mock.results.at(-1)!.value;
+    const entry = named(scene, 'button:查看这次旅行');
+    press(entry, false); expect(trip.show).not.toHaveBeenCalled();
+    press(entry, true); expect(trip.show).toHaveBeenCalledOnce();
+    expect(scene.scene.start).toHaveBeenCalledTimes(2);
   });
 
   it("displays existing score, best and earned coins without balance or stars", () => {

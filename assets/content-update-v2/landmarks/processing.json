@@ -1,0 +1,77 @@
+{
+  "tool": "built-in image_gen",
+  "assets": [
+    {
+      "id": "windmill",
+      "sourceSize": [
+        1238,
+        1271
+      ],
+      "crop": [
+        178,
+        60,
+        1137,
+        1224
+      ],
+      "runtimeSize": [
+        124,
+        151
+      ],
+      "logicalScale": 0.5,
+      "alphaThreshold": 200,
+      "resampling": "NEAREST",
+      "runtimeAlphaValues": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "barn",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "crop": [
+        102,
+        171,
+        1470,
+        855
+      ],
+      "runtimeSize": [
+        180,
+        90
+      ],
+      "logicalScale": 0.5,
+      "alphaThreshold": 200,
+      "resampling": "NEAREST",
+      "runtimeAlphaValues": [
+        0,
+        255
+      ]
+    },
+    {
+      "id": "bridge",
+      "sourceSize": [
+        2032,
+        774
+      ],
+      "crop": [
+        84,
+        141,
+        1950,
+        646
+      ],
+      "runtimeSize": [
+        220,
+        60
+      ],
+      "logicalScale": 0.5,
+      "alphaThreshold": 200,
+      "resampling": "NEAREST",
+      "runtimeAlphaValues": [
+        0,
+        255
+      ]
+    }
+  ]
+}

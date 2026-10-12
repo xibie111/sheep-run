@@ -31,8 +31,10 @@ function merge(a:Journal,b:Journal):Journal {
     readAchievements:[...new Set([...a.readAchievements,...b.readAchievements])],readRewards:[...new Set([...a.readRewards,...b.readRewards])]};
 }
 export function achievementProgress(s:JourneySnapshot,id:AchievementId):number {
-  const values:Record<AchievementId,number>={"first-run":s.runs,"first-friend":s.summons,"five-friends":s.summons,"ten-stars":s.stars,"twenty-obstacles":s.obstacles,"first-record":Number(s.record),"four-seasons":s.seasons.length,"five-skins":s.skins};
-  return Math.min(ACHIEVEMENTS.find(a=>a.id===id)!.goal,values[id]);
+  const values:Record<typeof ACHIEVEMENTS[number]["metric"],number>={runs:s.runs,summons:s.summons,stars:s.stars,obstacles:s.obstacles,record:Number(s.record),seasons:s.seasons.length,skins:s.skins,
+    spring:Number(Boolean(s.rewards.spring)),summer:Number(Boolean(s.rewards.summer)),autumn:Number(Boolean(s.rewards.autumn)),winter:Number(Boolean(s.rewards.winter)),all:Number(Boolean(s.rewards.all))};
+  const achievement=ACHIEVEMENTS.find(a=>a.id===id)!;
+  return Math.min(achievement.goal,values[achievement.metric]);
 }
 /** Cosmetic-only journal. Future/corrupt saves are preserved; unavailable storage keeps a session copy. */
 export class JourneyStore {
@@ -67,6 +69,10 @@ export class JourneyStore {
 }
 export const journeyStore=new JourneyStore();
 
+// Keep per-run observation in step with the catalog, without a second goal list.
+const starGoal=Math.max(...ACHIEVEMENTS.filter(a=>a.metric==="stars").map(a=>a.goal));
+const obstacleGoal=Math.max(...ACHIEVEMENTS.filter(a=>a.metric==="obstacles").map(a=>a.goal));
+
 /** One observer per run; no input, physics, random numbers, rewards or wall-clock timers. */
 export class JourneyRun {
   private done=false;private stars=0;private obstacles=0;private seasonId:ThemeId|undefined;
@@ -75,8 +81,9 @@ export class JourneyRun {
   private record(ids:AchievementId[]):void {ids.forEach(id=>this.unlocked.add(id));if(ids.length)this.notify(ids);}
   visit(id:ThemeId):void {if(this.done||this.seasonId===id)return;this.seasonId=id;this.record(this.store.season(id));}
   summon():void {if(!this.done)this.record(this.store.summoned());}
-  star():void {if(this.done)return;this.stars++;if(this.stars<=10)this.record(this.store.runBest(this.stars,this.obstacles));}
-  passed():void {if(this.done)return;this.obstacles++;if(this.obstacles<=20)this.record(this.store.runBest(this.stars,this.obstacles));}
+  collected(ids:AchievementId[]):void {if(!this.done)this.record(ids);}
+  star():void {if(this.done||this.stars>=starGoal)return;this.stars++;this.record(this.store.runBest(this.stars,this.obstacles));}
+  passed():void {if(this.done||this.obstacles>=obstacleGoal)return;this.obstacles++;this.record(this.store.runBest(this.stars,this.obstacles));}
   finish(newRecord:boolean):AchievementId[]{if(!this.done){this.done=true;this.record(this.store.finished(newRecord));}return [...this.unlocked];}
   clear():void {this.done=true;this.unlocked.clear();}
 }

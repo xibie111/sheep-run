@@ -1,0 +1,186 @@
+{
+  "tool": "built-in image_gen",
+  "style": "warm flat pixel pasture",
+  "icons": [
+    {
+      "id": "first-run",
+      "prompt": "Use case: stylized-concept. Asset type: ONE transparent square pixel-art achievement emblem for the mobile game Sheep Run, matching the warm flat pixel pasture style of reference image 1. Subject: FIRST DEPARTURE — a cute tiny cream-white woolly lamb running to the right, with two small meadow-green leaves underneath and a warm orange trail dot behind it. A simple legible silhouette; joyful gentle face; each body part must remain readable when reduced to 32x32 pixels. Style: 2D pixel sprite, crisp stepped pixel edges, chunky dark cocoa-brown outline, cream, blush-pink and meadow green palette, very few flat color blocks, no volume, no 3D, no smooth gradients, no soft shadow. Composition: single centered icon occupying 75% of a square with generous transparent margins. No frame, no background scenery, no text, no letters, no numbers, no watermark. Reference image is only for existing game color and sheep style; do not reproduce the UI or its labels. Output real transparent background.",
+      "transparent_background": true,
+      "reference": "docs/achievements-review/2026-10-11/screenshots/896x414-dpr2-complete-page-3.png",
+      "source": "sources/first-run.png",
+      "runtime": "runtime/first-run.png",
+      "generatedOriginal": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39\\exec-1a0d9a3d-056c-408b-adb8-7361ad487184.png"
+    },
+    {
+      "id": "first-friend",
+      "prompt": "Use case: stylized-concept. Asset type: ONE transparent square achievement icon for the mobile pixel game Sheep Run. Reference image 1 is the approved first sheep icon; match its sheep identity, scale of pixel blocks, flat warm cocoa outlines and cream/pink/meadow-green palette. Subject: A friendly pair of fluffy cream lambs side by side touching cheeks, one blush-pink heart floating between their heads. Simple large heads, only two small feet each; no scenery. Style: cute 2D pixel sprite, chunky hard stepped outline, simple flat color blocks, very limited highlights. Readable at native 32x32 pixels; use a low resolution pixel design displayed large, no fine textures. No volume or 3D, no smooth gradients, no blurred edges, no shadow behind it. Centered compact silhouette occupying about 75% of the square; all elements remain inside with generous transparent margins. No frame, no badge ring, no text, letters, numbers or watermarks. Transparent backdrop only. Do not reproduce the reference's UI.",
+      "transparent_background": true,
+      "reference": "assets/achievement-icons-v1/sources/first-run.png",
+      "source": "sources/first-friend.png",
+      "runtime": "runtime/first-friend.png",
+      "generatedOriginal": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39\\exec-c80b9868-6c9a-44a4-bc94-9de79d8064b8.png"
+    },
+    {
+      "id": "five-friends",
+      "prompt": "Use case: stylized-concept. Asset type: ONE transparent square achievement icon for the mobile pixel game Sheep Run. Reference image 1 is the approved first sheep icon; match its sheep identity, scale of pixel blocks, flat warm cocoa outlines and cream/pink/meadow-green palette. Subject: Two smiling fluffy sheep heads peeking over a warm golden bell with a sage-green tied ribbon. The two heads and single bell form a compact triangular emblem. Style: cute 2D pixel sprite, chunky hard stepped outline, simple flat color blocks, very limited highlights. Readable at native 32x32 pixels; use a low resolution pixel design displayed large, no fine textures. No volume or 3D, no smooth gradients, no blurred edges, no shadow behind it. Centered compact silhouette occupying about 75% of the square; all elements remain inside with generous transparent margins. No frame, no badge ring, no text, letters, numbers or watermarks. Transparent backdrop only. Do not reproduce the reference's UI.",
+      "transparent_background": true,
+      "reference": "assets/achievement-icons-v1/sources/first-run.png",
+      "source": "sources/five-friends.png",
+      "runtime": "runtime/five-friends.png",
+      "generatedOriginal": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39\\exec-6c8b2438-3d0d-4b5c-9a51-3f0bf27be12f.png"
+    },
+    {
+      "id": "ten-stars",
+      "prompt": "Use case: stylized-concept. Asset type: ONE transparent square achievement icon for the mobile pixel game Sheep Run. Reference image 1 is the approved first sheep icon; match its sheep identity, scale of pixel blocks, flat warm cocoa outlines and cream/pink/meadow-green palette. Subject: A small cream wool pouch with one big gold five-point star poking out and two little gold star tips. Warm pink ribbon tied around the pouch. Bold simple shapes. Style: cute 2D pixel sprite, chunky hard stepped outline, simple flat color blocks, very limited highlights. Readable at native 32x32 pixels; use a low resolution pixel design displayed large, no fine textures. No volume or 3D, no smooth gradients, no blurred edges, no shadow behind it. Centered compact silhouette occupying about 75% of the square; all elements remain inside with generous transparent margins. No frame, no badge ring, no text, letters, numbers or watermarks. Transparent backdrop only. Do not reproduce the reference's UI.",
+      "transparent_background": true,
+      "reference": "assets/achievement-icons-v1/sources/first-run.png",
+      "source": "sources/ten-stars.png",
+      "runtime": "runtime/ten-stars.png",
+      "generatedOriginal": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39\\exec-f804dc3d-8cd8-428a-8462-eef31e86dce1.png"
+    },
+    {
+      "id": "twenty-obstacles",
+      "prompt": "Use case: stylized-concept. Asset type: ONE transparent square achievement icon for the mobile pixel game Sheep Run. Reference image 1 is the approved first sheep icon; match its sheep identity, scale of pixel blocks, flat warm cocoa outlines and cream/pink/meadow-green palette. Subject: A happy fluffy cream lamb leaping above ONE very low brown wooden fence rail, two posts and meadow-green grass. One lamb, one rail, large clear jump silhouette. Style: cute 2D pixel sprite, chunky hard stepped outline, simple flat color blocks, very limited highlights. Readable at native 32x32 pixels; use a low resolution pixel design displayed large, no fine textures. No volume or 3D, no smooth gradients, no blurred edges, no shadow behind it. Centered compact silhouette occupying about 75% of the square; all elements remain inside with generous transparent margins. No frame, no badge ring, no text, letters, numbers or watermarks. Transparent backdrop only. Do not reproduce the reference's UI.",
+      "transparent_background": true,
+      "reference": "assets/achievement-icons-v1/sources/first-run.png",
+      "source": "sources/twenty-obstacles.png",
+      "runtime": "runtime/twenty-obstacles.png",
+      "generatedOriginal": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39\\exec-54c8571e-44a3-448a-ba70-8c3e2af1c207.png"
+    },
+    {
+      "id": "first-record",
+      "prompt": "Use case: stylized-concept. Asset type: ONE transparent square achievement icon for the mobile pixel game Sheep Run. Reference image 1 is the approved first sheep icon; match its sheep identity, scale of pixel blocks, flat warm cocoa outlines and cream/pink/meadow-green palette. Subject: A tiny warm golden crown resting on a little cream wool tuft, with two green leaves on either side and one blush pink heart jewel in the crown. Bold and legible. Style: cute 2D pixel sprite, chunky hard stepped outline, simple flat color blocks, very limited highlights. Readable at native 32x32 pixels; use a low resolution pixel design displayed large, no fine textures. No volume or 3D, no smooth gradients, no blurred edges, no shadow behind it. Centered compact silhouette occupying about 75% of the square; all elements remain inside with generous transparent margins. No frame, no badge ring, no text, letters, numbers or watermarks. Transparent backdrop only. Do not reproduce the reference's UI.",
+      "transparent_background": true,
+      "reference": "assets/achievement-icons-v1/sources/first-run.png",
+      "source": "sources/first-record.png",
+      "runtime": "runtime/first-record.png",
+      "generatedOriginal": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39\\exec-bfd4e62e-6fda-4fd0-bdec-18d096274bfa.png"
+    },
+    {
+      "id": "four-seasons",
+      "prompt": "Use case: stylized-concept. Asset type: ONE transparent square achievement icon for the mobile pixel game Sheep Run. Reference image 1 is the approved first sheep icon; match its sheep identity, scale of pixel blocks, flat warm cocoa outlines and cream/pink/meadow-green palette. Subject: A smiling cream sheep face inside a compact four-season wreath: one pink blossom, one golden sunflower, one orange autumn leaf and one pale ice-blue snowflake, exactly one at each side. No scenery. Style: cute 2D pixel sprite, chunky hard stepped outline, simple flat color blocks, very limited highlights. Readable at native 32x32 pixels; use a low resolution pixel design displayed large, no fine textures. No volume or 3D, no smooth gradients, no blurred edges, no shadow behind it. Centered compact silhouette occupying about 75% of the square; all elements remain inside with generous transparent margins. No frame, no badge ring, no text, letters, numbers or watermarks. Transparent backdrop only. Do not reproduce the reference's UI.",
+      "transparent_background": true,
+      "reference": "assets/achievement-icons-v1/sources/first-run.png",
+      "source": "sources/four-seasons.png",
+      "runtime": "runtime/four-seasons.png",
+      "generatedOriginal": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39\\exec-8b508604-06c9-4fb9-8115-dfdfa66a970a.png"
+    },
+    {
+      "id": "five-skins",
+      "prompt": "Use case: stylized-concept. Asset type: ONE transparent square achievement icon for the mobile pixel game Sheep Run. Reference image 1 is the approved first sheep icon; match its sheep identity, scale of pixel blocks, flat warm cocoa outlines and cream/pink/meadow-green palette. Subject: A wooden clothes hanger holding one cream fluffy sheep sweater with a blush-pink bow and sage-green collar. Simple front-facing garment silhouette, large hanger hook. Style: cute 2D pixel sprite, chunky hard stepped outline, simple flat color blocks, very limited highlights. Readable at native 32x32 pixels; use a low resolution pixel design displayed large, no fine textures. No volume or 3D, no smooth gradients, no blurred edges, no shadow behind it. Centered compact silhouette occupying about 75% of the square; all elements remain inside with generous transparent margins. No frame, no badge ring, no text, letters, numbers or watermarks. Transparent backdrop only. Do not reproduce the reference's UI.",
+      "transparent_background": true,
+      "reference": "assets/achievement-icons-v1/sources/first-run.png",
+      "source": "sources/five-skins.png",
+      "runtime": "runtime/five-skins.png",
+      "generatedOriginal": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39\\exec-3613d770-340e-49db-aabd-629b22d13d9f.png"
+    },
+    {
+      "id": "five-runs",
+      "prompt": "Use case: stylized-concept. Asset type: ONE transparent square achievement icon for the mobile pixel game Sheep Run. Reference image 1 is the approved first sheep icon; match its sheep identity, scale of pixel blocks, flat warm cocoa outlines and cream/pink/meadow-green palette. Subject: Three warm cocoa-brown sheep hoofprints forming a short diagonal meadow path with two small green leaf sprouts. No ground tile, no landscape, only isolated footprints and sprouts. Style: cute 2D pixel sprite, chunky hard stepped outline, simple flat color blocks, very limited highlights. Readable at native 32x32 pixels; use a low resolution pixel design displayed large, no fine textures. No volume or 3D, no smooth gradients, no blurred edges, no shadow behind it. Centered compact silhouette occupying about 75% of the square; all elements remain inside with generous transparent margins. No frame, no badge ring, no text, letters, numbers or watermarks. Transparent backdrop only. Do not reproduce the reference's UI.",
+      "transparent_background": true,
+      "reference": "assets/achievement-icons-v1/sources/first-run.png",
+      "source": "sources/five-runs.png",
+      "runtime": "runtime/five-runs.png",
+      "generatedOriginal": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39\\exec-1032748a-3101-4b9a-8012-d5d8df1c21c0.png"
+    },
+    {
+      "id": "twenty-runs",
+      "prompt": "Use case: stylized-concept. Asset type: ONE transparent square achievement icon for the mobile pixel game Sheep Run. Reference image 1 is the approved first sheep icon; match its sheep identity, scale of pixel blocks, flat warm cocoa outlines and cream/pink/meadow-green palette. Subject: A cozy red-roof cream farm cottage behind one smiling fluffy sheep head at its door, with a single small green leaf. Bold roof, window and sheep face; compact homecoming emblem. Style: cute 2D pixel sprite, chunky hard stepped outline, simple flat color blocks, very limited highlights. Readable at native 32x32 pixels; use a low resolution pixel design displayed large, no fine textures. No volume or 3D, no smooth gradients, no blurred edges, no shadow behind it. Centered compact silhouette occupying about 75% of the square; all elements remain inside with generous transparent margins. No frame, no badge ring, no text, letters, numbers or watermarks. Transparent backdrop only. Do not reproduce the reference's UI.",
+      "transparent_background": true,
+      "reference": "assets/achievement-icons-v1/sources/first-run.png",
+      "source": "sources/twenty-runs.png",
+      "runtime": "runtime/twenty-runs.png",
+      "generatedOriginal": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39\\exec-ad7eb425-b330-4568-8dc3-f2a5966a9d05.png"
+    },
+    {
+      "id": "twenty-friends",
+      "prompt": "Use case: stylized-concept. Asset type: ONE transparent square achievement icon for the mobile pixel game Sheep Run. Reference image 1 is the approved first sheep icon; match its sheep identity, scale of pixel blocks, flat warm cocoa outlines and cream/pink/meadow-green palette. Subject: A large warm golden sheep bell with a pink heart jewel and sage ribbon, with two tiny cream sheep faces peeking from behind its shoulders. Bell is the main silhouette. Style: cute 2D pixel sprite, chunky hard stepped outline, simple flat color blocks, very limited highlights. Readable at native 32x32 pixels; use a low resolution pixel design displayed large, no fine textures. No volume or 3D, no smooth gradients, no blurred edges, no shadow behind it. Centered compact silhouette occupying about 75% of the square; all elements remain inside with generous transparent margins. No frame, no badge ring, no text, letters, numbers or watermarks. Transparent backdrop only. Do not reproduce the reference's UI.",
+      "transparent_background": true,
+      "reference": "assets/achievement-icons-v1/sources/first-run.png",
+      "source": "sources/twenty-friends.png",
+      "runtime": "runtime/twenty-friends.png",
+      "generatedOriginal": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39\\exec-03906127-be29-41e5-a8e0-ca5d8ce778ee.png"
+    },
+    {
+      "id": "twenty-five-stars",
+      "prompt": "Use case: stylized-concept. Asset type: ONE transparent square achievement icon for the mobile pixel game Sheep Run. Reference image 1 is the approved first sheep icon; match its sheep identity, scale of pixel blocks, flat warm cocoa outlines and cream/pink/meadow-green palette. Subject: A blush-pink wool pouch holding a little arch of three large golden five-point stars. A sage-green bow on the pouch. Bold star shapes and clear pouch silhouette. Style: cute 2D pixel sprite, chunky hard stepped outline, simple flat color blocks, very limited highlights. Readable at native 32x32 pixels; use a low resolution pixel design displayed large, no fine textures. No volume or 3D, no smooth gradients, no blurred edges, no shadow behind it. Centered compact silhouette occupying about 75% of the square; all elements remain inside with generous transparent margins. No frame, no badge ring, no text, letters, numbers or watermarks. Transparent backdrop only. Do not reproduce the reference's UI.",
+      "transparent_background": true,
+      "reference": "assets/achievement-icons-v1/sources/first-run.png",
+      "source": "sources/twenty-five-stars.png",
+      "runtime": "runtime/twenty-five-stars.png",
+      "generatedOriginal": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39\\exec-b3679a54-03b2-4426-b9c1-5532ff18463b.png"
+    },
+    {
+      "id": "fifty-stars",
+      "prompt": "Use case: stylized-concept. Asset type: ONE transparent square achievement icon for the mobile pixel game Sheep Run. Reference image 1 is the approved first sheep icon; match its sheep identity, scale of pixel blocks, flat warm cocoa outlines and cream/pink/meadow-green palette. Subject: One large brilliant gold five-point star with a cream wool rim and lavender ribbon below, flanked by two small gold stars. Compact celebratory star medal, no round frame. Style: cute 2D pixel sprite, chunky hard stepped outline, simple flat color blocks, very limited highlights. Readable at native 32x32 pixels; use a low resolution pixel design displayed large, no fine textures. No volume or 3D, no smooth gradients, no blurred edges, no shadow behind it. Centered compact silhouette occupying about 75% of the square; all elements remain inside with generous transparent margins. No frame, no badge ring, no text, letters, numbers or watermarks. Transparent backdrop only. Do not reproduce the reference's UI.",
+      "transparent_background": true,
+      "reference": "assets/achievement-icons-v1/sources/first-run.png",
+      "source": "sources/fifty-stars.png",
+      "runtime": "runtime/fifty-stars.png",
+      "generatedOriginal": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39\\exec-f6439b0e-636d-4034-8e70-581e1276e177.png"
+    },
+    {
+      "id": "fifty-obstacles",
+      "prompt": "Use case: stylized-concept. Asset type: ONE transparent square achievement icon for the mobile pixel game Sheep Run. Reference image 1 is the approved first sheep icon; match its sheep identity, scale of pixel blocks, flat warm cocoa outlines and cream/pink/meadow-green palette. Subject: A small wooden fence rail with one cream sheep hoof above it and two little cream feather-shaped motion marks, green leaves underneath. The hoof has a dark brown split toe. No entire sheep, no scenery. Style: cute 2D pixel sprite, chunky hard stepped outline, simple flat color blocks, very limited highlights. Readable at native 32x32 pixels; use a low resolution pixel design displayed large, no fine textures. No volume or 3D, no smooth gradients, no blurred edges, no shadow behind it. Centered compact silhouette occupying about 75% of the square; all elements remain inside with generous transparent margins. No frame, no badge ring, no text, letters, numbers or watermarks. Transparent backdrop only. Do not reproduce the reference's UI.",
+      "transparent_background": true,
+      "reference": "assets/achievement-icons-v1/sources/first-run.png",
+      "source": "sources/fifty-obstacles.png",
+      "runtime": "runtime/fifty-obstacles.png",
+      "generatedOriginal": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39\\exec-ca0701ac-eb3b-4291-a06c-5c715a52a8a1.png"
+    },
+    {
+      "id": "ten-skins",
+      "prompt": "Use case: stylized-concept. Asset type: ONE transparent square achievement icon for the mobile pixel game Sheep Run. Reference image 1 is the approved first sheep icon; match its sheep identity, scale of pixel blocks, flat warm cocoa outlines and cream/pink/meadow-green palette. Subject: Three overlapping fluffy sheep heads colored warm cream, gentle peach-pink and sage-mint, with one tiny gold clothes hanger above. Three clearly separated friendly faces; simple compact triangular silhouette. Style: cute 2D pixel sprite, chunky hard stepped outline, simple flat color blocks, very limited highlights. Readable at native 32x32 pixels; use a low resolution pixel design displayed large, no fine textures. No volume or 3D, no smooth gradients, no blurred edges, no shadow behind it. Centered compact silhouette occupying about 75% of the square; all elements remain inside with generous transparent margins. No frame, no badge ring, no text, letters, numbers or watermarks. Transparent backdrop only. Do not reproduce the reference's UI.",
+      "transparent_background": true,
+      "reference": "assets/achievement-icons-v1/sources/first-run.png",
+      "source": "sources/ten-skins.png",
+      "runtime": "runtime/ten-skins.png",
+      "generatedOriginal": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39\\exec-1d59538b-06a0-4ec1-ad9e-e8df79eadc63.png"
+    },
+    {
+      "id": "spring-collector",
+      "prompt": "Use case: stylized-concept. Asset type: ONE transparent square achievement icon for the mobile pixel game Sheep Run. Reference image 1 is the approved first sheep icon; match its sheep identity, scale of pixel blocks, flat warm cocoa outlines and cream/pink/meadow-green palette. Subject: One large soft-pink five-petal meadow blossom with golden center, beside a small three-leaf lucky clover and one tiny cream wool tuft. Spring collection emblem, bold petals. Style: cute 2D pixel sprite, chunky hard stepped outline, simple flat color blocks, very limited highlights. Readable at native 32x32 pixels; use a low resolution pixel design displayed large, no fine textures. No volume or 3D, no smooth gradients, no blurred edges, no shadow behind it. Centered compact silhouette occupying about 75% of the square; all elements remain inside with generous transparent margins. No frame, no badge ring, no text, letters, numbers or watermarks. Transparent backdrop only. Do not reproduce the reference's UI.",
+      "transparent_background": true,
+      "reference": "assets/achievement-icons-v1/sources/first-run.png",
+      "source": "sources/spring-collector.png",
+      "runtime": "runtime/spring-collector.png",
+      "generatedOriginal": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39\\exec-9174357c-3348-4fb8-a4b3-134bda481fc6.png"
+    },
+    {
+      "id": "summer-collector",
+      "prompt": "Use case: stylized-concept. Asset type: ONE transparent square achievement icon for the mobile pixel game Sheep Run. Reference image 1 is the approved first sheep icon; match its sheep identity, scale of pixel blocks, flat warm cocoa outlines and cream/pink/meadow-green palette. Subject: A small golden sunflower beside a bright red watermelon slice with cream rind and green edge, one cream wool tuft below. Summer collection emblem, only a few watermelon seeds. Style: cute 2D pixel sprite, chunky hard stepped outline, simple flat color blocks, very limited highlights. Readable at native 32x32 pixels; use a low resolution pixel design displayed large, no fine textures. No volume or 3D, no smooth gradients, no blurred edges, no shadow behind it. Centered compact silhouette occupying about 75% of the square; all elements remain inside with generous transparent margins. No frame, no badge ring, no text, letters, numbers or watermarks. Transparent backdrop only. Do not reproduce the reference's UI.",
+      "transparent_background": true,
+      "reference": "assets/achievement-icons-v1/sources/first-run.png",
+      "source": "sources/summer-collector.png",
+      "runtime": "runtime/summer-collector.png",
+      "generatedOriginal": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39\\exec-e7368c79-bb58-4a22-8fa2-bd6808646565.png"
+    },
+    {
+      "id": "autumn-collector",
+      "prompt": "Use case: stylized-concept. Asset type: ONE transparent square achievement icon for the mobile pixel game Sheep Run. Reference image 1 is the approved first sheep icon; match its sheep identity, scale of pixel blocks, flat warm cocoa outlines and cream/pink/meadow-green palette. Subject: A single warm orange maple leaf behind a chestnut-brown acorn and small cream wool tuft. Autumn collection emblem, broad clear leaf and acorn silhouettes. Style: cute 2D pixel sprite, chunky hard stepped outline, simple flat color blocks, very limited highlights. Readable at native 32x32 pixels; use a low resolution pixel design displayed large, no fine textures. No volume or 3D, no smooth gradients, no blurred edges, no shadow behind it. Centered compact silhouette occupying about 75% of the square; all elements remain inside with generous transparent margins. No frame, no badge ring, no text, letters, numbers or watermarks. Transparent backdrop only. Do not reproduce the reference's UI.",
+      "transparent_background": true,
+      "reference": "assets/achievement-icons-v1/sources/first-run.png",
+      "source": "sources/autumn-collector.png",
+      "runtime": "runtime/autumn-collector.png",
+      "generatedOriginal": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39\\exec-e930a04f-1660-4997-8fd8-7c9303074ac6.png"
+    },
+    {
+      "id": "winter-collector",
+      "prompt": "Use case: stylized-concept. Asset type: ONE transparent square achievement icon for the mobile pixel game Sheep Run. Reference image 1 is the approved first sheep icon; match its sheep identity, scale of pixel blocks, flat warm cocoa outlines and cream/pink/meadow-green palette. Subject: A tiny warm cocoa mug with cream contents and one steam puff beside a pale ice-blue mitten, with a small simple white snowflake. Winter collection emblem, bold mug handle and mitten. Style: cute 2D pixel sprite, chunky hard stepped outline, simple flat color blocks, very limited highlights. Readable at native 32x32 pixels; use a low resolution pixel design displayed large, no fine textures. No volume or 3D, no smooth gradients, no blurred edges, no shadow behind it. Centered compact silhouette occupying about 75% of the square; all elements remain inside with generous transparent margins. No frame, no badge ring, no text, letters, numbers or watermarks. Transparent backdrop only. Do not reproduce the reference's UI.",
+      "transparent_background": true,
+      "reference": "assets/achievement-icons-v1/sources/first-run.png",
+      "source": "sources/winter-collector.png",
+      "runtime": "runtime/winter-collector.png",
+      "generatedOriginal": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39\\exec-3195a345-c573-4e01-81a9-c76e2ffe179d.png"
+    },
+    {
+      "id": "all-collections",
+      "prompt": "Use case: stylized-concept. Asset type: ONE transparent square achievement icon for the mobile pixel game Sheep Run. Reference image 1 is the approved first sheep icon; match its sheep identity, scale of pixel blocks, flat warm cocoa outlines and cream/pink/meadow-green palette. Subject: A tidy bundle of FOUR small blank collectible cards with green, gold, orange and ice-blue corners, tied together by a pink heart ribbon, one cream sheep face peeking above. Four-season complete collection emblem. All card faces completely blank, no writing, no letters. Style: cute 2D pixel sprite, chunky hard stepped outline, simple flat color blocks, very limited highlights. Readable at native 32x32 pixels; use a low resolution pixel design displayed large, no fine textures. No volume or 3D, no smooth gradients, no blurred edges, no shadow behind it. Centered compact silhouette occupying about 75% of the square; all elements remain inside with generous transparent margins. No frame, no badge ring, no text, letters, numbers or watermarks. Transparent backdrop only. Do not reproduce the reference's UI.",
+      "transparent_background": true,
+      "reference": "assets/achievement-icons-v1/sources/first-run.png",
+      "source": "sources/all-collections.png",
+      "runtime": "runtime/all-collections.png",
+      "generatedOriginal": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39\\exec-81e4c342-0662-47ec-8773-ca947f9f21f9.png"
+    }
+  ]
+}

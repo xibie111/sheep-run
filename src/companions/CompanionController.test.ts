@@ -5,11 +5,13 @@ import { WoodFence } from "../game/ObstacleDefinitions";
 import { CompanionController } from "./CompanionController";
 
 class Display {
-  active = true; name = ""; x = 0; y = 0; displayWidth = 0; displayHeight = 0;
+  active = true; visible = true; name = ""; x = 0; y = 0; width = 32; height = 32; displayWidth = 0; displayHeight = 0;
   data = new Map<string, unknown>(); anims = { currentAnim: null as { key: string } | null };
   frame = { name: 1 };
   constructor(x: number, y: number) { this.x = x; this.y = y; }
   setOrigin() { return this; } setDepth() { return this; } setAngle() { return this; } setAlpha() { return this; }
+  setVisible(value: boolean) { this.visible = value; return this; }
+  setScale(value: number) { this.displayWidth = this.width * value; this.displayHeight = this.height * value; return this; }
   setName(name: string) { this.name = name; return this; }
   setData(key: string, value: unknown) { this.data.set(key, value); return this; }
   setPosition(x: number, y: number) { this.x = x; this.y = y; return this; }
@@ -46,6 +48,7 @@ describe("display-only companion lifecycle", () => {
     expect(live("companion-neck-bell")).toHaveLength(1);
     expect(unlockedSkins).toHaveBeenCalledOnce(); expect(playBell).toHaveBeenCalledOnce(); expect(physics).not.toHaveBeenCalled();
     expect(onSummoned).toHaveBeenCalledOnce();
+    expect(onSummoned).toHaveBeenCalledWith("mint");
     update(29_000); expect(live("companion-sheep")).toHaveLength(1); expect(playBell).toHaveBeenCalledOnce();
     expect(onSummoned).toHaveBeenCalledOnce();
     controller.clear(); expect(live("companion-sheep")).toHaveLength(0);
@@ -83,5 +86,24 @@ describe("display-only companion lifecycle", () => {
     expect(controller.scheduler.nextEligibleAtMs).toBeGreaterThanOrEqual(70_020);
     expect(controller.scheduler.nextEligibleAtMs).toBeLessThanOrEqual(85_020);
     expect(playBell).toHaveBeenCalledOnce();
+  });
+  it("defers one run-record crown until an actual companion follows, prioritizes farewell and clears every icon", () => {
+    const { controller, update, live, objects } = setup();
+    controller.notifyRecord(); controller.notifyRecord(); controller.notifyStarGroup();
+    expect(objects).toHaveLength(0);
+    update(25_000); live("companion-bell-pickup")[0]!.setPosition(101, 199); update(25_020, 0);
+    expect(live("companion-response-crown")[0]!.visible).toBe(false);
+    update(26_020); expect(live("companion-sheep")[0]!.data.get("response")).toBe("crown");
+    expect(live("companion-response-crown")[0]!.visible).toBe(true);
+    controller.notifyRecord(); update(27_200); expect(live("companion-response-crown")[0]!.visible).toBe(false);
+    update(28_801); expect(live("companion-sheep")[0]!.data.get("response")).toBeNull();
+    controller.notifyStarGroup(); update(28_820);
+    expect(live("companion-response-star")[0]!.visible).toBe(true);
+    update(34_020); expect(live("companion-sheep")[0]!.data.get("response")).toBe("heart");
+    expect(live("companion-response-star")[0]!.visible).toBe(false);
+    expect(live("companion-response-heart")[0]!.visible).toBe(true);
+    controller.notifyRecord(); controller.notifyStarGroup(); controller.clear(); controller.clear(); update(99_000);
+    expect(objects.filter(item => item.active)).toHaveLength(0);
+    for (const item of objects) expect(item.destroy).toHaveBeenCalledOnce();
   });
 });

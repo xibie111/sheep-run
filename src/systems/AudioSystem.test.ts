@@ -225,4 +225,32 @@ describe("AudioSystem", () => {
     audio.play("bell"); expect(oscillators).toHaveLength(1);
     audio.destroy();
   });
+
+  it("schedules the completed-star-group ascending notes in one quiet short oscillator", () => {
+    const { oscillators, contexts } = installAudioEnvironment({ [STORAGE.saveKey]: JSON.stringify({ version: 4, settings: { music: false, sfxVolume: .4 } }) });
+    const audio = new AudioSystem(); audio.initializeAfterGesture(); audio.play("starGroup");
+    expect(oscillators).toHaveLength(1);
+    const oscillator = oscillators[0]!;
+    expect(oscillator.frequency.setValueAtTime.mock.calls).toEqual([[660, 1], [880, 1 + .07], [1108, 1 + .14]]);
+    expect(oscillator.start).toHaveBeenCalledExactlyOnceWith(1);
+    expect(oscillator.stop).toHaveBeenCalledExactlyOnceWith(1.24);
+    const envelope = contexts[0]!.createGain.mock.results.at(-1)!.value.gain;
+    expect(envelope.setValueAtTime).toHaveBeenCalledExactlyOnceWith(.4 * .04, 1);
+    expect(envelope.exponentialRampToValueAtTime).toHaveBeenCalledExactlyOnceWith(.0001, 1.24);
+    audio.destroy();
+  });
+
+  it.each([{ sfx: false, sfxVolume: 1 }, { sfx: true, sfxVolume: 0 }])(
+    "does not schedule any star-group notes when its SFX settings are %j", settings => {
+      const { oscillators } = installAudioEnvironment({ [STORAGE.saveKey]: JSON.stringify({ version: 4, settings: { music: false, ...settings } }) });
+      const audio = new AudioSystem(); audio.initializeAfterGesture(); audio.play("starGroup");
+      expect(oscillators).toHaveLength(0); audio.destroy();
+    });
+
+  it("keeps the star-group cue silent before a gesture, while hidden and after destruction", () => {
+    const { oscillators, doc } = installAudioEnvironment({ [STORAGE.saveKey]: JSON.stringify({ version: 4, settings: { music: false } }) });
+    const audio = new AudioSystem(); audio.play("starGroup"); expect(oscillators).toHaveLength(0);
+    audio.initializeAfterGesture(); doc.hidden = true; audio.play("starGroup"); expect(oscillators).toHaveLength(0);
+    doc.hidden = false; audio.destroy(); audio.play("starGroup"); expect(oscillators).toHaveLength(0);
+  });
 });

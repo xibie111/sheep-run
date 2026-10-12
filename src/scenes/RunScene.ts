@@ -36,11 +36,16 @@ import { AmbientLifeController } from "../ambient/AmbientLifeController";
 import { ANIMAL_TEXTURE } from "../ambient/animalAssets";
 import { SceneryController } from "../scenery/SceneryController";
 import { crowdedForAnimal } from "../ambient/AnimalRules";
-import { DELIVERY_ID, DELIVERY_SEED, DeliveryRoute } from '../delivery/DeliveryRoute';
+import { DeliveryRoute } from '../delivery/DeliveryRoute';
 import { DeliveryView } from '../delivery/DeliveryView';
 import { attachDeliveryHud } from '../delivery/DeliveryHud';
 import { createDeliveryPanel } from '../delivery/DeliveryPanel';
 import { deliveryStore } from '../delivery/DeliveryStore';
+import { StarRouteController } from '../stars-v2/StarRouteController';
+import { RunGoal } from '../runner-v2/RunGoal';
+import { RunGoalView } from '../runner-v2/RunGoalView';
+import { RunTravel } from '../runner-v2/RunTravel';
+import { createDeliveryRoute, isDeliveryChapterId, LandmarkController } from '../content-v2';
 
 export class RunScene extends Phaser.Scene {
   static readonly CONTROL_HINT = GAME_FEATURES.dash
@@ -83,14 +88,21 @@ export class RunScene extends Phaser.Scene {
   private delivery?: DeliveryRoute;
   private deliveryView?: DeliveryView;
   private deliveryPanel?: ReturnType<typeof createDeliveryPanel>;
+  private starRoutes?: StarRouteController;
+  private runGoal?: RunGoal;
+  private goalView?: RunGoalView;
+  private travel?: RunTravel;
+  private animalExposureMs = 0;
+  private animalExposureKind: string | null = null;
+  private landmarks?: LandmarkController;
 
   constructor() {
     super({ key: SCENE.run });
   }
 
   init(data?: { deliveryId?: string }): void {
-    this.delivery = data?.deliveryId === DELIVERY_ID ? new DeliveryRoute() : undefined;
-    this.data.set('delivery-id', this.delivery ? DELIVERY_ID : null);
+    this.delivery = isDeliveryChapterId(data?.deliveryId) ? createDeliveryRoute(data!.deliveryId) : undefined;
+    this.data.set('delivery-id', this.delivery?.chapter.id ?? null);
     // Launch data can be retained by Phaser; only an explicit route start opts in.
     if (data) delete data.deliveryId;
   }
@@ -117,13 +129,15 @@ export class RunScene extends Phaser.Scene {
     this.powerUpSystem.reset();
     this.finished = false;
     if (!this.delivery) {
+      this.travel = new RunTravel();
+      this.runGoal = new RunGoal();
       journeyStore.reconcile(SaveSystem.load().unlockedSkins, collectionStore.load().ids);
       this.journey = new JourneyRun(journeyStore, ids => this.journeyToast?.achievements(ids));
     }
     this.starMilestone = null;
     const viewport = viewportSizeFromScale(this.scale);
 
-    this.environmentSystem = new EnvironmentSystem(this, { reducedMotion: this.reducedMotion, calmAtmosphere: true, ...(this.delivery ? { seed: DELIVERY_SEED } : {}) });
+    this.environmentSystem = new EnvironmentSystem(this, { reducedMotion: this.reducedMotion, calmAtmosphere: true, ...(this.delivery ? { seed: this.delivery.chapter.seed } : {}) });
     if (this.delivery) { this.environmentSystem.setTheme('spring'); this.environmentSystem.setWeather('sunny'); }
 
     // Viewport expansion changes what the camera sees, not the player's physics.
@@ -132,11 +146,25 @@ export class RunScene extends Phaser.Scene {
     this.obstacles = this.physics.add.group({ allowGravity: false, immovable: true });
     this.stars = this.physics.add.group({ allowGravity: false, immovable: true });
     this.powerUps = this.physics.add.group({ allowGravity: false, immovable: true });
+    if (!this.delivery) this.starRoutes = new StarRouteController({
+      available: () => POOL.stars - this.stars.getChildren().filter(child => child.active).length,
+      spawn: plan => {
+        const activated: Star[] = [];
+        for (const point of plan.points) {
+          const star = this.acquireStar();
+          if (!star) { activated.forEach(member => member.deactivate()); return null; }
+          star.activate(point.x, point.y, point.phase, this.speed);
+          star.setData('route-kind', plan.kind);
+          activated.push(star);
+        }
+        return activated;
+      },
+    });
     if (!this.delivery) this.companions = new CompanionController(this, {
       lead: this.sheep, leadSkin: this.selectedSkin,
       unlockedSkins: () => SaveSystem.load().unlockedSkins,
       playBell: () => this.audioSystem.play("bell"),
-      onSummoned: () => this.journey?.summon(),
+      onSummoned: skin => { this.journey?.summon(); this.travel?.summon(skin); },
       jumpImpulseMultiplier: this.upgradeEffects.jumpImpulseMultiplier, reducedMotion: this.reducedMotion,
     });
     new CollisionSystem(this).connect(this.sheep, this.obstacles, this.stars, {
@@ -151,23 +179,27 @@ export class RunScene extends Phaser.Scene {
       this.pauseRun();
     });
     if (this.delivery) {
-      this.deliveryView = new DeliveryView(this, this.sheep, this.selectedSkin, this.reducedMotion);
+      this.deliveryView = new DeliveryView(this, this.sheep, this.selectedSkin, this.reducedMotion, this.delivery.chapter.id);
       attachDeliveryHud(this, this.delivery, this.pauseButton);
       this.deliveryPanel = createDeliveryPanel(this, {
-        start: () => this.scene.restart({ deliveryId: DELIVERY_ID }),
+        start: id => this.scene.restart({ deliveryId: id }),
         exit: () => this.scene.start(SCENE.menu, { openMailbox: true }),
-      });
+      }, false, this.delivery.chapter.id);
     } else {
       attachRunHudArt(this, () => ({ score: this.scoreSystem.score, best: this.scoreSystem.bestAtStart,
         stars: this.scoreSystem.starCount, streak: this.scoreSystem.streak, milestone: this.starMilestone }), this.pauseButton);
       attachRunEasterEggs(this, () => this.scoreSystem.score);
       if (this.game.canvas?.parentElement && this.game.events) {
         this.runFeedback = new RunFeedback(this, this.sheep);
-        this.hiddenCollections = new HiddenCollectionRun(this, this.sheep, this.runFeedback);
+        this.hiddenCollections = new HiddenCollectionRun(this, this.sheep, this.runFeedback,
+          ids => this.journey?.collected(ids), id => this.travel?.collect(id));
         this.journeyToast = new JourneyToast(this);
+        this.goalView = new RunGoalView(this, this.runGoal!, this.reducedMotion);
       }
       if (this.textures?.exists(ANIMAL_TEXTURE)) this.ambientLife = new AmbientLifeController(this, this.reducedMotion);
       this.rareScenery = new SceneryController(this, this.reducedMotion, message => this.journeyToast?.notice(message));
+      this.landmarks = new LandmarkController(this, { reducedMotion: this.reducedMotion,
+        onEncounter: event => this.travel?.visibleLandmark(event.id) });
     }
     let previousViewport = viewport;
     watchViewport(this, (size) => {
@@ -203,6 +235,13 @@ export class RunScene extends Phaser.Scene {
     this.scoreSystem.update(speed, activeDeltaMs);
     this.environmentSystem?.update(this.scoreSystem.travelledDistancePx, activeDeltaMs, this.scoreSystem.score);
     this.journey?.visit(seasonAtScore(this.scoreSystem.score));
+    if (this.travel) this.travel.visitSeason(this.environmentSystem?.presentation().theme ?? seasonAtScore(this.scoreSystem.score));
+    this.runGoal?.update(deltaSeconds);
+    if (this.runGoal) this.travel?.goal(this.runGoal.snapshot());
+    this.goalView?.update(activeDeltaMs);
+    if (this.travel && !this.travel.snapshot().newRecord && this.scoreSystem.score > this.scoreSystem.bestAtStart) {
+      this.travel.record(); this.companions?.notifyRecord();
+    }
     this.spawnObjects(deltaSeconds);
     this.moveObjects(deltaSeconds);
     this.powerUpSystem.update(this.activeRunTimeMs);
@@ -222,14 +261,43 @@ export class RunScene extends Phaser.Scene {
       const importantNotice = !!this.game.canvas.parentElement?.querySelector('[data-adventure-overlay="journey-toast"][style*="display: block"],[data-adventure-overlay="collection-toast"][style*="display: block"],[data-easter-egg="score"][style*="display: block"]');
       this.rareScenery.update({ nowMs: this.activeRunTimeMs, deltaMs: activeDeltaMs,
         landscape: this.environmentSystem.presentation(), viewport: viewportSizeFromScale(this.scale),
-        blocked: importantNotice || this.starMilestone !== null || this.ambientLife?.scheduler.state === 'playing' ||
+        blocked: importantNotice || !!this.landmarks?.busy || this.starMilestone !== null || this.ambientLife?.scheduler.state === 'playing' ||
           this.companions?.scheduler.state === 'bell' || this.companions?.scheduler.state === 'companion' || crowdedForAnimal(this.obstacles.getChildren() as Obstacle[], speed) });
     }
     if (this.ambientLife && this.environmentSystem) this.ambientLife.update({
       nowMs: this.activeRunTimeMs, speed, viewport: viewportSizeFromScale(this.scale),
       landscape: this.environmentSystem.presentation(), obstacles: this.obstacles.getChildren() as Obstacle[],
-      companionState: this.companions?.scheduler.state, milestoneVisible: this.starMilestone !== null || this.rareScenery?.busy,
+      companionState: this.companions?.scheduler.state, milestoneVisible: this.starMilestone !== null || this.rareScenery?.busy || this.landmarks?.busy,
     });
+    if (this.landmarks && this.environmentSystem) {
+      const notice = !!this.game.canvas.parentElement?.querySelector('[data-adventure-overlay="journey-toast"][style*="display: block"],[data-adventure-overlay="collection-toast"][style*="display: block"],[data-easter-egg="score"][style*="display: block"]');
+      this.landmarks.update({ distance: this.scoreSystem.travelledDistancePx, deltaMs: activeDeltaMs,
+        viewport: viewportSizeFromScale(this.scale), landscape: this.environmentSystem.presentation(),
+        blocked: notice || this.starMilestone !== null || !!this.rareScenery?.busy || this.ambientLife?.scheduler.state === 'playing' ||
+          this.companions?.scheduler.state === 'bell' || this.companions?.scheduler.state === 'companion' ||
+          crowdedForAnimal(this.obstacles.getChildren() as Obstacle[], speed) });
+    }
+    this.observeVisibleAnimal(activeDeltaMs);
+  }
+
+  /** Require sustained visible animal ink, rather than a scheduled or created event. */
+  private observeVisibleAnimal(deltaMs: number): void {
+    if (!this.travel || !this.ambientLife) return;
+    const state = this.ambientLife.snapshot();
+    const camera = this.cameras.main;
+    const size = viewportSizeFromScale(this.scale);
+    const visible = state.kind && state.elapsedMs > 0 && this.children.list.some(object => {
+      if (!object.name.startsWith('ambient-life:') || object.name === 'ambient-life:pond') return false;
+      const image = object as Phaser.GameObjects.Image;
+      if (!image.active || !image.visible || image.alpha < .25) return false;
+      const bounds = image.getBounds();
+      return bounds.right > camera.scrollX && bounds.x < camera.scrollX + size.width &&
+        bounds.bottom > camera.scrollY && bounds.y < camera.scrollY + size.height;
+    });
+    if (!visible) { this.animalExposureMs = 0; this.animalExposureKind = null; return; }
+    if (this.animalExposureKind !== state.kind) { this.animalExposureKind = state.kind; this.animalExposureMs = 0; }
+    this.animalExposureMs += deltaMs;
+    if (this.animalExposureMs >= 200) this.travel.visibleAnimal(state.kind!);
   }
 
   private updateDelivery(deltaMs: number): void {
@@ -254,9 +322,9 @@ export class RunScene extends Phaser.Scene {
     this.deliveryView?.update(route, this.activeRunTimeMs);
     if (route.state === 'complete') {
       this.finished = true; this.pauseButton!.input!.enabled = false;
-      const result = deliveryStore.complete(DELIVERY_ID);
+      const result = deliveryStore.complete(route.chapter.id);
       this.audioSystem.play('bell');
-      this.deliveryPanel?.show('success', !result.saved);
+      this.deliveryPanel?.show('success', !result.saved, route.chapter.id);
     }
   }
 
@@ -270,6 +338,11 @@ export class RunScene extends Phaser.Scene {
     return -runViewportOrigin(viewportSizeFromScale(this.scale)).x - 20;
   }
 
+  private get starRecycleX(): number {
+    const cameraLeft = this.cameras?.main?.scrollX;
+    return Number.isFinite(cameraLeft) ? cameraLeft! : -runViewportOrigin(viewportSizeFromScale(this.scale)).x;
+  }
+
   private spawnObjects(deltaSeconds: number): void {
     // Convert the visible right edge to world space; camera expansion preserves
     // the player-to-entry distance, scheduled gaps and existing pool lifetimes.
@@ -280,12 +353,22 @@ export class RunScene extends Phaser.Scene {
         obstacle?.activate(visibleRight + 18, request.phase, this.speed, seasonAtScore(this.scoreSystem.score));
         this.companions?.observeObstacleSpawn(request, obstacle);
       } else if (request.type === "star") {
-        const star = this.acquireStar();
-        star?.activate(visibleRight + 14, request.y, request.phase, this.speed);
+        this.starRoutes?.enqueue(request);
       } else {
         const powerUp = this.acquirePowerUp(request.powerUp);
         powerUp?.activate(visibleRight + 14, request.y, request.powerUp, request.phase, this.speed);
       }
+    }
+    if (this.starRoutes) {
+      const extra = ['hidden-collection', 'companion-bell-pickup'].map(name => this.children.getByName(name));
+      this.starRoutes.update({ speed: this.speed, spawnX: visibleRight + 14, playerX: this.sheep.x,
+        jumpImpulseMultiplier: this.upgradeEffects.jumpImpulseMultiplier, window: this.spawnSystem.starRouteWindow(this.speed),
+        obstacles: (this.obstacles.getChildren() as Obstacle[]).filter(child => child.active)
+          .map(child => ({ left: child.x, right: child.rightEdge, kind: child.definition.kind })),
+        pickups: [...this.stars.getChildren(), ...this.powerUps.getChildren(), ...extra]
+          .filter((child): child is Phaser.GameObjects.Image => !!child && child.active && (child as Phaser.GameObjects.Image).visible)
+          .map(child => child.getBounds()),
+      });
     }
   }
 
@@ -337,6 +420,7 @@ export class RunScene extends Phaser.Scene {
         this.audioSystem.play("nearMiss");
         this.scoreSystem.awardPassedObstacle();
         this.journey?.passed();
+        this.runGoal?.passed();
       }
       if (child.visualRightEdge < this.obstacleRecycleX) child.deactivate();
     }
@@ -351,12 +435,13 @@ export class RunScene extends Phaser.Scene {
           ? { x: this.sheep.x, y: this.sheep.y - PLAYER.height / 2, radiusPx: this.upgradeEffects.magnetRadiusPx }
           : undefined,
       );
-      if (child.x < PLAYER.x - 4) {
-        if (!child.collected) {
-          this.scoreSystem.missStar();
-        }
-        child.deactivate();
+      if (child.x < PLAYER.x - 4 && !child.collected && !child.missed) {
+        // Keep the existing missed-streak timing without hiding visible art.
+        child.missed = true;
+        this.scoreSystem.missStar();
+        this.starRoutes?.recycle(child);
       }
+      if (child.visualRightEdge < this.starRecycleX) child.deactivate();
     }
 
     const powerUpChildren = this.powerUps.getChildren();
@@ -463,8 +548,12 @@ export class RunScene extends Phaser.Scene {
       return;
     }
     this.finished = true;
+    this.starRoutes?.clear();
+    if (this.runGoal) this.travel?.goal(this.runGoal.finish());
+    this.goalView?.clear();
     this.ambientLife?.clear();
     this.rareScenery?.clear();
+    this.landmarks?.clear();
     this.companions?.clear();
     this.journeyToast?.clear();
     this.audioSystem.play("hit");
@@ -474,12 +563,14 @@ export class RunScene extends Phaser.Scene {
     if (this.delivery) {
       this.delivery.fail(); this.deliveryView?.stopCompanion(); this.inputSystem.cancel();
       this.pauseButton!.input!.enabled = false;
-      this.deliveryPanel?.show('failure');
+      this.deliveryPanel?.show('failure', false, this.delivery.chapter.id);
       return;
     }
     const scoreResult = this.scoreSystem.finish();
+    if (scoreResult.newRecord) this.travel?.record();
     const reward = new ProgressionSystem().awardRun(scoreResult.score);
     const result: ResultSceneData = { ...scoreResult, ...reward,
+      ...(this.travel ? { travel: this.travel.finish(), leadSkin: this.selectedSkin } : {}),
       ...(this.journey ? { achievements: this.journey.finish(scoreResult.newRecord) } : {}) };
     this.audioSystem.play(result.newRecord ? "newRecord" : "gameOver");
     if (!this.reducedMotion) this.cameras.main.shake(140, 0.003);
@@ -499,10 +590,17 @@ export class RunScene extends Phaser.Scene {
   }
 
   private onStarOverlap(starObject: object): void {
-    if (this.delivery || this.finished || !(starObject instanceof Star) || starObject.collected) return;
+    if (this.delivery || this.finished || !(starObject instanceof Star) || starObject.collected || starObject.missed) return;
     starObject.collected = true;
     const award = this.scoreSystem.awardStar(this.powerUpSystem.starMultiplier(this.activeRunTimeMs));
     this.journey?.star();
+    this.runGoal?.star(); this.travel?.star();
+    const route = this.starRoutes?.collect(starObject);
+    if (route?.completed) {
+      this.audioSystem.play('starGroup');
+      this.runFeedback?.collect(starObject.x, starObject.y, 0xffe292);
+      this.companions?.notifyStarGroup();
+    }
     this.audioSystem.play(award.streak > 2 ? "combo" : "starCollect");
     this.runFeedback?.collect(starObject.x, starObject.y);
     if (award.milestone !== null) this.showMilestone(award);
@@ -522,7 +620,14 @@ export class RunScene extends Phaser.Scene {
   }
 
   private onShutdown(): void {
-    this.deliveryView?.clear(); this.deliveryView = undefined; this.deliveryPanel = undefined;
+    this.starRoutes?.clear(); this.starRoutes = undefined;
+    this.goalView?.clear(); this.goalView = undefined;
+    this.runGoal?.clear(); this.runGoal = undefined;
+    this.travel?.clear(); this.travel = undefined;
+    this.landmarks?.clear(); this.landmarks = undefined;
+    this.animalExposureMs = 0; this.animalExposureKind = null;
+    this.deliveryView?.clear(); this.deliveryView = undefined;
+    this.deliveryPanel?.clear(); this.deliveryPanel = undefined;
     this.delivery = undefined;
     this.ambientLife?.clear();
     this.ambientLife = undefined;

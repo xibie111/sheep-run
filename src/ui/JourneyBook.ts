@@ -2,6 +2,7 @@ import type Phaser from "phaser";
 import { ACHIEVEMENTS, COMPLETE_LETTER, SEASON_LETTERS, type AchievementId, type RewardId } from "../data/journeyBook";
 import { journeyStore, achievementProgress } from "../systems/JourneyStore";
 import { UI_KEYS, uiIconKey } from "../data/uiAssets";
+import { achievementIconKey } from "../data/achievementIconAssets";
 import { watchViewport } from "../game/Viewport";
 import { safeUiInsets } from "./UiLayout";
 import { bindTouchTarget } from "./TouchTarget";
@@ -26,6 +27,7 @@ export function attachJourneyBook(scene:Phaser.Scene,resultIds?:readonly Achieve
   if(!scene.game.canvas?.parentElement||!scene.game.events)return {openReward:(_id:RewardId,_closed?:()=>void)=>{}};
   scene.data.set("journey-book-open",false);
   const text=displayCanvasText(scene),muted=displayCanvasText(scene,"#8a725e"),stampText=displayCanvasText(scene,"#446e50");
+  const achievementsPerPage=4,sceneryPage=Math.ceil(ACHIEVEMENTS.length/achievementsPerPage),totalPages=sceneryPage+1;
   let open=false,page=0,mode:"achievements"|"reward"|"detail"|"postcard"="achievements",reward:RewardId="spring",selected:AchievementId="first-run";
   let scenery=sceneryStore.load(),postcard=0;
   let snapshot=journeyStore.load(),panel:ArtRect,entryBox:ArtRect,k=1,closed:(()=>void)|undefined;
@@ -40,7 +42,7 @@ export function attachJourneyBook(scene:Phaser.Scene,resultIds?:readonly Achieve
   const b=(x:number,y:number,width:number,height:number):ArtRect=>({x:panel.x+x*k,y:panel.y+y*k,width:width*k,height:height*k});
   const art=(ctx:CanvasRenderingContext2D,key:string,box:ArtRect)=>{
     const image=scene.textures.get(key).getSourceImage() as HTMLImageElement;
-    if(key.startsWith("journey-")||key.startsWith("scenery-")){const ratio=Math.min(box.width/image.width,box.height/image.height),w=image.width*ratio,h=image.height*ratio;ctx.drawImage(image,0,0,image.width,image.height,box.x+(box.width-w)/2,box.y+(box.height-h)/2,w,h);}
+    if(key.startsWith("journey-")||key.startsWith("scenery-")||key.startsWith("achievement-icon-")){const ratio=Math.min(box.width/image.width,box.height/image.height),w=image.width*ratio,h=image.height*ratio;ctx.drawImage(image,0,0,image.width,image.height,box.x+(box.width-w)/2,box.y+(box.height-h)/2,w,h);}
     else ctx.drawImage(image,0,0,image.width,image.height,box.x,box.y,box.width,box.height);
   };
   const button=(ctx:CanvasRenderingContext2D,box:ArtRect,key:string=UI_KEYS.buttonSecondary)=>{
@@ -72,9 +74,9 @@ export function attachJourneyBook(scene:Phaser.Scene,resultIds?:readonly Achieve
         art(ctx,card.art,b(24,69,207,124));
         rows(card.message,b(246,75,157,15),12*k,19*k);
         line(scenery.saveFailed?"明信片暂未保存，本次仍可查看":"已遇见 · 随时可以回来看看",b(37,199,356,13),9*k,true);
-      }else if(mode==="achievements"&&page===2){
+      }else if(mode==="achievements"&&page===sceneryPage){
         line("风景明信片",b(60,27,310,21),17*k);
-        line(`已遇见 ${SCENERY_CARDS.filter(c=>scenery.seenIds.includes(c.id)).length} / ${SCENERY_CARDS.length} · 第 3 / 3 页`,b(80,50,270,13),10*k);
+        line(`已遇见 ${SCENERY_CARDS.filter(c=>scenery.seenIds.includes(c.id)).length} / ${SCENERY_CARDS.length} · 第 ${page+1} / ${totalPages} 页`,b(80,50,270,13),10*k);
         SCENERY_CARDS.forEach((card,i)=>{
           const x=25+(i%2)*195,y=77+Math.floor(i/2)*63,cell=b(x,y,185,57),seen=scenery.seenIds.includes(card.id);
           ctx.fillStyle=seen?"#fff0c9":"#e8d3ab";ctx.fillRect(cell.x,cell.y,cell.width,cell.height);
@@ -87,14 +89,11 @@ export function attachJourneyBook(scene:Phaser.Scene,resultIds?:readonly Achieve
         line(scenery.saveFailed?"明信片暂未保存，本次仍可查看":"遇见后自动收好，轻点明信片重看",b(40,204,350,10),9*k,true);
       }else if(mode==="achievements"){
         line("小羊旅行手账",b(60,27,310,21),17*k);
-        line(`点亮 ${Object.keys(snapshot.achieved).length} / ${ACHIEVEMENTS.length} · 第 ${page+1} / 3 页`,b(100,50,230,13),10*k);
-        ACHIEVEMENTS.slice(page*4,page*4+4).forEach((a,i)=>{
+        line(`点亮 ${Object.keys(snapshot.achieved).length} / ${ACHIEVEMENTS.length} · 第 ${page+1} / ${totalPages} 页`,b(100,50,230,13),10*k);
+        ACHIEVEMENTS.slice(page*achievementsPerPage,(page+1)*achievementsPerPage).forEach((a,i)=>{
           const x=25+(i%2)*195,y=77+Math.floor(i/2)*63,cell=b(x,y,185,57),done=Boolean(snapshot.achieved[a.id]);
           ctx.fillStyle=done?"#fff0c9":"#e8d3ab";ctx.fillRect(cell.x,cell.y,cell.width,cell.height);
-          ctx.fillStyle=done?"#6f9471":"#ab9d85";ctx.fillRect(cell.x+5*k,cell.y+11*k,30*k,30*k);
-          ctx.fillStyle=done?"#e9f0c6":"#e8dec5";ctx.fillRect(cell.x+7*k,cell.y+13*k,26*k,26*k);
-          const icon=a.icon==="bell"?"companion-sheep-bell":a.icon==="flower"?"collection-spring-flower":uiIconKey(a.icon);
-          ctx.save();ctx.globalAlpha=done?1:.35;art(ctx,icon,b(x+11,y+17,18,18));ctx.restore();
+          ctx.save();ctx.globalAlpha=done?1:.5;art(ctx,achievementIconKey(a.id),b(x+5,y+12,30,30));ctx.restore();
           line(a.name,b(x+41,y+3,138,17),12*k);
           line(a.condition,b(x+41,y+21,138,12),9*k,!done);
           line(done?`达成 ${snapshot.achieved[a.id]}`:`进度 ${achievementProgress(snapshot,a.id)} / ${a.goal}`,b(x+41,y+37,138,12),9*k,!done);
@@ -104,8 +103,9 @@ export function attachJourneyBook(scene:Phaser.Scene,resultIds?:readonly Achieve
       }else if(mode==="detail"){
         const a=ACHIEVEMENTS.find(a=>a.id===selected)!;
         line(a.name,b(55,30,320,22),18*k);line(a.condition,b(55,59,320,16),11*k);
-        ctx.fillStyle=snapshot.achieved[a.id]?"#6f9471":"#ab9d85";ctx.fillRect(panel.x+185*k,panel.y+87*k,60*k,50*k);
-        const done=Boolean(snapshot.achieved[a.id]);stampText(ctx,done?"达成":"期待",b(187,102,56,20),17*k);
+        const done=Boolean(snapshot.achieved[a.id]);
+        ctx.save();ctx.globalAlpha=done?1:.5;art(ctx,achievementIconKey(a.id),b(193,90,44,44));ctx.restore();
+        stampText(ctx,done?"达成":"期待",b(243,102,56,20),14*k);
         rows(done?a.message:"每次奔跑都会留下进步。慢慢来，牧场一直等你。",b(57,151,316,15),11*k,15*k);
         line(done?`达成日期 ${snapshot.achieved[a.id]}`:`进度 ${achievementProgress(snapshot,a.id)} / ${a.goal}`,b(65,195,300,13),10*k,!done);
       }else if(reward==="all"){
@@ -136,8 +136,9 @@ export function attachJourneyBook(scene:Phaser.Scene,resultIds?:readonly Achieve
     const owner=menuModalOwner(scene),active=open&&owner==="journey";
     entry.input!.enabled=!open&&!album&&!owner;
     modal.forEach(t=>t.input!.enabled=active);
-    const paging=mode==="achievements"||(mode==="reward"&&reward==="all");prev.input!.enabled=next.input!.enabled=active&&paging;
-    cards.forEach((c,i)=>c.input!.enabled=active&&mode==="achievements"&&(page!==2||!!SCENERY_CARDS[i]&&scenery.seenIds.includes(SCENERY_CARDS[i].id)));
+    const paging=mode==="achievements"||(mode==="reward"&&reward==="all"),last=mode==="achievements"?sceneryPage:COMPLETE_LETTER.length;
+    prev.input!.enabled=active&&paging&&page>0;next.input!.enabled=active&&paging&&page<last;
+    cards.forEach((c,i)=>c.input!.enabled=active&&mode==="achievements"&&(page===sceneryPage?!!SCENERY_CARDS[i]&&scenery.seenIds.includes(SCENERY_CARDS[i].id):!!ACHIEVEMENTS[page*achievementsPerPage+i]));
   };
   const changed=()=>{snapshot=journeyStore.load();scenery=sceneryStore.load();updateTargets();surface.invalidate();};
   const feedback=(key:string)=>(value:boolean)=>{value?pressed.add(key):pressed.delete(key);surface.invalidate();};
@@ -146,11 +147,12 @@ export function attachJourneyBook(scene:Phaser.Scene,resultIds?:readonly Achieve
   const shut=()=>{if(mode==="detail"||mode==="postcard"){mode="achievements";changed();return;}open=false;scene.data.set("journey-book-open",false);release?.();release=undefined;sound();closed?.();closed=undefined;changed();};
   bindTouchTarget(scene,entry,56,48,()=>{mode="achievements";page=0;show();},feedback("entry"));
   bindTouchTarget(scene,blocker,1,1,()=>{},()=>{});bindTouchTarget(scene,close,124,32,shut,feedback("close"));
-  const flip=(direction:number)=>{const last=mode==="achievements"?2:COMPLETE_LETTER.length;page=Math.max(0,Math.min(last,page+direction));if(mode==="reward"&&page===last)journeyStore.readReward("all");sound();changed();};
+  const flip=(direction:number)=>{const last=mode==="achievements"?sceneryPage:COMPLETE_LETTER.length;page=Math.max(0,Math.min(last,page+direction));if(mode==="reward"&&page===last)journeyStore.readReward("all");sound();changed();};
   bindTouchTarget(scene,prev,91,32,()=>flip(-1),feedback("prev"));bindTouchTarget(scene,next,91,32,()=>flip(1),feedback("next"));
   cards.forEach((target,i)=>bindTouchTarget(scene,target,185,57,()=>{
-    if(page===2){if(!SCENERY_CARDS[i]||!scenery.seenIds.includes(SCENERY_CARDS[i].id))return;postcard=i;mode="postcard";}
-    else {selected=ACHIEVEMENTS[page*4+i].id;mode="detail";journeyStore.readAchievement(selected);}
+    if(mode!=="achievements")return;
+    if(page===sceneryPage){if(!SCENERY_CARDS[i]||!scenery.seenIds.includes(SCENERY_CARDS[i].id))return;postcard=i;mode="postcard";}
+    else {const achievement=ACHIEVEMENTS[page*achievementsPerPage+i];if(!achievement)return;selected=achievement.id;mode="detail";journeyStore.readAchievement(selected);}
     sound();changed();
   },feedback(`card:${i}`)));
   const place=(target:Phaser.GameObjects.Container,box:ArtRect,hitHeight=box.height)=>{target.setPosition(box.x+box.width/2,box.y+box.height/2).setSize(box.width,hitHeight);target.input!.hitArea.setSize(box.width,hitHeight);};

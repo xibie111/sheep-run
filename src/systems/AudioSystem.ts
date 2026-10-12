@@ -1,15 +1,18 @@
 import { SaveSystem, type SaveData } from "./SaveSystem";
 import { PASTURE_MUSIC } from "../data/musicAssets";
 
-export type AudioCue = "jump" | "land" | "starCollect" | "nearMiss" | "hit" | "dash" | "powerUp" | "combo" | "gameOver" | "newRecord" | "button" | "bell";
+export type AudioCue = "jump" | "land" | "starCollect" | "starGroup" | "nearMiss" | "hit" | "dash" | "powerUp" | "combo" | "gameOver" | "newRecord" | "button" | "bell";
 export type AudioChannel = "music" | "sfx";
 
-type CueDefinition = { frequency: number; duration: number; wave: OscillatorType };
+type CueDefinition = { frequency: number; duration: number; wave: OscillatorType;
+  peakGain?: number; notes?: readonly { frequency: number; offsetSeconds: number }[] };
 
 const CUES: Record<AudioCue, CueDefinition> = {
   jump: { frequency: 520, duration: 0.09, wave: "sine" },
   land: { frequency: 180, duration: 0.07, wave: "triangle" },
   starCollect: { frequency: 880, duration: 0.12, wave: "sine" },
+  starGroup: { frequency: 660, duration: 0.24, wave: "sine", peakGain: 0.04,
+    notes: [{ frequency: 880, offsetSeconds: 0.07 }, { frequency: 1108, offsetSeconds: 0.14 }] },
   nearMiss: { frequency: 660, duration: 0.16, wave: "triangle" },
   hit: { frequency: 120, duration: 0.18, wave: "sawtooth" },
   dash: { frequency: 330, duration: 0.12, wave: "triangle" },
@@ -71,7 +74,8 @@ export class AudioSystem {
     const envelope = this.context.createGain();
     oscillator.type = definition.wave;
     oscillator.frequency.setValueAtTime(definition.frequency, now);
-    envelope.gain.setValueAtTime(Math.max(0.0001, this.settings.sfxVolume * 0.055), now);
+    for (const note of definition.notes ?? []) oscillator.frequency.setValueAtTime(note.frequency, now + note.offsetSeconds);
+    envelope.gain.setValueAtTime(Math.max(0.0001, this.settings.sfxVolume * (definition.peakGain ?? 0.055)), now);
     envelope.gain.exponentialRampToValueAtTime(0.0001, now + definition.duration);
     oscillator.connect(envelope);
     envelope.connect(this.context.destination);

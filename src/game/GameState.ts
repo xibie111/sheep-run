@@ -11,4 +11,6 @@ export interface ResultSceneData extends RunResult {
   coinsEarned: number;
   coinBalance: number;
   achievements?: import("../data/journeyBook").AchievementId[];
+  travel?: import('../runner-v2/RunTravel').RunTravelSnapshot;
+  leadSkin?: import('../data/sheepSkins').SkinId;
 }

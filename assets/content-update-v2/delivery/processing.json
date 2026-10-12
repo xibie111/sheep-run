@@ -1,0 +1,90 @@
+{
+  "tool": "built-in image_gen",
+  "packing": [
+    {
+      "name": "dusk-pasture",
+      "crop": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "output": [
+        960,
+        540
+      ],
+      "resampling": "NEAREST",
+      "sourceAlphaRetainedInOriginal": true,
+      "runtimeAlpha": "original opaque"
+    },
+    {
+      "name": "field",
+      "crop": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "output": [
+        960,
+        540
+      ],
+      "resampling": "NEAREST",
+      "sourceAlphaRetainedInOriginal": true,
+      "runtimeAlpha": "original opaque"
+    },
+    {
+      "name": "cottage",
+      "crop": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "output": [
+        960,
+        540
+      ],
+      "resampling": "NEAREST",
+      "sourceAlphaRetainedInOriginal": true,
+      "runtimeAlpha": "original opaque"
+    },
+    {
+      "name": "dinner-ending",
+      "crop": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "output": [
+        960,
+        540
+      ],
+      "resampling": "NEAREST",
+      "sourceAlphaRetainedInOriginal": true,
+      "runtimeAlpha": "original opaque"
+    },
+    {
+      "name": "lunchbox",
+      "crop": [
+        49,
+        70,
+        1403,
+        1080
+      ],
+      "output": [
+        64,
+        48
+      ],
+      "resampling": "NEAREST",
+      "sourceAlphaRetainedInOriginal": true,
+      "runtimeAlpha": "hard 0/255 threshold96"
+    }
+  ],
+  "postcard": "dinner-ending illustration with generated chapterCard frame drawn at runtime",
+  "referenceRoles": {
+    "backgrounds/menu-pasture-v1.png": "style and environment",
+    "skins/generated-v1/white-source.png": "character identity"
+  }
+}

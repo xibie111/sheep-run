@@ -20,6 +20,26 @@ function trace(seed: number, speed: number, duration: number, dashEnabled: boole
 }
 
 describe("SpawnScheduler", () => {
+  it("reports a read-only star route forecast without skipping the opening or continuing obstacle groups", () => {
+    const spawn = new SpawnSystem(876);
+    spawn.update(RUN.safeSpawnWindow - .01, RUN.initialSpeed);
+    expect(spawn.starRouteWindow(RUN.initialSpeed).openingSafe).toBe(false);
+    expect(spawn.starRouteWindow(RUN.initialSpeed).nextObstacleInPx).toBeCloseTo(RUN.initialSpeed * .01);
+    let foundContinuous = false;
+    for (let frame = 0; frame < 2000; frame += 1) {
+      const requests = spawn.update(.04, RUN.initialSpeed);
+      const forecast = spawn.starRouteWindow(RUN.initialSpeed);
+      expect(forecast.openingSafe).toBe(true);
+      expect(forecast.nextObstacleInPx).toBeGreaterThanOrEqual(0);
+      for (const request of requests) if (request.type === 'obstacle') {
+        expect(forecast.patternEnded).toBe(request.pattern.index === request.pattern.length - 1);
+        expect(forecast.nextObstacleInPx).toBeGreaterThan(request.definition.width);
+        if (!forecast.patternEnded) foundContinuous = true;
+      }
+    }
+    expect(foundContinuous).toBe(true);
+    expect(spawn.starRouteWindow(Number.NaN).nextObstacleInPx).toBe(0);
+  });
   it("spawns every registered type even at the initial speed", () => {
     for (const speed of [RUN.initialSpeed, 269.9, 270, RUN.maxSpeed]) {
       const obstacles = trace(78, speed, 600).flatMap(item => item.request.type === "obstacle" ? [item.request.definition.kind] : []);

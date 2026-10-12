@@ -1,0 +1,592 @@
+{
+  "tool": "tools/pack-achievement-icons.py",
+  "runtimeSize": [
+    32,
+    32
+  ],
+  "contentMaxSize": 28,
+  "resampling": "NEAREST",
+  "alpha": "Generated alpha retained; no color key or background replacement",
+  "entries": [
+    {
+      "id": "first-run",
+      "source": "sources/first-run.png",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "sourceSha256": "bc4f3f550a3925f7e0fd54544c76389f83ca7be14f192f012277f19805536d51",
+      "crop": [
+        139,
+        270,
+        1120,
+        1040
+      ],
+      "contentSize": [
+        28,
+        22
+      ],
+      "position": [
+        2,
+        5
+      ],
+      "runtime": "runtime/first-run.png",
+      "runtimeSize": [
+        32,
+        32
+      ],
+      "runtimeSha256": "d3bf07e5808a205ddc2338b7c945f4db24fe32aa99721b0298cc639b82577efd"
+    },
+    {
+      "id": "first-friend",
+      "source": "sources/first-friend.png",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "sourceSha256": "42a8ae85c4c4b65e0e76288fb4db3982a4ccc743378d97e6a351d0aaa8ca79ce",
+      "crop": [
+        120,
+        265,
+        1131,
+        1063
+      ],
+      "contentSize": [
+        28,
+        22
+      ],
+      "position": [
+        2,
+        5
+      ],
+      "runtime": "runtime/first-friend.png",
+      "runtimeSize": [
+        32,
+        32
+      ],
+      "runtimeSha256": "4c9c3af7f8fb9879e49891b3ac1385099fc312edb89bc4504e34e2297d7c5875"
+    },
+    {
+      "id": "five-friends",
+      "source": "sources/five-friends.png",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "sourceSha256": "d476b285d3d610fd261d30511e14c63068a30de0b15b3434bdcb97a00d9c1dc6",
+      "crop": [
+        108,
+        255,
+        1160,
+        1097
+      ],
+      "contentSize": [
+        28,
+        22
+      ],
+      "position": [
+        2,
+        5
+      ],
+      "runtime": "runtime/five-friends.png",
+      "runtimeSize": [
+        32,
+        32
+      ],
+      "runtimeSha256": "1c6bdd7e611caac47745f6df396ac84fce231e28be94e83becd411e901c8a6d5"
+    },
+    {
+      "id": "ten-stars",
+      "source": "sources/ten-stars.png",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "sourceSha256": "aad0a35c9b6869ee194072d438f1466f14aa570c3782f58e60198a26f429d468",
+      "crop": [
+        281,
+        212,
+        1017,
+        1118
+      ],
+      "contentSize": [
+        23,
+        28
+      ],
+      "position": [
+        4,
+        2
+      ],
+      "runtime": "runtime/ten-stars.png",
+      "runtimeSize": [
+        32,
+        32
+      ],
+      "runtimeSha256": "9f949d47efb195696403ca9526b42fdac2db88c20893a7895b53b29d821a8f7e"
+    },
+    {
+      "id": "twenty-obstacles",
+      "source": "sources/twenty-obstacles.png",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "sourceSha256": "33904bd1ddb92d50f788fb4924a27c4b466d008791a8a7006f58aa9cac2ff4bf",
+      "crop": [
+        169,
+        227,
+        1091,
+        1136
+      ],
+      "contentSize": [
+        28,
+        28
+      ],
+      "position": [
+        2,
+        2
+      ],
+      "runtime": "runtime/twenty-obstacles.png",
+      "runtimeSize": [
+        32,
+        32
+      ],
+      "runtimeSha256": "352c2aa990ad0845e9afb34f40133b20ba9d89ae935dd1d277bdd934d7b76a03"
+    },
+    {
+      "id": "first-record",
+      "source": "sources/first-record.png",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "sourceSha256": "b4ce3cbf5251a639439245ded135450313f5c732bccd2291598e971a42f2c805",
+      "crop": [
+        137,
+        263,
+        1118,
+        1031
+      ],
+      "contentSize": [
+        28,
+        22
+      ],
+      "position": [
+        2,
+        5
+      ],
+      "runtime": "runtime/first-record.png",
+      "runtimeSize": [
+        32,
+        32
+      ],
+      "runtimeSha256": "b9749924fff7d1b9f5728db1a82e112d4c25005f7ba3cf427f9f76b50363be45"
+    },
+    {
+      "id": "four-seasons",
+      "source": "sources/four-seasons.png",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "sourceSha256": "076517da0e1edf2952fe11e91a0afcbbeee29ee5cdf25f0b71e4af2f3364c828",
+      "crop": [
+        104,
+        130,
+        1154,
+        1146
+      ],
+      "contentSize": [
+        28,
+        27
+      ],
+      "position": [
+        2,
+        2
+      ],
+      "runtime": "runtime/four-seasons.png",
+      "runtimeSize": [
+        32,
+        32
+      ],
+      "runtimeSha256": "630e7175f12cda02339004b9f832eb1bf1218b4676b3f582cac844694b1c6006"
+    },
+    {
+      "id": "five-skins",
+      "source": "sources/five-skins.png",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "sourceSha256": "902e9df3570327b7f9ec75c4f60a9fb79609220f89b63f84c56d6584854c5080",
+      "crop": [
+        99,
+        114,
+        1155,
+        1139
+      ],
+      "contentSize": [
+        28,
+        27
+      ],
+      "position": [
+        2,
+        2
+      ],
+      "runtime": "runtime/five-skins.png",
+      "runtimeSize": [
+        32,
+        32
+      ],
+      "runtimeSha256": "7ff97ab764885c47b904b9baf51b7feaf80b41ccd20235c3ec6fed8700be3fc6"
+    },
+    {
+      "id": "five-runs",
+      "source": "sources/five-runs.png",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "sourceSha256": "081b2d246530335b1951e57fdb914fa4520495f8cdd7cbbfe7fc43179ed5c606",
+      "crop": [
+        286,
+        288,
+        1036,
+        1034
+      ],
+      "contentSize": [
+        28,
+        28
+      ],
+      "position": [
+        2,
+        2
+      ],
+      "runtime": "runtime/five-runs.png",
+      "runtimeSize": [
+        32,
+        32
+      ],
+      "runtimeSha256": "eb2e28284ee1ab219cfc303b9d84803fef29b08feccaa7389cfbbd635f1efc62"
+    },
+    {
+      "id": "twenty-runs",
+      "source": "sources/twenty-runs.png",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "sourceSha256": "48c3b6af06746b282367f83a05d1cc88dd38f2f9ae5f659e7ffd16431a9d4b7e",
+      "crop": [
+        172,
+        227,
+        1116,
+        1063
+      ],
+      "contentSize": [
+        28,
+        25
+      ],
+      "position": [
+        2,
+        3
+      ],
+      "runtime": "runtime/twenty-runs.png",
+      "runtimeSize": [
+        32,
+        32
+      ],
+      "runtimeSha256": "6174d6b36c985bc9ebcb38287a76fef6a6cf173d88bc6bb15b0b143e3ee44bea"
+    },
+    {
+      "id": "twenty-friends",
+      "source": "sources/twenty-friends.png",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "sourceSha256": "f9c9e8860fc75223280983b2d2841f4cece343d060b013488023d03f9c8621e2",
+      "crop": [
+        74,
+        194,
+        1181,
+        1110
+      ],
+      "contentSize": [
+        28,
+        23
+      ],
+      "position": [
+        2,
+        4
+      ],
+      "runtime": "runtime/twenty-friends.png",
+      "runtimeSize": [
+        32,
+        32
+      ],
+      "runtimeSha256": "3fec8b7751e5ff2edf16d35d6d75a42cd2748d2b0136b0caa5064274b14c2bed"
+    },
+    {
+      "id": "twenty-five-stars",
+      "source": "sources/twenty-five-stars.png",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "sourceSha256": "33e8a9b2afcc470851806d8da0a0af1b89f1b56667cb333dac0c4dcb3ee9e755",
+      "crop": [
+        243,
+        184,
+        1011,
+        1107
+      ],
+      "contentSize": [
+        23,
+        28
+      ],
+      "position": [
+        4,
+        2
+      ],
+      "runtime": "runtime/twenty-five-stars.png",
+      "runtimeSize": [
+        32,
+        32
+      ],
+      "runtimeSha256": "4e4052587f0f5458bb4d40dff401f25e9246708b33b5a84b0fc85169b413abb9"
+    },
+    {
+      "id": "fifty-stars",
+      "source": "sources/fifty-stars.png",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "sourceSha256": "0e9839e6cb783d6a522b5b17bf062db3fb3d7f4ab854f39457b7982244506b72",
+      "crop": [
+        119,
+        205,
+        1135,
+        1129
+      ],
+      "contentSize": [
+        28,
+        25
+      ],
+      "position": [
+        2,
+        3
+      ],
+      "runtime": "runtime/fifty-stars.png",
+      "runtimeSize": [
+        32,
+        32
+      ],
+      "runtimeSha256": "b4d1421e51809bb73293f0fd9a18d6e7b2e25cee5b8b5cb2a4561db3afb3c1bd"
+    },
+    {
+      "id": "fifty-obstacles",
+      "source": "sources/fifty-obstacles.png",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "sourceSha256": "b8c2bff7602d52566eb0bd58c363697297b659da7e6b8415c0e3be009ce05831",
+      "crop": [
+        150,
+        247,
+        1104,
+        1084
+      ],
+      "contentSize": [
+        28,
+        25
+      ],
+      "position": [
+        2,
+        3
+      ],
+      "runtime": "runtime/fifty-obstacles.png",
+      "runtimeSize": [
+        32,
+        32
+      ],
+      "runtimeSha256": "5e1cd58a2853ae60c91ac159fab05dd13ac19928c47695c9308111c09ae34ed9"
+    },
+    {
+      "id": "ten-skins",
+      "source": "sources/ten-skins.png",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "sourceSha256": "056ef612f9a1ba280207bdf99a67ebf3877e87e43cef1cdedc239076cf9ba4c4",
+      "crop": [
+        123,
+        119,
+        1134,
+        1103
+      ],
+      "contentSize": [
+        28,
+        27
+      ],
+      "position": [
+        2,
+        2
+      ],
+      "runtime": "runtime/ten-skins.png",
+      "runtimeSize": [
+        32,
+        32
+      ],
+      "runtimeSha256": "772c8dd8ee4884103a0d516d4682bdaa5e2cf960a6552282aee20376a060cd13"
+    },
+    {
+      "id": "spring-collector",
+      "source": "sources/spring-collector.png",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "sourceSha256": "59ec77790a3b5778a2fbde77e8192c63fb87c9765e2fa6d643b19616aa8e714a",
+      "crop": [
+        212,
+        241,
+        1061,
+        1040
+      ],
+      "contentSize": [
+        28,
+        26
+      ],
+      "position": [
+        2,
+        3
+      ],
+      "runtime": "runtime/spring-collector.png",
+      "runtimeSize": [
+        32,
+        32
+      ],
+      "runtimeSha256": "bae7f5fb37f89ed75a9b805c8e6a286e43fbb58a4d05069294d95e2230127940"
+    },
+    {
+      "id": "summer-collector",
+      "source": "sources/summer-collector.png",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "sourceSha256": "bbd5054efe238045fe9324e7a1cb16a6823e183435ac1133ecd09896bfe4786d",
+      "crop": [
+        167,
+        271,
+        1106,
+        1035
+      ],
+      "contentSize": [
+        28,
+        23
+      ],
+      "position": [
+        2,
+        4
+      ],
+      "runtime": "runtime/summer-collector.png",
+      "runtimeSize": [
+        32,
+        32
+      ],
+      "runtimeSha256": "6996af5762cf7f6ab47d5cac2016eae920b48695acd8bb162c8d8b75160e607a"
+    },
+    {
+      "id": "autumn-collector",
+      "source": "sources/autumn-collector.png",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "sourceSha256": "c2ea8b4b340b3426e9b7acf4c94c42ba88007923b19ba40c775991057d849720",
+      "crop": [
+        183,
+        212,
+        1075,
+        1053
+      ],
+      "contentSize": [
+        28,
+        26
+      ],
+      "position": [
+        2,
+        3
+      ],
+      "runtime": "runtime/autumn-collector.png",
+      "runtimeSize": [
+        32,
+        32
+      ],
+      "runtimeSha256": "3bbd59157baddb65c532ec54c8ea138fcd0f1b85f81b741caa42af0f6305d336"
+    },
+    {
+      "id": "winter-collector",
+      "source": "sources/winter-collector.png",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "sourceSha256": "bb264ef31ea633ec14c33d0a45905f506dd4fd6110df495faf65d2a3bda38efa",
+      "crop": [
+        189,
+        229,
+        1095,
+        1095
+      ],
+      "contentSize": [
+        28,
+        27
+      ],
+      "position": [
+        2,
+        2
+      ],
+      "runtime": "runtime/winter-collector.png",
+      "runtimeSize": [
+        32,
+        32
+      ],
+      "runtimeSha256": "6d08d4f2d8b772eb95495f11e98399231a57b66d46d246b66dcb079bae2a4f12"
+    },
+    {
+      "id": "all-collections",
+      "source": "sources/all-collections.png",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "sourceSha256": "736a7816264a789d4b8f7efcb6a8ce5661e8fc5943ee354ecb4f7dc0c7f4b274",
+      "crop": [
+        145,
+        157,
+        1138,
+        1105
+      ],
+      "contentSize": [
+        28,
+        27
+      ],
+      "position": [
+        2,
+        2
+      ],
+      "runtime": "runtime/all-collections.png",
+      "runtimeSize": [
+        32,
+        32
+      ],
+      "runtimeSha256": "c34d8173e3b20f8d4986ad3233548018aa6bd12bf9919323e8fc25b2c494401e"
+    }
+  ]
+}

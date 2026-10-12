@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-12",
+  "mode": "built-in image_gen",
+  "references": {
+    "style": ["assets/backgrounds/menu-pasture-v1.png", "assets/ui/result-reference-v1/panel.png"],
+    "character": "assets/skins/generated-v1/white-source.png"
+  },
+  "outputs": [
+    {"source": "sources/pages-reference.png", "prompt": "prompts/pages-reference.txt", "transparent": false, "use": "UI composition reference only; never preload"},
+    {"source": "sources/trip-paper.png", "prompt": "prompts/trip-paper.txt", "transparent": true, "use": "first variant retained; runtime uses taller v2"},
+    {"source": "sources/trip-paper-v2.png", "prompt": "prompts/trip-paper-v2.txt", "transparent": true, "use": "runtime paper"},
+    {"source": "sources/ui-kit.png", "prompt": "prompts/ui-kit.txt", "transparent": true, "use": "entry, chapter card and six stamp crops; middle top icon variant unused"},
+    {"source": "sources/close.png", "prompt": "prompts/close.txt", "transparent": true, "use": "blank action button"}
+  ],
+  "processing": "processing.json",
+  "reproduce": "python tools/content-v2/ui-pack.py",
+  "runtime": "runtime/*.png",
+  "text": "None baked into assets. Local bitmap font renders titles, paragraphs and numbers."
+}

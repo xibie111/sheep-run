@@ -8,6 +8,13 @@ export type SpawnRequest =
   | { type: "star"; y: number; phase: number }
   | { type: "powerUp"; powerUp: PowerUpType; y: number; phase: number };
 
+/** Read-only forecast for cosmetic pickup placement; it never advances a stream. */
+export interface StarRouteWindow {
+  readonly openingSafe: boolean;
+  readonly patternEnded: boolean;
+  readonly nextObstacleInPx: number;
+}
+
 export class SpawnSystem {
   private randomState = 1;
   private obstacleRandomState = 1;
@@ -97,6 +104,20 @@ export class SpawnSystem {
     }
 
     return requests;
+  }
+
+  starRouteWindow(speed: number): StarRouteWindow {
+    const patternEnded = !this.pattern || this.patternIndex >= this.pattern.obstacles.length;
+    const requiredDistance = this.lastObstacle
+      ? this.lastObstacle.width + obstacleGap(speed, this.jumpImpulseMultiplier, patternEnded) + this.gapVariation
+      : 0;
+    return {
+      openingSafe: this.openingTimer <= 0,
+      patternEnded,
+      nextObstacleInPx: Number.isFinite(speed) && speed > 0
+        ? Math.max(0, requiredDistance - this.obstacleDistance, this.openingTimer * speed)
+        : 0,
+    };
   }
 
   private nextRandom(): number {

@@ -1,6 +1,6 @@
 import type Phaser from "phaser";
 import { RUN_HUD_ASSET, RUN_HUD_DIGITS, RUN_HUD_FRAMES } from "../data/runHudAssets";
-import { uiIconKey } from "../data/uiAssets";
+import { RUN_STAR_ART } from "../data/collectibleArtAssets";
 import { SCENE } from "../game/Constants";
 import { watchViewport } from "../game/Viewport";
 import { safeUiInsets } from "./UiLayout";
@@ -32,7 +32,7 @@ export function attachRunHudArt(scene: Phaser.Scene, values: () => RunHudValues,
   const context = canvas.getContext("2d")!;
   parent.appendChild(canvas);
   const source = scene.textures.get(RUN_HUD_ASSET.key).getSourceImage() as HTMLImageElement;
-  const starIcon = scene.textures.get(uiIconKey("star")).getSourceImage() as HTMLImageElement;
+  const starIcon = scene.textures.get(RUN_STAR_ART.key).getSourceImage() as HTMLImageElement;
   const drawGlyph = sharpBitmap(source);
   const digits: Readonly<Record<string, ArtRect>> = RUN_HUD_DIGITS;
   const nativeHeight = 101, nativeGap = 14;
@@ -95,7 +95,7 @@ export function attachRunHudArt(scene: Phaser.Scene, values: () => RunHudValues,
     const starNumberWidth = measure(numberStrings.stars!) * fontSize / nativeHeight;
     const starX = layout.stars.x + (layout.stars.width - starWidth - starGap - starNumberWidth) / 2;
     const starRect = { x: starX, y: starBox.y + (starBox.height - starWidth) / 2, width: starWidth, height: starWidth };
-    context.drawImage(starIcon, 0, 0, 45, 45, starRect.x, starRect.y, starRect.width, starRect.height);
+    context.drawImage(starIcon, 0, 0, starIcon.width, starIcon.height, starRect.x, starRect.y, starRect.width, starRect.height);
     typography.stars = { number: drawNumbers(numberStrings.stars!,
       { ...starBox, x: starX + starWidth + starGap, width: starNumberWidth }, fontSize) };
     if (current.streak > 1) typography.streak = { number: drawLine(RUN_HUD_FRAMES.streakPrefix, numberStrings.streak!, layout.streak, fontSize) };
@@ -124,6 +124,7 @@ export function attachRunHudArt(scene: Phaser.Scene, values: () => RunHudValues,
     canvas.dataset.typography = JSON.stringify(typography); canvas.dataset.paused = String(paused);
     canvas.dataset.pressed = String(pressed); canvas.dataset.plaques = "score,best";
     canvas.dataset.starIcon = JSON.stringify(starRect); canvas.dataset.starFrame = "false";
+    canvas.dataset.starTexture = RUN_STAR_ART.key;
   };
   const cleanup = (): void => {
     stopLayout(); scene.game.events.off("postrender", paint);
