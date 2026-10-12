@@ -1,0 +1,22 @@
+{
+  "tool": "built-in image_gen",
+  "date": "2026-10-12",
+  "styleReferencesViewed": [
+    "assets/mailbox-ui-v2/runtime/mail-letter-panel.png",
+    "assets/content-update-v2/delivery/runtime/dinner-postcard.png",
+    "assets/backgrounds/menu-pasture-v1.png"
+  ],
+  "characterReferencesViewed": [
+    "assets/skins/generated-v1/white-source.png",
+    "assets/skins/generated-v2/sleepy-mint-source.png"
+  ],
+  "outputs": [
+    {"source": "sources/chapter-page-reference.png", "prompt": "prompts/chapter-page-reference.txt", "purpose": "reference-only", "transparentRequested": false},
+    {"source": "sources/success-page-reference.png", "prompt": "prompts/success-page-reference.txt", "purpose": "reference-only", "transparentRequested": false},
+    {"source": "sources/album-page-reference.png", "prompt": "prompts/album-page-reference.txt", "purpose": "reference-only", "transparentRequested": false},
+    {"source": "sources/ui-frames-original.png", "prompt": "prompts/ui-frames.txt", "purpose": "production sprite sheet", "transparentRequested": true},
+    {"source": "sources/ui-icons-original.png", "prompt": "prompts/ui-icons.txt", "purpose": "production sprite sheet", "transparentRequested": true}
+  ],
+  "failedAttempts": "Six preceding requests failed with network/connection errors before producing output. These are not runtime assets. No CLI or API fallback was used.",
+  "runtimeProcessing": "processing.json; tools/delivery-expansion-v1/ui-pack.py performs crop, alpha threshold and proportional NEAREST reduction only. Full-page mockups are never loaded by production."
+}

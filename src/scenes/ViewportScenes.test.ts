@@ -14,7 +14,7 @@ vi.mock("../ui/UiIcon", () => ({ addUiIcon: (scene: Harness, x: number, y: numbe
 vi.mock("../systems/SaveSystem", () => ({ SaveSystem: { load: () => ({
   highScore: 25, totalStars: 10, coins: 20, selectedSkin: "white", unlockedSkins: ["white"],
   settings: { music: true, sfx: true, musicVolume: 0.5, sfxVolume: 0.5 },
-}) } }));
+}), availableStars: (save: { totalStars: number; spentStars?: number } = { totalStars: 10 }) => Math.max(0, save.totalStars - (save.spentStars ?? 0)) } }));
 // Keep scene layout and actual SceneButton/TouchTarget behavior; texture construction is
 // independently owned by the backdrop helpers and needs a browser's rendering context.
 vi.mock("../ui/PastureUi", () => ({

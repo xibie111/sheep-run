@@ -1,0 +1,65 @@
+{
+  "tool": "built-in image_gen",
+  "skins": [
+    {
+      "source": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39\\exec-ac4d0061-9db8-4640-b4d9-936a1d97a068.png",
+      "destination": "D:/DSH workspace/sheep-run/assets/skins/generated-v4/strawberry-v1-source.png",
+      "id": "strawberry-v1",
+      "promptFile": "prompts.json",
+      "tool": "built-in image_gen"
+    },
+    {
+      "source": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39\\exec-eb07687b-49fb-4ef8-bb29-c3fb30df7512.png",
+      "destination": "D:/DSH workspace/sheep-run/assets/skins/generated-v4/lemon-v1-source.png",
+      "id": "lemon-v1",
+      "promptFile": "prompts.json",
+      "tool": "built-in image_gen"
+    },
+    {
+      "source": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39\\exec-3aa35a58-c115-4ac9-a54c-00fa3ec73928.png",
+      "destination": "D:/DSH workspace/sheep-run/assets/skins/generated-v4/sailor-v1-source.png",
+      "id": "sailor-v1",
+      "promptFile": "prompts.json",
+      "tool": "built-in image_gen"
+    },
+    {
+      "source": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39\\exec-8a33ff4f-2b52-4c0b-ad02-6ade7884026f.png",
+      "destination": "D:/DSH workspace/sheep-run/assets/skins/generated-v4/starlight-v1-source.png",
+      "id": "starlight-v1",
+      "promptFile": "prompts.json",
+      "tool": "built-in image_gen"
+    },
+    {
+      "source": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39\\exec-99d85b83-995c-42db-b973-a5506ddd3f31.png",
+      "destination": "D:/DSH workspace/sheep-run/assets/skins/generated-v4/postman-v1-source.png",
+      "id": "postman-v1",
+      "promptFile": "prompts.json",
+      "tool": "built-in image_gen"
+    },
+    {
+      "source": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39\\exec-2e4293c4-5a90-4cf0-9cb3-fd506a7189c6.png",
+      "destination": "D:/DSH workspace/sheep-run/assets/skins/generated-v4/raincoat-v1-source.png",
+      "id": "raincoat-v1",
+      "promptFile": "prompts.json",
+      "tool": "built-in image_gen"
+    },
+    {
+      "source": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39\\exec-a3933bbd-7343-44c5-a66f-daecca2779fd.png",
+      "destination": "D:/DSH workspace/sheep-run/assets/skins/generated-v4/explorer-v1-source.png",
+      "id": "explorer-v1",
+      "promptFile": "prompts.json",
+      "tool": "built-in image_gen"
+    },
+    {
+      "source": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39\\exec-00823e2d-dc29-41da-a17b-a66022858065.png",
+      "destination": "D:/DSH workspace/sheep-run/assets/skins/generated-v4/astronaut-v1-source.png",
+      "id": "astronaut-v1",
+      "promptFile": "prompts.json",
+      "tool": "built-in image_gen"
+    }
+  ],
+  "reference": {
+    "source": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39\\exec-ab982c6d-a411-481a-8118-e9dfa020d99e.png",
+    "destination": "D:/DSH workspace/sheep-run/assets/skins/generated-v4/wardrobe-reference-source.png"
+  }
+}

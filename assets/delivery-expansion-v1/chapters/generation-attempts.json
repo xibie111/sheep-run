@@ -1,0 +1,18 @@
+{
+  "tool": "built-in image_gen",
+  "date": "2026-10-12",
+  "referenceRoles": {
+    "assets/content-update-v2/delivery/runtime/field.png": "style, farm palette and road baseline",
+    "assets/content-update-v2/delivery/runtime/dinner-ending.png": "style and two-sheep staging",
+    "assets/skins/generated-v1/white-source.png": "character identity; cream fleece, tan face, dark hooves and ears"
+  },
+  "attempts": [
+    { "asset": "windmill-backgrounds", "prompt": "prompts/windmill-backgrounds.txt", "transparentBackground": false, "result": "connection failed: error sending request", "seconds": 71.3 },
+    { "asset": "windmill-backgrounds", "prompt": "prompts/windmill-backgrounds.txt", "transparentBackground": false, "result": "network error: error sending request", "seconds": 86.7 },
+    { "asset": "windmill-pasture", "prompt": "prompts/windmill-pasture.txt", "transparentBackground": false, "result": "connection failed: error sending request", "seconds": 4.6 },
+    { "asset": "windmill-backgrounds", "prompt": "prompts/windmill-backgrounds-dialog-reference.txt", "transparentBackground": false, "inputMechanism": "num_last_images_to_include:5", "result": "connection failed: error sending request", "seconds": 197.5 }
+  ],
+  "runtimeAssetsGenerated": true,
+  "successfulGenerationMetadata": "generation.json",
+  "fallbackUsed": false
+}

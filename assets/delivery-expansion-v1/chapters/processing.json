@@ -1,0 +1,508 @@
+{
+  "tool": "built-in image_gen",
+  "processingOnly": "crop, alpha-trim/threshold, uniform nearest rescale; no authored art",
+  "packing": [
+    {
+      "name": "windmill-pasture",
+      "source": "sources\\windmill-backgrounds.png",
+      "crop": [
+        6,
+        12,
+        934,
+        534
+      ],
+      "alphaTrim": null,
+      "size": [
+        960,
+        540
+      ],
+      "uniformScale": 1.0344827586206897,
+      "resampling": "NEAREST",
+      "alpha": "original opaque",
+      "runtime": "runtime\\windmill-pasture.png"
+    },
+    {
+      "name": "windmill-middle",
+      "source": "sources\\windmill-backgrounds.png",
+      "crop": [
+        6,
+        555,
+        934,
+        1077
+      ],
+      "alphaTrim": null,
+      "size": [
+        960,
+        540
+      ],
+      "uniformScale": 1.0344827586206897,
+      "resampling": "NEAREST",
+      "alpha": "original opaque",
+      "runtime": "runtime\\windmill-middle.png"
+    },
+    {
+      "name": "windmill-destination",
+      "source": "sources\\windmill-destination-v2.png",
+      "crop": [
+        44,
+        1,
+        1628,
+        892
+      ],
+      "alphaTrim": null,
+      "size": [
+        960,
+        540
+      ],
+      "uniformScale": 0.6060606060606061,
+      "resampling": "NEAREST",
+      "alpha": "original opaque",
+      "runtime": "runtime\\windmill-destination.png"
+    },
+    {
+      "name": "windmill-ending",
+      "source": "sources\\windmill-ending.png",
+      "crop": [
+        0,
+        0,
+        1672,
+        940
+      ],
+      "alphaTrim": null,
+      "size": [
+        960,
+        540
+      ],
+      "uniformScale": 0.5741626794258373,
+      "resampling": "NEAREST",
+      "alpha": "original opaque",
+      "runtime": "runtime\\windmill-ending.png"
+    },
+    {
+      "name": "windmill-postcard",
+      "source": "sources\\windmill-ending.png",
+      "crop": [
+        0,
+        0,
+        1672,
+        940
+      ],
+      "alphaTrim": null,
+      "size": [
+        640,
+        360
+      ],
+      "uniformScale": 0.3827751196172249,
+      "resampling": "NEAREST",
+      "alpha": "original opaque",
+      "runtime": "runtime\\windmill-postcard.png"
+    },
+    {
+      "name": "rain-pasture",
+      "source": "sources\\rain-backgrounds.png",
+      "crop": [
+        6,
+        3,
+        934,
+        525
+      ],
+      "alphaTrim": null,
+      "size": [
+        960,
+        540
+      ],
+      "uniformScale": 1.0344827586206897,
+      "resampling": "NEAREST",
+      "alpha": "original opaque",
+      "runtime": "runtime\\rain-pasture.png"
+    },
+    {
+      "name": "rain-middle",
+      "source": "sources\\rain-backgrounds.png",
+      "crop": [
+        14,
+        549,
+        926,
+        1062
+      ],
+      "alphaTrim": null,
+      "size": [
+        960,
+        540
+      ],
+      "uniformScale": 1.0526315789473684,
+      "resampling": "NEAREST",
+      "alpha": "original opaque",
+      "runtime": "runtime\\rain-middle.png"
+    },
+    {
+      "name": "rain-destination",
+      "source": "sources\\rain-backgrounds.png",
+      "crop": [
+        6,
+        1097,
+        934,
+        1619
+      ],
+      "alphaTrim": null,
+      "size": [
+        960,
+        540
+      ],
+      "uniformScale": 1.0344827586206897,
+      "resampling": "NEAREST",
+      "alpha": "original opaque",
+      "runtime": "runtime\\rain-destination.png"
+    },
+    {
+      "name": "rain-ending",
+      "source": "sources\\rain-ending.png",
+      "crop": [
+        0,
+        0,
+        1672,
+        940
+      ],
+      "alphaTrim": null,
+      "size": [
+        960,
+        540
+      ],
+      "uniformScale": 0.5741626794258373,
+      "resampling": "NEAREST",
+      "alpha": "original opaque",
+      "runtime": "runtime\\rain-ending.png"
+    },
+    {
+      "name": "rain-postcard",
+      "source": "sources\\rain-ending.png",
+      "crop": [
+        0,
+        0,
+        1672,
+        940
+      ],
+      "alphaTrim": null,
+      "size": [
+        640,
+        360
+      ],
+      "uniformScale": 0.3827751196172249,
+      "resampling": "NEAREST",
+      "alpha": "original opaque",
+      "runtime": "runtime\\rain-postcard.png"
+    },
+    {
+      "name": "lighthouse-pasture",
+      "source": "sources\\lighthouse-backgrounds.png",
+      "crop": [
+        6,
+        6,
+        934,
+        528
+      ],
+      "alphaTrim": null,
+      "size": [
+        960,
+        540
+      ],
+      "uniformScale": 1.0344827586206897,
+      "resampling": "NEAREST",
+      "alpha": "original opaque",
+      "runtime": "runtime\\lighthouse-pasture.png"
+    },
+    {
+      "name": "lighthouse-middle",
+      "source": "sources\\lighthouse-backgrounds.png",
+      "crop": [
+        6,
+        534,
+        934,
+        1056
+      ],
+      "alphaTrim": null,
+      "size": [
+        960,
+        540
+      ],
+      "uniformScale": 1.0344827586206897,
+      "resampling": "NEAREST",
+      "alpha": "original opaque",
+      "runtime": "runtime\\lighthouse-middle.png"
+    },
+    {
+      "name": "lighthouse-destination",
+      "source": "sources\\lighthouse-backgrounds.png",
+      "crop": [
+        6,
+        1078,
+        934,
+        1600
+      ],
+      "alphaTrim": null,
+      "size": [
+        960,
+        540
+      ],
+      "uniformScale": 1.0344827586206897,
+      "resampling": "NEAREST",
+      "alpha": "original opaque",
+      "runtime": "runtime\\lighthouse-destination.png"
+    },
+    {
+      "name": "lighthouse-ending",
+      "source": "sources\\lighthouse-ending.png",
+      "crop": [
+        0,
+        0,
+        1672,
+        940
+      ],
+      "alphaTrim": null,
+      "size": [
+        960,
+        540
+      ],
+      "uniformScale": 0.5741626794258373,
+      "resampling": "NEAREST",
+      "alpha": "original opaque",
+      "runtime": "runtime\\lighthouse-ending.png"
+    },
+    {
+      "name": "lighthouse-postcard",
+      "source": "sources\\lighthouse-ending.png",
+      "crop": [
+        0,
+        0,
+        1672,
+        940
+      ],
+      "alphaTrim": null,
+      "size": [
+        640,
+        360
+      ],
+      "uniformScale": 0.3827751196172249,
+      "resampling": "NEAREST",
+      "alpha": "original opaque",
+      "runtime": "runtime\\lighthouse-postcard.png"
+    },
+    {
+      "name": "windmill-carried",
+      "source": "sources\\items.png",
+      "crop": [
+        0,
+        0,
+        512,
+        341
+      ],
+      "alphaTrim": [
+        194,
+        77,
+        503,
+        332
+      ],
+      "size": [
+        80,
+        80
+      ],
+      "uniformScale": 0.2588996763754045,
+      "resampling": "NEAREST",
+      "alpha": "hard 0/255 threshold96",
+      "runtime": "runtime\\windmill-carried.png"
+    },
+    {
+      "name": "windmill-ordinary",
+      "source": "sources\\items.png",
+      "crop": [
+        512,
+        0,
+        1024,
+        341
+      ],
+      "alphaTrim": [
+        149,
+        84,
+        363,
+        330
+      ],
+      "size": [
+        80,
+        80
+      ],
+      "uniformScale": 0.3252032520325203,
+      "resampling": "NEAREST",
+      "alpha": "hard 0/255 threshold96",
+      "runtime": "runtime\\windmill-ordinary.png"
+    },
+    {
+      "name": "windmill-keepsake",
+      "source": "sources\\items.png",
+      "crop": [
+        1024,
+        0,
+        1536,
+        341
+      ],
+      "alphaTrim": [
+        52,
+        51,
+        278,
+        336
+      ],
+      "size": [
+        80,
+        80
+      ],
+      "uniformScale": 0.2807017543859649,
+      "resampling": "NEAREST",
+      "alpha": "hard 0/255 threshold96",
+      "runtime": "runtime\\windmill-keepsake.png"
+    },
+    {
+      "name": "rain-carried",
+      "source": "sources\\items.png",
+      "crop": [
+        0,
+        341,
+        512,
+        655
+      ],
+      "alphaTrim": [
+        234,
+        27,
+        503,
+        301
+      ],
+      "size": [
+        80,
+        80
+      ],
+      "uniformScale": 0.291970802919708,
+      "resampling": "NEAREST",
+      "alpha": "hard 0/255 threshold96",
+      "runtime": "runtime\\rain-carried.png"
+    },
+    {
+      "name": "rain-ordinary",
+      "source": "sources\\items.png",
+      "crop": [
+        512,
+        341,
+        1024,
+        655
+      ],
+      "alphaTrim": [
+        149,
+        49,
+        364,
+        290
+      ],
+      "size": [
+        80,
+        80
+      ],
+      "uniformScale": 0.33195020746887965,
+      "resampling": "NEAREST",
+      "alpha": "hard 0/255 threshold96",
+      "runtime": "runtime\\rain-ordinary.png"
+    },
+    {
+      "name": "rain-keepsake",
+      "source": "sources\\items.png",
+      "crop": [
+        1024,
+        341,
+        1536,
+        655
+      ],
+      "alphaTrim": [
+        52,
+        19,
+        278,
+        300
+      ],
+      "size": [
+        80,
+        80
+      ],
+      "uniformScale": 0.2846975088967972,
+      "resampling": "NEAREST",
+      "alpha": "hard 0/255 threshold96",
+      "runtime": "runtime\\rain-keepsake.png"
+    },
+    {
+      "name": "lighthouse-carried",
+      "source": "sources\\items.png",
+      "crop": [
+        0,
+        655,
+        512,
+        1024
+      ],
+      "alphaTrim": [
+        191,
+        32,
+        505,
+        304
+      ],
+      "size": [
+        80,
+        80
+      ],
+      "uniformScale": 0.25477707006369427,
+      "resampling": "NEAREST",
+      "alpha": "hard 0/255 threshold96",
+      "runtime": "runtime\\lighthouse-carried.png"
+    },
+    {
+      "name": "lighthouse-ordinary",
+      "source": "sources\\items.png",
+      "crop": [
+        512,
+        655,
+        1024,
+        1024
+      ],
+      "alphaTrim": [
+        149,
+        39,
+        364,
+        297
+      ],
+      "size": [
+        80,
+        80
+      ],
+      "uniformScale": 0.31007751937984496,
+      "resampling": "NEAREST",
+      "alpha": "hard 0/255 threshold96",
+      "runtime": "runtime\\lighthouse-ordinary.png"
+    },
+    {
+      "name": "lighthouse-keepsake",
+      "source": "sources\\items.png",
+      "crop": [
+        1024,
+        655,
+        1536,
+        1024
+      ],
+      "alphaTrim": [
+        50,
+        16,
+        280,
+        309
+      ],
+      "size": [
+        80,
+        80
+      ],
+      "uniformScale": 0.27303754266211605,
+      "resampling": "NEAREST",
+      "alpha": "hard 0/255 threshold96",
+      "runtime": "runtime\\lighthouse-keepsake.png"
+    }
+  ],
+  "runtimeDependsOnExternalPaths": false
+}

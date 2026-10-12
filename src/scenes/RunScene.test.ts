@@ -110,6 +110,9 @@ describe('delivery mode gameplay isolation', () => {
   });
   it('bypasses score/spawn/progression and collectible writes for the entire route', () => {
     const scene = makeScene(); const normal = primeUpdate(scene), route = new DeliveryRoute();
+    // The independently added v4->v5 skin migration happens during initialization;
+    // only subsequent route activity is covered by this no-economic-write check.
+    vi.mocked(window.localStorage.setItem).mockClear();
     const spawn = vi.fn(); Object.assign(scene, { delivery: route, spawnSystem: { update: spawn }, deliveryView: { update: vi.fn() } });
     scene.update(0, 20); scene.onStarOverlap({}); scene.onPowerUpOverlap({});
     expect(route.distance).toBeGreaterThan(0); expect(normal.update).not.toHaveBeenCalled(); expect(spawn).not.toHaveBeenCalled();
@@ -117,6 +120,7 @@ describe('delivery mode gameplay isolation', () => {
   });
   it('fails once without endless rewards, and clears the visual friend immediately', () => {
     const scene = makeScene(), route = new DeliveryRoute(), finish = vi.fn(), panel = vi.fn(), friend = vi.fn();
+    vi.mocked(window.localStorage.setItem).mockClear();
     Object.assign(scene, { delivery: route, scoreSystem: { finish }, physics: { pause: vi.fn() }, sheep: { body: { setVelocity: vi.fn() } },
       deliveryPanel: { show: panel }, deliveryView: { stopCompanion: friend }, pauseButton: { input: { enabled: true } } });
     scene.onObstacleOverlap(); scene.onObstacleOverlap();
@@ -473,7 +477,7 @@ describe("RunScene adaptive viewport", () => {
       displayWidth: definition.width * definition.visualScale!, getData: () => at, deactivate: vi.fn() }) as Obstacle;
     Object.assign(obstacle, { body: { reset: (x: number) => { obstacle.x = x; } } });
     Object.assign(scene, { scale: { gameSize: { width, height: 270 } },
-      delivery: { state: 'running', distance: 0, advance: () => [] }, obstacles: { getChildren: () => [obstacle] } });
+      delivery: Object.assign(new DeliveryRoute(), { advance: () => [] }), obstacles: { getChildren: () => [obstacle] } });
     for (const visualRight of [left + 1, left - 19, left - 21]) {
       at = visualRight - (definition.width + obstacle.displayWidth) / 2 - WORLD.width - 18;
       scene.update(0, 0);
@@ -727,7 +731,7 @@ describe("RunScene adaptive viewport", () => {
 describe("RunScene progression effects", () => {
   it("reloads persisted upgrades for each run", () => {
     const stored = JSON.stringify({
-      version: 4, highScore: 0, totalStars: 9, coins: 12, selectedSkin: "black", unlockedSkins: ["white", "black"],
+      version: 5, highScore: 0, totalStars: 9, spentStars: 0, coins: 12, selectedSkin: "black", unlockedSkins: ["white", "black"],
       upgrades: { jump: 2, speed: 2, magnet: 3, dash: 5 },
       settings: { music: true, sfx: true, musicVolume: 1, sfxVolume: 1 },
     });
@@ -971,12 +975,14 @@ describe('content v2 final RunScene integration', () => {
     const finishScore = vi.fn(), finishJourney = vi.fn(), panel = vi.fn();
     const goal = new RunGoal({ random: () => .9 }), travel = new RunTravel();
     Object.assign(scene, { delivery: route, runGoal: goal, travel,
+      environmentSystem: {update:vi.fn(),setWeather:vi.fn()},
       scoreSystem: { finish: finishScore }, journey: { finish: finishJourney },
       pauseButton: { input: { enabled: true } }, deliveryPanel: { show: panel }, deliveryView: { update: vi.fn() } });
     scene.update(0, 40); scene.update(40, 40);
     expect(route.state).toBe('complete'); expect(scene.finished).toBe(true);
     expect(complete).toHaveBeenCalledExactlyOnceWith(chapter.id);
-    expect(panel).toHaveBeenCalledExactlyOnceWith('success', false, chapter.id);
+    if (route.challenge) expect(panel).toHaveBeenCalledExactlyOnceWith('success', false, chapter.id, route.challenge.snapshot());
+    else expect(panel).toHaveBeenCalledExactlyOnceWith('success', false, chapter.id);
     expect(finishScore).not.toHaveBeenCalled(); expect(finishJourney).not.toHaveBeenCalled();
     expect(goal.snapshot().progress).toBe(0); expect(travel.snapshot()).toEqual(new RunTravel().snapshot());
     expect(vi.mocked(scene.audioSystem.play).mock.calls.filter(([cue]) => cue === 'bell')).toHaveLength(1);

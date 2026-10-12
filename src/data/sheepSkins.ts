@@ -3,8 +3,10 @@ import { COLORS } from "../game/Constants";
 export type SkinId = "white" | "black" | "brown" | "golden" | "farmer"
   | "mint" | "rose" | "blueberry" | "lavender" | "pumpkin" | "forest" | "chestnut" | "sunset"
   | "sleepy-blue" | "sleepy-cream" | "sleepy-pink" | "sleepy-mint" | "dream"
-  | "peach" | "milktea" | "cloud" | "bearcap";
-type SkinUnlock = { type: "default" | "stars" | "coins"; amount: number };
+  | "peach" | "milktea" | "cloud" | "bearcap"
+  | "strawberry-v1" | "lemon-v1" | "sailor-v1" | "starlight-v1"
+  | "postman-v1" | "raincoat-v1" | "explorer-v1" | "astronaut-v1";
+type SkinUnlock = { type: "default" | "stars" | "star-purchase" | "coins"; amount: number };
 
 export interface SheepSkinDefinition {
   id: SkinId;
@@ -38,6 +40,16 @@ export const SHEEP_SKINS: readonly SheepSkinDefinition[] = [
   { id: "milktea", label: "奶茶羊", unlock: { type: "coins", amount: 80 }, palette: { wool: "#e6cba5", woolShade: "#bc956f", face: "#eeb081" } },
   { id: "cloud", label: "云朵羊", unlock: { type: "coins", amount: 80 }, palette: { wool: "#f4f0df", woolShade: "#b4cddb", face: "#eeb081" } },
   { id: "bearcap", label: "小熊帽羊", unlock: { type: "coins", amount: 80 }, palette: { wool: "#f4ebd8", woolShade: "#c5b4a0", face: "#eeb081", hat: "#b99264" } },
+  // These purchases are cosmetic only. The legacy stars unlock rule above
+  // retains cumulative-star eligibility; star-purchase spends available stars.
+  { id: "strawberry-v1", label: "草莓羊", unlock: { type: "star-purchase", amount: 40 }, palette: { wool: "#f4ebd8", woolShade: "#c5b4a0", face: "#eeb081", hat: "#749956" } },
+  { id: "lemon-v1", label: "柠檬羊", unlock: { type: "star-purchase", amount: 70 }, palette: { wool: "#f3e6ad", woolShade: "#c9b97b", face: "#eeb081" } },
+  { id: "sailor-v1", label: "水手羊", unlock: { type: "star-purchase", amount: 100 }, palette: { wool: "#f4ebd8", woolShade: "#c5b4a0", face: "#eeb081", hat: "#e6dfc6" } },
+  { id: "starlight-v1", label: "星灯羊", unlock: { type: "star-purchase", amount: 150 }, palette: { wool: "#8584af", woolShade: "#5f608c", face: "#eeb081", hat: "#e2bc64" } },
+  { id: "postman-v1", label: "邮差羊", unlock: { type: "coins", amount: 60 }, palette: { wool: "#f4ebd8", woolShade: "#c5b4a0", face: "#eeb081", hat: "#739557" } },
+  { id: "raincoat-v1", label: "雨衣羊", unlock: { type: "coins", amount: 90 }, palette: { wool: "#f4ebd8", woolShade: "#c5b4a0", face: "#eeb081", hat: "#e5bd59" } },
+  { id: "explorer-v1", label: "探险羊", unlock: { type: "coins", amount: 120 }, palette: { wool: "#f4ebd8", woolShade: "#c5b4a0", face: "#eeb081", hat: "#b08a58" } },
+  { id: "astronaut-v1", label: "航天羊", unlock: { type: "coins", amount: 160 }, palette: { wool: "#f4ebd8", woolShade: "#b9cbd1", face: "#eeb081", hat: "#d4e4e7" } },
 ];
 
 export function isSkinId(value: string): value is SkinId {

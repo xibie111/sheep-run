@@ -1,0 +1,283 @@
+{
+  "kind": "generated-art-crop-only",
+  "alphaThreshold": 96,
+  "filter": "NEAREST",
+  "parts": [
+    {
+      "name": "page-paper",
+      "source": "ui-frames-original.png",
+      "sourceSha256": "81f6785a808d2aea9d1431dbbd07a1de3e83625e84d53d973c290d6198d6212c",
+      "cropRegion": [
+        0,
+        0,
+        950,
+        520
+      ],
+      "trimBox": [
+        19,
+        68,
+        912,
+        496
+      ],
+      "runtimeSize": [
+        512,
+        245
+      ],
+      "runtimeSha256": "d029f8bbebe9670ec11d640e11c1509376add675d102e645133aee22c8ddc404",
+      "transparent": true
+    },
+    {
+      "name": "chapter-frame",
+      "source": "ui-frames-original.png",
+      "sourceSha256": "81f6785a808d2aea9d1431dbbd07a1de3e83625e84d53d973c290d6198d6212c",
+      "cropRegion": [
+        950,
+        0,
+        1536,
+        520
+      ],
+      "trimBox": [
+        28,
+        88,
+        561,
+        484
+      ],
+      "runtimeSize": [
+        256,
+        190
+      ],
+      "runtimeSha256": "8cb137c641737431741503eadc9829fe6501aa6e50321431f1e88a29eba13f9c",
+      "transparent": true
+    },
+    {
+      "name": "action-button",
+      "source": "ui-frames-original.png",
+      "sourceSha256": "81f6785a808d2aea9d1431dbbd07a1de3e83625e84d53d973c290d6198d6212c",
+      "cropRegion": [
+        0,
+        520,
+        950,
+        1024
+      ],
+      "trimBox": [
+        77,
+        142,
+        928,
+        319
+      ],
+      "runtimeSize": [
+        384,
+        80
+      ],
+      "runtimeSha256": "0b23db6655e35e6e2326fd77bd0e770a6df52ecbfc6e234c17f923e046ecc55a",
+      "transparent": true
+    },
+    {
+      "name": "keepsake-slot",
+      "source": "ui-frames-original.png",
+      "sourceSha256": "81f6785a808d2aea9d1431dbbd07a1de3e83625e84d53d973c290d6198d6212c",
+      "cropRegion": [
+        950,
+        520,
+        1536,
+        1024
+      ],
+      "trimBox": [
+        112,
+        28,
+        464,
+        381
+      ],
+      "runtimeSize": [
+        96,
+        96
+      ],
+      "runtimeSha256": "4be8e255bbe08ea1cd9f01c2ec6ab4cce14cf4652673aca2b0e6bc9c3f2554f9",
+      "transparent": true
+    },
+    {
+      "name": "rating-gold",
+      "source": "ui-icons-original.png",
+      "sourceSha256": "45f80cba23e9b641d28011e14c127285ae6c0d2c56210a8fdc4053d9da06b8ea",
+      "cropRegion": [
+        0,
+        0,
+        444,
+        444
+      ],
+      "trimBox": [
+        70,
+        74,
+        377,
+        378
+      ],
+      "runtimeSize": [
+        64,
+        63
+      ],
+      "runtimeSha256": "7f93b616084d36dc0b2e865f6d3310f6409f32798bb3531f0712c089e4d6d24d",
+      "transparent": true
+    },
+    {
+      "name": "rating-gray",
+      "source": "ui-icons-original.png",
+      "sourceSha256": "45f80cba23e9b641d28011e14c127285ae6c0d2c56210a8fdc4053d9da06b8ea",
+      "cropRegion": [
+        444,
+        0,
+        887,
+        444
+      ],
+      "trimBox": [
+        69,
+        74,
+        375,
+        378
+      ],
+      "runtimeSize": [
+        64,
+        64
+      ],
+      "runtimeSha256": "292856806ea76d9eb111e16e8a568c1a3727de54d2ccee1f4ffd8897fef94e53",
+      "transparent": true
+    },
+    {
+      "name": "stamp-counter",
+      "source": "ui-icons-original.png",
+      "sourceSha256": "45f80cba23e9b641d28011e14c127285ae6c0d2c56210a8fdc4053d9da06b8ea",
+      "cropRegion": [
+        887,
+        0,
+        1330,
+        444
+      ],
+      "trimBox": [
+        88,
+        100,
+        362,
+        370
+      ],
+      "runtimeSize": [
+        64,
+        63
+      ],
+      "runtimeSha256": "a29ce27773332756f3bf4e06e70dd4b44006c9ea75b9af403e3cce50fae43bd8",
+      "transparent": true
+    },
+    {
+      "name": "stamp-album",
+      "source": "ui-icons-original.png",
+      "sourceSha256": "45f80cba23e9b641d28011e14c127285ae6c0d2c56210a8fdc4053d9da06b8ea",
+      "cropRegion": [
+        1330,
+        0,
+        1774,
+        444
+      ],
+      "trimBox": [
+        65,
+        77,
+        367,
+        394
+      ],
+      "runtimeSize": [
+        61,
+        64
+      ],
+      "runtimeSha256": "22975384e46e5e5a61c50ec2851a9266a00b34f7f32a45532f4bf756cee81b91",
+      "transparent": true
+    },
+    {
+      "name": "page-previous",
+      "source": "ui-icons-original.png",
+      "sourceSha256": "45f80cba23e9b641d28011e14c127285ae6c0d2c56210a8fdc4053d9da06b8ea",
+      "cropRegion": [
+        0,
+        444,
+        444,
+        887
+      ],
+      "trimBox": [
+        72,
+        60,
+        371,
+        360
+      ],
+      "runtimeSize": [
+        64,
+        64
+      ],
+      "runtimeSha256": "dc7aeb56cca562d8a2520cb589505e3f5c847a001feb0a15836732619367583c",
+      "transparent": true
+    },
+    {
+      "name": "page-next",
+      "source": "ui-icons-original.png",
+      "sourceSha256": "45f80cba23e9b641d28011e14c127285ae6c0d2c56210a8fdc4053d9da06b8ea",
+      "cropRegion": [
+        444,
+        444,
+        887,
+        887
+      ],
+      "trimBox": [
+        72,
+        60,
+        372,
+        360
+      ],
+      "runtimeSize": [
+        64,
+        64
+      ],
+      "runtimeSha256": "eea3d59257264a161584063320f5832bf93119c31e1bf8a33a226b312da837e6",
+      "transparent": true
+    },
+    {
+      "name": "lock",
+      "source": "ui-icons-original.png",
+      "sourceSha256": "45f80cba23e9b641d28011e14c127285ae6c0d2c56210a8fdc4053d9da06b8ea",
+      "cropRegion": [
+        887,
+        444,
+        1330,
+        887
+      ],
+      "trimBox": [
+        95,
+        45,
+        348,
+        361
+      ],
+      "runtimeSize": [
+        51,
+        64
+      ],
+      "runtimeSha256": "c130db59352b3cab5191f48a06efa3e0b2bff2ab869e9aa3b569403c129d24f6",
+      "transparent": true
+    },
+    {
+      "name": "complete-seal",
+      "source": "ui-icons-original.png",
+      "sourceSha256": "45f80cba23e9b641d28011e14c127285ae6c0d2c56210a8fdc4053d9da06b8ea",
+      "cropRegion": [
+        1330,
+        444,
+        1774,
+        887
+      ],
+      "trimBox": [
+        64,
+        41,
+        375,
+        357
+      ],
+      "runtimeSize": [
+        63,
+        64
+      ],
+      "runtimeSha256": "2ee5c6f2c6a91b455e68e2694277ff1682ed6c1fac5cdc3a3496dcf7849fe3c4",
+      "transparent": true
+    }
+  ]
+}

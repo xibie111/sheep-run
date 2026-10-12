@@ -1,0 +1,76 @@
+{
+  "generationTool": "built-in image_gen",
+  "date": "2026-10-12",
+  "referencesInspectedBeforeGeneration": {
+    "assets/content-update-v2/delivery/runtime/field.png": "style, palette and flat road reference",
+    "assets/content-update-v2/delivery/runtime/dinner-ending.png": "style and two-sheep illustration reference",
+    "assets/delivery-v1/runtime/postcard.png": "two-sheep conclusion and postcard reference",
+    "assets/skins/generated-v1/white-source.png": "character identity reference; cream fleece, tan face, brown ears/hooves"
+  },
+  "successfulToolCallsHadAttachedReferences": false,
+  "referenceUse": "Manual visual inspection informed production prompts; attached reference transport failed four times. Successful new-image calls used detailed identity/style descriptions.",
+  "assets": [
+    {
+      "name": "windmill-backgrounds",
+      "source": "sources/windmill-backgrounds.png",
+      "prompt": "prompts/windmill-backgrounds-v2.txt",
+      "transparentBackground": false,
+      "originalFilename": "exec-d0edd430-975b-4e93-8fdd-4548a46f2f64.png"
+    },
+    {
+      "name": "rain-backgrounds",
+      "source": "sources/rain-backgrounds.png",
+      "prompt": "prompts/rain-backgrounds-v2.txt",
+      "transparentBackground": false,
+      "originalFilename": "exec-2d6881bf-d2f7-4d5e-bf09-12444aa229fb.png"
+    },
+    {
+      "name": "lighthouse-backgrounds",
+      "source": "sources/lighthouse-backgrounds.png",
+      "prompt": "prompts/lighthouse-backgrounds-v2.txt",
+      "transparentBackground": false,
+      "originalFilename": "exec-fba35e3c-3553-40a1-9b81-6af4929fbd3b.png"
+    },
+    {
+      "name": "windmill-ending",
+      "source": "sources/windmill-ending.png",
+      "prompt": "prompts/windmill-ending.txt",
+      "transparentBackground": false,
+      "originalFilename": "exec-6c43120d-a2f2-431d-961b-73bac2f6b3e4.png"
+    },
+    {
+      "name": "rain-ending",
+      "source": "sources/rain-ending.png",
+      "prompt": "prompts/rain-ending.txt",
+      "transparentBackground": false,
+      "originalFilename": "exec-7931f755-2c82-4a1c-a9a3-e7286ed0c3c4.png"
+    },
+    {
+      "name": "lighthouse-ending",
+      "source": "sources/lighthouse-ending.png",
+      "prompt": "prompts/lighthouse-ending.txt",
+      "transparentBackground": false,
+      "originalFilename": "exec-1450e240-343e-47a4-b63b-50bb5c680fc7.png"
+    },
+    {
+      "name": "items",
+      "source": "sources/items.png",
+      "prompt": "prompts/items.txt",
+      "transparentBackground": true,
+      "originalFilename": "exec-fa7453d6-8ff4-4c7a-a910-4f685ba6aa2c.png"
+    },
+    {
+      "name": "windmill-destination-v2",
+      "source": "sources/windmill-destination-v2.png",
+      "prompt": "prompts/windmill-destination-v2.txt",
+      "transparentBackground": false,
+      "originalFilename": "exec-633a6962-f913-4721-b642-4637537e8211.png"
+    }
+  ],
+  "runtimeKeys": 24,
+  "processing": "processing.json",
+  "backgroundOverride": "Windmill destination re-generated to keep all four sails visible; original atlas is preserved.",
+  "postcards": "Generated chapter ending illustration is packed separately; generated UI postcard frame and dynamic text are composed by the UI module.",
+  "runtimeDependsOnWorkspaceExternalPaths": false,
+  "fallbackUsed": false
+}

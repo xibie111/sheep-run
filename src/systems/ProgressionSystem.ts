@@ -20,6 +20,7 @@ export interface SkinUnlockResult {
   available?: number;
   cost?: number;
   coinBalance?: number;
+  starBalance?: number;
 }
 
 export interface SkinEquipResult {
@@ -96,6 +97,14 @@ export class ProgressionSystem {
       save.unlockedSkins = [...new Set([...save.unlockedSkins, skin.id])];
       if (!SaveSystem.save(save)) return { status: "storage-error", skinId, coinBalance: save.coins };
       return { status: "unlocked", skinId: skin.id, cost: 0, coinBalance: save.coins };
+    }
+    if (skin.unlock.type === "star-purchase") {
+      const previousBalance = SaveSystem.availableStars(save);
+      if (previousBalance < skin.unlock.amount) return { status: "insufficient-stars", skinId: skin.id, required: skin.unlock.amount, available: previousBalance, starBalance: previousBalance, coinBalance: save.coins };
+      save.spentStars += skin.unlock.amount;
+      save.unlockedSkins = [...new Set([...save.unlockedSkins, skin.id])];
+      if (!SaveSystem.save(save)) return { status: "storage-error", skinId, starBalance: previousBalance, coinBalance: save.coins };
+      return { status: "unlocked", skinId: skin.id, cost: skin.unlock.amount, starBalance: SaveSystem.availableStars(save), coinBalance: save.coins };
     }
     if (save.coins < skin.unlock.amount) return { status: "insufficient-coins", skinId: skin.id, required: skin.unlock.amount, available: save.coins };
     const previousBalance = save.coins;

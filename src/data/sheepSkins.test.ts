@@ -34,4 +34,29 @@ describe("sheep skin catalog", () => {
     expect(isSkinId("rainbow")).toBe(false);
     expect(skinDefinition("rainbow")).toBeNull();
   });
+
+  it("appends the eight approved single-currency purchases without ability fields", () => {
+    expect(SHEEP_SKINS.slice(22).map(({ id, label, unlock }) => ({ id, label, unlock }))).toEqual([
+      { id: "strawberry-v1", label: "草莓羊", unlock: { type: "star-purchase", amount: 40 } },
+      { id: "lemon-v1", label: "柠檬羊", unlock: { type: "star-purchase", amount: 70 } },
+      { id: "sailor-v1", label: "水手羊", unlock: { type: "star-purchase", amount: 100 } },
+      { id: "starlight-v1", label: "星灯羊", unlock: { type: "star-purchase", amount: 150 } },
+      { id: "postman-v1", label: "邮差羊", unlock: { type: "coins", amount: 60 } },
+      { id: "raincoat-v1", label: "雨衣羊", unlock: { type: "coins", amount: 90 } },
+      { id: "explorer-v1", label: "探险羊", unlock: { type: "coins", amount: 120 } },
+      { id: "astronaut-v1", label: "航天羊", unlock: { type: "coins", amount: 160 } },
+    ]);
+    for (const skin of SHEEP_SKINS.slice(22)) {
+      expect(Object.keys(skin).sort()).toEqual(["id", "label", "palette", "unlock"]);
+      expect(skinDefinition(skin.id)).toBe(skin);
+    }
+  });
+
+  it("retains all existing themed skin prices and order", () => {
+    expect(SHEEP_SKINS.slice(13, 22).map(({ id, unlock }) => [id, unlock.type, unlock.amount])).toEqual([
+      ["sleepy-blue", "coins", 80], ["sleepy-cream", "coins", 80],
+      ["sleepy-pink", "coins", 80], ["sleepy-mint", "coins", 80], ["dream", "coins", 100],
+      ["peach", "coins", 80], ["milktea", "coins", 80], ["cloud", "coins", 80], ["bearcap", "coins", 80],
+    ]);
+  });
 });

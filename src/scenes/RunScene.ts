@@ -41,6 +41,8 @@ import { DeliveryView } from '../delivery/DeliveryView';
 import { attachDeliveryHud } from '../delivery/DeliveryHud';
 import { createDeliveryPanel } from '../delivery/DeliveryPanel';
 import { deliveryStore } from '../delivery/DeliveryStore';
+import { deliveryChallengeStore } from '../delivery/DeliveryChallengeStore';
+import { DeliveryStampController } from '../delivery/DeliveryStampController';
 import { StarRouteController } from '../stars-v2/StarRouteController';
 import { RunGoal } from '../runner-v2/RunGoal';
 import { RunGoalView } from '../runner-v2/RunGoalView';
@@ -87,6 +89,8 @@ export class RunScene extends Phaser.Scene {
   private rareScenery?: SceneryController;
   private delivery?: DeliveryRoute;
   private deliveryView?: DeliveryView;
+  private deliveryPostage?: DeliveryStampController;
+  private deliveryWeather?: string;
   private deliveryPanel?: ReturnType<typeof createDeliveryPanel>;
   private starRoutes?: StarRouteController;
   private runGoal?: RunGoal;
@@ -138,7 +142,11 @@ export class RunScene extends Phaser.Scene {
     const viewport = viewportSizeFromScale(this.scale);
 
     this.environmentSystem = new EnvironmentSystem(this, { reducedMotion: this.reducedMotion, calmAtmosphere: true, ...(this.delivery ? { seed: this.delivery.chapter.seed } : {}) });
-    if (this.delivery) { this.environmentSystem.setTheme('spring'); this.environmentSystem.setWeather('sunny'); }
+    if (this.delivery) {
+      this.environmentSystem.setTheme('spring');
+      this.deliveryWeather = this.delivery.phase.weather ?? this.delivery.chapter.weather ?? 'clear';
+      this.environmentSystem.setWeather(this.deliveryWeather === 'rain' ? 'rain' : 'sunny');
+    }
 
     // Viewport expansion changes what the camera sees, not the player's physics.
     this.physics.world.setBounds(0, 0, WORLD.width, WORLD.groundY);
@@ -180,6 +188,7 @@ export class RunScene extends Phaser.Scene {
     });
     if (this.delivery) {
       this.deliveryView = new DeliveryView(this, this.sheep, this.selectedSkin, this.reducedMotion, this.delivery.chapter.id);
+      if (this.delivery.challenge) this.deliveryPostage = new DeliveryStampController(this, this.sheep, this.delivery);
       attachDeliveryHud(this, this.delivery, this.pauseButton);
       this.deliveryPanel = createDeliveryPanel(this, {
         start: id => this.scene.restart({ deliveryId: id }),
@@ -301,6 +310,7 @@ export class RunScene extends Phaser.Scene {
   }
 
   private updateDelivery(deltaMs: number): void {
+    if (this.finished || !this.delivery) return;
     const route = this.delivery!;
     const speed = route.state === 'running' ? this.difficultySystem.update(deltaMs / 1000) : 0;
     for (const request of route.advance(deltaMs, speed)) {
@@ -314,7 +324,12 @@ export class RunScene extends Phaser.Scene {
       body.reset(WORLD.width + 18 + Number(object.getData('delivery-at')) - route.distance, WORLD.groundY - object.definition.groundOffset);
       if (object.visualRightEdge < this.obstacleRecycleX) object.deactivate();
     }
+    const weather = route.phase.weather ?? route.chapter.weather ?? 'clear';
+    if ((route.phase.weather || route.chapter.weather) && weather !== this.deliveryWeather) {
+      this.environmentSystem?.setWeather(weather === 'rain' ? 'rain' : 'sunny'); this.deliveryWeather = weather;
+    }
     this.environmentSystem?.update(route.distance * .15, deltaMs, 0);
+    this.deliveryPostage?.update();
     if (route.state === 'ending') {
       this.inputSystem.cancel(); this.physics.pause();
       (this.sheep.body as Phaser.Physics.Arcade.Body).setVelocity(0, 0);
@@ -323,8 +338,11 @@ export class RunScene extends Phaser.Scene {
     if (route.state === 'complete') {
       this.finished = true; this.pauseButton!.input!.enabled = false;
       const result = deliveryStore.complete(route.chapter.id);
+      const challenge = route.challenge?.snapshot();
+      const challengeSave = challenge ? deliveryChallengeStore.recordResult(route.chapter.id, challenge) : undefined;
       this.audioSystem.play('bell');
-      this.deliveryPanel?.show('success', !result.saved, route.chapter.id);
+      if (challenge) this.deliveryPanel?.show('success', !result.saved || !!challengeSave && !challengeSave.saved, route.chapter.id, challenge);
+      else this.deliveryPanel?.show('success', !result.saved, route.chapter.id);
     }
   }
 
@@ -563,7 +581,10 @@ export class RunScene extends Phaser.Scene {
     if (this.delivery) {
       this.delivery.fail(); this.deliveryView?.stopCompanion(); this.inputSystem.cancel();
       this.pauseButton!.input!.enabled = false;
-      this.deliveryPanel?.show('failure', false, this.delivery.chapter.id);
+      this.deliveryPostage?.update();
+      const challenge = this.delivery.challenge?.snapshot();
+      if (challenge) this.deliveryPanel?.show('failure', false, this.delivery.chapter.id, challenge);
+      else this.deliveryPanel?.show('failure', false, this.delivery.chapter.id);
       return;
     }
     const scoreResult = this.scoreSystem.finish();
@@ -627,6 +648,8 @@ export class RunScene extends Phaser.Scene {
     this.landmarks?.clear(); this.landmarks = undefined;
     this.animalExposureMs = 0; this.animalExposureKind = null;
     this.deliveryView?.clear(); this.deliveryView = undefined;
+    this.deliveryPostage?.clear(); this.deliveryPostage = undefined;
+    this.deliveryWeather = undefined;
     this.deliveryPanel?.clear(); this.deliveryPanel = undefined;
     this.delivery = undefined;
     this.ambientLife?.clear();

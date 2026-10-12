@@ -30,7 +30,7 @@ export class DeliveryView {
     this.chapter = getDeliveryChapter(chapterId) ?? defaultDeliveryChapter();
     for (const { key } of this.chapter.landscapes) {
       const texture = scene.textures.get(key), source = texture.getSourceImage() as HTMLImageElement;
-      const edge = Math.round(source.height * (this.chapter.endingKind === 'dinner' ? .72 : .75));
+      const edge = Math.round(source.height * this.roadCropRatio);
       if (!texture.has('road')) texture.add('road', 0, 0, edge, source.width, source.height - edge);
       const image = scene.add.image(0, 0, key, '__BASE').setOrigin(.5, 0).setDepth(-9.5).setCrop(0, 0, source.width, edge).setAlpha(0);
       const road = scene.add.tileSprite(0, 0, WORLD.width, 60, key, 'road').setOrigin(0).setScrollFactor(0).setDepth(-9.4).setAlpha(0);
@@ -45,8 +45,10 @@ export class DeliveryView {
     this.bag.fillStyle(0x79512d).fillRect(-1, -1, 3, 3);
     if (this.chapter.accessoryKey) {
       this.bag.setVisible(false);
-      this.lunchbox = scene.add.image(0, 0, this.chapter.accessoryKey).setDepth(8.2).setName('delivery-dinner-lunchbox');
-      this.lunchbox.setScale(18 / this.lunchbox.width);
+      this.lunchbox = scene.add.image(0, 0, this.chapter.accessoryKey).setDepth(8.2)
+        .setName(this.chapter.endingKind === 'dinner' ? 'delivery-dinner-lunchbox' : 'delivery-carried-item');
+      this.lunchbox.setScale(this.chapter.endingKind === 'dinner' ? 18 / this.lunchbox.width
+        : Math.min(20 / this.lunchbox.width, 18 / this.lunchbox.height));
     }
     this.mailbox = scene.add.image(600, WORLD.groundY, MAILBOX_ART.key).setOrigin(.5, 1).setDisplaySize(28, 58).setDepth(5.7).setName('delivery-destination').setVisible(false);
     this.envelope = scene.add.graphics().setDepth(9).setName('delivery-envelope').setVisible(false);
@@ -54,13 +56,19 @@ export class DeliveryView {
     this.envelope.fillStyle(0xffedcd).fillRect(-6, -4, 12, 8);
     this.envelope.fillStyle(0xc28b52).fillRect(-4, -3, 2, 1).fillRect(-2, -2, 2, 1).fillRect(0, -1, 2, 1).fillRect(2, -2, 2, 1).fillRect(4, -3, 1, 1);
     this.endingMatte = scene.add.rectangle(0, 0, WORLD.width, WORLD.height, 0x122b50).setOrigin(0).setScrollFactor(0).setDepth(19).setAlpha(0);
-    this.endingArt = scene.add.image(0, 0, this.chapter.endingKey).setScrollFactor(0).setDepth(20).setAlpha(0).setName(this.chapter.endingKind === 'dinner' ? 'delivery-sharing-dinner' : 'delivery-stargazing');
+    this.endingArt = scene.add.image(0, 0, this.chapter.endingKey).setScrollFactor(0).setDepth(20).setAlpha(0)
+      .setName(this.chapter.endingKind === 'dinner' ? 'delivery-sharing-dinner'
+        : this.chapter.endingKind === 'goodnight' ? 'delivery-stargazing' : `delivery-ending-${this.chapter.endingKind}`);
     this.stopLayout = watchViewport(scene, size => {
       const origin = runViewportOrigin(size);
-      for (const { image, road } of this.landscapes) {
-        const source = image.texture.getSourceImage() as HTMLImageElement, edge = Math.round(source.height * (this.chapter.endingKind === 'dinner' ? .72 : .75));
-        const scale = Math.max((213 + origin.y) / edge, size.width / source.width);
-        image.setPosition(size.width / 2 - origin.x, 213 - edge * scale).setScale(scale);
+      for (const [index, { image, road }] of this.landscapes.entries()) {
+        const source = image.texture.getSourceImage() as HTMLImageElement, edge = Math.round(source.height * this.roadCropRatio);
+        const bottomScale = this.chapter.challenge ? Math.max(1, size.height - 213 - origin.y) / (source.height - edge) : 0;
+        const scale = Math.max((213 + origin.y) / edge, size.width / source.width, bottomScale);
+        image.setScale(scale);
+        const focalOffset = this.chapter.landscapes[index].focus === 'right'
+          ? -Math.max(0, (image.displayWidth - size.width) / 2) : 0;
+        image.setPosition(size.width / 2 - origin.x + focalOffset, 213 - edge * scale);
         road.setPosition(0, 213 + origin.y).setSize(size.width, Math.max(1, size.height - 213 - origin.y));
         road.tileScaleX = scale; road.tileScaleY = scale;
       }
@@ -69,6 +77,7 @@ export class DeliveryView {
       this.endingArt.setPosition(size.width / 2, size.height / 2).setScale(Math.min(size.width / art.width, size.height / art.height));
     });
   }
+  private get roadCropRatio() { return this.chapter.roadCropRatio ?? (this.chapter.endingKind === 'dinner' ? .72 : .75); }
   update(route: DeliveryRoute, nowMs: number) {
     if (this.disposed) return;
     const size = viewportSizeFromScale(this.scene.scale), origin = runViewportOrigin(size);
@@ -77,7 +86,11 @@ export class DeliveryView {
       image.setAlpha(weights[i]); road.setAlpha(weights[i]);
       // The wide upper illustration never tiles, so it cannot expose a join.
       const available = Math.max(0, (image.displayWidth - size.width) / 2);
-      image.x = size.width / 2 - origin.x + (this.reducedMotion ? 0 : Math.min(available, 45) * (1 - 2 * clamp((route.distance - this.chapter.landscapes[i].transitionStart) / 6500)));
+      // Tall screens crop the sides of wide art. Destination configuration pins
+      // its right-side focal building in view, including reduced-motion mode.
+      const offset = this.chapter.landscapes[i].focus === 'right' ? -available
+        : this.reducedMotion ? 0 : Math.min(available, 45) * (1 - 2 * clamp((route.distance - this.chapter.landscapes[i].transitionStart) / 6500));
+      image.x = size.width / 2 - origin.x + offset;
       road.tilePositionX = this.reducedMotion ? 0 : route.distance;
     });
     this.bag.setPosition(this.lead.x - 9, this.lead.y - this.lead.displayHeight * .43).setScale(1, this.lead.displayHeight / 42);
@@ -86,7 +99,7 @@ export class DeliveryView {
       this.metFriend = true; this.companion = new CompanionView(this.scene, 'white', nowMs, this.reducedMotion);
     }
     if (this.companion?.update(nowMs, this.lead, -origin.x)) this.companion = undefined;
-    if (this.chapter.endingKind === 'goodnight' && route.distance >= this.chapter.destinationAt) this.mailbox.setVisible(true).setX(this.lead.x + 78 + this.chapter.length - route.distance);
+    if (this.chapter.endingKind !== 'dinner' && route.distance >= this.chapter.destinationAt) this.mailbox.setVisible(true).setX(this.lead.x + 78 + this.chapter.length - route.distance);
     if (route.state === 'ending' || route.state === 'complete') {
       if (!this.endingLead) {
         this.companion?.destroy(); this.companion = undefined;
@@ -100,7 +113,9 @@ export class DeliveryView {
       const t = clamp(route.endingMs / 1300), x = this.lead.x + 78 * t, y = WORLD.groundY - 25 - 21 * t - (this.reducedMotion ? 0 : Math.sin(t * Math.PI) * 16);
       this.envelope.setVisible(this.chapter.endingKind === 'goodnight' && route.endingMs < 1300).setPosition(x, y).setAlpha(this.reducedMotion ? 1 - t : 1);
       // Dinner is set down between the sheep, then opens in the generated two-sheep illustration.
-      this.lunchbox?.setPosition(this.lead.x + 30 * t, WORLD.groundY - 9).setVisible(route.endingMs < 1700);
+      if (this.chapter.endingKind === 'dinner') this.lunchbox?.setPosition(this.lead.x + 30 * t, WORLD.groundY - 9).setVisible(route.endingMs < 1700);
+      else if (this.chapter.challenge) this.lunchbox?.setPosition(x, y).setVisible(route.endingMs < 1600)
+        .setAlpha(this.reducedMotion ? 1 - t : 1);
       // After the envelope lands, hold the two-sheep stargazing illustration.
       // This is part of the scene's effective-time presentation, so pause freezes it.
       const reveal = this.reducedMotion ? Number(route.endingMs >= 1600) : clamp((route.endingMs - 1300) / 400);

@@ -24,7 +24,7 @@ class FilterFixture extends Phaser.Scene {
         min, mag, glNearest: gl.NEAREST, passed: source.scaleMode === Phaser.Textures.FilterMode.NEAREST && min === gl.NEAREST && mag === gl.NEAREST };
     });
     Object.assign(window, { filterReview: { renderer: this.game.renderer.type, webgl: Phaser.WEBGL, before, results,
-      passed: before.every(mode => mode === Phaser.Textures.FilterMode.LINEAR) && results.length === 19 && results.every(result => result.passed) } });
+      passed: before.every(mode => mode === Phaser.Textures.FilterMode.LINEAR) && results.length === CONTENT_V2_ASSETS.length && results.every(result => result.passed) } });
   }
 }
 new Phaser.Game({ type: Phaser.WEBGL, width: 480, height: 270, pixelArt: true, antialias: false,

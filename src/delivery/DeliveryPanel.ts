@@ -1,146 +1,211 @@
 import type Phaser from 'phaser';
-import { watchViewport, viewportSizeFromScale } from '../game/Viewport';
+import { watchViewport } from '../game/Viewport';
 import { safeUiInsets } from '../ui/UiLayout';
 import { createDeliveryDisplayOverlay } from './DeliveryDisplayOverlay';
 import { displayCanvasText } from '../ui/DisplayCanvasText';
 import { bindTouchTarget } from '../ui/TouchTarget';
 import { acquireMenuModal, MENU_MODAL_CANCEL } from '../ui/MenuModal';
-import { MAIL_BUTTON_ART, MAIL_PANEL_ART } from '../data/mailboxAssets';
+import { MAIL_PANEL_ART } from '../data/mailboxAssets';
 import { AudioSystem } from '../systems/AudioSystem';
 import type { ArtRect } from '../ui/MenuArtLayout';
 import { CONTENT_V2_KEYS } from '../content-v2/assetManifest';
 import { DELIVERY_CHAPTERS, type DeliveryChapterId } from './DeliveryChapters';
 import { DeliverySelection } from './DeliverySelection';
 import { deliveryStore } from './DeliveryStore';
+import { deliveryChallengeStore } from './DeliveryChallengeStore';
+import { isDeliveryChallengeChapterId, type DeliveryChallengeSnapshot } from './DeliveryChallengeRun';
+import { deliveryBestRating, deliveryResultSummary, deliveryRouteLines, DELIVERY_EXPANSION_UI_TEXT } from './DeliveryPanelModel';
+import { deliveryPanelLayout, type DeliveryPanelLayout } from './DeliveryPanelLayout';
+import { DELIVERY_EXPANSION_UI_KEYS as ART } from './DeliveryExpansionUiAssets';
+import { deliveryFitArt, deliveryFrameArt } from './DeliveryPanelArt';
 
-export type DeliveryPanelMode = 'select' | 'brief' | 'postcard' | 'success' | 'failure';
+export type DeliveryPanelMode = 'select' | 'brief' | 'postcard' | 'success' | 'failure' | 'album';
 export interface DeliveryPanelActions { start: (chapterId: DeliveryChapterId) => void; exit?: () => void }
-/** Chapter UI uses generated frames; all text is drawn by the project's local bitmap font. */
+/** Five chapters share one input lease; changing inner pages never unlocks the mailbox. */
 export function createDeliveryPanel(scene: Phaser.Scene, actions: DeliveryPanelActions, inMailbox = false, chapterId?: string) {
   const text = displayCanvasText(scene), muted = displayCanvasText(scene, '#8a725e'), pressed = new Set<string>();
   const selection = new DeliverySelection(chapterId);
-  const names = ['blocker', 'back', 'start', 'card', ...DELIVERY_CHAPTERS.map(chapter => `chapter:${chapter.id}`)];
+  const names = ['blocker', 'back', 'start', 'card', 'previous', 'next', 'album', ...DELIVERY_CHAPTERS.map(chapter => 'chapter:' + chapter.id)];
   const targets = names.map(name => scene.add.container(0, 0, []).setScrollFactor(0).setName('delivery-' + name).setDepth(name === 'blocker' ? 260 : 261));
   let mode: DeliveryPanelMode = 'brief', visible = false, disposed = false, release: (() => void) | undefined;
-  let cardReturn: DeliveryPanelMode = 'brief', panel: ArtRect, boxes: ArtRect[] = [], saveFailed = false;
-  const source = (key: string) => scene.textures.get(key).getSourceImage() as HTMLImageElement;
-  // The legacy paper remains available before A installs the new preload manifest.
-  const paperKey = () => scene.textures.exists(CONTENT_V2_KEYS.tripPaper) ? CONTENT_V2_KEYS.tripPaper : MAIL_PANEL_ART.key;
-  const chapterSelectReady = () => scene.textures.exists(CONTENT_V2_KEYS.chapterCard) && scene.textures.exists('content-v2-delivery-cottage');
-  const sliced = (ctx: CanvasRenderingContext2D, key: string, box: ArtRect, edge = .12) => {
-    const image = source(key), sx = Math.round(image.width * edge), sy = Math.round(image.height * edge);
-    const dx = Math.min(box.width / 3, sx * box.height / image.height), dy = Math.min(box.height / 3, sy * box.height / image.height);
-    const srcX = [0, sx, image.width - sx], srcY = [0, sy, image.height - sy];
-    const srcW = [sx, image.width - 2 * sx, sx], srcH = [sy, image.height - 2 * sy, sy];
-    // Shared rounded physical boundaries avoid fractional seams between adjoining slices.
-    const transform = ctx.getTransform();
-    const px = [box.x, box.x + dx, box.x + box.width - dx, box.x + box.width].map(value => Math.round(value * transform.a + transform.e));
-    const py = [box.y, box.y + dy, box.y + box.height - dy, box.y + box.height].map(value => Math.round(value * transform.d + transform.f));
-    ctx.save(); ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.imageSmoothingEnabled = false;
-    for (let y = 0; y < 3; y++) for (let x = 0; x < 3; x++) ctx.drawImage(image, srcX[x], srcY[y], srcW[x], srcH[y], px[x], py[y], px[x + 1] - px[x], py[y + 1] - py[y]);
-    ctx.restore();
-  };
-  const fitImage = (ctx: CanvasRenderingContext2D, key: string, box: ArtRect) => {
-    const image = source(key), k = Math.min(box.width / image.width, box.height / image.height), width = image.width * k, height = image.height * k;
-    ctx.drawImage(image, box.x + (box.width - width) / 2, box.y + (box.height - height) / 2, width, height);
-  };
+  let cardReturn: DeliveryPanelMode = 'brief', geometry: DeliveryPanelLayout, boxes: ArtRect[] = [], saveFailed = false;
+  let runResult: DeliveryChallengeSnapshot | undefined;
+  const legacyPaper = () => scene.textures.exists(CONTENT_V2_KEYS.tripPaper) ? CONTENT_V2_KEYS.tripPaper : MAIL_PANEL_ART.key;
+  const frame = (ctx: CanvasRenderingContext2D, key: string, box: ArtRect, edge?: number) => deliveryFrameArt(scene, ctx, key, box, edge);
   const surface = createDeliveryDisplayOverlay(scene, ctx => {
-    const lines: unknown[] = [], size = scene.scale.gameSize, chapter = selection.chapter;
+    const lines: unknown[] = [], images: unknown[] = [], size = scene.scale.gameSize, chapter = selection.chapter, panel = geometry.panel;
+    const challenge = !!chapter.challenge, result = challenge ? deliveryResultSummary(runResult, mode === 'success') : undefined;
+    const record = deliveryChallengeStore.load(), completed = deliveryStore.load().completedIds;
     const line = (value: string, box: ArtRect, font = 12, soft = false) => {
-      const painter = soft ? muted : text;
-      const painted = painter(ctx, value, box, painter.fitFontSize(value, box.width, font));
+      const painter = soft ? muted : text, painted = painter(ctx, value, box, painter.fitFontSize(value, box.width, font));
       lines.push({ text: value, box, ink: painted.ink, fontSize: painted.fontSize });
     };
+    const art = (key: string, box: ArtRect) => images.push(deliveryFitArt(scene, ctx, key, box));
+    const stars = (earned: readonly boolean[], box: ArtRect, size = 16) => {
+      const gap = 4, width = size * 3 + gap * 2, left = box.x + (box.width - width) / 2;
+      earned.forEach((flag, i) => art(flag ? ART.gold : ART.gray, { x: left + i * (size + gap), y: box.y, width: size, height: size }));
+    };
     ctx.fillStyle = 'rgba(24,30,34,.62)'; ctx.fillRect(0, 0, size.width, size.height);
-    sliced(ctx, paperKey(), panel);
-    const title = mode === 'select' ? '选一段送信路线' : mode === 'brief' ? chapter.title : mode === 'failure' ? chapter.failureTitle : chapter.postcardTitle;
-    line(title, { x: panel.x + 26, y: panel.y + 13, width: panel.width - 52, height: 22 }, 18);
+    frame(ctx, mode === 'select' || mode === 'album' || challenge ? ART.paper : legacyPaper(), panel);
+    if (mode === 'select' || mode === 'album' || challenge) frame(ctx, ART.button, { x: panel.x + 64, y: panel.y + 4, width: panel.width - 128, height: 29 }, .16);
+    const title = mode === 'select' ? '选一段送信路线' : mode === 'album' ? '章节邮票册' : mode === 'brief' ? chapter.title
+      : mode === 'failure' ? chapter.failureTitle : mode === 'success' && challenge ? '投递完成' : chapter.postcardTitle;
+    line(title, geometry.title, 18);
     if (mode === 'select') {
-      const completed = deliveryStore.load().completedIds;
-      DELIVERY_CHAPTERS.forEach((item, index) => {
-        const box = boxes[index + 4], chosen = selection.id === item.id;
-        ctx.save(); if (!chosen) ctx.globalAlpha = .8;
-        if (pressed.has(targets[index + 4].name)) ctx.translate(0, 1);
-        const frameKey = scene.textures.exists(CONTENT_V2_KEYS.chapterCard) ? CONTENT_V2_KEYS.chapterCard : MAIL_PANEL_ART.key;
-        sliced(ctx, frameKey, box);
-        fitImage(ctx, item.previewKey, { x: box.x + 10, y: box.y + 10, width: box.width - 20, height: 72 });
-        line(item.title, { x: box.x + 7, y: box.y + 85, width: box.width - 14, height: 20 }, 13);
-        line(completed.includes(item.id) ? '已收好' : '未送达', { x: box.x + 9, y: box.y + 102, width: box.width - 18, height: 17 }, 11, !chosen);
+      selection.page.items.forEach((item, index) => {
+        const box = geometry.cards[index], chosen = selection.id === item.id;
+        ctx.save(); if (!chosen) ctx.globalAlpha = .88;
+        if (pressed.has('delivery-chapter:' + item.id)) ctx.translate(0, 1);
+        frame(ctx, ART.frame, box);
+        art(item.previewKey, { x: box.x + 12, y: box.y + 8, width: box.width - 24, height: 31 });
+        line(item.title, { x: box.x + 7, y: box.y + 40, width: box.width - 14, height: 18 }, 13);
+        deliveryRouteLines(item.itinerary, 14).slice(0, 2).forEach((value, i) => line(value, { x: box.x + 8, y: box.y + 59 + i * 13, width: box.width - 16, height: 14 }, 11));
+        line('难度 ' + (item.difficultyLabel ?? '轻松'), { x: box.x + 8, y: box.y + 86, width: box.width - 16, height: 14 }, 11);
+        const completedLabel = completed.includes(item.id) ? '已通关' : '未通关';
+        if (isDeliveryChallengeChapterId(item.id)) {
+          const rating = deliveryBestRating(true, record.chapters[item.id]), rowX = box.x + (box.width - 99) / 2;
+          line(completedLabel + ' · ' + (rating?.keepsake ? '已收藏' : '未收藏'), { x: box.x + 8, y: box.y + 101, width: box.width - 16, height: 14 }, 11, !chosen);
+          line('最佳', { x: rowX, y: box.y + 117, width: 24, height: 16 }, 11);
+          stars([0, 1, 2].map(i => i < (rating?.stars ?? 0)), { x: rowX + 28, y: box.y + 117, width: 49, height: 16 }, 13);
+          ctx.save(); if (!rating?.keepsake) { ctx.filter = 'grayscale(1)'; ctx.globalAlpha = .4; }
+          art(item.challenge!.keepsakeKey, { x: rowX + 82, y: box.y + 116, width: 15, height: 15 }); ctx.restore();
+        } else line(completedLabel, { x: box.x + 8, y: box.y + 101, width: box.width - 16, height: 14 }, 11, !chosen);
         ctx.restore();
       });
-    } else if (mode === 'postcard' || mode === 'success') {
-      const area = { x: panel.x + 26, y: panel.y + 43, width: panel.width - 52, height: panel.height - 112 - (saveFailed && mode === 'success' ? 17 : 0) };
-      const image = source(chapter.postcardKey), k = Math.min(area.width / image.width, area.height / image.height);
-      const framed = { x: area.x + (area.width - image.width * k) / 2 - 6, y: area.y - 4, width: image.width * k + 12, height: image.height * k + 8 };
-      if (scene.textures.exists(CONTENT_V2_KEYS.chapterCard)) sliced(ctx, CONTENT_V2_KEYS.chapterCard, framed);
-      fitImage(ctx, chapter.postcardKey, area);
-      line(mode === 'success' ? chapter.successText : chapter.postcardText, { x: panel.x + 20, y: panel.y + panel.height - 64, width: panel.width - 40, height: 19 });
-    } else if (mode === 'brief') {
-      const width = Math.min(183, panel.width * .46), height = 109;
-      fitImage(ctx, chapter.previewKey, { x: panel.x + 22, y: panel.y + 48, width, height });
-      [...chapter.introduction, '', chapter.itinerary, '轻触跳跃 · 上滑高跳', '下滑下蹲'].forEach((value, i) => {
-        if (value) line(value, { x: panel.x + width + 28, y: panel.y + 49 + i * 18, width: panel.width - width - 49, height: 17 }, 12);
+      line((selection.page.index + 1) + '/' + selection.page.count, { x: panel.x + panel.width - 127, y: panel.y + 9, width: 25, height: 21 }, 11);
+      for (const [name, key] of [['previous', ART.previous], ['next', ART.next]] as const) {
+        const target = targets[names.indexOf(name)]; ctx.save(); if (!target.input!.enabled) ctx.globalAlpha = .35;
+        const box = geometry[name]; art(key, { ...box, y: box.y + (pressed.has(target.name) ? 1 : 0) }); ctx.restore();
+      }
+      if (record.saveFailed || deliveryStore.load().saveFailed) line('暂未保存', { ...geometry.card, x: geometry.card.x + 5, width: geometry.card.width - 10 }, 11, true);
+    } else if (mode === 'album') {
+      const chapters = DELIVERY_CHAPTERS.filter(item => item.challenge);
+      chapters.forEach((item, index) => {
+        const box = geometry.albumSlots[index], collected = isDeliveryChallengeChapterId(item.id) && record.chapters[item.id]?.keepsake;
+        ctx.save(); if (!collected) { ctx.filter = 'grayscale(1)'; ctx.globalAlpha = .42; }
+        art(ART.slot, box); art(item.challenge!.keepsakeKey, { x: box.x + 13, y: box.y + 9, width: box.width - 26, height: box.height - 20 }); ctx.restore();
+        if (!collected) art(ART.lock, { x: box.x + box.width - 26, y: box.y + box.height - 29, width: 18, height: 22 });
+        line(['小风车', '小雨伞', '小灯塔'][index], { x: box.x - 5, y: box.y + 101, width: box.width + 10, height: 17 }, 13);
+        line(collected ? '已收藏' : '未收藏', { x: box.x - 5, y: box.y + 121, width: box.width + 10, height: 16 }, 11, !collected);
       });
-      line('约一分钟的小旅行', { x: panel.x + 20, y: panel.y + 166, width, height: 19 });
+      line(record.saveFailed ? '暂未保存' : '先收集，再成功送达。', { x: panel.x + 24, y: panel.y + panel.height - 62, width: panel.width - 48, height: 16 }, 11, record.saveFailed);
+    } else if (mode === 'success' && result) {
+      const labels = ['送达', '四枚邮票', '隐藏纪念'], gap = 93;
+      result.earned.forEach((flag, index) => {
+        const x = panel.x + panel.width / 2 + (index - 1) * gap - 18;
+        art(flag ? ART.gold : ART.gray, { x, y: panel.y + 39, width: 30, height: 30 });
+        line(labels[index], { x: x - 25, y: panel.y + 69, width: 80, height: 16 }, 11, !flag);
+      });
+      art(chapter.postcardKey, { x: panel.x + 26, y: panel.y + 94, width: panel.width * .43, height: 83 });
+      const x = panel.x + panel.width * .51, width = panel.width * .45 - 12;
+      line('本局评价 ' + result.stars + '/3', { x, y: panel.y + 94, width, height: 20 }, 14);
+      art(ART.counter, { x, y: panel.y + 122, width: 21, height: 21 });
+      line('投递邮票 ' + result.ordinary + '/5', { x: x + 24, y: panel.y + 122, width: width - 24, height: 21 }, 12);
+      art(chapter.challenge!.keepsakeKey, { x, y: panel.y + 151, width: 21, height: 21 });
+      line(result.hidden ? '纪念邮票 已找到' : '纪念邮票 未找到', { x: x + 24, y: panel.y + 151, width: width - 24, height: 21 }, 11);
+      if (saveFailed) line('暂未保存', { x: panel.x + 20, y: panel.y + panel.height - 62, width: panel.width - 40, height: 16 }, 11, true);
+    } else if (mode === 'postcard' || mode === 'success') {
+      const area = { x: panel.x + 26, y: panel.y + 43, width: panel.width - 52, height: panel.height - 124 - (saveFailed && mode === 'success' ? 17 : 0) };
+      art(chapter.postcardKey, area);
+      const ending = mode === 'success' ? chapter.successText : chapter.postcardText;
+      deliveryRouteLines(ending, 30).forEach((value, i) => line(value, { x: panel.x + 20, y: panel.y + panel.height - 73 + i * 17, width: panel.width - 40, height: 17 }, 12));
+      if (saveFailed && mode === 'success') line('本次已收好，暂未保存到设备', { x: panel.x + 20, y: panel.y + panel.height - 91, width: panel.width - 40, height: 16 }, 11, true);
+    } else if (mode === 'brief') {
+      const width = Math.min(160, panel.width * .39), x = panel.x + width + 27, columnWidth = panel.width - width - 49;
+      art(chapter.previewKey, { x: panel.x + 22, y: panel.y + 52, width, height: 91 });
+      chapter.introduction.forEach((value, i) => line(value, { x, y: panel.y + 47 + i * 19, width: columnWidth, height: 18 }, 12));
+      deliveryRouteLines(chapter.itinerary, 16).forEach((value, i) => line(value, { x, y: panel.y + 110 + i * 16, width: columnWidth, height: 16 }, 11));
+      line('轻触跳跃 · 上滑高跳', { x, y: panel.y + 150, width: columnWidth, height: 18 }, 11);
+      line('下滑下蹲', { x, y: panel.y + 170, width: columnWidth, height: 18 }, 11);
+      line(challenge ? '难度 ' + chapter.difficultyLabel : '约一分钟的小旅行', { x: panel.x + 20, y: panel.y + (challenge ? 144 : 154), width: width + 4, height: 19 }, 11);
+      if (challenge) {
+        for (const [index, key, label] of [[0, ART.counter, '四枚邮票'], [1, chapter.challenge!.keepsakeKey, '隐藏纪念']] as const) {
+          const y = panel.y + 166 + index * 18;
+          art(key, { x: panel.x + 31, y, width: 16, height: 16 });
+          line(label, { x: panel.x + 51, y, width: 83, height: 16 }, 11);
+          art(ART.gold, { x: panel.x + 135, y, width: 14, height: 14 });
+        }
+      }
     } else {
-      line(chapter.failureText, { x: panel.x + 24, y: panel.y + 74, width: panel.width - 48, height: 23 }, 16);
-      line('准备好了，就重新出发。', { x: panel.x + 24, y: panel.y + 113, width: panel.width - 48, height: 20 });
+      line(chapter.failureText, { x: panel.x + 24, y: panel.y + 66, width: panel.width - 48, height: 22 }, 16);
+      if (result) {
+        line('投递邮票 ' + result.ordinary + '/5', { x: panel.x + 24, y: panel.y + 105, width: panel.width - 48, height: 20 }, 13);
+        line(result.hidden ? '纪念邮票 已找到' : '纪念邮票 未找到', { x: panel.x + 24, y: panel.y + 132, width: panel.width - 48, height: 20 }, 12);
+      }
+      line('准备好了，就重新出发。', { x: panel.x + 24, y: panel.y + 169, width: panel.width - 48, height: 20 }, 12);
     }
-    if (saveFailed && mode === 'success') line('本次已收好，暂未保存到设备', { x: panel.x + 20, y: panel.y + panel.height - 83, width: panel.width - 40, height: 15 }, 10);
-    const backLabel = mode === 'postcard' ? '返回' : inMailbox && mode === 'brief' && chapterSelectReady() ? '返回章节' : '返回邮箱';
-    const labels = ['', backLabel, mode === 'brief' || mode === 'select' ? chapter.startLabel : '重新送一次', '查看明信片'];
-    for (let i = 1; i <= 3; i++) {
-      const target = targets[i]; if (!target.input?.enabled) continue;
-      const box = boxes[i]; ctx.save(); if (pressed.has(target.name)) ctx.translate(0, 1);
-      sliced(ctx, MAIL_BUTTON_ART.plain, box, .16);
-      line(labels[i], { x: box.x + 7, y: box.y + 3, width: box.width - 14, height: box.height - 6 }, 12); ctx.restore();
+    const labels: Record<string, string> = { back: mode === 'postcard' ? '返回' : mode === 'album' || inMailbox && mode === 'brief' ? '返回章节' : '返回邮箱',
+      start: mode === 'brief' ? chapter.startLabel : '重新送一次', card: '查看明信片', album: '邮票册' };
+    for (const name of ['back', 'start', 'card', 'album']) {
+      const index = names.indexOf(name), target = targets[index]; if (!target.input?.enabled) continue;
+      const box = boxes[index]; ctx.save(); if (pressed.has(target.name)) ctx.translate(0, 1);
+      frame(ctx, ART.button, box, .16);
+      if (name === 'album') art(ART.album, { x: box.x + 13, y: box.y + 6, width: 22, height: 22 });
+      line(labels[name], { x: box.x + (name === 'album' ? 34 : 7), y: box.y + 3, width: box.width - (name === 'album' ? 44 : 14), height: box.height - 6 }, 12); ctx.restore();
     }
-    Object.assign(surface.canvas.dataset, { mode, chapterId: chapter.id, lines: JSON.stringify(lines), panel: JSON.stringify(panel),
-      targets: JSON.stringify(boxes), targetNames: JSON.stringify(targets.map(target => target.name)), pressed: JSON.stringify([...pressed]), saved: String(!saveFailed) });
+    Object.assign(surface.canvas.dataset, { mode, chapterId: chapter.id, page: String(selection.page.index), pageCount: String(selection.page.count),
+      visibleChapterIds: JSON.stringify(mode === 'select' ? selection.page.items.map(item => item.id) : []), challenge: String(challenge),
+      result: JSON.stringify(result ?? null), lines: JSON.stringify(lines), images: JSON.stringify(images), panel: JSON.stringify(panel),
+      targets: JSON.stringify(boxes), targetNames: JSON.stringify(targets.map(target => target.name)), enabled: JSON.stringify(targets.map(target => !!target.input?.enabled)),
+      pressed: JSON.stringify([...pressed]), saved: String(!saveFailed), albumCollected: JSON.stringify(DELIVERY_CHAPTERS.filter(item => item.challenge).map(item => isDeliveryChallengeChapterId(item.id) && !!record.chapters[item.id]?.keepsake)) });
   });
   const layout = () => {
-    const size = viewportSizeFromScale(scene.scale), safe = safeUiInsets(scene);
-    const width = Math.min(410, size.width - safe.left - safe.right - 20), height = Math.min(242, size.height - safe.top - safe.bottom - 20);
-    panel = { x: (size.width - width) / 2, y: (size.height - height) / 2, width, height };
-    const third = (width - 46) / 3, y = panel.y + height - 43, chapterWidth = (width - 58) / 2;
-    boxes = [{ x: 0, y: 0, width: size.width, height: size.height },
-      { x: panel.x + 14, y, width: third, height: 32 }, { x: panel.x + width - third - 14, y, width: third, height: 32 },
-      { x: panel.x + (width - third) / 2, y, width: third, height: 32 },
-      ...DELIVERY_CHAPTERS.map((_chapter, i) => ({ x: panel.x + 22 + i * (chapterWidth + 14), y: panel.y + 45, width: chapterWidth, height: Math.min(137, height - 98) }))];
-    targets.forEach((target, index) => { const box = boxes[index]; target.setPosition(box.x + box.width / 2, box.y + box.height / 2).setSize(box.width, box.height); target.input!.hitArea.setSize(box.width, box.height); target.input!.enabled = visible && index < 4; });
-    targets[2].input!.enabled = visible && mode !== 'postcard';
-    targets[3].input!.enabled = visible && (mode === 'brief' || mode === 'select') && deliveryStore.load().completedIds.includes(selection.id);
-    targets.slice(4).forEach(target => target.input!.enabled = visible && mode === 'select');
+    geometry = deliveryPanelLayout(scene.scale.gameSize, safeUiInsets(scene));
+    const pageIds = selection.page.items.map(chapter => chapter.id);
+    boxes = names.map(name => {
+      if (!name.startsWith('chapter:')) return geometry[name as 'back' | 'start' | 'card' | 'blocker' | 'previous' | 'next' | 'album'];
+      const index = pageIds.indexOf(name.slice(8) as DeliveryChapterId);
+      return index >= 0 ? geometry.cards[index] : { x: 0, y: 0, width: 1, height: 1 };
+    });
+    targets.forEach((target, index) => {
+      const box = boxes[index], name = names[index]; target.setPosition(box.x + box.width / 2, box.y + box.height / 2).setSize(box.width, box.height);
+      target.input!.hitArea.setSize(box.width, box.height);
+      target.input!.enabled = visible && (name === 'blocker' || name === 'back' ||
+        name === 'start' && (mode === 'brief' || mode === 'success' || mode === 'failure') ||
+        name === 'card' && (mode === 'success' && !!selection.chapter.challenge || mode === 'brief' && deliveryStore.load().completedIds.includes(selection.id)) ||
+        name === 'previous' && mode === 'select' && selection.page.hasPrevious || name === 'next' && mode === 'select' && selection.page.hasNext ||
+        name === 'album' && mode === 'select' || name.startsWith('chapter:') && mode === 'select' && pageIds.includes(name.slice(8) as DeliveryChapterId));
+    });
     surface.invalidate();
   };
   const sound = () => { const audio = scene.registry.get('audioSystem') as AudioSystem | undefined; audio?.initializeAfterGesture(); audio?.play('button'); };
   const close = () => { if (!visible) return; visible = false; pressed.clear(); release?.(); release = undefined; layout(); surface.show(false); };
-  const callbacks = [() => {}, () => {
-    if (mode === 'postcard') { mode = cardReturn; layout(); return; }
-    if (inMailbox && mode === 'brief' && chapterSelectReady()) { mode = 'select'; layout(); return; }
-    close(); actions.exit?.();
-  }, () => { const id = selection.id; close(); actions.start(id); }, () => { cardReturn = mode; mode = 'postcard'; layout(); },
-    ...DELIVERY_CHAPTERS.map(chapter => () => { selection.select(chapter.id); pressed.clear(); layout(); })];
-  targets.forEach((target, i) => bindTouchTarget(scene, target, 1, 1, () => { if (!visible || !target.input?.enabled) return; if (i) sound(); callbacks[i](); }, value => { value ? pressed.add(target.name) : pressed.delete(target.name); surface.invalidate(); }));
+  const activate = (name: string) => {
+    pressed.clear();
+    if (name === 'back') {
+      if (mode === 'postcard') { mode = cardReturn; layout(); return; }
+      if (mode === 'album' || inMailbox && mode === 'brief') { mode = 'select'; layout(); return; }
+      close(); actions.exit?.(); return;
+    }
+    if (name === 'start') { const id = selection.id; close(); actions.start(id); return; }
+    if (name === 'card') { cardReturn = mode; mode = 'postcard'; }
+    if (name === 'album') mode = 'album';
+    if (name === 'previous') selection.movePage(-1);
+    if (name === 'next') selection.movePage(1);
+    if (name.startsWith('chapter:')) { selection.select(name.slice(8)); mode = 'brief'; }
+    layout();
+  };
+  targets.forEach((target, index) => bindTouchTarget(scene, target, 1, 1, () => {
+    if (!visible || !target.input?.enabled || index === 0) return; sound(); activate(names[index]);
+  }, value => { value ? pressed.add(target.name) : pressed.delete(target.name); surface.invalidate(); }));
   const stopViewport = watchViewport(scene, layout);
   const cancelTouches = () => { scene.events.emit(MENU_MODAL_CANCEL); pressed.clear(); surface.invalidate(); };
   scene.events.on('pause', cancelTouches);
-  const clear = () => { if (disposed) return; close(); disposed = true; stopViewport(); scene.events.off('pause', cancelTouches); scene.events.off('shutdown', clear); targets.forEach(target => target.destroy()); surface.destroy(); };
-  scene.events.once('shutdown', clear);
+  const clear = () => {
+    if (disposed) return; close(); disposed = true; stopViewport(); scene.events.off('pause', cancelTouches);
+    scene.events.off('shutdown', clear); scene.events.off('destroy', clear); targets.forEach(target => target.destroy()); surface.destroy();
+  };
+  scene.events.once('shutdown', clear); scene.events.once('destroy', clear);
   return {
-    show(next: DeliveryPanelMode, failedSave = false, selectedId?: string) {
-      if (visible || disposed) return;
-      if (selectedId) selection.select(selectedId);
-      // Missing glyphs must be reported before acquiring the nested mailbox lock.
+    show(next: DeliveryPanelMode, failedSave = false, selectedId?: string, result?: DeliveryChallengeSnapshot) {
+      if (visible || disposed) return; if (selectedId) selection.select(selectedId);
+      // Check all candidate text before taking the nested mailbox lease, so a failed font load cannot trap it.
       const chapter = selection.chapter;
-      const required = next === 'select' ? ['选一段送信路线', ...DELIVERY_CHAPTERS.map(item => item.title), '已收好', '未送达', chapter.startLabel, '返回邮箱', '查看明信片']
-        : next === 'brief' ? [chapter.title, ...chapter.introduction, chapter.itinerary, '轻触跳跃 · 上滑高跳', '下滑下蹲', '约一分钟的小旅行', inMailbox && chapterSelectReady() ? '返回章节' : '返回邮箱', chapter.startLabel, '查看明信片']
-        : next === 'postcard' ? [chapter.postcardTitle, chapter.postcardText, '返回']
-        : next === 'failure' ? [chapter.failureTitle, chapter.failureText, '准备好了，就重新出发。', '返回邮箱', '重新送一次']
-        : [chapter.postcardTitle, chapter.successText, '返回邮箱', '重新送一次', ...(failedSave ? ['本次已收好，暂未保存到设备'] : [])];
-      required.forEach(value => text.fitFontSize(value, 1, 12));
+      [...DELIVERY_EXPANSION_UI_TEXT, ...DELIVERY_CHAPTERS.flatMap(item => [item.title, item.itinerary, item.difficultyLabel ?? '轻松']),
+        ...chapter.introduction, chapter.failureTitle, chapter.failureText, chapter.startLabel, chapter.postcardTitle, chapter.postcardText, chapter.successText,
+        '0123456789/ ·'].forEach(value => text.fitFontSize(value, 1, 12));
       if (inMailbox) { const lease = acquireMenuModal(scene, 'delivery', targets, 'mailbox'); if (!lease) return; release = lease; }
-      mode = next; saveFailed = failedSave; visible = true; pressed.clear();
+      mode = next; saveFailed = failedSave; runResult = result; visible = true; pressed.clear();
       try { layout(); surface.show(true); } catch (error) { close(); throw error; }
     },
     close, clear, get chapterId() { return selection.id; }, get visible() { return visible; },

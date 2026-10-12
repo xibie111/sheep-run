@@ -25,6 +25,14 @@ export const SKIN_SHEET_URLS: Record<SkinId, string> = {
   milktea: new URL("../../assets/skins/runtime-v3/milktea-sheet.png", import.meta.url).href,
   cloud: new URL("../../assets/skins/runtime-v3/cloud-sheet.png", import.meta.url).href,
   bearcap: new URL("../../assets/skins/runtime-v3/bearcap-sheet.png", import.meta.url).href,
+  'strawberry-v1': new URL('../../assets/skins/runtime-v4/strawberry-v1-sheet.png', import.meta.url).href,
+  'lemon-v1': new URL('../../assets/skins/runtime-v4/lemon-v1-sheet.png', import.meta.url).href,
+  'sailor-v1': new URL('../../assets/skins/runtime-v4/sailor-v1-sheet.png', import.meta.url).href,
+  'starlight-v1': new URL('../../assets/skins/runtime-v4/starlight-v1-sheet.png', import.meta.url).href,
+  'postman-v1': new URL('../../assets/skins/runtime-v4/postman-v1-sheet.png', import.meta.url).href,
+  'raincoat-v1': new URL('../../assets/skins/runtime-v4/raincoat-v1-sheet.png', import.meta.url).href,
+  'explorer-v1': new URL('../../assets/skins/runtime-v4/explorer-v1-sheet.png', import.meta.url).href,
+  'astronaut-v1': new URL('../../assets/skins/runtime-v4/astronaut-v1-sheet.png', import.meta.url).href,
 };
 
 export const SKIN_NAMES: Record<SkinId, string> = {
@@ -34,6 +42,8 @@ export const SKIN_NAMES: Record<SkinId, string> = {
   "sleepy-blue": "催眠羊", "sleepy-cream": "月夜羊", "sleepy-pink": "柔粉睡羊", "sleepy-mint": "薄荷睡羊",
   dream: "梦境羊",
   peach: "蜜桃羊", milktea: "奶茶羊", cloud: "云朵羊", bearcap: "小熊帽羊",
+  'strawberry-v1': '草莓羊', 'lemon-v1': '柠檬羊', 'sailor-v1': '水手羊', 'starlight-v1': '星灯羊',
+  'postman-v1': '邮差羊', 'raincoat-v1': '雨衣羊', 'explorer-v1': '探险羊', 'astronaut-v1': '航天羊',
 };
 
 export const SKIN_ANIMATION_FRAMES = {

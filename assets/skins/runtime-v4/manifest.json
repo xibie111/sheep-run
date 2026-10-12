@@ -1,0 +1,3601 @@
+{
+  "formatVersion": 1,
+  "generatedBy": "builtin-image_gen",
+  "packingTool": "tools/skin-review/pack_skins_v4.py",
+  "packingLibraries": {
+    "Pillow": "11.0.0",
+    "numpy": "2.1.3",
+    "scipy": "1.14.1"
+  },
+  "promptSet": "assets/skins/generated-v4/prompts.json",
+  "promptSetHash": "c01565d18a3e798be4ae8650baa0d01321d4b9a05c4c91d59b757b0ac10a41d5",
+  "frameNames": [
+    "idle_1",
+    "run_1",
+    "run_2",
+    "run_3",
+    "run_4",
+    "jump",
+    "fall",
+    "hit",
+    "dash_1",
+    "dead",
+    "idle_2",
+    "run_5",
+    "run_6",
+    "dash_2",
+    "dead_settled"
+  ],
+  "oldAssetsUnchanged": true,
+  "protectedOldAssetHashes": {
+    "assets/skins/generated-v1/black-source.png": "3edb55ab79a12c0374565a8cd3245397e4b0857595c09ae4cc64b9897e11932b",
+    "assets/skins/generated-v1/blueberry-source.png": "9a05388df0c8c80170ab26f52d3269406a1a9b0c42e4aaca8320ed30f27208ff",
+    "assets/skins/generated-v1/brown-source.png": "47df32221acdd2bd708da69d215eb32fd3246a003b3a93d56bd90467d80a50e3",
+    "assets/skins/generated-v1/chestnut-source.png": "553261161c42409faa90e940c75496c3c211222c53823710cecbb31431a24e5d",
+    "assets/skins/generated-v1/farmer-source.png": "b2902b63d65536228866f2b8682ecdbc4302bf2d07d5a0aae53920e87c13c622",
+    "assets/skins/generated-v1/forest-source.png": "25bbf9a73073abb92509a5b8289b18077bb5eaf13982f7c6ee335708c64bf436",
+    "assets/skins/generated-v1/generation-prompts.json": "75ec4bdd5890fba07d99e26561f791e159ba18339d6b49f4feb8e05414f20ea8",
+    "assets/skins/generated-v1/golden-source.png": "3b3fecdc40bac8ef28e98e26c359af2b909ddcca2c397b70b9b47ef26c9bf167",
+    "assets/skins/generated-v1/lavender-source.png": "385906e7fa755379fd085b218e2727b17a7386791cb76ae819ac8491116ff904",
+    "assets/skins/generated-v1/mint-source.png": "feac46ecba1bdb65d651aa64e019d0858d0fbfced1ed8c02a62584167b15d1cc",
+    "assets/skins/generated-v1/pumpkin-source.png": "0edb8ca5356f373d72821baab5c3707d4685fc6ac4e1832fb154f2e1d3c853cc",
+    "assets/skins/generated-v1/rose-source.png": "daacdaa05935a36c3e49197cf7f3d1f807a2b1919faaed8500f39626317ce65a",
+    "assets/skins/generated-v1/sunset-source.png": "ae365a6542e53d8802e9d073c7fab157f53939711f6051fbc3e3025965b110c1",
+    "assets/skins/generated-v1/theme-generation-prompts.json": "53daf6a6e7af7cd2e748653481f77f85b0b76af17e5ad5ccf9d30a06447ace45",
+    "assets/skins/generated-v1/white-source.png": "5e4efcaf077fac3e1d8790ffca7b1348ef255639ab832d5089f1e907db1b6cbd",
+    "assets/skins/generated-v2/dream-source.png": "40bf4b9733e7bcfee2d185d4b6e4ec61938fb63d099de9fe69edded3e1a0d561",
+    "assets/skins/generated-v2/nightgown-colors.png": "8fb7ef00f3c290db02d646986b712621239998c08d3fc405aa4674562dd2d839",
+    "assets/skins/generated-v2/sleep-cap-colors.png": "5d3ecf37d578ee5e3ffc0e7a920d7fb1071854e2b944272050b12cbc38d48eb2",
+    "assets/skins/generated-v2/sleep-cap-prompts.json": "3324b9c4531d09df0d41b164d8eb8418a7ed40a8cf4f787ae6696d0f2ff6be7b",
+    "assets/skins/generated-v2/sleepy-blue-source.png": "eb6bc20a31c3bd6dc3c9a6b67362b7f0a1ff37c495445d2da602a76fb81dbe68",
+    "assets/skins/generated-v2/sleepy-cream-source.png": "6342aceab77c0f0e324d80b297bd61721d00d29d9b30bd8790093e811e975779",
+    "assets/skins/generated-v2/sleepy-mint-source.png": "cc7885c0ae62c6dd1af373b1157c86c9daa2f6c3ffebcc7afea680ab13b09a80",
+    "assets/skins/generated-v2/sleepy-pink-source.png": "ce192b6df1d4971ddb089d307144ec2cfb44c0b70186a770bd94738203176408",
+    "assets/skins/generated-v3/bearcap-source.png": "1766a24af7b7fe5af2ed1c1cd5c9e06cce51d5f0ff409d665b9a76a6c0627eec",
+    "assets/skins/generated-v3/cloud-source.png": "b76295095ff8bebe40158a8d177b107d9b030a3ceee7f0de7b595fbd519d5f5d",
+    "assets/skins/generated-v3/generation-outputs.json": "48f0d4a4107ecce9f0aec4e51341954cabd093ea5f1aa6492a23be599c3d924b",
+    "assets/skins/generated-v3/milktea-source.png": "353f6aec960efc836e16f2bdad319fdfd1c7ab6bc45a7887067623986617298c",
+    "assets/skins/generated-v3/peach-source.png": "4d2129a5a18618e8d2f9d61a5629fcb50b8871bba8425dfa8ce089b54c320b5d",
+    "assets/skins/generated-v3/theme-concept.png": "ac857aeed65b7e00b50a6a945115ab1a1f6be8348689d2075572296c4d23b0dc",
+    "assets/skins/generated-v3/theme-prompts.json": "9ae0a64f127c44fbac17bcfce4ad9c88169be909af47a709f2554a915ca64202",
+    "assets/skins/runtime-v1/black-sheet.png": "98dd3d756fe12743c2259d62ab6402e339e4d73bea16fb705790396fa3e8903e",
+    "assets/skins/runtime-v1/blueberry-sheet.png": "5260df3b065b37c17807c7a6f13ba04e84c8304426d704a1d87a936b24d1d552",
+    "assets/skins/runtime-v1/brown-sheet.png": "30d773c662508f0cb95294d24666666cebb58c15ce2b577d4c16db4c4c76580c",
+    "assets/skins/runtime-v1/chestnut-sheet.png": "76180aa8cbf4342775e7b4eb756b8ce4ba67f996fa96f424e9de6938f52e3478",
+    "assets/skins/runtime-v1/farmer-sheet.png": "002272f320622293a3b349bc4da51d06a0173aafd0378c39ff99a339b5c81895",
+    "assets/skins/runtime-v1/forest-sheet.png": "2b47964d5046335ba6665ebce263a3e1e4d05efeb383e1eeb3e7869dee9af166",
+    "assets/skins/runtime-v1/golden-sheet.png": "f7e66cd713494799c0dddb9e862a3c6cd7ce96d54b71f8180d746b7dcc7f01bf",
+    "assets/skins/runtime-v1/lavender-sheet.png": "4051f621c2392b2ef08e8bfd198d96bf190947f52791e5dcc428c34418818259",
+    "assets/skins/runtime-v1/manifest.json": "1f6419960f3a269c2a9e1fe24dfef60a4beb941a8e30b89b3eca63869825ba91",
+    "assets/skins/runtime-v1/mint-sheet.png": "f70c6f984e7f397fb087c9fa62169cc9ffa8f316c4e95b9ed5a542c87658aadc",
+    "assets/skins/runtime-v1/pumpkin-sheet.png": "0e53e459c022aa26d57efcfb9679cdd5fa0f9d6528c67afbba3e2cd705750f4d",
+    "assets/skins/runtime-v1/rose-sheet.png": "56becde30489757fad70778d1518ea2aea621a356484dccd6dedf2ebe2d40b67",
+    "assets/skins/runtime-v1/sunset-sheet.png": "839a7b42bfee6929262a887dd9c9b7e25cf29876131c08afcf2e611469a2ebdb",
+    "assets/skins/runtime-v1/white-sheet.png": "b1aceac87739a99c77cf97f4083a7e613720c24c817485575dde2ef51b896856",
+    "assets/skins/runtime-v2/dream-sheet.png": "2a9ead49102e0621ad8a140c674d888ea9384d8fdc33e814d36e00cb9925d62e",
+    "assets/skins/runtime-v2/manifest.json": "eff24558dba0b9d07a771aa042c611b3bf3d44e983b5f8a8a6e93b4efae9b0b8",
+    "assets/skins/runtime-v2/sleepy-blue-sheet.png": "d3166d886847acc15cefecd1085e69508b9d248f21476aeca5c68f6b6e4f5f31",
+    "assets/skins/runtime-v2/sleepy-cream-sheet.png": "703790c3d1dd027f93d5406e210705d2f1405590a77ddfadd859366b7a707ffc",
+    "assets/skins/runtime-v2/sleepy-mint-sheet.png": "dc3c466cf3d9cc305c3f42d206d28fa28800aa16ab7dba72e27b2c18f4ec6fe3",
+    "assets/skins/runtime-v2/sleepy-pink-sheet.png": "fb6541326268a9fa7f19419541256ea99fdf6f71df81afc6d4289d8f51c79f66",
+    "assets/skins/runtime-v3/bearcap-sheet.png": "ab5527145bbe18690e1b41383429529f156c6331768ba30a3824af3f8c41f6ab",
+    "assets/skins/runtime-v3/cloud-sheet.png": "0c438f42766a2bdeda2c33c996abb8074286416aeeadba395d6d091babccfd87",
+    "assets/skins/runtime-v3/manifest.json": "a74791a060a2a82d9132c6ede6604dd086b235694f23be8912a655a46d500fa8",
+    "assets/skins/runtime-v3/milktea-sheet.png": "d40dc1f6407d5bc9a86c2cb4149c1569a870f5349c172d2f8e0ae0c18866939a",
+    "assets/skins/runtime-v3/peach-sheet.png": "bdf0932b61e8a7c16afdcf43c4568925ce67daafba68755d50f7d2bb9023da0a"
+  },
+  "skins": [
+    {
+      "id": "strawberry-v1",
+      "provenance": "builtin-image_gen",
+      "source": "assets/skins/generated-v4/strawberry-v1-source.png",
+      "sourceHash": "99808d1994adde730f3b9de511e416b07bafef0058d7f3fe03ef69841e97fafc",
+      "sourceSize": [
+        1619,
+        972
+      ],
+      "runtime": "assets/skins/runtime-v4/strawberry-v1-sheet.png",
+      "runtimeHash": "0d00ba82c03b8c08db83b1a187d01012240938e828d3b11fb384685f7bb02de8",
+      "runtimeSize": [
+        640,
+        384
+      ],
+      "frameCount": 15,
+      "frameWidth": 128,
+      "frameHeight": 128,
+      "renderFrameWidth": 128,
+      "renderFrameHeight": 112,
+      "topPadding": 16,
+      "columns": 5,
+      "rows": 3,
+      "scale": 0.40268456375838924,
+      "alphaThreshold": 128,
+      "filter": "nearest",
+      "frames": [
+        {
+          "index": 0,
+          "pose": "idle_1",
+          "sourceRegion": [
+            0,
+            0,
+            316,
+            344
+          ],
+          "sourceBounds": [
+            24,
+            82,
+            288,
+            310
+          ],
+          "bbox": [
+            11,
+            36,
+            117,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.40268456375838924,
+          "rgbaHash": "09cf8d771ec723eb9403bd016d51257f6ce3745ddd08263ae0236271f204279d",
+          "silhouetteHash": "bd2602e1886dde6d61e94cb2b0a1a110ed6c00a828e8e846b7dbbc7027235f79",
+          "visiblePixels": 6596
+        },
+        {
+          "index": 1,
+          "pose": "run_1",
+          "sourceRegion": [
+            316,
+            0,
+            646,
+            344
+          ],
+          "sourceBounds": [
+            345,
+            83,
+            613,
+            310
+          ],
+          "bbox": [
+            10,
+            37,
+            118,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.40268456375838924,
+          "rgbaHash": "7fc1b9e2501b0a848ba3cb647cd2eb95f1afd58af6e3779c97426cac3dedb261",
+          "silhouetteHash": "27b0afa88f2614d4d6936e6344271f40076e15c0e00eb83a3e55f5b0af97867e",
+          "visiblePixels": 6498
+        },
+        {
+          "index": 2,
+          "pose": "run_2",
+          "sourceRegion": [
+            646,
+            0,
+            975,
+            344
+          ],
+          "sourceBounds": [
+            680,
+            83,
+            943,
+            310
+          ],
+          "bbox": [
+            11,
+            37,
+            117,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.40268456375838924,
+          "rgbaHash": "0a46062590f43bc799fe3a6bb69b2e025e405c147a926246ea41001c44e262be",
+          "silhouetteHash": "ec4db7b08262b7a50dd72fc93b20336120266c1fc17d1c6959b817490bb348d3",
+          "visiblePixels": 6483
+        },
+        {
+          "index": 3,
+          "pose": "run_3",
+          "sourceRegion": [
+            975,
+            0,
+            1298,
+            344
+          ],
+          "sourceBounds": [
+            1008,
+            83,
+            1270,
+            308
+          ],
+          "bbox": [
+            11,
+            37,
+            117,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.40268456375838924,
+          "rgbaHash": "9e29b2619392a9309dc446c09ba600861b06007aac4fbb88fb1ed1485107b96f",
+          "silhouetteHash": "12d947dbb382d8fc99844a0854433b3df0300a36c687b99f80c421eb3bb451d0",
+          "visiblePixels": 6353
+        },
+        {
+          "index": 4,
+          "pose": "run_4",
+          "sourceRegion": [
+            1298,
+            0,
+            1619,
+            344
+          ],
+          "sourceBounds": [
+            1327,
+            87,
+            1608,
+            304
+          ],
+          "bbox": [
+            7,
+            41,
+            120,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.40268456375838924,
+          "rgbaHash": "e4d20aa01589401884a7ca6c66a186dde4a4ed5ad67f42521dcbfd14ee6cea54",
+          "silhouetteHash": "38824c0f9358152635fdeeb321417563360c26cefbb30c694847f001cb85e012",
+          "visiblePixels": 6295
+        },
+        {
+          "index": 5,
+          "pose": "jump",
+          "sourceRegion": [
+            0,
+            344,
+            322,
+            673
+          ],
+          "sourceBounds": [
+            37,
+            378,
+            288,
+            595
+          ],
+          "bbox": [
+            13,
+            33,
+            114,
+            120
+          ],
+          "footBaseline": 120,
+          "uniformScale": 0.40268456375838924,
+          "rgbaHash": "213ed95e386b12d1ec91c0b5b6ad2accc8f6433b204e785b7c4352a582307b8c",
+          "silhouetteHash": "20167f55eece7acb3319841a46ebd1660902d587423d37bdcae29a4e43ca6176",
+          "visiblePixels": 5823
+        },
+        {
+          "index": 6,
+          "pose": "fall",
+          "sourceRegion": [
+            322,
+            344,
+            647,
+            673
+          ],
+          "sourceBounds": [
+            356,
+            405,
+            616,
+            626
+          ],
+          "bbox": [
+            11,
+            39,
+            116,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.40268456375838924,
+          "rgbaHash": "e24f780561d9faa8d63144a4bc2449715ad2051fa62702ef726d2938300b90d9",
+          "silhouetteHash": "1a1223f1b2b7b5342008cbf1ecc4e68716c3e200aaf8a7a61c2b41d394b57dd7",
+          "visiblePixels": 6181
+        },
+        {
+          "index": 7,
+          "pose": "hit",
+          "sourceRegion": [
+            647,
+            344,
+            956,
+            673
+          ],
+          "sourceBounds": [
+            679,
+            416,
+            928,
+            633
+          ],
+          "bbox": [
+            14,
+            41,
+            114,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.40268456375838924,
+          "rgbaHash": "42185b89897c9f9111bb71631033f8e46583a7b82c08dc54bf862d74c349dfc2",
+          "silhouetteHash": "bcce2dd803ae3936dd1f390dae7ff1775838b49bc63c3c1160f260d3a9c4ec31",
+          "visiblePixels": 5792
+        },
+        {
+          "index": 8,
+          "pose": "dash_1",
+          "sourceRegion": [
+            956,
+            344,
+            1300,
+            673
+          ],
+          "sourceBounds": [
+            984,
+            413,
+            1282,
+            626
+          ],
+          "bbox": [
+            4,
+            42,
+            124,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.40268456375838924,
+          "rgbaHash": "e621fa803228f166c0e99f14d0151ef8f22f17a261ac7a807b5f7114860aeac9",
+          "silhouetteHash": "0bb25769677a45e883b717425b8790f6044fe529a90f4e214231fd6aebbb0d29",
+          "visiblePixels": 6570
+        },
+        {
+          "index": 9,
+          "pose": "dead",
+          "sourceRegion": [
+            1300,
+            344,
+            1619,
+            673
+          ],
+          "sourceBounds": [
+            1318,
+            489,
+            1601,
+            622
+          ],
+          "bbox": [
+            7,
+            74,
+            121,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.40268456375838924,
+          "rgbaHash": "99dea043ea06aec6bf88cca5d257fc1ae6db5d263a496676996a129dcf5fc5ea",
+          "silhouetteHash": "7b4bb2826dfdd467d02074782d40402e476526939c4791085c37bc5ae5ebd3f5",
+          "visiblePixels": 4389
+        },
+        {
+          "index": 10,
+          "pose": "idle_2",
+          "sourceRegion": [
+            0,
+            673,
+            323,
+            972
+          ],
+          "sourceBounds": [
+            26,
+            713,
+            288,
+            938
+          ],
+          "bbox": [
+            11,
+            37,
+            117,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.40268456375838924,
+          "rgbaHash": "97fa4e66e09d9c10d9a07ad59458986b3d7cd0200f047619700c432737c302e0",
+          "silhouetteHash": "30fd7540acd4b6ad4730bd6f0610af744982a1ee4f4dd71a322dec823aaa4908",
+          "visiblePixels": 6501
+        },
+        {
+          "index": 11,
+          "pose": "run_5",
+          "sourceRegion": [
+            323,
+            673,
+            642,
+            972
+          ],
+          "sourceBounds": [
+            358,
+            716,
+            609,
+            939
+          ],
+          "bbox": [
+            13,
+            38,
+            114,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.40268456375838924,
+          "rgbaHash": "295d9197d720d8c2ec4c8776c9bfce3387c488c19ae421a965070fde2fff326a",
+          "silhouetteHash": "541ff76ac97f8defe3d0b3302f38c5a99f16c6988ad4686ec722372fe88f891f",
+          "visiblePixels": 5964
+        },
+        {
+          "index": 12,
+          "pose": "run_6",
+          "sourceRegion": [
+            642,
+            673,
+            964,
+            972
+          ],
+          "sourceBounds": [
+            675,
+            714,
+            935,
+            938
+          ],
+          "bbox": [
+            11,
+            38,
+            116,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.40268456375838924,
+          "rgbaHash": "ecc1c9e5a04459f8def1eba80730b71c52291326ecac530a867e39a8f5f972ea",
+          "silhouetteHash": "a14a7f68d5d151677c6a655956e3d5f94c4ea413d36aeb2049d12f703a97db8a",
+          "visiblePixels": 6150
+        },
+        {
+          "index": 13,
+          "pose": "dash_2",
+          "sourceRegion": [
+            964,
+            673,
+            1295,
+            972
+          ],
+          "sourceBounds": [
+            994,
+            719,
+            1273,
+            930
+          ],
+          "bbox": [
+            8,
+            43,
+            120,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.40268456375838924,
+          "rgbaHash": "acd496220986dd9ce9e3cdf82c4e77bf1fd2ff01b053270f64e5b4f26bdde7dd",
+          "silhouetteHash": "0317ece2133e6c5f2de857c3582ba03d7fdbc53d1bf2870464bfcd1ebc8bae06",
+          "visiblePixels": 6317
+        },
+        {
+          "index": 14,
+          "pose": "dead_settled",
+          "sourceRegion": [
+            1295,
+            673,
+            1619,
+            972
+          ],
+          "sourceBounds": [
+            1318,
+            803,
+            1604,
+            937
+          ],
+          "bbox": [
+            6,
+            74,
+            121,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.40268456375838924,
+          "rgbaHash": "2952d2e93f8175d0c7369b298d9799b07eb831db51cebffcf12eb3fbef8a6beb",
+          "silhouetteHash": "a8528e897ace655df0fec4a628d41e83eb990e8fbfaa6c21299485b402f8f44b",
+          "visiblePixels": 4516
+        }
+      ],
+      "qaAnimations": {
+        "run": "docs/skins-v4/strawberry-v1-run.gif",
+        "all-poses": "docs/skins-v4/strawberry-v1-all-poses.gif"
+      },
+      "qaPoseContact": "docs/skins-v4/strawberry-v1-pose-contact.png"
+    },
+    {
+      "id": "lemon-v1",
+      "provenance": "builtin-image_gen",
+      "source": "assets/skins/generated-v4/lemon-v1-source.png",
+      "sourceHash": "83027f5bdbf096ab956dcca1dd2462f1d29c79fafed52cc85b9c43edd0746b9a",
+      "sourceSize": [
+        1619,
+        972
+      ],
+      "runtime": "assets/skins/runtime-v4/lemon-v1-sheet.png",
+      "runtimeHash": "85365dc927899ce2ed21c4d88fbdf82499677d17344cc10aaad9d6678f05646e",
+      "runtimeSize": [
+        640,
+        384
+      ],
+      "frameCount": 15,
+      "frameWidth": 128,
+      "frameHeight": 128,
+      "renderFrameWidth": 128,
+      "renderFrameHeight": 112,
+      "topPadding": 16,
+      "columns": 5,
+      "rows": 3,
+      "scale": 0.39215686274509803,
+      "alphaThreshold": 128,
+      "filter": "nearest",
+      "frames": [
+        {
+          "index": 0,
+          "pose": "idle_1",
+          "sourceRegion": [
+            0,
+            0,
+            314,
+            345
+          ],
+          "sourceBounds": [
+            30,
+            95,
+            294,
+            313
+          ],
+          "bbox": [
+            12,
+            43,
+            116,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.39215686274509803,
+          "rgbaHash": "2635cd8ef943c903a40251f7d8df677d0ac0b06e87426bc0b6a9cef6867feed4",
+          "silhouetteHash": "2b2b7d8d8963a593c5e35cd9dbf8efa92e3dbc4c4ece1baa1f30ef9e3903383c",
+          "visiblePixels": 6145
+        },
+        {
+          "index": 1,
+          "pose": "run_1",
+          "sourceRegion": [
+            314,
+            0,
+            640,
+            345
+          ],
+          "sourceBounds": [
+            335,
+            86,
+            606,
+            312
+          ],
+          "bbox": [
+            11,
+            39,
+            117,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.39215686274509803,
+          "rgbaHash": "177254228f57e12bd6ee1473ffd25d760bce53f83da17b4a434ee354a57a8387",
+          "silhouetteHash": "9196851029d94428153539d9aa82ae0c81c936af035836846a8a80daf11e15b1",
+          "visiblePixels": 6156
+        },
+        {
+          "index": 2,
+          "pose": "run_2",
+          "sourceRegion": [
+            640,
+            0,
+            970,
+            345
+          ],
+          "sourceBounds": [
+            675,
+            95,
+            941,
+            313
+          ],
+          "bbox": [
+            12,
+            43,
+            116,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.39215686274509803,
+          "rgbaHash": "9061bc549e0fac1c284a31cdc1dc674149ae746cbe3f8d926bd71be0bf410cb0",
+          "silhouetteHash": "ee618a6c709113ac796362d0bdcb63718c403b405e10b7b54e3e8c900cd88c2d",
+          "visiblePixels": 6009
+        },
+        {
+          "index": 3,
+          "pose": "run_3",
+          "sourceRegion": [
+            970,
+            0,
+            1299,
+            345
+          ],
+          "sourceBounds": [
+            999,
+            93,
+            1268,
+            313
+          ],
+          "bbox": [
+            11,
+            42,
+            116,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.39215686274509803,
+          "rgbaHash": "02721e79b1ffb133c8d6b11c63bd5a1e6075c502b99719af92aa53121a2aefa5",
+          "silhouetteHash": "d3c4c47ff0899a85c0008b0eec7adf2f974457d6d852a9c642047f37f7fff3d6",
+          "visiblePixels": 6012
+        },
+        {
+          "index": 4,
+          "pose": "run_4",
+          "sourceRegion": [
+            1299,
+            0,
+            1619,
+            345
+          ],
+          "sourceBounds": [
+            1331,
+            96,
+            1603,
+            313
+          ],
+          "bbox": [
+            10,
+            43,
+            117,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.39215686274509803,
+          "rgbaHash": "c0756782b140047381bddd076ba7e58840784e05f8f918ac6e0c2ab0a1af61ea",
+          "silhouetteHash": "87a19d793f4ce673c7f7dd7a1602a47361777ca512e67a1841f07c67d3bfbf92",
+          "visiblePixels": 6127
+        },
+        {
+          "index": 5,
+          "pose": "jump",
+          "sourceRegion": [
+            0,
+            345,
+            326,
+            678
+          ],
+          "sourceBounds": [
+            40,
+            378,
+            295,
+            593
+          ],
+          "bbox": [
+            14,
+            36,
+            114,
+            120
+          ],
+          "footBaseline": 120,
+          "uniformScale": 0.39215686274509803,
+          "rgbaHash": "c3e15270ba4d4c2348b2e778c1f945acdfee0d0f91dc0aab37ccf932dd32bd81",
+          "silhouetteHash": "dc8ecf48880cb2662397e344ba4c271a5240001f92d824f851a5db4db2208db4",
+          "visiblePixels": 5639
+        },
+        {
+          "index": 6,
+          "pose": "fall",
+          "sourceRegion": [
+            326,
+            345,
+            650,
+            678
+          ],
+          "sourceBounds": [
+            358,
+            411,
+            621,
+            630
+          ],
+          "bbox": [
+            12,
+            42,
+            115,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.39215686274509803,
+          "rgbaHash": "082d04f035e9e03967c7858953eba030ee620b579f17cf46ef2d21d3ec8147e0",
+          "silhouetteHash": "c2b099a7bbd2e121525d7754444cc4d80b7e825b0f3eceff049ac0f28f824444",
+          "visiblePixels": 5879
+        },
+        {
+          "index": 7,
+          "pose": "hit",
+          "sourceRegion": [
+            650,
+            345,
+            953,
+            678
+          ],
+          "sourceBounds": [
+            679,
+            419,
+            934,
+            634
+          ],
+          "bbox": [
+            14,
+            44,
+            114,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.39215686274509803,
+          "rgbaHash": "6a9ade45ff26b46f4b9b487615288925c3338762d94a1e09bee4efc4e8559737",
+          "silhouetteHash": "3731fbb9921848f25bec22956d5446165653dd3c55ad023324aa74639e894eb7",
+          "visiblePixels": 5681
+        },
+        {
+          "index": 8,
+          "pose": "dash_1",
+          "sourceRegion": [
+            953,
+            345,
+            1296,
+            678
+          ],
+          "sourceBounds": [
+            972,
+            422,
+            1278,
+            629
+          ],
+          "bbox": [
+            4,
+            47,
+            124,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.39215686274509803,
+          "rgbaHash": "2f0b8765b76f270f3d8810cb697e11ac736cfd901c4c967caf67c77fff8ace61",
+          "silhouetteHash": "155e26adc870bd610b75d75816ea9615810ae1b8ba1286232f176823ef6af720",
+          "visiblePixels": 6142
+        },
+        {
+          "index": 9,
+          "pose": "dead",
+          "sourceRegion": [
+            1296,
+            345,
+            1619,
+            678
+          ],
+          "sourceBounds": [
+            1314,
+            509,
+            1590,
+            634
+          ],
+          "bbox": [
+            10,
+            79,
+            118,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.39215686274509803,
+          "rgbaHash": "81106dcc4fb8a3d1e934d0e91ec049e4af3546364f45e374a1c4dceedb357d19",
+          "silhouetteHash": "8ed78a653ec5967b7bf8a6ede8cf793461bc7556c19e04c8af4734e46eac10fe",
+          "visiblePixels": 3865
+        },
+        {
+          "index": 10,
+          "pose": "idle_2",
+          "sourceRegion": [
+            0,
+            678,
+            322,
+            972
+          ],
+          "sourceBounds": [
+            30,
+            728,
+            294,
+            941
+          ],
+          "bbox": [
+            12,
+            44,
+            116,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.39215686274509803,
+          "rgbaHash": "e2d711065b6124b39c1609a25c292b46af8aaec24106b58095a72aa1c97ee157",
+          "silhouetteHash": "7065b73ffd5576ee4a121243345de9f352fb97a16c0ec1b911f24436e65fb779",
+          "visiblePixels": 6034
+        },
+        {
+          "index": 11,
+          "pose": "run_5",
+          "sourceRegion": [
+            322,
+            678,
+            645,
+            972
+          ],
+          "sourceBounds": [
+            351,
+            722,
+            616,
+            941
+          ],
+          "bbox": [
+            12,
+            42,
+            116,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.39215686274509803,
+          "rgbaHash": "e5f6f035ef2cabad25cb76fdd10f9937cf1fb17eb78d88534178572f226d8ea1",
+          "silhouetteHash": "1a3a46ca23769bf44b6edab08d3f1e52740780d13ef1cbf6786188d5b513ae32",
+          "visiblePixels": 5823
+        },
+        {
+          "index": 12,
+          "pose": "run_6",
+          "sourceRegion": [
+            645,
+            678,
+            959,
+            972
+          ],
+          "sourceBounds": [
+            675,
+            726,
+            939,
+            941
+          ],
+          "bbox": [
+            12,
+            44,
+            116,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.39215686274509803,
+          "rgbaHash": "b21a0d4e7f40266008c82ca4adaf2dac8cd4165b71f2716c6726d4699a545f07",
+          "silhouetteHash": "a44f9204361daae04941a71e1a8afb5e1bf5cc772f42f818dd4cc04cf6d73e45",
+          "visiblePixels": 5844
+        },
+        {
+          "index": 13,
+          "pose": "dash_2",
+          "sourceRegion": [
+            959,
+            678,
+            1300,
+            972
+          ],
+          "sourceBounds": [
+            979,
+            728,
+            1281,
+            927
+          ],
+          "bbox": [
+            5,
+            50,
+            123,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.39215686274509803,
+          "rgbaHash": "7319dd51f33361b868680c7118ae8d79c365d4fd37bdb8ec20993a383da54425",
+          "silhouetteHash": "11e16d2936392fa5626038f099151583df987bf020e9e360b6461cd157c44e9a",
+          "visiblePixels": 6187
+        },
+        {
+          "index": 14,
+          "pose": "dead_settled",
+          "sourceRegion": [
+            1300,
+            678,
+            1619,
+            972
+          ],
+          "sourceBounds": [
+            1319,
+            820,
+            1595,
+            945
+          ],
+          "bbox": [
+            10,
+            79,
+            118,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.39215686274509803,
+          "rgbaHash": "93076d35fdfd442a61f828b1d30bf8d56032acb0278e7af48c455837d8029879",
+          "silhouetteHash": "3a6848fa23f0475a321d254aeeaba0e2b3e4c0b5a1f4ea3e537936eeecec30df",
+          "visiblePixels": 3986
+        }
+      ],
+      "qaAnimations": {
+        "run": "docs/skins-v4/lemon-v1-run.gif",
+        "all-poses": "docs/skins-v4/lemon-v1-all-poses.gif"
+      },
+      "qaPoseContact": "docs/skins-v4/lemon-v1-pose-contact.png"
+    },
+    {
+      "id": "sailor-v1",
+      "provenance": "builtin-image_gen",
+      "source": "assets/skins/generated-v4/sailor-v1-source.png",
+      "sourceHash": "290dfdecafe28cf2b7c87f8a1b42049c90e0fa62daf65e2ce2735199aa7e75dc",
+      "sourceSize": [
+        1619,
+        972
+      ],
+      "runtime": "assets/skins/runtime-v4/sailor-v1-sheet.png",
+      "runtimeHash": "d114a033d9f7221c070653e23fd1e2e486c0486be121246f7918d899df415889",
+      "runtimeSize": [
+        640,
+        384
+      ],
+      "frameCount": 15,
+      "frameWidth": 128,
+      "frameHeight": 128,
+      "renderFrameWidth": 128,
+      "renderFrameHeight": 112,
+      "topPadding": 16,
+      "columns": 5,
+      "rows": 3,
+      "scale": 0.40540540540540543,
+      "alphaThreshold": 128,
+      "filter": "nearest",
+      "frames": [
+        {
+          "index": 0,
+          "pose": "idle_1",
+          "sourceRegion": [
+            0,
+            0,
+            312,
+            349
+          ],
+          "sourceBounds": [
+            30,
+            85,
+            293,
+            311
+          ],
+          "bbox": [
+            10,
+            36,
+            117,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.40540540540540543,
+          "rgbaHash": "5cee46e7d42213a3605ec2c9f0f741f5e6a27c48691a7d976eafd904784e3dba",
+          "silhouetteHash": "1f67d72ad6509e74ce4c9dea4df0a20e1360d693b62e9246c3a535261d591336",
+          "visiblePixels": 6489
+        },
+        {
+          "index": 1,
+          "pose": "run_1",
+          "sourceRegion": [
+            312,
+            0,
+            641,
+            349
+          ],
+          "sourceBounds": [
+            331,
+            84,
+            602,
+            314
+          ],
+          "bbox": [
+            9,
+            35,
+            119,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.40540540540540543,
+          "rgbaHash": "5be4c318348fe2a2e23826debd4657c3f6b354ac2fc36f36cf07babf57f8fdc4",
+          "silhouetteHash": "8fe54a0b1fe9d12f91734b06dd9bbe03652f7716cdc1c5724e07112a069b5872",
+          "visiblePixels": 6474
+        },
+        {
+          "index": 2,
+          "pose": "run_2",
+          "sourceRegion": [
+            641,
+            0,
+            974,
+            349
+          ],
+          "sourceBounds": [
+            681,
+            86,
+            941,
+            311
+          ],
+          "bbox": [
+            11,
+            37,
+            116,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.40540540540540543,
+          "rgbaHash": "28b75a08d1e86a12227ce84368b2b17d5c83db75d998772869979593d49ae04d",
+          "silhouetteHash": "c26e699e0026b44a6a8e1717455b22bca813a0dd473d0d4c5f8f6e9749ebe816",
+          "visiblePixels": 6220
+        },
+        {
+          "index": 3,
+          "pose": "run_3",
+          "sourceRegion": [
+            974,
+            0,
+            1304,
+            349
+          ],
+          "sourceBounds": [
+            1007,
+            85,
+            1268,
+            309
+          ],
+          "bbox": [
+            11,
+            37,
+            117,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.40540540540540543,
+          "rgbaHash": "7c44e952ed694cc58b3f80795e0eb71ff03a597c311d96ac408f06870c87b3d2",
+          "silhouetteHash": "a4b96514294a30bf831fc23ebdce48f6aca7e980239ec55cba95636398d4e025",
+          "visiblePixels": 6400
+        },
+        {
+          "index": 4,
+          "pose": "run_4",
+          "sourceRegion": [
+            1304,
+            0,
+            1619,
+            349
+          ],
+          "sourceBounds": [
+            1340,
+            85,
+            1600,
+            311
+          ],
+          "bbox": [
+            11,
+            36,
+            116,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.40540540540540543,
+          "rgbaHash": "23aa74d38b21c1f46b99363879df28de79c901d593da261617218a5429c2ae47",
+          "silhouetteHash": "20540132d708e1ec6e28f7b1711ea959ded6025e35734a80186f375f726b1e76",
+          "visiblePixels": 6258
+        },
+        {
+          "index": 5,
+          "pose": "jump",
+          "sourceRegion": [
+            0,
+            349,
+            330,
+            677
+          ],
+          "sourceBounds": [
+            39,
+            384,
+            299,
+            601
+          ],
+          "bbox": [
+            11,
+            32,
+            116,
+            120
+          ],
+          "footBaseline": 120,
+          "uniformScale": 0.40540540540540543,
+          "rgbaHash": "b7ad07e647d9df8964c3e1aa2127a8ff195567b8631a48801b313159646de29a",
+          "silhouetteHash": "6c450cf33005c6eb5a5b1a53d24fc4e38a2595489e03d7fa944a2ca83b59e946",
+          "visiblePixels": 6075
+        },
+        {
+          "index": 6,
+          "pose": "fall",
+          "sourceRegion": [
+            330,
+            349,
+            658,
+            677
+          ],
+          "sourceBounds": [
+            361,
+            403,
+            632,
+            628
+          ],
+          "bbox": [
+            9,
+            37,
+            119,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.40540540540540543,
+          "rgbaHash": "06a7fa9f775cb12c2e752ea056874b6d9c0476ea929c59b02f93f6798f703482",
+          "silhouetteHash": "380f0a7cd5843e6adcd30d5440855e147d66b81c086a53ec33e7939fd05da755",
+          "visiblePixels": 6381
+        },
+        {
+          "index": 7,
+          "pose": "hit",
+          "sourceRegion": [
+            658,
+            349,
+            965,
+            677
+          ],
+          "sourceBounds": [
+            685,
+            406,
+            942,
+            631
+          ],
+          "bbox": [
+            12,
+            37,
+            116,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.40540540540540543,
+          "rgbaHash": "d1fe4ecf1957065980704a7ec44fffa3cae7015b3790fd161bf620f195848ba6",
+          "silhouetteHash": "81b22464b75f547e6c1236f9a45af58909373b9c28304544a9f724f9a9c9b996",
+          "visiblePixels": 5844
+        },
+        {
+          "index": 8,
+          "pose": "dash_1",
+          "sourceRegion": [
+            965,
+            349,
+            1300,
+            677
+          ],
+          "sourceBounds": [
+            988,
+            410,
+            1284,
+            625
+          ],
+          "bbox": [
+            4,
+            41,
+            124,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.40540540540540543,
+          "rgbaHash": "45b7d1547bf80410db50daec1dde86a2605de1e330ee0d5cd16d0131f4129bc4",
+          "silhouetteHash": "bdc9091a29fb2ed7fb97a39d075daa20b2e39d1cb59e74166db0b58498c32be1",
+          "visiblePixels": 6381
+        },
+        {
+          "index": 9,
+          "pose": "dead",
+          "sourceRegion": [
+            1300,
+            349,
+            1619,
+            677
+          ],
+          "sourceBounds": [
+            1317,
+            497,
+            1596,
+            625
+          ],
+          "bbox": [
+            7,
+            76,
+            120,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.40540540540540543,
+          "rgbaHash": "f5e227eaf3355162c472204aba71c39b573048083a770a5ed079a44823468c7e",
+          "silhouetteHash": "435ef08df42353829b808ee3579080db3f6a7699b6f546136e9f4dbb9fb566e6",
+          "visiblePixels": 4249
+        },
+        {
+          "index": 10,
+          "pose": "idle_2",
+          "sourceRegion": [
+            0,
+            677,
+            327,
+            972
+          ],
+          "sourceBounds": [
+            32,
+            723,
+            293,
+            942
+          ],
+          "bbox": [
+            11,
+            39,
+            117,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.40540540540540543,
+          "rgbaHash": "7ff19a6ceafefa6b6250b8659415719f852776488160103231d50ed25bbae7e2",
+          "silhouetteHash": "54e54bec26fc8a874935f1a4d7c925f86a4b0e7443bdb34f687c14e363edd386",
+          "visiblePixels": 6345
+        },
+        {
+          "index": 11,
+          "pose": "run_5",
+          "sourceRegion": [
+            327,
+            677,
+            647,
+            972
+          ],
+          "sourceBounds": [
+            361,
+            723,
+            614,
+            942
+          ],
+          "bbox": [
+            12,
+            39,
+            115,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.40540540540540543,
+          "rgbaHash": "546141df7de0702fb1f6df7bafc77afe5a706171988ba75e08fef55f2032c7ec",
+          "silhouetteHash": "caeb57cc8bbfb6795dd633af18a6f11c16e646dc7a0fa354bffcc08ed436337f",
+          "visiblePixels": 6051
+        },
+        {
+          "index": 12,
+          "pose": "run_6",
+          "sourceRegion": [
+            647,
+            677,
+            967,
+            972
+          ],
+          "sourceBounds": [
+            681,
+            723,
+            941,
+            942
+          ],
+          "bbox": [
+            11,
+            39,
+            116,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.40540540540540543,
+          "rgbaHash": "487eeac4c5be36514fb9feac732e1856b08434711d46b3cd9b8263bc34feddc7",
+          "silhouetteHash": "809c77333a7cce0896cda1e1f7a494ed9159fa71aee3d28217a1545fcda7bec6",
+          "visiblePixels": 6240
+        },
+        {
+          "index": 13,
+          "pose": "dash_2",
+          "sourceRegion": [
+            967,
+            677,
+            1296,
+            972
+          ],
+          "sourceBounds": [
+            993,
+            723,
+            1276,
+            923
+          ],
+          "bbox": [
+            6,
+            47,
+            121,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.40540540540540543,
+          "rgbaHash": "d2793093ec75cccba22bbc7d47fe23ae24c9f47ee4e63a5ad50cabeb190bcf42",
+          "silhouetteHash": "73adaca3a3c6729202721641ca577bab8677a404d0a38dff8d4f6599d161339b",
+          "visiblePixels": 6271
+        },
+        {
+          "index": 14,
+          "pose": "dead_settled",
+          "sourceRegion": [
+            1296,
+            677,
+            1619,
+            972
+          ],
+          "sourceBounds": [
+            1317,
+            802,
+            1600,
+            937
+          ],
+          "bbox": [
+            6,
+            73,
+            121,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.40540540540540543,
+          "rgbaHash": "f5b5fc6cf4abbb2317af13c2a050d72f68974039c1c19a78fbff27781a998056",
+          "silhouetteHash": "93b21ba469c420e65080836595aa1d9821eec31fcc344184e8c75a7de2841b4f",
+          "visiblePixels": 4504
+        }
+      ],
+      "qaAnimations": {
+        "run": "docs/skins-v4/sailor-v1-run.gif",
+        "all-poses": "docs/skins-v4/sailor-v1-all-poses.gif"
+      },
+      "qaPoseContact": "docs/skins-v4/sailor-v1-pose-contact.png"
+    },
+    {
+      "id": "starlight-v1",
+      "provenance": "builtin-image_gen",
+      "source": "assets/skins/generated-v4/starlight-v1-source.png",
+      "sourceHash": "c0e3dd93a861c047a04f770b3233bf8bae46d2d8955876496dfab721d3f274da",
+      "sourceSize": [
+        1619,
+        972
+      ],
+      "runtime": "assets/skins/runtime-v4/starlight-v1-sheet.png",
+      "runtimeHash": "e82f98db6ad036f8ae9ad675bd18a14de42dd8ed420629980d501cd7e28befbc",
+      "runtimeSize": [
+        640,
+        384
+      ],
+      "frameCount": 15,
+      "frameWidth": 128,
+      "frameHeight": 128,
+      "renderFrameWidth": 128,
+      "renderFrameHeight": 112,
+      "topPadding": 16,
+      "columns": 5,
+      "rows": 3,
+      "scale": 0.41522491349480967,
+      "alphaThreshold": 128,
+      "filter": "nearest",
+      "frames": [
+        {
+          "index": 0,
+          "pose": "idle_1",
+          "sourceRegion": [
+            0,
+            0,
+            318,
+            343
+          ],
+          "sourceBounds": [
+            31,
+            97,
+            292,
+            309
+          ],
+          "bbox": [
+            10,
+            40,
+            118,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.41522491349480967,
+          "rgbaHash": "3742b1c2acae9579f7e0f85c768d27025c3515fb02eab43f52aa0977308bf135",
+          "silhouetteHash": "5f00579d750a5d798b65e6ba3c42d00443b2307dafda651c5666b3db1c5c71ea",
+          "visiblePixels": 6641
+        },
+        {
+          "index": 1,
+          "pose": "run_1",
+          "sourceRegion": [
+            318,
+            0,
+            642,
+            343
+          ],
+          "sourceBounds": [
+            345,
+            90,
+            606,
+            308
+          ],
+          "bbox": [
+            10,
+            37,
+            118,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.41522491349480967,
+          "rgbaHash": "9aac3e0658e4b7c47a2457733930f45d82686b27e2ba896aa62f7dc77dad61cf",
+          "silhouetteHash": "3da120176aaaeb64afa21ea973e09e5b30dc7d9a03bd88b205c0b889613b684b",
+          "visiblePixels": 6597
+        },
+        {
+          "index": 2,
+          "pose": "run_2",
+          "sourceRegion": [
+            642,
+            0,
+            974,
+            343
+          ],
+          "sourceBounds": [
+            678,
+            98,
+            940,
+            309
+          ],
+          "bbox": [
+            9,
+            40,
+            118,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.41522491349480967,
+          "rgbaHash": "60caf2d676981ad1650862fbad2394308da0bdb7b277791bcb87d4b720baeec7",
+          "silhouetteHash": "3ccb5237fb1cfe63bca726e89739dc242c258cec988a5f9a0dc1035c3cbca96a",
+          "visiblePixels": 6580
+        },
+        {
+          "index": 3,
+          "pose": "run_3",
+          "sourceRegion": [
+            974,
+            0,
+            1304,
+            343
+          ],
+          "sourceBounds": [
+            1008,
+            98,
+            1268,
+            310
+          ],
+          "bbox": [
+            10,
+            40,
+            118,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.41522491349480967,
+          "rgbaHash": "9d4e1f272f002ec3f4b458241125ac670835e880d686476cb33a355bc97ec4d5",
+          "silhouetteHash": "77bb489eefa2899d2c8b2dc633accacf6af99ed01080f93117e97ae706671668",
+          "visiblePixels": 6567
+        },
+        {
+          "index": 4,
+          "pose": "run_4",
+          "sourceRegion": [
+            1304,
+            0,
+            1619,
+            343
+          ],
+          "sourceBounds": [
+            1341,
+            100,
+            1600,
+            311
+          ],
+          "bbox": [
+            10,
+            40,
+            118,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.41522491349480967,
+          "rgbaHash": "2f1dee70047549708bb1e10aba3876d6d9ebc06048b9c020f4a42e0b2c24a89f",
+          "silhouetteHash": "4efd2ba4b44fed37ce2f2b3f0b0b3232814c8ea5725cb531ffd78395a3a82e90",
+          "visiblePixels": 6350
+        },
+        {
+          "index": 5,
+          "pose": "jump",
+          "sourceRegion": [
+            0,
+            343,
+            328,
+            680
+          ],
+          "sourceBounds": [
+            41,
+            376,
+            294,
+            582
+          ],
+          "bbox": [
+            11,
+            34,
+            116,
+            120
+          ],
+          "footBaseline": 120,
+          "uniformScale": 0.41522491349480967,
+          "rgbaHash": "bade36c29f1c76c14bd6161ea067ffcecf159c4e812ffada8e6a913e33e3da56",
+          "silhouetteHash": "5a434666a156caa0bab4dcf22eaf8aeeb600948616d9bb98a30739d858a985d1",
+          "visiblePixels": 6027
+        },
+        {
+          "index": 6,
+          "pose": "fall",
+          "sourceRegion": [
+            328,
+            343,
+            654,
+            680
+          ],
+          "sourceBounds": [
+            362,
+            416,
+            621,
+            626
+          ],
+          "bbox": [
+            10,
+            41,
+            118,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.41522491349480967,
+          "rgbaHash": "2976a48a4cb823eb5e47a5be20e39fe414448db5a4afdaa75b551d4dd581c56c",
+          "silhouetteHash": "f94c1e1aced13367c7e915e7d181ad1bd66bf80c905a43a63905ebb30587aa10",
+          "visiblePixels": 6513
+        },
+        {
+          "index": 7,
+          "pose": "hit",
+          "sourceRegion": [
+            654,
+            343,
+            959,
+            680
+          ],
+          "sourceBounds": [
+            688,
+            439,
+            930,
+            630
+          ],
+          "bbox": [
+            14,
+            49,
+            114,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.41522491349480967,
+          "rgbaHash": "bec3499d9c61860f8e28992573cd04655d43541f9264b76bb7e8d92388220fe0",
+          "silhouetteHash": "4d48d27f011f5016b709ec6763e013957cff00412dd730c9e9d8e56b5c4ef899",
+          "visiblePixels": 5494
+        },
+        {
+          "index": 8,
+          "pose": "dash_1",
+          "sourceRegion": [
+            959,
+            343,
+            1296,
+            680
+          ],
+          "sourceBounds": [
+            988,
+            423,
+            1277,
+            625
+          ],
+          "bbox": [
+            4,
+            44,
+            124,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.41522491349480967,
+          "rgbaHash": "0c445b7e841269fe2d7c3a39f81ca41e7152266c2611f5a3a9e1b8495710139c",
+          "silhouetteHash": "81ebec809267097b1cd09ffcb0fb271b8dae6a950be5b9312fa69d450e70ec83",
+          "visiblePixels": 6602
+        },
+        {
+          "index": 9,
+          "pose": "dead",
+          "sourceRegion": [
+            1296,
+            343,
+            1619,
+            680
+          ],
+          "sourceBounds": [
+            1316,
+            510,
+            1592,
+            634
+          ],
+          "bbox": [
+            6,
+            77,
+            121,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.41522491349480967,
+          "rgbaHash": "aa7e1fb8f28d9b6f9dbd6dd6a9b45fc579d8e375082a68644f2a988ccee9bb0b",
+          "silhouetteHash": "6f4700427d57eafe12875f2cc79f8f9d842ce4e6ac07d17e95974887cf8376b3",
+          "visiblePixels": 4173
+        },
+        {
+          "index": 10,
+          "pose": "idle_2",
+          "sourceRegion": [
+            0,
+            680,
+            327,
+            972
+          ],
+          "sourceBounds": [
+            31,
+            726,
+            292,
+            939
+          ],
+          "bbox": [
+            10,
+            40,
+            118,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.41522491349480967,
+          "rgbaHash": "1f9adc8f25e196d247cdfe600b1e033305e1dafe069d55a94976533197bcf5aa",
+          "silhouetteHash": "446ae6504e30fd0cd4781ef8726d26899cc75a1bd3451109fc33fbc1c89977aa",
+          "visiblePixels": 6652
+        },
+        {
+          "index": 11,
+          "pose": "run_5",
+          "sourceRegion": [
+            327,
+            680,
+            648,
+            972
+          ],
+          "sourceBounds": [
+            363,
+            729,
+            615,
+            939
+          ],
+          "bbox": [
+            11,
+            41,
+            116,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.41522491349480967,
+          "rgbaHash": "7f2c3bc9ba15fab0b90631e2c5028a123cd38d8cfb13fe854dea9d3ad08621f0",
+          "silhouetteHash": "05d0fceccbfdc6d009c5f5991ef85c1c1a2e5d8b2faa69e507c0c7df294af270",
+          "visiblePixels": 6228
+        },
+        {
+          "index": 12,
+          "pose": "run_6",
+          "sourceRegion": [
+            648,
+            680,
+            970,
+            972
+          ],
+          "sourceBounds": [
+            682,
+            730,
+            938,
+            939
+          ],
+          "bbox": [
+            11,
+            41,
+            117,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.41522491349480967,
+          "rgbaHash": "7a244c6f948cfe48fcd34584939ff386e4c59d92cd52e03247e6faca02ce0732",
+          "silhouetteHash": "106751d2c24269fd2c3479201d52606df3783b85a8a759d784fe9ddecbaa9b40",
+          "visiblePixels": 6264
+        },
+        {
+          "index": 13,
+          "pose": "dash_2",
+          "sourceRegion": [
+            970,
+            680,
+            1299,
+            972
+          ],
+          "sourceBounds": [
+            1003,
+            730,
+            1277,
+            925
+          ],
+          "bbox": [
+            7,
+            47,
+            121,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.41522491349480967,
+          "rgbaHash": "99a966d58ac203c2f4ab7a68fa19fdbac07385f9a95afc8e037c204f4212a1c8",
+          "silhouetteHash": "6f8e1e0eb1e26a21a7bb7b9d381e2333ed1838637419e70b4ad52904b09ccadc",
+          "visiblePixels": 6600
+        },
+        {
+          "index": 14,
+          "pose": "dead_settled",
+          "sourceRegion": [
+            1299,
+            680,
+            1619,
+            972
+          ],
+          "sourceBounds": [
+            1321,
+            819,
+            1597,
+            941
+          ],
+          "bbox": [
+            6,
+            77,
+            121,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.41522491349480967,
+          "rgbaHash": "519c26ec51df06f23912fe2ab43290f0f8c7122ec37bac83039d1248d959925d",
+          "silhouetteHash": "302b8fd8d0d5c19e45b520a890c9b75977daf3e2b2b6e2b68883af7a8a3eb0d8",
+          "visiblePixels": 4459
+        }
+      ],
+      "qaAnimations": {
+        "run": "docs/skins-v4/starlight-v1-run.gif",
+        "all-poses": "docs/skins-v4/starlight-v1-all-poses.gif"
+      },
+      "qaPoseContact": "docs/skins-v4/starlight-v1-pose-contact.png"
+    },
+    {
+      "id": "postman-v1",
+      "provenance": "builtin-image_gen",
+      "source": "assets/skins/generated-v4/postman-v1-source.png",
+      "sourceHash": "ffdb7e6ebd2d0c340dc11196fc685efd89f7d93ce5912de6d12760c81fc99e76",
+      "sourceSize": [
+        1619,
+        972
+      ],
+      "runtime": "assets/skins/runtime-v4/postman-v1-sheet.png",
+      "runtimeHash": "de9a32054cc85b12930654dad997a02ce783d15064d1d5caf238a07c622bb868",
+      "runtimeSize": [
+        640,
+        384
+      ],
+      "frameCount": 15,
+      "frameWidth": 128,
+      "frameHeight": 128,
+      "renderFrameWidth": 128,
+      "renderFrameHeight": 112,
+      "topPadding": 16,
+      "columns": 5,
+      "rows": 3,
+      "scale": 0.39867109634551495,
+      "alphaThreshold": 128,
+      "filter": "nearest",
+      "frames": [
+        {
+          "index": 0,
+          "pose": "idle_1",
+          "sourceRegion": [
+            0,
+            0,
+            317,
+            347
+          ],
+          "sourceBounds": [
+            31,
+            87,
+            296,
+            310
+          ],
+          "bbox": [
+            11,
+            39,
+            117,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.39867109634551495,
+          "rgbaHash": "23d823303d96099e908a16ea5423af13e716c62f367059037b7f1a61f03fdabf",
+          "silhouetteHash": "188941d7eec817174cef38e5fb9bbb0879d9b688aba55862c92957b72d41ebac",
+          "visiblePixels": 6450
+        },
+        {
+          "index": 1,
+          "pose": "run_1",
+          "sourceRegion": [
+            317,
+            0,
+            639,
+            347
+          ],
+          "sourceBounds": [
+            338,
+            85,
+            603,
+            311
+          ],
+          "bbox": [
+            11,
+            38,
+            117,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.39867109634551495,
+          "rgbaHash": "27d2a43414c07e89c36f2b792ed7501bed9f39772c099ff471593d9d634b1cc3",
+          "silhouetteHash": "4a31c4dd7eccb340b38712e171b0d5d668644d07f94e4f5e2fec42bafba4d054",
+          "visiblePixels": 6300
+        },
+        {
+          "index": 2,
+          "pose": "run_2",
+          "sourceRegion": [
+            639,
+            0,
+            970,
+            347
+          ],
+          "sourceBounds": [
+            676,
+            90,
+            939,
+            310
+          ],
+          "bbox": [
+            11,
+            40,
+            116,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.39867109634551495,
+          "rgbaHash": "0894377366e88e99181f0d94c50336c2312f5b0f182594be5007008920e9eacd",
+          "silhouetteHash": "82aefc56485b6b0572203b40d1ddd882c23682a6a8131053b4b186cd77c02874",
+          "visiblePixels": 6255
+        },
+        {
+          "index": 3,
+          "pose": "run_3",
+          "sourceRegion": [
+            970,
+            0,
+            1303,
+            347
+          ],
+          "sourceBounds": [
+            1001,
+            88,
+            1266,
+            304
+          ],
+          "bbox": [
+            11,
+            42,
+            117,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.39867109634551495,
+          "rgbaHash": "74017db81b08f698176dd3d974fd0d944b6b846632d2a485aed3df635b84591a",
+          "silhouetteHash": "0c8a1b0d074241f988b1030a1b255c8a1900b31bb262c856eda76c0dd41496bd",
+          "visiblePixels": 6312
+        },
+        {
+          "index": 4,
+          "pose": "run_4",
+          "sourceRegion": [
+            1303,
+            0,
+            1619,
+            347
+          ],
+          "sourceBounds": [
+            1340,
+            90,
+            1605,
+            310
+          ],
+          "bbox": [
+            11,
+            40,
+            117,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.39867109634551495,
+          "rgbaHash": "e0e091a6663d261e41cc9f1f1006a39564bbf9d1dc835201c19a0afe9b87be84",
+          "silhouetteHash": "1871e164f6e9ba7804e86f0971e7a2677c7f44600aa46769e64eee6e6164916c",
+          "visiblePixels": 6243
+        },
+        {
+          "index": 5,
+          "pose": "jump",
+          "sourceRegion": [
+            0,
+            347,
+            328,
+            676
+          ],
+          "sourceBounds": [
+            37,
+            383,
+            294,
+            595
+          ],
+          "bbox": [
+            13,
+            35,
+            115,
+            120
+          ],
+          "footBaseline": 120,
+          "uniformScale": 0.39867109634551495,
+          "rgbaHash": "beb970ea8f6501ff0875958ccdd6e16982db9872dd95328586b9dc51b79f6f8b",
+          "silhouetteHash": "5dc0aece2b2b780e96c2e712e6e2d6c804db9305168eae2194aeb048860c24dc",
+          "visiblePixels": 5850
+        },
+        {
+          "index": 6,
+          "pose": "fall",
+          "sourceRegion": [
+            328,
+            347,
+            656,
+            676
+          ],
+          "sourceBounds": [
+            362,
+            409,
+            624,
+            631
+          ],
+          "bbox": [
+            12,
+            39,
+            116,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.39867109634551495,
+          "rgbaHash": "dd2bf1132b0888ec4f782f10e4c718dd4271c8453583b22ad9a6c58a25dda9cf",
+          "silhouetteHash": "527c71f6f495aeca4beadb310ddc98d33abbb327fc770d4a9930537f350dc79a",
+          "visiblePixels": 6181
+        },
+        {
+          "index": 7,
+          "pose": "hit",
+          "sourceRegion": [
+            656,
+            347,
+            954,
+            676
+          ],
+          "sourceBounds": [
+            689,
+            416,
+            929,
+            636
+          ],
+          "bbox": [
+            16,
+            40,
+            112,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.39867109634551495,
+          "rgbaHash": "9c685dbc14e179e20c96617cdd642d6d784bb4c3f7df72931fb35ed7cd0f5af2",
+          "silhouetteHash": "40b5881a77a390344a8fb496aa260120b5adf3ae192c335bbc3f398dbbfca2d3",
+          "visiblePixels": 5868
+        },
+        {
+          "index": 8,
+          "pose": "dash_1",
+          "sourceRegion": [
+            954,
+            347,
+            1296,
+            676
+          ],
+          "sourceBounds": [
+            980,
+            425,
+            1281,
+            619
+          ],
+          "bbox": [
+            4,
+            51,
+            124,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.39867109634551495,
+          "rgbaHash": "9783a8c3eb001c16055e43fbf55ca9128cc3fed8e4de2d7add4829ddbd6a32c8",
+          "silhouetteHash": "288db7d0bf676ed9af1474138f5e16ee44a0cdefbafb28e5d125090c3dc2aa89",
+          "visiblePixels": 6222
+        },
+        {
+          "index": 9,
+          "pose": "dead",
+          "sourceRegion": [
+            1296,
+            347,
+            1619,
+            676
+          ],
+          "sourceBounds": [
+            1312,
+            495,
+            1590,
+            630
+          ],
+          "bbox": [
+            8,
+            74,
+            119,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.39867109634551495,
+          "rgbaHash": "9725c4fa05a17a2dfedde1b267c24794e46f01cb0ed400ef8f90c1c80d9aae4e",
+          "silhouetteHash": "3ee671a7313dc125dea4627dc12d174c46a4ba671e336279823311bc3626e3ab",
+          "visiblePixels": 4402
+        },
+        {
+          "index": 10,
+          "pose": "idle_2",
+          "sourceRegion": [
+            0,
+            676,
+            327,
+            972
+          ],
+          "sourceBounds": [
+            33,
+            723,
+            295,
+            940
+          ],
+          "bbox": [
+            12,
+            41,
+            116,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.39867109634551495,
+          "rgbaHash": "cdf8b6456689b13653ca5d27d2dd47eea3816159692684b1e24709a5c835b2cc",
+          "silhouetteHash": "2f103301f7e0f5cf123524254ecccb3db76fb52435c290afb67e8c8ec9b0b4bf",
+          "visiblePixels": 6124
+        },
+        {
+          "index": 11,
+          "pose": "run_5",
+          "sourceRegion": [
+            327,
+            676,
+            649,
+            972
+          ],
+          "sourceBounds": [
+            359,
+            717,
+            616,
+            940
+          ],
+          "bbox": [
+            13,
+            39,
+            115,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.39867109634551495,
+          "rgbaHash": "b550ed2f5b7358d39e3e806369df2ccccdafb669d3c561380270424322e82f14",
+          "silhouetteHash": "7a6ca892ee0d4310b21e2a1c3a07aa86f409e15415a213a268985a65c89f4483",
+          "visiblePixels": 6005
+        },
+        {
+          "index": 12,
+          "pose": "run_6",
+          "sourceRegion": [
+            649,
+            676,
+            964,
+            972
+          ],
+          "sourceBounds": [
+            682,
+            722,
+            939,
+            940
+          ],
+          "bbox": [
+            13,
+            41,
+            115,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.39867109634551495,
+          "rgbaHash": "0adc29963a7b2578f432384d1a12965f0c28dd035bba1a19271c7a2d087d0ebe",
+          "silhouetteHash": "6ba5fc7010f69380d886936444b8a6bf1623600965c7a7163956ab4ba570d958",
+          "visiblePixels": 6028
+        },
+        {
+          "index": 13,
+          "pose": "dash_2",
+          "sourceRegion": [
+            964,
+            676,
+            1299,
+            972
+          ],
+          "sourceBounds": [
+            990,
+            724,
+            1279,
+            925
+          ],
+          "bbox": [
+            6,
+            48,
+            121,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.39867109634551495,
+          "rgbaHash": "4bee0f3210c3c28cc5f9f4b2ba589c2c4b8e333de48d2c0319f790f0195989bd",
+          "silhouetteHash": "0053645fb01ecb5df877bba31dedc4d1537a4e6bb251d460454cf1e5d6875f25",
+          "visiblePixels": 6070
+        },
+        {
+          "index": 14,
+          "pose": "dead_settled",
+          "sourceRegion": [
+            1299,
+            676,
+            1619,
+            972
+          ],
+          "sourceBounds": [
+            1320,
+            804,
+            1595,
+            940
+          ],
+          "bbox": [
+            9,
+            74,
+            119,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.39867109634551495,
+          "rgbaHash": "8d331fdb670b4a542cb6d09bc93bffe1e867d96ac78cb19600375b9263d85aa6",
+          "silhouetteHash": "736f22709757254901f795013b4bffac0ab11412ed259100f0be0c30886fcc6e",
+          "visiblePixels": 4342
+        }
+      ],
+      "qaAnimations": {
+        "run": "docs/skins-v4/postman-v1-run.gif",
+        "all-poses": "docs/skins-v4/postman-v1-all-poses.gif"
+      },
+      "qaPoseContact": "docs/skins-v4/postman-v1-pose-contact.png"
+    },
+    {
+      "id": "raincoat-v1",
+      "provenance": "builtin-image_gen",
+      "source": "assets/skins/generated-v4/raincoat-v1-source.png",
+      "sourceHash": "b8c3556e41b228d1d98fdcb5446077cb31c046bd04c1d2ef1b5310063f224f81",
+      "sourceSize": [
+        1619,
+        971
+      ],
+      "runtime": "assets/skins/runtime-v4/raincoat-v1-sheet.png",
+      "runtimeHash": "a17b53606b442538143079d255a6679b15c1ed394004c08bd071f2072f338125",
+      "runtimeSize": [
+        640,
+        384
+      ],
+      "frameCount": 15,
+      "frameWidth": 128,
+      "frameHeight": 128,
+      "renderFrameWidth": 128,
+      "renderFrameHeight": 112,
+      "topPadding": 16,
+      "columns": 5,
+      "rows": 3,
+      "scale": 0.40816326530612246,
+      "alphaThreshold": 128,
+      "filter": "nearest",
+      "frames": [
+        {
+          "index": 0,
+          "pose": "idle_1",
+          "sourceRegion": [
+            0,
+            0,
+            321,
+            348
+          ],
+          "sourceBounds": [
+            36,
+            90,
+            299,
+            309
+          ],
+          "bbox": [
+            10,
+            39,
+            117,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.40816326530612246,
+          "rgbaHash": "bbb131e53e9c87d885ab5a981410352a70a3719aa41493d65b8bf79eaec6ecaa",
+          "silhouetteHash": "18047d910d8912eb19793eaf04049d9467d4182911b8ad9e40128709a9f61f2e",
+          "visiblePixels": 6365
+        },
+        {
+          "index": 1,
+          "pose": "run_1",
+          "sourceRegion": [
+            321,
+            0,
+            644,
+            348
+          ],
+          "sourceBounds": [
+            344,
+            89,
+            608,
+            309
+          ],
+          "bbox": [
+            10,
+            38,
+            118,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.40816326530612246,
+          "rgbaHash": "2468e80ba12438959824187f5d2a9a454cc188b6c8fb779e61441454f93ab6a9",
+          "silhouetteHash": "185dcdbf2c1e7135c15d793839aceed03eb6904f40249c3639623bba11438899",
+          "visiblePixels": 6410
+        },
+        {
+          "index": 2,
+          "pose": "run_2",
+          "sourceRegion": [
+            644,
+            0,
+            975,
+            348
+          ],
+          "sourceBounds": [
+            681,
+            90,
+            940,
+            309
+          ],
+          "bbox": [
+            11,
+            39,
+            117,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.40816326530612246,
+          "rgbaHash": "6152bcd115f1a9958a6bb140dfaa3227139c1115feb748b88c0df8c4c30fdd01",
+          "silhouetteHash": "2d6c6a9ade9b0c8939861bd8ca7ff964b3e0790107cb0f6a01cedd84ecb43930",
+          "visiblePixels": 6337
+        },
+        {
+          "index": 3,
+          "pose": "run_3",
+          "sourceRegion": [
+            975,
+            0,
+            1303,
+            348
+          ],
+          "sourceBounds": [
+            1011,
+            89,
+            1267,
+            303
+          ],
+          "bbox": [
+            12,
+            41,
+            116,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.40816326530612246,
+          "rgbaHash": "c8f8d2ae0d6fff6eee952ce485c2d65cb96ed829b8fe5157d09ac3a325c361fd",
+          "silhouetteHash": "1a4cdbf442f09bcbd216165237fec205b3aec6d6923e91fc5865c216bf258872",
+          "visiblePixels": 6047
+        },
+        {
+          "index": 4,
+          "pose": "run_4",
+          "sourceRegion": [
+            1303,
+            0,
+            1619,
+            348
+          ],
+          "sourceBounds": [
+            1340,
+            90,
+            1599,
+            307
+          ],
+          "bbox": [
+            11,
+            39,
+            117,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.40816326530612246,
+          "rgbaHash": "fc2abd22e8535e51a6c3d74c9d2324ffa6617f3595eb074d4a08de9db5f22f88",
+          "silhouetteHash": "5ec48f8c8eca9434ad0edfffac84f79f04d01ce38bb8dfc7999b0daf65616073",
+          "visiblePixels": 6198
+        },
+        {
+          "index": 5,
+          "pose": "jump",
+          "sourceRegion": [
+            0,
+            348,
+            329,
+            679
+          ],
+          "sourceBounds": [
+            45,
+            387,
+            295,
+            594
+          ],
+          "bbox": [
+            13,
+            36,
+            115,
+            120
+          ],
+          "footBaseline": 120,
+          "uniformScale": 0.40816326530612246,
+          "rgbaHash": "39cd5bf70a82491e295e5d595564bed56760acf318af7c1bc24abc6563d797fc",
+          "silhouetteHash": "9602d531745bd36ed1f66ca91161581f444c30a4b41d8a772d34c5c1726b4920",
+          "visiblePixels": 5673
+        },
+        {
+          "index": 6,
+          "pose": "fall",
+          "sourceRegion": [
+            329,
+            348,
+            657,
+            679
+          ],
+          "sourceBounds": [
+            364,
+            407,
+            622,
+            626
+          ],
+          "bbox": [
+            11,
+            39,
+            116,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.40816326530612246,
+          "rgbaHash": "779ae3feaa7477d94018447141cfdb4f2e7379d9392aa9a41827bf6c015ddfac",
+          "silhouetteHash": "d90550db7d86dba2d4d276604e49cc71f35ede2fe0278d7187c0f328c97d541f",
+          "visiblePixels": 6176
+        },
+        {
+          "index": 7,
+          "pose": "hit",
+          "sourceRegion": [
+            657,
+            348,
+            958,
+            679
+          ],
+          "sourceBounds": [
+            692,
+            420,
+            933,
+            637
+          ],
+          "bbox": [
+            15,
+            39,
+            113,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.40816326530612246,
+          "rgbaHash": "20f4918d053dd26d86c1e8584904a3424c80e2e347975a55c05fb48cbb125b82",
+          "silhouetteHash": "634bba002eb05f9839d131f18ed4b99d20ee4433cf754783c39d5ae13351f15c",
+          "visiblePixels": 5771
+        },
+        {
+          "index": 8,
+          "pose": "dash_1",
+          "sourceRegion": [
+            958,
+            348,
+            1292,
+            679
+          ],
+          "sourceBounds": [
+            983,
+            417,
+            1277,
+            625
+          ],
+          "bbox": [
+            4,
+            43,
+            124,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.40816326530612246,
+          "rgbaHash": "fd7b472d7f0259c80bd809e1d0fe93b0489d40a809c7f9574cd92c06f0fef774",
+          "silhouetteHash": "85915e38e1fe96f58f553389ca97829294bbaff47fc37a3bbc925df409c811ef",
+          "visiblePixels": 6390
+        },
+        {
+          "index": 9,
+          "pose": "dead",
+          "sourceRegion": [
+            1292,
+            348,
+            1619,
+            679
+          ],
+          "sourceBounds": [
+            1308,
+            500,
+            1591,
+            623
+          ],
+          "bbox": [
+            6,
+            78,
+            122,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.40816326530612246,
+          "rgbaHash": "c8628f57c711be01b2988b81d2bec70c4613cca65a1155f3ca9a10a81ffafecf",
+          "silhouetteHash": "978d7ce660ba0fe1eb26ecfc4325d23f73e94811325d43e924205b96aec9237b",
+          "visiblePixels": 4295
+        },
+        {
+          "index": 10,
+          "pose": "idle_2",
+          "sourceRegion": [
+            0,
+            679,
+            324,
+            971
+          ],
+          "sourceBounds": [
+            35,
+            722,
+            296,
+            938
+          ],
+          "bbox": [
+            10,
+            40,
+            117,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.40816326530612246,
+          "rgbaHash": "9f2c4c037675e09bbef90b939d8edf5d49326c418cf6116e08aa94b05f09c388",
+          "silhouetteHash": "06f3847cafb7a3b151181453549b43348d1f2e4f62de0a7eb075818d0d646a53",
+          "visiblePixels": 6323
+        },
+        {
+          "index": 11,
+          "pose": "run_5",
+          "sourceRegion": [
+            324,
+            679,
+            649,
+            971
+          ],
+          "sourceBounds": [
+            352,
+            723,
+            620,
+            941
+          ],
+          "bbox": [
+            9,
+            39,
+            118,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.40816326530612246,
+          "rgbaHash": "f1f3489e539d8ac111bad4c83531465dd7b9697e46489b9a2e38b09ec68bf25b",
+          "silhouetteHash": "88289b41153747b27f47cc20d89d1e1ea481b17b2d65c9d5d44f159c1e088ef9",
+          "visiblePixels": 6225
+        },
+        {
+          "index": 12,
+          "pose": "run_6",
+          "sourceRegion": [
+            649,
+            679,
+            966,
+            971
+          ],
+          "sourceBounds": [
+            679,
+            723,
+            938,
+            939
+          ],
+          "bbox": [
+            11,
+            40,
+            117,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.40816326530612246,
+          "rgbaHash": "fb812dfc6db51c9f4be2086e61b3d4dde6c491ec7bcf1f9854e5368bdb912cb2",
+          "silhouetteHash": "2fd855f4562f34d39158404700e743db9b06cf3bbc1c1e61f6fd4ae09fef4343",
+          "visiblePixels": 6181
+        },
+        {
+          "index": 13,
+          "pose": "dash_2",
+          "sourceRegion": [
+            966,
+            679,
+            1296,
+            971
+          ],
+          "sourceBounds": [
+            994,
+            723,
+            1275,
+            933
+          ],
+          "bbox": [
+            6,
+            42,
+            121,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.40816326530612246,
+          "rgbaHash": "f1090080c3f53e09b39d4c796594c25f6afeb674eebed273c588cf1204b4f2ae",
+          "silhouetteHash": "57e6962512ffda17cba5ba079d386c68cebd4e63245f1d221d93905c9d644e16",
+          "visiblePixels": 6341
+        },
+        {
+          "index": 14,
+          "pose": "dead_settled",
+          "sourceRegion": [
+            1296,
+            679,
+            1619,
+            971
+          ],
+          "sourceBounds": [
+            1318,
+            808,
+            1598,
+            936
+          ],
+          "bbox": [
+            7,
+            76,
+            121,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.40816326530612246,
+          "rgbaHash": "63e2cfe4b7c1355512fbf83443a66542f749ae18ae66cf3f9259a6d5d3ef5a83",
+          "silhouetteHash": "6a18f0a9533c98ea3a108e982ac4e870416134396460978cc063eba7e1bba200",
+          "visiblePixels": 4392
+        }
+      ],
+      "qaAnimations": {
+        "run": "docs/skins-v4/raincoat-v1-run.gif",
+        "all-poses": "docs/skins-v4/raincoat-v1-all-poses.gif"
+      },
+      "qaPoseContact": "docs/skins-v4/raincoat-v1-pose-contact.png"
+    },
+    {
+      "id": "explorer-v1",
+      "provenance": "builtin-image_gen",
+      "source": "assets/skins/generated-v4/explorer-v1-source.png",
+      "sourceHash": "afb265e91ad763c174ef0bd15ea00320edd9128aeb399ffda6a55b9348a36b59",
+      "sourceSize": [
+        1619,
+        972
+      ],
+      "runtime": "assets/skins/runtime-v4/explorer-v1-sheet.png",
+      "runtimeHash": "cccc1643f55475aa30106f79d73dd06c3fc12ec070978618d78c524c8a9a47bf",
+      "runtimeSize": [
+        640,
+        384
+      ],
+      "frameCount": 15,
+      "frameWidth": 128,
+      "frameHeight": 128,
+      "renderFrameWidth": 128,
+      "renderFrameHeight": 112,
+      "topPadding": 16,
+      "columns": 5,
+      "rows": 3,
+      "scale": 0.4067796610169492,
+      "alphaThreshold": 128,
+      "filter": "nearest",
+      "frames": [
+        {
+          "index": 0,
+          "pose": "idle_1",
+          "sourceRegion": [
+            0,
+            0,
+            318,
+            345
+          ],
+          "sourceBounds": [
+            34,
+            83,
+            294,
+            309
+          ],
+          "bbox": [
+            11,
+            36,
+            117,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.4067796610169492,
+          "rgbaHash": "a0f34c289ff32854360f00bf4c4eec46622f4c41d13f16272d21a817409706fa",
+          "silhouetteHash": "4f6d7578350498d9b8375b94d4dacde719e762b168fe7045958dd6c456c4cc6e",
+          "visiblePixels": 6693
+        },
+        {
+          "index": 1,
+          "pose": "run_1",
+          "sourceRegion": [
+            318,
+            0,
+            645,
+            345
+          ],
+          "sourceBounds": [
+            342,
+            82,
+            614,
+            312
+          ],
+          "bbox": [
+            8,
+            34,
+            119,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.4067796610169492,
+          "rgbaHash": "1139102ca8dfd69231b3df3db3b9ef23107f324a8fa086f2c79a9295f9cd140c",
+          "silhouetteHash": "7515aaf02fef9396f04efebdb341a3a757bc51979a156a6be4f73bde87b4ea11",
+          "visiblePixels": 6754
+        },
+        {
+          "index": 2,
+          "pose": "run_2",
+          "sourceRegion": [
+            645,
+            0,
+            971,
+            345
+          ],
+          "sourceBounds": [
+            677,
+            84,
+            939,
+            312
+          ],
+          "bbox": [
+            10,
+            35,
+            117,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.4067796610169492,
+          "rgbaHash": "c9e77f01f39bd3a88f39ef2877331b0a3bac924b3b179b29f8a5f22fd2e169f2",
+          "silhouetteHash": "eddb244460589851ce88e890609bcd508b04d8ac787cd222a5df094083c7320d",
+          "visiblePixels": 6794
+        },
+        {
+          "index": 3,
+          "pose": "run_3",
+          "sourceRegion": [
+            971,
+            0,
+            1300,
+            345
+          ],
+          "sourceBounds": [
+            1004,
+            85,
+            1261,
+            309
+          ],
+          "bbox": [
+            11,
+            37,
+            116,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.4067796610169492,
+          "rgbaHash": "5c8f12c5926e031ae14712fe89e0fdd7607f299a745adf068196d88b4dea6db8",
+          "silhouetteHash": "c7bbc24c9d9150321fa4a7e8a1c3c5887d80c4298b598c9b3b7852a6f4c36354",
+          "visiblePixels": 6528
+        },
+        {
+          "index": 4,
+          "pose": "run_4",
+          "sourceRegion": [
+            1300,
+            0,
+            1619,
+            345
+          ],
+          "sourceBounds": [
+            1339,
+            90,
+            1608,
+            312
+          ],
+          "bbox": [
+            9,
+            38,
+            118,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.4067796610169492,
+          "rgbaHash": "68a0261b8434f374dff250300bfc51fdef61e2da8c2db1f4835e7b03fda7437d",
+          "silhouetteHash": "abcf9d34a38d149e88ac0fb50a28ab63d186bdd4e84babd0ed90b9d002714561",
+          "visiblePixels": 6605
+        },
+        {
+          "index": 5,
+          "pose": "jump",
+          "sourceRegion": [
+            0,
+            345,
+            327,
+            674
+          ],
+          "sourceBounds": [
+            41,
+            378,
+            295,
+            591
+          ],
+          "bbox": [
+            12,
+            33,
+            115,
+            120
+          ],
+          "footBaseline": 120,
+          "uniformScale": 0.4067796610169492,
+          "rgbaHash": "80efeec914bc1fffba791e454ec7d12f890aa3dbaebc8f3f6c9b64ef0d5f45f9",
+          "silhouetteHash": "5378e25cb3932ec5e1affd9ab756d4965ffefbab61db6822c9ef2563931eba85",
+          "visiblePixels": 6036
+        },
+        {
+          "index": 6,
+          "pose": "fall",
+          "sourceRegion": [
+            327,
+            345,
+            652,
+            674
+          ],
+          "sourceBounds": [
+            360,
+            406,
+            621,
+            628
+          ],
+          "bbox": [
+            11,
+            38,
+            117,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.4067796610169492,
+          "rgbaHash": "6d89d2d291e5945a554e71fe468cf6e594da321b90fb436ae1280cc772383711",
+          "silhouetteHash": "c39c77f52e49285260e9741facd29bc0e44070781d01f49045a9839a33a70a46",
+          "visiblePixels": 6450
+        },
+        {
+          "index": 7,
+          "pose": "hit",
+          "sourceRegion": [
+            652,
+            345,
+            957,
+            674
+          ],
+          "sourceBounds": [
+            684,
+            413,
+            932,
+            632
+          ],
+          "bbox": [
+            13,
+            39,
+            114,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.4067796610169492,
+          "rgbaHash": "53e9fdc2f0c51918a3a45b750da34a116d712eb8c2461df94bee1844025c8c51",
+          "silhouetteHash": "5cab430123bb5314b54a0645d79d27dd5cabe1573fab333653997798dd8c2e7d",
+          "visiblePixels": 6177
+        },
+        {
+          "index": 8,
+          "pose": "dash_1",
+          "sourceRegion": [
+            957,
+            345,
+            1297,
+            674
+          ],
+          "sourceBounds": [
+            982,
+            417,
+            1277,
+            628
+          ],
+          "bbox": [
+            4,
+            42,
+            124,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.4067796610169492,
+          "rgbaHash": "a44f34bda8332241794bf6a603f5de7a06ce72e8eeb2afdaaf0ea22b30140ebb",
+          "silhouetteHash": "ac4913f4208ba3e40db3879d6e0d9bcfb8ebc2186ec01af337a6348057e0b8ed",
+          "visiblePixels": 6519
+        },
+        {
+          "index": 9,
+          "pose": "dead",
+          "sourceRegion": [
+            1297,
+            345,
+            1619,
+            674
+          ],
+          "sourceBounds": [
+            1317,
+            499,
+            1599,
+            626
+          ],
+          "bbox": [
+            6,
+            76,
+            121,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.4067796610169492,
+          "rgbaHash": "bac7c4b7b9885dda8aa46b324934b61f44ad0d93e8e29adc06b9e6320f9428a9",
+          "silhouetteHash": "29be153915781f4d0fa490911db225264c269d55d55d4117d77895415c54ffaf",
+          "visiblePixels": 4730
+        },
+        {
+          "index": 10,
+          "pose": "idle_2",
+          "sourceRegion": [
+            0,
+            674,
+            326,
+            972
+          ],
+          "sourceBounds": [
+            36,
+            716,
+            294,
+            940
+          ],
+          "bbox": [
+            11,
+            37,
+            116,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.4067796610169492,
+          "rgbaHash": "1278920861d3ed86b9625cf4e7bf7c955cb80dc490a8ad746654d0d3781d688b",
+          "silhouetteHash": "41b662362375c33d85056d388fe2c7d276cda9d06ebb5b8ce5637509f5591d1e",
+          "visiblePixels": 6570
+        },
+        {
+          "index": 11,
+          "pose": "run_5",
+          "sourceRegion": [
+            326,
+            674,
+            650,
+            972
+          ],
+          "sourceBounds": [
+            358,
+            717,
+            620,
+            940
+          ],
+          "bbox": [
+            10,
+            37,
+            117,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.4067796610169492,
+          "rgbaHash": "9e845f564f0aa6022e92ac611670e718bc80a8c41bbb77b9095665476c058591",
+          "silhouetteHash": "8dfdd295f6570df11059477b49d7aa0a61b5fd3efd4dfe8b0c0bf1be9587178b",
+          "visiblePixels": 6307
+        },
+        {
+          "index": 12,
+          "pose": "run_6",
+          "sourceRegion": [
+            650,
+            674,
+            965,
+            972
+          ],
+          "sourceBounds": [
+            680,
+            716,
+            936,
+            940
+          ],
+          "bbox": [
+            12,
+            37,
+            116,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.4067796610169492,
+          "rgbaHash": "6b647c45a2d2796d882447920d2f82f4e9d75d44523a2a396276c34514b95a14",
+          "silhouetteHash": "e072b1503b05f7cef20b8facc8501c28d31b63d3cb9807f079a714fd362b8bc6",
+          "visiblePixels": 6354
+        },
+        {
+          "index": 13,
+          "pose": "dash_2",
+          "sourceRegion": [
+            965,
+            674,
+            1298,
+            972
+          ],
+          "sourceBounds": [
+            994,
+            723,
+            1278,
+            927
+          ],
+          "bbox": [
+            6,
+            45,
+            122,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.4067796610169492,
+          "rgbaHash": "619b6e090aa450abda3871b18111903c6c7dc0215a5be3748d3dc5ff7f063014",
+          "silhouetteHash": "a03308334c26b2422b1dc41781d2f3781d04b35ded317496c2c0aa86aa4fb228",
+          "visiblePixels": 6395
+        },
+        {
+          "index": 14,
+          "pose": "dead_settled",
+          "sourceRegion": [
+            1298,
+            674,
+            1619,
+            972
+          ],
+          "sourceBounds": [
+            1319,
+            804,
+            1597,
+            938
+          ],
+          "bbox": [
+            7,
+            73,
+            120,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.4067796610169492,
+          "rgbaHash": "00115ab6a09d3758db5023cc6e5cdfd87d441783d1c0a4eb8c560c512ca3a780",
+          "silhouetteHash": "693900f69b3c31f1f600723e520c6f2aeab152e87deb60118623ee54148e55dc",
+          "visiblePixels": 4640
+        }
+      ],
+      "qaAnimations": {
+        "run": "docs/skins-v4/explorer-v1-run.gif",
+        "all-poses": "docs/skins-v4/explorer-v1-all-poses.gif"
+      },
+      "qaPoseContact": "docs/skins-v4/explorer-v1-pose-contact.png"
+    },
+    {
+      "id": "astronaut-v1",
+      "provenance": "builtin-image_gen",
+      "source": "assets/skins/generated-v4/astronaut-v1-source.png",
+      "sourceHash": "e757817fbfd78c058e4b184b4aa5724d34204eebe2496240044c4ed8bfcea1df",
+      "sourceSize": [
+        1619,
+        972
+      ],
+      "runtime": "assets/skins/runtime-v4/astronaut-v1-sheet.png",
+      "runtimeHash": "062cc35960fb0022a3d5b0042bc0a8f6f70ccbde61789aa8ea37af164834103f",
+      "runtimeSize": [
+        640,
+        384
+      ],
+      "frameCount": 15,
+      "frameWidth": 128,
+      "frameHeight": 128,
+      "renderFrameWidth": 128,
+      "renderFrameHeight": 112,
+      "topPadding": 16,
+      "columns": 5,
+      "rows": 3,
+      "scale": 0.4166666666666667,
+      "alphaThreshold": 128,
+      "filter": "nearest",
+      "frames": [
+        {
+          "index": 0,
+          "pose": "idle_1",
+          "sourceRegion": [
+            0,
+            0,
+            319,
+            354
+          ],
+          "sourceBounds": [
+            32,
+            97,
+            293,
+            311
+          ],
+          "bbox": [
+            9,
+            39,
+            118,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.4166666666666667,
+          "rgbaHash": "3afe1e5f7851e7f682e4f29c1be3a6486944d2f3bb011b5d63730ad84320e93f",
+          "silhouetteHash": "9dc085965a87025154d7c85f45bfee45c8ed73e60e00742617a52ea882432631",
+          "visiblePixels": 6872
+        },
+        {
+          "index": 1,
+          "pose": "run_1",
+          "sourceRegion": [
+            319,
+            0,
+            641,
+            354
+          ],
+          "sourceBounds": [
+            345,
+            98,
+            609,
+            311
+          ],
+          "bbox": [
+            9,
+            39,
+            119,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.4166666666666667,
+          "rgbaHash": "05dff3845665b827160c14d6d56f6f2a8a0b25a43706fe2d71b7ba10cc23d415",
+          "silhouetteHash": "22bce8c99a77b24f341e6373902c0753fb5d37481a06a3c46874cc2402e87530",
+          "visiblePixels": 6789
+        },
+        {
+          "index": 2,
+          "pose": "run_2",
+          "sourceRegion": [
+            641,
+            0,
+            975,
+            354
+          ],
+          "sourceBounds": [
+            674,
+            100,
+            942,
+            311
+          ],
+          "bbox": [
+            8,
+            40,
+            120,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.4166666666666667,
+          "rgbaHash": "ec4c5d70b9b8ae465bf61f732c2611a3dad7f90bf10d4736a0a9c4a50ddfc754",
+          "silhouetteHash": "14269678cce56c9ef4cf33e520a0b531c531033eabd1402d5c9f4503ac634aee",
+          "visiblePixels": 6673
+        },
+        {
+          "index": 3,
+          "pose": "run_3",
+          "sourceRegion": [
+            975,
+            0,
+            1302,
+            354
+          ],
+          "sourceBounds": [
+            1008,
+            102,
+            1266,
+            308
+          ],
+          "bbox": [
+            10,
+            42,
+            118,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.4166666666666667,
+          "rgbaHash": "866897c77d2b14603d63998da4a4639235f07d809830febdf82b43929c97b4da",
+          "silhouetteHash": "ef191011a9fbc4de1a8e354ae1ca85d4cd23916ba6d74d69925a1d37cc980a29",
+          "visiblePixels": 6514
+        },
+        {
+          "index": 4,
+          "pose": "run_4",
+          "sourceRegion": [
+            1302,
+            0,
+            1619,
+            354
+          ],
+          "sourceBounds": [
+            1338,
+            102,
+            1597,
+            311
+          ],
+          "bbox": [
+            10,
+            41,
+            118,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.4166666666666667,
+          "rgbaHash": "9fae36cce6610c2cb52d80301557b78ab119e63a7b92d28a7a8d2923084d7eb5",
+          "silhouetteHash": "d3cff799f00bde7989b7c5b1e5cb8e06da6accc1ad34b65ba4ea4578fd633386",
+          "visiblePixels": 6426
+        },
+        {
+          "index": 5,
+          "pose": "jump",
+          "sourceRegion": [
+            0,
+            354,
+            328,
+            677
+          ],
+          "sourceBounds": [
+            43,
+            397,
+            296,
+            588
+          ],
+          "bbox": [
+            11,
+            40,
+            116,
+            120
+          ],
+          "footBaseline": 120,
+          "uniformScale": 0.4166666666666667,
+          "rgbaHash": "e4d463114682bf9e6e4aa6a6cd9dda999a74787bef7546e05b26fd8b49a4d5ce",
+          "silhouetteHash": "b13d66321a1a949e41d944a00aa5f7e9e9d5a9d000ad19ee0ac4ddaa808909b0",
+          "visiblePixels": 6099
+        },
+        {
+          "index": 6,
+          "pose": "fall",
+          "sourceRegion": [
+            328,
+            354,
+            654,
+            677
+          ],
+          "sourceBounds": [
+            360,
+            415,
+            625,
+            627
+          ],
+          "bbox": [
+            9,
+            40,
+            119,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.4166666666666667,
+          "rgbaHash": "13c399c78c07c63bb6addcb897ebc1da30c45bc431b2648bc405492611afe599",
+          "silhouetteHash": "e0a7d447d621a91822b0270baa690332a72600f56190b31da5a4039395347394",
+          "visiblePixels": 6782
+        },
+        {
+          "index": 7,
+          "pose": "hit",
+          "sourceRegion": [
+            654,
+            354,
+            953,
+            677
+          ],
+          "sourceBounds": [
+            683,
+            422,
+            918,
+            631
+          ],
+          "bbox": [
+            15,
+            41,
+            113,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.4166666666666667,
+          "rgbaHash": "13c007ed4aaadedc71f44196161517f73a1b8968a1b263f4c1e77c8ed025bb10",
+          "silhouetteHash": "df8c2b890a535696db163e050d3914c74a067f18b4d5edd7919468ff90427ad2",
+          "visiblePixels": 6033
+        },
+        {
+          "index": 8,
+          "pose": "dash_1",
+          "sourceRegion": [
+            953,
+            354,
+            1293,
+            677
+          ],
+          "sourceBounds": [
+            988,
+            425,
+            1276,
+            623
+          ],
+          "bbox": [
+            4,
+            46,
+            124,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.4166666666666667,
+          "rgbaHash": "569e17d738f05b6296ef2098bff769e887fbd24108dbf3e775a43c58c2cf50ca",
+          "silhouetteHash": "fd7e1402cab294bf39e9e9c564d0959b0a0f4bd1f246f0aeeb63a0bf02b66261",
+          "visiblePixels": 6603
+        },
+        {
+          "index": 9,
+          "pose": "dead",
+          "sourceRegion": [
+            1293,
+            354,
+            1619,
+            677
+          ],
+          "sourceBounds": [
+            1311,
+            503,
+            1592,
+            624
+          ],
+          "bbox": [
+            5,
+            78,
+            122,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.4166666666666667,
+          "rgbaHash": "605c7ef8f581079ec902de66cc12cf5816f5a95917bf86af4393216e2ed7dc40",
+          "silhouetteHash": "67579b8dd307e6bda25b6baaa1071271db2f8a46254dc1d8f03cc723d0fc2ebb",
+          "visiblePixels": 4566
+        },
+        {
+          "index": 10,
+          "pose": "idle_2",
+          "sourceRegion": [
+            0,
+            677,
+            326,
+            972
+          ],
+          "sourceBounds": [
+            32,
+            730,
+            293,
+            940
+          ],
+          "bbox": [
+            9,
+            40,
+            118,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.4166666666666667,
+          "rgbaHash": "2a366dabfec082c4a8f780e57d1a869497ec6ca00e670e1ee034c9d1ca139cce",
+          "silhouetteHash": "49bca3f45d52c88aebfdc0819a14ff3897e19b4bbb086bed586202178ce30e06",
+          "visiblePixels": 6809
+        },
+        {
+          "index": 11,
+          "pose": "run_5",
+          "sourceRegion": [
+            326,
+            677,
+            647,
+            972
+          ],
+          "sourceBounds": [
+            360,
+            725,
+            615,
+            940
+          ],
+          "bbox": [
+            11,
+            38,
+            117,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.4166666666666667,
+          "rgbaHash": "741068b8a236090c4f644c87c5ad09f7e5d3fe9faa2b6e35b29c04aed5ea967a",
+          "silhouetteHash": "c15234c571d80667a14e1dee5e7cf012eab3603260a0ad2773fd4a601515c7cc",
+          "visiblePixels": 6516
+        },
+        {
+          "index": 12,
+          "pose": "run_6",
+          "sourceRegion": [
+            647,
+            677,
+            969,
+            972
+          ],
+          "sourceBounds": [
+            680,
+            724,
+            939,
+            940
+          ],
+          "bbox": [
+            10,
+            38,
+            118,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.4166666666666667,
+          "rgbaHash": "8d662b150307a27504af7569b9b94ac0cc41f021add3a62ec52bce708c08fcd8",
+          "silhouetteHash": "8ade1103284c9973498664726e83b9c0b14f9a6cad394f32978d72569e925690",
+          "visiblePixels": 6466
+        },
+        {
+          "index": 13,
+          "pose": "dash_2",
+          "sourceRegion": [
+            969,
+            677,
+            1297,
+            972
+          ],
+          "sourceBounds": [
+            1000,
+            731,
+            1276,
+            925
+          ],
+          "bbox": [
+            6,
+            47,
+            121,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.4166666666666667,
+          "rgbaHash": "ec9a4b16d5e45fd00026667178b116777b35a405ed668fb82093cca2e8a96d70",
+          "silhouetteHash": "fd50a2a6d27dcd8ae4dfb97829d1a9da31235fcc54ac7dbc3a1c59690e2b8ac9",
+          "visiblePixels": 6563
+        },
+        {
+          "index": 14,
+          "pose": "dead_settled",
+          "sourceRegion": [
+            1297,
+            677,
+            1619,
+            972
+          ],
+          "sourceBounds": [
+            1319,
+            813,
+            1595,
+            936
+          ],
+          "bbox": [
+            6,
+            77,
+            121,
+            128
+          ],
+          "footBaseline": 128,
+          "uniformScale": 0.4166666666666667,
+          "rgbaHash": "75c55642e6cf7ce0d9cca10e2e2c65f2be19b4a669d2adc0f509df3a53876fd6",
+          "silhouetteHash": "b120d8b050f166c6da9363b840902b417535453e46af39c66792a9b2d901fc6a",
+          "visiblePixels": 4619
+        }
+      ],
+      "qaAnimations": {
+        "run": "docs/skins-v4/astronaut-v1-run.gif",
+        "all-poses": "docs/skins-v4/astronaut-v1-all-poses.gif"
+      },
+      "qaPoseContact": "docs/skins-v4/astronaut-v1-pose-contact.png"
+    }
+  ]
+}

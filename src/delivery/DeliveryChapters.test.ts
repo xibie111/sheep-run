@@ -16,8 +16,8 @@ describe('configurable delivery chapters', () => {
     expect(DELIVERY_OBSTACLES.map(request => request.at)).toEqual([600, 1900, 3200, 4450, 5650, 6500, 7350, 8450, 9300, 10400, 11900, 13100, 14300, 15400]);
     expect(defaultDeliveryChapter().title).toBe('把晚安送到山坡上');
   });
-  it('accepts only the two authored IDs, is queryable, and does not mutate selection on invalid input', () => {
-    expect(DELIVERY_CHAPTERS).toHaveLength(2);
+  it('accepts the five authored IDs, is queryable, and does not mutate selection on invalid input', () => {
+    expect(DELIVERY_CHAPTERS).toHaveLength(5);
     expect(getDeliveryChapter(dinnerId)?.title).toBe('带着晚饭去找你');
     expect(getDeliveryChapter('future-route')).toBeUndefined();
     expect(isDeliveryChapterId(dinnerId)).toBe(true); expect(isDeliveryChapterId(null)).toBe(false);
