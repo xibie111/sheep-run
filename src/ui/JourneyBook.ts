@@ -13,6 +13,7 @@ import { AudioSystem } from "../systems/AudioSystem";
 import { acquireMenuModal, menuModalOwner, MENU_MODAL_CHANGE } from "./MenuModal";
 import { SCENERY_CARDS } from "../scenery/sceneryCatalog";
 import { sceneryStore } from "../scenery/SceneryStore";
+import { JOURNEY_CARDS_PER_PAGE, journeyPages, journeyPageContent, journeyCardIndex } from "./JourneyPostcardPages";
 
 export function wrapJournalText(value:string,painter:DisplayCanvasPainter,width:number,font:number):string[]{
   const rows:string[]=[];let row="";
@@ -27,7 +28,7 @@ export function attachJourneyBook(scene:Phaser.Scene,resultIds?:readonly Achieve
   if(!scene.game.canvas?.parentElement||!scene.game.events)return {openReward:(_id:RewardId,_closed?:()=>void)=>{}};
   scene.data.set("journey-book-open",false);
   const text=displayCanvasText(scene),muted=displayCanvasText(scene,"#8a725e"),stampText=displayCanvasText(scene,"#446e50");
-  const achievementsPerPage=4,sceneryPage=Math.ceil(ACHIEVEMENTS.length/achievementsPerPage),totalPages=sceneryPage+1;
+  const pages=journeyPages(ACHIEVEMENTS.length,SCENERY_CARDS.length);
   let open=false,page=0,mode:"achievements"|"reward"|"detail"|"postcard"="achievements",reward:RewardId="spring",selected:AchievementId="first-run";
   let scenery=sceneryStore.load(),postcard=0;
   let snapshot=journeyStore.load(),panel:ArtRect,entryBox:ArtRect,k=1,closed:(()=>void)|undefined;
@@ -37,7 +38,7 @@ export function attachJourneyBook(scene:Phaser.Scene,resultIds?:readonly Achieve
   const blocker=scene.add.container(0,0,[]).setDepth(220).setName("journey-blocker");
   const close=scene.add.container(0,0,[]).setDepth(222).setName("button:合上手账");
   const prev=scene.add.container(0,0,[]).setDepth(222).setName("journey-prev"),next=scene.add.container(0,0,[]).setDepth(222).setName("journey-next");
-  const cards=Array.from({length:4},(_,i)=>scene.add.container(0,0,[]).setDepth(222).setName(`achievement-card:${i}`));
+  const cards=Array.from({length:JOURNEY_CARDS_PER_PAGE},(_,i)=>scene.add.container(0,0,[]).setDepth(222).setName(`achievement-card:${i}`));
   const modal=[blocker,close,prev,next,...cards];
   const b=(x:number,y:number,width:number,height:number):ArtRect=>({x:panel.x+x*k,y:panel.y+y*k,width:width*k,height:height*k});
   const art=(ctx:CanvasRenderingContext2D,key:string,box:ArtRect)=>{
@@ -52,6 +53,7 @@ export function attachJourneyBook(scene:Phaser.Scene,resultIds?:readonly Achieve
   };
   const surface=createDisplayOverlay(scene,"journey-book",ctx=>{
     const lines:{text:string;box:ArtRect;ink:ArtRect}[]=[];
+    const content=journeyPageContent(pages,page);
     const line=(value:string,box:ArtRect,font=11,soft=false)=>{const p=soft?muted:text;lines.push({text:value,box,ink:p(ctx,value,box,p.fitFontSize(value,box.width,font)).ink});};
     const rows=(value:string,box:ArtRect,font=11,rowHeight=15)=>wrapJournalText(value,text,box.width,font).forEach((s,i)=>line(s,{...box,y:box.y+i*rowHeight,height:rowHeight},font));
     const unread=Object.keys(snapshot.achieved).some(id=>!snapshot.readAchievements.includes(id as AchievementId));
@@ -75,10 +77,10 @@ export function attachJourneyBook(scene:Phaser.Scene,resultIds?:readonly Achieve
         art(ctx,card.art,b(24,69,207,124));
         rows(card.message,b(246,75,157,15),12*k,19*k);
         line(scenery.saveFailed?"明信片暂未保存，本次仍可查看":"已遇见 · 随时可以回来看看",b(37,199,356,13),9*k,true);
-      }else if(mode==="achievements"&&page===sceneryPage){
+      }else if(mode==="achievements"&&content.section==="postcards"){
         line("风景明信片",b(60,27,310,21),17*k);
-        line(`已遇见 ${SCENERY_CARDS.filter(c=>scenery.seenIds.includes(c.id)).length} / ${SCENERY_CARDS.length} · 第 ${page+1} / ${totalPages} 页`,b(80,50,270,13),10*k);
-        SCENERY_CARDS.forEach((card,i)=>{
+        line(`已遇见 ${SCENERY_CARDS.filter(c=>scenery.seenIds.includes(c.id)).length} / ${SCENERY_CARDS.length} · 第 ${page+1} / ${pages.totalPages} 页`,b(80,50,270,13),10*k);
+        SCENERY_CARDS.slice(content.first,content.end).forEach((card,i)=>{
           const x=25+(i%2)*195,y=77+Math.floor(i/2)*63,cell=b(x,y,185,57),seen=scenery.seenIds.includes(card.id);
           ctx.fillStyle=seen?"#fff0c9":"#e8d3ab";ctx.fillRect(cell.x,cell.y,cell.width,cell.height);
           if(seen)art(ctx,card.art,b(x+5,y+9,54,36));
@@ -90,8 +92,8 @@ export function attachJourneyBook(scene:Phaser.Scene,resultIds?:readonly Achieve
         line(scenery.saveFailed?"明信片暂未保存，本次仍可查看":"遇见后自动收好，轻点明信片重看",b(40,204,350,10),9*k,true);
       }else if(mode==="achievements"){
         line("小羊旅行手账",b(60,27,310,21),17*k);
-        line(`点亮 ${Object.keys(snapshot.achieved).length} / ${ACHIEVEMENTS.length} · 第 ${page+1} / ${totalPages} 页`,b(100,50,230,13),10*k);
-        ACHIEVEMENTS.slice(page*achievementsPerPage,(page+1)*achievementsPerPage).forEach((a,i)=>{
+        line(`点亮 ${Object.keys(snapshot.achieved).length} / ${ACHIEVEMENTS.length} · 第 ${page+1} / ${pages.totalPages} 页`,b(100,50,230,13),10*k);
+        ACHIEVEMENTS.slice(content.first,content.end).forEach((a,i)=>{
           const x=25+(i%2)*195,y=77+Math.floor(i/2)*63,cell=b(x,y,185,57),done=Boolean(snapshot.achieved[a.id]);
           ctx.fillStyle=done?"#fff0c9":"#e8d3ab";ctx.fillRect(cell.x,cell.y,cell.width,cell.height);
           ctx.save();ctx.globalAlpha=done?1:.5;art(ctx,achievementIconKey(a.id),b(x+5,y+12,30,30));ctx.restore();
@@ -131,15 +133,19 @@ export function attachJourneyBook(scene:Phaser.Scene,resultIds?:readonly Achieve
     surface.canvas.dataset.lines=JSON.stringify(lines);surface.canvas.dataset.panel=JSON.stringify(panel);surface.canvas.dataset.entry=JSON.stringify(entryBox);
     surface.canvas.dataset.achieved=JSON.stringify(snapshot.achieved);surface.canvas.dataset.unread=String(unread);surface.canvas.dataset.saveFailed=String(snapshot.saveFailed);
     surface.canvas.dataset.scenery=JSON.stringify(scenery.seenIds);surface.canvas.dataset.postcard=String(postcard);
+    surface.canvas.dataset.totalPages=String(pages.totalPages);surface.canvas.dataset.sceneryStartPage=String(pages.achievementPages);surface.canvas.dataset.sceneryPages=String(pages.postcardPages);
+    surface.canvas.dataset.visibleCards=JSON.stringify(mode!=="achievements"?[]:(content.section==="postcards"?SCENERY_CARDS:ACHIEVEMENTS).slice(content.first,content.end).map(card=>card.id));
+    surface.canvas.dataset.cardTargets=JSON.stringify(cards.map(card=>Boolean(card.input?.enabled)));
   },9);
   const updateTargets=()=>{
     const album=scene.data.get("collection-album-open")===true;
     const owner=menuModalOwner(scene),active=open&&owner==="journey";
     entry.input!.enabled=!open&&!album&&!owner;
     modal.forEach(t=>t.input!.enabled=active);
-    const paging=mode==="achievements"||(mode==="reward"&&reward==="all"),last=mode==="achievements"?sceneryPage:COMPLETE_LETTER.length;
+    const content=journeyPageContent(pages,page);
+    const paging=mode==="achievements"||(mode==="reward"&&reward==="all"),last=mode==="achievements"?pages.totalPages-1:COMPLETE_LETTER.length;
     prev.input!.enabled=active&&paging&&page>0;next.input!.enabled=active&&paging&&page<last;
-    cards.forEach((c,i)=>c.input!.enabled=active&&mode==="achievements"&&(page===sceneryPage?!!SCENERY_CARDS[i]&&scenery.seenIds.includes(SCENERY_CARDS[i].id):!!ACHIEVEMENTS[page*achievementsPerPage+i]));
+    cards.forEach((c,i)=>{const index=journeyCardIndex(content,i);c.input!.enabled=active&&mode==="achievements"&&index!==undefined&&(content.section!=="postcards"||scenery.seenIds.includes(SCENERY_CARDS[index].id));});
   };
   const changed=()=>{snapshot=journeyStore.load();scenery=sceneryStore.load();updateTargets();surface.invalidate();};
   const feedback=(key:string)=>(value:boolean)=>{value?pressed.add(key):pressed.delete(key);surface.invalidate();};
@@ -148,12 +154,13 @@ export function attachJourneyBook(scene:Phaser.Scene,resultIds?:readonly Achieve
   const shut=()=>{if(mode==="detail"||mode==="postcard"){mode="achievements";changed();return;}open=false;scene.data.set("journey-book-open",false);release?.();release=undefined;sound();closed?.();closed=undefined;changed();};
   bindTouchTarget(scene,entry,56,48,()=>{mode="achievements";page=0;show();},feedback("entry"));
   bindTouchTarget(scene,blocker,1,1,()=>{},()=>{});bindTouchTarget(scene,close,124,32,shut,feedback("close"));
-  const flip=(direction:number)=>{const last=mode==="achievements"?sceneryPage:COMPLETE_LETTER.length;page=Math.max(0,Math.min(last,page+direction));if(mode==="reward"&&page===last)journeyStore.readReward("all");sound();changed();};
+  const flip=(direction:number)=>{const last=mode==="achievements"?pages.totalPages-1:COMPLETE_LETTER.length;page=Math.max(0,Math.min(last,page+direction));if(mode==="reward"&&page===last)journeyStore.readReward("all");sound();changed();};
   bindTouchTarget(scene,prev,91,32,()=>flip(-1),feedback("prev"));bindTouchTarget(scene,next,91,32,()=>flip(1),feedback("next"));
   cards.forEach((target,i)=>bindTouchTarget(scene,target,185,57,()=>{
     if(mode!=="achievements")return;
-    if(page===sceneryPage){if(!SCENERY_CARDS[i]||!scenery.seenIds.includes(SCENERY_CARDS[i].id))return;postcard=i;mode="postcard";}
-    else {const achievement=ACHIEVEMENTS[page*achievementsPerPage+i];if(!achievement)return;selected=achievement.id;mode="detail";journeyStore.readAchievement(selected);}
+    const content=journeyPageContent(pages,page),index=journeyCardIndex(content,i);if(index===undefined)return;
+    if(content.section==="postcards"){if(!scenery.seenIds.includes(SCENERY_CARDS[index].id))return;postcard=index;mode="postcard";}
+    else {const achievement=ACHIEVEMENTS[index];if(!achievement)return;selected=achievement.id;mode="detail";journeyStore.readAchievement(selected);}
     sound();changed();
   },feedback(`card:${i}`)));
   const place=(target:Phaser.GameObjects.Container,box:ArtRect,hitHeight=box.height)=>{target.setPosition(box.x+box.width/2,box.y+box.height/2).setSize(box.width,hitHeight);target.input!.hitArea.setSize(box.width,hitHeight);};

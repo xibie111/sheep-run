@@ -1,0 +1,12 @@
+{
+  "id": "winter-sunshine",
+  "source": "built-in image_gen",
+  "status": "pending-after-transient-connection-errors",
+  "attempts": 5,
+  "latestError": "image generation failed: connection failed: error sending request",
+  "generatedOriginal": null,
+  "projectSource": null,
+  "promptPath": "assets/travel-postcards-v2/prompts/winter-sunshine.txt",
+  "transparent_background": false,
+  "cliOrApiFallbackUsed": false
+}

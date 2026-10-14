@@ -55,6 +55,7 @@ vi.mock('../residents/residentAssets', async importOriginal => {
   };
 });
 import { RESIDENT_ASSETS } from '../residents/residentAssets';
+import { SCENERY_ASSETS } from '../scenery/sceneryAssets';
 import { bindTouchTarget } from "../ui/TouchTarget";
 import { SCENE } from "../game/Constants";
 import { DISPLAY_FONTS } from "../ui/DisplayText";
@@ -85,7 +86,7 @@ function harness() {
     events: { once: shutdown },
     add: { rectangle: () => object(), text: (_x: number, _y: number, text: string) => object(text), container: () => object() },
     scene: { start, restart },
-    textures: { exists: () => state.image, remove: removeTexture },
+    textures: { exists: () => state.image, remove: removeTexture, get: () => ({ getSourceImage: () => ({ width: 600, height: 400 }) }) },
     cache: { bitmapFont: { exists: () => state.font, remove: removeFont }, xml: { remove: removeXml } },
     load: { image, spritesheet, bitmapFont, on: loadOn, off: loadOff },
   });
@@ -268,13 +269,23 @@ describe("local asset loading recovery", () => {
     expect(start).not.toHaveBeenCalled();
     expect(objects.find(item => item.name === "local-load-error")).toBeDefined();
   });
-  it.each(['rainbow', 'meteors', 'fireflies'])("requires the %s postcard and clears its cache on retry", async id => {
+  it.each(SCENERY_ASSETS)("requires the $key postcard and clears its cache on retry", async asset => {
     const { scene, start, objects, removeTexture } = harness();
-    scene.textures.exists = vi.fn(key => key !== `scenery-${id}`);
+    scene.textures.exists = vi.fn(key => key !== asset.key);
     await scene.create(); expect(start).not.toHaveBeenCalled();
     expect(objects.find(item => item.name === 'local-load-error')).toBeDefined();
     scene.textures.exists = vi.fn(() => true);
-    vi.mocked(bindTouchTarget).mock.calls[0]![4](); expect(removeTexture).toHaveBeenCalledWith(`scenery-${id}`);
+    vi.mocked(bindTouchTarget).mock.calls[0]![4](); expect(removeTexture).toHaveBeenCalledWith(asset.key);
+  });
+  it('blocks a present but wrongly sized postcard and enters only after resource retry', async () => {
+    const { scene, start, objects, removeTexture } = harness();
+    scene.textures.get = vi.fn(() => ({ getSourceImage: () => ({ width: 1, height: 400 }) })) as never;
+    await scene.create(); expect(start).not.toHaveBeenCalled();
+    expect(objects.find(item => item.name === 'local-load-error')).toBeDefined();
+    scene.textures.get = vi.fn(() => ({ getSourceImage: () => ({ width: 600, height: 400 }) })) as never;
+    vi.mocked(bindTouchTarget).mock.calls[0]![4]();
+    for (const asset of SCENERY_ASSETS) expect(removeTexture).toHaveBeenCalledWith(asset.key);
+    await scene.create(); expect(start).toHaveBeenCalledExactlyOnceWith(SCENE.menu);
   });
   it.each(MAILBOX_ASSETS)("requires mailbox resource $key before entering the menu", async asset => {
     const { scene, start, objects } = harness();

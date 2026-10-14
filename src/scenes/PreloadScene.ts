@@ -27,7 +27,7 @@ import { MAILBOX_ASSETS } from "../data/mailboxAssets";
 import { NEW_OBSTACLE_ART, createNewObstacleTextures, newObstacleRuntimeKeys } from "../data/newObstacleArt";
 import { EXPANDED_OBSTACLE_ART, createExpandedObstacleTextures, expandedObstacleRuntimeKeys } from "../data/expandedObstacleArt";
 import { ANIMAL_SOURCE, ANIMAL_TEXTURE, prepareAnimalArt } from "../ambient/animalAssets";
-import { SCENERY_ASSETS } from "../scenery/sceneryAssets";
+import { SCENERY_ASSETS, validateSceneryTextures } from "../scenery/sceneryAssets";
 import { DELIVERY_ASSETS } from '../delivery/deliveryAssets';
 import { RUNNER_V2_ASSETS } from '../runner-v2/runnerAssets';
 import { CONTENT_V2_ASSETS, prepareContentV2Textures, validateContentV2Textures } from '../content-v2';
@@ -145,6 +145,8 @@ export class PreloadScene extends Phaser.Scene {
     if (invalidContent.length) throw new Error(`Invalid content v2 textures: ${invalidContent.join(', ')}`);
     const invalidResidents = validateResidentTextures(this);
     if (invalidResidents.length) throw new Error(`Invalid resident textures: ${invalidResidents.join(', ')}`);
+    const invalidScenery = validateSceneryTextures(this);
+    if (invalidScenery.length) throw new Error(`Invalid postcard textures: ${invalidScenery.join(', ')}`);
   }
 
   private showLocalAssetError(): void {

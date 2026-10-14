@@ -1,0 +1,10 @@
+{
+  "tool": "builtin image_gen",
+  "status": "success",
+  "generatedOriginal": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39\\exec-d8a1c8c6-64ec-451c-bd36-4071d7bf545b.png",
+  "prompt": "prompts/autumn-sunset.txt",
+  "source": "sources/autumn-sunset.png",
+  "transparent_background": false,
+  "sourceIntact": true,
+  "retryNote": null
+}

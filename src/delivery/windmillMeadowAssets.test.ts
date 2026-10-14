@@ -21,7 +21,7 @@ function loaderFixture(missing: readonly string[] = []) {
   Object.assign(scene, {
     events: { once: vi.fn() },
     load: { image, spritesheet: vi.fn(), bitmapFont: vi.fn(), on: vi.fn(), off: vi.fn() },
-    textures: { exists, remove },
+    textures: { exists, remove, get: () => ({ getSourceImage: () => ({ width: 600, height: 400 }) }) },
     cache: { bitmapFont: { remove: vi.fn() }, xml: { remove: vi.fn() } },
     scene: { restart },
   });

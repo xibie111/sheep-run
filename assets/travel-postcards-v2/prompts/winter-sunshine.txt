@@ -1,0 +1,7 @@
+Use case: illustration-story
+Asset type: complete travel-postcard illustration for the pixel-art game Sheep Run.
+Primary request: Winter sunshine: a small cream-white sheep enjoying clear warm sunshine in a snowy farm meadow, snow-dusted pine trees and a wooden fence, with a cozy little farmhouse in the distance. Quiet, warm, reassuring mood.
+Subject: Keep the existing sheep identity shown in the viewed game references: fluffy cream-white body, compact rounded face, peach-pink ears, tiny black dot eyes, short legs, dark brown pixel outline. Full body visible, facing mostly right, comfortable expression.
+Style/medium: Crisp 2D pixel-art illustration matching the viewed Sheep Run meadow, restrained color palette, clear dark outlines, flat painted pixel color areas. No 3D volume or glossy rendering. Winter pale blue snow with gentle golden sunlight, muted green pine trees and warm wood.
+Composition/framing: One landscape 3:2 artwork, preferably 1536x1024, edge-to-edge scenery, complete sheep in the lower middle, calm layered farm environment with large readable forms. No frame and no postcard object; this is just the artwork printed within a game postcard.
+Constraints: No Chinese or Latin text, no letters, numbers, watermark, UI, border, card edge, icons, or labels. Do not reproduce the screenshot HUD. No extra animals or clothing. Keep the sheep recognizable and no clipped subject. Opaque full-scene background.

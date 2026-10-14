@@ -35,6 +35,7 @@ import { JourneyToast } from "../ui/JourneyToast";
 import { AmbientLifeController } from "../ambient/AmbientLifeController";
 import { ANIMAL_TEXTURE } from "../ambient/animalAssets";
 import { SceneryController } from "../scenery/SceneryController";
+import { TravelPostcardObserver } from "../scenery/TravelPostcardObserver";
 import { crowdedForAnimal } from "../ambient/AnimalRules";
 import { DeliveryRoute } from '../delivery/DeliveryRoute';
 import { DeliveryView } from '../delivery/DeliveryView';
@@ -89,6 +90,7 @@ export class RunScene extends Phaser.Scene {
   private journeyToast?: JourneyToast;
   private ambientLife?: AmbientLifeController;
   private rareScenery?: SceneryController;
+  private travelPostcards?: TravelPostcardObserver;
   private delivery?: DeliveryRoute;
   private deliveryLocked = false;
   private deliveryView?: DeliveryView;
@@ -216,6 +218,7 @@ export class RunScene extends Phaser.Scene {
       }
       if (this.textures?.exists(ANIMAL_TEXTURE)) this.ambientLife = new AmbientLifeController(this, this.reducedMotion);
       this.rareScenery = new SceneryController(this, this.reducedMotion, message => this.journeyToast?.notice(message));
+      this.travelPostcards = new TravelPostcardObserver(this, message => this.journeyToast?.notice(message));
       this.landmarks = new LandmarkController(this, { reducedMotion: this.reducedMotion,
         onEncounter: event => this.travel?.visibleLandmark(event.id) });
     }
@@ -296,6 +299,10 @@ export class RunScene extends Phaser.Scene {
           crowdedForAnimal(this.obstacles.getChildren() as Obstacle[], speed) });
     }
     this.observeVisibleAnimal(activeDeltaMs);
+    if (this.travelPostcards && this.environmentSystem) this.travelPostcards.update({
+      deltaMs: activeDeltaMs, landscape: this.environmentSystem.presentation(),
+      viewport: viewportSizeFromScale(this.scale), animalKind: this.ambientLife?.snapshot().kind,
+    });
   }
 
   /** Require sustained visible animal ink, rather than a scheduled or created event. */
@@ -587,6 +594,7 @@ export class RunScene extends Phaser.Scene {
     this.goalView?.clear();
     this.ambientLife?.clear();
     this.rareScenery?.clear();
+    this.travelPostcards?.clear();
     this.landmarks?.clear();
     this.companions?.clear();
     this.journeyToast?.clear();
@@ -672,6 +680,7 @@ export class RunScene extends Phaser.Scene {
     this.ambientLife = undefined;
     this.rareScenery?.clear();
     this.rareScenery = undefined;
+    this.travelPostcards?.clear(); this.travelPostcards = undefined;
     this.journey?.clear();
     this.journey = undefined;
     this.journeyToast?.clear();

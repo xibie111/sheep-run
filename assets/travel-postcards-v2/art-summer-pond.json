@@ -1,0 +1,10 @@
+{
+  "tool": "builtin image_gen",
+  "status": "success",
+  "generatedOriginal": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39\\exec-8c6a394d-52ae-4beb-ac59-11d350d8da69.png",
+  "prompt": "prompts/summer-pond.txt",
+  "source": "sources/summer-pond.png",
+  "transparent_background": false,
+  "sourceIntact": true,
+  "retryNote": "One root connection failure then success."
+}

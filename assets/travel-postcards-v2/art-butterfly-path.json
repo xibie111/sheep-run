@@ -1,0 +1,20 @@
+{
+  "id": "butterfly-path",
+  "source": "built-in image_gen",
+  "generatedOriginal": "C:/Users/mechrevo/.codex/generated_images/01a13855-c8ae-79b2-a398-130a219f854f/exec-bf0832de-46b9-4660-87e2-839755b27876.png",
+  "projectSource": "assets/travel-postcards-v2/sources/butterfly-path.png",
+  "promptPath": "assets/travel-postcards-v2/prompts/butterfly-path.txt",
+  "transparent_background": false,
+  "dimensions": [
+    1536,
+    1024
+  ],
+  "inspected": true,
+  "qualityChecks": {
+    "completeSubjects": true,
+    "pixelArt": true,
+    "noTextOrUI": true,
+    "noBorder": true
+  },
+  "runtimeProcessing": "Parent will prepare 600x400 nearest-neighbor. Source copied without modification."
+}

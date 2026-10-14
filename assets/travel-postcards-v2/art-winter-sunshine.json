@@ -1,0 +1,10 @@
+{
+  "tool": "builtin image_gen",
+  "status": "success",
+  "generatedOriginal": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39\\exec-b52baab5-2733-4b5e-a602-470e17c5dbbc.png",
+  "prompt": "prompts/winter-sunshine.txt",
+  "source": "sources/winter-sunshine.png",
+  "transparent_background": false,
+  "sourceIntact": true,
+  "initialFailureLog": "art-winter-sunshine-initial-failures.json"
+}

@@ -1,0 +1,10 @@
+{
+  "tool": "builtin image_gen",
+  "status": "success",
+  "generatedOriginal": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39\\exec-127519f8-1e79-4075-9d06-5ce86b754ebc.png",
+  "prompt": "prompts/duck-outing.txt",
+  "source": "sources/duck-outing.png",
+  "transparent_background": false,
+  "sourceIntact": true,
+  "initialFailureLog": "art-duck-outing-initial-failures.json"
+}

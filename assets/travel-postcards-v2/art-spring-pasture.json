@@ -1,0 +1,10 @@
+{
+  "tool": "builtin image_gen",
+  "status": "success",
+  "generatedOriginal": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39\\exec-4f8a977f-6352-49b5-a11f-d1962f531853.png",
+  "prompt": "prompts/spring-pasture.txt",
+  "source": "sources/spring-pasture.png",
+  "transparent_background": false,
+  "sourceIntact": true,
+  "retryNote": null
+}

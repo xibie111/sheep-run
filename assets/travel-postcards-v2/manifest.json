@@ -1,0 +1,143 @@
+{
+  "version": 2,
+  "assets": [
+    {
+      "name": "spring-pasture",
+      "tool": "builtin image_gen",
+      "generatedOriginal": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39\\exec-4f8a977f-6352-49b5-a11f-d1962f531853.png",
+      "source": "sources/spring-pasture.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "sourceSha256": "b247c2e37ac9951291a526643eb9a4fe429c2a54d4b6ff5a798d809308940b24",
+      "runtime": "runtime/spring-pasture.png",
+      "runtimeSize": [
+        600,
+        400
+      ],
+      "runtimeSha256": "f7a934decb7ae0cbdbc5a6279bcdf1ffcb90c28e3a3809849596023b5ea1dd86",
+      "prompt": "prompts/spring-pasture.txt",
+      "promptSha256": "0ff3c8ecb49749d161d9e0931e7d50c651dbae7309fb8a892521526599c6b54e",
+      "resampling": "NEAREST",
+      "crop": null,
+      "recolor": null,
+      "transparent_background": false
+    },
+    {
+      "name": "summer-pond",
+      "tool": "builtin image_gen",
+      "generatedOriginal": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39\\exec-8c6a394d-52ae-4beb-ac59-11d350d8da69.png",
+      "source": "sources/summer-pond.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "sourceSha256": "c3f9c2b1e35dd9b89639cf014eb38f239e4801a6d2feacb5d21646c25fca08fb",
+      "runtime": "runtime/summer-pond.png",
+      "runtimeSize": [
+        600,
+        400
+      ],
+      "runtimeSha256": "45b8ef235c4f00202b0fb4d66bda6a63761ea64a4565937d8a6f36c9ba3acd5c",
+      "prompt": "prompts/summer-pond.txt",
+      "promptSha256": "58037246ee62420eca4b19f06b4d0a7cf527ee0b09dfada838fb150e277732cd",
+      "resampling": "NEAREST",
+      "crop": null,
+      "recolor": null,
+      "transparent_background": false
+    },
+    {
+      "name": "autumn-sunset",
+      "tool": "builtin image_gen",
+      "generatedOriginal": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39\\exec-d8a1c8c6-64ec-451c-bd36-4071d7bf545b.png",
+      "source": "sources/autumn-sunset.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "sourceSha256": "34e77ec45b9aaa2212f4280de9f2ae75076e01640959642ef17d3370b6bad141",
+      "runtime": "runtime/autumn-sunset.png",
+      "runtimeSize": [
+        600,
+        400
+      ],
+      "runtimeSha256": "15b66258042ac60925913d663ad0235da0b746451ce139bc84e984ecf1b3ade8",
+      "prompt": "prompts/autumn-sunset.txt",
+      "promptSha256": "799b0b491834264e7517d00aefccb2d176f3a06635f4af71503ce2a48d356b13",
+      "resampling": "NEAREST",
+      "crop": null,
+      "recolor": null,
+      "transparent_background": false
+    },
+    {
+      "name": "winter-sunshine",
+      "tool": "builtin image_gen",
+      "generatedOriginal": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39\\exec-b52baab5-2733-4b5e-a602-470e17c5dbbc.png",
+      "source": "sources/winter-sunshine.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "sourceSha256": "3c08d91b5ca2297a74e77a70c48b9d82bbbcf6db2e24d4c97102ece52be9cc94",
+      "runtime": "runtime/winter-sunshine.png",
+      "runtimeSize": [
+        600,
+        400
+      ],
+      "runtimeSha256": "409bbed905b83991536eea5781e4afc80c04ce435dd5d252220d934866861b5a",
+      "prompt": "prompts/winter-sunshine.txt",
+      "promptSha256": "cd07a34200b8d1e51d10e8e99078740f3d790823e22f997486dc1047bdfcf75b",
+      "resampling": "NEAREST",
+      "crop": null,
+      "recolor": null,
+      "transparent_background": false
+    },
+    {
+      "name": "duck-outing",
+      "tool": "builtin image_gen",
+      "generatedOriginal": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11bdb-d0cb-7f30-aa81-e08acb61df39\\exec-127519f8-1e79-4075-9d06-5ce86b754ebc.png",
+      "source": "sources/duck-outing.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "sourceSha256": "0feb2f566ca77e2d60df4b9d1bcc69a36b2d62368433d1bf2c3efd33a96135b9",
+      "runtime": "runtime/duck-outing.png",
+      "runtimeSize": [
+        600,
+        400
+      ],
+      "runtimeSha256": "b2d11423113f373f5170ddaa22be55cc29e44fe712f7940a91737475dae57a39",
+      "prompt": "prompts/duck-outing.txt",
+      "promptSha256": "da82378cab14cdbc27bc2941889b58f7b3e4943cb5456b9274bbbeaa2261c258",
+      "resampling": "NEAREST",
+      "crop": null,
+      "recolor": null,
+      "transparent_background": false
+    },
+    {
+      "name": "butterfly-path",
+      "tool": "builtin image_gen",
+      "generatedOriginal": "C:/Users/mechrevo/.codex/generated_images/01a13855-c8ae-79b2-a398-130a219f854f/exec-bf0832de-46b9-4660-87e2-839755b27876.png",
+      "source": "sources/butterfly-path.png",
+      "sourceSize": [
+        1536,
+        1024
+      ],
+      "sourceSha256": "f82247b7939926986653cb25101de1134a56197e6197cd23995b8f8caae41eb2",
+      "runtime": "runtime/butterfly-path.png",
+      "runtimeSize": [
+        600,
+        400
+      ],
+      "runtimeSha256": "5264b800b928dcdbb76fdd1724a1afadada7424d439b077e22258139684b708e",
+      "prompt": "prompts/butterfly-path.txt",
+      "promptSha256": "e41b1c4d9c0bb9267620b95793879ffc20da8b80ca7201c56256e18ecafa8347",
+      "resampling": "NEAREST",
+      "crop": null,
+      "recolor": null,
+      "transparent_background": false
+    }
+  ]
+}
