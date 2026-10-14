@@ -1,5 +1,5 @@
 import { INPUT, PLAYER, RUN } from "../game/Constants";
-import { FlyingBird, HangingVine, Puddle, Pumpkin, Rock, TallStack, WideLog, WoodFence, WoodBarrel, MilkChurn, FruitBasket, MushroomCluster, Bramble, HangingBranch, type ObstacleDefinition } from "../game/ObstacleDefinitions";
+import { FlyingBird, HangingVine, Puddle, Pumpkin, Rock, TallStack, WideLog, WoodFence, WoodBarrel, MilkChurn, FruitBasket, MushroomCluster, Bramble, HangingBranch, HayCart, WaterTrough, HangingLantern, FlyingGoose, type ObstacleDefinition } from "../game/ObstacleDefinitions";
 
 export interface ObstaclePattern {
   readonly id: string;
@@ -33,6 +33,12 @@ const FLOW_PATTERNS: readonly ObstaclePattern[] = [
   { id: "milk-mushrooms", obstacles: [MilkChurn, MushroomCluster] },
   { id: "bramble", obstacles: [Bramble] },
   { id: "branch-barrel", obstacles: [HangingBranch, WoodBarrel] },
+  { id: "hay-cart", obstacles: [HayCart] },
+  { id: "water-trough", obstacles: [WaterTrough] },
+  { id: "hanging-lantern", obstacles: [HangingLantern] },
+  { id: "flying-goose", obstacles: [FlyingGoose] },
+  { id: "cart-trough", obstacles: [HayCart, WaterTrough] },
+  { id: "lantern-cart", obstacles: [HangingLantern, HayCart] },
 ];
 
 const TRIPLE_PATTERNS: readonly ObstaclePattern[] = [
@@ -42,6 +48,8 @@ const TRIPLE_PATTERNS: readonly ObstaclePattern[] = [
   { id: "duck-middle", obstacles: [WideLog, HangingVine, WoodFence] },
   { id: "basket-branch-bramble", obstacles: [FruitBasket, HangingBranch, Bramble] },
   { id: "mushroom-milk-rock", obstacles: [MushroomCluster, MilkChurn, Rock] },
+  { id: "cart-lantern-trough", obstacles: [HayCart, HangingLantern, WaterTrough] },
+  { id: "trough-goose-cart", obstacles: [WaterTrough, FlyingGoose, HayCart] },
 ];
 
 export function availableObstaclePatterns(obstaclesSpawned: number): readonly ObstaclePattern[] {

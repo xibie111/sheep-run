@@ -25,11 +25,13 @@ import { JOURNEY_ART_ASSETS } from "../data/journeyArtAssets";
 import { ACHIEVEMENT_ICON_ASSETS } from "../data/achievementIconAssets";
 import { MAILBOX_ASSETS } from "../data/mailboxAssets";
 import { NEW_OBSTACLE_ART, createNewObstacleTextures, newObstacleRuntimeKeys } from "../data/newObstacleArt";
+import { EXPANDED_OBSTACLE_ART, createExpandedObstacleTextures, expandedObstacleRuntimeKeys } from "../data/expandedObstacleArt";
 import { ANIMAL_SOURCE, ANIMAL_TEXTURE, prepareAnimalArt } from "../ambient/animalAssets";
 import { SCENERY_ASSETS } from "../scenery/sceneryAssets";
 import { DELIVERY_ASSETS } from '../delivery/deliveryAssets';
 import { RUNNER_V2_ASSETS } from '../runner-v2/runnerAssets';
 import { CONTENT_V2_ASSETS, prepareContentV2Textures, validateContentV2Textures } from '../content-v2';
+import { RESIDENT_ASSETS, prepareResidentTextures, validateResidentTextures } from '../residents/residentAssets';
 
 export class PreloadScene extends Phaser.Scene {
   private preparationGeneration = 0;
@@ -46,6 +48,7 @@ export class PreloadScene extends Phaser.Scene {
     loadSeasonArt(this);
     loadAdditionalObstacleArt(this);
     this.load.image(NEW_OBSTACLE_ART.key, NEW_OBSTACLE_ART.url);
+    this.load.image(EXPANDED_OBSTACLE_ART.key, EXPANDED_OBSTACLE_ART.url);
     this.load.image(ANIMAL_SOURCE.key, ANIMAL_SOURCE.url);
     for (const asset of ADVENTURE_ASSETS) if (!this.textures.exists(asset.key)) this.load.image(asset.key, asset.url);
     for (const asset of JOURNEY_ART_ASSETS) if (!this.textures.exists(asset.key)) this.load.image(asset.key, asset.url);
@@ -55,6 +58,7 @@ export class PreloadScene extends Phaser.Scene {
     for (const asset of RUNNER_V2_ASSETS) if (!this.textures.exists(asset.key)) this.load.image(asset.key, asset.url);
     for (const asset of CONTENT_V2_ASSETS) if (!this.textures.exists(asset.key)) this.load.image(asset.key, asset.url);
     for (const asset of MAILBOX_ASSETS) if (!this.textures.exists(asset.key)) this.load.image(asset.key, asset.url);
+    for (const asset of RESIDENT_ASSETS) if (!this.textures.exists(asset.key)) this.load.image(asset.key, asset.url);
     if (!this.textures.exists(RUN_STAR_ART.key)) this.load.image(RUN_STAR_ART.key, RUN_STAR_ART.url);
     if (!this.textures.exists(COMPANION_BELL_ART.key)) this.load.image(COMPANION_BELL_ART.key, COMPANION_BELL_ART.url);
     this.load.image(FAVORITE_FOOD_ART.key, FAVORITE_FOOD_ART.url);
@@ -79,10 +83,12 @@ export class PreloadScene extends Phaser.Scene {
         () => registerSkinRenderFrames(this), () => createPastureTextures(this),
         () => createSeasonArtTextures(this), () => createAdditionalObstacleTextures(this),
         () => createNewObstacleTextures(this),
+        () => createExpandedObstacleTextures(this),
         () => prepareAnimalArt(this),
         () => createResultArtTextures(this), () => registerPauseDialogFrames(this),
         () => createGameplayTextures(this),
         () => prepareContentV2Textures(this),
+        () => prepareResidentTextures(this),
       ];
       loadingScreen?.setPreparing(0, steps.length);
       for (let index = 0; index < steps.length; index++) {
@@ -129,6 +135,7 @@ export class PreloadScene extends Phaser.Scene {
     requiredKeys.push(...SEASON_SOURCE_KEYS);
     requiredKeys.push(ADDITIONAL_OBSTACLE_ART.key, ADDITIONAL_TOWER_ART.key);
     requiredKeys.push(NEW_OBSTACLE_ART.key);
+    requiredKeys.push(EXPANDED_OBSTACLE_ART.key);
     requiredKeys.push(ANIMAL_SOURCE.key);
     requiredKeys.push(...Object.values(RESULT_ART_ASSETS).map(asset => asset.key));
     for (const key of requiredKeys) {
@@ -136,6 +143,8 @@ export class PreloadScene extends Phaser.Scene {
     }
     const invalidContent = validateContentV2Textures(this);
     if (invalidContent.length) throw new Error(`Invalid content v2 textures: ${invalidContent.join(', ')}`);
+    const invalidResidents = validateResidentTextures(this);
+    if (invalidResidents.length) throw new Error(`Invalid resident textures: ${invalidResidents.join(', ')}`);
   }
 
   private showLocalAssetError(): void {
@@ -179,11 +188,13 @@ export class PreloadScene extends Phaser.Scene {
       ...RUNNER_V2_ASSETS.map(asset => asset.key),
       ...CONTENT_V2_ASSETS.map(asset => asset.key),
       ...MAILBOX_ASSETS.map(asset => asset.key),
+      ...RESIDENT_ASSETS.map(asset => asset.key),
       ...Object.keys(SKIN_SHEET_URLS).map(id => sheepTextureKey(id as SkinId)),
       ...Object.values(DISPLAY_FONTS).map(font => font.key),
       ...SEASON_SOURCE_KEYS, ...seasonRuntimeKeys(),
       ADDITIONAL_OBSTACLE_ART.key, ADDITIONAL_TOWER_ART.key, ...additionalObstacleRuntimeKeys(),
       NEW_OBSTACLE_ART.key, ...newObstacleRuntimeKeys(),
+      EXPANDED_OBSTACLE_ART.key, ...expandedObstacleRuntimeKeys(),
       ANIMAL_SOURCE.key, ANIMAL_TEXTURE,
       ...Object.values(RESULT_ART_ASSETS).map(asset => asset.key), ...resultRuntimeKeys(), RESULT_SCORE_FONT.key,
     ]);

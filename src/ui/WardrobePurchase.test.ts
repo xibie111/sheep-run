@@ -13,7 +13,7 @@ describe("Wardrobe purchase presentation", () => {
     expect(state(skin.id, { totalStars: skin.unlock.amount + 15, spentStars: 16 })).toMatchObject({ enough: false, disabled: true, actionLabel: "星星不足" });
   });
 
-  it.each(SHEEP_SKINS.slice(-4))("uses only coins for $id", skin => {
+  it.each(SHEEP_SKINS.slice(26, 30))("uses only coins for $id", skin => {
     expect(state(skin.id, { coins: skin.unlock.amount, totalStars: 999 })).toMatchObject({ disabled: false, actionLabel: "购买", currency: "coin" });
     expect(state(skin.id, { coins: skin.unlock.amount - 1, totalStars: 999 })).toMatchObject({ disabled: true, actionLabel: "金币不足" });
   });

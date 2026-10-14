@@ -29,17 +29,19 @@ interface ParticleEmitterLike {
 
 const RAIN_CONFIG: Phaser.Types.GameObjects.Particles.ParticleEmitterConfig = {
   emitting: false,
-  frequency: 55,
+  frequency: 18,
   maxAliveParticles: ENVIRONMENT.maxRainParticles,
   reserve: ENVIRONMENT.maxRainParticles,
   x: { min: 0, max: 480 },
   y: 0,
-  lifespan: 780,
-  speedX: { min: -32, max: -14 },
-  speedY: { min: 145, max: 210 },
-  gravityY: 45,
-  alpha: { start: 0.8, end: 0 },
-  scale: { start: 1, end: 0.65 },
+  lifespan: 1000,
+  speedX: { min: -75, max: -45 },
+  speedY: { min: 300, max: 390 },
+  gravityY: 40,
+  rotate: 12,
+  alpha: { start: 0.9, end: 0.35 },
+  scale: { start: 1.15, end: 0.9 },
+  blendMode: 'ADD',
 };
 
 const WIND_CONFIG: Phaser.Types.GameObjects.Particles.ParticleEmitterConfig = {
@@ -83,8 +85,7 @@ export class WeatherSystem {
           const size = scene.scale.gameSize, origin = runViewportOrigin(size), art = this.stillRain!;
           art.clear();
           if (this.current.weather !== 'rain') return;
-          art.fillStyle(0x466574, .2 * this.current.alpha).fillRect(0, 0, size.width, origin.y + 147);
-          for (let i = 0; i < 32; i++) art.fillStyle(0xc4dfdf, .3 * this.current.alpha).fillRect((i * 73) % size.width, 72 + (i * 23) % Math.max(1, origin.y + 70), 1, 3);
+          for (let i = 0; i < 32; i++) art.fillStyle(0xc4dfdf, .45 * this.current.alpha).fillRect((i * 73) % size.width, 72 + (i * 23) % Math.max(1, origin.y + 130), 1, 4);
         };
         this.stopWatching = watchViewport(scene, this.redrawStillRain);
       }
@@ -93,9 +94,13 @@ export class WeatherSystem {
       this.windEmitter = scene.add.particles(0, 0, "pasture-weather-leaf", WIND_CONFIG).setDepth(5).setScrollFactor(0);
       this.stopWatching = watchViewport(scene, (size) => {
         const origin = runViewportOrigin(size);
+        const lifespan = Math.ceil((size.height + 24) / 300 * 1000);
+        // Cover the whole expanded road without filling/expanding the pool on resize.
+        const frequency = Math.max(Math.ceil(lifespan / ENVIRONMENT.maxRainParticles), Math.round(18 * 480 / size.width));
         // updateConfig replays the creation config: preserve emission and don't
         // reserve another particle pool each time the viewport changes.
-        this.rainEmitter?.updateConfig({ x: { min: 0, max: size.width }, emitting: this.activeWeather === "rain", reserve: 0 });
+        this.rainEmitter?.updateConfig({ x: { min: 0, max: size.width + 24 }, lifespan, frequency,
+          emitting: this.activeWeather === "rain", reserve: 0 });
         this.windEmitter?.updateConfig({ x: { min: 0, max: size.width }, y: { min: origin.y + 110, max: origin.y + 202 }, emitting: this.activeWeather === "wind", reserve: 0 });
       });
     }

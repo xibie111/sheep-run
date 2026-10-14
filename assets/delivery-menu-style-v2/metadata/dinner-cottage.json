@@ -1,0 +1,20 @@
+{
+  "id": "dinner-cottage",
+  "tool": "builtin-image_gen",
+  "originalOutput": "C:/Users/mechrevo/.codex/generated_images/01a11760-9d97-77c1-924c-cefdf4e6c788/exec-188327bd-0f21-408d-835c-cfa861356637.png",
+  "workspaceSource": "assets/delivery-menu-style-v2/sources/dinner-cottage.png",
+  "prompt": "assets/delivery-menu-style-v2/prompts/dinner-cottage.json",
+  "referencesAttached": true,
+  "transparent_background": false,
+  "sourceSha256": "a5db020e312133b26473882adf40f6eccf638d999e72be86a4566ca4c03b05e4",
+  "sourceDimensions": [
+    1672,
+    941
+  ],
+  "recordedAt": "2026-10-13T14:00:49.203785+00:00",
+  "originalByteIdentical": true,
+  "referenceHashes": {
+    "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png": "de36b068c971bbd24d870b5075a1380e852a4000d71c7807bb0600ce1fbf3749",
+    "D:/DSH workspace/sheep-run/assets/content-update-v2/delivery/runtime/cottage.png": "199bfb3b00e9a1983ba54ef149b882aae75b20017915e7c21825a68e3a3e6f11"
+  }
+}

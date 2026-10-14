@@ -1,0 +1,10 @@
+{
+  "id": "three-runs",
+  "name": "又来牧场",
+  "goal": 3,
+  "metric": "runs",
+  "status": "resolved-generated-and-integrated",
+  "reason": "After the user's explicit retry request, a further built-in call from the artist session succeeded. The complete transparent PNG is now saved in sources/three-runs.png with provenance in prompts-d.json.",
+  "fallbackUsed": false,
+  "note": "The original 12-achievement plan is restored. Prior failed requests remain documented in prompts-a.json and three-runs-final.prompt.txt; no CLI fallback or reused icon was used."
+}

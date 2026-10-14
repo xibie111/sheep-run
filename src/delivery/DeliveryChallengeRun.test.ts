@@ -1,11 +1,13 @@
 import { describe, expect, it } from 'vitest';
-import { DeliveryChallengeRun, isDeliveryChallengeChapterId, type DeliveryChallengeDefinition } from './DeliveryChallengeRun';
+import { DELIVERY_CHALLENGE_CHAPTER_IDS, DeliveryChallengeRun, isDeliveryChallengeChapterId, type DeliveryChallengeDefinition } from './DeliveryChallengeRun';
 const definition: DeliveryChallengeDefinition = { keepsakeKey: 'keepsake', stamps: [
   ...Array.from({ length: 5 }, (_, i) => ({ id: `ordinary-${i}`, at: 1000 + i * 1000, y: 182, kind: 'ordinary' as const, key: 'ordinary' })),
   { id: 'hidden', at: 3000, y: 91, kind: 'keepsake' as const, key: 'keepsake' },
 ] };
 describe('independent delivery stamp run', () => {
-  it('only recognizes the three new challenge chapter IDs', () => {
+  it('recognizes the original three and all six resident challenge IDs', () => {
+    expect(DELIVERY_CHALLENGE_CHAPTER_IDS).toHaveLength(9);
+    for (const id of DELIVERY_CHALLENGE_CHAPTER_IDS) expect(isDeliveryChallengeChapterId(id)).toBe(true);
     expect(isDeliveryChallengeChapterId('windmill-invitation-v1')).toBe(true);
     expect(isDeliveryChallengeChapterId('rainy-umbrella-v1')).toBe(true);
     expect(isDeliveryChallengeChapterId('lighthouse-starlight-v1')).toBe(true);

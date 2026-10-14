@@ -1,0 +1,14 @@
+{
+  "tool": "builtin-image_gen",
+  "skins": [
+    "bee-v1-prompt.json",
+    "mushroom-v1-prompt.json",
+    "chef-v1-prompt.json",
+    "pirate-v1-prompt.json",
+    "fox-v1-prompt.json",
+    "dinosaur-v1-prompt.json"
+  ],
+  "originals": "{id}-source.png",
+  "generationMetadata": "{id}-generation.json",
+  "runtimePackingTool": "tools/skin-review/pack_skins_v5.py"
+}

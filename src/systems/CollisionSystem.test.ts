@@ -20,6 +20,7 @@ describe("collision geometry", () => {
       "TallStack",
       "HangingVine",
       "WoodBarrel", "MilkChurn", "FruitBasket", "MushroomCluster", "Bramble", "HangingBranch",
+      "HayCart", "WaterTrough", "HangingLantern", "FlyingGoose",
     ]);
     for (const definition of OBSTACLE_DEFINITIONS) {
       const { width, height, offsetX, offsetY } = definition.hitbox;

@@ -1,4 +1,6 @@
 import { isDeliveryChallengeChapterId, type DeliveryChallengeChapterId, type DeliveryChallengeSnapshot } from './DeliveryChallengeRun';
+import { deliveryStore } from './DeliveryStore';
+import { canEnterDeliveryChapter } from '../residents/ResidentProgress';
 export const DELIVERY_CHALLENGE_STORAGE_KEY = 'sheep-run-delivery-challenges-v1';
 export interface DeliveryChallengeRecord { readonly bestStars: 1 | 2 | 3; readonly keepsake: boolean }
 type Port = Pick<Storage, 'getItem' | 'setItem'>;
@@ -22,7 +24,8 @@ function usableResult(result: DeliveryChallengeSnapshot): boolean {
 export class DeliveryChallengeStore {
   private readonly session = new Map<DeliveryChallengeChapterId, DeliveryChallengeRecord>();
   private dirty = false;
-  constructor(private readonly storage: () => Port | undefined = () => typeof window === 'undefined' ? undefined : window.localStorage) {}
+  constructor(private readonly storage: () => Port | undefined = () => typeof window === 'undefined' ? undefined : window.localStorage,
+    private readonly completedIds: () => readonly string[] = () => deliveryStore.load().completedIds) {}
   private read(): { envelope: JsonEnvelope; port?: Port } {
     const empty: JsonEnvelope = { version: 1, chapters: {} };
     try {
@@ -42,8 +45,23 @@ export class DeliveryChallengeStore {
     for (const [id, record] of this.session) chapters[id] = merge(chapters[id], record);
     return { chapters, saveFailed: this.dirty || !port };
   }
+  retrySave(): ReturnType<DeliveryChallengeStore['load']> {
+    if (this.dirty) {
+      const { envelope, port } = this.read();
+      if (port) this.persist(envelope, port);
+    }
+    return this.load();
+  }
+  private persist(envelope: JsonEnvelope, port: Port): void {
+    const chapters = { ...envelope.chapters };
+    for (const [chapterId, sessionRecord] of this.session) {
+      const persisted = chapters[chapterId];
+      chapters[chapterId] = { ...(validRecord(persisted) ? persisted : {}), ...merge(validRecord(persisted) ? persisted : undefined, sessionRecord) };
+    }
+    try { port.setItem(DELIVERY_CHALLENGE_STORAGE_KEY, JSON.stringify({ ...envelope, chapters })); this.dirty = false; } catch { /* Retain session rewards and the original saved bytes. */ }
+  }
   recordResult(id: string, result: DeliveryChallengeSnapshot): { accepted: boolean; improved: boolean; saved: boolean; record?: DeliveryChallengeRecord } {
-    if (!isDeliveryChallengeChapterId(id) || !usableResult(result)) return { accepted: false, improved: false, saved: false };
+    if (!isDeliveryChallengeChapterId(id) || !usableResult(result) || !canEnterDeliveryChapter(id, this.completedIds())) return { accepted: false, improved: false, saved: false };
     const { envelope, port } = this.read();
     const stored = envelope.chapters[id];
     const persisted = validRecord(stored) ? stored : undefined, session = this.session.get(id);
@@ -53,14 +71,7 @@ export class DeliveryChallengeStore {
     this.session.set(id, record);
     if (!improved && !this.dirty && port) return { accepted: true, improved, saved: true, record };
     this.dirty = true;
-    if (port) {
-      const chapters = { ...envelope.chapters };
-      for (const [chapterId, sessionRecord] of this.session) {
-        const persisted = chapters[chapterId];
-        chapters[chapterId] = { ...(validRecord(persisted) ? persisted : {}), ...merge(validRecord(persisted) ? persisted : undefined, sessionRecord) };
-      }
-      try { port.setItem(DELIVERY_CHALLENGE_STORAGE_KEY, JSON.stringify({ ...envelope, chapters })); this.dirty = false; } catch { /* Retain session rewards and the original saved bytes. */ }
-    }
+    if (port) this.persist(envelope, port);
     return { accepted: true, improved, saved: !this.dirty, record };
   }
 }

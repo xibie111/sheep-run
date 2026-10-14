@@ -1,5 +1,5 @@
 import { PLAYER, WORLD } from "../game/Constants";
-import type { ObstacleKind } from "../game/ObstacleDefinitions";
+import { isOverheadObstacle, type ObstacleKind } from "../game/ObstacleDefinitions";
 import { obstacleGap } from "../systems/ObstaclePatterns";
 import { COMPANION_RULES as RULES } from "./CompanionRules";
 
@@ -23,7 +23,7 @@ export function rectanglesOverlap(a: Rect, b: Rect): boolean {
 export function isSafeBellGap(context: BellGapContext): boolean {
   const { lastObstacle: last, spawnX, speed } = context;
   if (!last || !context.patternEnded || !Number.isFinite(speed) || speed <= 0) return false;
-  if (last.kind === "FlyingBird" || last.kind === "HangingVine" || last.kind === "HangingBranch") return false;
+  if (isOverheadObstacle(last.kind)) return false;
   const trailing = spawnX - last.right;
   const recoverBehind = PLAYER.width + speed * RULES.trailingRecoverySeconds;
   const recoverAhead = PLAYER.width / 2 + RULES.bellWidth / 2 + speed * RULES.leadingRecoverySeconds;

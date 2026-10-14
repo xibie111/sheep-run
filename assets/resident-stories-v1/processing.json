@@ -1,0 +1,1340 @@
+{
+  "generatedOnly": true,
+  "originalsUnmodified": true,
+  "records": [
+    {
+      "source": "sources/ahe.png",
+      "sourceSha256": "b2399be7960484e6cb9d16967b20eba8766fe7ae2807decb1cb6f28c685fe1d7",
+      "originalSize": [
+        1536,
+        1024
+      ],
+      "region": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "alphaCrop": [
+        386,
+        197,
+        1154,
+        882
+      ],
+      "alphaCutoff": 128,
+      "uniformScale": true,
+      "sampler": "NEAREST",
+      "output": "runtime/ahe-npc.png",
+      "size": [
+        128,
+        128
+      ],
+      "outputSha256": "53e31e610441ebcef89b15d9b1a3cdce6e12bd7e9df1bd8566d4fb0be665caec"
+    },
+    {
+      "source": "sources/ahe.png",
+      "sourceSha256": "b2399be7960484e6cb9d16967b20eba8766fe7ae2807decb1cb6f28c685fe1d7",
+      "originalSize": [
+        1536,
+        1024
+      ],
+      "region": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "alphaCrop": [
+        386,
+        197,
+        1154,
+        882
+      ],
+      "alphaCutoff": 128,
+      "uniformScale": true,
+      "sampler": "NEAREST",
+      "output": "runtime/ahe-portrait.png",
+      "size": [
+        128,
+        128
+      ],
+      "outputSha256": "53e31e610441ebcef89b15d9b1a3cdce6e12bd7e9df1bd8566d4fb0be665caec"
+    },
+    {
+      "source": "revision-menu-style/sources/ahe-keepsake.png",
+      "sourceSha256": "4aa30867c73aed6f0763eb94eeaa3cf586504bb7c8662962a921a99b36f0f3bf",
+      "originalSize": [
+        1672,
+        941
+      ],
+      "region": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "alphaCrop": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "alphaCutoff": null,
+      "uniformScale": true,
+      "sampler": "NEAREST",
+      "output": "runtime/ahe-keepsake.png",
+      "size": [
+        960,
+        540
+      ],
+      "outputSha256": "59bc225a75128c0ff95f6f699020da583a9e784c1913cada61f58dab6256e98f"
+    },
+    {
+      "source": "sources/xiaomu.png",
+      "sourceSha256": "d8799713b8436abfa24575144da8cd47c641fe682c8dcd0761a214dd3b53974a",
+      "originalSize": [
+        1536,
+        1024
+      ],
+      "region": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "alphaCrop": [
+        394,
+        186,
+        1166,
+        870
+      ],
+      "alphaCutoff": 128,
+      "uniformScale": true,
+      "sampler": "NEAREST",
+      "output": "runtime/xiaomu-npc.png",
+      "size": [
+        128,
+        128
+      ],
+      "outputSha256": "1f61e5073c758de45e0cdd0e3c9ca37611609c69587e58770edc868be602cb8e"
+    },
+    {
+      "source": "sources/xiaomu.png",
+      "sourceSha256": "d8799713b8436abfa24575144da8cd47c641fe682c8dcd0761a214dd3b53974a",
+      "originalSize": [
+        1536,
+        1024
+      ],
+      "region": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "alphaCrop": [
+        394,
+        186,
+        1166,
+        870
+      ],
+      "alphaCutoff": 128,
+      "uniformScale": true,
+      "sampler": "NEAREST",
+      "output": "runtime/xiaomu-portrait.png",
+      "size": [
+        128,
+        128
+      ],
+      "outputSha256": "1f61e5073c758de45e0cdd0e3c9ca37611609c69587e58770edc868be602cb8e"
+    },
+    {
+      "source": "revision-menu-style/sources/xiaomu-keepsake.png",
+      "sourceSha256": "28be6454901d5f06e9f26e2eaa38e308ad71d5ae155a126c638d7d1303577685",
+      "originalSize": [
+        1672,
+        941
+      ],
+      "region": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "alphaCrop": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "alphaCutoff": null,
+      "uniformScale": true,
+      "sampler": "NEAREST",
+      "output": "runtime/xiaomu-keepsake.png",
+      "size": [
+        960,
+        540
+      ],
+      "outputSha256": "dbc599d71d17fbf8c0d87081185746b46a280bb87398dfa84921b36b26bdb610"
+    },
+    {
+      "source": "sources/adeng.png",
+      "sourceSha256": "86e456467ef58a839eb95739118d808f3deabf892ee06bb4c15d6746f4439a11",
+      "originalSize": [
+        1536,
+        1024
+      ],
+      "region": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "alphaCrop": [
+        384,
+        197,
+        1131,
+        871
+      ],
+      "alphaCutoff": 128,
+      "uniformScale": true,
+      "sampler": "NEAREST",
+      "output": "runtime/adeng-npc.png",
+      "size": [
+        128,
+        128
+      ],
+      "outputSha256": "32bb1d1c2a3bd6a3b14cf6ee8233b770708d1471dae58ecacab8f429a9fb6a85"
+    },
+    {
+      "source": "sources/adeng.png",
+      "sourceSha256": "86e456467ef58a839eb95739118d808f3deabf892ee06bb4c15d6746f4439a11",
+      "originalSize": [
+        1536,
+        1024
+      ],
+      "region": [
+        0,
+        0,
+        1536,
+        1024
+      ],
+      "alphaCrop": [
+        384,
+        197,
+        1131,
+        871
+      ],
+      "alphaCutoff": 128,
+      "uniformScale": true,
+      "sampler": "NEAREST",
+      "output": "runtime/adeng-portrait.png",
+      "size": [
+        128,
+        128
+      ],
+      "outputSha256": "32bb1d1c2a3bd6a3b14cf6ee8233b770708d1471dae58ecacab8f429a9fb6a85"
+    },
+    {
+      "source": "revision-menu-style/sources/adeng-keepsake.png",
+      "sourceSha256": "1b49c5288fdbe0bbffd73a7686caf11baba8743d45633627f8be4e92702c46fa",
+      "originalSize": [
+        1672,
+        941
+      ],
+      "region": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "alphaCrop": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "alphaCutoff": null,
+      "uniformScale": true,
+      "sampler": "NEAREST",
+      "output": "runtime/adeng-keepsake.png",
+      "size": [
+        960,
+        540
+      ],
+      "outputSha256": "f21e6b1382a230829dae861bcb0c9ea8209f02e7c370076c63918e84945093dd"
+    },
+    {
+      "source": "sources/flower-neighbor.png",
+      "sourceSha256": "4130c0b4eddc30e90070f8a4aaa3290738995b56de6cbf5fd6fb4e7cabddea00",
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "region": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaCrop": [
+        299,
+        421,
+        1032,
+        1002
+      ],
+      "alphaCutoff": 128,
+      "uniformScale": true,
+      "sampler": "NEAREST",
+      "output": "runtime/flower-neighbor.png",
+      "size": [
+        128,
+        128
+      ],
+      "outputSha256": "7f7c8b98166b3230ccce02924c4870710d8e13ed1d3f0a8598d9e9207801c3aa"
+    },
+    {
+      "source": "sources/bridge-neighbor.png",
+      "sourceSha256": "0071f15cf1c9b156276426a462ed13bfbcbbe557b6b5a463f8a1766e75d1655e",
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "region": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaCrop": [
+        273,
+        399,
+        1030,
+        1009
+      ],
+      "alphaCutoff": 128,
+      "uniformScale": true,
+      "sampler": "NEAREST",
+      "output": "runtime/bridge-neighbor.png",
+      "size": [
+        128,
+        128
+      ],
+      "outputSha256": "e24779de3ebb5bd99287d60dcce74a8ed5084c2155e51482d0e1ab7071de85fb"
+    },
+    {
+      "source": "sources/harbor-neighbor.png",
+      "sourceSha256": "558f8e991233e10e617b11abf8883d3296913845d2b0a111137689de6b0e8ef0",
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "region": [
+        0,
+        0,
+        1254,
+        1254
+      ],
+      "alphaCrop": [
+        263,
+        423,
+        1011,
+        1083
+      ],
+      "alphaCutoff": 128,
+      "uniformScale": true,
+      "sampler": "NEAREST",
+      "output": "runtime/harbor-neighbor.png",
+      "size": [
+        128,
+        128
+      ],
+      "outputSha256": "89e8ada63cb5ee4273aa5da9d481333a79d3223479dd9d798a4295bbe87d66fb"
+    },
+    {
+      "source": "revision-menu-style/sources/group-photo.png",
+      "sourceSha256": "b361e653f6a8ff2cdb43588b7c01f4be5b8d7630edb65f0b1044b53784d52d2e",
+      "originalSize": [
+        1672,
+        941
+      ],
+      "region": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "alphaCrop": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "alphaCutoff": null,
+      "uniformScale": true,
+      "sampler": "NEAREST",
+      "output": "runtime/group-photo.png",
+      "size": [
+        960,
+        540
+      ],
+      "outputSha256": "4827ffcd3b829cb57c3e1adc6d1066153b1a1873bef279ac4a3bb646d2882609"
+    },
+    {
+      "source": "sources/ahe-kit.png",
+      "sourceSha256": "6c304033bf78dac4e49d0d35b01761b44492091cf01a3cc8adbae5632ecf5324",
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "region": [
+        0,
+        0,
+        627,
+        627
+      ],
+      "alphaCrop": [
+        133,
+        196,
+        575,
+        517
+      ],
+      "alphaCutoff": 128,
+      "uniformScale": true,
+      "sampler": "NEAREST",
+      "output": "runtime/ahe-envelope.png",
+      "size": [
+        128,
+        128
+      ],
+      "outputSha256": "b17b67bb43d3c26e8164f074bcbebedbe0492d4d754f62bdd70f04fb8fb0c043"
+    },
+    {
+      "source": "sources/ahe-kit.png",
+      "sourceSha256": "6c304033bf78dac4e49d0d35b01761b44492091cf01a3cc8adbae5632ecf5324",
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "region": [
+        627,
+        0,
+        1254,
+        627
+      ],
+      "alphaCrop": [
+        86,
+        135,
+        491,
+        579
+      ],
+      "alphaCutoff": 128,
+      "uniformScale": true,
+      "sampler": "NEAREST",
+      "output": "runtime/ahe-ordinary.png",
+      "size": [
+        128,
+        128
+      ],
+      "outputSha256": "cd876577d913f0f03b06b1b5aab9ee5a3e06a2f47da8103e8bc9132aae3b1296"
+    },
+    {
+      "source": "sources/ahe-kit.png",
+      "sourceSha256": "6c304033bf78dac4e49d0d35b01761b44492091cf01a3cc8adbae5632ecf5324",
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "region": [
+        0,
+        627,
+        627,
+        1254
+      ],
+      "alphaCrop": [
+        138,
+        56,
+        542,
+        502
+      ],
+      "alphaCutoff": 128,
+      "uniformScale": true,
+      "sampler": "NEAREST",
+      "output": "runtime/windmill-thanks-stamp.png",
+      "size": [
+        128,
+        128
+      ],
+      "outputSha256": "4270d823102be4cb9637544f67ad364cd82d4d74b433202970ae8bb60817b05f"
+    },
+    {
+      "source": "sources/ahe-kit.png",
+      "sourceSha256": "6c304033bf78dac4e49d0d35b01761b44492091cf01a3cc8adbae5632ecf5324",
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "region": [
+        627,
+        627,
+        1254,
+        1254
+      ],
+      "alphaCrop": [
+        86,
+        56,
+        493,
+        502
+      ],
+      "alphaCutoff": 128,
+      "uniformScale": true,
+      "sampler": "NEAREST",
+      "output": "runtime/windmill-photo-stamp.png",
+      "size": [
+        128,
+        128
+      ],
+      "outputSha256": "192b93c9d8a1be4a1a49ee8ba982a12be106b62fea4a3f70d28a42d3c6345987"
+    },
+    {
+      "source": "sources/xiaomu-kit.png",
+      "sourceSha256": "03c74085618e373cf13ea3e6aa1c4997aeda69c75278917ccea42ec25fd65704",
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "region": [
+        0,
+        0,
+        627,
+        627
+      ],
+      "alphaCrop": [
+        133,
+        173,
+        548,
+        503
+      ],
+      "alphaCutoff": 128,
+      "uniformScale": true,
+      "sampler": "NEAREST",
+      "output": "runtime/xiaomu-envelope.png",
+      "size": [
+        128,
+        128
+      ],
+      "outputSha256": "f2b50017498dd96b9e6adcd18d717d72d9bab1bf837030072c4e3734fc00b0e9"
+    },
+    {
+      "source": "sources/xiaomu-kit.png",
+      "sourceSha256": "03c74085618e373cf13ea3e6aa1c4997aeda69c75278917ccea42ec25fd65704",
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "region": [
+        627,
+        0,
+        1254,
+        627
+      ],
+      "alphaCrop": [
+        98,
+        140,
+        471,
+        550
+      ],
+      "alphaCutoff": 128,
+      "uniformScale": true,
+      "sampler": "NEAREST",
+      "output": "runtime/xiaomu-ordinary.png",
+      "size": [
+        128,
+        128
+      ],
+      "outputSha256": "c9dc5bd1121b4607b3f5c4737294925a018409e9d184164a7c1e3b2295324ad1"
+    },
+    {
+      "source": "sources/xiaomu-kit.png",
+      "sourceSha256": "03c74085618e373cf13ea3e6aa1c4997aeda69c75278917ccea42ec25fd65704",
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "region": [
+        0,
+        627,
+        627,
+        1254
+      ],
+      "alphaCrop": [
+        136,
+        60,
+        544,
+        488
+      ],
+      "alphaCutoff": 128,
+      "uniformScale": true,
+      "sampler": "NEAREST",
+      "output": "runtime/riverside-thanks-stamp.png",
+      "size": [
+        128,
+        128
+      ],
+      "outputSha256": "7553f5ec11b2e45278f26be41249874a87a441cc5a449131e30a34634ba72e4d"
+    },
+    {
+      "source": "sources/xiaomu-kit.png",
+      "sourceSha256": "03c74085618e373cf13ea3e6aa1c4997aeda69c75278917ccea42ec25fd65704",
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "region": [
+        627,
+        627,
+        1254,
+        1254
+      ],
+      "alphaCrop": [
+        87,
+        60,
+        485,
+        489
+      ],
+      "alphaCutoff": 128,
+      "uniformScale": true,
+      "sampler": "NEAREST",
+      "output": "runtime/riverside-sunshine-stamp.png",
+      "size": [
+        128,
+        128
+      ],
+      "outputSha256": "214c7635b8b80b3e0ec9908c48573e5b1d90d973fe0304726c9cbfe97c3343f3"
+    },
+    {
+      "source": "sources/adeng-kit.png",
+      "sourceSha256": "26824e2110e15edcbe32cbf1e03ce2ee4f751ba8f3096310fbf14c058104ab4d",
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "region": [
+        0,
+        0,
+        627,
+        627
+      ],
+      "alphaCrop": [
+        140,
+        172,
+        583,
+        531
+      ],
+      "alphaCutoff": 128,
+      "uniformScale": true,
+      "sampler": "NEAREST",
+      "output": "runtime/adeng-envelope.png",
+      "size": [
+        128,
+        128
+      ],
+      "outputSha256": "0555992f9fb753799052dd17c4b189f01e76ce58f9b7934d88b2b3562b9892ea"
+    },
+    {
+      "source": "sources/adeng-kit.png",
+      "sourceSha256": "26824e2110e15edcbe32cbf1e03ce2ee4f751ba8f3096310fbf14c058104ab4d",
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "region": [
+        627,
+        0,
+        1254,
+        627
+      ],
+      "alphaCrop": [
+        98,
+        131,
+        482,
+        565
+      ],
+      "alphaCutoff": 128,
+      "uniformScale": true,
+      "sampler": "NEAREST",
+      "output": "runtime/adeng-ordinary.png",
+      "size": [
+        128,
+        128
+      ],
+      "outputSha256": "2bab8d703d83d392bb88ad0606b592af8db39b0e29e345275d90ef303959ee37"
+    },
+    {
+      "source": "sources/adeng-kit.png",
+      "sourceSha256": "26824e2110e15edcbe32cbf1e03ce2ee4f751ba8f3096310fbf14c058104ab4d",
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "region": [
+        0,
+        627,
+        627,
+        1254
+      ],
+      "alphaCrop": [
+        152,
+        41,
+        559,
+        511
+      ],
+      "alphaCutoff": 128,
+      "uniformScale": true,
+      "sampler": "NEAREST",
+      "output": "runtime/lighthouse-old-letter-stamp.png",
+      "size": [
+        128,
+        128
+      ],
+      "outputSha256": "fcb130da9f8a50d8cdc84de99d0cb878630b490104f71f077e12687d845dae57"
+    },
+    {
+      "source": "sources/adeng-kit.png",
+      "sourceSha256": "26824e2110e15edcbe32cbf1e03ce2ee4f751ba8f3096310fbf14c058104ab4d",
+      "originalSize": [
+        1254,
+        1254
+      ],
+      "region": [
+        627,
+        627,
+        1254,
+        1254
+      ],
+      "alphaCrop": [
+        75,
+        41,
+        484,
+        511
+      ],
+      "alphaCutoff": 128,
+      "uniformScale": true,
+      "sampler": "NEAREST",
+      "output": "runtime/lighthouse-gathering-stamp.png",
+      "size": [
+        128,
+        128
+      ],
+      "outputSha256": "71cfb1b272575ba6bfa4cc1f43cd275e97fe801c3bba0e16f5d1924775ad9ab8"
+    },
+    {
+      "source": "revision-menu-style/sources/windmill-thanks-destination.png",
+      "sourceSha256": "af138a582937aed57c8c983b312939c768f02f6dd9dbdc89584186e2dc83eb17",
+      "originalSize": [
+        1672,
+        941
+      ],
+      "region": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "alphaCrop": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "alphaCutoff": null,
+      "uniformScale": true,
+      "sampler": "NEAREST",
+      "output": "runtime/windmill-thanks-destination.png",
+      "size": [
+        960,
+        540
+      ],
+      "outputSha256": "62f213eb39d21b0f6ce7185f15dfbe699d1b43271565d4d61af2de64d6cd4966"
+    },
+    {
+      "source": "revision-menu-style/sources/windmill-thanks-ending.png",
+      "sourceSha256": "8e08c1d2be091b82e55cbbf7facfce8b99d5d7fa6f99533fa5e63a3a358a0740",
+      "originalSize": [
+        1672,
+        941
+      ],
+      "region": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "alphaCrop": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "alphaCutoff": null,
+      "uniformScale": true,
+      "sampler": "NEAREST",
+      "output": "runtime/windmill-thanks-ending.png",
+      "size": [
+        960,
+        540
+      ],
+      "outputSha256": "e219283be39d8118c1c3d99b9e9769d22564d176a79e20f14940c16ee1260b4f"
+    },
+    {
+      "source": "revision-menu-style/sources/windmill-thanks-ending.png",
+      "sourceSha256": "8e08c1d2be091b82e55cbbf7facfce8b99d5d7fa6f99533fa5e63a3a358a0740",
+      "originalSize": [
+        1672,
+        941
+      ],
+      "region": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "alphaCrop": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "alphaCutoff": null,
+      "uniformScale": true,
+      "sampler": "NEAREST",
+      "output": "runtime/windmill-thanks-postcard.png",
+      "size": [
+        640,
+        360
+      ],
+      "outputSha256": "bd8efb9308fcd4bc32d1f675f091317e9c5f768b466c474a3fbe3e76035685a4"
+    },
+    {
+      "source": "revision-menu-style/sources/windmill-photo-destination.png",
+      "sourceSha256": "4a44c53f449c370e336ad6f7aac055de5f3eeec3dae2c1cf8e72107458089437",
+      "originalSize": [
+        1672,
+        941
+      ],
+      "region": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "alphaCrop": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "alphaCutoff": null,
+      "uniformScale": true,
+      "sampler": "NEAREST",
+      "output": "runtime/windmill-photo-destination.png",
+      "size": [
+        960,
+        540
+      ],
+      "outputSha256": "2defe6115ab774206b41afc765174c22718e7bc011cf0165d704cc39f086a968"
+    },
+    {
+      "source": "revision-menu-style/sources/windmill-photo-ending.png",
+      "sourceSha256": "3f681ba9cb076d418a7609d8435ef497209a32e181558c805be597e9e83ce0a6",
+      "originalSize": [
+        1672,
+        941
+      ],
+      "region": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "alphaCrop": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "alphaCutoff": null,
+      "uniformScale": true,
+      "sampler": "NEAREST",
+      "output": "runtime/windmill-photo-ending.png",
+      "size": [
+        960,
+        540
+      ],
+      "outputSha256": "b84fce21813480eb26cd22091b76b7a2ef7327c309ac3ab44aac08c385e7ccb9"
+    },
+    {
+      "source": "revision-menu-style/sources/windmill-photo-ending.png",
+      "sourceSha256": "3f681ba9cb076d418a7609d8435ef497209a32e181558c805be597e9e83ce0a6",
+      "originalSize": [
+        1672,
+        941
+      ],
+      "region": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "alphaCrop": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "alphaCutoff": null,
+      "uniformScale": true,
+      "sampler": "NEAREST",
+      "output": "runtime/windmill-photo-postcard.png",
+      "size": [
+        640,
+        360
+      ],
+      "outputSha256": "b7f4739cb0321179556d24e435fa96f4edc16d06598594e89d4b7f9620c231ac"
+    },
+    {
+      "source": "revision-menu-style/sources/riverside-thanks-destination.png",
+      "sourceSha256": "512daa32533e25256b91f60d9038f895c9f7b65180cb5320999197124607c0d7",
+      "originalSize": [
+        1672,
+        941
+      ],
+      "region": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "alphaCrop": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "alphaCutoff": null,
+      "uniformScale": true,
+      "sampler": "NEAREST",
+      "output": "runtime/riverside-thanks-destination.png",
+      "size": [
+        960,
+        540
+      ],
+      "outputSha256": "afc9646669882bda59b724e1ca4198d01e6dc96573bbeb9b1a85f645bc8c9b90"
+    },
+    {
+      "source": "revision-menu-style/sources/riverside-thanks-ending.png",
+      "sourceSha256": "53e49dc40822673d9725152b088bd7fec280c986cbf2d00bfb0931aecf9e993f",
+      "originalSize": [
+        1672,
+        941
+      ],
+      "region": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "alphaCrop": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "alphaCutoff": null,
+      "uniformScale": true,
+      "sampler": "NEAREST",
+      "output": "runtime/riverside-thanks-ending.png",
+      "size": [
+        960,
+        540
+      ],
+      "outputSha256": "66b66fcd1bc5ecc911a7ef8a691f26d4a97cf3a6dac70aadbeae6dc70521a94f"
+    },
+    {
+      "source": "revision-menu-style/sources/riverside-thanks-ending.png",
+      "sourceSha256": "53e49dc40822673d9725152b088bd7fec280c986cbf2d00bfb0931aecf9e993f",
+      "originalSize": [
+        1672,
+        941
+      ],
+      "region": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "alphaCrop": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "alphaCutoff": null,
+      "uniformScale": true,
+      "sampler": "NEAREST",
+      "output": "runtime/riverside-thanks-postcard.png",
+      "size": [
+        640,
+        360
+      ],
+      "outputSha256": "0977db9c18765be6734841d5f6fb2f9c8568d3d3f676ca9454019d2ceda475d4"
+    },
+    {
+      "source": "revision-menu-style/sources/riverside-sunshine-destination.png",
+      "sourceSha256": "d1d7a75db3579859c02cb79623ed8069e2d486f816073d8381e8397337d228fc",
+      "originalSize": [
+        1672,
+        941
+      ],
+      "region": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "alphaCrop": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "alphaCutoff": null,
+      "uniformScale": true,
+      "sampler": "NEAREST",
+      "output": "runtime/riverside-sunshine-destination.png",
+      "size": [
+        960,
+        540
+      ],
+      "outputSha256": "f6bf0ec0d0d4530fd9a4fcf56bbed74cc124dbd77ff41ea763625cbd2e441052"
+    },
+    {
+      "source": "revision-menu-style/sources/riverside-sunshine-ending.png",
+      "sourceSha256": "f879495cd1bc1f03f24091525aa477056ccdea46cc1cf677463840d6e1484365",
+      "originalSize": [
+        1672,
+        941
+      ],
+      "region": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "alphaCrop": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "alphaCutoff": null,
+      "uniformScale": true,
+      "sampler": "NEAREST",
+      "output": "runtime/riverside-sunshine-ending.png",
+      "size": [
+        960,
+        540
+      ],
+      "outputSha256": "08a722ef79290b98bc04d9a39ab3f4543201c8b60fbb84c7ccbbf08e719940dc"
+    },
+    {
+      "source": "revision-menu-style/sources/riverside-sunshine-ending.png",
+      "sourceSha256": "f879495cd1bc1f03f24091525aa477056ccdea46cc1cf677463840d6e1484365",
+      "originalSize": [
+        1672,
+        941
+      ],
+      "region": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "alphaCrop": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "alphaCutoff": null,
+      "uniformScale": true,
+      "sampler": "NEAREST",
+      "output": "runtime/riverside-sunshine-postcard.png",
+      "size": [
+        640,
+        360
+      ],
+      "outputSha256": "5399f9dce12d7de7aa1e556fa81ad9fda5737e75d25eea0502faae892ebf276b"
+    },
+    {
+      "source": "revision-menu-style/sources/lighthouse-old-letter-destination.png",
+      "sourceSha256": "b15b0998518324c62630211cc842f181cb0ece8f851025654fedea75d72b8070",
+      "originalSize": [
+        1672,
+        941
+      ],
+      "region": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "alphaCrop": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "alphaCutoff": null,
+      "uniformScale": true,
+      "sampler": "NEAREST",
+      "output": "runtime/lighthouse-old-letter-destination.png",
+      "size": [
+        960,
+        540
+      ],
+      "outputSha256": "ee9f206f59d7419113581ab1d24139f5740464eb82fec61ee6f6f7f9d8654635"
+    },
+    {
+      "source": "revision-menu-style/sources/lighthouse-old-letter-ending.png",
+      "sourceSha256": "b15c254de74777cbb568696471936d53df961bb3863d551f65930ebc4e0294df",
+      "originalSize": [
+        1672,
+        941
+      ],
+      "region": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "alphaCrop": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "alphaCutoff": null,
+      "uniformScale": true,
+      "sampler": "NEAREST",
+      "output": "runtime/lighthouse-old-letter-ending.png",
+      "size": [
+        960,
+        540
+      ],
+      "outputSha256": "9bf6fcf3716ca1a401d666b0790cbd5516447e51f8b30a90336b33fe8abc4dce"
+    },
+    {
+      "source": "revision-menu-style/sources/lighthouse-old-letter-ending.png",
+      "sourceSha256": "b15c254de74777cbb568696471936d53df961bb3863d551f65930ebc4e0294df",
+      "originalSize": [
+        1672,
+        941
+      ],
+      "region": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "alphaCrop": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "alphaCutoff": null,
+      "uniformScale": true,
+      "sampler": "NEAREST",
+      "output": "runtime/lighthouse-old-letter-postcard.png",
+      "size": [
+        640,
+        360
+      ],
+      "outputSha256": "2b91553471653df9266d5bc8d4dd061e6e0a0e5194691d2f723900fb5609b98c"
+    },
+    {
+      "source": "revision-menu-style/sources/lighthouse-gathering-destination.png",
+      "sourceSha256": "32d7f437a696941489603017e253ca1730c7bba39ae39e54affdfc4026c19c75",
+      "originalSize": [
+        1672,
+        941
+      ],
+      "region": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "alphaCrop": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "alphaCutoff": null,
+      "uniformScale": true,
+      "sampler": "NEAREST",
+      "output": "runtime/lighthouse-gathering-destination.png",
+      "size": [
+        960,
+        540
+      ],
+      "outputSha256": "045cebd6e872cda30c12903b0009e40b95db0b352b7a1530ab53f4a45367d4ec"
+    },
+    {
+      "source": "revision-menu-style/sources/lighthouse-gathering-ending.png",
+      "sourceSha256": "9a12f600a6c01469b440cb5f0f68862ae5cb6c2e179023a58cce34f6125e7105",
+      "originalSize": [
+        1672,
+        941
+      ],
+      "region": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "alphaCrop": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "alphaCutoff": null,
+      "uniformScale": true,
+      "sampler": "NEAREST",
+      "output": "runtime/lighthouse-gathering-ending.png",
+      "size": [
+        960,
+        540
+      ],
+      "outputSha256": "4d43141555d5b76a594c2fac0085e1355f2f671a563afd38cabf3c7cd76162d4"
+    },
+    {
+      "source": "revision-menu-style/sources/lighthouse-gathering-ending.png",
+      "sourceSha256": "9a12f600a6c01469b440cb5f0f68862ae5cb6c2e179023a58cce34f6125e7105",
+      "originalSize": [
+        1672,
+        941
+      ],
+      "region": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "alphaCrop": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "alphaCutoff": null,
+      "uniformScale": true,
+      "sampler": "NEAREST",
+      "output": "runtime/lighthouse-gathering-postcard.png",
+      "size": [
+        640,
+        360
+      ],
+      "outputSha256": "09a66a594ee557982f57aaa58ebb1a9ca0ce63180d284bb3bd137689c056a49b"
+    },
+    {
+      "source": "revision-menu-style/sources/windmill-middle.png",
+      "sourceSha256": "547a249750de0c70797ac7b89c77d95bb6faef658cdec220581d55bef88ced8c",
+      "originalSize": [
+        1672,
+        941
+      ],
+      "region": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "alphaCrop": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "alphaCutoff": null,
+      "uniformScale": true,
+      "sampler": "NEAREST",
+      "output": "runtime/windmill-middle.png",
+      "size": [
+        960,
+        540
+      ],
+      "outputSha256": "0ea695d612c4ca2e2bc73bbb310f7e0c60e524afe23c149c7e047960f70eb00f"
+    },
+    {
+      "source": "revision-menu-style/sources/riverside-middle.png",
+      "sourceSha256": "76b0fec76605d5bb5a58cbb7d8964cc12c284fb3f5beda44718c0220985ec6fd",
+      "originalSize": [
+        1672,
+        941
+      ],
+      "region": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "alphaCrop": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "alphaCutoff": null,
+      "uniformScale": true,
+      "sampler": "NEAREST",
+      "output": "runtime/riverside-middle.png",
+      "size": [
+        960,
+        540
+      ],
+      "outputSha256": "d469d93f00735323d4c61ec0e2d4b0f4d4f5625137cbfe11b2c72a1644d48f5b"
+    },
+    {
+      "source": "revision-menu-style/sources/lighthouse-middle.png",
+      "sourceSha256": "53cb63b5ec96f32724fa7e61b7863c34402f4fdbbc681de1a1caef23c6107c1a",
+      "originalSize": [
+        1672,
+        941
+      ],
+      "region": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "alphaCrop": [
+        0,
+        0,
+        1672,
+        941
+      ],
+      "alphaCutoff": null,
+      "uniformScale": true,
+      "sampler": "NEAREST",
+      "output": "runtime/lighthouse-middle.png",
+      "size": [
+        960,
+        540
+      ],
+      "outputSha256": "eca24fc8072f1284e540e9969270a9d00de5ec423d7aebd4cddea9c7d88ea6eb"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "id": "fox-v1",
+  "status": "generated",
+  "tool": "image_gen.imagegen",
+  "builtIn": true,
+  "startedAt": "2026-10-13T07:49:55.399Z",
+  "completedAt": "2026-10-13T07:50:53.323Z",
+  "transparent_background": true,
+  "referenceAttachmentSucceeded": true,
+  "referenceFallbackUsed": false,
+  "originalGeneratedFile": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a13439-f4d6-7473-afd9-6ffeb13517a8\\exec-f00d5b74-4c9b-45d4-9be8-11f5a2174845.png",
+  "workspaceOriginal": "D:\\DSH workspace\\sheep-run\\assets\\skins\\generated-v5\\fox-v1-source.png",
+  "processing": "byte-identical copy of original generation; no painting or reconstruction",
+  "visualInspection": "Generated output visually inspected: 5 by 3 full-body right-facing cream sheep in orange two-ear fox hood, cream cheek trim and attached short tail; costume present all 15 poses. Runtime suitability and per-frame checks delegated to packer.",
+  "runtimePrepared": false,
+  "sourceVerification": {
+    "dimensions": [
+      1620,
+      971
+    ],
+    "fileBytes": 1174796,
+    "sha256": "a853e5ccd4b07e21b9f02128f47a8ab43d84d89f24dcbb461451f39b4a1c3b42",
+    "transparentPixels": 890859,
+    "opaquePixels": 799,
+    "semiTransparentPixels": 681362,
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alphaBbox": [
+      0,
+      17,
+      1620,
+      971
+    ]
+  }
+}

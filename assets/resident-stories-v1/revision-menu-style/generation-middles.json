@@ -1,0 +1,173 @@
+{
+  "version": 1,
+  "revision": "menu-style",
+  "tool": "built-in image_gen",
+  "created_at": "2026-10-13T10:29:32.363Z",
+  "scope": "Three new common middle backgrounds for the six new resident chapters only. Original five chapter definitions and old artwork were not modified. Production asset registration and packing are owned by the parent task.",
+  "records": [
+    {
+      "id": "windmill-middle",
+      "revision": 2,
+      "tool": "built-in image_gen",
+      "intent": "style-transfer edit",
+      "original_path": "C:/Users/mechrevo/.codex/generated_images/01a1177b-35f5-7551-8595-dd2e9ba527b8/exec-c888a971-4066-4a87-a4c1-013955a2acd1.png",
+      "source_path": "sources/windmill-middle.png",
+      "prompt_path": "prompts/windmill-middle-edit.txt",
+      "sha256": "547A249750DE0C70797AC7B89C77D95BB6FAEF658CDEC220581D55BEF88CED8C",
+      "prompt_sha256": "79EA5096D681D3B1F015AD29B4256A114D0430888ED95D295072B0A9EE2250C5",
+      "referenced_image_paths": [
+        "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+        "D:/DSH workspace/sheep-run/assets/resident-stories-v1/revision-menu-style/sources/windmill-photo-destination.png",
+        "D:/DSH workspace/sheep-run/assets/resident-stories-v1/revision-menu-style/sources/windmill-middle.png"
+      ],
+      "edit_target_preserved_at": "sources/windmill-middle-initial.png",
+      "edit_target_sha256": "EAF803C7A826063E5636ADC2F879353FB6904C98CD8714C73FB5A07C1F1CF856",
+      "transparent_background": false,
+      "width": 1672,
+      "height": 941,
+      "png_color_type": 2,
+      "attempts": 1,
+      "review_status": "approved by parent visual review",
+      "visual_review": "Layered cream clouds, teal wooded hills, clustered golden wheat and clean horizontal warm sandy road.",
+      "road_boundary_note": "Grass-to-road boundary is approximately 72% height; entire lower 28% is clear horizontal soil.",
+      "horizontal_extension_note": "Left/right ground level matches; exact full-image seamless repeat is not asserted."
+    },
+    {
+      "id": "riverside-middle",
+      "revision": 2,
+      "tool": "built-in image_gen",
+      "intent": "style-transfer edit",
+      "original_path": "C:/Users/mechrevo/.codex/generated_images/01a1177b-35f5-7551-8595-dd2e9ba527b8/exec-de48b724-7488-4857-b3dd-efe786bb1167.png",
+      "source_path": "sources/riverside-middle.png",
+      "prompt_path": "prompts/riverside-middle-edit.txt",
+      "sha256": "76B0FEC76605D5BB5A58CBB7D8964CC12C284FB3F5BEDA44718C0220985EC6FD",
+      "prompt_sha256": "C08B9930B929277439B01D7A04E26B69FF5C6014D1A438E1B09954B477C64414",
+      "referenced_image_paths": [
+        "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+        "D:/DSH workspace/sheep-run/assets/resident-stories-v1/revision-menu-style/sources/windmill-photo-destination.png",
+        "D:/DSH workspace/sheep-run/assets/resident-stories-v1/revision-menu-style/sources/riverside-middle.png"
+      ],
+      "edit_target_preserved_at": "sources/riverside-middle-initial.png",
+      "edit_target_sha256": "E22374C928B8AFD6AD04C87303CB9B15DDB351D3BAFED4BFB7393BA97B65C48E",
+      "transparent_background": false,
+      "width": 1672,
+      "height": 941,
+      "png_color_type": 2,
+      "attempts": 1,
+      "review_status": "agent reviewed, ready for parent integration review",
+      "visual_review": "Clustered clouds and trees with layered grassy banks, calm bright blue water and clean horizontal warm sandy road.",
+      "road_boundary_note": "Grass-to-road boundary is approximately 72% height; entire lower 28% is clear horizontal soil.",
+      "horizontal_extension_note": "Left/right ground level matches; exact full-image seamless repeat is not asserted."
+    },
+    {
+      "id": "lighthouse-middle",
+      "revision": 2,
+      "tool": "built-in image_gen",
+      "intent": "style-transfer edit",
+      "original_path": "C:/Users/mechrevo/.codex/generated_images/01a1177b-35f5-7551-8595-dd2e9ba527b8/exec-ede74787-4cf1-4965-b447-14e16a96ffcf.png",
+      "source_path": "sources/lighthouse-middle.png",
+      "prompt_path": "prompts/lighthouse-middle-edit.txt",
+      "sha256": "53CB63B5EC96F32724FA7E61B7863C34402F4FDBBC681DE1A1CAEF23C6107C1A",
+      "prompt_sha256": "3CEF4CFC02905761683F404F2B3BD1124E3F9BC7D5107016E2EE9532C086C83A",
+      "referenced_image_paths": [
+        "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+        "D:/DSH workspace/sheep-run/assets/resident-stories-v1/revision-menu-style/sources/windmill-photo-destination.png",
+        "D:/DSH workspace/sheep-run/assets/resident-stories-v1/revision-menu-style/sources/lighthouse-middle.png"
+      ],
+      "edit_target_preserved_at": "sources/lighthouse-middle-initial.png",
+      "edit_target_sha256": "62768A287B15F3D81AC94137BC76C90CB21B97022B31DBFDC2C8C0ACCC846D18",
+      "transparent_background": false,
+      "width": 1672,
+      "height": 941,
+      "png_color_type": 2,
+      "attempts": 1,
+      "review_status": "agent reviewed, ready for parent integration review",
+      "visual_review": "Layered dusky blue clouds and coastal hills, readable deep-blue sea, clustered bushes and clear warm sandy road.",
+      "road_boundary_note": "Grass-to-road boundary is approximately 72% height; entire lower 28% is clear horizontal soil.",
+      "horizontal_extension_note": "Left/right ground level matches; exact full-image seamless repeat is not asserted."
+    }
+  ],
+  "preserved_initial": [
+    {
+      "id": "windmill-middle",
+      "original_path": "C:/Users/mechrevo/.codex/generated_images/01a1177b-35f5-7551-8595-dd2e9ba527b8/exec-37d53093-3ad1-4902-822e-bb670a343e84.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "EAF803C7A826063E5636ADC2F879353FB6904C98CD8714C73FB5A07C1F1CF856",
+      "prompt_sha256": "BE1FD3B0709C2EFC16DECEAFB27385D43EA8F4763F45D53348CFD4111A7056E4",
+      "attempts": 1,
+      "visual_review": "Simple wheat field, teal lake/hills, chunky cream clouds; clear horizontal sandy lane, no characters or text. Grass-to-road boundary is approximately 74–75% height rather than an exact 72%; verify ground alignment during integration.",
+      "source_path": "sources/windmill-middle-initial.png",
+      "prompt_path": "prompts/windmill-middle.txt",
+      "tool": "built-in image_gen",
+      "transparent_background": false,
+      "png_color_type": 2,
+      "reference_images_viewed": [
+        "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+        "D:/DSH workspace/sheep-run/assets/resident-stories-v1/revision-menu-style/sources/windmill-photo-destination.png"
+      ],
+      "referenced_image_paths": [],
+      "reference_mode": "Brand-new image request. Project reference files were inspected through view_image and their style was described in the saved prompt; no edit-target or explicit referenced_image_paths argument was supplied.",
+      "source_modified": false,
+      "horizontal_extension_note": "Left/right grass and road levels match; exact full-image seamless tiling is not asserted.",
+      "review_status": "rejected_style: too coarse flat silhouettes, does not match menu"
+    },
+    {
+      "id": "riverside-middle",
+      "original_path": "C:/Users/mechrevo/.codex/generated_images/01a1177b-35f5-7551-8595-dd2e9ba527b8/exec-d6368baa-5531-42df-a11f-bfa7fb76350f.png",
+      "width": 1672,
+      "height": 940,
+      "sha256": "E22374C928B8AFD6AD04C87303CB9B15DDB351D3BAFED4BFB7393BA97B65C48E",
+      "prompt_sha256": "11F1CC9DF34EE691C6B656596190B6011F21F5423AAF2EB4C4AB1BE55C82BAC0",
+      "attempts": 1,
+      "visual_review": "Flat cyan water bands, restrained green banks and distant teal hills; matching broad pixel clusters and clear sandy lane, no characters/text. Grass-to-road boundary is approximately 76% height rather than an exact 72%; verify ground alignment during integration.",
+      "source_path": "sources/riverside-middle-initial.png",
+      "prompt_path": "prompts/riverside-middle.txt",
+      "tool": "built-in image_gen",
+      "transparent_background": false,
+      "png_color_type": 2,
+      "reference_images_viewed": [
+        "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+        "D:/DSH workspace/sheep-run/assets/resident-stories-v1/revision-menu-style/sources/windmill-photo-destination.png"
+      ],
+      "referenced_image_paths": [],
+      "reference_mode": "Brand-new image request. Project reference files were inspected through view_image and their style was described in the saved prompt; no edit-target or explicit referenced_image_paths argument was supplied.",
+      "source_modified": false,
+      "horizontal_extension_note": "Left/right grass and road levels match; exact full-image seamless tiling is not asserted.",
+      "review_status": "rejected_style: too coarse flat silhouettes, does not match menu"
+    },
+    {
+      "id": "lighthouse-middle",
+      "original_path": "C:/Users/mechrevo/.codex/generated_images/01a1177b-35f5-7551-8595-dd2e9ba527b8/exec-3513dd64-760a-4648-a075-18547b60aae9.png",
+      "width": 1672,
+      "height": 941,
+      "sha256": "62768A287B15F3D81AC94137BC76C90CB21B97022B31DBFDC2C8C0ACCC846D18",
+      "prompt_sha256": "3BB5F0E882724DB0BC37EA738507D86B63D969B990B89612AB0105879DD036DF",
+      "attempts": 2,
+      "visual_review": "Sparse cream square stars, simple deep-blue clouds and flat coastal water; restrained pixel silhouettes and clear ochre lane. Grass-to-road boundary is approximately 75% height rather than an exact 72%; verify ground alignment during integration.",
+      "failed_attempts": [
+        {
+          "tool": "built-in image_gen",
+          "error": "image generation failed: connection failed: error sending request",
+          "output_created": false
+        }
+      ],
+      "source_path": "sources/lighthouse-middle-initial.png",
+      "prompt_path": "prompts/lighthouse-middle.txt",
+      "tool": "built-in image_gen",
+      "transparent_background": false,
+      "png_color_type": 2,
+      "reference_images_viewed": [
+        "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+        "D:/DSH workspace/sheep-run/assets/resident-stories-v1/revision-menu-style/sources/windmill-photo-destination.png"
+      ],
+      "referenced_image_paths": [],
+      "reference_mode": "Brand-new image request. Project reference files were inspected through view_image and their style was described in the saved prompt; no edit-target or explicit referenced_image_paths argument was supplied.",
+      "source_modified": false,
+      "horizontal_extension_note": "Left/right grass and road levels match; exact full-image seamless tiling is not asserted.",
+      "review_status": "rejected_style: too coarse flat silhouettes, does not match menu"
+    }
+  ],
+  "revision_status": "All three edited with explicit menu and destination references; no runtime or packing changes made by this image task.",
+  "updated_at": "2026-10-13T11:19:11.8290194Z"
+}

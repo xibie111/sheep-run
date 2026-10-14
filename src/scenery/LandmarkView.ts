@@ -23,7 +23,7 @@ export class LandmarkView implements LandmarkViewPort {
   };
   constructor(private readonly scene: Phaser.Scene, private readonly definition: LandmarkDefinition) {
     this.image = scene.add.image(0, 0, definition.key, '__BASE').setOrigin(.5, 1).setScale(.5)
-      .setDepth(-9.8).setName(`landmark:${definition.id}`);
+      .setDepth(definition.depth).setName(`landmark:${definition.id}`);
     scene.game.events.on('postrender', this.afterRender);
   }
   place(state: LandmarkPlacement): void {

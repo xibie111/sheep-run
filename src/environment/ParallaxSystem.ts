@@ -50,6 +50,7 @@ export class ParallaxSystem {
   private destroyed = false;
   private stopWatching?: () => void;
   private renderedTheme = "";
+  private rainBrightness = 0;
   private readonly useSeasonArtwork: boolean;
 
   constructor(private readonly scene?: Phaser.Scene, options: ParallaxOptions = {}) {
@@ -75,10 +76,11 @@ export class ParallaxSystem {
     this.stopWatching = watchViewport(scene, (size) => this.layout(size));
   }
 
-  update(distancePx: number): void {
+  update(distancePx: number, rainBrightness = 0): void {
     if (this.destroyed) return;
     this.atmosphereDistance = Number.isFinite(distancePx) ? Math.max(0, distancePx) : 0;
     this.distance = this.reducedMotion ? 0 : this.atmosphereDistance;
+    this.rainBrightness = Number.isFinite(rainBrightness) ? Math.max(0, Math.min(1, rainBrightness)) : 0;
     const visual = this.visual();
     if (visual.theme.id !== this.renderedTheme) {
       for (const { sprite, definition } of this.layers) {
@@ -108,11 +110,18 @@ export class ParallaxSystem {
     for (const { sprite } of this.layers) sprite.setPosition(size.width / 2, origin.y + WORLD.height / 2).setSize(size.width, WORLD.height);
     this.fills[0]!.sprite.setSize(size.width, size.height);
     this.fills[1]!.sprite.setPosition(0, origin.y + WORLD.height).setSize(size.width, Math.max(1, size.height - origin.y - WORLD.height));
-    this.update(this.atmosphereDistance);
+    this.update(this.atmosphereDistance, this.rainBrightness);
   }
 
   private visual() {
-    return this.themes.visualAtDistance(this.atmosphereDistance, this.reducedMotion && !this.calmAtmosphere, this.useSeasonArtwork);
+    const visual = this.themes.visualAtDistance(this.atmosphereDistance, this.reducedMotion && !this.calmAtmosphere, this.useSeasonArtwork);
+    // Rain is conveyed by droplets; restore the authored colours instead of
+    // combining them with a dark day tint. Follow the weather fade smoothly.
+    const brighten = (tint: number): number => {
+      const channel = (shift: number) => Math.round(((tint >>> shift) & 255) * (1 - this.rainBrightness) + 255 * this.rainBrightness);
+      return (channel(16) << 16) | (channel(8) << 8) | channel(0);
+    };
+    return { ...visual, skyTint: brighten(visual.skyTint), landTint: brighten(visual.landTint) };
   }
 
   /** Exact state used by the painted near layer, including reduced-motion freezing. */

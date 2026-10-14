@@ -1,0 +1,22 @@
+{
+  "id": "dinner-ending",
+  "tool": "builtin-image_gen",
+  "originalOutput": "C:/Users/mechrevo/.codex/generated_images/01a11760-9d97-77c1-924c-cefdf4e6c788/exec-849b7832-19e1-4005-9af4-34b9e9234bf8.png",
+  "workspaceSource": "assets/delivery-menu-style-v2/sources/dinner-ending.png",
+  "prompt": "assets/delivery-menu-style-v2/prompts/dinner-ending.json",
+  "referencesAttached": true,
+  "transparent_background": false,
+  "retryOf": "dinner-ending-attempt1.json",
+  "sourceSha256": "3898320ec181404f70193793c1b77f67e679a1b85ce3c61196c2da65ef7d23eb",
+  "sourceDimensions": [
+    1672,
+    941
+  ],
+  "recordedAt": "2026-10-13T14:00:49.213751+00:00",
+  "originalByteIdentical": true,
+  "referenceHashes": {
+    "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png": "de36b068c971bbd24d870b5075a1380e852a4000d71c7807bb0600ce1fbf3749",
+    "D:/DSH workspace/sheep-run/assets/content-update-v2/delivery/runtime/dinner-ending.png": "82e8a6923faa70c6b78ef2e356334c11a7a7c8fd3b52483a5db8299d4becdb94",
+    "D:/DSH workspace/sheep-run/assets/skins/runtime-v1/white-sheet.png": "b1aceac87739a99c77cf97f4083a7e613720c24c817485575dde2ef51b896856"
+  }
+}

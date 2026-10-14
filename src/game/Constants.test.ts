@@ -53,7 +53,7 @@ describe("Phase 6 environment configuration", () => {
       weatherSegmentDistancePx: 8000,
       tintTransitionDistancePx: 600,
       weatherFadeDistancePx: 600,
-      maxRainParticles: 24,
+      maxRainParticles: 64,
       maxWindParticles: 12,
       chunkWidthPx: 480,
       chunksBehind: 1,

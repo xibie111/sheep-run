@@ -1,5 +1,6 @@
 export type ObstacleKind = "WoodFence" | "Pumpkin" | "Rock" | "Puddle" | "FlyingBird" | "WideLog" | "TallStack" | "HangingVine"
-  | "WoodBarrel" | "MilkChurn" | "FruitBasket" | "MushroomCluster" | "Bramble" | "HangingBranch";
+  | "WoodBarrel" | "MilkChurn" | "FruitBasket" | "MushroomCluster" | "Bramble" | "HangingBranch"
+  | "HayCart" | "WaterTrough" | "HangingLantern" | "FlyingGoose";
 
 export interface ObstacleDefinition {
   readonly kind: ObstacleKind;
@@ -145,4 +146,33 @@ export const HangingBranch: ObstacleDefinition = {
   hitbox: { width: 20, height: 14, offsetX: 8, offsetY: 4 },
 };
 export const NEW_OBSTACLE_DEFINITIONS: readonly ObstacleDefinition[] = [WoodBarrel, MilkChurn, FruitBasket, MushroomCluster, Bramble, HangingBranch];
-export const OBSTACLE_DEFINITIONS: readonly ObstacleDefinition[] = [...BASE_OBSTACLE_DEFINITIONS, ...ADDITIONAL_OBSTACLE_DEFINITIONS, ...NEW_OBSTACLE_DEFINITIONS];
+
+export const HayCart: ObstacleDefinition = {
+  kind: "HayCart", texture: "obstacle-hay-cart", visualScale: 1.2,
+  width: 72, height: 40, groundOffset: 0,
+  hitbox: { width: 42, height: 28, offsetX: 16, offsetY: 10 },
+};
+export const WaterTrough: ObstacleDefinition = {
+  kind: "WaterTrough", texture: "obstacle-water-trough", visualScale: 1.2,
+  width: 80, height: 22, groundOffset: 0,
+  hitbox: { width: 60, height: 14, offsetX: 10, offsetY: 6 },
+};
+export const HangingLantern: ObstacleDefinition = {
+  kind: "HangingLantern", texture: "obstacle-hanging-lantern", visualScale: 1.2,
+  width: 22, height: 28, groundOffset: 22,
+  hitbox: { width: 12, height: 18, offsetX: 5, offsetY: 8 },
+};
+export const FlyingGoose: ObstacleDefinition = {
+  kind: "FlyingGoose", texture: "obstacle-flying-goose", visualScale: 1.2,
+  width: 34, height: 26, groundOffset: 52,
+  hitbox: { width: 26, height: 12, offsetX: 4, offsetY: 7 },
+  motion: { amplitude: 4, frequency: 2.6 },
+};
+export const EXPANDED_OBSTACLE_DEFINITIONS: readonly ObstacleDefinition[] = [HayCart, WaterTrough, HangingLantern, FlyingGoose];
+export const OBSTACLE_DEFINITIONS: readonly ObstacleDefinition[] = [
+  ...BASE_OBSTACLE_DEFINITIONS, ...ADDITIONAL_OBSTACLE_DEFINITIONS, ...NEW_OBSTACLE_DEFINITIONS, ...EXPANDED_OBSTACLE_DEFINITIONS,
+];
+
+const OVERHEAD_OBSTACLE_KINDS = new Set(OBSTACLE_DEFINITIONS.filter(definition => definition.groundOffset > 0).map(definition => definition.kind));
+/** Jump routes and companion bells must follow the same hazard classification. */
+export function isOverheadObstacle(kind: ObstacleKind): boolean { return OVERHEAD_OBSTACLE_KINDS.has(kind); }

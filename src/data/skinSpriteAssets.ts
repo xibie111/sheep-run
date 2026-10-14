@@ -33,6 +33,12 @@ export const SKIN_SHEET_URLS: Record<SkinId, string> = {
   'raincoat-v1': new URL('../../assets/skins/runtime-v4/raincoat-v1-sheet.png', import.meta.url).href,
   'explorer-v1': new URL('../../assets/skins/runtime-v4/explorer-v1-sheet.png', import.meta.url).href,
   'astronaut-v1': new URL('../../assets/skins/runtime-v4/astronaut-v1-sheet.png', import.meta.url).href,
+  'bee-v1': new URL('../../assets/skins/runtime-v5/bee-v1-sheet.png', import.meta.url).href,
+  'mushroom-v1': new URL('../../assets/skins/runtime-v5/mushroom-v1-sheet.png', import.meta.url).href,
+  'chef-v1': new URL('../../assets/skins/runtime-v5/chef-v1-sheet.png', import.meta.url).href,
+  'pirate-v1': new URL('../../assets/skins/runtime-v5/pirate-v1-sheet.png', import.meta.url).href,
+  'fox-v1': new URL('../../assets/skins/runtime-v5/fox-v1-sheet.png', import.meta.url).href,
+  'dinosaur-v1': new URL('../../assets/skins/runtime-v5/dinosaur-v1-sheet.png', import.meta.url).href,
 };
 
 export const SKIN_NAMES: Record<SkinId, string> = {
@@ -44,6 +50,8 @@ export const SKIN_NAMES: Record<SkinId, string> = {
   peach: "蜜桃羊", milktea: "奶茶羊", cloud: "云朵羊", bearcap: "小熊帽羊",
   'strawberry-v1': '草莓羊', 'lemon-v1': '柠檬羊', 'sailor-v1': '水手羊', 'starlight-v1': '星灯羊',
   'postman-v1': '邮差羊', 'raincoat-v1': '雨衣羊', 'explorer-v1': '探险羊', 'astronaut-v1': '航天羊',
+  'bee-v1': '蜜蜂羊', 'mushroom-v1': '蘑菇羊', 'chef-v1': '厨师羊', 'pirate-v1': '海盗羊',
+  'fox-v1': '狐狸羊', 'dinosaur-v1': '恐龙羊',
 };
 
 export const SKIN_ANIMATION_FRAMES = {

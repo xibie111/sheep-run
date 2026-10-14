@@ -1,0 +1,9 @@
+{
+  "tool": "builtin-image_gen",
+  "id": "chef-v1",
+  "generatedPath": "C:/Users/mechrevo/.codex/generated_images/01a11760-9d97-77c1-924c-cefdf4e6c788/exec-7dcf92ac-395d-4520-883a-595a3f37971e.png",
+  "workspaceSource": "assets/skins/generated-v5/chef-v1-source.png",
+  "promptFile": "chef-v1-prompt.json",
+  "referencesAttached": true,
+  "transparent_background": true
+}

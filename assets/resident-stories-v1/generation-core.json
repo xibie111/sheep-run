@@ -1,0 +1,94 @@
+{
+  "records": [
+    {
+      "id": "ahe",
+      "tool": "image_gen",
+      "transparent_background": true,
+      "prompt": "Use case: stylized-concept. Production transparent pixel-art character asset for the existing Sheep Run game. Use the supplied white sheep sprite sheet ONLY as a character identity/proportions/style reference, not an edit target. Create one centered full-body resident sheep named A He, the windmill keeper: same cream wool, rounded quadruped sheep body, small tan face, tiny black eyes and short dark brown hooves as reference, wearing a small straw hat and a green scarf. Facing slightly right in a friendly resting pose, all four feet supported at a common baseline. NO humanoid arms or upright human posture. Crisp pixel clusters, warm dark brown outline, restricted pasture palette, hard clean edges; no soft shadows or blur. True transparent background, no floor, no writing, numbers, labels, border or watermark. Entire hat/body/feet visible with generous transparent margin. The same character will be reused in portraits, route scenes and story illustrations. One character only.",
+      "output": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11778-9c23-7240-b06f-8e9599a973dc\\exec-4e1ea68c-474e-460b-8538-8ebdbdda694f.png",
+      "source": "sources/ahe.png",
+      "copied": true,
+      "visualInspection": "Reviewed generated output: sheep identity or clear-road panorama, no text."
+    },
+    {
+      "id": "xiaomu",
+      "tool": "image_gen",
+      "transparent_background": true,
+      "prompt": "Use case: stylized-concept. Production pixel-art NPC asset for Sheep Run. Use supplied white sheep sprites as character identity/proportions reference; the strawhat sheep is rendering-style reference only. Match cream rounded wool, small tan face, short dark hooves, tiny black eyes, same cute quadruped proportions. One whole sheep only, facing slightly right, friendly resting stance, no humanoid arms, no upright humanoid posture. Crisp hard-edged pixels, limited warm-brown outline palette, no blurry halo or shadow. Entire body and accessories visible, centered with transparent margin. TRUE fully transparent background; no ground, text, labels, symbols, or watermark. Resident Xiao Mu: pale blue scarf and a small pale blue rain hat. Gentle and attentive expression. Accessories distinct from the strawhat reference; do not include straw hat or green scarf.",
+      "output": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11778-9c23-7240-b06f-8e9599a973dc\\exec-6539ef4e-4716-4f0e-9187-84b9ef0c4a7f.png",
+      "source": "sources/xiaomu.png",
+      "copied": true,
+      "visualInspection": "Reviewed generated output: sheep identity or clear-road panorama, no text."
+    },
+    {
+      "id": "adeng",
+      "tool": "image_gen",
+      "transparent_background": true,
+      "prompt": "Use case: stylized-concept. Production pixel-art NPC asset for Sheep Run. Use supplied white sheep sprites as character identity/proportions reference; the strawhat sheep is rendering-style reference only. Match cream rounded wool, small tan face, short dark hooves, tiny black eyes, same cute quadruped proportions. One whole sheep only, facing slightly right, friendly resting stance, no humanoid arms, no upright humanoid posture. Crisp hard-edged pixels, limited warm-brown outline palette, no blurry halo or shadow. Entire body and accessories visible, centered with transparent margin. TRUE fully transparent background; no ground, text, labels, symbols, or watermark. Resident A Deng, lighthouse keeper: small dark navy cap, warm golden yellow scarf, a small warm amber lantern placed just beside the front hoof. Quiet thoughtful expression. Do not include straw hat or green scarf.",
+      "output": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11778-9c23-7240-b06f-8e9599a973dc\\exec-7b7e21ec-7e14-45eb-b142-c7954c23a4a5.png",
+      "source": "sources/adeng.png",
+      "copied": true,
+      "visualInspection": "Reviewed generated output: sheep identity or clear-road panorama, no text."
+    },
+    {
+      "id": "windmill-thanks-destination",
+      "tool": "image_gen",
+      "transparent_background": false,
+      "prompt": "Use case: stylized-concept. Single production background for a horizontal pixel-art sheep runner. Reference attached pasture background for consistent crisp detailed pixel-art palette and composition. Wide landscape 16:9; no text, UI, characters, letters or numbers. A perfectly horizontal clean light ochre dirt runner road fills the bottom 28 percent, from y=72 percent to the bottom, spanning edge-to-edge. NO obstacles, steps, fences, props, water, plants or shadows on the road. Meadow and scenery above road; upper sky about35 percent. Buildings sit behind road, with welcoming doorway on the right. Hard crisp pixel edges; no blur, no vignette, no frame. Do not stretch or perspective-tilt the road. Flower-garden cottage destination in warm sunshine. Small honey-stone cottage on right with pink and cream flowers, a small porch, green shutters, a flower basket and blue flower vase by the door. Wheat field and distant windmill on left, sunny valley behind. Friendly cozy inhabited garden; the route is arriving from the windmill.",
+      "output": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11778-9c23-7240-b06f-8e9599a973dc\\exec-98127982-f010-4916-98e2-ab9db4aaaec2.png",
+      "source": "sources/windmill-thanks-destination.png",
+      "copied": true,
+      "visualInspection": "Reviewed generated output: sheep identity or clear-road panorama, no text."
+    },
+    {
+      "id": "windmill-photo-destination",
+      "tool": "image_gen",
+      "transparent_background": false,
+      "prompt": "Use case: stylized-concept. Single production background for a horizontal pixel-art sheep runner. Reference attached pasture background for consistent crisp detailed pixel-art palette and composition. Wide landscape 16:9; no text, UI, characters, letters or numbers. A perfectly horizontal clean light ochre dirt runner road fills the bottom 28 percent, from y=72 percent to the bottom, spanning edge-to-edge. NO obstacles, steps, fences, props, water, plants or shadows on the road. Meadow and scenery above road; upper sky about35 percent. Buildings sit behind road, with welcoming doorway on the right. Hard crisp pixel edges; no blur, no vignette, no frame. Do not stretch or perspective-tilt the road. Windmill picnic meadow destination. A charming cream windmill with terracotta roof on right. Behind the clear road is a red-check picnic mat, low table with food, a small vase of fresh flowers and a simple wooden camera on a tripod aimed at the picnic area. Sunny wheat fields and trees toward the left, soft distant village.",
+      "output": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11778-9c23-7240-b06f-8e9599a973dc\\exec-d29391ca-d0e8-496c-81c3-0bc78b2261e5.png",
+      "source": "sources/windmill-photo-destination.png",
+      "copied": true,
+      "visualInspection": "Reviewed generated output: sheep identity or clear-road panorama, no text."
+    },
+    {
+      "id": "riverside-thanks-destination",
+      "tool": "image_gen",
+      "transparent_background": false,
+      "prompt": "Use case: stylized-concept. Single production background for a horizontal pixel-art sheep runner. Reference attached pasture background for consistent crisp detailed pixel-art palette and composition. Wide landscape 16:9; no text, UI, characters, letters or numbers. A perfectly horizontal clean light ochre dirt runner road fills the bottom 28 percent, from y=72 percent to the bottom, spanning edge-to-edge. NO obstacles, steps, fences, props, water, plants or shadows on the road. Meadow and scenery above road; upper sky about35 percent. Buildings sit behind road, with welcoming doorway on the right. Hard crisp pixel edges; no blur, no vignette, no frame. Do not stretch or perspective-tilt the road. Rain just stopped at a small stone bridge and neighbor cottage. Small bridge arcs over river in middle background; welcoming stone cottage on right with a flower pot beside doorway. Wet glistening grass, distant silver river reflections, broken pale clouds, gentle first rays of sunshine. Keep all water and puddles behind the dry empty foreground road.",
+      "output": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11778-9c23-7240-b06f-8e9599a973dc\\exec-b1b2c48f-b72c-42d1-9951-cfac7d2e3d56.png",
+      "source": "sources/riverside-thanks-destination.png",
+      "copied": true,
+      "visualInspection": "Reviewed generated output: sheep identity or clear-road panorama, no text."
+    },
+    {
+      "id": "riverside-sunshine-destination",
+      "tool": "image_gen",
+      "transparent_background": false,
+      "prompt": "Use case: stylized-concept. Single production background for a horizontal pixel-art sheep runner. Reference supplied existing sheep-run destination background for exact visual language: crisp detailed pixel clusters, warm outlined rural architecture. Landscape16:9, NO text,UI,characters,numbers,logos,frame. A perfectly horizontal clean ochre dirt road spans the bottom28percent, y72percent to bottom. Keep that road empty and continuous with NO obstacles, steps,plants,water,railings or streetfurniture. Scenery and buildings entirely above road. Upper sky about35percent. Clear crisp hard pixels without blur. Sunny riverside cottage with open blue shutters on the right, window flower in bloom, a tiny tea table with three cups and chairs on grassy lawn above the road. Bright slow river runs through middle background, a pale natural rainbow arches high over the distant river and hills after rain, sparkling wet green meadow. Warm afternoon invitation, no sheep yet.",
+      "output": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11778-9c23-7240-b06f-8e9599a973dc\\exec-a1b50f8a-fef6-4b35-8875-1575103b03d2.png",
+      "source": "sources/riverside-sunshine-destination.png",
+      "copied": true,
+      "visualInspection": "Reviewed generated output: sheep identity or clear-road panorama, no text."
+    },
+    {
+      "id": "lighthouse-old-letter-destination",
+      "tool": "image_gen",
+      "transparent_background": false,
+      "prompt": "Use case: stylized-concept. Single production background for a horizontal pixel-art sheep runner. Reference supplied existing sheep-run destination background for exact visual language: crisp detailed pixel clusters, warm outlined rural architecture. Landscape16:9, NO text,UI,characters,numbers,logos,frame. A perfectly horizontal clean ochre dirt road spans the bottom28percent, y72percent to bottom. Keep that road empty and continuous with NO obstacles, steps,plants,water,railings or streetfurniture. Scenery and buildings entirely above road. Upper sky about35percent. Clear crisp hard pixels without blur. Harbor cottage at soft amber dusk, right side wooden coastal cottage with a small unlit brass window lantern and mailbox, small bluegray fishing boats and quays entirely in middle distance behind foreground grass and dry road, lighthouse far on a distant hill at left. Quiet nostalgic late reply atmosphere, peach-purple sky and calm seareflections.",
+      "output": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11778-9c23-7240-b06f-8e9599a973dc\\exec-60c6dbc5-1dbe-4e57-9d0c-bbe7b1b6214e.png",
+      "source": "sources/lighthouse-old-letter-destination.png",
+      "copied": true,
+      "visualInspection": "Reviewed generated output: sheep identity or clear-road panorama, no text."
+    },
+    {
+      "id": "lighthouse-gathering-destination",
+      "tool": "image_gen",
+      "transparent_background": false,
+      "prompt": "Use case: stylized-concept. Single production background for a horizontal pixel-art sheep runner. Reference supplied existing sheep-run destination background for exact visual language: crisp detailed pixel clusters, warm outlined rural architecture. Landscape16:9, NO text,UI,characters,numbers,logos,frame. A perfectly horizontal clean ochre dirt road spans the bottom28percent, y72percent to bottom. Keep that road empty and continuous with NO obstacles, steps,plants,water,railings or streetfurniture. Scenery and buildings entirely above road. Upper sky about35percent. Clear crisp hard pixels without blur. Lighthouse platform above a calm sea at blue starry evening. Lighthouse standing toward the right with warm broad beacon alreadylit. Wide coastal grass above road provides meeting area, a few small porchlamps. Across sea at left, littleharbor windows shine golden dots, thin crescent moon and stars, darknavy warmamber palette, welcoming and peaceful, never scary.",
+      "output": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11778-9c23-7240-b06f-8e9599a973dc\\exec-f063f369-b0d6-4185-a1ce-c3462001d4e3.png",
+      "source": "sources/lighthouse-gathering-destination.png",
+      "copied": true,
+      "visualInspection": "Reviewed generated output: sheep identity or clear-road panorama, no text."
+    }
+  ]
+}

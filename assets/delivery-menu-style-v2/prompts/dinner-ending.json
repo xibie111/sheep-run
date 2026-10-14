@@ -1,0 +1,16 @@
+{
+  "id": "dinner-ending",
+  "tool": "builtin-image_gen",
+  "transparent_background": false,
+  "prompt": "Use case: production pixel farm game scenery repaint. Create ONE FULL OPAQUE 16:9 landscape, no panels, atlas, border, grid, words, letters, numbers, text or UI. Image1 is the EXISTING MAIN MENU and the ONLY art STYLE reference. Repaint Image2 (old composition reference only) with that exact simpler main-menu coarse blocky farm illustration language. The previous scene is too finely detailed; do NOT retain its painterly textures, microscopic foliage, individual roof tiles, noise, realistic materials or complex lighting.\nMatch the menu's clear stepped square pixel contours, broad grouped round tree crowns, simple green and warm cream/tan palette, small number of flat shadow steps, friendly farm geometry. No realistic brushwork, blur, glow or smooth texture. Pixel clusters must remain readable when rendered at 480x270, as though drawn at that low logical density then nearest-neighbour enlarged. Larger simple clouds; deliberately sparse big flower accents. Keep atmosphere gentle and warm.\nSTORY ENDING illustration: exactly TWO little original sheep sharing a compact open wooden lunchbox on a small red-check picnic mat beside the warm-lit cottage at early evening. Sheep identity comes from Image3 (the actual game's character sheet): round cream oval fluffy wool body, peach square muzzle, tiny dark eye, cocoa ears and FOUR short hooves; no horns, human hands, arms, anthropomorphic upright torso or Kirby design. Both are relaxed sitting low/four-legged near the food, face each other and lower their noses toward the lunchbox naturally. Food is three very simple colored pixel portions (red noodles, warm soup, yellow egg rice), no labels or detailed food rendering. Keep sheep recognizable and outfit-free cream sheep. Image2 composition/story ONLY, Image1 sole background STYLE, Image3 CHARACTER ONLY. Actors and box fully inside centre 70% of canvas. Large friendly pixel blocks; simple cottage, broad tree crowns and few flowers, no detailed microtexture. This is an illustration, not a sprite atlas. No runtime road strip required in this ending.",
+  "referenced_image_paths": [
+    "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+    "D:/DSH workspace/sheep-run/assets/content-update-v2/delivery/runtime/dinner-ending.png",
+    "D:/DSH workspace/sheep-run/assets/skins/runtime-v1/white-sheet.png"
+  ],
+  "roles": [
+    "main-menu style only",
+    "old composition/story only",
+    "existing sheep character identity only"
+  ]
+}

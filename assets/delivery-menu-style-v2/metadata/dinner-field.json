@@ -1,0 +1,20 @@
+{
+  "id": "dinner-field",
+  "tool": "builtin-image_gen",
+  "originalOutput": "C:/Users/mechrevo/.codex/generated_images/01a11760-9d97-77c1-924c-cefdf4e6c788/exec-af0c6280-2be6-420e-a117-74dc6aa22222.png",
+  "workspaceSource": "assets/delivery-menu-style-v2/sources/dinner-field.png",
+  "prompt": "assets/delivery-menu-style-v2/prompts/dinner-field.json",
+  "referencesAttached": true,
+  "transparent_background": false,
+  "sourceSha256": "98f6009ef991486fc576762c0d6a73856ec4e22359d12e44d75155fa3d1f286c",
+  "sourceDimensions": [
+    1672,
+    941
+  ],
+  "recordedAt": "2026-10-13T14:00:49.194805+00:00",
+  "originalByteIdentical": true,
+  "referenceHashes": {
+    "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png": "de36b068c971bbd24d870b5075a1380e852a4000d71c7807bb0600ce1fbf3749",
+    "D:/DSH workspace/sheep-run/assets/content-update-v2/delivery/runtime/field.png": "2e44706d5c6f2e8175e620802c6e6464731606767081a816f87e33d8655e3b7f"
+  }
+}

@@ -1,6 +1,8 @@
 import { COLLECTION_BADGES } from "./pastureCollections";
 import { SEASON_ORDER } from "../environment/SeasonProgress";
 import type { ThemeId } from "../environment/types";
+import { EXPANDED_ACHIEVEMENTS } from "./expandedAchievements";
+import { JOURNEY_MILESTONES_V3 } from "./journeyMilestonesV3";
 
 export const ACHIEVEMENTS = [
   {id:"first-run",metric:"runs",name:"第一次出发",goal:1,condition:"完成第一局跑酷",message:"出发的这一小步，也值得留下纪念。",icon:"play"},
@@ -23,6 +25,8 @@ export const ACHIEVEMENTS = [
   {id:"autumn-collector",metric:"autumn",name:"秋日收藏家",goal:1,condition:"集齐秋季三枚徽章",message:"秋天慢慢走过，三份小纪念都在这里。",icon:"flower"},
   {id:"winter-collector",metric:"winter",name:"冬日收藏家",goal:1,condition:"集齐冬季三枚徽章",message:"冬夜虽冷，收好的回忆一直暖暖的。",icon:"flower"},
   {id:"all-collections",metric:"all",name:"四季都陪你",goal:1,condition:"集齐全部十二枚四季徽章",message:"十二枚徽章，记着春夏秋冬一起走过的路。",icon:"flower"},
+  ...EXPANDED_ACHIEVEMENTS,
+  ...JOURNEY_MILESTONES_V3,
 ] as const;
 export type AchievementId = typeof ACHIEVEMENTS[number]["id"];
 export type RewardId = ThemeId | "all";

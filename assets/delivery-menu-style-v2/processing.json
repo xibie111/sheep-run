@@ -1,0 +1,2484 @@
+{
+  "schemaVersion": 1,
+  "generatedAtUtc": "2026-10-13T14:02:33.592171+00:00",
+  "tool": "builtin image_gen originals; tools/delivery-menu-style-v2/pack.py",
+  "processingOnly": "uniform NEAREST resize and crop; RGB; no padding, drawing or stretching",
+  "pillowVersion": "11.0.0",
+  "partial": false,
+  "complete": true,
+  "expectedSourceCount": 16,
+  "expectedRuntimeCount": 20,
+  "sourceCount": 16,
+  "runtimeCount": 20,
+  "missingSources": [],
+  "uninspectedSources": [],
+  "config": {
+    "path": "assets/delivery-menu-style-v2/processing-config.json",
+    "sha256": "9f58259a29f2f8efbc5ad5810a24e78c6c9aaf12a17f8da469d00ac7372ea493"
+  },
+  "baselineBefore": {
+    "path": "docs/delivery-menu-style-v2/baseline.json",
+    "sha256": "05478211218b3c889bbf3318ba382ea42c090c65b1f74078a981dd162493df17",
+    "oldAssetFiles": 114,
+    "protectedCodeFiles": 9,
+    "allMatched": true
+  },
+  "baselineAfter": {
+    "path": "docs/delivery-menu-style-v2/baseline.json",
+    "sha256": "05478211218b3c889bbf3318ba382ea42c090c65b1f74078a981dd162493df17",
+    "oldAssetFiles": 114,
+    "protectedCodeFiles": 9,
+    "allMatched": true
+  },
+  "records": [
+    {
+      "name": "windmill-pasture",
+      "key": "delivery-expansion-windmill-pasture",
+      "kind": "landscape",
+      "source": "assets/delivery-menu-style-v2/sources/windmill-pasture.png",
+      "sourceSha256": "215477ab52028a47119d4784c4ffb3b4f55e0a455ca214f3f2b139e94c1de002",
+      "sourceByteCount": 1964515,
+      "runtime": "assets/delivery-menu-style-v2/runtime/windmill-pasture.png",
+      "runtimeSha256": "9530b57093eacebf9b5e6502ab52b676efe6ffc08179ea9ec766f5b85d4267cd",
+      "runtimeByteCount": 712486,
+      "width": 960,
+      "height": 540,
+      "inspection": {
+        "sourceFinalFilename": "windmill-pasture.png",
+        "visualReview": true,
+        "roadMethod": "first >=99 percent sampled full-width tan road row confirmed against source view",
+        "reviewedAtUtc": "2026-10-13T14:01:51.424791+00:00"
+      },
+      "originalSize": [
+        1672,
+        941
+      ],
+      "uniformScale": 0.578544061302682,
+      "uniformScaleApplied": true,
+      "resizedSize": [
+        968,
+        545
+      ],
+      "crop": [
+        4,
+        4,
+        964,
+        544
+      ],
+      "sourceRoadRow": 680,
+      "runtimeRoadRow": 389,
+      "size": [
+        960,
+        540
+      ],
+      "mode": "RGB",
+      "sampler": "NEAREST",
+      "padding": false,
+      "authoredArt": false,
+      "generation": {
+        "metadata": [
+          {
+            "path": "assets/delivery-menu-style-v2/metadata/windmill-pasture-generation.json",
+            "sha256": "ce9b180e8c12d3f200a3edd5dea308f8c799236fa7805992ca86b354f22e024c",
+            "details": {
+              "tool": "builtin image_gen",
+              "key": "windmill-pasture",
+              "requested_mode": "reference-guided generation",
+              "timing": {
+                "started": "2026-10-13T13:03:15.193Z",
+                "completed": "2026-10-13T13:05:04.954Z"
+              },
+              "references": [
+                "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+                "D:/DSH workspace/sheep-run/assets/delivery-expansion-v1/chapters/runtime/windmill-pasture.png"
+              ],
+              "prompt_file": "D:/DSH workspace/sheep-run/assets/delivery-menu-style-v2/prompts/windmill-pasture.txt",
+              "transparent_background": false,
+              "generated_original_path": "C:/Users/mechrevo/.codex/generated_images/01a13556-b4fb-7223-98be-cfd2258cde94/exec-074cfcb4-858f-4de3-96e7-776f6f58cea9.png",
+              "workspace_source_path": "D:/DSH workspace/sheep-run/assets/delivery-menu-style-v2/sources/windmill-pasture.png",
+              "output_hint": "Generated images are saved to C:\\Users\\mechrevo\\.codex\\generated_images\\01a13556-b4fb-7223-98be-cfd2258cde94 as C:\\Users\\mechrevo\\.codex\\generated_images\\01a13556-b4fb-7223-98be-cfd2258cde94\\exec-074cfcb4-858f-4de3-96e7-776f6f58cea9.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+              "exact_original_bytes": true,
+              "width": 1672,
+              "height": 941,
+              "pixel_format": "Format24bppRgb",
+              "sha256": "215477AB52028A47119D4784C4FFB3B4F55E0A455CA214F3F2B139E94C1DE002",
+              "byte_count": 1964515,
+              "prompt_sha256": "00017DBF34922C404F1D0CF9F98145467E91586022D59F5FCAF513368C52090C",
+              "reference_files": [
+                {
+                  "path": "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+                  "sha256": "DE36B068C971BBD24D870B5075A1380E852A4000D71C7807BB0600CE1FBF3749",
+                  "byte_count": 2102654
+                },
+                {
+                  "path": "D:/DSH workspace/sheep-run/assets/delivery-expansion-v1/chapters/runtime/windmill-pasture.png",
+                  "sha256": "7841A5F9A442E9569F06B95247BD6E7D440394D8C9A860F359723F4F711A3A18",
+                  "byte_count": 990913
+                }
+              ]
+            }
+          },
+          {
+            "path": "assets/delivery-menu-style-v2/metadata/windmill-pasture-request.json",
+            "sha256": "6c9b041c3ac002463a0258a7ebf479b1652269bbe89e601f86ff7718b4a14bd8",
+            "details": {
+              "tool": "builtin image_gen",
+              "requested_asset": "windmill-pasture",
+              "transparent_background": false,
+              "referenced_image_paths": [
+                "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+                "D:/DSH workspace/sheep-run/assets/delivery-expansion-v1/chapters/runtime/windmill-pasture.png"
+              ],
+              "prompt_file": "D:/DSH workspace/sheep-run/assets/delivery-menu-style-v2/prompts/windmill-pasture.txt"
+            }
+          }
+        ],
+        "promptFiles": [
+          {
+            "path": "assets/delivery-menu-style-v2/prompts/windmill-pasture.txt",
+            "sha256": "00017dbf34922c404f1d0cf9f98145467e91586022d59f5fcaf513368c52090c"
+          }
+        ],
+        "rawGeneratedPaths": [
+          "C:/Users/mechrevo/.codex/generated_images/01a13556-b4fb-7223-98be-cfd2258cde94/exec-074cfcb4-858f-4de3-96e7-776f6f58cea9.png"
+        ],
+        "referenceFiles": [
+          {
+            "path": "D:\\DSH workspace\\sheep-run\\assets\\backgrounds\\menu-pasture-v1.png",
+            "sha256": "de36b068c971bbd24d870b5075a1380e852a4000d71c7807bb0600ce1fbf3749"
+          },
+          {
+            "path": "D:\\DSH workspace\\sheep-run\\assets\\delivery-expansion-v1\\chapters\\runtime\\windmill-pasture.png",
+            "sha256": "7841a5f9a442e9569f06b95247bd6e7d440394d8c9a860f359723f4f711a3a18"
+          }
+        ]
+      }
+    },
+    {
+      "name": "windmill-middle",
+      "key": "delivery-expansion-windmill-middle",
+      "kind": "landscape",
+      "source": "assets/delivery-menu-style-v2/sources/windmill-middle.png",
+      "sourceSha256": "ee4a523ac126cbfa3dca73d10357911a241dd403b2955b8f5e86c08da95237ef",
+      "sourceByteCount": 1933955,
+      "runtime": "assets/delivery-menu-style-v2/runtime/windmill-middle.png",
+      "runtimeSha256": "2d98d6816eac7ca35194264f63f57f2bd94ef094099821fb69406c04866ec781",
+      "runtimeByteCount": 714117,
+      "width": 960,
+      "height": 540,
+      "inspection": {
+        "sourceFinalFilename": "windmill-middle.png",
+        "visualReview": true,
+        "roadMethod": "first >=99 percent sampled full-width tan road row confirmed against source view",
+        "reviewedAtUtc": "2026-10-13T14:01:51.427627+00:00"
+      },
+      "originalSize": [
+        1672,
+        941
+      ],
+      "uniformScale": 0.6088709677419355,
+      "uniformScaleApplied": true,
+      "resizedSize": [
+        1019,
+        573
+      ],
+      "crop": [
+        29,
+        33,
+        989,
+        573
+      ],
+      "sourceRoadRow": 693,
+      "runtimeRoadRow": 389,
+      "size": [
+        960,
+        540
+      ],
+      "mode": "RGB",
+      "sampler": "NEAREST",
+      "padding": false,
+      "authoredArt": false,
+      "generation": {
+        "metadata": [
+          {
+            "path": "assets/delivery-menu-style-v2/metadata/windmill-middle-generation.json",
+            "sha256": "6146114e3fdb5fd7633447f7aadfe013671eccc21dccf00dbd00628601cd4332",
+            "details": {
+              "tool": "builtin image_gen",
+              "key": "windmill-middle",
+              "requested_mode": "reference-guided generation",
+              "timing": {
+                "started": "2026-10-13T13:03:15.193Z",
+                "completed": "2026-10-13T13:05:45.312Z"
+              },
+              "references": [
+                "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+                "D:/DSH workspace/sheep-run/assets/delivery-expansion-v1/chapters/runtime/windmill-middle.png"
+              ],
+              "prompt_file": "D:/DSH workspace/sheep-run/assets/delivery-menu-style-v2/prompts/windmill-middle.txt",
+              "transparent_background": false,
+              "generated_original_path": "C:/Users/mechrevo/.codex/generated_images/01a13556-b4fb-7223-98be-cfd2258cde94/exec-f8c99e09-2582-457b-ab4e-fefee4c40e3e.png",
+              "workspace_source_path": "D:/DSH workspace/sheep-run/assets/delivery-menu-style-v2/sources/windmill-middle.png",
+              "output_hint": "Generated images are saved to C:\\Users\\mechrevo\\.codex\\generated_images\\01a13556-b4fb-7223-98be-cfd2258cde94 as C:\\Users\\mechrevo\\.codex\\generated_images\\01a13556-b4fb-7223-98be-cfd2258cde94\\exec-f8c99e09-2582-457b-ab4e-fefee4c40e3e.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+              "exact_original_bytes": true,
+              "width": 1672,
+              "height": 941,
+              "pixel_format": "Format24bppRgb",
+              "sha256": "EE4A523AC126CBFA3DCA73D10357911A241DD403B2955B8F5E86C08DA95237EF",
+              "byte_count": 1933955,
+              "prompt_sha256": "A08C3E2FB45F1989A5887E31876346CC2C121935C65E6017EC2674A2F713034F",
+              "reference_files": [
+                {
+                  "path": "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+                  "sha256": "DE36B068C971BBD24D870B5075A1380E852A4000D71C7807BB0600CE1FBF3749",
+                  "byte_count": 2102654
+                },
+                {
+                  "path": "D:/DSH workspace/sheep-run/assets/delivery-expansion-v1/chapters/runtime/windmill-middle.png",
+                  "sha256": "6CF2EA900BAF0334DD468268B794D9C7F2AE2BAB853DE17CD62655F74D09D06B",
+                  "byte_count": 993978
+                }
+              ]
+            }
+          },
+          {
+            "path": "assets/delivery-menu-style-v2/metadata/windmill-middle-request.json",
+            "sha256": "2d9dc24f8efa962226f0a92bdf9127920fc4e3c5d9ad96f7bf142aef4acef585",
+            "details": {
+              "tool": "builtin image_gen",
+              "requested_asset": "windmill-middle",
+              "transparent_background": false,
+              "referenced_image_paths": [
+                "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+                "D:/DSH workspace/sheep-run/assets/delivery-expansion-v1/chapters/runtime/windmill-middle.png"
+              ],
+              "prompt_file": "D:/DSH workspace/sheep-run/assets/delivery-menu-style-v2/prompts/windmill-middle.txt"
+            }
+          }
+        ],
+        "promptFiles": [
+          {
+            "path": "assets/delivery-menu-style-v2/prompts/windmill-middle.txt",
+            "sha256": "a08c3e2fb45f1989a5887e31876346cc2c121935c65e6017ec2674a2f713034f"
+          }
+        ],
+        "rawGeneratedPaths": [
+          "C:/Users/mechrevo/.codex/generated_images/01a13556-b4fb-7223-98be-cfd2258cde94/exec-f8c99e09-2582-457b-ab4e-fefee4c40e3e.png"
+        ],
+        "referenceFiles": [
+          {
+            "path": "D:\\DSH workspace\\sheep-run\\assets\\backgrounds\\menu-pasture-v1.png",
+            "sha256": "de36b068c971bbd24d870b5075a1380e852a4000d71c7807bb0600ce1fbf3749"
+          },
+          {
+            "path": "D:\\DSH workspace\\sheep-run\\assets\\delivery-expansion-v1\\chapters\\runtime\\windmill-middle.png",
+            "sha256": "6cf2ea900baf0334dd468268b794d9c7f2ae2bab853de17cd62655f74d09d06b"
+          }
+        ]
+      }
+    },
+    {
+      "name": "windmill-destination",
+      "key": "delivery-expansion-windmill-destination",
+      "kind": "landscape",
+      "source": "assets/delivery-menu-style-v2/sources/windmill-destination.png",
+      "sourceSha256": "1d61e1d13e9a32e453b099e581842eb9eb2d85e56fad2853c485b1d49a21f1d2",
+      "sourceByteCount": 2072066,
+      "runtime": "assets/delivery-menu-style-v2/runtime/windmill-destination.png",
+      "runtimeSha256": "a95ce7534920385b0ac4b01f3c237c09b44f04ff7f4e5707e2e2f094a3c3dca9",
+      "runtimeByteCount": 749792,
+      "width": 960,
+      "height": 540,
+      "inspection": {
+        "sourceFinalFilename": "windmill-destination.png",
+        "visualReview": true,
+        "roadMethod": "first >=99 percent sampled full-width tan road row confirmed against source view",
+        "reviewedAtUtc": "2026-10-13T14:01:51.431174+00:00"
+      },
+      "originalSize": [
+        1672,
+        941
+      ],
+      "uniformScale": 0.5797317436661699,
+      "uniformScaleApplied": true,
+      "resizedSize": [
+        970,
+        546
+      ],
+      "crop": [
+        5,
+        0,
+        965,
+        540
+      ],
+      "sourceRoadRow": 671,
+      "runtimeRoadRow": 389,
+      "size": [
+        960,
+        540
+      ],
+      "mode": "RGB",
+      "sampler": "NEAREST",
+      "padding": false,
+      "authoredArt": false,
+      "generation": {
+        "metadata": [
+          {
+            "path": "assets/delivery-menu-style-v2/metadata/windmill-destination-generation.json",
+            "sha256": "aa29d4167fbaacf4224602a9588a900bacc618e030032a91eb9780329a68c059",
+            "details": {
+              "tool": "builtin image_gen",
+              "key": "windmill-destination",
+              "requested_mode": "reference-guided generation",
+              "timing": {
+                "started": "2026-10-13T13:03:15.193Z",
+                "completed": "2026-10-13T13:06:32.339Z"
+              },
+              "references": [
+                "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+                "D:/DSH workspace/sheep-run/assets/delivery-expansion-v1/chapters/runtime/windmill-destination.png"
+              ],
+              "prompt_file": "D:/DSH workspace/sheep-run/assets/delivery-menu-style-v2/prompts/windmill-destination.txt",
+              "transparent_background": false,
+              "generated_original_path": "C:/Users/mechrevo/.codex/generated_images/01a13556-b4fb-7223-98be-cfd2258cde94/exec-333d89f7-4419-4c8a-97a7-961c424f70da.png",
+              "workspace_source_path": "D:/DSH workspace/sheep-run/assets/delivery-menu-style-v2/sources/windmill-destination.png",
+              "output_hint": "Generated images are saved to C:\\Users\\mechrevo\\.codex\\generated_images\\01a13556-b4fb-7223-98be-cfd2258cde94 as C:\\Users\\mechrevo\\.codex\\generated_images\\01a13556-b4fb-7223-98be-cfd2258cde94\\exec-333d89f7-4419-4c8a-97a7-961c424f70da.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+              "exact_original_bytes": true,
+              "width": 1672,
+              "height": 941,
+              "pixel_format": "Format24bppRgb",
+              "sha256": "1D61E1D13E9A32E453B099E581842EB9EB2D85E56FAD2853C485B1D49A21F1D2",
+              "byte_count": 2072066,
+              "prompt_sha256": "CBBEE99AC767E95BE32603E072666A1C4E166C9F230F0C483D12DC0BBD066E4F",
+              "reference_files": [
+                {
+                  "path": "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+                  "sha256": "DE36B068C971BBD24D870B5075A1380E852A4000D71C7807BB0600CE1FBF3749",
+                  "byte_count": 2102654
+                },
+                {
+                  "path": "D:/DSH workspace/sheep-run/assets/delivery-expansion-v1/chapters/runtime/windmill-destination.png",
+                  "sha256": "1CA1E18423854B32E055431CFD101138ED7B80CC6A50554AEDD620382D1E94A1",
+                  "byte_count": 947115
+                }
+              ]
+            }
+          },
+          {
+            "path": "assets/delivery-menu-style-v2/metadata/windmill-destination-request.json",
+            "sha256": "3192f987b6e602167579d9fdd70e33e9193be77377f3cc28476496ea1bfe50bc",
+            "details": {
+              "tool": "builtin image_gen",
+              "requested_asset": "windmill-destination",
+              "transparent_background": false,
+              "referenced_image_paths": [
+                "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+                "D:/DSH workspace/sheep-run/assets/delivery-expansion-v1/chapters/runtime/windmill-destination.png"
+              ],
+              "prompt_file": "D:/DSH workspace/sheep-run/assets/delivery-menu-style-v2/prompts/windmill-destination.txt"
+            }
+          }
+        ],
+        "promptFiles": [
+          {
+            "path": "assets/delivery-menu-style-v2/prompts/windmill-destination.txt",
+            "sha256": "cbbee99ac767e95be32603e072666a1c4e166c9f230f0c483d12dc0bbd066e4f"
+          }
+        ],
+        "rawGeneratedPaths": [
+          "C:/Users/mechrevo/.codex/generated_images/01a13556-b4fb-7223-98be-cfd2258cde94/exec-333d89f7-4419-4c8a-97a7-961c424f70da.png"
+        ],
+        "referenceFiles": [
+          {
+            "path": "D:\\DSH workspace\\sheep-run\\assets\\backgrounds\\menu-pasture-v1.png",
+            "sha256": "de36b068c971bbd24d870b5075a1380e852a4000d71c7807bb0600ce1fbf3749"
+          },
+          {
+            "path": "D:\\DSH workspace\\sheep-run\\assets\\delivery-expansion-v1\\chapters\\runtime\\windmill-destination.png",
+            "sha256": "1ca1e18423854b32e055431cfd101138ed7b80cc6a50554aedd620382d1e94a1"
+          }
+        ]
+      }
+    },
+    {
+      "name": "windmill-ending",
+      "key": "delivery-expansion-windmill-ending",
+      "kind": "ending",
+      "source": "assets/delivery-menu-style-v2/sources/windmill-ending.png",
+      "sourceSha256": "6e9e846178e57a06f43e081ee030748f551d51396914ee6e72d9d4e79dc189eb",
+      "sourceByteCount": 2188357,
+      "runtime": "assets/delivery-menu-style-v2/runtime/windmill-ending.png",
+      "runtimeSha256": "c44e208ebd2dd9f47090b2627ecf565315217b1ea321eeb35d6ef260d0c501c8",
+      "runtimeByteCount": 823165,
+      "width": 960,
+      "height": 540,
+      "inspection": {
+        "sourceFinalFilename": "windmill-ending.png",
+        "visualReview": true,
+        "roadMethod": "full scene uniform cover crop; no road alignment",
+        "reviewedAtUtc": "2026-10-13T14:01:51.433205+00:00"
+      },
+      "originalSize": [
+        1672,
+        941
+      ],
+      "uniformScale": 0.5741626794258373,
+      "uniformScaleApplied": true,
+      "resizedSize": [
+        960,
+        541
+      ],
+      "crop": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "sourceRoadRow": null,
+      "runtimeRoadRow": null,
+      "size": [
+        960,
+        540
+      ],
+      "mode": "RGB",
+      "sampler": "NEAREST",
+      "padding": false,
+      "authoredArt": false,
+      "generation": {
+        "metadata": [
+          {
+            "path": "assets/delivery-menu-style-v2/metadata/windmill-ending-generation.json",
+            "sha256": "eee39c914196a4273be1e97fc7e484c505ad1e110dae7c9de3387bfb1628f43a",
+            "details": {
+              "tool": "builtin image_gen",
+              "key": "windmill-ending",
+              "requested_mode": "reference-guided generation",
+              "timing": {
+                "started": "2026-10-13T13:03:15.193Z",
+                "completed": "2026-10-13T13:07:15.263Z"
+              },
+              "references": [
+                "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+                "D:/DSH workspace/sheep-run/assets/delivery-expansion-v1/chapters/runtime/windmill-ending.png",
+                "D:/DSH workspace/sheep-run/assets/skins/runtime-v1/white-sheet.png"
+              ],
+              "prompt_file": "D:/DSH workspace/sheep-run/assets/delivery-menu-style-v2/prompts/windmill-ending.txt",
+              "transparent_background": false,
+              "generated_original_path": "C:/Users/mechrevo/.codex/generated_images/01a13556-b4fb-7223-98be-cfd2258cde94/exec-8b477ed4-7cce-431f-b774-d0a2a15170ee.png",
+              "workspace_source_path": "D:/DSH workspace/sheep-run/assets/delivery-menu-style-v2/sources/windmill-ending.png",
+              "output_hint": "Generated images are saved to C:\\Users\\mechrevo\\.codex\\generated_images\\01a13556-b4fb-7223-98be-cfd2258cde94 as C:\\Users\\mechrevo\\.codex\\generated_images\\01a13556-b4fb-7223-98be-cfd2258cde94\\exec-8b477ed4-7cce-431f-b774-d0a2a15170ee.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+              "exact_original_bytes": true,
+              "width": 1672,
+              "height": 941,
+              "pixel_format": "Format24bppRgb",
+              "sha256": "6E9E846178E57A06F43E081EE030748F551D51396914EE6E72D9D4E79DC189EB",
+              "byte_count": 2188357,
+              "prompt_sha256": "19C714FFAF9734F9B3586EA188ECBF521A34BF4340DDD4E76F28A69D06ADDE02",
+              "reference_files": [
+                {
+                  "path": "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+                  "sha256": "DE36B068C971BBD24D870B5075A1380E852A4000D71C7807BB0600CE1FBF3749",
+                  "byte_count": 2102654
+                },
+                {
+                  "path": "D:/DSH workspace/sheep-run/assets/delivery-expansion-v1/chapters/runtime/windmill-ending.png",
+                  "sha256": "FABFCF8B5F87FF6D79ECA65C9A755E2F878861D05F408D9ECEAFDCAFE9ED6518",
+                  "byte_count": 1071947
+                },
+                {
+                  "path": "D:/DSH workspace/sheep-run/assets/skins/runtime-v1/white-sheet.png",
+                  "sha256": "B1ACEAC87739A99C77CF97F4083A7E613720C24C817485575DDE2EF51B896856",
+                  "byte_count": 211156
+                }
+              ]
+            }
+          },
+          {
+            "path": "assets/delivery-menu-style-v2/metadata/windmill-ending-request.json",
+            "sha256": "43bd25a55983b02376e393d07a8387074d967e8094dfd8e8ecb7be62c7e2794b",
+            "details": {
+              "tool": "builtin image_gen",
+              "requested_asset": "windmill-ending",
+              "transparent_background": false,
+              "referenced_image_paths": [
+                "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+                "D:/DSH workspace/sheep-run/assets/delivery-expansion-v1/chapters/runtime/windmill-ending.png",
+                "D:/DSH workspace/sheep-run/assets/skins/runtime-v1/white-sheet.png"
+              ],
+              "prompt_file": "D:/DSH workspace/sheep-run/assets/delivery-menu-style-v2/prompts/windmill-ending.txt"
+            }
+          }
+        ],
+        "promptFiles": [
+          {
+            "path": "assets/delivery-menu-style-v2/prompts/windmill-ending.txt",
+            "sha256": "19c714ffaf9734f9b3586ea188ecbf521a34bf4340ddd4e76f28a69d06adde02"
+          }
+        ],
+        "rawGeneratedPaths": [
+          "C:/Users/mechrevo/.codex/generated_images/01a13556-b4fb-7223-98be-cfd2258cde94/exec-8b477ed4-7cce-431f-b774-d0a2a15170ee.png"
+        ],
+        "referenceFiles": [
+          {
+            "path": "D:\\DSH workspace\\sheep-run\\assets\\backgrounds\\menu-pasture-v1.png",
+            "sha256": "de36b068c971bbd24d870b5075a1380e852a4000d71c7807bb0600ce1fbf3749"
+          },
+          {
+            "path": "D:\\DSH workspace\\sheep-run\\assets\\delivery-expansion-v1\\chapters\\runtime\\windmill-ending.png",
+            "sha256": "fabfcf8b5f87ff6d79eca65c9a755e2f878861d05f408d9eceafdcafe9ed6518"
+          },
+          {
+            "path": "D:\\DSH workspace\\sheep-run\\assets\\skins\\runtime-v1\\white-sheet.png",
+            "sha256": "b1aceac87739a99c77cf97f4083a7e613720c24c817485575dde2ef51b896856"
+          }
+        ]
+      }
+    },
+    {
+      "name": "windmill-postcard",
+      "key": "delivery-expansion-windmill-postcard",
+      "kind": "postcard",
+      "source": "assets/delivery-menu-style-v2/sources/windmill-ending.png",
+      "sourceSha256": "6e9e846178e57a06f43e081ee030748f551d51396914ee6e72d9d4e79dc189eb",
+      "sourceByteCount": 2188357,
+      "runtime": "assets/delivery-menu-style-v2/runtime/windmill-postcard.png",
+      "runtimeSha256": "f22b91302325afaebf4c8b72bfc31edae125c875776138140b80d85602438477",
+      "runtimeByteCount": 412513,
+      "width": 640,
+      "height": 360,
+      "inspection": {
+        "sourceFinalFilename": "windmill-ending.png",
+        "visualReview": true,
+        "roadMethod": "full scene uniform cover crop; no road alignment",
+        "reviewedAtUtc": "2026-10-13T14:01:51.433205+00:00"
+      },
+      "originalSize": [
+        1672,
+        941
+      ],
+      "uniformScale": 0.3827751196172249,
+      "uniformScaleApplied": true,
+      "resizedSize": [
+        640,
+        361
+      ],
+      "crop": [
+        0,
+        0,
+        640,
+        360
+      ],
+      "sourceRoadRow": null,
+      "runtimeRoadRow": null,
+      "size": [
+        640,
+        360
+      ],
+      "mode": "RGB",
+      "sampler": "NEAREST",
+      "padding": false,
+      "authoredArt": false,
+      "generation": {
+        "metadata": [
+          {
+            "path": "assets/delivery-menu-style-v2/metadata/windmill-ending-generation.json",
+            "sha256": "eee39c914196a4273be1e97fc7e484c505ad1e110dae7c9de3387bfb1628f43a",
+            "details": {
+              "tool": "builtin image_gen",
+              "key": "windmill-ending",
+              "requested_mode": "reference-guided generation",
+              "timing": {
+                "started": "2026-10-13T13:03:15.193Z",
+                "completed": "2026-10-13T13:07:15.263Z"
+              },
+              "references": [
+                "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+                "D:/DSH workspace/sheep-run/assets/delivery-expansion-v1/chapters/runtime/windmill-ending.png",
+                "D:/DSH workspace/sheep-run/assets/skins/runtime-v1/white-sheet.png"
+              ],
+              "prompt_file": "D:/DSH workspace/sheep-run/assets/delivery-menu-style-v2/prompts/windmill-ending.txt",
+              "transparent_background": false,
+              "generated_original_path": "C:/Users/mechrevo/.codex/generated_images/01a13556-b4fb-7223-98be-cfd2258cde94/exec-8b477ed4-7cce-431f-b774-d0a2a15170ee.png",
+              "workspace_source_path": "D:/DSH workspace/sheep-run/assets/delivery-menu-style-v2/sources/windmill-ending.png",
+              "output_hint": "Generated images are saved to C:\\Users\\mechrevo\\.codex\\generated_images\\01a13556-b4fb-7223-98be-cfd2258cde94 as C:\\Users\\mechrevo\\.codex\\generated_images\\01a13556-b4fb-7223-98be-cfd2258cde94\\exec-8b477ed4-7cce-431f-b774-d0a2a15170ee.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+              "exact_original_bytes": true,
+              "width": 1672,
+              "height": 941,
+              "pixel_format": "Format24bppRgb",
+              "sha256": "6E9E846178E57A06F43E081EE030748F551D51396914EE6E72D9D4E79DC189EB",
+              "byte_count": 2188357,
+              "prompt_sha256": "19C714FFAF9734F9B3586EA188ECBF521A34BF4340DDD4E76F28A69D06ADDE02",
+              "reference_files": [
+                {
+                  "path": "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+                  "sha256": "DE36B068C971BBD24D870B5075A1380E852A4000D71C7807BB0600CE1FBF3749",
+                  "byte_count": 2102654
+                },
+                {
+                  "path": "D:/DSH workspace/sheep-run/assets/delivery-expansion-v1/chapters/runtime/windmill-ending.png",
+                  "sha256": "FABFCF8B5F87FF6D79ECA65C9A755E2F878861D05F408D9ECEAFDCAFE9ED6518",
+                  "byte_count": 1071947
+                },
+                {
+                  "path": "D:/DSH workspace/sheep-run/assets/skins/runtime-v1/white-sheet.png",
+                  "sha256": "B1ACEAC87739A99C77CF97F4083A7E613720C24C817485575DDE2EF51B896856",
+                  "byte_count": 211156
+                }
+              ]
+            }
+          },
+          {
+            "path": "assets/delivery-menu-style-v2/metadata/windmill-ending-request.json",
+            "sha256": "43bd25a55983b02376e393d07a8387074d967e8094dfd8e8ecb7be62c7e2794b",
+            "details": {
+              "tool": "builtin image_gen",
+              "requested_asset": "windmill-ending",
+              "transparent_background": false,
+              "referenced_image_paths": [
+                "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+                "D:/DSH workspace/sheep-run/assets/delivery-expansion-v1/chapters/runtime/windmill-ending.png",
+                "D:/DSH workspace/sheep-run/assets/skins/runtime-v1/white-sheet.png"
+              ],
+              "prompt_file": "D:/DSH workspace/sheep-run/assets/delivery-menu-style-v2/prompts/windmill-ending.txt"
+            }
+          }
+        ],
+        "promptFiles": [
+          {
+            "path": "assets/delivery-menu-style-v2/prompts/windmill-ending.txt",
+            "sha256": "19c714ffaf9734f9b3586ea188ecbf521a34bf4340ddd4e76f28a69d06adde02"
+          }
+        ],
+        "rawGeneratedPaths": [
+          "C:/Users/mechrevo/.codex/generated_images/01a13556-b4fb-7223-98be-cfd2258cde94/exec-8b477ed4-7cce-431f-b774-d0a2a15170ee.png"
+        ],
+        "referenceFiles": [
+          {
+            "path": "D:\\DSH workspace\\sheep-run\\assets\\backgrounds\\menu-pasture-v1.png",
+            "sha256": "de36b068c971bbd24d870b5075a1380e852a4000d71c7807bb0600ce1fbf3749"
+          },
+          {
+            "path": "D:\\DSH workspace\\sheep-run\\assets\\delivery-expansion-v1\\chapters\\runtime\\windmill-ending.png",
+            "sha256": "fabfcf8b5f87ff6d79eca65c9a755e2f878861d05f408d9eceafdcafe9ed6518"
+          },
+          {
+            "path": "D:\\DSH workspace\\sheep-run\\assets\\skins\\runtime-v1\\white-sheet.png",
+            "sha256": "b1aceac87739a99c77cf97f4083a7e613720c24c817485575dde2ef51b896856"
+          }
+        ]
+      }
+    },
+    {
+      "name": "rain-pasture",
+      "key": "delivery-expansion-rain-pasture",
+      "kind": "landscape",
+      "source": "assets/delivery-menu-style-v2/sources/rain-pasture.png",
+      "sourceSha256": "d13b83a31b2af7032952323bdadec96350179d09c32d7d5ecc5906a410bb985e",
+      "sourceByteCount": 1712326,
+      "runtime": "assets/delivery-menu-style-v2/runtime/rain-pasture.png",
+      "runtimeSha256": "4c332eec94bba5967b1a9a748ed6e0a08ffab48f9fbb318df7eed2339b7e16db",
+      "runtimeByteCount": 584125,
+      "width": 960,
+      "height": 540,
+      "inspection": {
+        "sourceFinalFilename": "rain-pasture.png",
+        "visualReview": true,
+        "roadMethod": "first >=99 percent sampled full-width tan road row confirmed against source view",
+        "reviewedAtUtc": "2026-10-13T14:01:51.435250+00:00"
+      },
+      "originalSize": [
+        1672,
+        941
+      ],
+      "uniformScale": 0.5920852359208524,
+      "uniformScaleApplied": true,
+      "resizedSize": [
+        990,
+        558
+      ],
+      "crop": [
+        15,
+        0,
+        975,
+        540
+      ],
+      "sourceRoadRow": 657,
+      "runtimeRoadRow": 389,
+      "size": [
+        960,
+        540
+      ],
+      "mode": "RGB",
+      "sampler": "NEAREST",
+      "padding": false,
+      "authoredArt": false,
+      "generation": {
+        "metadata": [
+          {
+            "path": "assets/delivery-menu-style-v2/metadata/rain-pasture.json",
+            "sha256": "bc8fc4a0721b1e51f0ad87b511e10935c8cd1f1c49c623a6cec56aff17b5d787",
+            "details": {
+              "key": "rain-pasture",
+              "attempt": 2,
+              "tool": "builtin image_gen.imagegen",
+              "transparent_background": false,
+              "prompt_path": "assets/delivery-menu-style-v2/prompts/rain-pasture.txt",
+              "initial_generation_metadata": "assets/delivery-menu-style-v2/metadata/rain-pasture-attempt1.json",
+              "references": [
+                {
+                  "index": 1,
+                  "path": "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+                  "role": "sole style reference, without copying sunny weather",
+                  "sha256": "de36b068c971bbd24d870b5075a1380e852a4000d71c7807bb0600ce1fbf3749"
+                },
+                {
+                  "index": 2,
+                  "path": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a13558-e12e-7d52-b01c-2f169260b99c\\exec-bb545bfa-9ab2-4a61-9989-a4e1ad837907.png",
+                  "role": "edit target from original generated attempt 1; exact bytes preserved in sources/rain-pasture-attempt1.png",
+                  "sha256": "f6f2ddc3d04bf194d0ec27d24cd8b49a1276eb7a5087105a7eda67683662a611"
+                }
+              ],
+              "generation_started_at_utc": "2026-10-13T13:08:27.992Z",
+              "generation_completed_at_utc": "2026-10-13T13:10:16.503Z",
+              "generated_original_path": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a13558-e12e-7d52-b01c-2f169260b99c\\exec-db17951d-82a6-45b9-9e03-2cd8c94b27f5.png",
+              "source_path": "assets/delivery-menu-style-v2/sources/rain-pasture.png",
+              "selection": "selected; visually checked for menu pixel style, light blue-gray overcast sky and absence of baked rain streaks",
+              "bytes_preserved": true,
+              "inspection": {
+                "single_frame": true,
+                "opaque": true,
+                "no_text": true,
+                "no_baked_rain": true,
+                "road_requires_root_packing_alignment": true,
+                "sheep_quadruped": null
+              },
+              "notes": "Original generated source copied without image transformation. Root owns uniform nearest-neighbor runtime packing and road alignment; source road height varies.",
+              "source_sha256": "d13b83a31b2af7032952323bdadec96350179d09c32d7d5ecc5906a410bb985e",
+              "source_bytes": 1712326,
+              "dimensions": {
+                "height": 941,
+                "width": 1672
+              }
+            }
+          }
+        ],
+        "promptFiles": [
+          {
+            "path": "assets/delivery-menu-style-v2/prompts/rain-pasture.txt",
+            "sha256": "8fa31829290c7144b8af644aa33c2e0329d7a2f5d05b3a7c091a0bce35d5c262"
+          }
+        ],
+        "rawGeneratedPaths": [
+          "C:\\Users\\mechrevo\\.codex\\generated_images\\01a13558-e12e-7d52-b01c-2f169260b99c\\exec-db17951d-82a6-45b9-9e03-2cd8c94b27f5.png"
+        ],
+        "referenceFiles": [
+          {
+            "path": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a13558-e12e-7d52-b01c-2f169260b99c\\exec-bb545bfa-9ab2-4a61-9989-a4e1ad837907.png",
+            "sha256": "f6f2ddc3d04bf194d0ec27d24cd8b49a1276eb7a5087105a7eda67683662a611"
+          },
+          {
+            "path": "D:\\DSH workspace\\sheep-run\\assets\\backgrounds\\menu-pasture-v1.png",
+            "sha256": "de36b068c971bbd24d870b5075a1380e852a4000d71c7807bb0600ce1fbf3749"
+          }
+        ]
+      }
+    },
+    {
+      "name": "rain-middle",
+      "key": "delivery-expansion-rain-middle",
+      "kind": "landscape",
+      "source": "assets/delivery-menu-style-v2/sources/rain-middle.png",
+      "sourceSha256": "16928d1715090e5f1ff48c25341ea5849694ae1308302fd660983bd490b33cd7",
+      "sourceByteCount": 1972629,
+      "runtime": "assets/delivery-menu-style-v2/runtime/rain-middle.png",
+      "runtimeSha256": "5efe01fe737e1bcade683777425b0ec9b03c1842f2f5e1088acdcbbffc40b655",
+      "runtimeByteCount": 706022,
+      "width": 960,
+      "height": 540,
+      "inspection": {
+        "sourceFinalFilename": "rain-middle.png",
+        "visualReview": true,
+        "roadMethod": "first >=99 percent sampled full-width tan road row confirmed against source view",
+        "reviewedAtUtc": "2026-10-13T14:01:51.438254+00:00"
+      },
+      "originalSize": [
+        1672,
+        941
+      ],
+      "uniformScale": 0.609717868338558,
+      "uniformScaleApplied": true,
+      "resizedSize": [
+        1020,
+        574
+      ],
+      "crop": [
+        30,
+        0,
+        990,
+        540
+      ],
+      "sourceRoadRow": 638,
+      "runtimeRoadRow": 389,
+      "size": [
+        960,
+        540
+      ],
+      "mode": "RGB",
+      "sampler": "NEAREST",
+      "padding": false,
+      "authoredArt": false,
+      "generation": {
+        "metadata": [
+          {
+            "path": "assets/delivery-menu-style-v2/metadata/rain-middle.json",
+            "sha256": "4b9509f5d021eeb148c5ce07bf621a32703f5214ee7303392fc0d51146f90521",
+            "details": {
+              "key": "rain-middle",
+              "attempt": 2,
+              "tool": "builtin image_gen.imagegen",
+              "transparent_background": false,
+              "prompt_path": "assets/delivery-menu-style-v2/prompts/rain-middle.txt",
+              "initial_generation_metadata": "assets/delivery-menu-style-v2/metadata/rain-middle-attempt1.json",
+              "references": [
+                {
+                  "index": 1,
+                  "path": "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+                  "role": "sole style reference, without copying sunny weather",
+                  "sha256": "de36b068c971bbd24d870b5075a1380e852a4000d71c7807bb0600ce1fbf3749"
+                },
+                {
+                  "index": 2,
+                  "path": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a13558-e12e-7d52-b01c-2f169260b99c\\exec-f6e7d012-082c-472d-b33f-82cf22c0b451.png",
+                  "role": "edit target from original generated attempt 1; exact bytes preserved in sources/rain-middle-attempt1.png",
+                  "sha256": "e328564306abf11aa9836579629219bb1fd8f9d1e1a606dc4a000b73f2d98702"
+                }
+              ],
+              "generation_started_at_utc": "2026-10-13T13:08:27.992Z",
+              "generation_completed_at_utc": "2026-10-13T13:12:20.558Z",
+              "generated_original_path": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a13558-e12e-7d52-b01c-2f169260b99c\\exec-8087b429-b9ad-43fa-8c2c-b776a88bdfad.png",
+              "source_path": "assets/delivery-menu-style-v2/sources/rain-middle.png",
+              "selection": "selected; visually checked for menu pixel style, light blue-gray overcast sky and absence of baked rain streaks",
+              "bytes_preserved": true,
+              "inspection": {
+                "single_frame": true,
+                "opaque": true,
+                "no_text": true,
+                "no_baked_rain": true,
+                "road_requires_root_packing_alignment": true,
+                "sheep_quadruped": null
+              },
+              "notes": "Original generated source copied without image transformation. Root owns uniform nearest-neighbor runtime packing and road alignment; source road height varies.",
+              "source_sha256": "16928d1715090e5f1ff48c25341ea5849694ae1308302fd660983bd490b33cd7",
+              "source_bytes": 1972629,
+              "dimensions": {
+                "height": 941,
+                "width": 1672
+              }
+            }
+          }
+        ],
+        "promptFiles": [
+          {
+            "path": "assets/delivery-menu-style-v2/prompts/rain-middle.txt",
+            "sha256": "dc83bd6352eabfaa04ae7e067758a7a8ebadbe18c6d5209ba17c71f0c68a555e"
+          }
+        ],
+        "rawGeneratedPaths": [
+          "C:\\Users\\mechrevo\\.codex\\generated_images\\01a13558-e12e-7d52-b01c-2f169260b99c\\exec-8087b429-b9ad-43fa-8c2c-b776a88bdfad.png"
+        ],
+        "referenceFiles": [
+          {
+            "path": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a13558-e12e-7d52-b01c-2f169260b99c\\exec-f6e7d012-082c-472d-b33f-82cf22c0b451.png",
+            "sha256": "e328564306abf11aa9836579629219bb1fd8f9d1e1a606dc4a000b73f2d98702"
+          },
+          {
+            "path": "D:\\DSH workspace\\sheep-run\\assets\\backgrounds\\menu-pasture-v1.png",
+            "sha256": "de36b068c971bbd24d870b5075a1380e852a4000d71c7807bb0600ce1fbf3749"
+          }
+        ]
+      }
+    },
+    {
+      "name": "rain-destination",
+      "key": "delivery-expansion-rain-destination",
+      "kind": "landscape",
+      "source": "assets/delivery-menu-style-v2/sources/rain-destination.png",
+      "sourceSha256": "5a3845502437533410d6cd657b57111260d047a8af807ae44361162f596a7d1b",
+      "sourceByteCount": 2027606,
+      "runtime": "assets/delivery-menu-style-v2/runtime/rain-destination.png",
+      "runtimeSha256": "41ac2435c62d391db03113ac66afb1317165c1a0c89bd66bce42495e8b3ceab3",
+      "runtimeByteCount": 743024,
+      "width": 960,
+      "height": 540,
+      "inspection": {
+        "sourceFinalFilename": "rain-destination.png",
+        "visualReview": true,
+        "roadMethod": "first >=99 percent sampled full-width tan road row confirmed against source view",
+        "reviewedAtUtc": "2026-10-13T14:01:51.441368+00:00"
+      },
+      "originalSize": [
+        1672,
+        941
+      ],
+      "uniformScale": 0.606425702811245,
+      "uniformScaleApplied": true,
+      "resizedSize": [
+        1014,
+        571
+      ],
+      "crop": [
+        27,
+        31,
+        987,
+        571
+      ],
+      "sourceRoadRow": 692,
+      "runtimeRoadRow": 389,
+      "size": [
+        960,
+        540
+      ],
+      "mode": "RGB",
+      "sampler": "NEAREST",
+      "padding": false,
+      "authoredArt": false,
+      "generation": {
+        "metadata": [
+          {
+            "path": "assets/delivery-menu-style-v2/metadata/rain-destination.json",
+            "sha256": "6e5f354788b8a28ae684638a2ea14eb33be0acd2e2a0f3cc4163ffec2fc78fa4",
+            "details": {
+              "key": "rain-destination",
+              "attempt": 2,
+              "tool": "builtin image_gen.imagegen",
+              "transparent_background": false,
+              "prompt_path": "assets/delivery-menu-style-v2/prompts/rain-destination.txt",
+              "initial_generation_metadata": "assets/delivery-menu-style-v2/metadata/rain-destination-attempt1.json",
+              "references": [
+                {
+                  "index": 1,
+                  "path": "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+                  "role": "sole style reference, without copying sunny weather",
+                  "sha256": "de36b068c971bbd24d870b5075a1380e852a4000d71c7807bb0600ce1fbf3749"
+                },
+                {
+                  "index": 2,
+                  "path": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a13558-e12e-7d52-b01c-2f169260b99c\\exec-d94047e9-16b7-4e24-8ae4-dc31495fae75.png",
+                  "role": "edit target from original generated attempt 1; exact bytes preserved in sources/rain-destination-attempt1.png",
+                  "sha256": "f6245a1ec2201f6373ec8bb4f184dfe8065745506e85c03fec3d548c20ee374f"
+                }
+              ],
+              "generation_started_at_utc": "2026-10-13T13:08:27.992Z",
+              "generation_completed_at_utc": "2026-10-13T13:13:01.491Z",
+              "generated_original_path": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a13558-e12e-7d52-b01c-2f169260b99c\\exec-3039b659-2b75-4df5-b46b-525c6e683822.png",
+              "source_path": "assets/delivery-menu-style-v2/sources/rain-destination.png",
+              "selection": "selected; visually checked for menu pixel style, light blue-gray overcast sky and absence of baked rain streaks",
+              "bytes_preserved": true,
+              "inspection": {
+                "single_frame": true,
+                "opaque": true,
+                "no_text": true,
+                "no_baked_rain": true,
+                "road_requires_root_packing_alignment": true,
+                "sheep_quadruped": null
+              },
+              "notes": "Original generated source copied without image transformation. Root owns uniform nearest-neighbor runtime packing and road alignment; source road height varies.",
+              "source_sha256": "5a3845502437533410d6cd657b57111260d047a8af807ae44361162f596a7d1b",
+              "source_bytes": 2027606,
+              "dimensions": {
+                "height": 941,
+                "width": 1672
+              }
+            }
+          }
+        ],
+        "promptFiles": [
+          {
+            "path": "assets/delivery-menu-style-v2/prompts/rain-destination.txt",
+            "sha256": "de329b085e7b7dc1fe7ce797d6d5c89ebfc773d75f961aa4a37fca0ef3942947"
+          }
+        ],
+        "rawGeneratedPaths": [
+          "C:\\Users\\mechrevo\\.codex\\generated_images\\01a13558-e12e-7d52-b01c-2f169260b99c\\exec-3039b659-2b75-4df5-b46b-525c6e683822.png"
+        ],
+        "referenceFiles": [
+          {
+            "path": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a13558-e12e-7d52-b01c-2f169260b99c\\exec-d94047e9-16b7-4e24-8ae4-dc31495fae75.png",
+            "sha256": "f6245a1ec2201f6373ec8bb4f184dfe8065745506e85c03fec3d548c20ee374f"
+          },
+          {
+            "path": "D:\\DSH workspace\\sheep-run\\assets\\backgrounds\\menu-pasture-v1.png",
+            "sha256": "de36b068c971bbd24d870b5075a1380e852a4000d71c7807bb0600ce1fbf3749"
+          }
+        ]
+      }
+    },
+    {
+      "name": "rain-ending",
+      "key": "delivery-expansion-rain-ending",
+      "kind": "ending",
+      "source": "assets/delivery-menu-style-v2/sources/rain-ending.png",
+      "sourceSha256": "4c8ae75922619d33a7f9620a896696d20769ce509df89221f3c2b81181b15e85",
+      "sourceByteCount": 2091551,
+      "runtime": "assets/delivery-menu-style-v2/runtime/rain-ending.png",
+      "runtimeSha256": "9b19b7236307a61c68d7229dc4b01abdf858e3a534bf3c16c1d2ac1709db4881",
+      "runtimeByteCount": 794254,
+      "width": 960,
+      "height": 540,
+      "inspection": {
+        "sourceFinalFilename": "rain-ending.png",
+        "visualReview": true,
+        "roadMethod": "full scene uniform cover crop; no road alignment",
+        "reviewedAtUtc": "2026-10-13T14:01:51.443813+00:00"
+      },
+      "originalSize": [
+        1672,
+        941
+      ],
+      "uniformScale": 0.5741626794258373,
+      "uniformScaleApplied": true,
+      "resizedSize": [
+        960,
+        541
+      ],
+      "crop": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "sourceRoadRow": null,
+      "runtimeRoadRow": null,
+      "size": [
+        960,
+        540
+      ],
+      "mode": "RGB",
+      "sampler": "NEAREST",
+      "padding": false,
+      "authoredArt": false,
+      "generation": {
+        "metadata": [
+          {
+            "path": "assets/delivery-menu-style-v2/metadata/rain-ending.json",
+            "sha256": "62e2dedc0c99e38ecff201a6444463e8f56c2bb770547614457c181bdd9441b6",
+            "details": {
+              "key": "rain-ending",
+              "attempt": 2,
+              "tool": "builtin image_gen.imagegen",
+              "transparent_background": false,
+              "prompt_path": "assets/delivery-menu-style-v2/prompts/rain-ending.txt",
+              "initial_generation_metadata": "assets/delivery-menu-style-v2/metadata/rain-ending-attempt1.json",
+              "references": [
+                {
+                  "index": 1,
+                  "path": "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+                  "role": "sole style reference, without copying sunny weather",
+                  "sha256": "de36b068c971bbd24d870b5075a1380e852a4000d71c7807bb0600ce1fbf3749"
+                },
+                {
+                  "index": 2,
+                  "path": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a13558-e12e-7d52-b01c-2f169260b99c\\exec-c9ac0485-51a8-4d50-bc69-511115663da2.png",
+                  "role": "edit target from original generated attempt 1; exact bytes preserved in sources/rain-ending-attempt1.png",
+                  "sha256": "f7c92d3b70dfb2deb34b7f90335710a7bc7bcc5e447af860e996bde4625cbf52"
+                },
+                {
+                  "index": 3,
+                  "path": "D:/DSH workspace/sheep-run/assets/skins/runtime-v1/white-sheet.png",
+                  "role": "character anatomy reference only",
+                  "sha256": "b1aceac87739a99c77cf97f4083a7e613720c24c817485575dde2ef51b896856"
+                }
+              ],
+              "generation_started_at_utc": "2026-10-13T13:08:27.992Z",
+              "generation_completed_at_utc": "2026-10-13T13:16:05.553Z",
+              "generated_original_path": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a13558-e12e-7d52-b01c-2f169260b99c\\exec-17766e96-491d-4583-8e4d-978891b7d880.png",
+              "source_path": "assets/delivery-menu-style-v2/sources/rain-ending.png",
+              "selection": "selected; visually checked for menu pixel style, light blue-gray overcast sky and absence of baked rain streaks",
+              "bytes_preserved": true,
+              "inspection": {
+                "single_frame": true,
+                "opaque": true,
+                "no_text": true,
+                "no_baked_rain": true,
+                "road_requires_root_packing_alignment": true,
+                "sheep_quadruped": true
+              },
+              "notes": "Original generated source copied without image transformation. Root owns uniform nearest-neighbor runtime packing and road alignment; source road height varies.",
+              "source_sha256": "4c8ae75922619d33a7f9620a896696d20769ce509df89221f3c2b81181b15e85",
+              "source_bytes": 2091551,
+              "dimensions": {
+                "height": 941,
+                "width": 1672
+              }
+            }
+          }
+        ],
+        "promptFiles": [
+          {
+            "path": "assets/delivery-menu-style-v2/prompts/rain-ending.txt",
+            "sha256": "bacb06b4bcf5c3fe2fc214084e9eb4a7db887e6594a57a5f0bde697d07ac4212"
+          }
+        ],
+        "rawGeneratedPaths": [
+          "C:\\Users\\mechrevo\\.codex\\generated_images\\01a13558-e12e-7d52-b01c-2f169260b99c\\exec-17766e96-491d-4583-8e4d-978891b7d880.png"
+        ],
+        "referenceFiles": [
+          {
+            "path": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a13558-e12e-7d52-b01c-2f169260b99c\\exec-c9ac0485-51a8-4d50-bc69-511115663da2.png",
+            "sha256": "f7c92d3b70dfb2deb34b7f90335710a7bc7bcc5e447af860e996bde4625cbf52"
+          },
+          {
+            "path": "D:\\DSH workspace\\sheep-run\\assets\\backgrounds\\menu-pasture-v1.png",
+            "sha256": "de36b068c971bbd24d870b5075a1380e852a4000d71c7807bb0600ce1fbf3749"
+          },
+          {
+            "path": "D:\\DSH workspace\\sheep-run\\assets\\skins\\runtime-v1\\white-sheet.png",
+            "sha256": "b1aceac87739a99c77cf97f4083a7e613720c24c817485575dde2ef51b896856"
+          }
+        ]
+      }
+    },
+    {
+      "name": "rain-postcard",
+      "key": "delivery-expansion-rain-postcard",
+      "kind": "postcard",
+      "source": "assets/delivery-menu-style-v2/sources/rain-ending.png",
+      "sourceSha256": "4c8ae75922619d33a7f9620a896696d20769ce509df89221f3c2b81181b15e85",
+      "sourceByteCount": 2091551,
+      "runtime": "assets/delivery-menu-style-v2/runtime/rain-postcard.png",
+      "runtimeSha256": "03fea09cdd31023305b91dbb6db4edc22c26281ebd5c0307f830b4387e635e4c",
+      "runtimeByteCount": 404565,
+      "width": 640,
+      "height": 360,
+      "inspection": {
+        "sourceFinalFilename": "rain-ending.png",
+        "visualReview": true,
+        "roadMethod": "full scene uniform cover crop; no road alignment",
+        "reviewedAtUtc": "2026-10-13T14:01:51.443813+00:00"
+      },
+      "originalSize": [
+        1672,
+        941
+      ],
+      "uniformScale": 0.3827751196172249,
+      "uniformScaleApplied": true,
+      "resizedSize": [
+        640,
+        361
+      ],
+      "crop": [
+        0,
+        0,
+        640,
+        360
+      ],
+      "sourceRoadRow": null,
+      "runtimeRoadRow": null,
+      "size": [
+        640,
+        360
+      ],
+      "mode": "RGB",
+      "sampler": "NEAREST",
+      "padding": false,
+      "authoredArt": false,
+      "generation": {
+        "metadata": [
+          {
+            "path": "assets/delivery-menu-style-v2/metadata/rain-ending.json",
+            "sha256": "62e2dedc0c99e38ecff201a6444463e8f56c2bb770547614457c181bdd9441b6",
+            "details": {
+              "key": "rain-ending",
+              "attempt": 2,
+              "tool": "builtin image_gen.imagegen",
+              "transparent_background": false,
+              "prompt_path": "assets/delivery-menu-style-v2/prompts/rain-ending.txt",
+              "initial_generation_metadata": "assets/delivery-menu-style-v2/metadata/rain-ending-attempt1.json",
+              "references": [
+                {
+                  "index": 1,
+                  "path": "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+                  "role": "sole style reference, without copying sunny weather",
+                  "sha256": "de36b068c971bbd24d870b5075a1380e852a4000d71c7807bb0600ce1fbf3749"
+                },
+                {
+                  "index": 2,
+                  "path": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a13558-e12e-7d52-b01c-2f169260b99c\\exec-c9ac0485-51a8-4d50-bc69-511115663da2.png",
+                  "role": "edit target from original generated attempt 1; exact bytes preserved in sources/rain-ending-attempt1.png",
+                  "sha256": "f7c92d3b70dfb2deb34b7f90335710a7bc7bcc5e447af860e996bde4625cbf52"
+                },
+                {
+                  "index": 3,
+                  "path": "D:/DSH workspace/sheep-run/assets/skins/runtime-v1/white-sheet.png",
+                  "role": "character anatomy reference only",
+                  "sha256": "b1aceac87739a99c77cf97f4083a7e613720c24c817485575dde2ef51b896856"
+                }
+              ],
+              "generation_started_at_utc": "2026-10-13T13:08:27.992Z",
+              "generation_completed_at_utc": "2026-10-13T13:16:05.553Z",
+              "generated_original_path": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a13558-e12e-7d52-b01c-2f169260b99c\\exec-17766e96-491d-4583-8e4d-978891b7d880.png",
+              "source_path": "assets/delivery-menu-style-v2/sources/rain-ending.png",
+              "selection": "selected; visually checked for menu pixel style, light blue-gray overcast sky and absence of baked rain streaks",
+              "bytes_preserved": true,
+              "inspection": {
+                "single_frame": true,
+                "opaque": true,
+                "no_text": true,
+                "no_baked_rain": true,
+                "road_requires_root_packing_alignment": true,
+                "sheep_quadruped": true
+              },
+              "notes": "Original generated source copied without image transformation. Root owns uniform nearest-neighbor runtime packing and road alignment; source road height varies.",
+              "source_sha256": "4c8ae75922619d33a7f9620a896696d20769ce509df89221f3c2b81181b15e85",
+              "source_bytes": 2091551,
+              "dimensions": {
+                "height": 941,
+                "width": 1672
+              }
+            }
+          }
+        ],
+        "promptFiles": [
+          {
+            "path": "assets/delivery-menu-style-v2/prompts/rain-ending.txt",
+            "sha256": "bacb06b4bcf5c3fe2fc214084e9eb4a7db887e6594a57a5f0bde697d07ac4212"
+          }
+        ],
+        "rawGeneratedPaths": [
+          "C:\\Users\\mechrevo\\.codex\\generated_images\\01a13558-e12e-7d52-b01c-2f169260b99c\\exec-17766e96-491d-4583-8e4d-978891b7d880.png"
+        ],
+        "referenceFiles": [
+          {
+            "path": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a13558-e12e-7d52-b01c-2f169260b99c\\exec-c9ac0485-51a8-4d50-bc69-511115663da2.png",
+            "sha256": "f7c92d3b70dfb2deb34b7f90335710a7bc7bcc5e447af860e996bde4625cbf52"
+          },
+          {
+            "path": "D:\\DSH workspace\\sheep-run\\assets\\backgrounds\\menu-pasture-v1.png",
+            "sha256": "de36b068c971bbd24d870b5075a1380e852a4000d71c7807bb0600ce1fbf3749"
+          },
+          {
+            "path": "D:\\DSH workspace\\sheep-run\\assets\\skins\\runtime-v1\\white-sheet.png",
+            "sha256": "b1aceac87739a99c77cf97f4083a7e613720c24c817485575dde2ef51b896856"
+          }
+        ]
+      }
+    },
+    {
+      "name": "lighthouse-pasture",
+      "key": "delivery-expansion-lighthouse-pasture",
+      "kind": "landscape",
+      "source": "assets/delivery-menu-style-v2/sources/lighthouse-pasture.png",
+      "sourceSha256": "6c0297f7cbcbedba6368f45b4236a71b2bfee9d187d586eeaeb00e7eb4407a6f",
+      "sourceByteCount": 1879838,
+      "runtime": "assets/delivery-menu-style-v2/runtime/lighthouse-pasture.png",
+      "runtimeSha256": "c81208427b4e6471e83c13241670256dc4dd3a344bf2cccd485acd77e29eb846",
+      "runtimeByteCount": 685570,
+      "width": 960,
+      "height": 540,
+      "inspection": {
+        "sourceFinalFilename": "lighthouse-pasture.png",
+        "visualReview": true,
+        "roadMethod": "first >=99 percent sampled full-width tan road row confirmed against source view",
+        "reviewedAtUtc": "2026-10-13T14:01:51.446488+00:00"
+      },
+      "originalSize": [
+        1672,
+        941
+      ],
+      "uniformScale": 0.583011583011583,
+      "uniformScaleApplied": true,
+      "resizedSize": [
+        975,
+        549
+      ],
+      "crop": [
+        7,
+        9,
+        967,
+        549
+      ],
+      "sourceRoadRow": 682,
+      "runtimeRoadRow": 389,
+      "size": [
+        960,
+        540
+      ],
+      "mode": "RGB",
+      "sampler": "NEAREST",
+      "padding": false,
+      "authoredArt": false,
+      "generation": {
+        "metadata": [
+          {
+            "path": "assets/delivery-menu-style-v2/metadata/lighthouse-pasture.json",
+            "sha256": "05a44f850fe83aa020fb3573e4a0dad94407bed946f869044c316eeae3628bc9",
+            "details": {
+              "originalGeneratedPath": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a13559-c3a9-7620-b61f-8712d8536a34\\exec-9a29c1c9-eaf5-4afe-8aca-79171ff409a9.png",
+              "workspaceSourcePath": "D:/DSH workspace/sheep-run/assets/delivery-menu-style-v2/sources/lighthouse-pasture.png",
+              "sha256": "6C0297F7CBCBEDBA6368F45B4236A71B2BFEE9D187D586EEAEB00E7EB4407A6F",
+              "originalSha256": "6C0297F7CBCBEDBA6368F45B4236A71B2BFEE9D187D586EEAEB00E7EB4407A6F",
+              "bytes": 1879838,
+              "width": 1672,
+              "height": 941,
+              "generatedFileCreationTimeUtc": "2026-10-13T13:09:36.4630427Z",
+              "archivedAtUtc": "2026-10-13T13:15:40.2407353Z",
+              "referenceHashes": [
+                {
+                  "path": "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+                  "sha256": "DE36B068C971BBD24D870B5075A1380E852A4000D71C7807BB0600CE1FBF3749"
+                },
+                {
+                  "path": "D:/DSH workspace/sheep-run/assets/delivery-menu-style-v2/sources/lighthouse-pasture-initial.png",
+                  "sha256": "750003B07EC6BF36A0201AB4B9BB962CA88E27F75E8197DD777638692C3E60BD"
+                }
+              ],
+              "tool": "image_gen.imagegen (built-in)",
+              "transparentBackground": false,
+              "prompt": "Use case: style-transfer.\nAsset type: full-bleed opaque 16:9 pixel-art running background.\nReference roles: Image 1 is the sole STYLE reference, farm main menu. Image 2 is the exact EDIT TARGET: preserve its scene, buildings, colors, sky, trees, and bold square-pixel style.\nPrimary request: change ONLY the foreground ground geometry in Image 2 so it has the exact gameplay layout below. Keep the upper landscape visually as close to the edit target as possible. This is a pixel-art asset composition correction.\nAt y = 72 percent image height, the top grass rim ends and the empty tan road starts, across the entire full width. From y = 72 percent all the way to y = 96 percent, fill the entire width with the same warm tan dirt-road treatment used in the edit target, with only its sparse simple big color clusters. At y = 96 percent begins a THIN 4 percent bottom grass strip. Remove ALL the thick foreground bushes and flowers currently below and beside the road; the bottom grass should be a short thin flat strip, never protruding upward into the tan road. The road should occupy exactly 24 percent of image height. Ground lines are straight horizontal, side-view, no perspective. No objects, characters, flowers, bushes, stones or grass on the road. Ground area MUST NOT have an object on either side encroaching into the road.\n\n\nStyle: match the square stair-step contours and grouped foliage in Image 1. No antialiasing, microtexture, painted realism, fine foliage, realistic masonry, tiny water sparkle or dense stars. Preserve the original simple landscape.\nOutput: one full-bleed opaque 16:9 landscape. No text, UI, labels, borders, grids, collage, watermarks.",
+              "initialGeneration": {
+                "originalGeneratedPath": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a13559-c3a9-7620-b61f-8712d8536a34\\exec-25d55d0a-3f58-4433-9529-8df4ce143a98.png",
+                "workspaceSourcePath": "D:/DSH workspace/sheep-run/assets/delivery-menu-style-v2/sources/lighthouse-pasture-initial.png",
+                "sha256": "750003B07EC6BF36A0201AB4B9BB962CA88E27F75E8197DD777638692C3E60BD",
+                "originalSha256": "750003B07EC6BF36A0201AB4B9BB962CA88E27F75E8197DD777638692C3E60BD",
+                "bytes": 1882215,
+                "width": 1672,
+                "height": 941,
+                "generatedFileCreationTimeUtc": "2026-10-13T13:04:40.3870923Z",
+                "archivedAtUtc": "2026-10-13T13:08:21.4547937Z",
+                "tool": "image_gen.imagegen (built-in)",
+                "transparentBackground": false,
+                "prompt": "Use case: stylized-concept.\nAsset type: final full-bleed 16:9 opaque background for a cozy mobile pixel-art sheep game.\nPrimary request: redraw this scene in the SAME coarse blocky pixel-art visual language as the farm main menu in reference Image 1.\nReference roles: Image 1 is the sole STYLE reference: use its cheerful blocky rural game illustration, square stair-step edges, grouped rounded foliage, bold readable contours, restrained simple two or three tone shading. Image 2 is only a LAYOUT / PLACE reference; DO NOT inherit its dense microtexture, tiny foliage or photorealistic rendering.\nStyle and detail: every visible contour is a clear square-pixel staircase, confident big pixel clusters, simple broad grouped foliage, no leaf speckles, no antialiasing or smooth painted gradients. Night scenes stay clear and pleasantly readable; use blue teal lavender meadow colors with warm amber lamps, no black overlay. Lower visual complexity than Image 2 and consistent with Image 1.\nOutput: exactly ONE cohesive landscape scene, one full image, horizontal 16:9, edge-to-edge opaque pixels. No atlas, grid, collage, frames, UI, written words, labels, logos or watermark.\nScene: a coastal meadow at lavender twilight with a light peach sunset above a quiet sea on the RIGHT, distant pale blue coast. A large round pixel-cluster tree on the LEFT and a tiny cream farm cottage with orange roof and a warm square window, short simple wooden fence and very large rounded bushes. Rolling cool teal meadow, just a few big flowers at the margins. Preserve the sunset-coast identity of Image 2 but give it the friendly farm simplicity of Image 1. Sky is open lavender/peach flat color bands and two or three big stepped cloud shapes. No detailed town, stone cliffs, water glitter or tiny clouds. Gameplay composition invariant: distant horizon about 60% image height. A grass rim crosses FULL width at exactly 72% image height. An empty warm tan dirt road fills the FULL width from 72% to 96% image height; use a small bottom grass strip only below 96%. Road must be wide uninterrupted horizontal band, level, simple and quiet. Nothing on the road: no actor, object, fence, rock, flowers, mailbox, grass clumps, or branches in the road. Keep all scene objects ABOVE road, in background. Flat side-scrolling view with no perspective road into depth.\nNo characters anywhere. Limited broad colors, substantial quiet negative sky and road.",
+                "referenceImages": [
+                  {
+                    "index": 1,
+                    "path": "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+                    "role": "sole style reference"
+                  },
+                  {
+                    "index": 2,
+                    "path": "D:/DSH workspace/sheep-run/assets/delivery-expansion-v1/chapters/runtime/lighthouse-pasture.png",
+                    "role": "layout only reference"
+                  }
+                ],
+                "validation": {
+                  "visualInspection": true,
+                  "menuStyleMatched": true,
+                  "noAtlasTextUIGridBorder": true,
+                  "noGalaxy": true,
+                  "charactersCorrect": "not applicable",
+                  "roadPlacement": "initial variant needs 72%-96% correction"
+                }
+              },
+              "initialPromptFile": "prompts/lighthouse-pasture.txt",
+              "refinementPromptFile": "prompts/lighthouse-pasture-ground-edit.txt",
+              "referenceImages": [
+                {
+                  "index": 1,
+                  "path": "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+                  "role": "sole style reference"
+                },
+                {
+                  "index": 2,
+                  "path": "D:/DSH workspace/sheep-run/assets/delivery-menu-style-v2/sources/lighthouse-pasture-initial.png",
+                  "role": "generated image edit target"
+                }
+              ],
+              "validation": {
+                "visualInspection": true,
+                "menuStyleMatched": true,
+                "noAtlasTextUIGridBorder": true,
+                "noGalaxy": true,
+                "noActors": true,
+                "noRoadObstructions": true,
+                "roadPlacement": "top approximately 72 percent, bottom approximately 94 percent; full width and unobstructed; final nearest packing/alignment belongs to root"
+              }
+            }
+          }
+        ],
+        "promptFiles": [
+          {
+            "path": "assets/delivery-menu-style-v2/prompts/lighthouse-pasture-ground-edit.txt",
+            "sha256": "02f744ac9be8c2d9ecdae49346eac4da2b638a0f90883262489319db1f9001a6"
+          },
+          {
+            "path": "assets/delivery-menu-style-v2/prompts/lighthouse-pasture.txt",
+            "sha256": "16c81f2f96084137c4d52e1c06c33d87ce573084f7288e880e89e27985f48481"
+          }
+        ],
+        "rawGeneratedPaths": [
+          "C:\\Users\\mechrevo\\.codex\\generated_images\\01a13559-c3a9-7620-b61f-8712d8536a34\\exec-25d55d0a-3f58-4433-9529-8df4ce143a98.png",
+          "C:\\Users\\mechrevo\\.codex\\generated_images\\01a13559-c3a9-7620-b61f-8712d8536a34\\exec-9a29c1c9-eaf5-4afe-8aca-79171ff409a9.png"
+        ],
+        "referenceFiles": [
+          {
+            "path": "D:\\DSH workspace\\sheep-run\\assets\\backgrounds\\menu-pasture-v1.png",
+            "sha256": "de36b068c971bbd24d870b5075a1380e852a4000d71c7807bb0600ce1fbf3749"
+          },
+          {
+            "path": "D:\\DSH workspace\\sheep-run\\assets\\delivery-expansion-v1\\chapters\\runtime\\lighthouse-pasture.png",
+            "sha256": "e48351e38bd8eacea4ecd72a5111a1b2ebbc8afa980af88a3e08721e4b0e0786"
+          },
+          {
+            "path": "D:\\DSH workspace\\sheep-run\\assets\\delivery-menu-style-v2\\sources\\lighthouse-pasture-initial.png",
+            "sha256": "750003b07ec6bf36a0201ab4b9bb962ca88e27f75e8197dd777638692c3e60bd"
+          }
+        ]
+      }
+    },
+    {
+      "name": "lighthouse-middle",
+      "key": "delivery-expansion-lighthouse-middle",
+      "kind": "landscape",
+      "source": "assets/delivery-menu-style-v2/sources/lighthouse-middle.png",
+      "sourceSha256": "31b3da7c3f0f76a9ced9318372c200b0a695f8eb510ac19369ff737ed3f54acb",
+      "sourceByteCount": 1723298,
+      "runtime": "assets/delivery-menu-style-v2/runtime/lighthouse-middle.png",
+      "runtimeSha256": "52e325f9b04c615aaf9d25cae164b7e599d03a3c199e2d9b48c2ef092aa13c68",
+      "runtimeByteCount": 603410,
+      "width": 960,
+      "height": 540,
+      "inspection": {
+        "sourceFinalFilename": "lighthouse-middle.png",
+        "visualReview": true,
+        "roadMethod": "first >=99 percent sampled full-width tan road row confirmed against source view",
+        "reviewedAtUtc": "2026-10-13T14:01:51.448112+00:00"
+      },
+      "originalSize": [
+        1672,
+        941
+      ],
+      "uniformScale": 0.5852713178294574,
+      "uniformScaleApplied": true,
+      "resizedSize": [
+        979,
+        551
+      ],
+      "crop": [
+        9,
+        11,
+        969,
+        551
+      ],
+      "sourceRoadRow": 683,
+      "runtimeRoadRow": 389,
+      "size": [
+        960,
+        540
+      ],
+      "mode": "RGB",
+      "sampler": "NEAREST",
+      "padding": false,
+      "authoredArt": false,
+      "generation": {
+        "metadata": [
+          {
+            "path": "assets/delivery-menu-style-v2/metadata/lighthouse-middle.json",
+            "sha256": "e4f37c86cf84f117cc9c5daed5edc0ff9c83fc9de11a9184b909e3271db123e2",
+            "details": {
+              "originalGeneratedPath": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a13559-c3a9-7620-b61f-8712d8536a34\\exec-a4e80af1-0507-48b2-8668-2f2fe82e868f.png",
+              "workspaceSourcePath": "D:/DSH workspace/sheep-run/assets/delivery-menu-style-v2/sources/lighthouse-middle.png",
+              "sha256": "31B3DA7C3F0F76A9CED9318372C200B0A695F8EB510AC19369FF737ED3F54ACB",
+              "originalSha256": "31B3DA7C3F0F76A9CED9318372C200B0A695F8EB510AC19369FF737ED3F54ACB",
+              "bytes": 1723298,
+              "width": 1672,
+              "height": 941,
+              "generatedFileCreationTimeUtc": "2026-10-13T13:12:40.2083876Z",
+              "archivedAtUtc": "2026-10-13T13:15:40.7111728Z",
+              "referenceHashes": [
+                {
+                  "path": "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+                  "sha256": "DE36B068C971BBD24D870B5075A1380E852A4000D71C7807BB0600CE1FBF3749"
+                },
+                {
+                  "path": "D:/DSH workspace/sheep-run/assets/delivery-menu-style-v2/sources/lighthouse-middle-initial.png",
+                  "sha256": "FA82F07DF073CE7984C9E9D6561B436AA358B9DC55B2CE18CB70E7CA76B213DE"
+                }
+              ],
+              "tool": "image_gen.imagegen (built-in)",
+              "transparentBackground": false,
+              "prompt": "Use case: style-transfer.\nAsset type: full-bleed opaque 16:9 pixel-art running background.\nReference roles: Image 1 is the sole STYLE reference, farm main menu. Image 2 is the exact EDIT TARGET: preserve its scene, buildings, colors, sky, trees, and bold square-pixel style.\nPrimary request: change ONLY the foreground ground geometry in Image 2 so it has the exact gameplay layout below. Keep the upper landscape visually as close to the edit target as possible. This is a pixel-art asset composition correction.\nAt y = 72 percent image height, the top grass rim ends and the empty tan road starts, across the entire full width. From y = 72 percent all the way to y = 96 percent, fill the entire width with the same warm tan dirt-road treatment used in the edit target, with only its sparse simple big color clusters. At y = 96 percent begins a THIN 4 percent bottom grass strip. Remove ALL the thick foreground bushes and flowers currently below and beside the road; the bottom grass should be a short thin flat strip, never protruding upward into the tan road. The road should occupy exactly 24 percent of image height. Ground lines are straight horizontal, side-view, no perspective. No objects, characters, flowers, bushes, stones or grass on the road. Ground area MUST NOT have an object on either side encroaching into the road.\n\nRetain just the target's sparse ~18 chunky stars, do not add more.\nStyle: match the square stair-step contours and grouped foliage in Image 1. No antialiasing, microtexture, painted realism, fine foliage, realistic masonry, tiny water sparkle or dense stars. Preserve the original simple landscape.\nOutput: one full-bleed opaque 16:9 landscape. No text, UI, labels, borders, grids, collage, watermarks.",
+              "initialGeneration": {
+                "originalGeneratedPath": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a13559-c3a9-7620-b61f-8712d8536a34\\exec-001ccb63-f614-4b04-8aa8-636f2df13638.png",
+                "workspaceSourcePath": "D:/DSH workspace/sheep-run/assets/delivery-menu-style-v2/sources/lighthouse-middle-initial.png",
+                "sha256": "FA82F07DF073CE7984C9E9D6561B436AA358B9DC55B2CE18CB70E7CA76B213DE",
+                "originalSha256": "FA82F07DF073CE7984C9E9D6561B436AA358B9DC55B2CE18CB70E7CA76B213DE",
+                "bytes": 1730296,
+                "width": 1672,
+                "height": 941,
+                "generatedFileCreationTimeUtc": "2026-10-13T13:05:11.7741258Z",
+                "archivedAtUtc": "2026-10-13T13:08:21.8997118Z",
+                "tool": "image_gen.imagegen (built-in)",
+                "transparentBackground": false,
+                "prompt": "Use case: stylized-concept.\nAsset type: final full-bleed 16:9 opaque background for a cozy mobile pixel-art sheep game.\nPrimary request: redraw this scene in the SAME coarse blocky pixel-art visual language as the farm main menu in reference Image 1.\nReference roles: Image 1 is the sole STYLE reference: use its cheerful blocky rural game illustration, square stair-step edges, grouped rounded foliage, bold readable contours, restrained simple two or three tone shading. Image 2 is only a LAYOUT / PLACE reference; DO NOT inherit its dense microtexture, tiny foliage or photorealistic rendering.\nStyle and detail: every visible contour is a clear square-pixel staircase, confident big pixel clusters, simple broad grouped foliage, no leaf speckles, no antialiasing or smooth painted gradients. Night scenes stay clear and pleasantly readable; use blue teal lavender meadow colors with warm amber lamps, no black overlay. Lower visual complexity than Image 2 and consistent with Image 1.\nOutput: exactly ONE cohesive landscape scene, one full image, horizontal 16:9, edge-to-edge opaque pixels. No atlas, grid, collage, frames, UI, written words, labels, logos or watermark.\nScene: a calm starlight path through a cool blue/teal pasture. On far LEFT a big round grouped-foliage tree with a small hanging amber square lantern. In the background a tiny cream farm cottage with two amber square windows, simple rounded bushes and blue rolling hills. Open muted denim-blue sky with ONLY 10 to 20 large deliberate square-pixel stars, separated widely, and two large simple lavender-blue cloud bands. No galaxy, no Milky Way, no star dust, no tiny microstars. Warm lantern glow is a simple few color patches, no painted light bloom. Meadow is big broad blue-green clusters with sparse large flowers. Gameplay composition invariant: distant horizon about 60% image height. A grass rim crosses FULL width at exactly 72% image height. An empty warm tan dirt road fills the FULL width from 72% to 96% image height; use a small bottom grass strip only below 96%. Road must be wide uninterrupted horizontal band, level, simple and quiet. Nothing on the road: no actor, object, fence, rock, flowers, mailbox, grass clumps, or branches in the road. Keep all scene objects ABOVE road, in background. Flat side-scrolling view with no perspective road into depth.\nNo characters anywhere. Night must remain light enough to read the same friendly farm forms as Image 1.",
+                "referenceImages": [
+                  {
+                    "index": 1,
+                    "path": "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+                    "role": "sole style reference"
+                  },
+                  {
+                    "index": 2,
+                    "path": "D:/DSH workspace/sheep-run/assets/delivery-expansion-v1/chapters/runtime/lighthouse-middle.png",
+                    "role": "layout only reference"
+                  }
+                ],
+                "validation": {
+                  "visualInspection": true,
+                  "menuStyleMatched": true,
+                  "noAtlasTextUIGridBorder": true,
+                  "noGalaxy": true,
+                  "charactersCorrect": "not applicable",
+                  "roadPlacement": "initial variant needs 72%-96% correction"
+                }
+              },
+              "initialPromptFile": "prompts/lighthouse-middle.txt",
+              "refinementPromptFile": "prompts/lighthouse-middle-ground-edit.txt",
+              "referenceImages": [
+                {
+                  "index": 1,
+                  "path": "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+                  "role": "sole style reference"
+                },
+                {
+                  "index": 2,
+                  "path": "D:/DSH workspace/sheep-run/assets/delivery-menu-style-v2/sources/lighthouse-middle-initial.png",
+                  "role": "generated image edit target"
+                }
+              ],
+              "validation": {
+                "visualInspection": true,
+                "menuStyleMatched": true,
+                "noAtlasTextUIGridBorder": true,
+                "noGalaxy": true,
+                "noActors": true,
+                "noRoadObstructions": true,
+                "roadPlacement": "top approximately 72 percent, bottom approximately 94 percent; full width and unobstructed; final nearest packing/alignment belongs to root"
+              }
+            }
+          }
+        ],
+        "promptFiles": [
+          {
+            "path": "assets/delivery-menu-style-v2/prompts/lighthouse-middle-ground-edit.txt",
+            "sha256": "376b205e967acb7b628be791cd84bd578551eb3ad61026d89edbe2fa529779ad"
+          },
+          {
+            "path": "assets/delivery-menu-style-v2/prompts/lighthouse-middle.txt",
+            "sha256": "adb94bca9353163263a7f0c34dd1382d1863eae62ff89d216402fe3fcbe76ea1"
+          }
+        ],
+        "rawGeneratedPaths": [
+          "C:\\Users\\mechrevo\\.codex\\generated_images\\01a13559-c3a9-7620-b61f-8712d8536a34\\exec-001ccb63-f614-4b04-8aa8-636f2df13638.png",
+          "C:\\Users\\mechrevo\\.codex\\generated_images\\01a13559-c3a9-7620-b61f-8712d8536a34\\exec-a4e80af1-0507-48b2-8668-2f2fe82e868f.png"
+        ],
+        "referenceFiles": [
+          {
+            "path": "D:\\DSH workspace\\sheep-run\\assets\\backgrounds\\menu-pasture-v1.png",
+            "sha256": "de36b068c971bbd24d870b5075a1380e852a4000d71c7807bb0600ce1fbf3749"
+          },
+          {
+            "path": "D:\\DSH workspace\\sheep-run\\assets\\delivery-expansion-v1\\chapters\\runtime\\lighthouse-middle.png",
+            "sha256": "a536bffa827b3a6d1b1220ba967e217ba2e92d7f62d8e650b14dd554a4639422"
+          },
+          {
+            "path": "D:\\DSH workspace\\sheep-run\\assets\\delivery-menu-style-v2\\sources\\lighthouse-middle-initial.png",
+            "sha256": "fa82f07df073ce7984c9e9d6561b436aa358b9dc55b2ce18cb70e7ca76b213de"
+          }
+        ]
+      }
+    },
+    {
+      "name": "lighthouse-destination",
+      "key": "delivery-expansion-lighthouse-destination",
+      "kind": "landscape",
+      "source": "assets/delivery-menu-style-v2/sources/lighthouse-destination.png",
+      "sourceSha256": "a0299f912fb6ebfca5e383f08302e7ca17930fdde8b915bc1ce64667f484c72b",
+      "sourceByteCount": 1813859,
+      "runtime": "assets/delivery-menu-style-v2/runtime/lighthouse-destination.png",
+      "runtimeSha256": "3d1d780c1a19ebabc630c3881fc6791bc3b91d8d6005e3aa0ca160a047c25a3f",
+      "runtimeByteCount": 650927,
+      "width": 960,
+      "height": 540,
+      "inspection": {
+        "sourceFinalFilename": "lighthouse-destination.png",
+        "visualReview": true,
+        "roadMethod": "first >=99 percent sampled full-width tan road row confirmed against source view",
+        "reviewedAtUtc": "2026-10-13T14:01:51.450142+00:00"
+      },
+      "originalSize": [
+        1672,
+        941
+      ],
+      "uniformScale": 0.592156862745098,
+      "uniformScaleApplied": true,
+      "resizedSize": [
+        991,
+        558
+      ],
+      "crop": [
+        15,
+        17,
+        975,
+        557
+      ],
+      "sourceRoadRow": 686,
+      "runtimeRoadRow": 389,
+      "size": [
+        960,
+        540
+      ],
+      "mode": "RGB",
+      "sampler": "NEAREST",
+      "padding": false,
+      "authoredArt": false,
+      "generation": {
+        "metadata": [
+          {
+            "path": "assets/delivery-menu-style-v2/metadata/lighthouse-destination.json",
+            "sha256": "438ef3183442794343bbd5a5eb295c76c466097b1740be9ce5aae3be37c3bf32",
+            "details": {
+              "originalGeneratedPath": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a13559-c3a9-7620-b61f-8712d8536a34\\exec-16b687c2-6af7-4b7d-991b-1f8d2efd49fd.png",
+              "workspaceSourcePath": "D:/DSH workspace/sheep-run/assets/delivery-menu-style-v2/sources/lighthouse-destination.png",
+              "sha256": "A0299F912FB6EBFCA5E383F08302E7CA17930FDDE8B915BC1CE64667F484C72B",
+              "originalSha256": "A0299F912FB6EBFCA5E383F08302E7CA17930FDDE8B915BC1CE64667F484C72B",
+              "bytes": 1813859,
+              "width": 1672,
+              "height": 941,
+              "generatedFileCreationTimeUtc": "2026-10-13T13:11:06.2989578Z",
+              "archivedAtUtc": "2026-10-13T13:15:41.1832059Z",
+              "referenceHashes": [
+                {
+                  "path": "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+                  "sha256": "DE36B068C971BBD24D870B5075A1380E852A4000D71C7807BB0600CE1FBF3749"
+                },
+                {
+                  "path": "D:/DSH workspace/sheep-run/assets/delivery-menu-style-v2/sources/lighthouse-destination-initial.png",
+                  "sha256": "2A99DA9885416B7A33E115712FA2CF5EA560BF43FCF59F67648C3BFA3CD726F9"
+                }
+              ],
+              "tool": "image_gen.imagegen (built-in)",
+              "transparentBackground": false,
+              "prompt": "Use case: style-transfer.\nAsset type: full-bleed opaque 16:9 pixel-art running background.\nReference roles: Image 1 is the sole STYLE reference, farm main menu. Image 2 is the exact EDIT TARGET: preserve its scene, buildings, colors, sky, trees, and bold square-pixel style.\nPrimary request: change ONLY the foreground ground geometry in Image 2 so it has the exact gameplay layout below. Keep the upper landscape visually as close to the edit target as possible. This is a pixel-art asset composition correction.\nAt y = 72 percent image height, the top grass rim ends and the empty tan road starts, across the entire full width. From y = 72 percent all the way to y = 96 percent, fill the entire width with the same warm tan dirt-road treatment used in the edit target, with only its sparse simple big color clusters. At y = 96 percent begins a THIN 4 percent bottom grass strip. Remove ALL the thick foreground bushes and flowers currently below and beside the road; the bottom grass should be a short thin flat strip, never protruding upward into the tan road. The road should occupy exactly 24 percent of image height. Ground lines are straight horizontal, side-view, no perspective. No objects, characters, flowers, bushes, stones or grass on the road. Ground area MUST NOT have an object on either side encroaching into the road.\nIn the target the road is currently too high, near 66 percent image height: move the scene-to-road grass rim DOWN to 72 percent, adding a broad simple green meadow band above it. Keep lighthouse, mailbox, calm sea and sky as they are above the meadow.\n\nStyle: match the square stair-step contours and grouped foliage in Image 1. No antialiasing, microtexture, painted realism, fine foliage, realistic masonry, tiny water sparkle or dense stars. Preserve the original simple landscape.\nOutput: one full-bleed opaque 16:9 landscape. No text, UI, labels, borders, grids, collage, watermarks.",
+              "initialGeneration": {
+                "originalGeneratedPath": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a13559-c3a9-7620-b61f-8712d8536a34\\exec-af5d085b-8db4-4da1-9322-ad7d8263ae6b.png",
+                "workspaceSourcePath": "D:/DSH workspace/sheep-run/assets/delivery-menu-style-v2/sources/lighthouse-destination-initial.png",
+                "sha256": "2A99DA9885416B7A33E115712FA2CF5EA560BF43FCF59F67648C3BFA3CD726F9",
+                "originalSha256": "2A99DA9885416B7A33E115712FA2CF5EA560BF43FCF59F67648C3BFA3CD726F9",
+                "bytes": 1817216,
+                "width": 1672,
+                "height": 941,
+                "generatedFileCreationTimeUtc": "2026-10-13T13:05:58.7982964Z",
+                "archivedAtUtc": "2026-10-13T13:08:22.3519488Z",
+                "tool": "image_gen.imagegen (built-in)",
+                "transparentBackground": false,
+                "prompt": "Use case: stylized-concept.\nAsset type: final full-bleed 16:9 opaque background for a cozy mobile pixel-art sheep game.\nPrimary request: redraw this scene in the SAME coarse blocky pixel-art visual language as the farm main menu in reference Image 1.\nReference roles: Image 1 is the sole STYLE reference: use its cheerful blocky rural game illustration, square stair-step edges, grouped rounded foliage, bold readable contours, restrained simple two or three tone shading. Image 2 is only a LAYOUT / PLACE reference; DO NOT inherit its dense microtexture, tiny foliage or photorealistic rendering.\nStyle and detail: every visible contour is a clear square-pixel staircase, confident big pixel clusters, simple broad grouped foliage, no leaf speckles, no antialiasing or smooth painted gradients. Night scenes stay clear and pleasantly readable; use blue teal lavender meadow colors with warm amber lamps, no black overlay. Lower visual complexity than Image 2 and consistent with Image 1.\nOutput: exactly ONE cohesive landscape scene, one full image, horizontal 16:9, edge-to-edge opaque pixels. No atlas, grid, collage, frames, UI, written words, labels, logos or watermark.\nScene: the starlight delivery destination by a quiet sea. On the RIGHT upper background, a compact friendly FARM-STYLE IVORY LIGHTHOUSE with one muted red stripe, very simple cream block shape, an amber square lamp room and small orange-brown roof, beside a tiny orange-roof cream cottage. No realistic masonry, bricks, tiny rails, complex stonework or tall dramatic architecture. Lighthouse stands on a smooth low blue-green headland with just two broad shadow planes. Its warm beam points LEFT across the background sky only, narrow simple flat wedge above the sea and NEVER touches the road. Quiet sea in middle distance with just five or six broad horizontal blue wave bands and a few big pale-blue highlight rectangles, no tiny sparkles or foam. Distant cool blue coast at the horizon. On the LEFT above the grass rim a simple small cream mailbox on a brown post and short wood fence. Sky has 10 to 15 widely separated chunky square-pixel stars and a big simple cloud band. Gameplay composition invariant: distant horizon about 60% image height. A grass rim crosses FULL width at exactly 72% image height. An empty warm tan dirt road fills the FULL width from 72% to 96% image height; use a small bottom grass strip only below 96%. Road must be wide uninterrupted horizontal band, level, simple and quiet. Nothing on the road: no actor, object, fence, rock, flowers, mailbox, grass clumps, or branches in the road. Keep all scene objects ABOVE road, in background. Flat side-scrolling view with no perspective road into depth.\nNo characters anywhere. Sea/headland scene uses main menu rounded grouped foliage and gentle farm proportions.",
+                "referenceImages": [
+                  {
+                    "index": 1,
+                    "path": "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+                    "role": "sole style reference"
+                  },
+                  {
+                    "index": 2,
+                    "path": "D:/DSH workspace/sheep-run/assets/delivery-expansion-v1/chapters/runtime/lighthouse-destination.png",
+                    "role": "layout only reference"
+                  }
+                ],
+                "validation": {
+                  "visualInspection": true,
+                  "menuStyleMatched": true,
+                  "noAtlasTextUIGridBorder": true,
+                  "noGalaxy": true,
+                  "charactersCorrect": "not applicable",
+                  "roadPlacement": "initial variant needs 72%-96% correction"
+                }
+              },
+              "initialPromptFile": "prompts/lighthouse-destination.txt",
+              "refinementPromptFile": "prompts/lighthouse-destination-ground-edit.txt",
+              "referenceImages": [
+                {
+                  "index": 1,
+                  "path": "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+                  "role": "sole style reference"
+                },
+                {
+                  "index": 2,
+                  "path": "D:/DSH workspace/sheep-run/assets/delivery-menu-style-v2/sources/lighthouse-destination-initial.png",
+                  "role": "generated image edit target"
+                }
+              ],
+              "validation": {
+                "visualInspection": true,
+                "menuStyleMatched": true,
+                "noAtlasTextUIGridBorder": true,
+                "noGalaxy": true,
+                "noActors": true,
+                "noRoadObstructions": true,
+                "roadPlacement": "top approximately 72 percent, bottom approximately 94 percent; full width and unobstructed; final nearest packing/alignment belongs to root"
+              }
+            }
+          }
+        ],
+        "promptFiles": [
+          {
+            "path": "assets/delivery-menu-style-v2/prompts/lighthouse-destination-ground-edit.txt",
+            "sha256": "62619941cab6392b964c282e5eb7234bbec4de2dcff291e2ff502257290c339c"
+          },
+          {
+            "path": "assets/delivery-menu-style-v2/prompts/lighthouse-destination.txt",
+            "sha256": "251817adeb056c51160a98ecb01a75395df7e3b27527e0e0151a938c1497495e"
+          }
+        ],
+        "rawGeneratedPaths": [
+          "C:\\Users\\mechrevo\\.codex\\generated_images\\01a13559-c3a9-7620-b61f-8712d8536a34\\exec-16b687c2-6af7-4b7d-991b-1f8d2efd49fd.png",
+          "C:\\Users\\mechrevo\\.codex\\generated_images\\01a13559-c3a9-7620-b61f-8712d8536a34\\exec-af5d085b-8db4-4da1-9322-ad7d8263ae6b.png"
+        ],
+        "referenceFiles": [
+          {
+            "path": "D:\\DSH workspace\\sheep-run\\assets\\backgrounds\\menu-pasture-v1.png",
+            "sha256": "de36b068c971bbd24d870b5075a1380e852a4000d71c7807bb0600ce1fbf3749"
+          },
+          {
+            "path": "D:\\DSH workspace\\sheep-run\\assets\\delivery-expansion-v1\\chapters\\runtime\\lighthouse-destination.png",
+            "sha256": "6b145b4f3267a11530b0b7da564f83855066312ac0e87cb2846b93a01b8a112f"
+          },
+          {
+            "path": "D:\\DSH workspace\\sheep-run\\assets\\delivery-menu-style-v2\\sources\\lighthouse-destination-initial.png",
+            "sha256": "2a99da9885416b7a33e115712fa2cf5ea560bf43fcf59f67648c3bfa3cd726f9"
+          }
+        ]
+      }
+    },
+    {
+      "name": "lighthouse-ending",
+      "key": "delivery-expansion-lighthouse-ending",
+      "kind": "ending",
+      "source": "assets/delivery-menu-style-v2/sources/lighthouse-ending.png",
+      "sourceSha256": "25a85a7f79f8dca596895b22a8cf584249c6c95b4ee576539a38078f195f724c",
+      "sourceByteCount": 1854619,
+      "runtime": "assets/delivery-menu-style-v2/runtime/lighthouse-ending.png",
+      "runtimeSha256": "532b79a01274e7ba51919d7119457c24f43fd9d5f09b1ff8cbfa1bc6c2a854d1",
+      "runtimeByteCount": 677536,
+      "width": 960,
+      "height": 540,
+      "inspection": {
+        "sourceFinalFilename": "lighthouse-ending.png",
+        "visualReview": true,
+        "roadMethod": "full scene uniform cover crop; no road alignment",
+        "reviewedAtUtc": "2026-10-13T14:01:51.453224+00:00"
+      },
+      "originalSize": [
+        1672,
+        941
+      ],
+      "uniformScale": 0.5741626794258373,
+      "uniformScaleApplied": true,
+      "resizedSize": [
+        960,
+        541
+      ],
+      "crop": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "sourceRoadRow": null,
+      "runtimeRoadRow": null,
+      "size": [
+        960,
+        540
+      ],
+      "mode": "RGB",
+      "sampler": "NEAREST",
+      "padding": false,
+      "authoredArt": false,
+      "generation": {
+        "metadata": [
+          {
+            "path": "assets/delivery-menu-style-v2/metadata/lighthouse-ending.json",
+            "sha256": "b165b2c749f782d56eb6328ff547686b6c2791a11841e05a554319d15997c333",
+            "details": {
+              "originalGeneratedPath": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a13559-c3a9-7620-b61f-8712d8536a34\\exec-ae781c3c-b5ff-4726-b7d7-73348d6a7de2.png",
+              "workspaceSourcePath": "D:/DSH workspace/sheep-run/assets/delivery-menu-style-v2/sources/lighthouse-ending.png",
+              "sha256": "25A85A7F79F8DCA596895B22A8CF584249C6C95B4EE576539A38078F195F724C",
+              "originalSha256": "25A85A7F79F8DCA596895B22A8CF584249C6C95B4EE576539A38078F195F724C",
+              "bytes": 1854619,
+              "width": 1672,
+              "height": 941,
+              "generatedFileCreationTimeUtc": "2026-10-13T13:07:05.9440841Z",
+              "archivedAtUtc": "2026-10-13T13:08:22.8691609Z",
+              "tool": "image_gen.imagegen (built-in)",
+              "transparentBackground": false,
+              "prompt": "Use case: stylized-concept.\nAsset type: final full-bleed 16:9 opaque background for a cozy mobile pixel-art sheep game.\nPrimary request: redraw this scene in the SAME coarse blocky pixel-art visual language as the farm main menu in reference Image 1.\nReference roles: Image 1 is the sole STYLE reference: use its cheerful blocky rural game illustration, square stair-step edges, grouped rounded foliage, bold readable contours, restrained simple two or three tone shading. Image 2 is only a LAYOUT / PLACE reference; DO NOT inherit its dense microtexture, tiny foliage or photorealistic rendering.\nStyle and detail: every visible contour is a clear square-pixel staircase, confident big pixel clusters, simple broad grouped foliage, no leaf speckles, no antialiasing or smooth painted gradients. Night scenes stay clear and pleasantly readable; use blue teal lavender meadow colors with warm amber lamps, no black overlay. Lower visual complexity than Image 2 and consistent with Image 1.\nOutput: exactly ONE cohesive landscape scene, one full image, horizontal 16:9, edge-to-edge opaque pixels. No atlas, grid, collage, frames, UI, written words, labels, logos or watermark.\nAdditional reference role: Image 3 is the actual SHEEP CHARACTER reference, solely for character identity. Preserve its cream OVAL fluffy fleece body, peach small square face projecting on the side, dark cocoa ears and four stubby dark cocoa hooves, clear dark pixel outline. Each sheep is an ordinary cute QUADRUPED SHEEP, not human and not a humanoid. No arms, hands, horns, pink round Kirby body or bipedal stance. Use the same sprite proportions and simple chunky wool scallops, enlarged for the story illustration without additional tiny wool texture.\nScene and story: TWO recognizable game sheep from Image 3, sitting or resting side by side on a quiet grassy headland, viewed in gentle three-quarter side/back view facing RIGHT toward the distant warm lighthouse beam across the sea. Both remain inside the central 70% of the picture, their cocoa ears and peach square faces visibly recognizable in profile. Their bodies are low oval resting sheep, four hooves tucked below their fleece; no upright human sitting pose. Comfortable friendship and peaceful night.\nOn RIGHT in far background a compact farm-style ivory lighthouse with muted red stripe, orange brown roof and amber lamp by a tiny orange-roof cottage. Smooth broad blue-green headland shapes, simple big rounded bushes, quiet sea formed by five broad blue horizontal wave bands. Warm beam lies across distant background sky, clear simple wedge. Open muted denim-blue sky with ONLY 10 to 20 large sparse chunky stars and two broad simple lavender-blue cloud bands. No galaxy, no Milky Way, no microstars, dense water shimmer, foam, realistic cliffs, lighthouse bricks or fine foliage. A small simple cream mailbox is at left; one simple pale cream envelope rests on grass by it, no words. This is a FULL story illustration, no gameplay road. Big simple foreground grass patches with only a few large flowers. Clear square pixel art, quiet composition, no UI/text/borders.",
+              "referenceImages": [
+                {
+                  "index": 1,
+                  "path": "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+                  "role": "sole style reference"
+                },
+                {
+                  "index": 2,
+                  "path": "D:/DSH workspace/sheep-run/assets/delivery-expansion-v1/chapters/runtime/lighthouse-ending.png",
+                  "role": "layout only reference"
+                },
+                {
+                  "index": 3,
+                  "path": "D:/DSH workspace/sheep-run/assets/skins/runtime-v1/white-sheet.png",
+                  "role": "character identity only reference"
+                }
+              ],
+              "validation": {
+                "visualInspection": true,
+                "menuStyleMatched": true,
+                "noAtlasTextUIGridBorder": true,
+                "noGalaxy": true,
+                "charactersCorrect": true,
+                "roadPlacement": "not applicable"
+              },
+              "referenceHashes": [
+                {
+                  "path": "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+                  "sha256": "DE36B068C971BBD24D870B5075A1380E852A4000D71C7807BB0600CE1FBF3749"
+                },
+                {
+                  "path": "D:/DSH workspace/sheep-run/assets/delivery-expansion-v1/chapters/runtime/lighthouse-ending.png",
+                  "sha256": "DED28F5225C69AD8E677C03F2D0A3671787DCCB572801B9765DB1ADB236F8466"
+                },
+                {
+                  "path": "D:/DSH workspace/sheep-run/assets/skins/runtime-v1/white-sheet.png",
+                  "sha256": "B1ACEAC87739A99C77CF97F4083A7E613720C24C817485575DDE2EF51B896856"
+                }
+              ]
+            }
+          }
+        ],
+        "promptFiles": [
+          {
+            "path": "assets/delivery-menu-style-v2/prompts/lighthouse-ending.txt",
+            "sha256": "7b2583fc56caf699b45923e29532b2abbc516d0d5d1096a25da3f73aace1d345"
+          }
+        ],
+        "rawGeneratedPaths": [
+          "C:\\Users\\mechrevo\\.codex\\generated_images\\01a13559-c3a9-7620-b61f-8712d8536a34\\exec-ae781c3c-b5ff-4726-b7d7-73348d6a7de2.png"
+        ],
+        "referenceFiles": [
+          {
+            "path": "D:\\DSH workspace\\sheep-run\\assets\\backgrounds\\menu-pasture-v1.png",
+            "sha256": "de36b068c971bbd24d870b5075a1380e852a4000d71c7807bb0600ce1fbf3749"
+          },
+          {
+            "path": "D:\\DSH workspace\\sheep-run\\assets\\delivery-expansion-v1\\chapters\\runtime\\lighthouse-ending.png",
+            "sha256": "ded28f5225c69ad8e677c03f2d0a3671787dccb572801b9765db1adb236f8466"
+          },
+          {
+            "path": "D:\\DSH workspace\\sheep-run\\assets\\skins\\runtime-v1\\white-sheet.png",
+            "sha256": "b1aceac87739a99c77cf97f4083a7e613720c24c817485575dde2ef51b896856"
+          }
+        ]
+      }
+    },
+    {
+      "name": "lighthouse-postcard",
+      "key": "delivery-expansion-lighthouse-postcard",
+      "kind": "postcard",
+      "source": "assets/delivery-menu-style-v2/sources/lighthouse-ending.png",
+      "sourceSha256": "25a85a7f79f8dca596895b22a8cf584249c6c95b4ee576539a38078f195f724c",
+      "sourceByteCount": 1854619,
+      "runtime": "assets/delivery-menu-style-v2/runtime/lighthouse-postcard.png",
+      "runtimeSha256": "39d9c312898e1de38a087655763f3ec2cc035c1c909b59491bdea0917b791fc4",
+      "runtimeByteCount": 342590,
+      "width": 640,
+      "height": 360,
+      "inspection": {
+        "sourceFinalFilename": "lighthouse-ending.png",
+        "visualReview": true,
+        "roadMethod": "full scene uniform cover crop; no road alignment",
+        "reviewedAtUtc": "2026-10-13T14:01:51.453224+00:00"
+      },
+      "originalSize": [
+        1672,
+        941
+      ],
+      "uniformScale": 0.3827751196172249,
+      "uniformScaleApplied": true,
+      "resizedSize": [
+        640,
+        361
+      ],
+      "crop": [
+        0,
+        0,
+        640,
+        360
+      ],
+      "sourceRoadRow": null,
+      "runtimeRoadRow": null,
+      "size": [
+        640,
+        360
+      ],
+      "mode": "RGB",
+      "sampler": "NEAREST",
+      "padding": false,
+      "authoredArt": false,
+      "generation": {
+        "metadata": [
+          {
+            "path": "assets/delivery-menu-style-v2/metadata/lighthouse-ending.json",
+            "sha256": "b165b2c749f782d56eb6328ff547686b6c2791a11841e05a554319d15997c333",
+            "details": {
+              "originalGeneratedPath": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a13559-c3a9-7620-b61f-8712d8536a34\\exec-ae781c3c-b5ff-4726-b7d7-73348d6a7de2.png",
+              "workspaceSourcePath": "D:/DSH workspace/sheep-run/assets/delivery-menu-style-v2/sources/lighthouse-ending.png",
+              "sha256": "25A85A7F79F8DCA596895B22A8CF584249C6C95B4EE576539A38078F195F724C",
+              "originalSha256": "25A85A7F79F8DCA596895B22A8CF584249C6C95B4EE576539A38078F195F724C",
+              "bytes": 1854619,
+              "width": 1672,
+              "height": 941,
+              "generatedFileCreationTimeUtc": "2026-10-13T13:07:05.9440841Z",
+              "archivedAtUtc": "2026-10-13T13:08:22.8691609Z",
+              "tool": "image_gen.imagegen (built-in)",
+              "transparentBackground": false,
+              "prompt": "Use case: stylized-concept.\nAsset type: final full-bleed 16:9 opaque background for a cozy mobile pixel-art sheep game.\nPrimary request: redraw this scene in the SAME coarse blocky pixel-art visual language as the farm main menu in reference Image 1.\nReference roles: Image 1 is the sole STYLE reference: use its cheerful blocky rural game illustration, square stair-step edges, grouped rounded foliage, bold readable contours, restrained simple two or three tone shading. Image 2 is only a LAYOUT / PLACE reference; DO NOT inherit its dense microtexture, tiny foliage or photorealistic rendering.\nStyle and detail: every visible contour is a clear square-pixel staircase, confident big pixel clusters, simple broad grouped foliage, no leaf speckles, no antialiasing or smooth painted gradients. Night scenes stay clear and pleasantly readable; use blue teal lavender meadow colors with warm amber lamps, no black overlay. Lower visual complexity than Image 2 and consistent with Image 1.\nOutput: exactly ONE cohesive landscape scene, one full image, horizontal 16:9, edge-to-edge opaque pixels. No atlas, grid, collage, frames, UI, written words, labels, logos or watermark.\nAdditional reference role: Image 3 is the actual SHEEP CHARACTER reference, solely for character identity. Preserve its cream OVAL fluffy fleece body, peach small square face projecting on the side, dark cocoa ears and four stubby dark cocoa hooves, clear dark pixel outline. Each sheep is an ordinary cute QUADRUPED SHEEP, not human and not a humanoid. No arms, hands, horns, pink round Kirby body or bipedal stance. Use the same sprite proportions and simple chunky wool scallops, enlarged for the story illustration without additional tiny wool texture.\nScene and story: TWO recognizable game sheep from Image 3, sitting or resting side by side on a quiet grassy headland, viewed in gentle three-quarter side/back view facing RIGHT toward the distant warm lighthouse beam across the sea. Both remain inside the central 70% of the picture, their cocoa ears and peach square faces visibly recognizable in profile. Their bodies are low oval resting sheep, four hooves tucked below their fleece; no upright human sitting pose. Comfortable friendship and peaceful night.\nOn RIGHT in far background a compact farm-style ivory lighthouse with muted red stripe, orange brown roof and amber lamp by a tiny orange-roof cottage. Smooth broad blue-green headland shapes, simple big rounded bushes, quiet sea formed by five broad blue horizontal wave bands. Warm beam lies across distant background sky, clear simple wedge. Open muted denim-blue sky with ONLY 10 to 20 large sparse chunky stars and two broad simple lavender-blue cloud bands. No galaxy, no Milky Way, no microstars, dense water shimmer, foam, realistic cliffs, lighthouse bricks or fine foliage. A small simple cream mailbox is at left; one simple pale cream envelope rests on grass by it, no words. This is a FULL story illustration, no gameplay road. Big simple foreground grass patches with only a few large flowers. Clear square pixel art, quiet composition, no UI/text/borders.",
+              "referenceImages": [
+                {
+                  "index": 1,
+                  "path": "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+                  "role": "sole style reference"
+                },
+                {
+                  "index": 2,
+                  "path": "D:/DSH workspace/sheep-run/assets/delivery-expansion-v1/chapters/runtime/lighthouse-ending.png",
+                  "role": "layout only reference"
+                },
+                {
+                  "index": 3,
+                  "path": "D:/DSH workspace/sheep-run/assets/skins/runtime-v1/white-sheet.png",
+                  "role": "character identity only reference"
+                }
+              ],
+              "validation": {
+                "visualInspection": true,
+                "menuStyleMatched": true,
+                "noAtlasTextUIGridBorder": true,
+                "noGalaxy": true,
+                "charactersCorrect": true,
+                "roadPlacement": "not applicable"
+              },
+              "referenceHashes": [
+                {
+                  "path": "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+                  "sha256": "DE36B068C971BBD24D870B5075A1380E852A4000D71C7807BB0600CE1FBF3749"
+                },
+                {
+                  "path": "D:/DSH workspace/sheep-run/assets/delivery-expansion-v1/chapters/runtime/lighthouse-ending.png",
+                  "sha256": "DED28F5225C69AD8E677C03F2D0A3671787DCCB572801B9765DB1ADB236F8466"
+                },
+                {
+                  "path": "D:/DSH workspace/sheep-run/assets/skins/runtime-v1/white-sheet.png",
+                  "sha256": "B1ACEAC87739A99C77CF97F4083A7E613720C24C817485575DDE2EF51B896856"
+                }
+              ]
+            }
+          }
+        ],
+        "promptFiles": [
+          {
+            "path": "assets/delivery-menu-style-v2/prompts/lighthouse-ending.txt",
+            "sha256": "7b2583fc56caf699b45923e29532b2abbc516d0d5d1096a25da3f73aace1d345"
+          }
+        ],
+        "rawGeneratedPaths": [
+          "C:\\Users\\mechrevo\\.codex\\generated_images\\01a13559-c3a9-7620-b61f-8712d8536a34\\exec-ae781c3c-b5ff-4726-b7d7-73348d6a7de2.png"
+        ],
+        "referenceFiles": [
+          {
+            "path": "D:\\DSH workspace\\sheep-run\\assets\\backgrounds\\menu-pasture-v1.png",
+            "sha256": "de36b068c971bbd24d870b5075a1380e852a4000d71c7807bb0600ce1fbf3749"
+          },
+          {
+            "path": "D:\\DSH workspace\\sheep-run\\assets\\delivery-expansion-v1\\chapters\\runtime\\lighthouse-ending.png",
+            "sha256": "ded28f5225c69ad8e677c03f2d0a3671787dccb572801b9765db1adb236f8466"
+          },
+          {
+            "path": "D:\\DSH workspace\\sheep-run\\assets\\skins\\runtime-v1\\white-sheet.png",
+            "sha256": "b1aceac87739a99c77cf97f4083a7e613720c24c817485575dde2ef51b896856"
+          }
+        ]
+      }
+    },
+    {
+      "name": "dinner-dusk-pasture",
+      "key": "content-v2-delivery-dusk-pasture",
+      "kind": "landscape",
+      "source": "assets/delivery-menu-style-v2/sources/dinner-dusk-pasture.png",
+      "sourceSha256": "8dbb5d43f81c517f8f68f658fd2919d656867b061f4c179d1a741809ed256725",
+      "sourceByteCount": 1916654,
+      "runtime": "assets/delivery-menu-style-v2/runtime/dinner-dusk-pasture.png",
+      "runtimeSha256": "a3c76a12fa58a13a47e24fc7e67ee1a46043b9b7988ef87608faa783974ffd9c",
+      "runtimeByteCount": 697384,
+      "width": 960,
+      "height": 540,
+      "inspection": {
+        "sourceFinalFilename": "dinner-dusk-pasture.png",
+        "visualReview": true,
+        "roadMethod": "first >=99 percent sampled full-width tan road row confirmed against source view",
+        "reviewedAtUtc": "2026-10-13T14:01:51.455744+00:00"
+      },
+      "originalSize": [
+        1672,
+        941
+      ],
+      "uniformScale": 0.578544061302682,
+      "uniformScaleApplied": true,
+      "resizedSize": [
+        968,
+        545
+      ],
+      "crop": [
+        4,
+        4,
+        964,
+        544
+      ],
+      "sourceRoadRow": 680,
+      "runtimeRoadRow": 389,
+      "size": [
+        960,
+        540
+      ],
+      "mode": "RGB",
+      "sampler": "NEAREST",
+      "padding": false,
+      "authoredArt": false,
+      "generation": {
+        "metadata": [
+          {
+            "path": "assets/delivery-menu-style-v2/metadata/dinner-dusk-pasture.json",
+            "sha256": "5863b4ecf7f9a0aee40e589b915fd53af1a06d0849d7f712fd702c1a8fd055fe",
+            "details": {
+              "id": "dinner-dusk-pasture",
+              "tool": "builtin-image_gen",
+              "originalOutput": "C:/Users/mechrevo/.codex/generated_images/01a11760-9d97-77c1-924c-cefdf4e6c788/exec-ff6f81c0-af9e-4326-b024-695bf559afdc.png",
+              "workspaceSource": "assets/delivery-menu-style-v2/sources/dinner-dusk-pasture.png",
+              "prompt": "assets/delivery-menu-style-v2/prompts/dinner-dusk-pasture.json",
+              "referencesAttached": true,
+              "transparent_background": false,
+              "sourceSha256": "8dbb5d43f81c517f8f68f658fd2919d656867b061f4c179d1a741809ed256725",
+              "sourceDimensions": [
+                1672,
+                941
+              ],
+              "recordedAt": "2026-10-13T14:00:49.185834+00:00",
+              "originalByteIdentical": true,
+              "referenceHashes": {
+                "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png": "de36b068c971bbd24d870b5075a1380e852a4000d71c7807bb0600ce1fbf3749",
+                "D:/DSH workspace/sheep-run/assets/content-update-v2/delivery/runtime/dusk-pasture.png": "506b44771b83fc5fbd51a888a2128954f721ac62581a8fd701d841ffa9b4d048"
+              }
+            }
+          }
+        ],
+        "promptFiles": [
+          {
+            "path": "assets/delivery-menu-style-v2/prompts/dinner-dusk-pasture.json",
+            "sha256": "a2d6ccf726152f38c4d0c21b88e8df0b6dae9cad5a77fac41a7ac91bdbb2a45c"
+          }
+        ],
+        "rawGeneratedPaths": [
+          "C:/Users/mechrevo/.codex/generated_images/01a11760-9d97-77c1-924c-cefdf4e6c788/exec-ff6f81c0-af9e-4326-b024-695bf559afdc.png"
+        ],
+        "referenceFiles": [
+          {
+            "path": "D:\\DSH workspace\\sheep-run\\assets\\backgrounds\\menu-pasture-v1.png",
+            "sha256": "de36b068c971bbd24d870b5075a1380e852a4000d71c7807bb0600ce1fbf3749"
+          },
+          {
+            "path": "D:\\DSH workspace\\sheep-run\\assets\\content-update-v2\\delivery\\runtime\\dusk-pasture.png",
+            "sha256": "506b44771b83fc5fbd51a888a2128954f721ac62581a8fd701d841ffa9b4d048"
+          }
+        ]
+      }
+    },
+    {
+      "name": "dinner-field",
+      "key": "content-v2-delivery-field",
+      "kind": "landscape",
+      "source": "assets/delivery-menu-style-v2/sources/dinner-field.png",
+      "sourceSha256": "98f6009ef991486fc576762c0d6a73856ec4e22359d12e44d75155fa3d1f286c",
+      "sourceByteCount": 1977169,
+      "runtime": "assets/delivery-menu-style-v2/runtime/dinner-field.png",
+      "runtimeSha256": "277753dec7970ded08e312ab16632a436b7b38486e852ad920da2d8aa0a5ac12",
+      "runtimeByteCount": 715474,
+      "width": 960,
+      "height": 540,
+      "inspection": {
+        "sourceFinalFilename": "dinner-field.png",
+        "visualReview": true,
+        "roadMethod": "first >=99 percent sampled full-width tan road row confirmed against source view",
+        "reviewedAtUtc": "2026-10-13T14:01:51.458450+00:00"
+      },
+      "originalSize": [
+        1672,
+        941
+      ],
+      "uniformScale": 0.5968379446640316,
+      "uniformScaleApplied": true,
+      "resizedSize": [
+        998,
+        562
+      ],
+      "crop": [
+        19,
+        22,
+        979,
+        562
+      ],
+      "sourceRoadRow": 688,
+      "runtimeRoadRow": 389,
+      "size": [
+        960,
+        540
+      ],
+      "mode": "RGB",
+      "sampler": "NEAREST",
+      "padding": false,
+      "authoredArt": false,
+      "generation": {
+        "metadata": [
+          {
+            "path": "assets/delivery-menu-style-v2/metadata/dinner-field.json",
+            "sha256": "7da27d8483a8a97ef6512ccd4d8735090b4191ccdf55ef95165447bb01751691",
+            "details": {
+              "id": "dinner-field",
+              "tool": "builtin-image_gen",
+              "originalOutput": "C:/Users/mechrevo/.codex/generated_images/01a11760-9d97-77c1-924c-cefdf4e6c788/exec-af0c6280-2be6-420e-a117-74dc6aa22222.png",
+              "workspaceSource": "assets/delivery-menu-style-v2/sources/dinner-field.png",
+              "prompt": "assets/delivery-menu-style-v2/prompts/dinner-field.json",
+              "referencesAttached": true,
+              "transparent_background": false,
+              "sourceSha256": "98f6009ef991486fc576762c0d6a73856ec4e22359d12e44d75155fa3d1f286c",
+              "sourceDimensions": [
+                1672,
+                941
+              ],
+              "recordedAt": "2026-10-13T14:00:49.194805+00:00",
+              "originalByteIdentical": true,
+              "referenceHashes": {
+                "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png": "de36b068c971bbd24d870b5075a1380e852a4000d71c7807bb0600ce1fbf3749",
+                "D:/DSH workspace/sheep-run/assets/content-update-v2/delivery/runtime/field.png": "2e44706d5c6f2e8175e620802c6e6464731606767081a816f87e33d8655e3b7f"
+              }
+            }
+          }
+        ],
+        "promptFiles": [
+          {
+            "path": "assets/delivery-menu-style-v2/prompts/dinner-field.json",
+            "sha256": "588765b82402179172a3b659366c7661e8b881b02da3aa49f9a8ace397764888"
+          }
+        ],
+        "rawGeneratedPaths": [
+          "C:/Users/mechrevo/.codex/generated_images/01a11760-9d97-77c1-924c-cefdf4e6c788/exec-af0c6280-2be6-420e-a117-74dc6aa22222.png"
+        ],
+        "referenceFiles": [
+          {
+            "path": "D:\\DSH workspace\\sheep-run\\assets\\backgrounds\\menu-pasture-v1.png",
+            "sha256": "de36b068c971bbd24d870b5075a1380e852a4000d71c7807bb0600ce1fbf3749"
+          },
+          {
+            "path": "D:\\DSH workspace\\sheep-run\\assets\\content-update-v2\\delivery\\runtime\\field.png",
+            "sha256": "2e44706d5c6f2e8175e620802c6e6464731606767081a816f87e33d8655e3b7f"
+          }
+        ]
+      }
+    },
+    {
+      "name": "dinner-cottage",
+      "key": "content-v2-delivery-cottage",
+      "kind": "landscape",
+      "source": "assets/delivery-menu-style-v2/sources/dinner-cottage.png",
+      "sourceSha256": "a5db020e312133b26473882adf40f6eccf638d999e72be86a4566ca4c03b05e4",
+      "sourceByteCount": 1976211,
+      "runtime": "assets/delivery-menu-style-v2/runtime/dinner-cottage.png",
+      "runtimeSha256": "771fbc770cf83eda5cba7e757932077fa13d684948af705fe974da5e9b9e5680",
+      "runtimeByteCount": 719219,
+      "width": 960,
+      "height": 540,
+      "inspection": {
+        "sourceFinalFilename": "dinner-cottage.png",
+        "visualReview": true,
+        "roadMethod": "first >=99 percent sampled full-width tan road row confirmed against source view",
+        "reviewedAtUtc": "2026-10-13T14:01:51.460553+00:00"
+      },
+      "originalSize": [
+        1672,
+        941
+      ],
+      "uniformScale": 0.611336032388664,
+      "uniformScaleApplied": true,
+      "resizedSize": [
+        1023,
+        576
+      ],
+      "crop": [
+        31,
+        35,
+        991,
+        575
+      ],
+      "sourceRoadRow": 694,
+      "runtimeRoadRow": 389,
+      "size": [
+        960,
+        540
+      ],
+      "mode": "RGB",
+      "sampler": "NEAREST",
+      "padding": false,
+      "authoredArt": false,
+      "generation": {
+        "metadata": [
+          {
+            "path": "assets/delivery-menu-style-v2/metadata/dinner-cottage.json",
+            "sha256": "c9ab841d161e059266c340bca6e9e29e5dfde4012ec1c8c7c98a71e906e04878",
+            "details": {
+              "id": "dinner-cottage",
+              "tool": "builtin-image_gen",
+              "originalOutput": "C:/Users/mechrevo/.codex/generated_images/01a11760-9d97-77c1-924c-cefdf4e6c788/exec-188327bd-0f21-408d-835c-cfa861356637.png",
+              "workspaceSource": "assets/delivery-menu-style-v2/sources/dinner-cottage.png",
+              "prompt": "assets/delivery-menu-style-v2/prompts/dinner-cottage.json",
+              "referencesAttached": true,
+              "transparent_background": false,
+              "sourceSha256": "a5db020e312133b26473882adf40f6eccf638d999e72be86a4566ca4c03b05e4",
+              "sourceDimensions": [
+                1672,
+                941
+              ],
+              "recordedAt": "2026-10-13T14:00:49.203785+00:00",
+              "originalByteIdentical": true,
+              "referenceHashes": {
+                "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png": "de36b068c971bbd24d870b5075a1380e852a4000d71c7807bb0600ce1fbf3749",
+                "D:/DSH workspace/sheep-run/assets/content-update-v2/delivery/runtime/cottage.png": "199bfb3b00e9a1983ba54ef149b882aae75b20017915e7c21825a68e3a3e6f11"
+              }
+            }
+          }
+        ],
+        "promptFiles": [
+          {
+            "path": "assets/delivery-menu-style-v2/prompts/dinner-cottage.json",
+            "sha256": "a251e2114d10f91f8ec030000c14eef98b859af7b350b5507ee1fbc1d1882fc4"
+          }
+        ],
+        "rawGeneratedPaths": [
+          "C:/Users/mechrevo/.codex/generated_images/01a11760-9d97-77c1-924c-cefdf4e6c788/exec-188327bd-0f21-408d-835c-cfa861356637.png"
+        ],
+        "referenceFiles": [
+          {
+            "path": "D:\\DSH workspace\\sheep-run\\assets\\backgrounds\\menu-pasture-v1.png",
+            "sha256": "de36b068c971bbd24d870b5075a1380e852a4000d71c7807bb0600ce1fbf3749"
+          },
+          {
+            "path": "D:\\DSH workspace\\sheep-run\\assets\\content-update-v2\\delivery\\runtime\\cottage.png",
+            "sha256": "199bfb3b00e9a1983ba54ef149b882aae75b20017915e7c21825a68e3a3e6f11"
+          }
+        ]
+      }
+    },
+    {
+      "name": "dinner-ending",
+      "key": "content-v2-delivery-dinner-ending",
+      "kind": "ending",
+      "source": "assets/delivery-menu-style-v2/sources/dinner-ending.png",
+      "sourceSha256": "3898320ec181404f70193793c1b77f67e679a1b85ce3c61196c2da65ef7d23eb",
+      "sourceByteCount": 2035536,
+      "runtime": "assets/delivery-menu-style-v2/runtime/dinner-ending.png",
+      "runtimeSha256": "11837a50ec32b152f0d1235a60565a8ca91a51746e5baf040c8ae9155f242e90",
+      "runtimeByteCount": 763294,
+      "width": 960,
+      "height": 540,
+      "inspection": {
+        "sourceFinalFilename": "dinner-ending.png",
+        "visualReview": true,
+        "roadMethod": "full scene uniform cover crop; no road alignment",
+        "reviewedAtUtc": "2026-10-13T14:01:51.463889+00:00"
+      },
+      "originalSize": [
+        1672,
+        941
+      ],
+      "uniformScale": 0.5741626794258373,
+      "uniformScaleApplied": true,
+      "resizedSize": [
+        960,
+        541
+      ],
+      "crop": [
+        0,
+        0,
+        960,
+        540
+      ],
+      "sourceRoadRow": null,
+      "runtimeRoadRow": null,
+      "size": [
+        960,
+        540
+      ],
+      "mode": "RGB",
+      "sampler": "NEAREST",
+      "padding": false,
+      "authoredArt": false,
+      "generation": {
+        "metadata": [
+          {
+            "path": "assets/delivery-menu-style-v2/metadata/dinner-ending.json",
+            "sha256": "d8dd407d6e60aed0fe8627d852318b674a2278b27bc547188fca0440bebcbcc5",
+            "details": {
+              "id": "dinner-ending",
+              "tool": "builtin-image_gen",
+              "originalOutput": "C:/Users/mechrevo/.codex/generated_images/01a11760-9d97-77c1-924c-cefdf4e6c788/exec-849b7832-19e1-4005-9af4-34b9e9234bf8.png",
+              "workspaceSource": "assets/delivery-menu-style-v2/sources/dinner-ending.png",
+              "prompt": "assets/delivery-menu-style-v2/prompts/dinner-ending.json",
+              "referencesAttached": true,
+              "transparent_background": false,
+              "retryOf": "dinner-ending-attempt1.json",
+              "sourceSha256": "3898320ec181404f70193793c1b77f67e679a1b85ce3c61196c2da65ef7d23eb",
+              "sourceDimensions": [
+                1672,
+                941
+              ],
+              "recordedAt": "2026-10-13T14:00:49.213751+00:00",
+              "originalByteIdentical": true,
+              "referenceHashes": {
+                "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png": "de36b068c971bbd24d870b5075a1380e852a4000d71c7807bb0600ce1fbf3749",
+                "D:/DSH workspace/sheep-run/assets/content-update-v2/delivery/runtime/dinner-ending.png": "82e8a6923faa70c6b78ef2e356334c11a7a7c8fd3b52483a5db8299d4becdb94",
+                "D:/DSH workspace/sheep-run/assets/skins/runtime-v1/white-sheet.png": "b1aceac87739a99c77cf97f4083a7e613720c24c817485575dde2ef51b896856"
+              }
+            }
+          }
+        ],
+        "promptFiles": [
+          {
+            "path": "assets/delivery-menu-style-v2/prompts/dinner-ending.json",
+            "sha256": "b19827fc061ae3ea9d6f397f5989e78e962f10980a9f4310008aeff5f417cfcc"
+          }
+        ],
+        "rawGeneratedPaths": [
+          "C:/Users/mechrevo/.codex/generated_images/01a11760-9d97-77c1-924c-cefdf4e6c788/exec-849b7832-19e1-4005-9af4-34b9e9234bf8.png"
+        ],
+        "referenceFiles": [
+          {
+            "path": "D:\\DSH workspace\\sheep-run\\assets\\backgrounds\\menu-pasture-v1.png",
+            "sha256": "de36b068c971bbd24d870b5075a1380e852a4000d71c7807bb0600ce1fbf3749"
+          },
+          {
+            "path": "D:\\DSH workspace\\sheep-run\\assets\\content-update-v2\\delivery\\runtime\\dinner-ending.png",
+            "sha256": "82e8a6923faa70c6b78ef2e356334c11a7a7c8fd3b52483a5db8299d4becdb94"
+          },
+          {
+            "path": "D:\\DSH workspace\\sheep-run\\assets\\skins\\runtime-v1\\white-sheet.png",
+            "sha256": "b1aceac87739a99c77cf97f4083a7e613720c24c817485575dde2ef51b896856"
+          }
+        ]
+      }
+    },
+    {
+      "name": "dinner-postcard",
+      "key": "content-v2-delivery-dinner-postcard",
+      "kind": "postcard",
+      "source": "assets/delivery-menu-style-v2/sources/dinner-ending.png",
+      "sourceSha256": "3898320ec181404f70193793c1b77f67e679a1b85ce3c61196c2da65ef7d23eb",
+      "sourceByteCount": 2035536,
+      "runtime": "assets/delivery-menu-style-v2/runtime/dinner-postcard.png",
+      "runtimeSha256": "90cf61a864c37960df8ee552cc4985129e74777fa29baf318695fe9f90f183ea",
+      "runtimeByteCount": 385064,
+      "width": 640,
+      "height": 360,
+      "inspection": {
+        "sourceFinalFilename": "dinner-ending.png",
+        "visualReview": true,
+        "roadMethod": "full scene uniform cover crop; no road alignment",
+        "reviewedAtUtc": "2026-10-13T14:01:51.463889+00:00"
+      },
+      "originalSize": [
+        1672,
+        941
+      ],
+      "uniformScale": 0.3827751196172249,
+      "uniformScaleApplied": true,
+      "resizedSize": [
+        640,
+        361
+      ],
+      "crop": [
+        0,
+        0,
+        640,
+        360
+      ],
+      "sourceRoadRow": null,
+      "runtimeRoadRow": null,
+      "size": [
+        640,
+        360
+      ],
+      "mode": "RGB",
+      "sampler": "NEAREST",
+      "padding": false,
+      "authoredArt": false,
+      "generation": {
+        "metadata": [
+          {
+            "path": "assets/delivery-menu-style-v2/metadata/dinner-ending.json",
+            "sha256": "d8dd407d6e60aed0fe8627d852318b674a2278b27bc547188fca0440bebcbcc5",
+            "details": {
+              "id": "dinner-ending",
+              "tool": "builtin-image_gen",
+              "originalOutput": "C:/Users/mechrevo/.codex/generated_images/01a11760-9d97-77c1-924c-cefdf4e6c788/exec-849b7832-19e1-4005-9af4-34b9e9234bf8.png",
+              "workspaceSource": "assets/delivery-menu-style-v2/sources/dinner-ending.png",
+              "prompt": "assets/delivery-menu-style-v2/prompts/dinner-ending.json",
+              "referencesAttached": true,
+              "transparent_background": false,
+              "retryOf": "dinner-ending-attempt1.json",
+              "sourceSha256": "3898320ec181404f70193793c1b77f67e679a1b85ce3c61196c2da65ef7d23eb",
+              "sourceDimensions": [
+                1672,
+                941
+              ],
+              "recordedAt": "2026-10-13T14:00:49.213751+00:00",
+              "originalByteIdentical": true,
+              "referenceHashes": {
+                "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png": "de36b068c971bbd24d870b5075a1380e852a4000d71c7807bb0600ce1fbf3749",
+                "D:/DSH workspace/sheep-run/assets/content-update-v2/delivery/runtime/dinner-ending.png": "82e8a6923faa70c6b78ef2e356334c11a7a7c8fd3b52483a5db8299d4becdb94",
+                "D:/DSH workspace/sheep-run/assets/skins/runtime-v1/white-sheet.png": "b1aceac87739a99c77cf97f4083a7e613720c24c817485575dde2ef51b896856"
+              }
+            }
+          }
+        ],
+        "promptFiles": [
+          {
+            "path": "assets/delivery-menu-style-v2/prompts/dinner-ending.json",
+            "sha256": "b19827fc061ae3ea9d6f397f5989e78e962f10980a9f4310008aeff5f417cfcc"
+          }
+        ],
+        "rawGeneratedPaths": [
+          "C:/Users/mechrevo/.codex/generated_images/01a11760-9d97-77c1-924c-cefdf4e6c788/exec-849b7832-19e1-4005-9af4-34b9e9234bf8.png"
+        ],
+        "referenceFiles": [
+          {
+            "path": "D:\\DSH workspace\\sheep-run\\assets\\backgrounds\\menu-pasture-v1.png",
+            "sha256": "de36b068c971bbd24d870b5075a1380e852a4000d71c7807bb0600ce1fbf3749"
+          },
+          {
+            "path": "D:\\DSH workspace\\sheep-run\\assets\\content-update-v2\\delivery\\runtime\\dinner-ending.png",
+            "sha256": "82e8a6923faa70c6b78ef2e356334c11a7a7c8fd3b52483a5db8299d4becdb94"
+          },
+          {
+            "path": "D:\\DSH workspace\\sheep-run\\assets\\skins\\runtime-v1\\white-sheet.png",
+            "sha256": "b1aceac87739a99c77cf97f4083a7e613720c24c817485575dde2ef51b896856"
+          }
+        ]
+      }
+    }
+  ],
+  "runtimeDependsOnExternalPaths": false
+}

@@ -1,0 +1,7 @@
+Use case: stylized-concept.
+Asset type: ONE standalone transparent achievement icon for a cozy pixel-art sheep pasture game.
+Primary request: a cheerful cream-white fluffy sheep standing beside a tiny low wooden pasture gate. A single pink blossom is attached to the gate. The sheep face is clearly visible, warm peach-pink, tiny friendly black eyes, simple brown hooves. Meaning: coming back to the pasture.
+Style: very simple bold flat 2D pixel sprite on a 32 by 32 logical pixel grid enlarged with nearest-neighbor. Large solid cream wool shapes, thick dark orange-brown stepped outline, a few golden wood highlights and green leaves. Sparse chunky square pixel clusters. Strong compact silhouette readable when reduced to 28 pixels.
+Composition: ONE central square cutout grouping, sheep dominant, little wooden gate directly beside it. All elements inside frame with generous genuinely transparent margins. Truly transparent alpha background.
+Avoid: words, letters, digits, captions, logo, watermark, grid, multiple icons, badge border, scenery, ground panel, 3D, gradients, soft shadows, blur, antialiasing, detached decorative particles.
+Output just the single isolated icon.

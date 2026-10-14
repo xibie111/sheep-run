@@ -1,0 +1,23 @@
+{
+  "group": "C",
+  "assets": [
+    {
+      "id": "fifteen-stars",
+      "prompt": "Use case: stylized-concept.\nAsset type: ONE standalone achievement icon for a friendly retro farm sheep game, part of an established cream-white sheep and warm brown outline pixel-art collection.\nScene/backdrop: genuinely transparent alpha background, no backdrop, no scenery.\nStyle/medium: crisp flat 2D pixel art on a 48x48 logical grid enlarged with nearest-neighbor; chunky clean square pixel clusters, limited palette, cream-white wool, peach-pink faces, thick dark orange-brown outlines, warm golden highlights and a few green leaf accents. Only solid flat colors. Cute and cheerful with strong clear silhouettes readable at 28 pixels.\nComposition: one tightly grouped square cutout centered in a square image, every part fully visible, about 12 percent truly transparent margin all around. Keep detail sparse and bold, the sheep is the dominant subject.\nAvoid: text, typography, letters, digits, labels, numbers, logo, watermark, icon border, badge circle, background, ground shadow, detached confetti, blur, anti-aliasing, gradients, glow, 3D, shiny render, complex tiny patterns.\nSubject: A cheerful cream-white sheep wearing a simple little BLUE scarf and carrying ONE small warm-brown lantern in its hoof. Inside the lantern's clear simple square window is ONE golden five-point STAR shape as a solid bright-gold flat color, with no diffuse light or glow. Sheep and lantern directly next to each other and form a single tight compact square silhouette. Friendly tiny smiling peach-pink face. Meaning: starlight runs with me.\nText: none.",
+      "generatedSourcePath": "C:/Users/mechrevo/.codex/generated_images/01a13469-682b-7361-9143-f9cf5a2b592b/exec-d6493f58-609f-42c0-b02f-c00d520045bf.png",
+      "savedPath": "assets/achievement-icons-v3/sources/fifteen-stars.png",
+      "sha256": "da3c3927732dde69b3b4a100175e5a9535f16b66e88a0460ab5cc505c968431b",
+      "tool": "built-in image_gen",
+      "transparentBackground": true
+    },
+    {
+      "id": "thirty-five-stars",
+      "prompt": "Use case: stylized-concept.\nAsset type: ONE standalone achievement icon for a friendly retro farm sheep game, part of an established cream-white sheep and warm brown outline pixel-art collection.\nScene/backdrop: genuinely transparent alpha background, no backdrop, no scenery.\nStyle/medium: crisp flat 2D pixel art on a 48x48 logical grid enlarged with nearest-neighbor; chunky clean square pixel clusters, limited palette, cream-white wool, peach-pink faces, thick dark orange-brown outlines, warm golden highlights and a few green leaf accents. Only solid flat colors. Cute and cheerful with strong clear silhouettes readable at 28 pixels.\nComposition: one tightly grouped square cutout centered in a square image, every part fully visible, about 12 percent truly transparent margin all around. Keep detail sparse and bold, the sheep is the dominant subject.\nAvoid: text, typography, letters, digits, labels, numbers, logo, watermark, icon border, badge circle, background, ground shadow, detached confetti, blur, anti-aliasing, gradients, glow, 3D, shiny render, complex tiny patterns.\nSubject: A happy cream-white sheep hugging ONE simple violet-purple small basket in front of its chest. Exactly THREE chunky golden five-point stars peek clearly above the basket rim, close together, simple flat bright-gold color and warm brown outlines. Basket and sheep form one compact coherent square silhouette. Friendly tiny smiling peach-pink face. Meaning: full of starlight.\nText: none.",
+      "generatedSourcePath": "C:/Users/mechrevo/.codex/generated_images/01a13469-682b-7361-9143-f9cf5a2b592b/exec-2e77af4c-3c46-4511-adde-f37c44ff199e.png",
+      "savedPath": "assets/achievement-icons-v3/sources/thirty-five-stars.png",
+      "sha256": "8be5ab03016a77108e05519b0dbd8ea51b607285779af082baa91815c83bcafc",
+      "tool": "built-in image_gen",
+      "transparentBackground": true
+    }
+  ]
+}

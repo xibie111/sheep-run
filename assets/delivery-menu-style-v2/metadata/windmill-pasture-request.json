@@ -1,0 +1,10 @@
+{
+  "tool": "builtin image_gen",
+  "requested_asset": "windmill-pasture",
+  "transparent_background": false,
+  "referenced_image_paths": [
+    "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+    "D:/DSH workspace/sheep-run/assets/delivery-expansion-v1/chapters/runtime/windmill-pasture.png"
+  ],
+  "prompt_file": "D:/DSH workspace/sheep-run/assets/delivery-menu-style-v2/prompts/windmill-pasture.txt"
+}

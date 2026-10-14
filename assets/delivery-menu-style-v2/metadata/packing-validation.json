@@ -1,0 +1,233 @@
+{
+  "recordedAtUtc": "2026-10-13T14:33:01.071506+00:00",
+  "runtimeFrozen": true,
+  "sourceCount": 16,
+  "runtimeCount": 20,
+  "runtimeBytes": 12884531,
+  "previousRuntimeBytesForSame20Assets": 18105534,
+  "baseline": {
+    "path": "docs/delivery-menu-style-v2/baseline.json",
+    "sha256": "05478211218b3c889bbf3318ba382ea42c090c65b1f74078a981dd162493df17",
+    "oldAssetFiles": 114,
+    "protectedCodeFiles": 9,
+    "allMatched": true
+  },
+  "checks": [
+    {
+      "command": "python tools/delivery-menu-style-v2/pack.py",
+      "exitCode": 0,
+      "result": "16 final sources; 20 RGB runtime PNGs; complete; baseline 114 old assets and 9 protected code files matched before and after"
+    },
+    {
+      "command": "npm test -- src/delivery/DeliveryMenuStyleAssets.test.ts src/delivery/DeliveryExpansionArt.test.ts src/delivery/DeliveryV2Assets.test.ts",
+      "exitCode": 0,
+      "testFiles": 2,
+      "testsPassed": 70,
+      "newTestsPassed": 6,
+      "note": "DeliveryV2Assets.test.ts does not exist; only the two present test files ran"
+    },
+    {
+      "command": "npm run typecheck",
+      "exitCode": 0
+    },
+    {
+      "command": "python tools/delivery-menu-style-v2/pack.py --help",
+      "exitCode": 0,
+      "result": "CLI exposes --partial; no additional runtime writes after freezing"
+    },
+    {
+      "command": "view_image assets/delivery-menu-style-v2/contact-sheet.png",
+      "result": "Inspected all 20 crops; four theme rows, five cells per row; principal actors/buildings remain framed; roads unobstructed"
+    }
+  ],
+  "runtimePngChangesAfterFreeze": false,
+  "metadataOnlyFollowup": "Normalized dinner originalOutput and referenceHashes into generation provenance after first full pack.",
+  "notPerformed": [
+    "Web build",
+    "Production browser verification",
+    "Android build",
+    "Phone verification"
+  ],
+  "runtimeComparison": [
+    {
+      "name": "windmill-pasture",
+      "oldRuntime": "assets/delivery-expansion-v1/chapters/runtime/windmill-pasture.png",
+      "oldBytes": 990913,
+      "oldSha256": "7841a5f9a442e9569f06b95247bd6e7d440394d8c9a860f359723f4f711a3a18",
+      "newRuntime": "assets/delivery-menu-style-v2/runtime/windmill-pasture.png",
+      "newBytes": 712486,
+      "newSha256": "9530b57093eacebf9b5e6502ab52b676efe6ffc08179ea9ec766f5b85d4267cd"
+    },
+    {
+      "name": "windmill-middle",
+      "oldRuntime": "assets/delivery-expansion-v1/chapters/runtime/windmill-middle.png",
+      "oldBytes": 993978,
+      "oldSha256": "6cf2ea900baf0334dd468268b794d9c7f2ae2bab853de17cd62655f74d09d06b",
+      "newRuntime": "assets/delivery-menu-style-v2/runtime/windmill-middle.png",
+      "newBytes": 714117,
+      "newSha256": "2d98d6816eac7ca35194264f63f57f2bd94ef094099821fb69406c04866ec781"
+    },
+    {
+      "name": "windmill-destination",
+      "oldRuntime": "assets/delivery-expansion-v1/chapters/runtime/windmill-destination.png",
+      "oldBytes": 947115,
+      "oldSha256": "1ca1e18423854b32e055431cfd101138ed7b80cc6a50554aedd620382d1e94a1",
+      "newRuntime": "assets/delivery-menu-style-v2/runtime/windmill-destination.png",
+      "newBytes": 749792,
+      "newSha256": "a95ce7534920385b0ac4b01f3c237c09b44f04ff7f4e5707e2e2f094a3c3dca9"
+    },
+    {
+      "name": "windmill-ending",
+      "oldRuntime": "assets/delivery-expansion-v1/chapters/runtime/windmill-ending.png",
+      "oldBytes": 1071947,
+      "oldSha256": "fabfcf8b5f87ff6d79eca65c9a755e2f878861d05f408d9eceafdcafe9ed6518",
+      "newRuntime": "assets/delivery-menu-style-v2/runtime/windmill-ending.png",
+      "newBytes": 823165,
+      "newSha256": "c44e208ebd2dd9f47090b2627ecf565315217b1ea321eeb35d6ef260d0c501c8"
+    },
+    {
+      "name": "windmill-postcard",
+      "oldRuntime": "assets/delivery-expansion-v1/chapters/runtime/windmill-postcard.png",
+      "oldBytes": 532083,
+      "oldSha256": "e210f10b781cb5168ce472206b2d5ac97fb872c7cf5856a1f4e066b4dcf72160",
+      "newRuntime": "assets/delivery-menu-style-v2/runtime/windmill-postcard.png",
+      "newBytes": 412513,
+      "newSha256": "f22b91302325afaebf4c8b72bfc31edae125c875776138140b80d85602438477"
+    },
+    {
+      "name": "rain-pasture",
+      "oldRuntime": "assets/delivery-expansion-v1/chapters/runtime/rain-pasture.png",
+      "oldBytes": 938365,
+      "oldSha256": "e7bbf03ba04008428de775986bf180558c49d09477bc4fc37dfe588ab12c5a60",
+      "newRuntime": "assets/delivery-menu-style-v2/runtime/rain-pasture.png",
+      "newBytes": 584125,
+      "newSha256": "4c332eec94bba5967b1a9a748ed6e0a08ffab48f9fbb318df7eed2339b7e16db"
+    },
+    {
+      "name": "rain-middle",
+      "oldRuntime": "assets/delivery-expansion-v1/chapters/runtime/rain-middle.png",
+      "oldBytes": 1003527,
+      "oldSha256": "41b4c4cde559e2fff88c8ad246ecdedb2e2c62fa0e328aa81189075b23774ef8",
+      "newRuntime": "assets/delivery-menu-style-v2/runtime/rain-middle.png",
+      "newBytes": 706022,
+      "newSha256": "5efe01fe737e1bcade683777425b0ec9b03c1842f2f5e1088acdcbbffc40b655"
+    },
+    {
+      "name": "rain-destination",
+      "oldRuntime": "assets/delivery-expansion-v1/chapters/runtime/rain-destination.png",
+      "oldBytes": 991441,
+      "oldSha256": "1adbe1e586a9f66f9e2194849e2d30a4348eff7e963afb0689c5368036a564b9",
+      "newRuntime": "assets/delivery-menu-style-v2/runtime/rain-destination.png",
+      "newBytes": 743024,
+      "newSha256": "41ac2435c62d391db03113ac66afb1317165c1a0c89bd66bce42495e8b3ceab3"
+    },
+    {
+      "name": "rain-ending",
+      "oldRuntime": "assets/delivery-expansion-v1/chapters/runtime/rain-ending.png",
+      "oldBytes": 922702,
+      "oldSha256": "987e78f869a33beb258be5bdff89476ba514230ec740ccdc7f55fec6d0e2422d",
+      "newRuntime": "assets/delivery-menu-style-v2/runtime/rain-ending.png",
+      "newBytes": 794254,
+      "newSha256": "9b19b7236307a61c68d7229dc4b01abdf858e3a534bf3c16c1d2ac1709db4881"
+    },
+    {
+      "name": "rain-postcard",
+      "oldRuntime": "assets/delivery-expansion-v1/chapters/runtime/rain-postcard.png",
+      "oldBytes": 468376,
+      "oldSha256": "b0aaaadb7fb4c8b312a8cbfd985e82202cc1cbb1d3a8d1c1c82d4812e380aa4f",
+      "newRuntime": "assets/delivery-menu-style-v2/runtime/rain-postcard.png",
+      "newBytes": 404565,
+      "newSha256": "03fea09cdd31023305b91dbb6db4edc22c26281ebd5c0307f830b4387e635e4c"
+    },
+    {
+      "name": "lighthouse-pasture",
+      "oldRuntime": "assets/delivery-expansion-v1/chapters/runtime/lighthouse-pasture.png",
+      "oldBytes": 942437,
+      "oldSha256": "e48351e38bd8eacea4ecd72a5111a1b2ebbc8afa980af88a3e08721e4b0e0786",
+      "newRuntime": "assets/delivery-menu-style-v2/runtime/lighthouse-pasture.png",
+      "newBytes": 685570,
+      "newSha256": "c81208427b4e6471e83c13241670256dc4dd3a344bf2cccd485acd77e29eb846"
+    },
+    {
+      "name": "lighthouse-middle",
+      "oldRuntime": "assets/delivery-expansion-v1/chapters/runtime/lighthouse-middle.png",
+      "oldBytes": 922966,
+      "oldSha256": "a536bffa827b3a6d1b1220ba967e217ba2e92d7f62d8e650b14dd554a4639422",
+      "newRuntime": "assets/delivery-menu-style-v2/runtime/lighthouse-middle.png",
+      "newBytes": 603410,
+      "newSha256": "52e325f9b04c615aaf9d25cae164b7e599d03a3c199e2d9b48c2ef092aa13c68"
+    },
+    {
+      "name": "lighthouse-destination",
+      "oldRuntime": "assets/delivery-expansion-v1/chapters/runtime/lighthouse-destination.png",
+      "oldBytes": 822750,
+      "oldSha256": "6b145b4f3267a11530b0b7da564f83855066312ac0e87cb2846b93a01b8a112f",
+      "newRuntime": "assets/delivery-menu-style-v2/runtime/lighthouse-destination.png",
+      "newBytes": 650927,
+      "newSha256": "3d1d780c1a19ebabc630c3881fc6791bc3b91d8d6005e3aa0ca160a047c25a3f"
+    },
+    {
+      "name": "lighthouse-ending",
+      "oldRuntime": "assets/delivery-expansion-v1/chapters/runtime/lighthouse-ending.png",
+      "oldBytes": 944462,
+      "oldSha256": "ded28f5225c69ad8e677c03f2d0a3671787dccb572801b9765db1adb236f8466",
+      "newRuntime": "assets/delivery-menu-style-v2/runtime/lighthouse-ending.png",
+      "newBytes": 677536,
+      "newSha256": "532b79a01274e7ba51919d7119457c24f43fd9d5f09b1ff8cbfa1bc6c2a854d1"
+    },
+    {
+      "name": "lighthouse-postcard",
+      "oldRuntime": "assets/delivery-expansion-v1/chapters/runtime/lighthouse-postcard.png",
+      "oldBytes": 466887,
+      "oldSha256": "9d5bed116a9c2569f41bdee46991e7db02ff2b3b1fdd7cbf07183424351a5936",
+      "newRuntime": "assets/delivery-menu-style-v2/runtime/lighthouse-postcard.png",
+      "newBytes": 342590,
+      "newSha256": "39d9c312898e1de38a087655763f3ec2cc035c1c909b59491bdea0917b791fc4"
+    },
+    {
+      "name": "dinner-dusk-pasture",
+      "oldRuntime": "assets/content-update-v2/delivery/runtime/dusk-pasture.png",
+      "oldBytes": 974811,
+      "oldSha256": "506b44771b83fc5fbd51a888a2128954f721ac62581a8fd701d841ffa9b4d048",
+      "newRuntime": "assets/delivery-menu-style-v2/runtime/dinner-dusk-pasture.png",
+      "newBytes": 697384,
+      "newSha256": "a3c76a12fa58a13a47e24fc7e67ee1a46043b9b7988ef87608faa783974ffd9c"
+    },
+    {
+      "name": "dinner-field",
+      "oldRuntime": "assets/content-update-v2/delivery/runtime/field.png",
+      "oldBytes": 989801,
+      "oldSha256": "2e44706d5c6f2e8175e620802c6e6464731606767081a816f87e33d8655e3b7f",
+      "newRuntime": "assets/delivery-menu-style-v2/runtime/dinner-field.png",
+      "newBytes": 715474,
+      "newSha256": "277753dec7970ded08e312ab16632a436b7b38486e852ad920da2d8aa0a5ac12"
+    },
+    {
+      "name": "dinner-cottage",
+      "oldRuntime": "assets/content-update-v2/delivery/runtime/cottage.png",
+      "oldBytes": 1029791,
+      "oldSha256": "199bfb3b00e9a1983ba54ef149b882aae75b20017915e7c21825a68e3a3e6f11",
+      "newRuntime": "assets/delivery-menu-style-v2/runtime/dinner-cottage.png",
+      "newBytes": 719219,
+      "newSha256": "771fbc770cf83eda5cba7e757932077fa13d684948af705fe974da5e9b9e5680"
+    },
+    {
+      "name": "dinner-ending",
+      "oldRuntime": "assets/content-update-v2/delivery/runtime/dinner-ending.png",
+      "oldBytes": 1075591,
+      "oldSha256": "82e8a6923faa70c6b78ef2e356334c11a7a7c8fd3b52483a5db8299d4becdb94",
+      "newRuntime": "assets/delivery-menu-style-v2/runtime/dinner-ending.png",
+      "newBytes": 763294,
+      "newSha256": "11837a50ec32b152f0d1235a60565a8ca91a51746e5baf040c8ae9155f242e90"
+    },
+    {
+      "name": "dinner-postcard",
+      "oldRuntime": "assets/content-update-v2/delivery/runtime/dinner-postcard.png",
+      "oldBytes": 1075591,
+      "oldSha256": "82e8a6923faa70c6b78ef2e356334c11a7a7c8fd3b52483a5db8299d4becdb94",
+      "newRuntime": "assets/delivery-menu-style-v2/runtime/dinner-postcard.png",
+      "newBytes": 385064,
+      "newSha256": "90cf61a864c37960df8ee552cc4985129e74777fa29baf318695fe9f90f183ea"
+    }
+  ]
+}

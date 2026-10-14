@@ -1,0 +1,177 @@
+{
+  "schemaVersion": 1,
+  "runtimeRoadRow": 389,
+  "backgroundSize": [
+    960,
+    540
+  ],
+  "postcardSize": [
+    640,
+    360
+  ],
+  "sampling": "NEAREST",
+  "sourceFilesAreImmutable": true,
+  "roadRowIsZeroBased": true,
+  "sources": {
+    "windmill-pasture": {
+      "sourceSha256": "215477ab52028a47119d4784c4ffb3b4f55e0a455ca214f3f2b139e94c1de002",
+      "roadRow": 680,
+      "inspection": {
+        "sourceFinalFilename": "windmill-pasture.png",
+        "visualReview": true,
+        "roadMethod": "first >=99 percent sampled full-width tan road row confirmed against source view",
+        "reviewedAtUtc": "2026-10-13T14:01:51.424791+00:00"
+      }
+    },
+    "windmill-middle": {
+      "sourceSha256": "ee4a523ac126cbfa3dca73d10357911a241dd403b2955b8f5e86c08da95237ef",
+      "roadRow": 693,
+      "inspection": {
+        "sourceFinalFilename": "windmill-middle.png",
+        "visualReview": true,
+        "roadMethod": "first >=99 percent sampled full-width tan road row confirmed against source view",
+        "reviewedAtUtc": "2026-10-13T14:01:51.427627+00:00"
+      }
+    },
+    "windmill-destination": {
+      "sourceSha256": "1d61e1d13e9a32e453b099e581842eb9eb2d85e56fad2853c485b1d49a21f1d2",
+      "roadRow": 671,
+      "inspection": {
+        "sourceFinalFilename": "windmill-destination.png",
+        "visualReview": true,
+        "roadMethod": "first >=99 percent sampled full-width tan road row confirmed against source view",
+        "reviewedAtUtc": "2026-10-13T14:01:51.431174+00:00"
+      }
+    },
+    "windmill-ending": {
+      "sourceSha256": "6e9e846178e57a06f43e081ee030748f551d51396914ee6e72d9d4e79dc189eb",
+      "roadRow": null,
+      "inspection": {
+        "sourceFinalFilename": "windmill-ending.png",
+        "visualReview": true,
+        "roadMethod": "full scene uniform cover crop; no road alignment",
+        "reviewedAtUtc": "2026-10-13T14:01:51.433205+00:00"
+      }
+    },
+    "rain-pasture": {
+      "sourceSha256": "d13b83a31b2af7032952323bdadec96350179d09c32d7d5ecc5906a410bb985e",
+      "roadRow": 657,
+      "inspection": {
+        "sourceFinalFilename": "rain-pasture.png",
+        "visualReview": true,
+        "roadMethod": "first >=99 percent sampled full-width tan road row confirmed against source view",
+        "reviewedAtUtc": "2026-10-13T14:01:51.435250+00:00"
+      }
+    },
+    "rain-middle": {
+      "sourceSha256": "16928d1715090e5f1ff48c25341ea5849694ae1308302fd660983bd490b33cd7",
+      "roadRow": 638,
+      "inspection": {
+        "sourceFinalFilename": "rain-middle.png",
+        "visualReview": true,
+        "roadMethod": "first >=99 percent sampled full-width tan road row confirmed against source view",
+        "reviewedAtUtc": "2026-10-13T14:01:51.438254+00:00"
+      }
+    },
+    "rain-destination": {
+      "sourceSha256": "5a3845502437533410d6cd657b57111260d047a8af807ae44361162f596a7d1b",
+      "roadRow": 692,
+      "inspection": {
+        "sourceFinalFilename": "rain-destination.png",
+        "visualReview": true,
+        "roadMethod": "first >=99 percent sampled full-width tan road row confirmed against source view",
+        "reviewedAtUtc": "2026-10-13T14:01:51.441368+00:00"
+      }
+    },
+    "rain-ending": {
+      "sourceSha256": "4c8ae75922619d33a7f9620a896696d20769ce509df89221f3c2b81181b15e85",
+      "roadRow": null,
+      "inspection": {
+        "sourceFinalFilename": "rain-ending.png",
+        "visualReview": true,
+        "roadMethod": "full scene uniform cover crop; no road alignment",
+        "reviewedAtUtc": "2026-10-13T14:01:51.443813+00:00"
+      }
+    },
+    "lighthouse-pasture": {
+      "sourceSha256": "6c0297f7cbcbedba6368f45b4236a71b2bfee9d187d586eeaeb00e7eb4407a6f",
+      "roadRow": 682,
+      "inspection": {
+        "sourceFinalFilename": "lighthouse-pasture.png",
+        "visualReview": true,
+        "roadMethod": "first >=99 percent sampled full-width tan road row confirmed against source view",
+        "reviewedAtUtc": "2026-10-13T14:01:51.446488+00:00"
+      }
+    },
+    "lighthouse-middle": {
+      "sourceSha256": "31b3da7c3f0f76a9ced9318372c200b0a695f8eb510ac19369ff737ed3f54acb",
+      "roadRow": 683,
+      "inspection": {
+        "sourceFinalFilename": "lighthouse-middle.png",
+        "visualReview": true,
+        "roadMethod": "first >=99 percent sampled full-width tan road row confirmed against source view",
+        "reviewedAtUtc": "2026-10-13T14:01:51.448112+00:00"
+      }
+    },
+    "lighthouse-destination": {
+      "sourceSha256": "a0299f912fb6ebfca5e383f08302e7ca17930fdde8b915bc1ce64667f484c72b",
+      "roadRow": 686,
+      "inspection": {
+        "sourceFinalFilename": "lighthouse-destination.png",
+        "visualReview": true,
+        "roadMethod": "first >=99 percent sampled full-width tan road row confirmed against source view",
+        "reviewedAtUtc": "2026-10-13T14:01:51.450142+00:00"
+      }
+    },
+    "lighthouse-ending": {
+      "sourceSha256": "25a85a7f79f8dca596895b22a8cf584249c6c95b4ee576539a38078f195f724c",
+      "roadRow": null,
+      "inspection": {
+        "sourceFinalFilename": "lighthouse-ending.png",
+        "visualReview": true,
+        "roadMethod": "full scene uniform cover crop; no road alignment",
+        "reviewedAtUtc": "2026-10-13T14:01:51.453224+00:00"
+      }
+    },
+    "dinner-dusk-pasture": {
+      "sourceSha256": "8dbb5d43f81c517f8f68f658fd2919d656867b061f4c179d1a741809ed256725",
+      "roadRow": 680,
+      "inspection": {
+        "sourceFinalFilename": "dinner-dusk-pasture.png",
+        "visualReview": true,
+        "roadMethod": "first >=99 percent sampled full-width tan road row confirmed against source view",
+        "reviewedAtUtc": "2026-10-13T14:01:51.455744+00:00"
+      }
+    },
+    "dinner-field": {
+      "sourceSha256": "98f6009ef991486fc576762c0d6a73856ec4e22359d12e44d75155fa3d1f286c",
+      "roadRow": 688,
+      "inspection": {
+        "sourceFinalFilename": "dinner-field.png",
+        "visualReview": true,
+        "roadMethod": "first >=99 percent sampled full-width tan road row confirmed against source view",
+        "reviewedAtUtc": "2026-10-13T14:01:51.458450+00:00"
+      }
+    },
+    "dinner-cottage": {
+      "sourceSha256": "a5db020e312133b26473882adf40f6eccf638d999e72be86a4566ca4c03b05e4",
+      "roadRow": 694,
+      "inspection": {
+        "sourceFinalFilename": "dinner-cottage.png",
+        "visualReview": true,
+        "roadMethod": "first >=99 percent sampled full-width tan road row confirmed against source view",
+        "reviewedAtUtc": "2026-10-13T14:01:51.460553+00:00"
+      }
+    },
+    "dinner-ending": {
+      "sourceSha256": "3898320ec181404f70193793c1b77f67e679a1b85ce3c61196c2da65ef7d23eb",
+      "roadRow": null,
+      "inspection": {
+        "sourceFinalFilename": "dinner-ending.png",
+        "visualReview": true,
+        "roadMethod": "full scene uniform cover crop; no road alignment",
+        "reviewedAtUtc": "2026-10-13T14:01:51.463889+00:00"
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "tool": "built-in image_gen",
+  "revision": "menu-style",
+  "records": [
+    {
+      "id": "windmill-photo-destination",
+      "source_path": "sources/windmill-photo-destination.png",
+      "original_path": "C:/Users/mechrevo/.codex/generated_images/01a11778-9c23-7240-b06f-8e9599a973dc/exec-cf4bc9db-eecb-4ff8-b731-a21d45cd280d.png",
+      "prompt_path": "prompts/windmill-photo-destination.txt",
+      "referenced_image_paths": [
+        "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+        "D:/DSH workspace/sheep-run/assets/resident-stories-v1/sources/windmill-photo-destination.png"
+      ],
+      "transparent_background": false,
+      "visual_review": "Direct main-menu style: flat simple farm shapes and consistent pixel clusters; unobstructed lane."
+    },
+    {
+      "id": "windmill-thanks-destination",
+      "source_path": "sources/windmill-thanks-destination.png",
+      "original_path": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11778-9c23-7240-b06f-8e9599a973dc\\exec-7ac173fa-e1bc-4cdb-a5e8-197d58bdacdf.png",
+      "prompt_path": "prompts/windmill-thanks-destination.txt",
+      "referenced_image_paths": [
+        "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+        "D:/DSH workspace/sheep-run/assets/resident-stories-v1/sources/windmill-thanks-destination.png"
+      ],
+      "transparent_background": false
+    },
+    {
+      "id": "riverside-thanks-destination",
+      "source_path": "sources/riverside-thanks-destination.png",
+      "original_path": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11778-9c23-7240-b06f-8e9599a973dc\\exec-68e6e90b-8472-4053-a5ab-ba29d61b6e7e.png",
+      "prompt_path": "prompts/riverside-thanks-destination.txt",
+      "referenced_image_paths": [
+        "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+        "D:/DSH workspace/sheep-run/assets/resident-stories-v1/sources/riverside-thanks-destination.png"
+      ],
+      "transparent_background": false
+    },
+    {
+      "id": "riverside-sunshine-destination",
+      "source_path": "sources/riverside-sunshine-destination.png",
+      "original_path": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11778-9c23-7240-b06f-8e9599a973dc\\exec-0996f4d4-4525-4b66-b254-2c8f964462f6.png",
+      "prompt_path": "prompts/riverside-sunshine-destination.txt",
+      "referenced_image_paths": [
+        "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+        "D:/DSH workspace/sheep-run/assets/resident-stories-v1/sources/riverside-sunshine-destination.png"
+      ],
+      "transparent_background": false
+    },
+    {
+      "id": "lighthouse-old-letter-destination",
+      "source_path": "sources/lighthouse-old-letter-destination.png",
+      "original_path": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11778-9c23-7240-b06f-8e9599a973dc\\exec-839d4dfe-0eb7-401a-b8db-2ffedc3b6cc0.png",
+      "prompt_path": "prompts/lighthouse-old-letter-destination.txt",
+      "referenced_image_paths": [
+        "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+        "D:/DSH workspace/sheep-run/assets/resident-stories-v1/sources/lighthouse-old-letter-destination.png"
+      ],
+      "transparent_background": false
+    },
+    {
+      "id": "lighthouse-gathering-destination",
+      "source_path": "sources/lighthouse-gathering-destination.png",
+      "original_path": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11778-9c23-7240-b06f-8e9599a973dc\\exec-e2ac8db5-ad9a-49a7-896b-b7cf34270834.png",
+      "prompt_path": "prompts/lighthouse-gathering-destination.txt",
+      "referenced_image_paths": [
+        "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+        "D:/DSH workspace/sheep-run/assets/resident-stories-v1/sources/lighthouse-gathering-destination.png"
+      ],
+      "transparent_background": false
+    }
+  ]
+}

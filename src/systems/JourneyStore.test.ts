@@ -28,7 +28,7 @@ describe("cosmetic achievements",()=>{
     const f=fixture(),notify=vi.fn(),run=new JourneyRun(f.store,notify);
     for(let i=0;i<9;i++)run.star();expect(f.store.load().achieved["ten-stars"]).toBeUndefined();run.star();expect(notify).toHaveBeenCalledWith(["ten-stars"]);
     for(let i=0;i<19;i++)run.passed();expect(f.store.load().achieved["twenty-obstacles"]).toBeUndefined();run.passed();expect(notify).toHaveBeenCalledWith(["twenty-obstacles"]);
-    run.finish(false);expect(run.finish(true)).toEqual(["ten-stars","twenty-obstacles","first-run"]);expect(f.store.load().runs).toBe(1);expect(f.store.load().record).toBe(false);
+    run.finish(false);expect(run.finish(true)).toEqual(["five-stars","ten-stars","five-obstacles","ten-obstacles","twenty-obstacles","first-run"]);expect(f.store.load().runs).toBe(1);expect(f.store.load().record).toBe(false);
     run.star();run.passed();run.summon();expect(f.store.load().summons).toBe(0);
   });
   it("resets per-run goals; exit does not finish a run; an abandoned run keeps already observed achievements",()=>{
@@ -38,7 +38,7 @@ describe("cosmetic achievements",()=>{
   it("counts each actual summon, unlocks at one and five, records all visited seasons, and dates never change",()=>{
     const f=fixture();expect(f.store.summoned()).toEqual(["first-friend"]);for(let i=0;i<3;i++)expect(f.store.summoned()).toEqual([]);expect(f.store.summoned()).toEqual(["five-friends"]);
     const run=new JourneyRun(f.store);run.visit("spring");run.visit("spring");run.visit("summer");run.visit("autumn");expect(f.store.load().achieved["four-seasons"]).toBeUndefined();run.visit("winter");
-    expect(run.finish(true)).toEqual(["four-seasons","first-run","first-record"]);expect(run.finish(true)).toEqual(["four-seasons","first-run","first-record"]);
+    expect(run.finish(true)).toEqual(["two-seasons","three-seasons","four-seasons","first-run","first-record"]);expect(run.finish(true)).toEqual(["two-seasons","three-seasons","four-seasons","first-run","first-record"]);
     const later=new JourneyStore(()=>f.storage,()=>"2026-12-31");later.summoned();later.finished(true);expect(later.load().achieved["first-record"]).toBe("2026-10-11");
   });
   it("has clear progress, read markers only for unlocked items, and no wall-clock timer or random consumption",()=>{
@@ -46,7 +46,7 @@ describe("cosmetic achievements",()=>{
     const raw=JSON.stringify(f.store.load());expect(JSON.stringify(f.store.load())).toBe(raw);
     f.store.readAchievement("first-friend");f.store.readReward("spring");expect(f.store.load().readAchievements).toEqual([]);expect(f.store.load().readRewards).toEqual([]);
     run.summon();f.store.readAchievement("first-friend");expect(f.store.load().readAchievements).toEqual(["first-friend"]);
-    expect(achievementProgress(f.store.load(),"five-friends")).toBe(1);expect(ACHIEVEMENTS).toHaveLength(20);expect(random).not.toHaveBeenCalled();expect(timers).not.toHaveBeenCalled();random.mockRestore();timers.mockRestore();
+    expect(achievementProgress(f.store.load(),"five-friends")).toBe(1);expect(ACHIEVEMENTS).toHaveLength(44);expect(random).not.toHaveBeenCalled();expect(timers).not.toHaveBeenCalled();random.mockRestore();timers.mockRestore();
   });
   it("merges current storage and cannot erase other unlocked stamps or read letters",()=>{
     const f=fixture(),other=new JourneyStore(()=>f.storage,()=>"2026-10-12");f.store.summoned();other.reconcile(["white"],COLLECTION_BADGES.slice(0,3).map(b=>b.id));other.readReward("spring");
@@ -104,15 +104,20 @@ describe("extended journal milestones",()=>{
     expect(f.store.load().achieved["twenty-five-stars"]).toBe("2026-10-11");expect(f.store.load().runs).toBe(1);
   });
 
-  it("backfills all new goals from a valid old v1 journal without changing earlier dates, reads, schema or economy",()=>{
+  it("backfills only satisfied goals from a valid eight-stamp v1 journal without changing earlier dates, reads, schema or economy",()=>{
     const f=fixture(),originalIds=["first-run","first-friend","five-friends","ten-stars","twenty-obstacles","first-record","four-seasons","five-skins"];
     const old={version:1,runs:20,summons:20,stars:50,obstacles:50,record:true,seasons:["spring","summer","autumn","winter"],skins:10,
       achieved:Object.fromEntries(originalIds.map(id=>[id,"2026-09-30"])),
       rewards:{spring:"2026-09-30",summer:"2026-09-30",autumn:"2026-09-30",winter:"2026-09-30",all:"2026-09-30"},
       readAchievements:originalIds,readRewards:["spring","all"]};
     f.values.set(JOURNEY_STORAGE_KEY,JSON.stringify(old));expect(f.store.load().saveFailed).toBe(false);
-    const newly=f.store.reconcile([],[]);expect(newly).toHaveLength(12);
-    expect(new Set(newly)).toEqual(new Set(ACHIEVEMENTS.filter(a=>!originalIds.includes(a.id)).map(a=>a.id)));
+    const newly=f.store.reconcile([],[]);expect(newly).toHaveLength(23);
+    expect(new Set(newly)).toEqual(new Set([
+      "five-runs","twenty-runs","twenty-friends","twenty-five-stars","fifty-stars","fifty-obstacles","ten-skins",
+      "spring-collector","summer-collector","autumn-collector","winter-collector","all-collections","two-seasons",
+      "three-runs","ten-runs","ten-friends","five-stars","fifteen-stars","thirty-five-stars",
+      "five-obstacles","ten-obstacles","thirty-five-obstacles","three-seasons",
+    ]));
     const next=f.store.load();for(const id of originalIds)expect(next.achieved[id as keyof typeof next.achieved]).toBe("2026-09-30");
     expect(next.readAchievements).toEqual(old.readAchievements);expect(next.readRewards).toEqual(old.readRewards);expect(next.rewards).toEqual(old.rewards);
     const persisted=JSON.parse(f.values.get(JOURNEY_STORAGE_KEY)!);
@@ -151,12 +156,12 @@ describe("extended journal milestones",()=>{
   });
 
   it("caps every displayed achievement at its goal even when lifetime or single-run records exceed it",()=>{
-    const f=fixture();for(let i=0;i<24;i++){f.store.finished(true);f.store.summoned();}
-    f.store.runBest(80,80);for(const season of ["spring","summer","autumn","winter"] as const)f.store.season(season);
+    const f=fixture();for(let i=0;i<260;i++)f.store.finished(true);for(let i=0;i<110;i++)f.store.summoned();
+    f.store.runBest(110,160);for(const season of ["spring","summer","autumn","winter"] as const)f.store.season(season);
     f.store.reconcile(SHEEP_SKINS.map(s=>s.id),COLLECTION_BADGES.map(b=>b.id));
     const snapshot=f.store.load();
     for(const a of ACHIEVEMENTS)expect(achievementProgress(snapshot,a.id),a.id).toBe(a.goal);
-    expect(Object.keys(snapshot.achieved)).toHaveLength(20);
+    expect(Object.keys(snapshot.achieved)).toHaveLength(44);
   });
 
   it("merges stamps from a newly completed collection into one run summary and ignores later collection callbacks after cleanup",()=>{

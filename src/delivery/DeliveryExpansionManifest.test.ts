@@ -13,7 +13,13 @@ describe('delivery expansion atomic preload contract',()=>{
   it('uses 36 separate versioned runtime assets, never reference screens or generated paths',()=>{
     expect(DELIVERY_EXPANSION_RUNTIME_ASSETS).toHaveLength(36);
     expect(new Set(DELIVERY_EXPANSION_RUNTIME_ASSETS.map(asset=>asset.key)).size).toBe(36);
-    for(const asset of DELIVERY_EXPANSION_RUNTIME_ASSETS){expect(asset.url).toContain('/assets/delivery-expansion-v1/');expect(asset.url).toContain('/runtime/');expect(asset.url).not.toMatch(/reference|sources|generated_images/);}
+    const restyledChapterKeys = new Set(['windmill', 'rain', 'lighthouse'].flatMap(theme =>
+      ['pasture', 'middle', 'destination', 'ending', 'postcard'].map(stage => `delivery-expansion-${theme}-${stage}`)));
+    for(const asset of DELIVERY_EXPANSION_RUNTIME_ASSETS){
+      expect(asset.url).toContain(restyledChapterKeys.has(asset.key)
+        ? '/assets/delivery-menu-style-v2/runtime/' : '/assets/delivery-expansion-v1/');
+      expect(asset.url).toContain('/runtime/');expect(asset.url).not.toMatch(/reference|sources|generated_images/);
+    }
   });
   it.each(DELIVERY_EXPANSION_RUNTIME_ASSETS.map(asset=>asset.key))('reports absent or wrong dimensions for %s and refuses partial preparation',key=>{
     const absent=textures(key),corrupt=textures('',key);

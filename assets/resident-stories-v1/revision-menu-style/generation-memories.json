@@ -1,0 +1,100 @@
+{
+  "records": [
+    {
+      "slug": "ahe-keepsake",
+      "prompt": "Use case: style-transfer.\nAsset type: full-bleed 16:9 keepsake illustration for the existing Sheep Run pixel-art game.\nReference roles: Image 1 (menu-pasture-v1.png) is the ONLY style, palette, pixel-density and rendering reference. Image 2 (old ahe-keepsake.png) is ONLY a composition/story/character identity reference; discard its high-definition scenic rendering and fine textures.\nPrimary request: redraw the windmill picnic memory so it belongs to the exact same simple cheerful 2D pixel-cartoon world as Image 1. Build the WHOLE image on an obvious consistent coarse 480x270 logical pixel grid, then present it enlarged without smoothing. Large simple flat color clusters and deliberately stepped pixel edges throughout the sheep AND the landscape. Only two or three broad stepped shading tones per material, similar blue sky, cream cloud clusters, rounded green hills, yellow-green pasture and warm orange-brown wood as the menu. The scene must look designed for the 480x270 game, not a high-resolution painting with a pixel filter.\nPreserve the story composition: two friendly cream-colored quadruped sheep in the foreground on a red-and-cream picnic blanket; the plain little courier sheep on the left and Ahe on the right wearing the recognizable straw hat with green band and green scarf. Preserve their peach faces, tiny dark eyes, brown ears, short brown hooves, rounded low horizontal wool bodies and readable dark-brown stepped outlines. A small low picnic table with a basket and a simple vase of flowers is to their right. Keep the windmill behind them on the right, a broad tree canopy framing the left, and a simple distant blue lake and green hills.\nSimplify all scenery to menu-like broad shapes. Omit the distant architectural city, tiny stonework, individual wheat stalks, intricate foliage, detailed wood grain, fine grass noise, complicated weaving, tiny petals and realistic water reflections. Render the picnic basket, blanket checks, flowers, tree and windmill in a few clean chunky clusters, consistent in pixel scale with the menu reference. Keep all main figures fully visible with comfortable space above their hats and below their feet.\nLighting: bright sunny, soft and friendly through flat colors only; no cinematic glow, volumetric light, realistic 3D shading, material rendering, photographic atmosphere or fine dithering.\nNo words, letters, numbers, UI, logos, border, watermark, photo frame or gradients. Opaque full canvas. Return one finished wide landscape image.",
+      "tool": "builtin image_gen",
+      "transparent_background": false,
+      "style_reference": "assets/backgrounds/menu-pasture-v1.png",
+      "composition_identity_reference": "assets/resident-stories-v1/sources/ahe-keepsake.png",
+      "source_path": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11779-e35b-7c43-a9d4-9561c862cf43\\exec-a766c846-d1d2-4be4-bef9-8c8ada516da3.png",
+      "project_source": "assets/resident-stories-v1/revision-menu-style/sources/ahe-keepsake.png",
+      "tool_output_hint": "Generated images are saved to C:\\Users\\mechrevo\\.codex\\generated_images\\01a11779-e35b-7c43-a9d4-9561c862cf43 as C:\\Users\\mechrevo\\.codex\\generated_images\\01a11779-e35b-7c43-a9d4-9561c862cf43\\exec-a766c846-d1d2-4be4-bef9-8c8ada516da3.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "visual_review": "Parent approved menu-style match. Both quadruped sheep, Ahe straw hat/green scarf and windmill picnic preserved; simplified open-sky mountain/lake/pasture rendering replaces intricate city and wheat details.",
+      "file_verification": {
+        "width": 1672,
+        "height": 941,
+        "mode": "RGB",
+        "sha256": "4aa30867c73aed6f0763eb94eeaa3cf586504bb7c8662962a921a99b36f0f3bf"
+      }
+    },
+    {
+      "slug": "xiaomu-keepsake",
+      "prompt": "Use case: style-transfer.\nAsset type: full-bleed 16:9 keepsake illustration for Sheep Run.\nReference roles: Image 1, menu-pasture-v1.png, is the ONLY style, palette, pixel-density and rendering reference. Image 2, old xiaomu-keepsake.png, supplies ONLY the story composition and recognizable sheep identity. Do not borrow its high-definition texture or realistic lighting.\nRedraw the riverside tea-party memory in exactly the menu's cheerful simple 2D pixel-cartoon world. Use one consistent obvious coarse 480x270 logical pixel grid enlarged crisply; all scenery and characters made of broad clean color clusters with stepped square edges, two or three broad shading tones per material. Match the menu's cyan-blue sky, cream cloud clusters, rounded green hills and yellow-green pasture. The image should read like a handmade 480x270 game scene, not a detailed painting with a pixel filter.\nPreserve composition/story: two friendly cream quadruped sheep having tea outside the riverside cottage, courier sheep on the left, Xiaomu on the right with recognizable pale-blue bucket hat and blue scarf. Preserve low horizontal wool bodies, peach faces, tiny dark eyes, brown ears, short brown hooves and dark-brown stepped outlines. A simple low wooden tea table with a round teapot and two small blue-and-cream cups separates them. The little cream cottage with warm orange roof and a plain window is on the right. A broad leafy tree frames the left. Behind them a simple calm blue river, a small stone arch bridge, rounded green hills and a clear broad rainbow after the rain.\nSimplify the old scene aggressively: no distant village or church, no fine architectural stonework, no individual tiny leaves, ivy, roof tiles, realistic wet reflections, glossy puddles, fine grass noise or intricate pottery patterns. Render water as broad blue horizontal bands with a few chunky highlights; bridge as a plain simple arch with only a few broad stone shapes; flowers as a few chunky colored accents. Keep figures, table and hat fully inside the frame.\nBright friendly daylight using flat colors and a few stepped shadows only. No painterly texture, photorealism, 3D rendering, gradients, cinematic light, bloom or fine dithering.\nNo words, letters, numbers, UI, logos, frame, border or watermark. Opaque finished wide landscape image.",
+      "tool": "builtin image_gen",
+      "transparent_background": false,
+      "style_reference": "assets/backgrounds/menu-pasture-v1.png",
+      "composition_identity_reference": "assets/resident-stories-v1/sources/xiaomu-keepsake.png",
+      "source_path": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11779-e35b-7c43-a9d4-9561c862cf43\\exec-f5a10871-94ef-46ea-8f24-88ea1d9f4359.png",
+      "project_source": "assets/resident-stories-v1/revision-menu-style/sources/xiaomu-keepsake.png",
+      "tool_output_hint": "Generated images are saved to C:\\Users\\mechrevo\\.codex\\generated_images\\01a11779-e35b-7c43-a9d4-9561c862cf43 as C:\\Users\\mechrevo\\.codex\\generated_images\\01a11779-e35b-7c43-a9d4-9561c862cf43\\exec-f5a10871-94ef-46ea-8f24-88ea1d9f4359.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "attempts": [
+        {
+          "outcome": "connection failed: error sending request"
+        },
+        {
+          "outcome": "success"
+        }
+      ],
+      "visual_review": "Two complete quadruped sheep, Xiaomu pale-blue bucket hat/blue scarf, tea table, rainbow, small bridge and cottage preserved. Simple menu-like hills and cyan river, no far city or glossy reflective puddles.",
+      "file_verification": {
+        "width": 1672,
+        "height": 941,
+        "mode": "RGB",
+        "sha256": "28be6454901d5f06e9f26e2eaa38e308ad71d5ae155a126c638d7d1303577685"
+      }
+    },
+    {
+      "slug": "adeng-keepsake",
+      "prompt": "Use case: style-transfer.\nAsset type: full-bleed 16:9 keepsake illustration for Sheep Run.\nReference roles: Image 1 (menu-pasture-v1.png) is the ONLY drawing style, pixel-density, shape language and rendering reference. Image 2 (old adeng-keepsake.png) provides ONLY composition, story and sheep identity. Discard its highly detailed night landscape and realistic illumination.\nRedraw the lighthouse friendship memory in the same simple friendly 2D pixel-cartoon style as the menu, at night. Build everything on a consistent visibly coarse 480x270 logical pixel grid, enlarged crisply without smoothing. Use broad clean color clusters, stepped square edges and two or three simple shading tones per material. Night colors may be indigo sky, muted blue sea and soft green pasture; preserve the menu's simple bright readable shapes and warm cream sheep. No high-definition scenery.\nPreserve the story and composition: in the foreground stand the friendly plain courier sheep on the left and Adeng on the right, both complete cream quadruped sheep with peach faces, tiny dark eyes, brown ears, short brown hooves and stepped dark-brown outlines. Adeng wears the recognizable dark navy lighthouse-keeper cap with small gold badge/band and the warm mustard scarf. A simple small yellow lantern sits beside Adeng. Keep a cream lighthouse on a low grassy cliff at the upper right, a calm blue sea in the middle, and a very small quiet harbor with a handful of simple orange-lit cottage shapes on the far left. A low wooden fence borders the grassy foreground. A few chunky stars show the calm night.\nMake the lighthouse as simple as the menu windmill: plain cream wall, one simple door, two small amber windows, orange-brown stepped roof; no detailed masonry. Light beam is a single broad pale-yellow stepped graphic band, with no realistic glow or volumetric atmosphere. Water uses only broad dark-blue bands and a few blocky yellow reflection marks. Hill silhouettes and foliage are broad menu-like masses; grass and flowers are a few readable pixel clusters. Omit intricate village, boats, tiny windows, cliff texture, detailed leaves, complex rock surfaces, fine water shimmer and dense grass noise.\nAll figures and hats fully visible, spacious wide framing. Keep the scene peaceful and welcoming, never photorealistic or cinematic. No 3D rendering, smooth gradients, fine dithering, bloom, realistic reflections or painted microtexture.\nNo words, letters, numbers, UI, logo, frame, border or watermark. Opaque finished wide landscape image.",
+      "tool": "builtin image_gen",
+      "transparent_background": false,
+      "style_reference": "assets/backgrounds/menu-pasture-v1.png",
+      "composition_identity_reference": "assets/resident-stories-v1/sources/adeng-keepsake.png",
+      "source_path": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11779-e35b-7c43-a9d4-9561c862cf43\\exec-e5a6474e-c36d-46dd-9ed1-04df051a112f.png",
+      "project_source": "assets/resident-stories-v1/revision-menu-style/sources/adeng-keepsake.png",
+      "tool_output_hint": "Generated images are saved to C:\\Users\\mechrevo\\.codex\\generated_images\\01a11779-e35b-7c43-a9d4-9561c862cf43 as C:\\Users\\mechrevo\\.codex\\generated_images\\01a11779-e35b-7c43-a9d4-9561c862cf43\\exec-e5a6474e-c36d-46dd-9ed1-04df051a112f.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "attempts": [
+        {
+          "outcome": "connection failed: error sending request"
+        },
+        {
+          "outcome": "connection failed: error sending request"
+        },
+        {
+          "outcome": "success"
+        }
+      ],
+      "visual_review": "Two full quadruped sheep and Adeng navy cap/mustard scarf/lantern retained. Menu-like broad green clusters, simplified lighthouse and open flat night sky; harbor and sea much less intricate than original. No text or frame.",
+      "file_verification": {
+        "width": 1672,
+        "height": 941,
+        "mode": "RGB",
+        "sha256": "1b49c5288fdbe0bbffd73a7686caf11baba8743d45633627f8be4e92702c46fa"
+      }
+    },
+    {
+      "slug": "group-photo",
+      "prompt": "Use case: style-transfer.\nAsset type: full-bleed 16:9 unlocked resident group-photo illustration for Sheep Run.\nReference roles: Image 1 (menu-pasture-v1.png) is the ONLY visual style, palette, pixel-density and rendering reference. Image 2 (old group-photo.png) is ONLY a reference for the four characters, their order and the happy gathering event. Discard its high-definition scenic rendering, complicated architecture and sunset-light effects.\nRedraw the group memory as a simple cheerful 2D pixel-cartoon scene belonging to exactly the same world as the menu. Use a consistent obvious coarse 480x270 logical pixel grid enlarged sharply without smoothing. Every sheep and every background feature uses broad flat color clusters, deliberate square stepped edges and only a few broad shading tones. Match the menu's cyan blue sky, cream cloud clusters, rounded green hills, clear lake, yellow-green pasture and warm orange-brown roofs/fences. Large clean shapes, not a high-resolution painting with a pixel filter.\nPreserve four complete friendly cream quadruped sheep standing close together for a group picture in the foreground. LEFT TO RIGHT: Ahe wearing straw hat with green band and green scarf; Xiaomu wearing pale-blue bucket hat and blue scarf; plain little courier sheep with no hat or scarf; Adeng wearing navy keeper cap with small gold badge/band and mustard scarf. Adeng's little warm yellow lantern stands at the far right beside the group. Preserve their peach faces, tiny dark eyes, brown ears, short brown hooves, rounded horizontal wool bodies and clear dark-brown stepped outlines. No additional sheep or humans. All four hats, ears, bodies and hooves must remain fully visible and comfortably inside the frame.\nBackdrop: a broad tree canopy at the upper left, a plain friendly windmill and one little orange-roof cottage on the right, a low wooden fence across the middle, calm lake and simplified rounded green hills in the distance. Keep an open blue sky and simple cream clouds. Cheerful warm afternoon through flat color choices only. Flowers are a few large chunky color accents and pasture is broad simple grass clusters consistent with the menu.\nRemove distant city, church, bridge, boats, intricate wheat stalks, tiny leaf textures, masonry details, realistic reflections, fine grass noise and golden volumetric sunset. Avoid complex textures, realistic three-dimensional illumination, smooth gradients, bloom, photo detail, fine dithering or painterly brushwork.\nNo text, letters, numbers, UI, logos, camera graphics, photo border, frame or watermark. Opaque finished wide landscape image.",
+      "tool": "builtin image_gen",
+      "transparent_background": false,
+      "style_reference": "assets/backgrounds/menu-pasture-v1.png",
+      "composition_identity_reference": "assets/resident-stories-v1/sources/group-photo.png",
+      "source_path": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11779-e35b-7c43-a9d4-9561c862cf43\\exec-37414724-8b08-49f2-a248-6d681ff2c9da.png",
+      "project_source": "assets/resident-stories-v1/revision-menu-style/sources/group-photo.png",
+      "tool_output_hint": "Generated images are saved to C:\\Users\\mechrevo\\.codex\\generated_images\\01a11779-e35b-7c43-a9d4-9561c862cf43 as C:\\Users\\mechrevo\\.codex\\generated_images\\01a11779-e35b-7c43-a9d4-9561c862cf43\\exec-37414724-8b08-49f2-a248-6d681ff2c9da.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "attempts": [
+        {
+          "outcome": "success"
+        }
+      ],
+      "visual_review": "Exactly four complete quadruped sheep in approved order: Ahe green, Xiaomu blue, plain courier, Adeng mustard/navy with lantern. Menu's open sky, cream clouds, rolling green hills, simple windmill and fence; no detailed sunset city or scene frame.",
+      "file_verification": {
+        "width": 1672,
+        "height": 941,
+        "mode": "RGB",
+        "sha256": "b361e653f6a8ff2cdb43588b7c01f4be5b8d7630edb65f0b1044b53784d52d2e"
+      }
+    }
+  ]
+}

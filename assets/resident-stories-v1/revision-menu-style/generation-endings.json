@@ -1,0 +1,180 @@
+{
+  "version": 1,
+  "tool": "built-in image_gen",
+  "revision": "menu-style",
+  "records": [
+    {
+      "id": "windmill-thanks-ending",
+      "source_path": "sources/windmill-thanks-ending.png",
+      "original_path": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11779-ca99-7ee0-8fae-7afe4d9da33e\\exec-99a965ba-9d38-4139-a9e2-7905f4bee073.png",
+      "prompt_path": "prompts/windmill-thanks-ending.txt",
+      "referenced_image_paths": [
+        "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+        "D:/DSH workspace/sheep-run/assets/resident-stories-v1/sources/windmill-thanks-ending.png"
+      ],
+      "transparent_background": false,
+      "started_at": "2026-10-13T09:51:46.564Z",
+      "completed_at": "2026-10-13T09:52:27.386Z",
+      "output_hint": "Generated images are saved to C:\\Users\\mechrevo\\.codex\\generated_images\\01a11779-ca99-7ee0-8fae-7afe4d9da33e as C:\\Users\\mechrevo\\.codex\\generated_images\\01a11779-ca99-7ee0-8fae-7afe4d9da33e\\exec-99a965ba-9d38-4139-a9e2-7905f4bee073.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source_pixels_modified": false,
+      "visual_review": "passed; parent approved direction: main-menu palette and pixel scale, correct two sheep and delivered flower-sealed letter",
+      "width": 1672,
+      "height": 941,
+      "bytes": 2085668,
+      "sha256": "8e08c1d2be091b82e55cbbf7facfce8b99d5d7fa6f99533fa5e63a3a358a0740",
+      "original_sha256": "8e08c1d2be091b82e55cbbf7facfce8b99d5d7fa6f99533fa5e63a3a358a0740",
+      "copied_exactly": true,
+      "prompt_sha256": "40e61105d1980b52a2661da4b13839c3c53a8b209889fc06e0e0755fd0c03177"
+    },
+    {
+      "id": "windmill-photo-ending",
+      "source_path": "sources/windmill-photo-ending.png",
+      "original_path": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11779-ca99-7ee0-8fae-7afe4d9da33e\\exec-e42def31-e3f9-4ae9-bf4b-ef2992744e6e.png",
+      "prompt_path": "prompts/windmill-photo-ending.txt",
+      "referenced_image_paths": [
+        "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+        "D:/DSH workspace/sheep-run/assets/resident-stories-v1/sources/windmill-photo-ending.png"
+      ],
+      "transparent_background": false,
+      "started_at": "2026-10-13T10:11:12.062Z",
+      "completed_at": "2026-10-13T10:11:40.594Z",
+      "output_hint": "Generated images are saved to C:\\Users\\mechrevo\\.codex\\generated_images\\01a11779-ca99-7ee0-8fae-7afe4d9da33e as C:\\Users\\mechrevo\\.codex\\generated_images\\01a11779-ca99-7ee0-8fae-7afe4d9da33e\\exec-e42def31-e3f9-4ae9-bf4b-ef2992744e6e.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source_pixels_modified": false,
+      "visual_review": "passed: main-menu palette and pixel scale; correct story and sheep identities; no text",
+      "width": 1672,
+      "height": 941,
+      "bytes": 2154848,
+      "sha256": "3f681ba9cb076d418a7609d8435ef497209a32e181558c805be597e9e83ce0a6",
+      "original_sha256": "3f681ba9cb076d418a7609d8435ef497209a32e181558c805be597e9e83ce0a6",
+      "copied_exactly": true,
+      "prompt_sha256": "f094f3e923e79a878687238c5e716688646af49f8013b6719c9f681865b35ec8"
+    },
+    {
+      "id": "riverside-thanks-ending",
+      "source_path": "sources/riverside-thanks-ending.png",
+      "original_path": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11779-ca99-7ee0-8fae-7afe4d9da33e\\exec-0977e8a6-da29-45d4-a7c5-d99d71b4a47b.png",
+      "prompt_path": "prompts/riverside-thanks-ending.txt",
+      "referenced_image_paths": [
+        "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+        "D:/DSH workspace/sheep-run/assets/resident-stories-v1/sources/riverside-thanks-ending.png"
+      ],
+      "transparent_background": false,
+      "started_at": "2026-10-13T10:12:45.245Z",
+      "completed_at": "2026-10-13T10:14:52.686Z",
+      "output_hint": "Generated images are saved to C:\\Users\\mechrevo\\.codex\\generated_images\\01a11779-ca99-7ee0-8fae-7afe4d9da33e as C:\\Users\\mechrevo\\.codex\\generated_images\\01a11779-ca99-7ee0-8fae-7afe4d9da33e\\exec-0977e8a6-da29-45d4-a7c5-d99d71b4a47b.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source_pixels_modified": false,
+      "visual_review": "passed: main-menu palette and pixel scale; correct story and sheep identities; no text",
+      "width": 1672,
+      "height": 941,
+      "bytes": 2250368,
+      "sha256": "53e49dc40822673d9725152b088bd7fec280c986cbf2d00bfb0931aecf9e993f",
+      "original_sha256": "53e49dc40822673d9725152b088bd7fec280c986cbf2d00bfb0931aecf9e993f",
+      "copied_exactly": true,
+      "prompt_sha256": "3650083e3e2ee4cff37fc4de47fd3e1132b1cb51810d614cf805204cd89626b8"
+    },
+    {
+      "id": "lighthouse-old-letter-ending",
+      "source_path": "sources/lighthouse-old-letter-ending.png",
+      "original_path": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11779-ca99-7ee0-8fae-7afe4d9da33e\\exec-b5721b70-0090-4f1b-9105-207c133aaa35.png",
+      "prompt_path": "prompts/lighthouse-old-letter-ending.txt",
+      "referenced_image_paths": [
+        "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+        "D:/DSH workspace/sheep-run/assets/resident-stories-v1/sources/lighthouse-old-letter-ending.png"
+      ],
+      "transparent_background": false,
+      "started_at": "2026-10-13T10:19:59.569Z",
+      "completed_at": "2026-10-13T10:20:56.908Z",
+      "output_hint": "Generated images are saved to C:\\Users\\mechrevo\\.codex\\generated_images\\01a11779-ca99-7ee0-8fae-7afe4d9da33e as C:\\Users\\mechrevo\\.codex\\generated_images\\01a11779-ca99-7ee0-8fae-7afe4d9da33e\\exec-b5721b70-0090-4f1b-9105-207c133aaa35.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source_pixels_modified": false,
+      "visual_review": "passed: main-menu pixel scale adapted to evening/night; correct story and sheep identities; no text",
+      "width": 1672,
+      "height": 941,
+      "bytes": 2003203,
+      "sha256": "b15c254de74777cbb568696471936d53df961bb3863d551f65930ebc4e0294df",
+      "original_sha256": "b15c254de74777cbb568696471936d53df961bb3863d551f65930ebc4e0294df",
+      "copied_exactly": true,
+      "prompt_sha256": "d6444b946745b87a2d3139642d3dc22621837acfaf4bd099c2f1ef7db90b7adf"
+    },
+    {
+      "id": "lighthouse-gathering-ending",
+      "source_path": "sources/lighthouse-gathering-ending.png",
+      "original_path": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11779-ca99-7ee0-8fae-7afe4d9da33e\\exec-196ee8ed-52f1-4be6-809e-05199669c1ee.png",
+      "prompt_path": "prompts/lighthouse-gathering-ending.txt",
+      "referenced_image_paths": [
+        "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+        "D:/DSH workspace/sheep-run/assets/resident-stories-v1/sources/lighthouse-gathering-ending.png"
+      ],
+      "transparent_background": false,
+      "started_at": "2026-10-13T10:23:55.797Z",
+      "completed_at": "2026-10-13T10:24:24.898Z",
+      "output_hint": "Generated images are saved to C:\\Users\\mechrevo\\.codex\\generated_images\\01a11779-ca99-7ee0-8fae-7afe4d9da33e as C:\\Users\\mechrevo\\.codex\\generated_images\\01a11779-ca99-7ee0-8fae-7afe4d9da33e\\exec-196ee8ed-52f1-4be6-809e-05199669c1ee.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source_pixels_modified": false,
+      "visual_review": "passed: main-menu pixel scale adapted to evening/night; correct story and sheep identities; no text",
+      "width": 1672,
+      "height": 941,
+      "bytes": 1947864,
+      "sha256": "9a12f600a6c01469b440cb5f0f68862ae5cb6c2e179023a58cce34f6125e7105",
+      "original_sha256": "9a12f600a6c01469b440cb5f0f68862ae5cb6c2e179023a58cce34f6125e7105",
+      "copied_exactly": true,
+      "prompt_sha256": "bc026369c0695a3772a4183f2daa63a836044899d5af01b391ec3a15a31cd5ca"
+    },
+    {
+      "id": "riverside-sunshine-ending",
+      "source_path": "sources/riverside-sunshine-ending.png",
+      "original_path": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11779-ca99-7ee0-8fae-7afe4d9da33e\\exec-c2a45f40-acf6-48d6-935c-d8a78d06f127.png",
+      "prompt_path": "prompts/riverside-sunshine-ending-retry.txt",
+      "referenced_image_paths": [
+        "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+        "D:/DSH workspace/sheep-run/assets/resident-stories-v1/sources/riverside-sunshine-ending.png"
+      ],
+      "transparent_background": false,
+      "started_at": "2026-10-13T10:54:31.794Z",
+      "completed_at": "2026-10-13T10:56:34.93Z",
+      "output_hint": "Generated images are saved to C:\\Users\\mechrevo\\.codex\\generated_images\\01a11779-ca99-7ee0-8fae-7afe4d9da33e as C:\\Users\\mechrevo\\.codex\\generated_images\\01a11779-ca99-7ee0-8fae-7afe4d9da33e\\exec-c2a45f40-acf6-48d6-935c-d8a78d06f127.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "source_pixels_modified": false,
+      "visual_review": "passed: main-menu palette and pixel scale, three correct sheep identities, three cups, rainbow, no text",
+      "width": 1672,
+      "height": 941,
+      "bytes": 2315619,
+      "sha256": "f879495cd1bc1f03f24091525aa477056ccdea46cc1cf677463840d6e1484365",
+      "original_sha256": "f879495cd1bc1f03f24091525aa477056ccdea46cc1cf677463840d6e1484365",
+      "copied_exactly": true,
+      "prompt_sha256": "3b590a73f6e1c8366ff2c3e3a79ffd747cdb629c192b394af317bbc334f52384"
+    }
+  ],
+  "requested_assets": 6,
+  "successful_generation_calls": 6,
+  "failed_attempts": [
+    {
+      "asset_ids": [
+        "windmill-photo-ending",
+        "riverside-thanks-ending",
+        "riverside-sunshine-ending"
+      ],
+      "mode": "parallel built-in requests",
+      "outcome": "The orchestration rejected on connection failed: error sending request after 5.9s. No image results returned/stored from any of these three pending calls. Individual remaining call outcomes unavailable."
+    },
+    {
+      "asset_id": "riverside-sunshine-ending",
+      "prompt_path": "prompts/riverside-sunshine-ending.txt",
+      "tool": "built-in image_gen",
+      "outcome": "connection failed: error sending request",
+      "elapsed_seconds": 5.7
+    },
+    {
+      "asset_id": "riverside-sunshine-ending",
+      "prompt_path": "prompts/riverside-sunshine-ending.txt",
+      "tool": "built-in image_gen",
+      "outcome": "connection failed: error sending request",
+      "elapsed_seconds": 71.1
+    },
+    {
+      "asset_id": "riverside-sunshine-ending",
+      "prompt_path": "prompts/riverside-sunshine-ending.txt",
+      "tool": "built-in image_gen",
+      "outcome": "connection failed: error sending request",
+      "elapsed_seconds": 4
+    }
+  ],
+  "runtime_processing": "No runtime edits; all source copies are byte-exact. Parent packs separate uniform runtime sizes."
+}

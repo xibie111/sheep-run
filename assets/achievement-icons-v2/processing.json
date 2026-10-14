@@ -1,0 +1,386 @@
+{
+  "tool": "tools/pack-expanded-achievement-icons.mjs",
+  "generatedBy": "built-in imagegen, one independent call per icon",
+  "runtimeSize": [
+    32,
+    32
+  ],
+  "resampling": "NEAREST",
+  "alpha": "Original generated alpha retained in sources; runtime alpha threshold 128; no recoloring or invented content",
+  "complete": true,
+  "missing": [],
+  "entries": [
+    {
+      "id": "fifty-runs",
+      "name": "熟悉的小路",
+      "source": "sources/fifty-runs.png",
+      "sourceSha256": "d89a28d9829b6bde9610a5d3ae79e1ae945cb65e09b718d3aba3e2b3ff9c25d0",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "crop": {
+        "x": 98,
+        "y": 107,
+        "width": 1073,
+        "height": 1073
+      },
+      "contentSize": [
+        28,
+        28
+      ],
+      "position": [
+        2,
+        2
+      ],
+      "visible": 503,
+      "runtime": "runtime/fifty-runs.png",
+      "runtimeSize": [
+        32,
+        32
+      ],
+      "runtimeSha256": "0d8a98ca12506fb765cb492c0f52f4dce8c48903460365d4f9cc980b588a0e5f"
+    },
+    {
+      "id": "hundred-runs",
+      "name": "百次出发",
+      "source": "sources/hundred-runs.png",
+      "sourceSha256": "325e875430be33df60346ccbcc54bc28d79d66007affcae0e2e1081c9a2a8370",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "crop": {
+        "x": 98,
+        "y": 108,
+        "width": 1058,
+        "height": 1042
+      },
+      "contentSize": [
+        28,
+        28
+      ],
+      "position": [
+        2,
+        2
+      ],
+      "visible": 548,
+      "runtime": "runtime/hundred-runs.png",
+      "runtimeSize": [
+        32,
+        32
+      ],
+      "runtimeSha256": "ed58e35b37972801654dbf61ad1684058c84d6c940982b467c426a07f40efcf2"
+    },
+    {
+      "id": "two-hundred-fifty-runs",
+      "name": "牧场常客",
+      "source": "sources/two-hundred-fifty-runs.png",
+      "sourceSha256": "91b396a9532c50e2826a6e00b47906cfd0bfeb97a2f7a41ca8fc0da1107a11e2",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "crop": {
+        "x": 33,
+        "y": 57,
+        "width": 1184,
+        "height": 1151
+      },
+      "contentSize": [
+        28,
+        27
+      ],
+      "position": [
+        2,
+        2
+      ],
+      "visible": 528,
+      "runtime": "runtime/two-hundred-fifty-runs.png",
+      "runtimeSize": [
+        32,
+        32
+      ],
+      "runtimeSha256": "e1d9d859a82bd8c6991c912398db63461f02f2ca3dad5a228622f81e8fab824f"
+    },
+    {
+      "id": "fifty-friends",
+      "name": "朋友常来",
+      "source": "sources/fifty-friends.png",
+      "sourceSha256": "65109e470cf64556d2add316000f0540fd7341dc96bc41d5b69a44366b484ee4",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "crop": {
+        "x": 40,
+        "y": 160,
+        "width": 1178,
+        "height": 948
+      },
+      "contentSize": [
+        28,
+        23
+      ],
+      "position": [
+        2,
+        4
+      ],
+      "visible": 464,
+      "runtime": "runtime/fifty-friends.png",
+      "runtimeSize": [
+        32,
+        32
+      ],
+      "runtimeSha256": "25b256a9e732239aa179ef7fd3fe9d7b279b25d1119fcdf9841ea0a16b6430b2"
+    },
+    {
+      "id": "hundred-friends",
+      "name": "百次同行",
+      "source": "sources/hundred-friends.png",
+      "sourceSha256": "fbbd629d7fdf7a8139398f70f3c14fcbabb71237d93f58f768161d55c1dc6926",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "crop": {
+        "x": 58,
+        "y": 107,
+        "width": 1140,
+        "height": 1051
+      },
+      "contentSize": [
+        28,
+        26
+      ],
+      "position": [
+        2,
+        3
+      ],
+      "visible": 502,
+      "runtime": "runtime/hundred-friends.png",
+      "runtimeSize": [
+        32,
+        32
+      ],
+      "runtimeSha256": "9fcda80ad2c07513ee4454ff64b754d9cbbc47811f2032e03b53521bd940b161"
+    },
+    {
+      "id": "seventy-five-stars",
+      "name": "星光小旅行",
+      "source": "sources/seventy-five-stars.png",
+      "sourceSha256": "743d76be212146527daa5b8e2257a8da7d6103da2b39fe5a1a3ffce65efbae9f",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "crop": {
+        "x": 208,
+        "y": 98,
+        "width": 780,
+        "height": 1061
+      },
+      "contentSize": [
+        21,
+        28
+      ],
+      "position": [
+        5,
+        2
+      ],
+      "visible": 314,
+      "runtime": "runtime/seventy-five-stars.png",
+      "runtimeSize": [
+        32,
+        32
+      ],
+      "runtimeSha256": "cf6965b162cd3ef03de7ad7bc01135cc8c7f6ef3dce4fd9cf2d66c0d2f2a9c73"
+    },
+    {
+      "id": "hundred-stars",
+      "name": "一口袋星河",
+      "source": "sources/hundred-stars.png",
+      "sourceSha256": "2c896e17b9cb6d524fb2bd27c935625e6f56c34c30f9ec55036146d03e115c69",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "crop": {
+        "x": 176,
+        "y": 72,
+        "width": 901,
+        "height": 1114
+      },
+      "contentSize": [
+        23,
+        28
+      ],
+      "position": [
+        4,
+        2
+      ],
+      "visible": 420,
+      "runtime": "runtime/hundred-stars.png",
+      "runtimeSize": [
+        32,
+        32
+      ],
+      "runtimeSha256": "666933f62c63596ba090c5e23a32ed9b41587b9b210bc9af69bef8bdce67df4d"
+    },
+    {
+      "id": "hundred-obstacles",
+      "name": "跨过一百步",
+      "source": "sources/hundred-obstacles.png",
+      "sourceSha256": "6ab85d2e981f8156b6c2b4bc09dcf6f8730056773e63491561b8610bb91d8c6f",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "crop": {
+        "x": 210,
+        "y": 194,
+        "width": 834,
+        "height": 897
+      },
+      "contentSize": [
+        26,
+        28
+      ],
+      "position": [
+        3,
+        2
+      ],
+      "visible": 435,
+      "runtime": "runtime/hundred-obstacles.png",
+      "runtimeSize": [
+        32,
+        32
+      ],
+      "runtimeSha256": "350fe961cc73f9283484710ad06e320d0fed3ec61b7af1a38a831cfaa4bfa20e"
+    },
+    {
+      "id": "one-hundred-fifty-obstacles",
+      "name": "一路向前",
+      "source": "sources/one-hundred-fifty-obstacles.png",
+      "sourceSha256": "7ef278c79a29117913134473f190bbd3c57c0e11cce953edd4b755ebc4dcdff6",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "crop": {
+        "x": 263,
+        "y": 139,
+        "width": 777,
+        "height": 995
+      },
+      "contentSize": [
+        22,
+        28
+      ],
+      "position": [
+        5,
+        2
+      ],
+      "visible": 353,
+      "runtime": "runtime/one-hundred-fifty-obstacles.png",
+      "runtimeSize": [
+        32,
+        32
+      ],
+      "runtimeSha256": "3f622e3998c728666805f6d19fa7220fd60c241fed2fff59d059b6b739e200d6"
+    },
+    {
+      "id": "twenty-skins",
+      "name": "多彩衣橱",
+      "source": "sources/twenty-skins.png",
+      "sourceSha256": "90a9012d4f41223c7ca142065a6b04b2d006e2c3141b0f03576bc02cd66b34dd",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "crop": {
+        "x": 38,
+        "y": 220,
+        "width": 1179,
+        "height": 851
+      },
+      "contentSize": [
+        28,
+        20
+      ],
+      "position": [
+        2,
+        6
+      ],
+      "visible": 366,
+      "runtime": "runtime/twenty-skins.png",
+      "runtimeSize": [
+        32,
+        32
+      ],
+      "runtimeSha256": "f77cc901005dccacc0d5653cef38e9f7f57e5404a32309c0249477354e76eca6"
+    },
+    {
+      "id": "thirty-skins",
+      "name": "满满的衣橱",
+      "source": "sources/thirty-skins.png",
+      "sourceSha256": "a85cf1c4b9c468a6aa26e2974ab440587c7fbf1ca167632fbef868f9224150a1",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "crop": {
+        "x": 136,
+        "y": 142,
+        "width": 983,
+        "height": 949
+      },
+      "contentSize": [
+        28,
+        27
+      ],
+      "position": [
+        2,
+        2
+      ],
+      "visible": 638,
+      "runtime": "runtime/thirty-skins.png",
+      "runtimeSize": [
+        32,
+        32
+      ],
+      "runtimeSha256": "3a0013e270c8b9e9cadf6cd0a256eb32cd115c4263bfc53fc84567b572faac49"
+    },
+    {
+      "id": "two-seasons",
+      "name": "风景变了",
+      "source": "sources/two-seasons.png",
+      "sourceSha256": "b57880d9a643142bc2407a33124152442c848efe2ee00f228bbfff746d090efd",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "crop": {
+        "x": 70,
+        "y": 224,
+        "width": 1148,
+        "height": 869
+      },
+      "contentSize": [
+        28,
+        21
+      ],
+      "position": [
+        2,
+        5
+      ],
+      "visible": 396,
+      "runtime": "runtime/two-seasons.png",
+      "runtimeSize": [
+        32,
+        32
+      ],
+      "runtimeSha256": "5fcf3504bd78e9dbaf14e988eca5ed6901c1b2bc4795998d5a5fa39f5a9a699f"
+    }
+  ]
+}

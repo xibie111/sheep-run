@@ -1,5 +1,5 @@
 import { INPUT, PLAYER, RUN, WORLD } from '../game/Constants';
-import type { ObstacleKind } from '../game/ObstacleDefinitions';
+import { isOverheadObstacle, type ObstacleKind } from '../game/ObstacleDefinitions';
 import type { StarRouteWindow } from '../systems/SpawnSystemOwner';
 
 export type StarRouteKind = 'single' | 'arc' | 'high-low' | 'landing';
@@ -36,7 +36,6 @@ export const STAR_ROUTE_RULES = {
   touchReactionSeconds: .35,
 } as const;
 
-const DUCK_KINDS = new Set<ObstacleKind>(['FlyingBird', 'HangingVine', 'HangingBranch']);
 export function starRouteSize(kind: StarRouteKind): number { return kind === 'arc' ? 3 : kind === 'high-low' ? 2 : 1; }
 
 export function normalJumpFlightSeconds(multiplier = 1): number {
@@ -81,7 +80,7 @@ export function planStarRoute(kind: StarRouteKind, context: StarRouteContext, ph
   const trailingRecovery = speed * (highImpulse / PLAYER.gravityY + recovery) + halfBody;
   const previous = context.obstacles.filter(obstacle => obstacle.right <= actionStart)
     .sort((a, b) => b.right - a.right)[0];
-  if (!previous || DUCK_KINDS.has(previous.kind) || previous.right + trailingRecovery > actionLeft) return null;
+  if (!previous || isOverheadObstacle(previous.kind) || previous.right + trailingRecovery > actionLeft) return null;
   if (context.obstacles.some(obstacle => obstacle.left < actionRight && obstacle.right > actionLeft)) return null;
   // The next obstacle is forecast at its real boundary (4 px beyond the star
   // boundary), from current travel. Random spacing variation is already included.

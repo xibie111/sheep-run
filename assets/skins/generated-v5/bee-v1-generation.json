@@ -1,0 +1,9 @@
+{
+  "tool": "builtin-image_gen",
+  "id": "bee-v1",
+  "generatedPath": "C:/Users/mechrevo/.codex/generated_images/01a11760-9d97-77c1-924c-cefdf4e6c788/exec-d5fce0ef-7999-46a1-91a5-211985e3a2c2.png",
+  "workspaceSource": "assets/skins/generated-v5/bee-v1-source.png",
+  "promptFile": "bee-v1-prompt.json",
+  "referencesAttached": true,
+  "transparent_background": true
+}

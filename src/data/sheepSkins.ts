@@ -5,7 +5,8 @@ export type SkinId = "white" | "black" | "brown" | "golden" | "farmer"
   | "sleepy-blue" | "sleepy-cream" | "sleepy-pink" | "sleepy-mint" | "dream"
   | "peach" | "milktea" | "cloud" | "bearcap"
   | "strawberry-v1" | "lemon-v1" | "sailor-v1" | "starlight-v1"
-  | "postman-v1" | "raincoat-v1" | "explorer-v1" | "astronaut-v1";
+  | "postman-v1" | "raincoat-v1" | "explorer-v1" | "astronaut-v1"
+  | "bee-v1" | "mushroom-v1" | "chef-v1" | "pirate-v1" | "fox-v1" | "dinosaur-v1";
 type SkinUnlock = { type: "default" | "stars" | "star-purchase" | "coins"; amount: number };
 
 export interface SheepSkinDefinition {
@@ -50,6 +51,12 @@ export const SHEEP_SKINS: readonly SheepSkinDefinition[] = [
   { id: "raincoat-v1", label: "雨衣羊", unlock: { type: "coins", amount: 90 }, palette: { wool: "#f4ebd8", woolShade: "#c5b4a0", face: "#eeb081", hat: "#e5bd59" } },
   { id: "explorer-v1", label: "探险羊", unlock: { type: "coins", amount: 120 }, palette: { wool: "#f4ebd8", woolShade: "#c5b4a0", face: "#eeb081", hat: "#b08a58" } },
   { id: "astronaut-v1", label: "航天羊", unlock: { type: "coins", amount: 160 }, palette: { wool: "#f4ebd8", woolShade: "#b9cbd1", face: "#eeb081", hat: "#d4e4e7" } },
+  { id: "bee-v1", label: "蜜蜂羊", unlock: { type: "star-purchase", amount: 60 }, palette: { wool: "#f4d976", woolShade: "#c49b49", face: "#eeb081", hat: "#4d4541" } },
+  { id: "mushroom-v1", label: "蘑菇羊", unlock: { type: "star-purchase", amount: 80 }, palette: { wool: "#f4ebd8", woolShade: "#c5b4a0", face: "#eeb081", hat: "#cf705e" } },
+  { id: "chef-v1", label: "厨师羊", unlock: { type: "coins", amount: 100 }, palette: { wool: "#f4ebd8", woolShade: "#c5b4a0", face: "#eeb081", hat: "#f2f0e5" } },
+  { id: "pirate-v1", label: "海盗羊", unlock: { type: "coins", amount: 120 }, palette: { wool: "#f4ebd8", woolShade: "#c5b4a0", face: "#eeb081", hat: "#514a4b" } },
+  { id: "fox-v1", label: "狐狸羊", unlock: { type: "star-purchase", amount: 100 }, palette: { wool: "#e9ae78", woolShade: "#b97550", face: "#eeb081", hat: "#dd985f" } },
+  { id: "dinosaur-v1", label: "恐龙羊", unlock: { type: "coins", amount: 160 }, palette: { wool: "#a6c890", woolShade: "#719262", face: "#eeb081", hat: "#7eaa69" } },
 ];
 
 export function isSkinId(value: string): value is SkinId {

@@ -8,7 +8,7 @@ import { safeUiInsets } from "./UiLayout";
 import { bindTouchTarget } from "./TouchTarget";
 import { displayCanvasText, type DisplayCanvasPainter } from "./DisplayCanvasText";
 import { createDisplayOverlay } from "./DisplayOverlay";
-import { menuArtLayout, type ArtRect } from "./MenuArtLayout";
+import { menuBookEntryLayout, menuBookButtonContent, type ArtRect } from "./MenuArtLayout";
 import { AudioSystem } from "../systems/AudioSystem";
 import { acquireMenuModal, menuModalOwner, MENU_MODAL_CHANGE } from "./MenuModal";
 import { SCENERY_CARDS } from "../scenery/sceneryCatalog";
@@ -59,11 +59,12 @@ export function attachJourneyBook(scene:Phaser.Scene,resultIds?:readonly Achieve
       if(scene.data.get("collection-album-open")!==true&&!menuModalOwner(scene)){
         if(resultIds){button(ctx,entryBox);line(resultIds.length?`本局点亮 ${resultIds.length} 枚印章`:"看看小羊成就册",entryBox,11);}
         else {
-          art(ctx,"collection-album-button",entryBox);art(ctx,"collection-album-icon",{x:entryBox.x+15,y:entryBox.y+5,width:26,height:26});
-          art(ctx,uiIconKey("check"),{x:entryBox.x+30,y:entryBox.y+17,width:12,height:12});
-          line("成就册",{x:entryBox.x+7,y:entryBox.y+30,width:42,height:12},10);
-          if(unread){ctx.fillStyle="#e57849";ctx.fillRect(entryBox.x+45,entryBox.y+5,6,6);}
-          if(scene.data.get("menu-bedtime")===true){ctx.save();ctx.globalCompositeOperation="source-atop";ctx.fillStyle="rgba(42,46,72,0.30)";ctx.fillRect(entryBox.x,entryBox.y,entryBox.width,entryBox.height);ctx.restore();}
+          const paintBox={...entryBox,y:entryBox.y+(pressed.has("entry")?1:0)},content=menuBookButtonContent(paintBox);
+          art(ctx,"collection-album-button",paintBox);art(ctx,"collection-album-icon",content.icon);
+          art(ctx,uiIconKey("check"),{x:paintBox.x+29,y:paintBox.y+15,width:10,height:10});
+          line("成就册",content.label,10);
+          if(unread){ctx.fillStyle="#e57849";ctx.fillRect(paintBox.x+45,paintBox.y+5,6,6);}
+          if(scene.data.get("menu-bedtime")===true){ctx.save();ctx.globalCompositeOperation="source-atop";ctx.fillStyle="rgba(42,46,72,0.30)";ctx.fillRect(paintBox.x,paintBox.y,paintBox.width,paintBox.height);ctx.restore();}
         }
       }
     }else {
@@ -159,9 +160,7 @@ export function attachJourneyBook(scene:Phaser.Scene,resultIds?:readonly Achieve
   watchViewport(scene,size=>{
     const safe=safeUiInsets(scene);k=Math.min(1,(size.width-safe.left-safe.right-16)/430,(size.height-safe.top-safe.bottom-12)/246);
     panel={x:safe.left+(size.width-safe.left-safe.right-430*k)/2,y:safe.top+(size.height-safe.top-safe.bottom-246*k)/2,width:430*k,height:246*k};
-    const title=menuArtLayout(size,safe).title;
-    const stacked=safe.left+171>title.x&&safe.top+53>title.y;
-    entryBox=resultIds?{x:safe.left+7,y:safe.top+5,width:133,height:29}:{x:safe.left+(stacked?56:115),y:safe.top+(stacked?58:5),width:56,height:48};place(entry,entryBox);
+    entryBox=resultIds?{x:safe.left+7,y:safe.top+5,width:133,height:29}:menuBookEntryLayout(size,safe).journey;place(entry,entryBox);
     place(blocker,{x:0,y:0,width:size.width,height:size.height});place(close,b(153,216,124,25),32*k);place(prev,b(31,216,91,25),32*k);place(next,b(308,216,91,25),32*k);
     cards.forEach((c,i)=>place(c,b(25+(i%2)*195,77+Math.floor(i/2)*63,185,57)));changed();
   });

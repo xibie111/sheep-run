@@ -1,0 +1,81 @@
+{
+  "originalGeneratedPath": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a13559-c3a9-7620-b61f-8712d8536a34\\exec-a4e80af1-0507-48b2-8668-2f2fe82e868f.png",
+  "workspaceSourcePath": "D:/DSH workspace/sheep-run/assets/delivery-menu-style-v2/sources/lighthouse-middle.png",
+  "sha256": "31B3DA7C3F0F76A9CED9318372C200B0A695F8EB510AC19369FF737ED3F54ACB",
+  "originalSha256": "31B3DA7C3F0F76A9CED9318372C200B0A695F8EB510AC19369FF737ED3F54ACB",
+  "bytes": 1723298,
+  "width": 1672,
+  "height": 941,
+  "generatedFileCreationTimeUtc": "2026-10-13T13:12:40.2083876Z",
+  "archivedAtUtc": "2026-10-13T13:15:40.7111728Z",
+  "referenceHashes": [
+    {
+      "path": "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+      "sha256": "DE36B068C971BBD24D870B5075A1380E852A4000D71C7807BB0600CE1FBF3749"
+    },
+    {
+      "path": "D:/DSH workspace/sheep-run/assets/delivery-menu-style-v2/sources/lighthouse-middle-initial.png",
+      "sha256": "FA82F07DF073CE7984C9E9D6561B436AA358B9DC55B2CE18CB70E7CA76B213DE"
+    }
+  ],
+  "tool": "image_gen.imagegen (built-in)",
+  "transparentBackground": false,
+  "prompt": "Use case: style-transfer.\nAsset type: full-bleed opaque 16:9 pixel-art running background.\nReference roles: Image 1 is the sole STYLE reference, farm main menu. Image 2 is the exact EDIT TARGET: preserve its scene, buildings, colors, sky, trees, and bold square-pixel style.\nPrimary request: change ONLY the foreground ground geometry in Image 2 so it has the exact gameplay layout below. Keep the upper landscape visually as close to the edit target as possible. This is a pixel-art asset composition correction.\nAt y = 72 percent image height, the top grass rim ends and the empty tan road starts, across the entire full width. From y = 72 percent all the way to y = 96 percent, fill the entire width with the same warm tan dirt-road treatment used in the edit target, with only its sparse simple big color clusters. At y = 96 percent begins a THIN 4 percent bottom grass strip. Remove ALL the thick foreground bushes and flowers currently below and beside the road; the bottom grass should be a short thin flat strip, never protruding upward into the tan road. The road should occupy exactly 24 percent of image height. Ground lines are straight horizontal, side-view, no perspective. No objects, characters, flowers, bushes, stones or grass on the road. Ground area MUST NOT have an object on either side encroaching into the road.\n\nRetain just the target's sparse ~18 chunky stars, do not add more.\nStyle: match the square stair-step contours and grouped foliage in Image 1. No antialiasing, microtexture, painted realism, fine foliage, realistic masonry, tiny water sparkle or dense stars. Preserve the original simple landscape.\nOutput: one full-bleed opaque 16:9 landscape. No text, UI, labels, borders, grids, collage, watermarks.",
+  "initialGeneration": {
+    "originalGeneratedPath": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a13559-c3a9-7620-b61f-8712d8536a34\\exec-001ccb63-f614-4b04-8aa8-636f2df13638.png",
+    "workspaceSourcePath": "D:/DSH workspace/sheep-run/assets/delivery-menu-style-v2/sources/lighthouse-middle-initial.png",
+    "sha256": "FA82F07DF073CE7984C9E9D6561B436AA358B9DC55B2CE18CB70E7CA76B213DE",
+    "originalSha256": "FA82F07DF073CE7984C9E9D6561B436AA358B9DC55B2CE18CB70E7CA76B213DE",
+    "bytes": 1730296,
+    "width": 1672,
+    "height": 941,
+    "generatedFileCreationTimeUtc": "2026-10-13T13:05:11.7741258Z",
+    "archivedAtUtc": "2026-10-13T13:08:21.8997118Z",
+    "tool": "image_gen.imagegen (built-in)",
+    "transparentBackground": false,
+    "prompt": "Use case: stylized-concept.\nAsset type: final full-bleed 16:9 opaque background for a cozy mobile pixel-art sheep game.\nPrimary request: redraw this scene in the SAME coarse blocky pixel-art visual language as the farm main menu in reference Image 1.\nReference roles: Image 1 is the sole STYLE reference: use its cheerful blocky rural game illustration, square stair-step edges, grouped rounded foliage, bold readable contours, restrained simple two or three tone shading. Image 2 is only a LAYOUT / PLACE reference; DO NOT inherit its dense microtexture, tiny foliage or photorealistic rendering.\nStyle and detail: every visible contour is a clear square-pixel staircase, confident big pixel clusters, simple broad grouped foliage, no leaf speckles, no antialiasing or smooth painted gradients. Night scenes stay clear and pleasantly readable; use blue teal lavender meadow colors with warm amber lamps, no black overlay. Lower visual complexity than Image 2 and consistent with Image 1.\nOutput: exactly ONE cohesive landscape scene, one full image, horizontal 16:9, edge-to-edge opaque pixels. No atlas, grid, collage, frames, UI, written words, labels, logos or watermark.\nScene: a calm starlight path through a cool blue/teal pasture. On far LEFT a big round grouped-foliage tree with a small hanging amber square lantern. In the background a tiny cream farm cottage with two amber square windows, simple rounded bushes and blue rolling hills. Open muted denim-blue sky with ONLY 10 to 20 large deliberate square-pixel stars, separated widely, and two large simple lavender-blue cloud bands. No galaxy, no Milky Way, no star dust, no tiny microstars. Warm lantern glow is a simple few color patches, no painted light bloom. Meadow is big broad blue-green clusters with sparse large flowers. Gameplay composition invariant: distant horizon about 60% image height. A grass rim crosses FULL width at exactly 72% image height. An empty warm tan dirt road fills the FULL width from 72% to 96% image height; use a small bottom grass strip only below 96%. Road must be wide uninterrupted horizontal band, level, simple and quiet. Nothing on the road: no actor, object, fence, rock, flowers, mailbox, grass clumps, or branches in the road. Keep all scene objects ABOVE road, in background. Flat side-scrolling view with no perspective road into depth.\nNo characters anywhere. Night must remain light enough to read the same friendly farm forms as Image 1.",
+    "referenceImages": [
+      {
+        "index": 1,
+        "path": "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+        "role": "sole style reference"
+      },
+      {
+        "index": 2,
+        "path": "D:/DSH workspace/sheep-run/assets/delivery-expansion-v1/chapters/runtime/lighthouse-middle.png",
+        "role": "layout only reference"
+      }
+    ],
+    "validation": {
+      "visualInspection": true,
+      "menuStyleMatched": true,
+      "noAtlasTextUIGridBorder": true,
+      "noGalaxy": true,
+      "charactersCorrect": "not applicable",
+      "roadPlacement": "initial variant needs 72%-96% correction"
+    }
+  },
+  "initialPromptFile": "prompts/lighthouse-middle.txt",
+  "refinementPromptFile": "prompts/lighthouse-middle-ground-edit.txt",
+  "referenceImages": [
+    {
+      "index": 1,
+      "path": "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+      "role": "sole style reference"
+    },
+    {
+      "index": 2,
+      "path": "D:/DSH workspace/sheep-run/assets/delivery-menu-style-v2/sources/lighthouse-middle-initial.png",
+      "role": "generated image edit target"
+    }
+  ],
+  "validation": {
+    "visualInspection": true,
+    "menuStyleMatched": true,
+    "noAtlasTextUIGridBorder": true,
+    "noGalaxy": true,
+    "noActors": true,
+    "noRoadObstructions": true,
+    "roadPlacement": "top approximately 72 percent, bottom approximately 94 percent; full width and unobstructed; final nearest packing/alignment belongs to root"
+  }
+}

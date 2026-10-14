@@ -108,12 +108,31 @@ describe("WeatherSystem renderer", () => {
     weather.update(ENVIRONMENT.weatherSegmentDistancePx + ENVIRONMENT.weatherFadeDistancePx / 2);
 
     expect(added).toHaveLength(2);
-    expect(added[0]?.config).toMatchObject({ maxAliveParticles: ENVIRONMENT.maxRainParticles, reserve: 0 });
+    expect(added[0]?.config).toMatchObject({ maxAliveParticles: ENVIRONMENT.maxRainParticles, reserve: 0,
+      blendMode: 'ADD', alpha: {start:.9,end:.35}, speedY: {min:300,max:390} });
+    expect(added[0]?.config.frequency as number).toBeLessThan(55);
+    expect((added[0]?.config.lifespan as number)*.3).toBeGreaterThanOrEqual(270);
     expect(added[1]?.config).toMatchObject({ maxAliveParticles: ENVIRONMENT.maxWindParticles, reserve: 0 });
     expect(added[0]?.start).toBe(1);
     expect(added[0]?.alpha).toBe(0.5);
     weather.destroy();
     expect(added.every((emitter) => emitter.destroyed)).toBe(true);
+  });
+
+  it('uses only small static drops without a dark screen rectangle for reduced-motion calm rain', () => {
+    const rectangles: number[][] = [];
+    const art = { setDepth(){return this;},setScrollFactor(){return this;},setName(){return this;},
+      clear(){rectangles.length=0;return this;},fillStyle(){return this;},
+      fillRect(x:number,y:number,w:number,h:number){rectangles.push([x,y,w,h]);return this;},destroy:vi.fn() };
+    const particles=vi.fn();
+    const scene={scale:{gameSize:{width:584,height:360},on(){},off(){}},events:{once(){},off(){}},
+      add:{graphics:()=>art,particles}};
+    const weather=new WeatherSystem(scene as never,true,2,true);
+    weather.setWeather('rain');weather.update(9500);
+    expect(particles).not.toHaveBeenCalled();expect(rectangles).toHaveLength(32);
+    expect(rectangles.every(([, , w,h])=>w===1&&h===4)).toBe(true);
+    weather.setWeather('sunny');weather.update(9500);expect(rectangles).toHaveLength(0);
+    weather.destroy();weather.destroy();expect(art.destroy).toHaveBeenCalledOnce();
   });
 
   it("emits real bounded particles across repeated rain and wind segments", async () => {

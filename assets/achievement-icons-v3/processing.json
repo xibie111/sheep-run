@@ -1,0 +1,386 @@
+{
+  "tool": "tools/pack-expanded-achievement-icons.mjs",
+  "generatedBy": "built-in imagegen, one independent call per icon",
+  "runtimeSize": [
+    32,
+    32
+  ],
+  "resampling": "NEAREST",
+  "alpha": "Original generated alpha retained in sources; runtime alpha threshold 128; no recoloring or invented content",
+  "complete": true,
+  "missing": [],
+  "entries": [
+    {
+      "id": "three-runs",
+      "name": "又来牧场",
+      "source": "sources/three-runs.png",
+      "sourceSha256": "b99451bafe42e96ad56c2de7612d757eff1b874139d11a150c545b03ad9e3eb6",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "crop": {
+        "x": 124,
+        "y": 157,
+        "width": 1024,
+        "height": 941
+      },
+      "contentSize": [
+        28,
+        26
+      ],
+      "position": [
+        2,
+        3
+      ],
+      "visible": 486,
+      "runtime": "runtime/three-runs.png",
+      "runtimeSize": [
+        32,
+        32
+      ],
+      "runtimeSha256": "b251ffe4185215ca0d31d6da76ce0b0157260662ae7420ca2cd50d4dcca1d64b"
+    },
+    {
+      "id": "ten-runs",
+      "name": "熟悉的脚步",
+      "source": "sources/ten-runs.png",
+      "sourceSha256": "03ceab70657eff27f19eff4d3e75aed201a5006b428cdadc749a85f6c88efff6",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "crop": {
+        "x": 165,
+        "y": 156,
+        "width": 932,
+        "height": 951
+      },
+      "contentSize": [
+        27,
+        28
+      ],
+      "position": [
+        2,
+        2
+      ],
+      "visible": 458,
+      "runtime": "runtime/ten-runs.png",
+      "runtimeSize": [
+        32,
+        32
+      ],
+      "runtimeSha256": "7a8b22091c3f72410a679e3e4255b7e97c2c0a6d151db6672293cad29799e891"
+    },
+    {
+      "id": "ten-friends",
+      "name": "朋友陪我跑",
+      "source": "sources/ten-friends.png",
+      "sourceSha256": "e95f09a755ac072b216938560fbb5cc4936c9be309cc314a7d49dc5f483dc50a",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "crop": {
+        "x": 30,
+        "y": 260,
+        "width": 1192,
+        "height": 781
+      },
+      "contentSize": [
+        28,
+        18
+      ],
+      "position": [
+        2,
+        7
+      ],
+      "visible": 386,
+      "runtime": "runtime/ten-friends.png",
+      "runtimeSize": [
+        32,
+        32
+      ],
+      "runtimeSha256": "1c09162da18bfabc7f991ee25c555de038ea6875c649b1fc0be1062c0866bd11"
+    },
+    {
+      "id": "five-stars",
+      "name": "口袋里的光",
+      "source": "sources/five-stars.png",
+      "sourceSha256": "02e278d54ffa520107d3748a8e65af6deaca91ec62e9ce37328ecfea12494ab4",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "crop": {
+        "x": 51,
+        "y": 55,
+        "width": 1153,
+        "height": 1121
+      },
+      "contentSize": [
+        28,
+        27
+      ],
+      "position": [
+        2,
+        2
+      ],
+      "visible": 515,
+      "runtime": "runtime/five-stars.png",
+      "runtimeSize": [
+        32,
+        32
+      ],
+      "runtimeSha256": "ce9eb768c149f88f63bb05c179c2706c3694099778e9bc66b987b0ec1d641ec0"
+    },
+    {
+      "id": "fifteen-stars",
+      "name": "星光陪我跑",
+      "source": "sources/fifteen-stars.png",
+      "sourceSha256": "da3c3927732dde69b3b4a100175e5a9535f16b66e88a0460ab5cc505c968431b",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "crop": {
+        "x": 160,
+        "y": 106,
+        "width": 968,
+        "height": 1043
+      },
+      "contentSize": [
+        26,
+        28
+      ],
+      "position": [
+        3,
+        2
+      ],
+      "visible": 495,
+      "runtime": "runtime/fifteen-stars.png",
+      "runtimeSize": [
+        32,
+        32
+      ],
+      "runtimeSha256": "3ee15f5afd8fd621de6074f465d203fcb56ba4c8a533f3c0a8717a64dbe4b883"
+    },
+    {
+      "id": "thirty-five-stars",
+      "name": "满满的星光",
+      "source": "sources/thirty-five-stars.png",
+      "sourceSha256": "8be5ab03016a77108e05519b0dbd8ea51b607285779af082baa91815c83bcafc",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "crop": {
+        "x": 169,
+        "y": 140,
+        "width": 916,
+        "height": 986
+      },
+      "contentSize": [
+        26,
+        28
+      ],
+      "position": [
+        3,
+        2
+      ],
+      "visible": 510,
+      "runtime": "runtime/thirty-five-stars.png",
+      "runtimeSize": [
+        32,
+        32
+      ],
+      "runtimeSha256": "63b170752d0c08e8ae7f4a95b18955c980c0d568219c2e5dc1c224961701ee98"
+    },
+    {
+      "id": "five-obstacles",
+      "name": "小路向前",
+      "source": "sources/five-obstacles.png",
+      "sourceSha256": "c618fa4e0c70e4ded82b164fe14fa96d988c436202755bee5f660f5341646408",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "crop": {
+        "x": 196,
+        "y": 110,
+        "width": 925,
+        "height": 1058
+      },
+      "contentSize": [
+        24,
+        28
+      ],
+      "position": [
+        4,
+        2
+      ],
+      "visible": 395,
+      "runtime": "runtime/five-obstacles.png",
+      "runtimeSize": [
+        32,
+        32
+      ],
+      "runtimeSha256": "55eaa21319ef02188f5fbef1d470dc95240671a9e3b1320db7f5167861a0e10f"
+    },
+    {
+      "id": "ten-obstacles",
+      "name": "脚步轻轻",
+      "source": "sources/ten-obstacles.png",
+      "sourceSha256": "4db5d6dcfedc6a57118913a47087632becd1f36ec457eee8cdd443ff340b2f35",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "crop": {
+        "x": 158,
+        "y": 160,
+        "width": 974,
+        "height": 945
+      },
+      "contentSize": [
+        28,
+        27
+      ],
+      "position": [
+        2,
+        2
+      ],
+      "visible": 436,
+      "runtime": "runtime/ten-obstacles.png",
+      "runtimeSize": [
+        32,
+        32
+      ],
+      "runtimeSha256": "c5b156e3296be72f5d85f38cdbccf718ddccb990d473ace122ef22cc09f51d37"
+    },
+    {
+      "id": "thirty-five-obstacles",
+      "name": "一路有风景",
+      "source": "sources/thirty-five-obstacles.png",
+      "sourceSha256": "59ecc2590fcf193cd8ece95f0ab74a5767b7baba277389cf88a221b38c89912a",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "crop": {
+        "x": 238,
+        "y": 159,
+        "width": 899,
+        "height": 996
+      },
+      "contentSize": [
+        25,
+        28
+      ],
+      "position": [
+        3,
+        2
+      ],
+      "visible": 410,
+      "runtime": "runtime/thirty-five-obstacles.png",
+      "runtimeSize": [
+        32,
+        32
+      ],
+      "runtimeSha256": "86e51d0b34ab338e7ca53e57a943c6e7477be161063c08bf28479c4be351c17d"
+    },
+    {
+      "id": "fifteen-skins",
+      "name": "可爱的模样",
+      "source": "sources/fifteen-skins.png",
+      "sourceSha256": "0308e88d6ef758488d1a37202f0e403dd55b3be59a72d5369434d0dbdda80ce5",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "crop": {
+        "x": 63,
+        "y": 137,
+        "width": 1128,
+        "height": 994
+      },
+      "contentSize": [
+        28,
+        25
+      ],
+      "position": [
+        2,
+        3
+      ],
+      "visible": 521,
+      "runtime": "runtime/fifteen-skins.png",
+      "runtimeSize": [
+        32,
+        32
+      ],
+      "runtimeSha256": "a0a8a2a207d65020a76d8f87de6dd4b304a3cced5fdf45fe024dc679eca59d58"
+    },
+    {
+      "id": "twenty-five-skins",
+      "name": "衣橱里的心意",
+      "source": "sources/twenty-five-skins.png",
+      "sourceSha256": "8e98f477a6638b54f42aff64a232350a6a39a360f6deadb8af19efa10608ff30",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "crop": {
+        "x": 70,
+        "y": 174,
+        "width": 1117,
+        "height": 906
+      },
+      "contentSize": [
+        28,
+        23
+      ],
+      "position": [
+        2,
+        4
+      ],
+      "visible": 477,
+      "runtime": "runtime/twenty-five-skins.png",
+      "runtimeSize": [
+        32,
+        32
+      ],
+      "runtimeSha256": "66a7874850c0cc39b24b24b786d50e933eb334690ee67299b2cf3631426eb6d6"
+    },
+    {
+      "id": "three-seasons",
+      "name": "一路换季",
+      "source": "sources/three-seasons.png",
+      "sourceSha256": "0e6547172060d63d1a7de626d788bfbbc0a25ed842736ec356e2cbac4279060b",
+      "sourceSize": [
+        1254,
+        1254
+      ],
+      "crop": {
+        "x": 69,
+        "y": 81,
+        "width": 1115,
+        "height": 1093
+      },
+      "contentSize": [
+        28,
+        27
+      ],
+      "position": [
+        2,
+        2
+      ],
+      "visible": 508,
+      "runtime": "runtime/three-seasons.png",
+      "runtimeSize": [
+        32,
+        32
+      ],
+      "runtimeSha256": "c7eadef1e4d06fe11813a6e54c13aac36de507a36bc51de5d2dfbe6854c2a9e6"
+    }
+  ]
+}

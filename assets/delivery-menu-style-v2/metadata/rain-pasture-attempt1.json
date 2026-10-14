@@ -1,0 +1,29 @@
+{
+  "key": "rain-pasture",
+  "attempt": 1,
+  "tool": "builtin image_gen.imagegen",
+  "transparent_background": false,
+  "prompt_path": "assets/delivery-menu-style-v2/prompts/rain-pasture-attempt1.txt",
+  "references": [
+    {
+      "index": 1,
+      "path": "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+      "role": "sole style reference",
+      "sha256": "de36b068c971bbd24d870b5075a1380e852a4000d71c7807bb0600ce1fbf3749"
+    },
+    {
+      "index": 2,
+      "path": "D:/DSH workspace/sheep-run/assets/delivery-expansion-v1/chapters/runtime/rain-pasture.png",
+      "role": "old composition and story landmark reference only",
+      "sha256": "e7bbf03ba04008428de775986bf180558c49d09477bc4fc37dfe588ab12c5a60"
+    }
+  ],
+  "generation_started_at_utc": "2026-10-13T13:02:20.1Z",
+  "generation_completed_at_utc": "2026-10-13T13:02:58.938Z",
+  "generated_original_path": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a13558-e12e-7d52-b01c-2f169260b99c\\exec-bb545bfa-9ab2-4a61-9989-a4e1ad837907.png",
+  "source_path": "assets/delivery-menu-style-v2/sources/rain-pasture-attempt1.png",
+  "selection": "rejected for sunny sky; middle also has baked rain streaks",
+  "bytes_preserved": true,
+  "source_sha256": "f6f2ddc3d04bf194d0ec27d24cd8b49a1276eb7a5087105a7eda67683662a611",
+  "source_bytes": 1617684
+}

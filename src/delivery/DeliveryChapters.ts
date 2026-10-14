@@ -1,8 +1,11 @@
 import type { DeliveryChallengeChapterId, DeliveryChallengeDefinition } from './DeliveryChallengeRun';
 import { WoodFence, Pumpkin, Rock, WideLog, MushroomCluster, HangingBranch, Bramble, TallStack, type ObstacleDefinition } from '../game/ObstacleDefinitions';
+import { RESIDENT_ROUTES, type ResidentEndingDefinition } from './ResidentRoutes';
 
 export type DeliveryChapterId = 'hill-goodnight-v1' | 'dinner-for-you-v1' | DeliveryChallengeChapterId;
-export type DeliveryPhase = 'pasture' | 'forest' | 'hill' | 'arrival' | 'dusk-pasture' | 'field' | 'cottage' | 'sunny-pasture' | 'wheat-path' | 'windmill-meadow' | 'cloudy-pasture' | 'rain-forest' | 'river-cottage' | 'twilight-meadow' | 'starlight-path' | 'seaside-lighthouse';
+export type DeliveryPhase = 'pasture' | 'forest' | 'hill' | 'arrival' | 'dusk-pasture' | 'field' | 'cottage' | 'sunny-pasture' | 'wheat-path' | 'windmill-meadow' | 'cloudy-pasture' | 'rain-forest' | 'river-cottage' | 'twilight-meadow' | 'starlight-path' | 'seaside-lighthouse'
+  | 'flower-cottage' | 'flower-path' | 'field-crossroads' | 'windmill-picnic' | 'after-rain-meadow' | 'bridge-neighbor'
+  | 'bridge-meadow' | 'sunny-riverside' | 'lighthouse-hill' | 'seaside-path' | 'harbor-cottage' | 'harbor-dusk' | 'starlight-coast' | 'lighthouse-platform';
 export interface DeliveryPhaseDefinition { readonly id: DeliveryPhase; readonly start: number; readonly label: string; readonly weather?: 'clear' | 'rain' | 'starlight' }
 export interface DeliveryObstacleRequest { readonly at: number; readonly definition: ObstacleDefinition; readonly phase: number }
 export interface DeliveryLandscape { readonly key: string; readonly transitionStart: number; readonly transitionEnd: number; readonly focus?: 'right' }
@@ -11,7 +14,8 @@ export interface DeliveryChapter {
   readonly length: number; readonly seed: number; readonly phases: readonly DeliveryPhaseDefinition[];
   readonly obstacles: readonly DeliveryObstacleRequest[]; readonly landscapes: readonly DeliveryLandscape[];
   readonly previewKey: string; readonly postcardKey: string; readonly endingKey: string; readonly accessoryKey?: string;
-  readonly companionAt: number; readonly destinationAt: number; readonly endingDurationMs: number; readonly endingKind: 'goodnight' | 'dinner' | 'invitation' | 'umbrella' | 'lighthouse';
+  readonly companionAt: number; readonly destinationAt: number; readonly endingDurationMs: number; readonly endingKind: 'goodnight' | 'dinner' | 'invitation' | 'umbrella' | 'lighthouse' | 'resident';
+  readonly residentEnding?: ResidentEndingDefinition;
   readonly postcardTitle: string; readonly deliveredLabel: string; readonly successText: string; readonly postcardText: string;
   readonly challenge?: DeliveryChallengeDefinition; readonly difficultyLabel?: string;
   readonly weather?: 'clear' | 'rain' | 'starlight'; readonly roadCropRatio?: number;
@@ -133,7 +137,7 @@ export const DELIVERY_EXPANSION_TEXT = [invitation, umbrella, starlight].flatMap
   chapter.itinerary, chapter.difficultyLabel!, ...chapter.phases.map(phase => phase.label), chapter.postcardTitle,
   chapter.deliveredLabel, chapter.successText, chapter.postcardText, chapter.failureTitle, chapter.failureText, chapter.startLabel]);
 
-export const DELIVERY_CHAPTERS: readonly DeliveryChapter[] = Object.freeze([goodnight, dinner, invitation, umbrella, starlight]);
+export const DELIVERY_CHAPTERS: readonly DeliveryChapter[] = Object.freeze([goodnight, dinner, invitation, umbrella, starlight, ...RESIDENT_ROUTES]);
 export function isDeliveryChapterId(value: unknown): value is DeliveryChapterId { return typeof value === 'string' && DELIVERY_CHAPTERS.some(chapter => chapter.id === value); }
 export function getDeliveryChapter(id: unknown): DeliveryChapter | undefined { return DELIVERY_CHAPTERS.find(chapter => chapter.id === id); }
 export function defaultDeliveryChapter(): DeliveryChapter { return goodnight; }

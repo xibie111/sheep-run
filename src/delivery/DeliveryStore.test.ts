@@ -16,6 +16,16 @@ describe('independent delivery postcards', () => {
     expect(store.complete('invalid').added).toBe(false); store.complete(DELIVERY_ID);
     expect(store.load().completedIds).toEqual(['future-route', DELIVERY_ID]);
   });
+  it('preserves extension fields and merges another writer when retrying a real session success', () => {
+    const port = storage(JSON.stringify({ version: 1, completedIds: ['future-route'], cursor: { nested: [1, 2] } }));
+    let failed = true;
+    const store = new DeliveryStore(() => ({ getItem: port.getItem, setItem: (key, value) => { if (failed) throw Error('quota'); port.setItem(key, value); } }));
+    expect(store.complete(DELIVERY_ID).saved).toBe(false);
+    port.setItem(DELIVERY_STORAGE_KEY, JSON.stringify({ version: 1, completedIds: ['future-route', 'dinner-for-you-v1'], cursor: { nested: [1, 2, 3] }, futureFlag: true }));
+    failed = false;
+    expect(store.retrySave()).toEqual({ completedIds: ['future-route', 'dinner-for-you-v1', DELIVERY_ID], saveFailed: false });
+    expect(JSON.parse(port.getItem(DELIVERY_STORAGE_KEY)!)).toEqual({ version: 1, completedIds: ['future-route', 'dinner-for-you-v1', DELIVERY_ID], cursor: { nested: [1, 2, 3] }, futureFlag: true });
+  });
   it.each(['bad json', JSON.stringify({ version: 2, completedIds: [] }), JSON.stringify({ version: 1, completedIds: [42] })])('never overwrites malformed or future data: %s', raw => {
     const port = storage(raw), store = new DeliveryStore(() => port); expect(store.complete(DELIVERY_ID)).toEqual({ added: true, saved: false });
     expect(port.getItem(DELIVERY_STORAGE_KEY)).toBe(raw); expect(store.load().completedIds).toContain(DELIVERY_ID);

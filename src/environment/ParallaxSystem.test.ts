@@ -3,6 +3,35 @@ import { WORLD, ENVIRONMENT } from "../game/Constants";
 import { ParallaxSystem } from "./ParallaxSystem";
 import { ThemeSystem } from "./ThemeSystem";
 
+describe('rain keeps the authored background colours', () => {
+  it('removes night tint only during rain and restores it after rain without moving scenery', () => {
+    const parallax = new ParallaxSystem();
+    parallax.update(9500);
+    const night = parallax.snapshot(), presentation = parallax.presentation();
+    expect(presentation.dayPhase).toBe('night');
+    expect(presentation.landTint).not.toBe(0xffffff);
+    parallax.update(9500, 1);
+    expect(parallax.snapshot().every(layer => layer.tint === 0xffffff)).toBe(true);
+    expect(parallax.snapshot().map(layer => layer.x)).toEqual(night.map(layer => layer.x));
+    expect(parallax.presentation().landTint).toBe(0xffffff);
+    expect(parallax.presentation().dayPhase).toBe('night');
+    parallax.update(9500, .5);
+    expect(parallax.presentation().landTint).toBeGreaterThan(presentation.landTint);
+    expect(parallax.presentation().landTint).toBeLessThan(0xffffff);
+    parallax.update(9500, 0);
+    expect(parallax.snapshot()).toEqual(night);
+  });
+
+  it('retains rain brightness through viewport layout while keeping camera and ground phase', () => {
+    const h = createViewportHarness(480,270), parallax = new ParallaxSystem(h.scene as never);
+    parallax.update(9500, 1);
+    h.resize(584,270);
+    expect(parallax.snapshot().every(layer=>layer.tint===0xffffff)).toBe(true);
+    expect(h.sprites.get('pasture-ground')!.tilePositionX).toBe(9500%480-104);
+    parallax.destroy();
+  });
+});
+
 function createViewportHarness(width: number, height: number) {
   const sprites = new Map<string, {
     x: number; y: number; width: number; height: number; tilePositionX: number;

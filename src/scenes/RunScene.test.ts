@@ -43,6 +43,8 @@ import { RunGoal } from '../runner-v2/RunGoal';
 import { RunTravel } from '../runner-v2/RunTravel';
 import { DELIVERY_CHAPTERS } from '../delivery/DeliveryChapters';
 import { deliveryStore } from '../delivery/DeliveryStore';
+import { deliveryChallengeStore } from '../delivery/DeliveryChallengeStore';
+import { RESIDENT_NEW_CHAPTER_IDS } from '../residents/ResidentCatalog';
 import type { LandmarkEncounter } from '../scenery/landmarkCatalog';
 
 type SceneUnderTest = {
@@ -74,8 +76,8 @@ type SceneUnderTest = {
 function primeUpdate(scene: SceneUnderTest): { update: ReturnType<typeof vi.fn>; image: ReturnType<typeof vi.fn>; environmentUpdate: ReturnType<typeof vi.fn> } {
   const scoreSystem = { update: vi.fn(), score: 0, travelledDistancePx: 1234 };
   const environmentUpdate = vi.fn();
-  const image = vi.fn(() => ({ setDisplaySize() { return this; }, setDepth() { return this; }, setVisible() { return this; }, setScrollFactor() { return this; } }));
-  const text = vi.fn(() => ({ setOrigin() { return this; }, setTint() { return this; }, setDepth() { return this; }, setVisible() { return this; }, setText() { return this; }, setScrollFactor() { return this; } }));
+  const image = vi.fn(() => ({ setDisplaySize() { return this; }, setDepth() { return this; }, setVisible() { return this; }, setPosition() { return this; }, setScrollFactor() { return this; } }));
+  const text = vi.fn(() => ({ setOrigin() { return this; }, setTint() { return this; }, setDepth() { return this; }, setVisible() { return this; }, setPosition() { return this; }, setText() { return this; }, setScrollFactor() { return this; } }));
   Object.assign(scene, {
     add: { image, text, bitmapText: text },
     environmentSystem: { update: environmentUpdate, clear: vi.fn() },
@@ -117,6 +119,16 @@ describe('delivery mode gameplay isolation', () => {
     scene.update(0, 20); scene.onStarOverlap({}); scene.onPowerUpOverlap({});
     expect(route.distance).toBeGreaterThan(0); expect(normal.update).not.toHaveBeenCalled(); expect(spawn).not.toHaveBeenCalled();
     expect(window.localStorage.setItem).not.toHaveBeenCalled();
+  });
+  it.each(DELIVERY_CHAPTERS)('drives $id scenery with actual obstacle travel, without slowing the first pasture', chapter => {
+    const scene=makeScene(),normal=primeUpdate(scene),route=new DeliveryRoute(chapter.id);
+    Object.assign(scene,{delivery:route,environmentSystem:{update:normal.environmentUpdate,setWeather:vi.fn()},deliveryView:{update:vi.fn()}});
+    scene.update(0,40);
+    expect(normal.environmentUpdate).toHaveBeenLastCalledWith(route.distance,40,0);
+    expect(route.distance).toBeCloseTo(190*.04,8);
+    scene.update(40,40);
+    expect(normal.environmentUpdate).toHaveBeenLastCalledWith(route.distance,40,0);
+    expect(route.distance).toBeCloseTo(190*.08,8);
   });
   it('fails once without endless rewards, and clears the visual friend immediately', () => {
     const scene = makeScene(), route = new DeliveryRoute(), finish = vi.fn(), panel = vi.fn(), friend = vi.fn();
@@ -312,7 +324,7 @@ describe("RunScene input before collision", () => {
 
     expect(scene.activeRunTimeMs).toBe(16);
     expect(scene.powerUpSystem.isActive("shield", scene.activeRunTimeMs)).toBe(true);
-    expect(image).toHaveBeenCalledWith(172, 54, "powerup-shield");
+    expect(image).toHaveBeenCalledWith(80, 54, "powerup-shield");
   });
 
   it("awards score only for the same capped delta used by world motion", () => {
@@ -952,6 +964,7 @@ describe('content v2 final RunScene integration', () => {
   afterEach(() => { vi.restoreAllMocks(); vi.unstubAllGlobals(); });
 
   it.each(DELIVERY_CHAPTERS)('starts the real $id chapter and preserves its own seed while consuming only deliveryId', chapter => {
+    vi.spyOn(deliveryStore, 'load').mockReturnValue({ completedIds: DELIVERY_CHAPTERS.map(item => item.id), saveFailed: false });
     const scene = new RunScene(), set = vi.fn(); Object.assign(scene, { data: { set } });
     const data = { deliveryId: chapter.id, unrelated: 'retained' }; scene.init(data);
     const route = (scene as unknown as { delivery: DeliveryRoute }).delivery;
@@ -969,6 +982,7 @@ describe('content v2 final RunScene integration', () => {
   });
 
   it.each(DELIVERY_CHAPTERS)('settles $id once using the actual chapter ID and never the endless journal or currency path', chapter => {
+    vi.spyOn(deliveryStore, 'load').mockReturnValue({ completedIds: DELIVERY_CHAPTERS.map(item => item.id), saveFailed: false });
     const complete = vi.spyOn(deliveryStore, 'complete').mockReturnValue({ added: true, saved: true });
     const scene = makeScene(); primeUpdate(scene);
     const route = new DeliveryRoute(chapter.id); route.distance = chapter.length; route.state = 'ending'; route.endingMs = chapter.endingDurationMs - 40;
@@ -994,6 +1008,34 @@ describe('content v2 final RunScene integration', () => {
       pauseButton: { input: { enabled: true } }, physics: { pause: vi.fn() }, sheep: { body: { setVelocity: vi.fn() } } });
     scene.onObstacleOverlap(); scene.onObstacleOverlap();
     expect(panel).toHaveBeenCalledExactlyOnceWith('failure', false, 'dinner-for-you-v1'); expect(route.state).toBe('failed');
+  });
+  it.each(RESIDENT_NEW_CHAPTER_IDS)('rejects direct locked launch %s before initializing gameplay and consumes the stale parameter', deliveryId => {
+    vi.spyOn(deliveryStore, 'load').mockReturnValue({ completedIds: [], saveFailed: false });
+    vi.spyOn(deliveryChallengeStore, 'retrySave').mockReturnValue({ chapters: {}, saveFailed: false });
+    const scene = new RunScene(), start = vi.fn();
+    Object.assign(scene, { data: { set: vi.fn() }, scene: { start } });
+    const data = { deliveryId }; scene.init(data); scene.create();
+    expect(start).toHaveBeenCalledExactlyOnceWith(SCENE.menu, { openMailbox: true });
+    expect((scene as unknown as { delivery?: DeliveryRoute }).delivery).toBeUndefined();
+    expect(data).toEqual({});
+    scene.init(data);
+    expect((scene as unknown as { deliveryLocked: boolean }).deliveryLocked).toBe(false);
+  });
+  it('announces an actual new resident reply once and gives no repeated unlock message on replay', () => {
+    const ids: string[] = [];
+    vi.spyOn(deliveryStore, 'load').mockImplementation(() => ({ completedIds: [...ids], saveFailed: false }));
+    vi.spyOn(deliveryStore, 'complete').mockImplementation(id => { const added = !ids.includes(id); if (added) ids.push(id); return { added, saved: true }; });
+    vi.spyOn(deliveryChallengeStore, 'recordResult').mockReturnValue({ accepted: true, improved: true, saved: true });
+    for (const replay of [false, true]) {
+      const scene = makeScene(); primeUpdate(scene);
+      const route = new DeliveryRoute('windmill-invitation-v1'), show = vi.fn();
+      route.distance = route.chapter.length; route.state = 'ending'; route.endingMs = route.chapter.endingDurationMs - 40;
+      Object.assign(scene, { delivery: route, environmentSystem: { update: vi.fn(), setWeather: vi.fn() },
+        pauseButton: { input: { enabled: true } }, deliveryPanel: { show }, deliveryView: { update: vi.fn() } });
+      scene.update(0, 40); scene.update(40, 40);
+      expect(show).toHaveBeenCalledOnce();
+      expect(show.mock.calls[0]![4]).toBe(replay ? undefined : '收到阿禾的回信');
+    }
   });
 
   it('updates landmarks from physical world distance and the current presentation rather than score bonuses', () => {

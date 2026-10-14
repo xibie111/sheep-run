@@ -1,0 +1,24 @@
+{
+  "id": "pirate-v1",
+  "mode": "built-in-image_gen",
+  "useCase": "stylized-concept",
+  "intent": "generate",
+  "transparent_background": true,
+  "prompt": "Use case: stylized-concept.\nAsset type: production pixel-art transparent full-body character sprite sheet for the existing Sheep Run touch game.\nInput reference 1, white-sheet.png: identity and anatomy reference for the exact same cute sheep; preserve its oval scalloped cream wool body, small peach square face on the right, one visible dark oval eye, cocoa ear beside the face, four tiny cocoa hooves under the wool. Do not copy its outfit because it has none.\nInput reference 2, sailor-v1-sheet.png: style and animation-composition reference, showing how a complete costume remains on this same sheep in all poses. Use the exact crisp limited-palette pixel-art look with chunky deliberate pixel clusters, dark cocoa pixel outline, soft cream highlight clusters; no antialias, smooth vector, 3D, or painted texture.\nPrimary request: create a NEW fully costumed sheep sprite sheet, complete individual finished costume on every frame. The sheep must unmistakably remain a sheep, never become a different animal or a Kirby-like round mascot. No arms, horns, hands, human legs, or long limbs.\nComposition: landscape transparent canvas, EXACTLY 15 separate complete sheep sprites, in a regular 5 columns by 3 rows grid, uniform cells and character scale. Use the same orthographic side-view perspective. EVERY FRAME faces RIGHT, including fallen/dead frames. Each sprite has generous empty transparent margin inside its cell and clear transparent gaps from its neighbors; every hat/ear/backplate/tail/hoof stays completely inside its own cell. No decorative extras or detached objects.\nFrame pose order by row:\nRow 1: idle neutral; run 1 front legs forward and rear legs backward; run 2 legs tucked passing beneath body; run 3 forelegs back and rearlegs forward; run 4 feet spread wide in airborne stride.\nRow 2: jump rising with bent tucked hooves; fall descending with hooves reaching down; hit recoiling and squinting still facing right; dash 1 stretched horizontal body with hooves swept backward; dead lying flattened on side facing right, eye closed.\nRow 3: idle 2 gentle blink/breath and slight wool squash; run 5 high rear kick and one forehoof raised; run 6 landing contact with body compressed and forehooves ahead; dash 2 second horizontal dash pose with lower body and different hooves; dead settled flattened but different from first dead with slightly lowered head.\nMotion requirement: all SIX running poses have visibly distinct hoof silhouettes and body positions. Do not duplicate any run frame. Idle 2 is distinct, two dashes distinct, two dead frames distinct. The costume is attached naturally to the wool/head and remains complete in every single frame.\nScene/backdrop: genuine alpha transparency everywhere outside the character, clean cutout edges; absolutely no opaque background, no checkerboard illustration, no ground shadow, no floor.\nText: NONE. No labels, lettering, captions, numbers, guides, grid lines, cell borders, dividers, watermark, or logo.\nSubject costume: SAME CREAM SHEEP wearing a compact navy pirate tricorn hat with a narrow muted red hatband and tiny cream stitched emblem, plus a short burgundy bandana wrapped at the base of the head. Keep hat modest and snug, not huge. No sword, hook, pegleg, arms, handheld props, or eye patch. The small peach sheep face, cocoa ear, dark eye and all four cocoa hooves remain clearly visible. The burgundy scarf knot is attached, compact, and never loose in a cell. Navy, muted red and burgundy contrast clearly with warm cream wool.",
+  "references": [
+    {
+      "index": 1,
+      "path": "D:\\DSH workspace\\sheep-run\\assets\\skins\\runtime-v1\\white-sheet.png",
+      "role": "sheep identity and anatomy",
+      "inspection": "view_image inspected before generation",
+      "attachment": "referenced_image_paths sent successfully"
+    },
+    {
+      "index": 2,
+      "path": "D:\\DSH workspace\\sheep-run\\assets\\skins\\runtime-v4\\sailor-v1-sheet.png",
+      "role": "pixel-art costume and animation layout style",
+      "inspection": "view_image inspected before generation",
+      "attachment": "referenced_image_paths sent successfully"
+    }
+  ]
+}

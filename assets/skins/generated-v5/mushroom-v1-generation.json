@@ -1,0 +1,9 @@
+{
+  "tool": "builtin-image_gen",
+  "id": "mushroom-v1",
+  "generatedPath": "C:/Users/mechrevo/.codex/generated_images/01a11760-9d97-77c1-924c-cefdf4e6c788/exec-3f5268dc-32d6-4db2-96f9-3996dc1c45c0.png",
+  "workspaceSource": "assets/skins/generated-v5/mushroom-v1-source.png",
+  "promptFile": "mushroom-v1-prompt.json",
+  "referencesAttached": true,
+  "transparent_background": true
+}

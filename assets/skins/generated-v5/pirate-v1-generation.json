@@ -1,0 +1,37 @@
+{
+  "id": "pirate-v1",
+  "status": "generated",
+  "tool": "image_gen.imagegen",
+  "builtIn": true,
+  "startedAt": "2026-10-13T07:48:09.666Z",
+  "completedAt": "2026-10-13T07:48:59.371Z",
+  "transparent_background": true,
+  "referenceAttachmentSucceeded": true,
+  "referenceFallbackUsed": false,
+  "originalGeneratedFile": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a13439-f4d6-7473-afd9-6ffeb13517a8\\exec-bea3c20d-c3db-4b62-a4ec-5f794f760958.png",
+  "workspaceOriginal": "D:\\DSH workspace\\sheep-run\\assets\\skins\\generated-v5\\pirate-v1-source.png",
+  "processing": "byte-identical copy of original generation; no painting or reconstruction",
+  "visualInspection": "Generated output visually inspected: 5 by 3 full-body right-facing pirate sheep; face and legs visible; attached costume present all 15 poses. Runtime suitability and per-frame checks delegated to packer.",
+  "runtimePrepared": false,
+  "sourceVerification": {
+    "dimensions": [
+      1620,
+      971
+    ],
+    "fileBytes": 1156857,
+    "sha256": "fec3e2d5ae4ca6d388ee75e648cba54a5d83a4e40449eeefd329f999047aa1f0",
+    "transparentPixels": 894348,
+    "opaquePixels": 409,
+    "semiTransparentPixels": 678263,
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alphaBbox": [
+      0,
+      19,
+      1608,
+      971
+    ]
+  }
+}

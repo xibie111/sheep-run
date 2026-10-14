@@ -1,0 +1,106 @@
+{
+  "spring": {
+    "HayCart": {
+      "x": 55,
+      "y": 87,
+      "width": 277,
+      "height": 178
+    },
+    "WaterTrough": {
+      "x": 415,
+      "y": 145,
+      "width": 347,
+      "height": 111
+    },
+    "HangingLantern": {
+      "x": 870,
+      "y": 53,
+      "width": 106,
+      "height": 198
+    },
+    "FlyingGoose": {
+      "x": 1109,
+      "y": 48,
+      "width": 274,
+      "height": 217
+    }
+  },
+  "summer": {
+    "HayCart": {
+      "x": 55,
+      "y": 353,
+      "width": 277,
+      "height": 179
+    },
+    "WaterTrough": {
+      "x": 415,
+      "y": 412,
+      "width": 349,
+      "height": 111
+    },
+    "HangingLantern": {
+      "x": 870,
+      "y": 318,
+      "width": 110,
+      "height": 201
+    },
+    "FlyingGoose": {
+      "x": 1109,
+      "y": 315,
+      "width": 274,
+      "height": 217
+    }
+  },
+  "autumn": {
+    "HayCart": {
+      "x": 55,
+      "y": 616,
+      "width": 277,
+      "height": 180
+    },
+    "WaterTrough": {
+      "x": 415,
+      "y": 675,
+      "width": 349,
+      "height": 113
+    },
+    "HangingLantern": {
+      "x": 872,
+      "y": 579,
+      "width": 109,
+      "height": 202
+    },
+    "FlyingGoose": {
+      "x": 1109,
+      "y": 578,
+      "width": 274,
+      "height": 218
+    }
+  },
+  "winter": {
+    "HayCart": {
+      "x": 55,
+      "y": 879,
+      "width": 281,
+      "height": 182
+    },
+    "WaterTrough": {
+      "x": 416,
+      "y": 934,
+      "width": 346,
+      "height": 117
+    },
+    "HangingLantern": {
+      "x": 870,
+      "y": 844,
+      "width": 107,
+      "height": 200
+    },
+    "FlyingGoose": {
+      "x": 1109,
+      "y": 850,
+      "width": 274,
+      "height": 210
+    }
+  }
+}

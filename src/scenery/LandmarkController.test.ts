@@ -50,12 +50,28 @@ describe('route landmarks', () => {
     expect(h.notify).toHaveBeenCalledTimes(1);
     expect(h.controller.snapshot().encounters).toHaveLength(1);
   });
-  it('uses the exact far layer offset when provided and derives existing far ratio otherwise', () => {
+  it('moves the windmill with the near layer and ignores unrelated far offset changes', () => {
     const h = harness(); h.controller.update(h.context(2400));
     const x = h.controller.snapshot().x!; h.controller.update(h.context(2500));
-    expect(h.controller.snapshot().x).toBeCloseTo(x - 15);
-    const c = h.context(2600); c.landscape.farOffset = 400;
-    h.controller.update(c); expect(h.controller.snapshot().x).toBeCloseTo(x - 40);
+    expect(h.controller.snapshot().x).toBeCloseTo(x - 24);
+    const c = h.context(2600); c.landscape.farOffset = 400; c.landscape.farRatio = .05;
+    h.controller.update(c); expect(h.controller.snapshot().x).toBeCloseTo(x - 48);
+    c.landscape.farOffset = 50_000;
+    h.controller.update(c); expect(h.controller.snapshot().x).toBeCloseTo(x - 48);
+    expect(LANDMARKS[0].layer).toBe('near');
+  });
+  it('crosses the painted near texture cycle without moving the windmill backwards or repeating it', () => {
+    const h = harness(), period = 1134;
+    const beforeDistance = period / .24 - 50, afterDistance = beforeDistance + 100;
+    h.controller.update(h.context(beforeDistance));
+    const before = h.controller.snapshot();
+    h.controller.update(h.context(afterDistance));
+    const after = h.controller.snapshot();
+    expect(afterDistance * .24 % period).toBeLessThan(beforeDistance * .24 % period);
+    expect(after.x).toBeCloseTo(before.x! - 24);
+    expect(after.id).toBe('windmill-meadow');
+    expect(after.startedCount).toBe(1);
+    expect(h.views.filter(view => !view.destroyed)).toHaveLength(1);
   });
   it('follows the near layer one-for-one without repeating a landmark in a wide viewport', () => {
     const h = harness(); h.controller.update(h.context(2400)); h.controller.update(h.context(12_000));
@@ -68,7 +84,7 @@ describe('route landmarks', () => {
     const h = harness(); h.controller.update(h.context(2400)); h.render();
     const before = h.controller.snapshot(); h.pause(true); h.controller.update(h.context(8000));
     expect(h.controller.snapshot()).toEqual(before); expect(h.notify).not.toHaveBeenCalled();
-    h.pause(false); h.controller.update(h.context(2500)); expect(h.controller.snapshot().x).toBeCloseTo(before.x! - 15);
+    h.pause(false); h.controller.update(h.context(2500)); expect(h.controller.snapshot().x).toBeCloseTo(before.x! - 24);
     const resumed = h.controller.snapshot(); h.controller.update(h.context(8000, { paused: true }));
     expect(h.controller.snapshot()).toEqual(resumed);
     h.controller.update(h.context(6200)); expect(h.views[0]!.destroyed).toBe(true);
@@ -82,6 +98,18 @@ describe('route landmarks', () => {
     expect(h.notify).toHaveBeenCalledTimes(1);
     for (let i = 0; i < 80; i++) { h.render(); h.controller.update(h.context(2400)); }
     expect(h.views[0]!.destroyed).toBe(true); expect(h.controller.busy).toBe(false);
+  });
+  it('holds the reduced-motion windmill while world and far phases advance, and does not age it during pause', () => {
+    const h = harness(true); h.controller.update(h.context(2400));
+    const initialX = h.controller.snapshot().x;
+    const c = h.context(2500); c.landscape.farOffset = 25_000;
+    h.controller.update(c);
+    expect(h.controller.snapshot().x).toBe(initialX);
+    const paused = h.controller.snapshot(); h.pause(true);
+    h.controller.update(h.context(2600)); expect(h.controller.snapshot()).toEqual(paused);
+    h.pause(false); h.controller.update(h.context(2600));
+    expect(h.controller.snapshot().x).toBe(initialX);
+    expect(h.controller.snapshot().ageMs).toBe(paused.ageMs + 100);
   });
   it('keeps each silhouette aspect and ground anchor at narrow, wide and tall viewports', () => {
     for (const [width, height] of [[480, 270], [896, 414], [844, 390], [800, 600]]) {

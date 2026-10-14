@@ -1,0 +1,81 @@
+{
+  "originalGeneratedPath": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a13559-c3a9-7620-b61f-8712d8536a34\\exec-16b687c2-6af7-4b7d-991b-1f8d2efd49fd.png",
+  "workspaceSourcePath": "D:/DSH workspace/sheep-run/assets/delivery-menu-style-v2/sources/lighthouse-destination.png",
+  "sha256": "A0299F912FB6EBFCA5E383F08302E7CA17930FDDE8B915BC1CE64667F484C72B",
+  "originalSha256": "A0299F912FB6EBFCA5E383F08302E7CA17930FDDE8B915BC1CE64667F484C72B",
+  "bytes": 1813859,
+  "width": 1672,
+  "height": 941,
+  "generatedFileCreationTimeUtc": "2026-10-13T13:11:06.2989578Z",
+  "archivedAtUtc": "2026-10-13T13:15:41.1832059Z",
+  "referenceHashes": [
+    {
+      "path": "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+      "sha256": "DE36B068C971BBD24D870B5075A1380E852A4000D71C7807BB0600CE1FBF3749"
+    },
+    {
+      "path": "D:/DSH workspace/sheep-run/assets/delivery-menu-style-v2/sources/lighthouse-destination-initial.png",
+      "sha256": "2A99DA9885416B7A33E115712FA2CF5EA560BF43FCF59F67648C3BFA3CD726F9"
+    }
+  ],
+  "tool": "image_gen.imagegen (built-in)",
+  "transparentBackground": false,
+  "prompt": "Use case: style-transfer.\nAsset type: full-bleed opaque 16:9 pixel-art running background.\nReference roles: Image 1 is the sole STYLE reference, farm main menu. Image 2 is the exact EDIT TARGET: preserve its scene, buildings, colors, sky, trees, and bold square-pixel style.\nPrimary request: change ONLY the foreground ground geometry in Image 2 so it has the exact gameplay layout below. Keep the upper landscape visually as close to the edit target as possible. This is a pixel-art asset composition correction.\nAt y = 72 percent image height, the top grass rim ends and the empty tan road starts, across the entire full width. From y = 72 percent all the way to y = 96 percent, fill the entire width with the same warm tan dirt-road treatment used in the edit target, with only its sparse simple big color clusters. At y = 96 percent begins a THIN 4 percent bottom grass strip. Remove ALL the thick foreground bushes and flowers currently below and beside the road; the bottom grass should be a short thin flat strip, never protruding upward into the tan road. The road should occupy exactly 24 percent of image height. Ground lines are straight horizontal, side-view, no perspective. No objects, characters, flowers, bushes, stones or grass on the road. Ground area MUST NOT have an object on either side encroaching into the road.\nIn the target the road is currently too high, near 66 percent image height: move the scene-to-road grass rim DOWN to 72 percent, adding a broad simple green meadow band above it. Keep lighthouse, mailbox, calm sea and sky as they are above the meadow.\n\nStyle: match the square stair-step contours and grouped foliage in Image 1. No antialiasing, microtexture, painted realism, fine foliage, realistic masonry, tiny water sparkle or dense stars. Preserve the original simple landscape.\nOutput: one full-bleed opaque 16:9 landscape. No text, UI, labels, borders, grids, collage, watermarks.",
+  "initialGeneration": {
+    "originalGeneratedPath": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a13559-c3a9-7620-b61f-8712d8536a34\\exec-af5d085b-8db4-4da1-9322-ad7d8263ae6b.png",
+    "workspaceSourcePath": "D:/DSH workspace/sheep-run/assets/delivery-menu-style-v2/sources/lighthouse-destination-initial.png",
+    "sha256": "2A99DA9885416B7A33E115712FA2CF5EA560BF43FCF59F67648C3BFA3CD726F9",
+    "originalSha256": "2A99DA9885416B7A33E115712FA2CF5EA560BF43FCF59F67648C3BFA3CD726F9",
+    "bytes": 1817216,
+    "width": 1672,
+    "height": 941,
+    "generatedFileCreationTimeUtc": "2026-10-13T13:05:58.7982964Z",
+    "archivedAtUtc": "2026-10-13T13:08:22.3519488Z",
+    "tool": "image_gen.imagegen (built-in)",
+    "transparentBackground": false,
+    "prompt": "Use case: stylized-concept.\nAsset type: final full-bleed 16:9 opaque background for a cozy mobile pixel-art sheep game.\nPrimary request: redraw this scene in the SAME coarse blocky pixel-art visual language as the farm main menu in reference Image 1.\nReference roles: Image 1 is the sole STYLE reference: use its cheerful blocky rural game illustration, square stair-step edges, grouped rounded foliage, bold readable contours, restrained simple two or three tone shading. Image 2 is only a LAYOUT / PLACE reference; DO NOT inherit its dense microtexture, tiny foliage or photorealistic rendering.\nStyle and detail: every visible contour is a clear square-pixel staircase, confident big pixel clusters, simple broad grouped foliage, no leaf speckles, no antialiasing or smooth painted gradients. Night scenes stay clear and pleasantly readable; use blue teal lavender meadow colors with warm amber lamps, no black overlay. Lower visual complexity than Image 2 and consistent with Image 1.\nOutput: exactly ONE cohesive landscape scene, one full image, horizontal 16:9, edge-to-edge opaque pixels. No atlas, grid, collage, frames, UI, written words, labels, logos or watermark.\nScene: the starlight delivery destination by a quiet sea. On the RIGHT upper background, a compact friendly FARM-STYLE IVORY LIGHTHOUSE with one muted red stripe, very simple cream block shape, an amber square lamp room and small orange-brown roof, beside a tiny orange-roof cream cottage. No realistic masonry, bricks, tiny rails, complex stonework or tall dramatic architecture. Lighthouse stands on a smooth low blue-green headland with just two broad shadow planes. Its warm beam points LEFT across the background sky only, narrow simple flat wedge above the sea and NEVER touches the road. Quiet sea in middle distance with just five or six broad horizontal blue wave bands and a few big pale-blue highlight rectangles, no tiny sparkles or foam. Distant cool blue coast at the horizon. On the LEFT above the grass rim a simple small cream mailbox on a brown post and short wood fence. Sky has 10 to 15 widely separated chunky square-pixel stars and a big simple cloud band. Gameplay composition invariant: distant horizon about 60% image height. A grass rim crosses FULL width at exactly 72% image height. An empty warm tan dirt road fills the FULL width from 72% to 96% image height; use a small bottom grass strip only below 96%. Road must be wide uninterrupted horizontal band, level, simple and quiet. Nothing on the road: no actor, object, fence, rock, flowers, mailbox, grass clumps, or branches in the road. Keep all scene objects ABOVE road, in background. Flat side-scrolling view with no perspective road into depth.\nNo characters anywhere. Sea/headland scene uses main menu rounded grouped foliage and gentle farm proportions.",
+    "referenceImages": [
+      {
+        "index": 1,
+        "path": "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+        "role": "sole style reference"
+      },
+      {
+        "index": 2,
+        "path": "D:/DSH workspace/sheep-run/assets/delivery-expansion-v1/chapters/runtime/lighthouse-destination.png",
+        "role": "layout only reference"
+      }
+    ],
+    "validation": {
+      "visualInspection": true,
+      "menuStyleMatched": true,
+      "noAtlasTextUIGridBorder": true,
+      "noGalaxy": true,
+      "charactersCorrect": "not applicable",
+      "roadPlacement": "initial variant needs 72%-96% correction"
+    }
+  },
+  "initialPromptFile": "prompts/lighthouse-destination.txt",
+  "refinementPromptFile": "prompts/lighthouse-destination-ground-edit.txt",
+  "referenceImages": [
+    {
+      "index": 1,
+      "path": "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+      "role": "sole style reference"
+    },
+    {
+      "index": 2,
+      "path": "D:/DSH workspace/sheep-run/assets/delivery-menu-style-v2/sources/lighthouse-destination-initial.png",
+      "role": "generated image edit target"
+    }
+  ],
+  "validation": {
+    "visualInspection": true,
+    "menuStyleMatched": true,
+    "noAtlasTextUIGridBorder": true,
+    "noGalaxy": true,
+    "noActors": true,
+    "noRoadObstructions": true,
+    "roadPlacement": "top approximately 72 percent, bottom approximately 94 percent; full width and unobstructed; final nearest packing/alignment belongs to root"
+  }
+}

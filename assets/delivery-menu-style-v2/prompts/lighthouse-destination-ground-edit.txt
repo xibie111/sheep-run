@@ -1,0 +1,9 @@
+Use case: style-transfer.
+Asset type: full-bleed opaque 16:9 pixel-art running background.
+Reference roles: Image 1 is the sole STYLE reference, farm main menu. Image 2 is the exact EDIT TARGET: preserve its scene, buildings, colors, sky, trees, and bold square-pixel style.
+Primary request: change ONLY the foreground ground geometry in Image 2 so it has the exact gameplay layout below. Keep the upper landscape visually as close to the edit target as possible. This is a pixel-art asset composition correction.
+At y = 72 percent image height, the top grass rim ends and the empty tan road starts, across the entire full width. From y = 72 percent all the way to y = 96 percent, fill the entire width with the same warm tan dirt-road treatment used in the edit target, with only its sparse simple big color clusters. At y = 96 percent begins a THIN 4 percent bottom grass strip. Remove ALL the thick foreground bushes and flowers currently below and beside the road; the bottom grass should be a short thin flat strip, never protruding upward into the tan road. The road should occupy exactly 24 percent of image height. Ground lines are straight horizontal, side-view, no perspective. No objects, characters, flowers, bushes, stones or grass on the road. Ground area MUST NOT have an object on either side encroaching into the road.
+In the target the road is currently too high, near 66 percent image height: move the scene-to-road grass rim DOWN to 72 percent, adding a broad simple green meadow band above it. Keep lighthouse, mailbox, calm sea and sky as they are above the meadow.
+
+Style: match the square stair-step contours and grouped foliage in Image 1. No antialiasing, microtexture, painted realism, fine foliage, realistic masonry, tiny water sparkle or dense stars. Preserve the original simple landscape.
+Output: one full-bleed opaque 16:9 landscape. No text, UI, labels, borders, grids, collage, watermarks.

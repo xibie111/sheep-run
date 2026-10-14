@@ -1,0 +1,60 @@
+{
+  "method": "built-in image_gen; one independent call per asset; original generated PNG and alpha preserved",
+  "reference": "assets/achievement-icons-v1/preview.png (viewed for style, never overwritten)",
+  "items": [
+    {
+      "id": "fifty-runs",
+      "prompt": "Use case: stylized-concept.\nAsset type: one independent transparent achievement icon for a cozy pixel-art pasture mobile game.\nStyle: authentic simple 32-by-32-style pixel sprite expanded with hard square pixel clusters, warm cream sheep wool, terracotta/orange-brown dark outer contour, peach face, tiny dark eyes, simple green botanical accent. Match the project's friendly pastoral sheep achievement set: chunky stepped outline, few flat warm colors, adorable round sheep forms. Extremely simple bold shapes so the icon remains immediately recognizable when reduced to 28 pixels. No antialiased vector outline, no blurry painterly detail, no glossy 3D.\nComposition: one compact central icon composition in a square canvas, subject occupies roughly 80 percent of the canvas, balanced transparent margins on all four sides; no clipping. Use genuinely transparent alpha outside the subject. The icon itself has no border, plaque background, badge shape, ground rectangle, or scenic backdrop. Large readable faces and minimal tiny detail.\nText: none. Absolutely no words, lettering, digits, captions, watermark, UI, or reference/contact sheet. Only ONE standalone icon, never an atlas or grid.\nSubject: A cute cream-white fluffy sheep beside exactly two simple terracotta-brown hoofprints and one tiny green sprout; sheep dominant, footprints large enough to read, no path scenery.",
+      "transparent_background": true,
+      "status": "saved",
+      "source": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a1341d-7a07-78f0-b712-df083930a31c\\exec-2cdccabb-2f67-4e4e-b03d-ce7ca6b336fc.png",
+      "path": "assets/achievement-icons-v2/sources/fifty-runs.png",
+      "sha256": "d89a28d9829b6bde9610a5d3ae79e1ae945cb65e09b718d3aba3e2b3ff9c25d0"
+    },
+    {
+      "id": "hundred-runs",
+      "prompt": "Use case: stylized-concept.\nAsset type: one independent transparent achievement icon for a cozy pixel-art pasture mobile game.\nStyle: authentic simple 32-by-32-style pixel sprite expanded with hard square pixel clusters, warm cream sheep wool, terracotta/orange-brown dark outer contour, peach face, tiny dark eyes, simple green botanical accent. Match the project's friendly pastoral sheep achievement set: chunky stepped outline, few flat warm colors, adorable round sheep forms. Extremely simple bold shapes so the icon remains immediately recognizable when reduced to 28 pixels. No antialiased vector outline, no blurry painterly detail, no glossy 3D.\nComposition: one compact central icon composition in a square canvas, subject occupies roughly 80 percent of the canvas, balanced transparent margins on all four sides; no clipping. Use genuinely transparent alpha outside the subject. The icon itself has no border, plaque background, badge shape, ground rectangle, or scenic backdrop. Large readable faces and minimal tiny detail.\nText: none. Absolutely no words, lettering, digits, captions, watermark, UI, or reference/contact sheet. Only ONE standalone icon, never an atlas or grid.\nSubject: A cute cream-white fluffy sheep sitting in front of the doorway of one tiny warm wooden pasture hut, with a small heart-shaped wooden plaque above the doorway. No lettering or numbers on the plaque; compact silhouette with a clearly readable sheep face.",
+      "transparent_background": true,
+      "status": "saved",
+      "source": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a1341d-7a07-78f0-b712-df083930a31c\\exec-f29115b2-cb27-4a64-9c5f-47a8698c9975.png",
+      "path": "assets/achievement-icons-v2/sources/hundred-runs.png",
+      "sha256": "325e875430be33df60346ccbcc54bc28d79d66007affcae0e2e1081c9a2a8370"
+    },
+    {
+      "id": "two-hundred-fifty-runs",
+      "prompt": "Use case: stylized-concept.\nAsset type: one independent transparent achievement icon for a cozy pixel-art pasture mobile game.\nStyle: authentic simple 32-by-32-style pixel sprite expanded with hard square pixel clusters, warm cream sheep wool, terracotta/orange-brown dark outer contour, peach face, tiny dark eyes, simple green botanical accent. Match the project's friendly pastoral sheep achievement set: chunky stepped outline, few flat warm colors, adorable round sheep forms. Extremely simple bold shapes so the icon remains immediately recognizable when reduced to 28 pixels. No antialiased vector outline, no blurry painterly detail, no glossy 3D.\nComposition: one compact central icon composition in a square canvas, subject occupies roughly 80 percent of the canvas, balanced transparent margins on all four sides; no clipping. Use genuinely transparent alpha outside the subject. The icon itself has no border, plaque background, badge shape, ground rectangle, or scenic backdrop. Large readable faces and minimal tiny detail.\nText: none. Absolutely no words, lettering, digits, captions, watermark, UI, or reference/contact sheet. Only ONE standalone icon, never an atlas or grid.\nSubject: One cute cream-white fluffy sheep wearing a small rust-red scarf and a tan canvas shoulder pack, with exactly two golden wheat ears tucked beside the sheep. Sheep and bag have large simple shapes, tiny green leaf accent.",
+      "transparent_background": true,
+      "status": "saved",
+      "source": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a1341d-7a07-78f0-b712-df083930a31c\\exec-9bcb21ed-b56a-469f-820e-067887597626.png",
+      "path": "assets/achievement-icons-v2/sources/two-hundred-fifty-runs.png",
+      "sha256": "91b396a9532c50e2826a6e00b47906cfd0bfeb97a2f7a41ca8fc0da1107a11e2"
+    },
+    {
+      "id": "fifty-friends",
+      "prompt": "Use case: stylized-concept.\nAsset type: one independent transparent achievement icon for a cozy pixel-art pasture mobile game.\nStyle: authentic simple 32-by-32-style pixel sprite expanded with hard square pixel clusters, warm cream sheep wool, terracotta/orange-brown dark outer contour, peach face, tiny dark eyes, simple green botanical accent. Match the project's friendly pastoral sheep achievement set: chunky stepped outline, few flat warm colors, adorable round sheep forms. Extremely simple bold shapes so the icon remains immediately recognizable when reduced to 28 pixels. No antialiased vector outline, no blurry painterly detail, no glossy 3D.\nComposition: one compact central icon composition in a square canvas, subject occupies roughly 80 percent of the canvas, balanced transparent margins on all four sides; no clipping. Use genuinely transparent alpha outside the subject. The icon itself has no border, plaque background, badge shape, ground rectangle, or scenic backdrop. Large readable faces and minimal tiny detail.\nText: none. Absolutely no words, lettering, digits, captions, watermark, UI, or reference/contact sheet. Only ONE standalone icon, never an atlas or grid.\nSubject: Exactly two cute cream-white fluffy sheep leaning together beside one golden farm bell with a simple green ribbon. Two faces clearly readable, gold bell large and distinctive.",
+      "transparent_background": true,
+      "status": "saved",
+      "source": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a1341d-7a07-78f0-b712-df083930a31c\\exec-6c1dee35-83fe-4d3f-87bc-89422a0b0361.png",
+      "path": "assets/achievement-icons-v2/sources/fifty-friends.png",
+      "sha256": "65109e470cf64556d2add316000f0540fd7341dc96bc41d5b69a44366b484ee4"
+    },
+    {
+      "id": "hundred-friends",
+      "prompt": "Use case: stylized-concept.\nAsset type: one independent transparent achievement icon for a cozy pixel-art pasture mobile game.\nStyle: authentic simple 32-by-32-style pixel sprite expanded with hard square pixel clusters, warm cream sheep wool, terracotta/orange-brown dark outer contour, peach face, tiny dark eyes, simple green botanical accent. Match the project's friendly pastoral sheep achievement set: chunky stepped outline, few flat warm colors, adorable round sheep forms. Extremely simple bold shapes so the icon remains immediately recognizable when reduced to 28 pixels. No antialiased vector outline, no blurry painterly detail, no glossy 3D.\nComposition: one compact central icon composition in a square canvas, subject occupies roughly 80 percent of the canvas, balanced transparent margins on all four sides; no clipping. Use genuinely transparent alpha outside the subject. The icon itself has no border, plaque background, badge shape, ground rectangle, or scenic backdrop. Large readable faces and minimal tiny detail.\nText: none. Absolutely no words, lettering, digits, captions, watermark, UI, or reference/contact sheet. Only ONE standalone icon, never an atlas or grid.\nSubject: Exactly three cute cream-white fluffy sheep grouped warmly together, two at the back and one small sheep in front; one small warm pink heart floating just above them. No scenery or elaborate background.",
+      "transparent_background": true,
+      "status": "saved",
+      "source": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a1341d-7a07-78f0-b712-df083930a31c\\exec-97a44769-001b-4701-a97b-07a1126c097e.png",
+      "path": "assets/achievement-icons-v2/sources/hundred-friends.png",
+      "sha256": "fbbd629d7fdf7a8139398f70f3c14fcbabb71237d93f58f768161d55c1dc6926"
+    },
+    {
+      "id": "two-seasons",
+      "prompt": "Use case: stylized-concept.\nAsset type: one independent transparent achievement icon for a cozy pixel-art pasture mobile game.\nStyle: authentic simple 32-by-32-style pixel sprite expanded with hard square pixel clusters, warm cream sheep wool, terracotta/orange-brown dark outer contour, peach face, tiny dark eyes, simple green botanical accent. Match the project's friendly pastoral sheep achievement set: chunky stepped outline, few flat warm colors, adorable round sheep forms. Extremely simple bold shapes so the icon remains immediately recognizable when reduced to 28 pixels. No antialiased vector outline, no blurry painterly detail, no glossy 3D.\nComposition: one compact central icon composition in a square canvas, subject occupies roughly 80 percent of the canvas, balanced transparent margins on all four sides; no clipping. Use genuinely transparent alpha outside the subject. The icon itself has no border, plaque background, badge shape, ground rectangle, or scenic backdrop. Large readable faces and minimal tiny detail.\nText: none. Absolutely no words, lettering, digits, captions, watermark, UI, or reference/contact sheet. Only ONE standalone icon, never an atlas or grid.\nSubject: One cute cream-white fluffy sheep face centered between one pink spring blossom on the left and one orange autumn leaf on the right. Only these three bold readable symbols, tiny green leaf accent.",
+      "transparent_background": true,
+      "status": "saved",
+      "source": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a1341d-7a07-78f0-b712-df083930a31c\\exec-49b2a3e6-0f6a-4006-9015-ffbb0c6a0cc1.png",
+      "path": "assets/achievement-icons-v2/sources/two-seasons.png",
+      "sha256": "b57880d9a643142bc2407a33124152442c848efe2ee00f228bbfff746d090efd"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
-const state = vi.hoisted(() => ({ font: true, image: true, atlas: true, seasonArt: true, resultArt: true, additionalArt: true, newObstacleArt: true, animalArt: true, contentDimensions: true, contentPreparation: true }));
+const state = vi.hoisted(() => ({ font: true, image: true, atlas: true, seasonArt: true, resultArt: true, additionalArt: true, newObstacleArt: true, expandedArt: true, animalArt: true, contentDimensions: true, contentPreparation: true, residentDimensions: true, residentPreparation: true }));
 vi.mock("phaser", () => ({ default: { Scene: class Scene {} } }));
 vi.mock("../game/Viewport", () => ({ watchViewport: (_scene: unknown, layout: (size: object) => void) => layout({ width: 584, height: 270 }) }));
 vi.mock("../ui/TouchTarget", () => ({ bindTouchTarget: vi.fn() }));
@@ -25,6 +25,10 @@ vi.mock("../data/newObstacleArt", async importOriginal => {
   const original = await importOriginal<typeof import("../data/newObstacleArt")>();
   return { ...original, createNewObstacleTextures: vi.fn(() => { if (!state.newObstacleArt) throw new Error("invalid new obstacle atlas"); }) };
 });
+vi.mock("../data/expandedObstacleArt", async importOriginal => {
+  const original = await importOriginal<typeof import("../data/expandedObstacleArt")>();
+  return { ...original, createExpandedObstacleTextures: vi.fn(() => { if (!state.expandedArt) throw new Error("invalid expanded obstacle atlas"); }) };
+});
 vi.mock("../data/skinSpriteAssets", async importOriginal => {
   const original = await importOriginal<typeof import("../data/skinSpriteAssets")>();
   return { ...original, registerSkinRenderFrames: vi.fn(() => { if (!state.atlas) throw new Error("invalid local atlas"); }) };
@@ -43,6 +47,14 @@ vi.mock("../content-v2", async importOriginal => {
 });
 
 import { PreloadScene } from "./PreloadScene";
+vi.mock('../residents/residentAssets', async importOriginal => {
+  const original = await importOriginal<typeof import('../residents/residentAssets')>();
+  return { ...original,
+    validateResidentTextures: vi.fn(() => state.residentDimensions ? [] : [original.RESIDENT_ASSETS[0]!.key]),
+    prepareResidentTextures: vi.fn(() => { if (!state.residentPreparation) throw new Error('invalid resident art'); }),
+  };
+});
+import { RESIDENT_ASSETS } from '../residents/residentAssets';
 import { bindTouchTarget } from "../ui/TouchTarget";
 import { SCENE } from "../game/Constants";
 import { DISPLAY_FONTS } from "../ui/DisplayText";
@@ -51,6 +63,7 @@ import { MAILBOX_ASSETS } from "../data/mailboxAssets";
 import { ACHIEVEMENT_ICON_ASSETS } from "../data/achievementIconAssets";
 import { RUNNER_V2_ASSETS } from "../runner-v2/runnerAssets";
 import { CONTENT_V2_ASSETS, prepareContentV2Textures, validateContentV2Textures } from "../content-v2";
+import { EXPANDED_OBSTACLE_ART, createExpandedObstacleTextures, expandedObstacleRuntimeKeys } from "../data/expandedObstacleArt";
 
 function harness() {
   const objects: Array<{ name: string; text: string }> = [];
@@ -81,8 +94,9 @@ function harness() {
 
 describe("local asset loading recovery", () => {
   beforeEach(() => {
-    state.font = state.image = state.atlas = state.seasonArt = state.resultArt = state.additionalArt = state.newObstacleArt = state.animalArt = true;
+    state.font = state.image = state.atlas = state.seasonArt = state.resultArt = state.additionalArt = state.newObstacleArt = state.expandedArt = state.animalArt = true;
     state.contentDimensions = state.contentPreparation = true;
+    state.residentDimensions = state.residentPreparation = true;
     vi.clearAllMocks();
     vi.stubGlobal("document", { getElementById: () => null });
     vi.stubGlobal("requestAnimationFrame", (callback: FrameRequestCallback) => { callback(0); return 1; });
@@ -94,14 +108,16 @@ describe("local asset loading recovery", () => {
     await scene.create();
     expect(start).toHaveBeenCalledExactlyOnceWith(SCENE.menu);
     expect(objects).toEqual([]);
-    expect(loading.setPreparing.mock.calls.map(args => args[0])).toEqual([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]);
+    expect(loading.setPreparing.mock.calls.map(args => args[0])).toEqual([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]);
+    expect(loading.setPreparing.mock.calls.every(args => args[1] === 14)).toBe(true);
+    expect(createExpandedObstacleTextures).toHaveBeenCalledExactlyOnceWith(scene);
     expect(validateContentV2Textures).toHaveBeenCalledExactlyOnceWith(scene);
     expect(prepareContentV2Textures).toHaveBeenCalledExactlyOnceWith(scene);
     expect(loading.complete).toHaveBeenCalledOnce();
     expect(loading.complete.mock.invocationCallOrder[0]).toBeLessThan(start.mock.invocationCallOrder[0]!);
   });
 
-  it.each(["font", "image", "atlas", "seasonArt", "resultArt", "additionalArt", "newObstacleArt", "animalArt"] as const)("shows a resource-independent touch retry when a local %s fails", async kind => {
+  it.each(["font", "image", "atlas", "seasonArt", "resultArt", "additionalArt", "newObstacleArt", "expandedArt", "animalArt"] as const)("shows a resource-independent touch retry when a local %s fails", async kind => {
     state[kind] = false;
     const { scene, start, objects } = harness();
     await expect(scene.create()).resolves.toBeUndefined();
@@ -123,7 +139,7 @@ describe("local asset loading recovery", () => {
     expect(start).not.toHaveBeenCalled();
     expect(loading.hide).not.toHaveBeenCalled();
     expect(loading.complete).not.toHaveBeenCalled();
-    expect(loading.setPreparing).toHaveBeenCalledExactlyOnceWith(0, 12);
+    expect(loading.setPreparing).toHaveBeenCalledExactlyOnceWith(0, 14);
     expect(objects).toEqual([]);
   });
 
@@ -133,6 +149,20 @@ describe("local asset loading recovery", () => {
     await scene.create();
     expect(start).not.toHaveBeenCalled();
     expect(objects.find(item => item.name === "local-load-error")).toBeDefined();
+  });
+  it.each(['residentDimensions', 'residentPreparation'] as const)('blocks resident %s errors and clears every resident texture for touch retry', async kind => {
+    state[kind] = false;
+    const { scene, start, restart, removeTexture, objects } = harness();
+    await scene.create();
+    expect(start).not.toHaveBeenCalled();
+    expect(objects.some(object => object.name === 'local-load-error')).toBe(true);
+    const retry = vi.mocked(bindTouchTarget).mock.calls.at(-1)![4];
+    retry();
+    for (const asset of RESIDENT_ASSETS) expect(removeTexture).toHaveBeenCalledWith(asset.key);
+    expect(restart).toHaveBeenCalledOnce();
+    state[kind] = true;
+    await scene.create();
+    expect(start).toHaveBeenCalledExactlyOnceWith(SCENE.menu);
   });
   it.each(["spring", "summer", "autumn", "winter"])("requires the %s permanent reward artwork", async season => {
     const { scene, start, objects } = harness();
@@ -162,6 +192,10 @@ describe("local asset loading recovery", () => {
     expect(removeTexture).toHaveBeenCalledWith("additional-obstacles-source");
     expect(removeTexture).toHaveBeenCalledWith("obstacle-wide-log");
     expect(removeTexture).toHaveBeenCalledWith("new-obstacles-v2-source");
+    expect(removeTexture).toHaveBeenCalledWith(EXPANDED_OBSTACLE_ART.key);
+    const expandedKeys = expandedObstacleRuntimeKeys();
+    expect(new Set(expandedKeys).size).toBe(20);
+    for (const key of expandedKeys) expect(removeTexture).toHaveBeenCalledWith(key);
     expect(removeTexture).toHaveBeenCalledWith("ambient-life-source");
     expect(removeTexture).toHaveBeenCalledWith("ambient-life-atlas");
     expect(removeTexture).toHaveBeenCalledWith("obstacle-wood-barrel");
@@ -191,6 +225,41 @@ describe("local asset loading recovery", () => {
     await scene.create();
     expect(start).not.toHaveBeenCalled();
     expect(objects.find(item => item.name === "local-load-error")).toBeDefined();
+  });
+  it("requires the expanded obstacle source before preparation and queues its local image", async () => {
+    const { scene, start, objects, image } = harness();
+    scene.textures.exists = vi.fn(key => key !== EXPANDED_OBSTACLE_ART.key);
+    scene.preload();
+    expect(image.mock.calls.filter(([key]) => key === EXPANDED_OBSTACLE_ART.key)).toEqual([
+      [EXPANDED_OBSTACLE_ART.key, EXPANDED_OBSTACLE_ART.url],
+    ]);
+    await scene.create();
+    expect(start).not.toHaveBeenCalled();
+    expect(createExpandedObstacleTextures).not.toHaveBeenCalled();
+    expect(objects.find(item => item.name === "local-load-error")).toBeDefined();
+    expect(bindTouchTarget).toHaveBeenCalledOnce();
+    expect(loading.complete).not.toHaveBeenCalled();
+  });
+  it("clears all expanded obstacle textures after preparation failure and recovers on touch retry", async () => {
+    state.expandedArt = false;
+    const { scene, start, objects, removeTexture, restart } = harness();
+    await scene.create();
+    expect(start).not.toHaveBeenCalled();
+    expect(objects.find(item => item.name === "local-load-error")).toBeDefined();
+    expect(createExpandedObstacleTextures).toHaveBeenCalledExactlyOnceWith(scene);
+    expect(loading.complete).not.toHaveBeenCalled();
+
+    state.expandedArt = true;
+    vi.mocked(bindTouchTarget).mock.calls[0]![4]();
+    expect(removeTexture).toHaveBeenCalledWith(EXPANDED_OBSTACLE_ART.key);
+    const expandedKeys = expandedObstacleRuntimeKeys();
+    expect(new Set(expandedKeys).size).toBe(20);
+    for (const key of expandedKeys) expect(removeTexture).toHaveBeenCalledWith(key);
+    expect(restart).toHaveBeenCalledOnce();
+    await scene.create();
+    expect(createExpandedObstacleTextures).toHaveBeenCalledTimes(2);
+    expect(start).toHaveBeenCalledExactlyOnceWith(SCENE.menu);
+    expect(loading.complete).toHaveBeenCalledOnce();
   });
   it("requires the animal atlas before entering the menu", async () => {
     const { scene, start, objects } = harness();

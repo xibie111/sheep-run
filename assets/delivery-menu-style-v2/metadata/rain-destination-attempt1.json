@@ -1,0 +1,29 @@
+{
+  "key": "rain-destination",
+  "attempt": 1,
+  "tool": "builtin image_gen.imagegen",
+  "transparent_background": false,
+  "prompt_path": "assets/delivery-menu-style-v2/prompts/rain-destination-attempt1.txt",
+  "references": [
+    {
+      "index": 1,
+      "path": "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+      "role": "sole style reference",
+      "sha256": "de36b068c971bbd24d870b5075a1380e852a4000d71c7807bb0600ce1fbf3749"
+    },
+    {
+      "index": 2,
+      "path": "D:/DSH workspace/sheep-run/assets/delivery-expansion-v1/chapters/runtime/rain-destination.png",
+      "role": "old composition and story landmark reference only",
+      "sha256": "1adbe1e586a9f66f9e2194849e2d30a4348eff7e963afb0689c5368036a564b9"
+    }
+  ],
+  "generation_started_at_utc": "2026-10-13T13:02:20.1Z",
+  "generation_completed_at_utc": "2026-10-13T13:04:14.319Z",
+  "generated_original_path": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a13558-e12e-7d52-b01c-2f169260b99c\\exec-d94047e9-16b7-4e24-8ae4-dc31495fae75.png",
+  "source_path": "assets/delivery-menu-style-v2/sources/rain-destination-attempt1.png",
+  "selection": "rejected for sunny sky; middle also has baked rain streaks",
+  "bytes_preserved": true,
+  "source_sha256": "f6245a1ec2201f6373ec8bb4f184dfe8065745506e85c03fec3d548c20ee374f",
+  "source_bytes": 2067874
+}

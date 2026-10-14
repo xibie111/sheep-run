@@ -3,7 +3,7 @@ import { viewportOffsetY, type ViewportSize } from "../game/Viewport";
 
 export interface ArtRect { x: number; y: number; width: number; height: number }
 export interface MenuSafeInsets { left: number; right: number; top: number; bottom: number }
-export type MenuArtLayout = Record<MenuArtName, ArtRect>;
+export type MenuArtLayout = Record<Exclude<MenuArtName, "settings">, ArtRect>;
 
 function fit(name: MenuArtName, width: number, height: number): ArtRect {
   const ink = MENU_ART_GEOMETRY[name].ink;
@@ -16,7 +16,6 @@ export function menuArtLayout(size: ViewportSize, safe: MenuSafeInsets): MenuArt
   const title = fit("title", 220, 106);
   const start = fit("start", 153, 53);
   const wardrobe = fit("wardrobe", 64, 51);
-  const settings = fit("settings", 40, 40);
   const score = fit("score", 62, 52);
   const offsetY = viewportOffsetY(size);
   title.x = (size.width - title.width) / 2;
@@ -25,11 +24,28 @@ export function menuArtLayout(size: ViewportSize, safe: MenuSafeInsets): MenuArt
   start.y = 225 + offsetY - safe.bottom - start.height / 2;
   wardrobe.x = size.width - safe.right - 10 - wardrobe.width;
   wardrobe.y = size.height - safe.bottom - 18 - wardrobe.height;
-  settings.x = safe.left + 8;
-  settings.y = safe.top + 8;
   score.x = size.width - safe.right - 8 - score.width;
   score.y = safe.top + 8;
-  return { title, start, wardrobe, settings, score };
+  return { title, start, wardrobe, score };
+}
+
+/** Use the former gear position; stack only when the second book would meet the title. */
+export function menuBookEntryLayout(size: ViewportSize, safe: MenuSafeInsets): { collection: ArtRect; journey: ArtRect } {
+  const collection = { x: safe.left + 8, y: safe.top + 8, width: 56, height: 48 };
+  const journey = { ...collection, x: collection.x + 62 };
+  if (journey.x + journey.width > menuArtLayout(size, safe).title.x - 4) {
+    journey.x = collection.x;
+    journey.y = collection.y + collection.height + 6;
+  }
+  return { collection, journey };
+}
+
+/** Keep the icon and caption apart and inside the generated button's cream face. */
+export function menuBookButtonContent(button: ArtRect): { icon: ArtRect; label: ArtRect } {
+  return {
+    icon: { x: button.x + 17, y: button.y + 4, width: 22, height: 22 },
+    label: { x: button.x + 7, y: button.y + 26, width: 42, height: 12 },
+  };
 }
 
 // This is the empty number row inside the generated badge's golden face.

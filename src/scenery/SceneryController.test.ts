@@ -24,7 +24,19 @@ describe('rare scenery lifecycle',()=>{
   it('failure/exit before sufficient exposure clears without a record; restart is fresh',()=>{
     view.visible=true;const h=harness();h.c.update(h.context(45000));h.c.update(h.context(45100));h.c.clear();h.c.clear();
     h.c.update(h.context(90000));expect(h.c.snapshot()).toMatchObject({id:null,stopped:true});expect(h.store.load().seenIds).toEqual([]);
-    const fresh=harness();fresh.c.update(fresh.context(44999));expect(fresh.c.snapshot().id).toBeNull();fresh.c.clear();
+    const fresh=harness();fresh.c.update(fresh.context(29999));expect(fresh.c.snapshot().id).toBeNull();fresh.c.clear();
+  });
+  it('does not lose the run opportunity when daylight cancels an unseen night fade-in',()=>{
+    view.visible=false;const h=harness();h.c.update(h.context(30000));
+    expect(h.c.snapshot().id).toBe('meteors-v1');
+    h.c.update({...h.context(30100),landscape:{...land,dayPhase:'morning'}});
+    expect(h.c.snapshot().id).toBeNull();h.c.update(h.context(32599));expect(h.c.snapshot().id).toBeNull();
+    let restartedAt=32600;
+    for(;restartedAt<=45100;restartedAt+=2500){h.c.update(h.context(restartedAt));if(h.c.snapshot().id)break;}
+    expect(h.c.snapshot().id).toBe('meteors-v1');
+    view.visible=true;for(let t=restartedAt+100;t<=restartedAt+1600;t+=100)h.c.update(h.context(t));
+    expect(h.store.load().seenIds).toEqual(['meteors-v1']);
+    h.c.update(h.context(restartedAt+9000));h.c.update(h.context(90000));expect(h.c.snapshot().id).toBeNull();h.c.clear();
   });
   it('cancels when the actual sky changes and keeps repeated discoveries quiet',()=>{
     view.visible=true;const h=harness();h.store.discover('meteors-v1');h.c.update(h.context(45000));

@@ -1,0 +1,14 @@
+{
+  "id": "dinner-field",
+  "tool": "builtin-image_gen",
+  "transparent_background": false,
+  "prompt": "Use case: production pixel farm game scenery repaint. Create ONE FULL OPAQUE 16:9 landscape, no panels, atlas, border, grid, words, letters, numbers, text or UI. Image1 is the EXISTING MAIN MENU and the ONLY art STYLE reference. Repaint Image2 (old composition reference only) with that exact simpler main-menu coarse blocky farm illustration language. The previous scene is too finely detailed; do NOT retain its painterly textures, microscopic foliage, individual roof tiles, noise, realistic materials or complex lighting.\nMatch the menu's clear stepped square pixel contours, broad grouped round tree crowns, simple green and warm cream/tan palette, small number of flat shadow steps, friendly farm geometry. No realistic brushwork, blur, glow or smooth texture. Pixel clusters must remain readable when rendered at 480x270, as though drawn at that low logical density then nearest-neighbour enlarged. Larger simple clouds; deliberately sparse big flower accents. Keep atmosphere gentle and warm.\nRoute scenery later sunset over a farm field: a few GROUPED golden wheat patches, simple wooden fence, distant lake and blue mountains, small farm windmill/red barn on right, warm peach sky; do not render every wheat stalk or grass blade. No characters.\nRequired GEOMETRY: one clear straight grassy road edge ACROSS ENTIRE WIDTH at exactly 72% image height. From72% down to96% a wide EMPTY tan dirt lane, simple large flat dirt patches, absolutely no rocks/plants/characters obstructing this lane. Last4% a thin grassy foreground trim. All trees, fence, cottage and mailbox behind road at<=72%; far horizon around60%. Preserve the original player's ground relation, do not draw a new platform or sloped road.",
+  "referenced_image_paths": [
+    "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+    "D:/DSH workspace/sheep-run/assets/content-update-v2/delivery/runtime/field.png"
+  ],
+  "roles": [
+    "main-menu style only",
+    "old scene composition only"
+  ]
+}

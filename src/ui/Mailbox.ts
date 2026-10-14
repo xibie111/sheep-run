@@ -16,6 +16,9 @@ import { createDeliveryPanel } from '../delivery/DeliveryPanel';
 import { DELIVERY_ID, type DeliveryChapterId } from '../delivery/DeliveryRoute';
 import { validateDeliveryV2Textures } from '../delivery/DeliveryV2Assets';
 import { SCENE } from '../game/Constants';
+import { createResidentPanel } from '../residents/ResidentPanel';
+import { getResidentStoriesProgress } from '../residents/ResidentProgress';
+import { deliveryStore } from '../delivery/DeliveryStore';
 
 /** A small pasture prop and a touch-only reader on the existing display surface. */
 export function attachMailbox(scene: Phaser.Scene, initiallyOpen = false, options: { onDeliveryStart?: (chapterId: DeliveryChapterId) => void } = {}): void {
@@ -32,11 +35,14 @@ export function attachMailbox(scene: Phaser.Scene, initiallyOpen = false, option
   const prev = target("mailbox-prev", 242), next = target("mailbox-next", 242), keep = target("mailbox-keep", 242);
   const letters = MAIL_LETTERS.map(letter => target(`mailbox-letter:${letter.id}`, 242));
   const delivery = target('mailbox-delivery', 242);
-  const trip = createDeliveryPanel(scene, { start: id => {
+  const residents = target('mailbox-residents', 242);
+  const beginTrip = (id: DeliveryChapterId) => {
     if (options.onDeliveryStart) options.onDeliveryStart(id);
     else scene.scene.start(SCENE.run, { deliveryId: id ?? DELIVERY_ID });
-  } }, true);
-  const modal = [blocker, close, back, prev, next, keep, delivery, ...letters];
+  };
+  const trip = createDeliveryPanel(scene, { start: beginTrip }, true);
+  const stories = createResidentPanel(scene, beginTrip);
+  const modal = [blocker, close, back, prev, next, keep, delivery, residents, ...letters];
   const sound = () => { const audio = scene.registry.get("audioSystem") as AudioSystem | undefined; audio?.initializeAfterGesture(); audio?.play("button"); };
   const place = (object: Phaser.GameObjects.Container, box: ArtRect) => {
     boxes.set(object.name, box); object.setPosition(box.x + box.width / 2, box.y + box.height / 2).setSize(box.width, box.height);
@@ -64,7 +70,8 @@ export function attachMailbox(scene: Phaser.Scene, initiallyOpen = false, option
       line(label, { x: box.x + 5, y: box.y + 3, width: box.width - 10, height: box.height - 6 }, 12);
       ctx.restore();
     };
-    const unread = MAIL_LETTERS.some(letter => !snapshot.readIds.includes(letter.id));
+    const unread = MAIL_LETTERS.some(letter => !snapshot.readIds.includes(letter.id)) ||
+      getResidentStoriesProgress(deliveryStore.load().completedIds, snapshot.readIds).residents.some(resident => resident.unreadCount > 0);
     if (!open && !menuModalOwner(scene)) {
       const x = prop.x, y = prop.y;
       ctx.drawImage(art, x, y, prop.width, prop.height);
@@ -86,13 +93,14 @@ export function attachMailbox(scene: Phaser.Scene, initiallyOpen = false, option
         ctx.fillRect(x, y, prop.width, prop.height); ctx.restore();
       }
     }
-    if (open && menuModalOwner(scene) !== 'delivery') {
+    if (open && menuModalOwner(scene) === 'mailbox') {
       const size = scene.scale.gameSize;
       ctx.fillStyle = "rgba(29,32,27,.48)"; ctx.fillRect(0, 0, size.width, size.height);
       ctx.drawImage(paper, panel.x, panel.y, panel.width, panel.height);
       if (!reader.letter) {
         line("给催眠羊的", { ...card.title, y: panel.y + 25 * card.k, height: 13 }, 12);
         line("小邮局", { ...card.title, y: panel.y + 39 * card.k, height: 16 }, 16);
+        line('私人信件', { x: panel.x + 22 * card.k, y: panel.y + 57 * card.k, width: panel.width - 44 * card.k, height: 12 }, 12, true);
         MAIL_LETTERS.forEach((letter, index) => {
           const object = letters[index], box = boxes.get(object.name)!, read = snapshot.readIds.includes(letter.id);
           buttonImage(ctx, box, MAIL_BUTTON_ART.plain);
@@ -100,6 +108,7 @@ export function attachMailbox(scene: Phaser.Scene, initiallyOpen = false, option
           line(read ? "已读" : "未读", { x: box.x + box.width - 46, y: box.y + 3, width: 34, height: box.height - 6 }, 12, read);
         });
         button(delivery, '送信小旅行');
+        button(residents, '居民故事');
         button(close, "合上邮箱");
       } else {
         line(reader.letter.title, card.title, 18);
@@ -127,6 +136,7 @@ export function attachMailbox(scene: Phaser.Scene, initiallyOpen = false, option
     blocker.input!.enabled = active; close.input!.enabled = active && !reading;
     letters.forEach(object => object.input!.enabled = active && !reading);
     delivery.input!.enabled = active && !reading;
+    residents.input!.enabled = active && !reading;
     back.input!.enabled = active && reading;
     prev.input!.enabled = active && reading && reader.page > 0;
     next.input!.enabled = active && reading && reader.page < reader.pages.length - 1;
@@ -140,7 +150,9 @@ export function attachMailbox(scene: Phaser.Scene, initiallyOpen = false, option
     place(blocker, { x: 0, y: 0, width: size.width, height: size.height });
     letters.forEach((object, index) => place(object, card.rows[index]));
     place(close, card.close);
-    place(delivery, { x: panel.x + 22 * card.k, y: panel.y + 160 * card.k, width: panel.width - 44 * card.k, height: 25 * card.k });
+    const shortcutWidth = (panel.width - 50 * card.k) / 2;
+    place(delivery, { x: panel.x + 22 * card.k, y: panel.y + 160 * card.k, width: shortcutWidth, height: 25 * card.k });
+    place(residents, { x: panel.x + 28 * card.k + shortcutWidth, y: panel.y + 160 * card.k, width: shortcutWidth, height: 25 * card.k });
     reader.relayout(value => text.fitFontSize(value, body.width, 12) >= 12, body.height, 17, 10);
     place(back, reader.page > 0 ? card.headerBack : card.left);
     place(prev, card.left); place(next, card.right); place(keep, card.right);
@@ -154,6 +166,7 @@ export function attachMailbox(scene: Phaser.Scene, initiallyOpen = false, option
   };
   bindTouchTarget(scene, entry, 44, 66, showMailbox, feedback(entry.name));
   bindTouchTarget(scene, delivery, 1, 1, () => { sound(); trip.show(validateDeliveryV2Textures(scene).length ? 'brief' : 'select'); }, feedback(delivery.name));
+  bindTouchTarget(scene, residents, 1, 1, () => { sound(); stories.show(); }, feedback(residents.name));
   bindTouchTarget(scene, blocker, 1, 1, () => {}, () => {});
   bindTouchTarget(scene, close, 144, 32, () => { open = false; reader.back(); release?.(); release = undefined; sound(); changed(); }, feedback(close.name));
   letters.forEach((object, i) => bindTouchTarget(scene, object, 1, 1, () => { if (reader.open(MAIL_LETTERS[i].id)) { sound(); changed(); } }, feedback(object.name)));
@@ -162,7 +175,7 @@ export function attachMailbox(scene: Phaser.Scene, initiallyOpen = false, option
   bindTouchTarget(scene, keep, 142, 32, () => { if (reader.keep()) { sound(); changed(); } }, feedback(keep.name));
   modal.forEach(object => object.input!.enabled = false);
   watchViewport(scene, layout);
-  const modalChanged = () => { updateTargets(); surface.invalidate(); };
+  const modalChanged = () => { snapshot = mailReadStore.load(); updateTargets(); surface.invalidate(); };
   scene.events.on(MENU_MODAL_CHANGE, modalChanged);
   let lastNight = scene.data.get("menu-bedtime");
   const night = () => { const value = scene.data.get("menu-bedtime"); if (value !== lastNight) { lastNight = value; surface.invalidate(); } };

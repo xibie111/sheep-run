@@ -33,6 +33,14 @@ describe("explicit mailbox reading actions", () => {
     expect(reader.pages[reader.page][0].offset).toBeLessThanOrEqual(anchor);
     expect(reader.page).toBeLessThan(reader.pages.length);
   });
+  it('checks optional story access before accepting a direct letter request', () => {
+    const { store, port } = harness(); let unlocked = false;
+    const reader = new MailReader(MAIL_LETTERS, store, id => unlocked && id === 'welcome-v1');
+    expect(reader.open('welcome-v1')).toBe(false); expect(reader.letter).toBeUndefined();
+    unlocked = true; expect(reader.open('welcome-v1')).toBe(true);
+    expect(reader.open('goodnight-v1')).toBe(false); expect(reader.letter?.id).toBe('welcome-v1');
+    expect(port.setItem).not.toHaveBeenCalled();
+  });
 });
 describe("mail pagination preserves confirmed content", () => {
   it("keeps a closing body line with a signature-only last page when space allows", () => {

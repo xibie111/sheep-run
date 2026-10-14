@@ -1,16 +1,52 @@
 import { describe, expect, it, vi } from 'vitest';
-import { ScenerySchedule, SceneryExposure } from './ScenerySchedule';
+import { ScenerySchedule, SceneryExposure, SCENERY_RULES } from './ScenerySchedule';
+import { DifficultySystem } from '../systems/DifficultySystem';
+import { ThemeSystem } from '../environment/ThemeSystem';
 import type { LandscapeState } from '../ambient/AnimalRules';
 import { SpawnSystem } from '../systems/SpawnSystemOwner';
 const land: LandscapeState = { theme:'winter', dayPhase:'night', weather:'sunny', weatherAlpha:0, landTint:0xffffff, nearOffset:0, nearRatio:.24, nearRepeatWidth:1134 };
 describe('rare scenery qualification and visibility', () => {
-  it('waits 45 seconds and postpones busy scenes, allowing only one event per run', () => {
+  it('waits 30 seconds and postpones busy scenes, allowing only one observed event per run', () => {
     const s = new ScenerySchedule(71);
-    expect(s.choose(44_999,land,false,[])).toBeNull();
+    expect(s.choose(29_999,land,false,[])).toBeNull();
     expect(s.choose(80_000,land,true,[])).toBeNull();
     expect(s.choose(80_000,land,false,[])).toBe('meteors-v1');
     expect(s.choose(999_999,land,false,[])).toBeNull();
     s.stop(); expect(s.choose(999_999,land,false,[])).toBeNull();
+  });
+  it('offers a meteor during the first real default-speed night instead of skipping it until 45 seconds', () => {
+    const schedule=new ScenerySchedule(71),speed=new DifficultySystem(),themes=new ThemeSystem();
+    let distance=0,encounterAt=0;
+    for(let ms=40;ms<45000;ms+=40){
+      distance+=speed.update(.04)*.04;
+      const phase=themes.visualAtDistance(distance).dayPhase;
+      const id=schedule.choose(ms,{...land,dayPhase:phase},false,[]);
+      if(id){expect(phase).toBe('night');expect(id).toBe('meteors-v1');encounterAt=ms;break;}
+    }
+    expect(encounterAt).toBeGreaterThanOrEqual(32000);expect(encounterAt).toBeLessThan(41000);
+  });
+  it('retries several times within a short night, defers congestion without spending attempts, and bounds eligible failures', () => {
+    for(let seed=10000;seed<10020;seed++){
+      const schedule=new ScenerySchedule(seed);let id:string|null=null,attempts=0;
+      for(let ms=30000;ms<=45000&&!id;ms+=SCENERY_RULES.retryMs){
+        expect(schedule.choose(ms,land,true,[])).toBeNull();
+        id=schedule.choose(ms,land,false,[]);attempts++;
+        if(!id)expect(schedule.choose(ms+1,land,false,[])).toBeNull();
+      }
+      expect(id).toBe('meteors-v1');expect(attempts).toBeLessThanOrEqual(6);
+    }
+  });
+  it('rearms only an unobserved cancellation and never reopens a completed or stopped run', () => {
+    const schedule=new ScenerySchedule(71);
+    expect(schedule.choose(30000,land,false,[])).toBe('meteors-v1');
+    schedule.finish(30100,false);
+    expect(schedule.choose(32599,land,false,[])).toBeNull();
+    let id:string|null=null;
+    for(let t=32600;t<=45100&&!id;t+=SCENERY_RULES.retryMs)id=schedule.choose(t,land,false,[]);
+    expect(id).toBe('meteors-v1');
+    schedule.finish(50000,true);expect(schedule.choose(90000,land,false,[])).toBeNull();
+    const stopped=new ScenerySchedule(71);stopped.choose(30000,land,false,[]);stopped.stop();
+    stopped.finish(30100,false);expect(stopped.choose(90000,land,false,[])).toBeNull();
   });
   it('requires actual preceding rain and a recent return to sunny daytime for a rainbow', () => {
     const s = new ScenerySchedule(71), day = { ...land, dayPhase:'morning' as const };

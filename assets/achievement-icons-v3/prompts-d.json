@@ -1,0 +1,14 @@
+{
+  "group": "D",
+  "assets": [
+    {
+      "id": "three-runs",
+      "prompt": "Use case: stylized-concept.\nAsset type: ONE standalone transparent achievement icon for a friendly retro farm sheep game.\nSubject: a cheerful cream-white sheep standing beside a tiny low warm-brown wooden pasture gate with ONE pink blossom attached. The sheep is dominant and immediately readable, with a cute peach-pink face and brown hooves, plus one simple green leaf near the gate.\nStyle/medium: flat 2D pixel sprite on a 32x32 logical pixel grid enlarged using nearest-neighbor, a few solid flat colors, thick dark orange-brown stepped outlines, clean large square pixel clusters. Readable at 28px.\nComposition: a single compact square cutout centered in a square image with 12 percent true transparent margin on all sides, all parts fully inside the image. Sheep and tiny gate together make one clear coherent silhouette.\nBackground: genuinely transparent alpha, no backdrop.\nAvoid: text, digits, logo, watermark, grid, multiple icons, background, ground rectangle, 3D, gradients, soft shadows, blur or anti-aliasing.",
+      "generatedSourcePath": "C:/Users/mechrevo/.codex/generated_images/01a13469-682b-7361-9143-f9cf5a2b592b/exec-4ddbb31c-bb58-4f8c-81d3-834cf51e7127.png",
+      "savedPath": "assets/achievement-icons-v3/sources/three-runs.png",
+      "sha256": "b99451bafe42e96ad56c2de7612d757eff1b874139d11a150c545b03ad9e3eb6",
+      "tool": "built-in image_gen",
+      "transparentBackground": true
+    }
+  ]
+}

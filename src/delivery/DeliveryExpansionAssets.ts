@@ -1,25 +1,25 @@
 import type Phaser from 'phaser';
-import windmillPastureUrl from '../../assets/delivery-expansion-v1/chapters/runtime/windmill-pasture.png?url';
-import windmillMiddleUrl from '../../assets/delivery-expansion-v1/chapters/runtime/windmill-middle.png?url';
-import windmillDestinationUrl from '../../assets/delivery-expansion-v1/chapters/runtime/windmill-destination.png?url';
-import windmillEndingUrl from '../../assets/delivery-expansion-v1/chapters/runtime/windmill-ending.png?url';
-import windmillPostcardUrl from '../../assets/delivery-expansion-v1/chapters/runtime/windmill-postcard.png?url';
+import windmillPastureUrl from '../../assets/delivery-menu-style-v2/runtime/windmill-pasture.png?url';
+import windmillMiddleUrl from '../../assets/delivery-menu-style-v2/runtime/windmill-middle.png?url';
+import windmillDestinationUrl from '../../assets/delivery-menu-style-v2/runtime/windmill-destination.png?url';
+import windmillEndingUrl from '../../assets/delivery-menu-style-v2/runtime/windmill-ending.png?url';
+import windmillPostcardUrl from '../../assets/delivery-menu-style-v2/runtime/windmill-postcard.png?url';
 import windmillCarriedUrl from '../../assets/delivery-expansion-v1/chapters/runtime/windmill-carried.png?url';
 import windmillOrdinaryUrl from '../../assets/delivery-expansion-v1/chapters/runtime/windmill-ordinary.png?url';
 import windmillKeepsakeUrl from '../../assets/delivery-expansion-v1/chapters/runtime/windmill-keepsake.png?url';
-import rainPastureUrl from '../../assets/delivery-expansion-v1/chapters/runtime/rain-pasture.png?url';
-import rainMiddleUrl from '../../assets/delivery-expansion-v1/chapters/runtime/rain-middle.png?url';
-import rainDestinationUrl from '../../assets/delivery-expansion-v1/chapters/runtime/rain-destination.png?url';
-import rainEndingUrl from '../../assets/delivery-expansion-v1/chapters/runtime/rain-ending.png?url';
-import rainPostcardUrl from '../../assets/delivery-expansion-v1/chapters/runtime/rain-postcard.png?url';
+import rainPastureUrl from '../../assets/delivery-menu-style-v2/runtime/rain-pasture.png?url';
+import rainMiddleUrl from '../../assets/delivery-menu-style-v2/runtime/rain-middle.png?url';
+import rainDestinationUrl from '../../assets/delivery-menu-style-v2/runtime/rain-destination.png?url';
+import rainEndingUrl from '../../assets/delivery-menu-style-v2/runtime/rain-ending.png?url';
+import rainPostcardUrl from '../../assets/delivery-menu-style-v2/runtime/rain-postcard.png?url';
 import rainCarriedUrl from '../../assets/delivery-expansion-v1/chapters/runtime/rain-carried.png?url';
 import rainOrdinaryUrl from '../../assets/delivery-expansion-v1/chapters/runtime/rain-ordinary.png?url';
 import rainKeepsakeUrl from '../../assets/delivery-expansion-v1/chapters/runtime/rain-keepsake.png?url';
-import lighthousePastureUrl from '../../assets/delivery-expansion-v1/chapters/runtime/lighthouse-pasture.png?url';
-import lighthouseMiddleUrl from '../../assets/delivery-expansion-v1/chapters/runtime/lighthouse-middle.png?url';
-import lighthouseDestinationUrl from '../../assets/delivery-expansion-v1/chapters/runtime/lighthouse-destination.png?url';
-import lighthouseEndingUrl from '../../assets/delivery-expansion-v1/chapters/runtime/lighthouse-ending.png?url';
-import lighthousePostcardUrl from '../../assets/delivery-expansion-v1/chapters/runtime/lighthouse-postcard.png?url';
+import lighthousePastureUrl from '../../assets/delivery-menu-style-v2/runtime/lighthouse-pasture.png?url';
+import lighthouseMiddleUrl from '../../assets/delivery-menu-style-v2/runtime/lighthouse-middle.png?url';
+import lighthouseDestinationUrl from '../../assets/delivery-menu-style-v2/runtime/lighthouse-destination.png?url';
+import lighthouseEndingUrl from '../../assets/delivery-menu-style-v2/runtime/lighthouse-ending.png?url';
+import lighthousePostcardUrl from '../../assets/delivery-menu-style-v2/runtime/lighthouse-postcard.png?url';
 import lighthouseCarriedUrl from '../../assets/delivery-expansion-v1/chapters/runtime/lighthouse-carried.png?url';
 import lighthouseOrdinaryUrl from '../../assets/delivery-expansion-v1/chapters/runtime/lighthouse-ordinary.png?url';
 import lighthouseKeepsakeUrl from '../../assets/delivery-expansion-v1/chapters/runtime/lighthouse-keepsake.png?url';
@@ -66,4 +66,3 @@ export function prepareDeliveryExpansionTextures(scene: Phaser.Scene): void {
   // Phaser FilterMode.NEAREST =1. Does not alter any existing art texture.
   DELIVERY_EXPANSION_ASSETS.forEach(asset => scene.textures.get(asset.key).setFilter(1));
 }
-

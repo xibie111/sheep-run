@@ -18,7 +18,9 @@ const PREVIEW_COLORS: Record<SkinId, number> = { white: 0xffedc5, black: 0xc9c2a
   "sleepy-blue": 0xdce5ef, "sleepy-cream": 0xeee5d6, "sleepy-pink": 0xefdcdc, "sleepy-mint": 0xdfe8db, dream: 0xeadff2,
   peach: 0xffe3d5, milktea: 0xf0dfc4, cloud: 0xe3eef2, bearcap: 0xe5d5bb,
   "strawberry-v1": 0xf5dbcc, "lemon-v1": 0xf4ecc4, "sailor-v1": 0xd7e1eb, "starlight-v1": 0xdcd7ec,
-  "postman-v1": 0xdbe6c6, "raincoat-v1": 0xf3dfac, "explorer-v1": 0xe4d9bc, "astronaut-v1": 0xdcebee };
+  "postman-v1": 0xdbe6c6, "raincoat-v1": 0xf3dfac, "explorer-v1": 0xe4d9bc, "astronaut-v1": 0xdcebee,
+  "bee-v1": 0xf5e6b5, "mushroom-v1": 0xf2d8cd, "chef-v1": 0xeeeee3, "pirate-v1": 0xe3d8cf,
+  "fox-v1": 0xf3d5b6, "dinosaur-v1": 0xdce8c9 };
 const CARDS_PER_PAGE = 5;
 const SAVE_ERROR_MESSAGE = "保存失败，请重试";
 
@@ -40,11 +42,9 @@ export class WardrobeScene extends Phaser.Scene {
     this.message = "";
     const starsStart = this.children.list.length;
     this.starsText = addCurrencyBadge(this, 63, 26, SaveSystem.availableStars(save), "star").setName("wardrobe-available-stars");
-    addPixelText(this, 63, 51, "可用星星", 10, 0xfff3ce);
     const starsBadge = this.add.container(0, 0, this.children.list.slice(starsStart)).setDepth(10);
     const coinsStart = this.children.list.length;
     this.coinsText = addCurrencyBadge(this, 417, 26, save.coins, "coin").setName("wardrobe-coins");
-    addPixelText(this, 417, 51, "金币", 10, 0xfff3ce);
     const coinsBadge = this.add.container(0, 0, this.children.list.slice(coinsStart)).setDepth(10);
     const panelStart = this.children.list.length;
     addWoodTitle(this, 240, 35, "衣橱", 149, 49, 30);
@@ -80,9 +80,6 @@ export class WardrobeScene extends Phaser.Scene {
     addSceneButton(this, 134, 137, "", () => this.cycle(1), { width: 29, height: 32, style: "icon", icon: "arrow-right" });
     this.add.image(82, 189, UI_KEYS.panelSmall).setDisplaySize(102, 27);
     addPixelText(this, 82, 188, SKIN_NAMES[skin.id], 12);
-    this.add.image(82, 214, equipped ? UI_KEYS.buttonEquipped : UI_KEYS.buttonSecondary).setDisplaySize(83, 23);
-    this.add.image(54, 213, uiIconKey(equipped ? "check" : unlocked ? "unlock" : "lock")).setDisplaySize(12, 12);
-    addPixelText(this, 90, 213, equipped ? "已装备" : unlocked ? "已解锁" : "未解锁", 10, equipped ? 0xfff3bc : 0x542b16);
     const page = Math.floor(SHEEP_SKINS.findIndex((entry) => entry.id === this.selectedId) / CARDS_PER_PAGE);
     const pageCount = Math.ceil(SHEEP_SKINS.length / CARDS_PER_PAGE);
     const entries = SHEEP_SKINS.slice(page * CARDS_PER_PAGE, (page + 1) * CARDS_PER_PAGE);
@@ -91,7 +88,7 @@ export class WardrobeScene extends Phaser.Scene {
     addPixelText(this, 311, 71, `${page + 1} / ${pageCount}`, 10);
     addSceneButton(this, 450, 71, "", () => this.changePage(1), { width: 26, height: 22, style: "icon", icon: "arrow-right" }).setName("button:page-next");
 
-    addPixelText(this, 311, 212, action.explanation, 10).setName("wardrobe-price-explanation");
+    if (!unlocked) addPixelText(this, 311, 212, action.explanation, 10).setName("wardrobe-price-explanation");
     addSceneButton(this, 311, 238, action.actionLabel, () => {
       if (unlocked) {
         const result = this.progression.equipSkin(skin.id);
@@ -101,7 +98,7 @@ export class WardrobeScene extends Phaser.Scene {
       }
       this.refresh();
     }, { width: 126, height: 36, style: equipped ? "equipped" : "primary", icon: equipped ? "check" : unlocked ? "shirt" : "unlock", disabled: action.disabled, fontSize: "12px" });
-    addPixelText(this, 303, 262, this.message || "左右切换装扮", 10, 0xfff3ce).setName("wardrobe-feedback");
+    if (this.message) addPixelText(this, 303, 262, this.message, 10, 0xfff3ce).setName("wardrobe-feedback");
     const objects = this.children.list.slice(start);
     this.content = this.add.container(0, 0, objects).setDepth(9);
     this.panel.add(this.content);

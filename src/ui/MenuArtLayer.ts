@@ -1,12 +1,12 @@
 import type Phaser from "phaser";
-import { MENU_ART_ASSETS, MENU_ART_GEOMETRY, type MenuArtName } from "../data/menuArtAssets";
+import { MENU_ART_ASSETS, MENU_ART_GEOMETRY } from "../data/menuArtAssets";
 import { watchViewport } from "../game/Viewport";
 import { menuArtLayout, scoreGlyphLayout, scoreNumberBox, type MenuArtLayout, type ArtRect } from "./MenuArtLayout";
 import { safeUiInsets } from "./UiLayout";
 import { bindTouchTarget } from "./TouchTarget";
 import { sizeDisplaySurface } from "./DisplaySurface";
 
-export type MenuButtonName = "settings" | "start" | "wardrobe";
+export type MenuButtonName = "start" | "wardrobe";
 type MenuButtons = Record<MenuButtonName, Phaser.GameObjects.Container>;
 
 export function addMenuArtButton(scene: Phaser.Scene, name: MenuButtonName, label: string, activate: () => void): Phaser.GameObjects.Container {
@@ -59,7 +59,7 @@ export function attachMenuArt(scene: Phaser.Scene, highScore: number, buttons: M
       context.drawImage(image, source.x, source.y, source.width, source.height,
         destination.x, destination.y, destination.width, destination.height);
     };
-    for (const name of Object.keys(layout) as MenuArtName[]) {
+    for (const name of Object.keys(layout) as (keyof MenuArtLayout)[]) {
       const destination = { ...layout[name] };
       if (pressed[name]) destination.y += 1;
       draw(images[name], MENU_ART_GEOMETRY[name].ink, destination);
@@ -67,7 +67,7 @@ export function attachMenuArt(scene: Phaser.Scene, highScore: number, buttons: M
     // The reference uses sturdy block numerals; keep this face alongside its plaque.
     for (const glyph of scoreGlyphLayout(highScore, scoreNumberBox(layout.score))) draw(images.digits, glyph.source, glyph.destination);
     if (night) {
-      for (const name of Object.keys(layout) as MenuArtName[]) {
+      for (const name of Object.keys(layout) as (keyof MenuArtLayout)[]) {
         const destination = { ...layout[name] };
         if (pressed[name]) destination.y += 1;
         // Include the title, score badge and digits in the same readable night tint.

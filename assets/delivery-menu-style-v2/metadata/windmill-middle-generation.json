@@ -1,0 +1,37 @@
+{
+  "tool": "builtin image_gen",
+  "key": "windmill-middle",
+  "requested_mode": "reference-guided generation",
+  "timing": {
+    "started": "2026-10-13T13:03:15.193Z",
+    "completed": "2026-10-13T13:05:45.312Z"
+  },
+  "references": [
+    "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+    "D:/DSH workspace/sheep-run/assets/delivery-expansion-v1/chapters/runtime/windmill-middle.png"
+  ],
+  "prompt_file": "D:/DSH workspace/sheep-run/assets/delivery-menu-style-v2/prompts/windmill-middle.txt",
+  "transparent_background": false,
+  "generated_original_path": "C:/Users/mechrevo/.codex/generated_images/01a13556-b4fb-7223-98be-cfd2258cde94/exec-f8c99e09-2582-457b-ab4e-fefee4c40e3e.png",
+  "workspace_source_path": "D:/DSH workspace/sheep-run/assets/delivery-menu-style-v2/sources/windmill-middle.png",
+  "output_hint": "Generated images are saved to C:\\Users\\mechrevo\\.codex\\generated_images\\01a13556-b4fb-7223-98be-cfd2258cde94 as C:\\Users\\mechrevo\\.codex\\generated_images\\01a13556-b4fb-7223-98be-cfd2258cde94\\exec-f8c99e09-2582-457b-ab4e-fefee4c40e3e.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "exact_original_bytes": true,
+  "width": 1672,
+  "height": 941,
+  "pixel_format": "Format24bppRgb",
+  "sha256": "EE4A523AC126CBFA3DCA73D10357911A241DD403B2955B8F5E86C08DA95237EF",
+  "byte_count": 1933955,
+  "prompt_sha256": "A08C3E2FB45F1989A5887E31876346CC2C121935C65E6017EC2674A2F713034F",
+  "reference_files": [
+    {
+      "path": "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+      "sha256": "DE36B068C971BBD24D870B5075A1380E852A4000D71C7807BB0600CE1FBF3749",
+      "byte_count": 2102654
+    },
+    {
+      "path": "D:/DSH workspace/sheep-run/assets/delivery-expansion-v1/chapters/runtime/windmill-middle.png",
+      "sha256": "6CF2EA900BAF0334DD468268B794D9C7F2AE2BAB853DE17CD62655F74D09D06B",
+      "byte_count": 993978
+    }
+  ]
+}

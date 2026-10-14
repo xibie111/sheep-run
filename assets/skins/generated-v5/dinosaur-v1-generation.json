@@ -1,0 +1,37 @@
+{
+  "id": "dinosaur-v1",
+  "status": "generated",
+  "tool": "image_gen.imagegen",
+  "builtIn": true,
+  "startedAt": "2026-10-13T07:51:35.040Z",
+  "completedAt": "2026-10-13T07:53:27.456Z",
+  "transparent_background": true,
+  "referenceAttachmentSucceeded": true,
+  "referenceFallbackUsed": false,
+  "originalGeneratedFile": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a13439-f4d6-7473-afd9-6ffeb13517a8\\exec-a475c5e8-666a-4aff-8ce5-43f632c37116.png",
+  "workspaceOriginal": "D:\\DSH workspace\\sheep-run\\assets\\skins\\generated-v5\\dinosaur-v1-source.png",
+  "processing": "byte-identical copy of original generation; no painting or reconstruction",
+  "visualInspection": "Generated output visually inspected: 5 by 3 full-body right-facing cream sheep in sage dinosaur hood, small rounded backplates and short attached tail; costume present all 15 poses. Runtime suitability and per-frame checks delegated to packer.",
+  "runtimePrepared": false,
+  "sourceVerification": {
+    "dimensions": [
+      1620,
+      971
+    ],
+    "fileBytes": 1218450,
+    "sha256": "af5a3a902db45cda99c2b966447f08b591ad2e7579e16eaa3accb40dad0de6a5",
+    "transparentPixels": 840544,
+    "opaquePixels": 1010,
+    "semiTransparentPixels": 731466,
+    "alphaExtrema": [
+      0,
+      255
+    ],
+    "alphaBbox": [
+      0,
+      3,
+      1619,
+      971
+    ]
+  }
+}

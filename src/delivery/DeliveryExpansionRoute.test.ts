@@ -1,21 +1,21 @@
 import { describe, expect, it, vi } from 'vitest';
 import { DELIVERY_CHAPTERS, defaultDeliveryChapter, getDeliveryChapter } from './DeliveryChapters';
 import { DeliveryRoute } from './DeliveryRoute';
-import { DELIVERY_CHALLENGE_CHAPTER_IDS } from './DeliveryChallengeRun';
+import { LEGACY_DELIVERY_CHALLENGE_CHAPTER_IDS } from './DeliveryChallengeRun';
 import { DifficultySystem } from '../systems/DifficultySystem';
 import { SpawnSystem } from '../systems/SpawnSystemOwner';
 import { INPUT, PLAYER, RUN, WORLD } from '../game/Constants';
 import { ProgressionSystem } from '../systems/ProgressionSystem';
 
-const authored = DELIVERY_CHALLENGE_CHAPTER_IDS.map(id => getDeliveryChapter(id)!);
+const authored = LEGACY_DELIVERY_CHALLENGE_CHAPTER_IDS.map(id => getDeliveryChapter(id)!);
 const maxEffects = ProgressionSystem.effectsFor({ jump: 5, speed: 5, magnet: 5, dash: 5 });
 describe('three resident delivery routes', () => {
   it('expands to five chapters without giving historical routes artificial ratings', () => {
-    expect(DELIVERY_CHAPTERS).toHaveLength(5);
+    expect(DELIVERY_CHAPTERS).toHaveLength(11);
     for (const id of ['hill-goodnight-v1', 'dinner-for-you-v1']) expect(getDeliveryChapter(id)!.challenge).toBeUndefined();
     expect(new DeliveryRoute('future-route').chapter).toBe(defaultDeliveryChapter());
     expect(new DeliveryRoute('future-route').challenge).toBeUndefined();
-    expect(new Set(DELIVERY_CHAPTERS.map(chapter => chapter.seed)).size).toBe(5);
+    expect(new Set(DELIVERY_CHAPTERS.map(chapter => chapter.seed)).size).toBe(11);
   });
   it.each(authored)('$id ends by road distance in approximately 60–90 seconds and preserves the full arrival zone', chapter => {
     const route = new DeliveryRoute(chapter.id), difficulty = new DifficultySystem(); let elapsed = 0;

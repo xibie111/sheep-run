@@ -1,0 +1,53 @@
+{
+  "originalGeneratedPath": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a13559-c3a9-7620-b61f-8712d8536a34\\exec-ae781c3c-b5ff-4726-b7d7-73348d6a7de2.png",
+  "workspaceSourcePath": "D:/DSH workspace/sheep-run/assets/delivery-menu-style-v2/sources/lighthouse-ending.png",
+  "sha256": "25A85A7F79F8DCA596895B22A8CF584249C6C95B4EE576539A38078F195F724C",
+  "originalSha256": "25A85A7F79F8DCA596895B22A8CF584249C6C95B4EE576539A38078F195F724C",
+  "bytes": 1854619,
+  "width": 1672,
+  "height": 941,
+  "generatedFileCreationTimeUtc": "2026-10-13T13:07:05.9440841Z",
+  "archivedAtUtc": "2026-10-13T13:08:22.8691609Z",
+  "tool": "image_gen.imagegen (built-in)",
+  "transparentBackground": false,
+  "prompt": "Use case: stylized-concept.\nAsset type: final full-bleed 16:9 opaque background for a cozy mobile pixel-art sheep game.\nPrimary request: redraw this scene in the SAME coarse blocky pixel-art visual language as the farm main menu in reference Image 1.\nReference roles: Image 1 is the sole STYLE reference: use its cheerful blocky rural game illustration, square stair-step edges, grouped rounded foliage, bold readable contours, restrained simple two or three tone shading. Image 2 is only a LAYOUT / PLACE reference; DO NOT inherit its dense microtexture, tiny foliage or photorealistic rendering.\nStyle and detail: every visible contour is a clear square-pixel staircase, confident big pixel clusters, simple broad grouped foliage, no leaf speckles, no antialiasing or smooth painted gradients. Night scenes stay clear and pleasantly readable; use blue teal lavender meadow colors with warm amber lamps, no black overlay. Lower visual complexity than Image 2 and consistent with Image 1.\nOutput: exactly ONE cohesive landscape scene, one full image, horizontal 16:9, edge-to-edge opaque pixels. No atlas, grid, collage, frames, UI, written words, labels, logos or watermark.\nAdditional reference role: Image 3 is the actual SHEEP CHARACTER reference, solely for character identity. Preserve its cream OVAL fluffy fleece body, peach small square face projecting on the side, dark cocoa ears and four stubby dark cocoa hooves, clear dark pixel outline. Each sheep is an ordinary cute QUADRUPED SHEEP, not human and not a humanoid. No arms, hands, horns, pink round Kirby body or bipedal stance. Use the same sprite proportions and simple chunky wool scallops, enlarged for the story illustration without additional tiny wool texture.\nScene and story: TWO recognizable game sheep from Image 3, sitting or resting side by side on a quiet grassy headland, viewed in gentle three-quarter side/back view facing RIGHT toward the distant warm lighthouse beam across the sea. Both remain inside the central 70% of the picture, their cocoa ears and peach square faces visibly recognizable in profile. Their bodies are low oval resting sheep, four hooves tucked below their fleece; no upright human sitting pose. Comfortable friendship and peaceful night.\nOn RIGHT in far background a compact farm-style ivory lighthouse with muted red stripe, orange brown roof and amber lamp by a tiny orange-roof cottage. Smooth broad blue-green headland shapes, simple big rounded bushes, quiet sea formed by five broad blue horizontal wave bands. Warm beam lies across distant background sky, clear simple wedge. Open muted denim-blue sky with ONLY 10 to 20 large sparse chunky stars and two broad simple lavender-blue cloud bands. No galaxy, no Milky Way, no microstars, dense water shimmer, foam, realistic cliffs, lighthouse bricks or fine foliage. A small simple cream mailbox is at left; one simple pale cream envelope rests on grass by it, no words. This is a FULL story illustration, no gameplay road. Big simple foreground grass patches with only a few large flowers. Clear square pixel art, quiet composition, no UI/text/borders.",
+  "referenceImages": [
+    {
+      "index": 1,
+      "path": "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+      "role": "sole style reference"
+    },
+    {
+      "index": 2,
+      "path": "D:/DSH workspace/sheep-run/assets/delivery-expansion-v1/chapters/runtime/lighthouse-ending.png",
+      "role": "layout only reference"
+    },
+    {
+      "index": 3,
+      "path": "D:/DSH workspace/sheep-run/assets/skins/runtime-v1/white-sheet.png",
+      "role": "character identity only reference"
+    }
+  ],
+  "validation": {
+    "visualInspection": true,
+    "menuStyleMatched": true,
+    "noAtlasTextUIGridBorder": true,
+    "noGalaxy": true,
+    "charactersCorrect": true,
+    "roadPlacement": "not applicable"
+  },
+  "referenceHashes": [
+    {
+      "path": "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+      "sha256": "DE36B068C971BBD24D870B5075A1380E852A4000D71C7807BB0600CE1FBF3749"
+    },
+    {
+      "path": "D:/DSH workspace/sheep-run/assets/delivery-expansion-v1/chapters/runtime/lighthouse-ending.png",
+      "sha256": "DED28F5225C69AD8E677C03F2D0A3671787DCCB572801B9765DB1ADB236F8466"
+    },
+    {
+      "path": "D:/DSH workspace/sheep-run/assets/skins/runtime-v1/white-sheet.png",
+      "sha256": "B1ACEAC87739A99C77CF97F4083A7E613720C24C817485575DDE2EF51B896856"
+    }
+  ]
+}

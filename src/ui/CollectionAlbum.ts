@@ -9,7 +9,7 @@ import { safeUiInsets } from "./UiLayout";
 import { bindTouchTarget } from "./TouchTarget";
 import { displayCanvasText } from "./DisplayCanvasText";
 import { createDisplayOverlay } from "./DisplayOverlay";
-import type { ArtRect } from "./MenuArtLayout";
+import { menuBookEntryLayout, menuBookButtonContent, type ArtRect } from "./MenuArtLayout";
 import { collectionCount, SEASON_LETTERS, type RewardId } from "../data/journeyBook";
 import { journeyStore } from "../systems/JourneyStore";
 import { acquireMenuModal, menuModalOwner, MENU_MODAL_CHANGE } from "./MenuModal";
@@ -49,14 +49,15 @@ export function attachCollectionAlbum(scene:Phaser.Scene,openReward:(id:RewardId
     };
     if(!open&&!menuModalOwner(scene)){
       const shift=pressed.has("entry")?1:0;
-      art(ctx,"collection-album-button",{...entryBox,y:entryBox.y+shift});
-      art(ctx,"collection-album-icon",{x:entryBox.x+15,y:entryBox.y+5+shift,width:26,height:26});
+      const paintBox={...entryBox,y:entryBox.y+shift},content=menuBookButtonContent(paintBox);
+      art(ctx,"collection-album-button",paintBox);
+      art(ctx,"collection-album-icon",content.icon);
       const journal=journeyStore.load();
       if(journal.rewards.all){
-        ["spring-flower","summer-sunflower","autumn-maple","winter-snowflake"].forEach((id,i)=>art(ctx,`collection-${id}`,{x:entryBox.x+6+(i%2)*36,y:entryBox.y+5+Math.floor(i/2)*19+shift,width:10,height:10}));
+        ["spring-flower","summer-sunflower","autumn-maple","winter-snowflake"].forEach((id,i)=>art(ctx,`collection-${id}`,{x:entryBox.x+8+(i%2)*32,y:entryBox.y+7+Math.floor(i/2)*11+shift,width:8,height:8}));
       }
       if(Object.keys(journal.rewards).some(id=>!journal.readRewards.includes(id as RewardId))){ctx.fillStyle="#e57849";ctx.fillRect(entryBox.x+45,entryBox.y+5+shift,6,6);}
-      line("收藏册",{x:entryBox.x+7,y:entryBox.y+30+shift,width:42,height:12},10);
+      line("收藏册",content.label,10);
       if(scene.data.get("menu-bedtime")===true||pressed.has("entry")){
         ctx.save();ctx.globalCompositeOperation="source-atop";
         ctx.fillStyle=scene.data.get("menu-bedtime")===true?(shift?"rgba(42,46,72,0.38)":"rgba(42,46,72,0.30)"):"rgba(237,181,92,0.22)";
@@ -134,7 +135,7 @@ export function attachCollectionAlbum(scene:Phaser.Scene,openReward:(id:RewardId
   watchViewport(scene,size=>{
     const safe=safeUiInsets(scene),k=Math.min(1,(size.width-safe.left-safe.right-16)/430,(size.height-safe.top-safe.bottom-16)/234);
     panel={x:safe.left+(size.width-safe.left-safe.right-430*k)/2,y:safe.top+(size.height-safe.top-safe.bottom-234*k)/2,width:430*k,height:234*k};
-    entryBox={x:safe.left+56,y:safe.top+5,width:56,height:48};entry.setPosition(entryBox.x+28,entryBox.y+24);
+    entryBox=menuBookEntryLayout(size,safe).collection;entry.setPosition(entryBox.x+28,entryBox.y+24);
     closeBox={x:panel.x+151*k,y:panel.y+213*k,width:128*k,height:26*k};close.setPosition(closeBox.x+closeBox.width/2,closeBox.y+closeBox.height/2);
     close.setSize(128*k,36*k);close.input!.hitArea.setSize(128*k,36*k);
     tabs.forEach((target,i)=>{const box={x:panel.x+(31+i*94)*k,y:panel.y+65*k,width:86*k,height:26*k};tabBoxes[i]=box;target.setPosition(box.x+box.width/2,box.y+box.height/2).setSize(86*k,32*k);target.input!.hitArea.setSize(86*k,32*k);});

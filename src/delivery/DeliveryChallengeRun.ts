@@ -1,5 +1,7 @@
 /** Chapter-only collections. These never use the runner's stars, power-ups or economy. */
-export const DELIVERY_CHALLENGE_CHAPTER_IDS = ['windmill-invitation-v1', 'rainy-umbrella-v1', 'lighthouse-starlight-v1'] as const;
+import { RESIDENT_NEW_CHAPTER_IDS } from '../residents/ResidentCatalog';
+export const LEGACY_DELIVERY_CHALLENGE_CHAPTER_IDS = ['windmill-invitation-v1', 'rainy-umbrella-v1', 'lighthouse-starlight-v1'] as const;
+export const DELIVERY_CHALLENGE_CHAPTER_IDS = [...LEGACY_DELIVERY_CHALLENGE_CHAPTER_IDS, ...RESIDENT_NEW_CHAPTER_IDS] as const;
 export type DeliveryChallengeChapterId = typeof DELIVERY_CHALLENGE_CHAPTER_IDS[number];
 export type DeliveryStampKind = 'ordinary' | 'keepsake';
 export interface DeliveryStampDefinition {
@@ -13,6 +15,7 @@ export interface DeliveryStampDefinition {
 export interface DeliveryChallengeDefinition {
   readonly stamps: readonly DeliveryStampDefinition[];
   readonly keepsakeKey: string;
+  readonly keepsakeTitle?: string;
 }
 export interface DeliveryChallengeSnapshot {
   readonly ordinaryCollected: number;

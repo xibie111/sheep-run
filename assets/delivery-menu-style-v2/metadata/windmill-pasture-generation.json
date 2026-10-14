@@ -1,0 +1,37 @@
+{
+  "tool": "builtin image_gen",
+  "key": "windmill-pasture",
+  "requested_mode": "reference-guided generation",
+  "timing": {
+    "started": "2026-10-13T13:03:15.193Z",
+    "completed": "2026-10-13T13:05:04.954Z"
+  },
+  "references": [
+    "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+    "D:/DSH workspace/sheep-run/assets/delivery-expansion-v1/chapters/runtime/windmill-pasture.png"
+  ],
+  "prompt_file": "D:/DSH workspace/sheep-run/assets/delivery-menu-style-v2/prompts/windmill-pasture.txt",
+  "transparent_background": false,
+  "generated_original_path": "C:/Users/mechrevo/.codex/generated_images/01a13556-b4fb-7223-98be-cfd2258cde94/exec-074cfcb4-858f-4de3-96e7-776f6f58cea9.png",
+  "workspace_source_path": "D:/DSH workspace/sheep-run/assets/delivery-menu-style-v2/sources/windmill-pasture.png",
+  "output_hint": "Generated images are saved to C:\\Users\\mechrevo\\.codex\\generated_images\\01a13556-b4fb-7223-98be-cfd2258cde94 as C:\\Users\\mechrevo\\.codex\\generated_images\\01a13556-b4fb-7223-98be-cfd2258cde94\\exec-074cfcb4-858f-4de3-96e7-776f6f58cea9.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+  "exact_original_bytes": true,
+  "width": 1672,
+  "height": 941,
+  "pixel_format": "Format24bppRgb",
+  "sha256": "215477AB52028A47119D4784C4FFB3B4F55E0A455CA214F3F2B139E94C1DE002",
+  "byte_count": 1964515,
+  "prompt_sha256": "00017DBF34922C404F1D0CF9F98145467E91586022D59F5FCAF513368C52090C",
+  "reference_files": [
+    {
+      "path": "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+      "sha256": "DE36B068C971BBD24D870B5075A1380E852A4000D71C7807BB0600CE1FBF3749",
+      "byte_count": 2102654
+    },
+    {
+      "path": "D:/DSH workspace/sheep-run/assets/delivery-expansion-v1/chapters/runtime/windmill-pasture.png",
+      "sha256": "7841A5F9A442E9569F06B95247BD6E7D440394D8C9A860F359723F4F711A3A18",
+      "byte_count": 990913
+    }
+  ]
+}

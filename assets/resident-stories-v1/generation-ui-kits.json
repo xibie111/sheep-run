@@ -1,0 +1,388 @@
+{
+  "records": [
+    {
+      "slug": "flower-neighbor",
+      "prompt": "Use case: stylized-concept. Production game NPC sprite, square canvas, genuine transparent alpha background. Reference image 1 is the existing cream white sheep sprite sheet: preserve its identity, four short brown hooves, round low wool body, peach face, little brown ears and dark expressive eyes, dark brown pixel outline. Reference image 2 is the same project's Ahe NPC, style reference only. Create exactly ONE full-body sheep flower-garden neighbor facing right in a relaxed standing pose, with a single small coral-and-yellow flower hairclip above one ear. No hat, scarf, basket, other objects or other animals. Keep a sheep's horizontal quadruped body, not a human standing upright. Clean friendly pixel art, hard squared pixel clusters and stepped dark outline, warm cream/beige wool, cohesive limited pastel palette, clear silhouette. Center the entire sheep with generous empty transparent margins on every side, all four hooves and ears fully inside canvas. No floor, no drop shadow, no glow or soft halo, no background color/checker pattern, no text, letters, numerals, prices, logo or watermark. Intended final sprite is reduced with nearest-neighbor sampling; keep forms legible and simple.",
+      "tool": "builtin image_gen",
+      "transparent_background": true,
+      "referenced_image_paths": [
+        "assets/skins/runtime-v1/white-sheet.png",
+        "assets/resident-stories-v1/sources/ahe.png"
+      ],
+      "source_path": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11779-e35b-7c43-a9d4-9561c862cf43\\exec-75f0a804-cc7f-469f-a349-814d2468d384.png",
+      "project_source": "assets/resident-stories-v1/sources/flower-neighbor.png",
+      "tool_output_hint": "Generated images are saved to C:\\Users\\mechrevo\\.codex\\generated_images\\01a11779-e35b-7c43-a9d4-9561c862cf43 as C:\\Users\\mechrevo\\.codex\\generated_images\\01a11779-e35b-7c43-a9d4-9561c862cf43\\exec-75f0a804-cc7f-469f-a349-814d2468d384.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "visual_review": "Single complete quadruped sheep matching reference; small coral flower hairclip; no text or unrelated props.",
+      "file_verification": {
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGBA",
+        "sha256": "4130c0b4eddc30e90070f8a4aaa3290738995b56de6cbf5fd6fb4e7cabddea00",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox": [
+          49,
+          117,
+          1194,
+          1238
+        ],
+        "visible_alpha32_bbox": [
+          298,
+          421,
+          1032,
+          1003
+        ]
+      }
+    },
+    {
+      "slug": "bridge-neighbor",
+      "prompt": "Use case: stylized-concept. Production game NPC sprite, square canvas, genuine transparent alpha background. Reference image 1 is the existing cream white sheep sprite sheet: preserve its identity, four short brown hooves, round low wool body, peach face, little brown ears and dark expressive eyes, dark brown pixel outline. Reference image 2 is Ahe NPC from the same game, style reference only. Create exactly ONE full-body sheep bridge-side neighbor facing right in a relaxed standing pose, wearing a simple light tan cloth vest around its torso. No hat, scarf, flowers, props or extra animals. Keep the sheep horizontal quadruped body, not a human standing upright. Clean friendly pixel art, hard squared pixel clusters and stepped dark outline, cream wool/beige vest warm limited palette, simple readable silhouette. Center the entire sheep with generous empty transparent margins, full hooves and ears visible. No floor, cast shadow, glow or soft halo. No background, painted checkerboard, text, letters, numerals, price, logo or watermark.",
+      "tool": "builtin image_gen",
+      "transparent_background": true,
+      "referenced_image_paths": [
+        "assets/skins/runtime-v1/white-sheet.png",
+        "assets/resident-stories-v1/sources/ahe.png"
+      ],
+      "source_path": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11779-e35b-7c43-a9d4-9561c862cf43\\exec-8ecddf14-3e14-41a6-8d2f-b3124aad2aed.png",
+      "project_source": "assets/resident-stories-v1/sources/bridge-neighbor.png",
+      "tool_output_hint": "Generated images are saved to C:\\Users\\mechrevo\\.codex\\generated_images\\01a11779-e35b-7c43-a9d4-9561c862cf43 as C:\\Users\\mechrevo\\.codex\\generated_images\\01a11779-e35b-7c43-a9d4-9561c862cf43\\exec-8ecddf14-3e14-41a6-8d2f-b3124aad2aed.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "visual_review": "Complete quadruped cream sheep matching reference with tan vest, transparent surround, no labels.",
+      "file_verification": {
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGBA",
+        "sha256": "0071f15cf1c9b156276426a462ed13bfbcbbe557b6b5a463f8a1766e75d1655e",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox": [
+          49,
+          20,
+          1192,
+          1182
+        ],
+        "visible_alpha32_bbox": [
+          272,
+          398,
+          1030,
+          1010
+        ]
+      }
+    },
+    {
+      "slug": "harbor-neighbor",
+      "prompt": "Use case: stylized-concept. Production game NPC sprite, square canvas, genuine transparent alpha background. Reference image 1 is the existing cream white sheep sprite sheet: preserve its identity, four short brown hooves, round low wool body, peach face, little brown ears and dark expressive eyes, dark brown pixel outline. Reference image 2 is Ahe NPC from the same game, style reference only. Create exactly ONE full-body sheep harbor neighbor facing right, relaxed friendly standing pose, wearing a small rust-red soft cap. No scarf, flowers, other clothing, props or extra characters. Keep a horizontal quadruped sheep body, never upright humanoid. Clean friendly pixel art, hard square pixel clusters, stepped dark outline, cream wool/rust cap/beige face limited palette. Center entire sheep with generous transparent empty margins all around, all hooves, ears and cap visible. No floor, shadows, glow, halo, gradient, text, letters, numerals, price, logo, watermark or painted checkerboard.",
+      "tool": "builtin image_gen",
+      "transparent_background": true,
+      "referenced_image_paths": [
+        "assets/skins/runtime-v1/white-sheet.png",
+        "assets/resident-stories-v1/sources/ahe.png"
+      ],
+      "source_path": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11779-e35b-7c43-a9d4-9561c862cf43\\exec-1a04242b-324e-47d5-8615-7a698ffd5776.png",
+      "project_source": "assets/resident-stories-v1/sources/harbor-neighbor.png",
+      "tool_output_hint": "Generated images are saved to C:\\Users\\mechrevo\\.codex\\generated_images\\01a11779-e35b-7c43-a9d4-9561c862cf43 as C:\\Users\\mechrevo\\.codex\\generated_images\\01a11779-e35b-7c43-a9d4-9561c862cf43\\exec-1a04242b-324e-47d5-8615-7a698ffd5776.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "visual_review": "Complete quadruped cream sheep with rust-red cap, matching reference, no extra objects/text.",
+      "file_verification": {
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGBA",
+        "sha256": "558f8e991233e10e617b11abf8883d3296913845d2b0a111137689de6b0e8ef0",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox": [
+          33,
+          35,
+          1184,
+          1254
+        ],
+        "visible_alpha32_bbox": [
+          263,
+          423,
+          1011,
+          1083
+        ]
+      }
+    },
+    {
+      "slug": "ahe-kit",
+      "prompt": "Use case: stylized-concept. Asset type: transparent pixel-art icon sprite kit for a sheep pasture delivery game. Create one coherent square sprite sheet with exactly FOUR separate icons arranged in an EXACT 2-by-2 grid. Each icon centered in its own quadrant, same visual size, wide genuine transparent gutters between icons, at least 12 percent of canvas width entirely empty around the outside and between the quadrants. Top-left: closed warm ivory envelope with a small coral flower wax stamp. Top-right: one cream perforated postage stamp featuring a tiny green-and-gold windmill. Bottom-left: one unique perforated keepsake postage stamp featuring a compact colorful flower bouquet. Bottom-right: one unique perforated keepsake postage stamp featuring an old-fashioned picnic camera with a small green picnic cloth accent. All four must be independent flat inventory icons with full outlines, no shared frame. Crisp friendly pixel art, large deliberate square pixel clusters and dark brown stepped outline, warm cream/gold/green/coral limited palette matching a cozy pasture game. No sheep or people in this kit. True transparent alpha outside all four icons, no floor, shadow, glow, blur, checkerboard, background, labels, text, letters, numbers, price, watermark or logo. Keep objects simple enough to remain recognizable at 32 pixels.",
+      "tool": "builtin image_gen",
+      "transparent_background": true,
+      "source_path": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11779-e35b-7c43-a9d4-9561c862cf43\\exec-93be03c9-c1a7-4ecf-b02a-c858fadb7b42.png",
+      "project_source": "assets/resident-stories-v1/sources/ahe-kit.png",
+      "tool_output_hint": "Generated images are saved to C:\\Users\\mechrevo\\.codex\\generated_images\\01a11779-e35b-7c43-a9d4-9561c862cf43 as C:\\Users\\mechrevo\\.codex\\generated_images\\01a11779-e35b-7c43-a9d4-9561c862cf43\\exec-93be03c9-c1a7-4ecf-b02a-c858fadb7b42.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "quadrants": [
+        "top-left: sealed envelope",
+        "top-right: ordinary postage stamp",
+        "bottom-left: stage 2 keepsake stamp",
+        "bottom-right: stage 3 keepsake stamp"
+      ],
+      "visual_review": "Exactly four independent icons in a 2x2 grid, wide empty gutters, distinct requested motifs, crisp outlined pixel art, no text.",
+      "file_verification": {
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGBA",
+        "sha256": "6c304033bf78dac4e49d0d35b01761b44492091cf01a3cc8adbae5632ecf5324",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox": [
+          0,
+          21,
+          1238,
+          1254
+        ],
+        "quadrant_alpha_bboxes": [
+          [
+            0,
+            31,
+            627,
+            627
+          ],
+          [
+            1,
+            21,
+            603,
+            627
+          ],
+          [
+            15,
+            0,
+            627,
+            627
+          ],
+          [
+            0,
+            5,
+            611,
+            627
+          ]
+        ],
+        "center_vertical_alpha_max": 1,
+        "center_horizontal_alpha_max": 1,
+        "visible_alpha32_bbox": [
+          132,
+          134,
+          1121,
+          1130
+        ],
+        "quadrant_visible_alpha32_bboxes": [
+          [
+            132,
+            195,
+            575,
+            518
+          ],
+          [
+            86,
+            134,
+            492,
+            579
+          ],
+          [
+            137,
+            55,
+            542,
+            503
+          ],
+          [
+            85,
+            55,
+            494,
+            503
+          ]
+        ]
+      }
+    },
+    {
+      "slug": "xiaomu-kit",
+      "prompt": "Use case: stylized-concept. Asset type: transparent pixel-art icon sprite kit for a sheep pasture delivery game. Create one coherent square sprite sheet with exactly FOUR separate icons arranged in an EXACT 2-by-2 grid. Each icon centered in its own quadrant, equal visual size, wide genuine transparent gutters; keep at least 12 percent of canvas width empty around the outside and between quadrants. Top-left: closed warm ivory envelope sealed with a small pale river-blue wax seal bearing a water ripple. Top-right: one cream perforated postage stamp featuring a tiny light-blue umbrella. Bottom-left: one unique perforated keepsake postage stamp featuring a little grey stone bridge over blue water. Bottom-right: one unique perforated keepsake postage stamp featuring a cream teacup with a colorful rainbow arch above it. Four independent flat inventory icons with complete outlines; no shared frame. Crisp cozy pixel art, large deliberate square pixel clusters, dark brown stepped outlines, cream/pale blue/soft green and rainbow limited palette matching a friendly sheep pasture game. No sheep or people. True transparent alpha outside icons, no floor, cast shadow, glow, blur, checkerboard, colored background, labels, text, letters, numbers, price, logo or watermark. Simple recognizable silhouettes at 32 pixels.",
+      "tool": "builtin image_gen",
+      "transparent_background": true,
+      "source_path": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11779-e35b-7c43-a9d4-9561c862cf43\\exec-61f522fa-18b5-49dc-9a76-7122cd62a8ba.png",
+      "project_source": "assets/resident-stories-v1/sources/xiaomu-kit.png",
+      "tool_output_hint": "Generated images are saved to C:\\Users\\mechrevo\\.codex\\generated_images\\01a11779-e35b-7c43-a9d4-9561c862cf43 as C:\\Users\\mechrevo\\.codex\\generated_images\\01a11779-e35b-7c43-a9d4-9561c862cf43\\exec-61f522fa-18b5-49dc-9a76-7122cd62a8ba.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "quadrants": [
+        "top-left: sealed envelope",
+        "top-right: ordinary postage stamp",
+        "bottom-left: stage 2 keepsake stamp",
+        "bottom-right: stage 3 keepsake stamp"
+      ],
+      "visual_review": "Exactly four independent icons in a 2x2 grid, wide empty gutters, distinct requested motifs, crisp outlined pixel art, no text.",
+      "file_verification": {
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGBA",
+        "sha256": "03c74085618e373cf13ea3e6aa1c4997aeda69c75278917ccea42ec25fd65704",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox": [
+          0,
+          35,
+          1234,
+          1254
+        ],
+        "quadrant_alpha_bboxes": [
+          [
+            0,
+            45,
+            621,
+            627
+          ],
+          [
+            17,
+            35,
+            607,
+            619
+          ],
+          [
+            33,
+            0,
+            627,
+            627
+          ],
+          [
+            1,
+            3,
+            595,
+            605
+          ]
+        ],
+        "center_vertical_alpha_max": 1,
+        "center_horizontal_alpha_max": 1,
+        "visible_alpha32_bbox": [
+          132,
+          139,
+          1113,
+          1117
+        ],
+        "quadrant_visible_alpha32_bboxes": [
+          [
+            132,
+            172,
+            549,
+            504
+          ],
+          [
+            98,
+            139,
+            472,
+            550
+          ],
+          [
+            135,
+            59,
+            544,
+            489
+          ],
+          [
+            87,
+            59,
+            486,
+            490
+          ]
+        ]
+      }
+    },
+    {
+      "slug": "adeng-kit",
+      "prompt": "Use case: stylized-concept. Asset type: transparent pixel-art icon sprite kit for a sheep pasture delivery game. Create one coherent square sprite sheet with exactly FOUR separate icons arranged in an EXACT 2-by-2 grid. Each icon centered in its own quadrant, equal visual size, generous genuine transparent gutters; at least 12 percent of canvas width entirely empty around the outside and between quadrants. Top-left: closed slightly aged ivory envelope with a small dark-blue lighthouse wax stamp. Top-right: one cream perforated postage stamp featuring a little warm yellow hand lantern. Bottom-left: one unique perforated keepsake postage stamp featuring an old folded harbor letter beside a tiny lit window. Bottom-right: one unique perforated keepsake postage stamp featuring a warmly shining lighthouse with three tiny cream sheep silhouettes gathered at its base. Four independent flat inventory icons, complete outlines and no shared frame. Crisp cozy pixel art, large deliberate square pixel clusters, dark brown stepped outlines, cream/deep blue/warm gold muted palette. True transparent alpha outside icons, no floor, shadows, glow halo, blur, checkerboard, background, text, labels, letters, numerals, price, logo or watermark. Keep pictograms simple enough to remain recognizable at 32 pixels.",
+      "tool": "builtin image_gen",
+      "transparent_background": true,
+      "source_path": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11779-e35b-7c43-a9d4-9561c862cf43\\exec-4eb00d77-d21c-4c59-b1c5-aaf688fc0e6a.png",
+      "project_source": "assets/resident-stories-v1/sources/adeng-kit.png",
+      "tool_output_hint": "Generated images are saved to C:\\Users\\mechrevo\\.codex\\generated_images\\01a11779-e35b-7c43-a9d4-9561c862cf43 as C:\\Users\\mechrevo\\.codex\\generated_images\\01a11779-e35b-7c43-a9d4-9561c862cf43\\exec-4eb00d77-d21c-4c59-b1c5-aaf688fc0e6a.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "quadrants": [
+        "top-left: sealed envelope",
+        "top-right: ordinary postage stamp",
+        "bottom-left: stage 2 keepsake stamp",
+        "bottom-right: stage 3 keepsake stamp"
+      ],
+      "visual_review": "Exactly four independent icons in a 2x2 grid, wide empty gutters, distinct requested motifs, crisp outlined pixel art, no text.",
+      "file_verification": {
+        "width": 1254,
+        "height": 1254,
+        "mode": "RGBA",
+        "sha256": "26824e2110e15edcbe32cbf1e03ce2ee4f751ba8f3096310fbf14c058104ab4d",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "alpha_bbox": [
+          0,
+          13,
+          1218,
+          1230
+        ],
+        "quadrant_alpha_bboxes": [
+          [
+            0,
+            33,
+            619,
+            621
+          ],
+          [
+            9,
+            13,
+            591,
+            572
+          ],
+          [
+            0,
+            5,
+            627,
+            603
+          ],
+          [
+            0,
+            19,
+            591,
+            603
+          ]
+        ],
+        "center_vertical_alpha_max": 1,
+        "center_horizontal_alpha_max": 0,
+        "visible_alpha32_bbox": [
+          140,
+          130,
+          1112,
+          1138
+        ],
+        "quadrant_visible_alpha32_bboxes": [
+          [
+            140,
+            171,
+            584,
+            532
+          ],
+          [
+            98,
+            130,
+            482,
+            566
+          ],
+          [
+            151,
+            41,
+            559,
+            511
+          ],
+          [
+            75,
+            41,
+            485,
+            511
+          ]
+        ]
+      }
+    }
+  ]
+}

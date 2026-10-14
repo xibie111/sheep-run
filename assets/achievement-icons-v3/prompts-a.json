@@ -1,0 +1,62 @@
+{
+  "method": "built-in image_gen; one independent call per asset; original generated PNG and alpha preserved",
+  "reference": "assets/achievement-icons-v2/preview.png (viewed for style; v1 and v2 untouched)",
+  "items": [
+    {
+      "id": "three-runs",
+      "prompt": "Use case: stylized-concept.\nAsset type: one independent transparent achievement icon in a cozy pastoral mobile game's sheep badge family.\nPrimary request: Create ONE standalone icon, not a collection sheet, UI, or sprite atlas.\nStyle/medium: genuinely chunky pixel-art sprite designed like a simple 32x32 pixel icon enlarged without smoothing. Warm cream wool, peach faces, orange-brown thick stepped outer contour, dark brown dot eyes, and small green botanical accents. A very small palette of flat warm colors with hard block transitions. Cute round sheep shapes, bold and immediately recognizable when reduced to 28 pixels. Use large square pixel clusters and very few small details. The icon must match the existing friendly cream-sheep pastoral achievement series.\nComposition: compact centered square silhouette with fully transparent margin on all four sides, about 80 percent canvas occupancy. Subject never touches or clips the canvas edges. Genuinely transparent alpha outside the subjects. No background, scenic view, floor, ground slab, decorative badge backing, outer frame, or border.\nText: none; no words, numbers, lettering, labels, watermark, UI or captions.\nAvoid: smooth gradients, glow, blur, antialiased vector strokes, painterly grain, tiny thin outlines, intricate detail, glossy 3D, photorealism.\nSubject: One adorable cream-white fluffy sheep standing beside a small upright wooden pasture gate. A single small pink flower decorates the top of the wooden gate. Keep the sheep dominant, the gate compact and simple; no hut or scenery.",
+      "transparent_background": true,
+      "status": "delegated-to-root",
+      "owner": "root",
+      "errors": [
+        "image generation failed: network error: error sending request (first attempt)",
+        "image generation failed: connection failed: error sending request",
+        "image generation failed: connection failed: error sending request",
+        "image generation failed: connection failed: error sending request"
+      ]
+    },
+    {
+      "id": "ten-runs",
+      "prompt": "Use case: stylized-concept.\nAsset type: one independent transparent achievement icon in a cozy pastoral mobile game's sheep badge family.\nPrimary request: Create ONE standalone icon, not a collection sheet, UI, or sprite atlas.\nStyle/medium: genuinely chunky pixel-art sprite designed like a simple 32x32 pixel icon enlarged without smoothing. Warm cream wool, peach faces, orange-brown thick stepped outer contour, dark brown dot eyes, and small green botanical accents. A very small palette of flat warm colors with hard block transitions. Cute round sheep shapes, bold and immediately recognizable when reduced to 28 pixels. Use large square pixel clusters and very few small details. The icon must match the existing friendly cream-sheep pastoral achievement series.\nComposition: compact centered square silhouette with fully transparent margin on all four sides, about 80 percent canvas occupancy. Subject never touches or clips the canvas edges. Genuinely transparent alpha outside the subjects. No background, scenic view, floor, ground slab, decorative badge backing, outer frame, or border.\nText: none; no words, numbers, lettering, labels, watermark, UI or captions.\nAvoid: smooth gradients, glow, blur, antialiased vector strokes, painterly grain, tiny thin outlines, intricate detail, glossy 3D, photorealism.\nSubject: One adorable cream-white fluffy sheep taking a little forward step, wearing a small sky-blue scarf. Beside it are exactly two simple terracotta-brown hoofprints and a small green grass tuft. Readable walking pose with a simple compact silhouette.",
+      "transparent_background": true,
+      "status": "saved",
+      "source": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a1341d-7a07-78f0-b712-df083930a31c\\exec-cba7e6ec-37fa-4642-9146-4f2e91c31139.png",
+      "path": "assets/achievement-icons-v3/sources/ten-runs.png",
+      "sha256": "03ceab70657eff27f19eff4d3e75aed201a5006b428cdadc749a85f6c88efff6"
+    },
+    {
+      "id": "ten-friends",
+      "prompt": "Use case: stylized-concept.\nAsset type: one independent transparent achievement icon in a cozy pastoral mobile game's sheep badge family.\nPrimary request: Create ONE standalone icon, not a collection sheet, UI, or sprite atlas.\nStyle/medium: genuinely chunky pixel-art sprite designed like a simple 32x32 pixel icon enlarged without smoothing. Warm cream wool, peach faces, orange-brown thick stepped outer contour, dark brown dot eyes, and small green botanical accents. A very small palette of flat warm colors with hard block transitions. Cute round sheep shapes, bold and immediately recognizable when reduced to 28 pixels. Use large square pixel clusters and very few small details. The icon must match the existing friendly cream-sheep pastoral achievement series.\nComposition: compact centered square silhouette with fully transparent margin on all four sides, about 80 percent canvas occupancy. Subject never touches or clips the canvas edges. Genuinely transparent alpha outside the subjects. No background, scenic view, floor, ground slab, decorative badge backing, outer frame, or border.\nText: none; no words, numbers, lettering, labels, watermark, UI or captions.\nAvoid: smooth gradients, glow, blur, antialiased vector strokes, painterly grain, tiny thin outlines, intricate detail, glossy 3D, photorealism.\nSubject: Exactly two adorable sheep side by side: one cream-white sheep and one warm brown sheep. Between them is a small copper-colored farm bell with a soft pink ribbon. Make both faces large and clearly distinct; no other animals.",
+      "transparent_background": true,
+      "status": "saved",
+      "source": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a1341d-7a07-78f0-b712-df083930a31c\\exec-30c73937-0b84-4bc0-8cce-41a50ac55da7.png",
+      "path": "assets/achievement-icons-v3/sources/ten-friends.png",
+      "sha256": "e95f09a755ac072b216938560fbb5cc4936c9be309cc314a7d49dc5f483dc50a"
+    },
+    {
+      "id": "five-stars",
+      "prompt": "Use case: stylized-concept.\nAsset type: one independent transparent achievement icon in a cozy pastoral mobile game's sheep badge family.\nPrimary request: Create ONE standalone icon, not a collection sheet, UI, or sprite atlas.\nStyle/medium: genuinely chunky pixel-art sprite designed like a simple 32x32 pixel icon enlarged without smoothing. Warm cream wool, peach faces, orange-brown thick stepped outer contour, dark brown dot eyes, and small green botanical accents. A very small palette of flat warm colors with hard block transitions. Cute round sheep shapes, bold and immediately recognizable when reduced to 28 pixels. Use large square pixel clusters and very few small details. The icon must match the existing friendly cream-sheep pastoral achievement series.\nComposition: compact centered square silhouette with fully transparent margin on all four sides, about 80 percent canvas occupancy. Subject never touches or clips the canvas edges. Genuinely transparent alpha outside the subjects. No background, scenic view, floor, ground slab, decorative badge backing, outer frame, or border.\nText: none; no words, numbers, lettering, labels, watermark, UI or captions.\nAvoid: smooth gradients, glow, blur, antialiased vector strokes, painterly grain, tiny thin outlines, intricate detail, glossy 3D, photorealism.\nSubject: One adorable cream-white fluffy sheep holding one large bright golden five-point star in its little front hooves, warmly hugging the star. The sheep face and the gold star are the only major shapes; a tiny green leaf accent is allowed.",
+      "transparent_background": true,
+      "status": "saved",
+      "source": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a1341d-7a07-78f0-b712-df083930a31c\\exec-df4ce8e9-bce4-4a87-a473-04ffcac56bb6.png",
+      "path": "assets/achievement-icons-v3/sources/five-stars.png",
+      "sha256": "02e278d54ffa520107d3748a8e65af6deaca91ec62e9ce37328ecfea12494ab4"
+    },
+    {
+      "id": "fifteen-stars",
+      "prompt": "Use case: stylized-concept.\nAsset type: one independent transparent achievement icon in a cozy pastoral mobile game's sheep badge family.\nPrimary request: Create ONE standalone icon, not a collection sheet, UI, or sprite atlas.\nStyle/medium: genuinely chunky pixel-art sprite designed like a simple 32x32 pixel icon enlarged without smoothing. Warm cream wool, peach faces, orange-brown thick stepped outer contour, dark brown dot eyes, and small green botanical accents. A very small palette of flat warm colors with hard block transitions. Cute round sheep shapes, bold and immediately recognizable when reduced to 28 pixels. Use large square pixel clusters and very few small details. The icon must match the existing friendly cream-sheep pastoral achievement series.\nComposition: compact centered square silhouette with fully transparent margin on all four sides, about 80 percent canvas occupancy. Subject never touches or clips the canvas edges. Genuinely transparent alpha outside the subjects. No background, scenic view, floor, ground slab, decorative badge backing, outer frame, or border.\nText: none; no words, numbers, lettering, labels, watermark, UI or captions.\nAvoid: smooth gradients, glow, blur, antialiased vector strokes, painterly grain, tiny thin outlines, intricate detail, glossy 3D, photorealism.\nSubject: One adorable cream-white fluffy sheep wearing a small sky-blue scarf and carrying a small warm brass lantern. Inside the lantern is one clear golden five-point star as a flat gold shape, not a glow. Make the lantern's star visible with thick simple outlines and no tiny details.",
+      "transparent_background": true,
+      "status": "delegated",
+      "owner": "artist_b",
+      "note": "Delegated by root before any image generation attempt; source and generation metadata owned by artist_b."
+    },
+    {
+      "id": "thirty-five-stars",
+      "prompt": "Use case: stylized-concept.\nAsset type: one independent transparent achievement icon in a cozy pastoral mobile game's sheep badge family.\nPrimary request: Create ONE standalone icon, not a collection sheet, UI, or sprite atlas.\nStyle/medium: genuinely chunky pixel-art sprite designed like a simple 32x32 pixel icon enlarged without smoothing. Warm cream wool, peach faces, orange-brown thick stepped outer contour, dark brown dot eyes, and small green botanical accents. A very small palette of flat warm colors with hard block transitions. Cute round sheep shapes, bold and immediately recognizable when reduced to 28 pixels. Use large square pixel clusters and very few small details. The icon must match the existing friendly cream-sheep pastoral achievement series.\nComposition: compact centered square silhouette with fully transparent margin on all four sides, about 80 percent canvas occupancy. Subject never touches or clips the canvas edges. Genuinely transparent alpha outside the subjects. No background, scenic view, floor, ground slab, decorative badge backing, outer frame, or border.\nText: none; no words, numbers, lettering, labels, watermark, UI or captions.\nAvoid: smooth gradients, glow, blur, antialiased vector strokes, painterly grain, tiny thin outlines, intricate detail, glossy 3D, photorealism.\nSubject: One adorable cream-white fluffy sheep holding a small purple woven basket in its front hooves. Exactly three golden five-point stars peek out of the basket. Make the three star silhouettes distinct, use a plain purple basket with only a few chunky pixel marks; a tiny green leaf accent is allowed.",
+      "transparent_background": true,
+      "status": "delegated",
+      "owner": "artist_b",
+      "note": "Delegated by root before any image generation attempt; source and generation metadata owned by artist_b."
+    }
+  ]
+}

@@ -247,9 +247,7 @@ describe("scene viewport layout", () => {
     Object.assign(safe, { left: 30, right: 18, top: 12, bottom: 10 });
     resize(scene, 584, 270);
     expectTouchBounds(scene);
-    const settings = named(scene, "button:settings");
-    expect(position(settings).x - settings.width / 2).toBe(safe.left + 8);
-    expect(position(settings).y - settings.height / 2).toBe(safe.top + 8);
+    expect(scene.children.list.some(object => object.name === "button:settings")).toBe(false);
     const wardrobe = named(scene, "button:衣橱");
     expect(position(wardrobe).x + wardrobe.width / 2).toBe(584 - safe.right - 10);
     expect(position(wardrobe).y + wardrobe.height / 2).toBe(270 - safe.bottom - 18);

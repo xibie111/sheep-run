@@ -1,0 +1,43 @@
+{
+  "key": "rain-destination",
+  "attempt": 2,
+  "tool": "builtin image_gen.imagegen",
+  "transparent_background": false,
+  "prompt_path": "assets/delivery-menu-style-v2/prompts/rain-destination.txt",
+  "initial_generation_metadata": "assets/delivery-menu-style-v2/metadata/rain-destination-attempt1.json",
+  "references": [
+    {
+      "index": 1,
+      "path": "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+      "role": "sole style reference, without copying sunny weather",
+      "sha256": "de36b068c971bbd24d870b5075a1380e852a4000d71c7807bb0600ce1fbf3749"
+    },
+    {
+      "index": 2,
+      "path": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a13558-e12e-7d52-b01c-2f169260b99c\\exec-d94047e9-16b7-4e24-8ae4-dc31495fae75.png",
+      "role": "edit target from original generated attempt 1; exact bytes preserved in sources/rain-destination-attempt1.png",
+      "sha256": "f6245a1ec2201f6373ec8bb4f184dfe8065745506e85c03fec3d548c20ee374f"
+    }
+  ],
+  "generation_started_at_utc": "2026-10-13T13:08:27.992Z",
+  "generation_completed_at_utc": "2026-10-13T13:13:01.491Z",
+  "generated_original_path": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a13558-e12e-7d52-b01c-2f169260b99c\\exec-3039b659-2b75-4df5-b46b-525c6e683822.png",
+  "source_path": "assets/delivery-menu-style-v2/sources/rain-destination.png",
+  "selection": "selected; visually checked for menu pixel style, light blue-gray overcast sky and absence of baked rain streaks",
+  "bytes_preserved": true,
+  "inspection": {
+    "single_frame": true,
+    "opaque": true,
+    "no_text": true,
+    "no_baked_rain": true,
+    "road_requires_root_packing_alignment": true,
+    "sheep_quadruped": null
+  },
+  "notes": "Original generated source copied without image transformation. Root owns uniform nearest-neighbor runtime packing and road alignment; source road height varies.",
+  "source_sha256": "5a3845502437533410d6cd657b57111260d047a8af807ae44361162f596a7d1b",
+  "source_bytes": 2027606,
+  "dimensions": {
+    "height": 941,
+    "width": 1672
+  }
+}

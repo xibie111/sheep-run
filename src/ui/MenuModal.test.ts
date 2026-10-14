@@ -26,4 +26,17 @@ describe("menu modal input ownership", () => {
     target.input = { enabled: false }; release(); expect(target.input.enabled).toBe(false);
     stack.acquire("mailbox", [target], []); stack.clear(); expect(stack.owner).toBeUndefined();
   });
+  it('restores nested mailbox, residents and chapter controls in order without allowing background input', () => {
+    const start = { input: { enabled: true } }, mailbox = { input: { enabled: false } },
+      residents = { input: { enabled: false } }, chapter = { input: { enabled: false } }, locked = { input: { enabled: false } };
+    const stack = new ModalInputStack(), objects = [start, mailbox, residents, chapter, locked];
+    const closeMailbox = stack.acquire('mailbox', objects, [mailbox])!; mailbox.input.enabled = true;
+    const closeResidents = stack.acquire('residents', objects, [residents], 'mailbox')!; residents.input.enabled = true;
+    const closeChapter = stack.acquire('delivery', objects, [chapter], 'residents')!; chapter.input.enabled = true;
+    expect(stack.owner).toBe('delivery'); expect(objects.map(target => target.input.enabled)).toEqual([false, false, false, true, false]);
+    closeResidents(); expect(stack.owner).toBe('delivery');
+    closeChapter(); expect(stack.owner).toBe('residents'); expect(objects.map(target => target.input.enabled)).toEqual([false, false, true, false, false]);
+    closeResidents(); expect(stack.owner).toBe('mailbox'); expect(objects.map(target => target.input.enabled)).toEqual([false, true, false, false, false]);
+    closeMailbox(); expect(stack.owner).toBeUndefined(); expect(objects.map(target => target.input.enabled)).toEqual([true, false, false, false, false]);
+  });
 });

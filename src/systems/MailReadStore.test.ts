@@ -56,4 +56,16 @@ describe("independent mailbox read persistence", () => {
     expect(store.markRead("welcome-v1").saveFailed).toBe(false);
     expect(new MailReadStore(() => port).load().readIds).toEqual(["welcome-v1"]);
   });
+  it("preserves future extension fields and retries only an actual keep action when opening the mailbox again", () => {
+    const { values, port } = memory();
+    values.set(MAIL_STORAGE_KEY, JSON.stringify({ version: 1, readIds: ['future-letter'], annotations: { private: true } }));
+    let failed = true;
+    const store = new MailReadStore(() => ({ getItem: port.getItem, setItem: (key, value) => { if (failed) throw Error('quota'); port.setItem(key, value); } }));
+    expect(store.markRead('resident-windmill-letter-1-v1').saveFailed).toBe(true);
+    failed = false;
+    expect(store.retrySave()).toEqual({ readIds: ['future-letter', 'resident-windmill-letter-1-v1'], saveFailed: false });
+    expect(JSON.parse(values.get(MAIL_STORAGE_KEY)!)).toEqual({ version: 1, readIds: ['future-letter', 'resident-windmill-letter-1-v1'], annotations: { private: true } });
+    expect(store.load().readIds).not.toContain('resident-windmill-letter-2-v1');
+    store.retrySave(); expect(port.setItem).toHaveBeenCalledTimes(1);
+  });
 });

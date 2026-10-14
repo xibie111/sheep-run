@@ -1,0 +1,20 @@
+{
+  "id": "dinner-dusk-pasture",
+  "tool": "builtin-image_gen",
+  "originalOutput": "C:/Users/mechrevo/.codex/generated_images/01a11760-9d97-77c1-924c-cefdf4e6c788/exec-ff6f81c0-af9e-4326-b024-695bf559afdc.png",
+  "workspaceSource": "assets/delivery-menu-style-v2/sources/dinner-dusk-pasture.png",
+  "prompt": "assets/delivery-menu-style-v2/prompts/dinner-dusk-pasture.json",
+  "referencesAttached": true,
+  "transparent_background": false,
+  "sourceSha256": "8dbb5d43f81c517f8f68f658fd2919d656867b061f4c179d1a741809ed256725",
+  "sourceDimensions": [
+    1672,
+    941
+  ],
+  "recordedAt": "2026-10-13T14:00:49.185834+00:00",
+  "originalByteIdentical": true,
+  "referenceHashes": {
+    "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png": "de36b068c971bbd24d870b5075a1380e852a4000d71c7807bb0600ce1fbf3749",
+    "D:/DSH workspace/sheep-run/assets/content-update-v2/delivery/runtime/dusk-pasture.png": "506b44771b83fc5fbd51a888a2128954f721ac62581a8fd701d841ffa9b4d048"
+  }
+}

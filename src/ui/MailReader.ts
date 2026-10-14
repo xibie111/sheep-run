@@ -48,10 +48,11 @@ export class MailReader {
   letter?: MailLetter;
   page = 0;
   pages: MailPage[] = [];
-  constructor(private readonly letters: readonly MailLetter[], private readonly store: MailReadStore) {}
+  constructor(private readonly letters: readonly MailLetter[], private readonly store: MailReadStore,
+    private readonly canOpen: (id: string) => boolean = () => true) {}
   open(id: string): boolean {
     const letter = this.letters.find(item => item.id === id);
-    if (!letter) return false;
+    if (!letter || !this.canOpen(id)) return false;
     this.letter = letter; this.page = 0; this.pages = []; return true;
   }
   back(): void { this.letter = undefined; this.page = 0; this.pages = []; }

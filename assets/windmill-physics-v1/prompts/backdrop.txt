@@ -1,0 +1,5 @@
+Use case: precise-object-edit
+Asset type: opaque 16:9 pixel-farm distant background for a side-view runner.
+Input image: the existing windmill meadow image is the edit target and style reference.
+Primary request: make a clean background plate by removing the large foreground windmill, its mailbox, picnic table, ALL foreground fencing and all bushes/flowers directly bordering the road. Fill those removed areas with continuous distant green meadow and wheat fields. Keep the sunny blue sky, clouds, lake, far mountains, distant forest and tiny distant village in the same style and composition.
+The bottom 28 percent must remain a flat unobstructed tan dirt road, with road top at 72 percent image height. No foreground objects on it. No large windmill anywhere. Do not duplicate buildings. Keep the existing warm green, gold, cream, chestnut palette and crisp hard-edged pixel clusters. No sheep, characters, UI, text, letters, symbols, watermark, blur, photorealism or three-dimensional volume. Output one opaque wide landscape.

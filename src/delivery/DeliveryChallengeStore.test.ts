@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { DeliveryChallengeStore, DELIVERY_CHALLENGE_STORAGE_KEY } from './DeliveryChallengeStore';
 import { DeliveryChallengeRun, type DeliveryChallengeSnapshot } from './DeliveryChallengeRun';
+import { RESIDENTS } from '../residents/ResidentCatalog';
 const id = 'windmill-invitation-v1';
 const outcome = (ordinary: number, hidden: boolean, success = true) => {
   const run = new DeliveryChallengeRun({ keepsakeKey: 'hidden', stamps: [
@@ -80,5 +81,30 @@ describe('chapter-only stars and keepsake archive', () => {
       const store = new DeliveryChallengeStore(factory); expect(store.recordResult(id, outcome(4, false)).saved).toBe(false);
       expect(store.load()).toEqual({ chapters: { [id]: { bestStars: 2, keepsake: false } }, saveFailed: true });
     }
+  });
+  it.each(RESIDENTS)('guards both new $name chapters and keeps their stars independent of story prerequisites', resident => {
+    const port = storage(), completed: string[] = [];
+    const store = new DeliveryChallengeStore(() => port, () => completed);
+    for (const stage of resident.stages.slice(1)) expect(store.recordResult(stage.chapterId, outcome(5, true)).accepted).toBe(false);
+    expect(port.values.size).toBe(0);
+    for (const [index, stage] of resident.stages.entries()) {
+      // One-star success is sufficient: no stars or keepsakes are required to enter the next stage.
+      expect(store.recordResult(stage.chapterId, outcome(0, false))).toMatchObject({ accepted: true, improved: true, saved: true, record: { bestStars: 1, keepsake: false } });
+      completed.push(stage.chapterId);
+      expect(Object.keys(store.load().chapters).length).toBe(index + 1);
+    }
+    expect([...port.values.keys()]).toEqual([DELIVERY_CHALLENGE_STORAGE_KEY]);
+  });
+  it('retries actual session ratings without another run and retains concurrently added future fields', () => {
+    const port = storage(); let failed = true;
+    const store = new DeliveryChallengeStore(() => ({ getItem: port.getItem, setItem: (key, value) => { if (failed) throw Error('quota'); port.setItem(key, value); } }));
+    store.recordResult(id, outcome(4, false));
+    const future = { bestStars: 8, someFutureField: { unseen: true } };
+    port.setItem(DELIVERY_CHALLENGE_STORAGE_KEY, JSON.stringify({ version: 1, chapters: { future, [id]: { bestStars: 1, keepsake: false, caption: 'keep' } }, cursor: 'keep' }));
+    failed = false;
+    expect(store.retrySave()).toMatchObject({ chapters: { [id]: { bestStars: 2, keepsake: false } }, saveFailed: false });
+    const restored = JSON.parse(port.getItem(DELIVERY_CHALLENGE_STORAGE_KEY)!);
+    expect(restored.cursor).toBe('keep'); expect(restored.chapters.future).toEqual(future);
+    expect(restored.chapters[id]).toEqual({ bestStars: 2, keepsake: false, caption: 'keep' });
   });
 });

@@ -48,6 +48,8 @@ import { RunGoal } from '../runner-v2/RunGoal';
 import { RunGoalView } from '../runner-v2/RunGoalView';
 import { RunTravel } from '../runner-v2/RunTravel';
 import { createDeliveryRoute, isDeliveryChapterId, LandmarkController } from '../content-v2';
+import { canEnterDeliveryChapter, newlyUnlockedResidentLetters, reconcileResidentProgress } from '../residents/ResidentProgress';
+import { residentStageForChapter } from '../residents/ResidentCatalog';
 
 export class RunScene extends Phaser.Scene {
   static readonly CONTROL_HINT = GAME_FEATURES.dash
@@ -88,6 +90,7 @@ export class RunScene extends Phaser.Scene {
   private ambientLife?: AmbientLifeController;
   private rareScenery?: SceneryController;
   private delivery?: DeliveryRoute;
+  private deliveryLocked = false;
   private deliveryView?: DeliveryView;
   private deliveryPostage?: DeliveryStampController;
   private deliveryWeather?: string;
@@ -105,7 +108,9 @@ export class RunScene extends Phaser.Scene {
   }
 
   init(data?: { deliveryId?: string }): void {
-    this.delivery = isDeliveryChapterId(data?.deliveryId) ? createDeliveryRoute(data!.deliveryId) : undefined;
+    const id = isDeliveryChapterId(data?.deliveryId) ? data!.deliveryId : undefined;
+    this.deliveryLocked = !!id && !canEnterDeliveryChapter(id, reconcileResidentProgress(deliveryStore, deliveryChallengeStore).completedIds);
+    this.delivery = id && !this.deliveryLocked ? createDeliveryRoute(id) : undefined;
     this.data.set('delivery-id', this.delivery?.chapter.id ?? null);
     // Launch data can be retained by Phaser; only an explicit route start opts in.
     if (data) delete data.deliveryId;
@@ -119,6 +124,10 @@ export class RunScene extends Phaser.Scene {
   }
 
   create(): void {
+    if (this.deliveryLocked) {
+      this.scene.start(SCENE.menu, { openMailbox: true });
+      return;
+    }
     this.inputSystem.reset();
     this.refreshProgression();
     this.activeRunTimeMs = 0;
@@ -328,7 +337,7 @@ export class RunScene extends Phaser.Scene {
     if ((route.phase.weather || route.chapter.weather) && weather !== this.deliveryWeather) {
       this.environmentSystem?.setWeather(weather === 'rain' ? 'rain' : 'sunny'); this.deliveryWeather = weather;
     }
-    this.environmentSystem?.update(route.distance * .15, deltaMs, 0);
+    this.environmentSystem?.update(route.distance, deltaMs, 0);
     this.deliveryPostage?.update();
     if (route.state === 'ending') {
       this.inputSystem.cancel(); this.physics.pause();
@@ -337,11 +346,16 @@ export class RunScene extends Phaser.Scene {
     this.deliveryView?.update(route, this.activeRunTimeMs);
     if (route.state === 'complete') {
       this.finished = true; this.pauseButton!.input!.enabled = false;
+      const before = deliveryStore.load().completedIds;
       const result = deliveryStore.complete(route.chapter.id);
       const challenge = route.challenge?.snapshot();
       const challengeSave = challenge ? deliveryChallengeStore.recordResult(route.chapter.id, challenge) : undefined;
+      const newLetters = newlyUnlockedResidentLetters(before, deliveryStore.load().completedIds);
+      const resident = residentStageForChapter(route.chapter.id)?.resident;
+      const notice = resident && newLetters.length ? `收到${resident.name}的回信` : undefined;
       this.audioSystem.play('bell');
-      if (challenge) this.deliveryPanel?.show('success', !result.saved || !!challengeSave && !challengeSave.saved, route.chapter.id, challenge);
+      if (notice) this.deliveryPanel?.show('success', !result.saved || !!challengeSave && !challengeSave.saved, route.chapter.id, challenge, notice);
+      else if (challenge) this.deliveryPanel?.show('success', !result.saved || !!challengeSave && !challengeSave.saved, route.chapter.id, challenge);
       else this.deliveryPanel?.show('success', !result.saved, route.chapter.id);
     }
   }
@@ -472,7 +486,8 @@ export class RunScene extends Phaser.Scene {
 
   private updatePowerUpHud(nowMs: number): void {
     const active = new Map(this.powerUpSystem.activeEffects(nowMs).map((effect) => [effect.type, effect.remainingMs]));
-    POWER_UP_DEFINITIONS.forEach((definition, index) => {
+    let activeIndex = 0;
+    POWER_UP_DEFINITIONS.forEach((definition) => {
       const remainingMs = active.get(definition.type);
       let slot = this.powerUpHudSlots.get(definition.type);
       if (remainingMs === undefined) {
@@ -480,16 +495,17 @@ export class RunScene extends Phaser.Scene {
         slot?.label.setVisible(false);
         return;
       }
+      const x = 80;
+      const y = 54 + activeIndex++ * 20;
       if (!slot) {
-        const x = 80 + index * 92;
         slot = {
-          icon: this.add.image(x, 54, definition.textureKey).setDisplaySize(14, 14).setDepth(30).setScrollFactor(0),
-          label: addDisplayText(this, x + 11, 54, "", 10).setOrigin(0, 0.5).setDepth(30).setScrollFactor(0),
+          icon: this.add.image(x, y, definition.textureKey).setDisplaySize(14, 14).setDepth(30).setScrollFactor(0),
+          label: addDisplayText(this, x + 11, y, "", 10).setOrigin(0, 0.5).setDepth(30).setScrollFactor(0),
         };
         this.powerUpHudSlots.set(definition.type, slot);
       }
-      slot.icon.setVisible(true);
-      slot.label.setVisible(true).setText(`${definition.label} ${Math.ceil(remainingMs / 1000)}s`);
+      slot.icon.setPosition(x, y).setVisible(true);
+      slot.label.setPosition(x + 11, y).setVisible(true).setText(`${definition.label} ${Math.ceil(remainingMs / 1000)}s`);
     });
   }
 

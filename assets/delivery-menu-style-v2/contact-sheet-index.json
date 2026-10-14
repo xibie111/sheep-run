@@ -1,0 +1,131 @@
+{
+  "reviewOnly": true,
+  "cellSize": [
+    240,
+    135
+  ],
+  "rows": 4,
+  "columns": 5,
+  "cells": [
+    {
+      "row": 0,
+      "column": 0,
+      "name": "windmill-pasture",
+      "runtime": "assets/delivery-menu-style-v2/runtime/windmill-pasture.png"
+    },
+    {
+      "row": 0,
+      "column": 1,
+      "name": "windmill-middle",
+      "runtime": "assets/delivery-menu-style-v2/runtime/windmill-middle.png"
+    },
+    {
+      "row": 0,
+      "column": 2,
+      "name": "windmill-destination",
+      "runtime": "assets/delivery-menu-style-v2/runtime/windmill-destination.png"
+    },
+    {
+      "row": 0,
+      "column": 3,
+      "name": "windmill-ending",
+      "runtime": "assets/delivery-menu-style-v2/runtime/windmill-ending.png"
+    },
+    {
+      "row": 0,
+      "column": 4,
+      "name": "windmill-postcard",
+      "runtime": "assets/delivery-menu-style-v2/runtime/windmill-postcard.png"
+    },
+    {
+      "row": 1,
+      "column": 0,
+      "name": "rain-pasture",
+      "runtime": "assets/delivery-menu-style-v2/runtime/rain-pasture.png"
+    },
+    {
+      "row": 1,
+      "column": 1,
+      "name": "rain-middle",
+      "runtime": "assets/delivery-menu-style-v2/runtime/rain-middle.png"
+    },
+    {
+      "row": 1,
+      "column": 2,
+      "name": "rain-destination",
+      "runtime": "assets/delivery-menu-style-v2/runtime/rain-destination.png"
+    },
+    {
+      "row": 1,
+      "column": 3,
+      "name": "rain-ending",
+      "runtime": "assets/delivery-menu-style-v2/runtime/rain-ending.png"
+    },
+    {
+      "row": 1,
+      "column": 4,
+      "name": "rain-postcard",
+      "runtime": "assets/delivery-menu-style-v2/runtime/rain-postcard.png"
+    },
+    {
+      "row": 2,
+      "column": 0,
+      "name": "lighthouse-pasture",
+      "runtime": "assets/delivery-menu-style-v2/runtime/lighthouse-pasture.png"
+    },
+    {
+      "row": 2,
+      "column": 1,
+      "name": "lighthouse-middle",
+      "runtime": "assets/delivery-menu-style-v2/runtime/lighthouse-middle.png"
+    },
+    {
+      "row": 2,
+      "column": 2,
+      "name": "lighthouse-destination",
+      "runtime": "assets/delivery-menu-style-v2/runtime/lighthouse-destination.png"
+    },
+    {
+      "row": 2,
+      "column": 3,
+      "name": "lighthouse-ending",
+      "runtime": "assets/delivery-menu-style-v2/runtime/lighthouse-ending.png"
+    },
+    {
+      "row": 2,
+      "column": 4,
+      "name": "lighthouse-postcard",
+      "runtime": "assets/delivery-menu-style-v2/runtime/lighthouse-postcard.png"
+    },
+    {
+      "row": 3,
+      "column": 0,
+      "name": "dinner-dusk-pasture",
+      "runtime": "assets/delivery-menu-style-v2/runtime/dinner-dusk-pasture.png"
+    },
+    {
+      "row": 3,
+      "column": 1,
+      "name": "dinner-field",
+      "runtime": "assets/delivery-menu-style-v2/runtime/dinner-field.png"
+    },
+    {
+      "row": 3,
+      "column": 2,
+      "name": "dinner-cottage",
+      "runtime": "assets/delivery-menu-style-v2/runtime/dinner-cottage.png"
+    },
+    {
+      "row": 3,
+      "column": 3,
+      "name": "dinner-ending",
+      "runtime": "assets/delivery-menu-style-v2/runtime/dinner-ending.png"
+    },
+    {
+      "row": 3,
+      "column": 4,
+      "name": "dinner-postcard",
+      "runtime": "assets/delivery-menu-style-v2/runtime/dinner-postcard.png"
+    }
+  ]
+}

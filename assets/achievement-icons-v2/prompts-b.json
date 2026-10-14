@@ -1,0 +1,59 @@
+{
+  "group": "B",
+  "assets": [
+    {
+      "id": "seventy-five-stars",
+      "prompt": "Use case: stylized-concept.\nAsset type: a single collectible achievement icon for a cozy touch-only pixel farm game.\nScene/backdrop: genuinely transparent background, no backdrop at all.\nStyle/medium: very crisp flat 2D pixel art; chunky visible square pixel clusters and a tiny limited palette; warm cream-white wool, peach-pink face, dark burnt orange-brown outlines 1-2 logical pixels thick, little fresh green leaves and warm golden highlights. Match a friendly retro sheep achievement collection, rendered as if designed on a 48x48 pixel grid then enlarged using nearest-neighbor. Solid hard edges. Absolutely no anti-aliasing, blur, soft gradient, 3D, glossy materials, shadows on a floor, border, medal frame, text, digits, logo, or watermark.\nComposition/framing: ONE compact, coherent square cutout centered with about 12 percent transparent margin on all sides, all parts fully inside the image. Strong simple silhouette and very few large details so it reads clearly when reduced to 28 pixels. No detached confetti or decorative dots.\nSubject: A cute cream-white sheep wearing a vivid green travel scarf, looking upward at exactly three simple golden five-point stars close above its head. The sheep and stars form a single tight readable icon; brown hooves, rosy tiny cheek. Meaning: a little starlight journey.\nText: none.",
+      "generatedSourcePath": "C:/Users/mechrevo/.codex/generated_images/01a13469-682b-7361-9143-f9cf5a2b592b/exec-2cb4f911-36d8-41df-b97a-4ad848b20176.png",
+      "savedPath": "assets/achievement-icons-v2/sources/seventy-five-stars.png",
+      "sha256": "743d76be212146527daa5b8e2257a8da7d6103da2b39fe5a1a3ffce65efbae9f",
+      "tool": "built-in image_gen",
+      "transparentBackground": true
+    },
+    {
+      "id": "hundred-stars",
+      "prompt": "Use case: stylized-concept.\nAsset type: a single collectible achievement icon for a cozy touch-only pixel farm game.\nScene/backdrop: genuinely transparent background, no backdrop at all.\nStyle/medium: very crisp flat 2D pixel art; chunky visible square pixel clusters and a tiny limited palette; warm cream-white wool, peach-pink face, dark burnt orange-brown outlines 1-2 logical pixels thick, little fresh green leaves and warm golden highlights. Match a friendly retro sheep achievement collection, rendered as if designed on a 48x48 pixel grid then enlarged using nearest-neighbor. Solid hard edges. Absolutely no anti-aliasing, blur, soft gradient, 3D, glossy materials, shadows on a floor, border, medal frame, text, digits, logo, or watermark.\nComposition/framing: ONE compact, coherent square cutout centered with about 12 percent transparent margin on all sides, all parts fully inside the image. Strong simple silhouette and very few large details so it reads clearly when reduced to 28 pixels. No detached confetti or decorative dots.\nSubject: A cute cream-white sheep hugging a simple cobalt-blue cloth pocket at its chest, with three large simple golden five-point stars peeking out of the pocket and one tiny clear gold crescent moon directly above. The sheep, bag, stars and moon form one compact coherent silhouette. Meaning: a pocketful of galaxy.\nText: none.",
+      "generatedSourcePath": "C:/Users/mechrevo/.codex/generated_images/01a13469-682b-7361-9143-f9cf5a2b592b/exec-24b16edf-b467-497a-b143-235e777118a5.png",
+      "savedPath": "assets/achievement-icons-v2/sources/hundred-stars.png",
+      "sha256": "2c896e17b9cb6d524fb2bd27c935625e6f56c34c30f9ec55036146d03e115c69",
+      "tool": "built-in image_gen",
+      "transparentBackground": true
+    },
+    {
+      "id": "hundred-obstacles",
+      "prompt": "Use case: stylized-concept.\nAsset type: a single collectible achievement icon for a cozy touch-only pixel farm game.\nScene/backdrop: genuinely transparent background, no backdrop at all.\nStyle/medium: very crisp flat 2D pixel art; chunky visible square pixel clusters and a tiny limited palette; warm cream-white wool, peach-pink face, dark burnt orange-brown outlines 1-2 logical pixels thick, little fresh green leaves and warm golden highlights. Match a friendly retro sheep achievement collection, rendered as if designed on a 48x48 pixel grid then enlarged using nearest-neighbor. Solid hard edges. Absolutely no anti-aliasing, blur, soft gradient, 3D, glossy materials, shadows on a floor, border, medal frame, text, digits, logo, or watermark.\nComposition/framing: ONE compact, coherent square cutout centered with about 12 percent transparent margin on all sides, all parts fully inside the image. Strong simple silhouette and very few large details so it reads clearly when reduced to 28 pixels. No detached confetti or decorative dots.\nSubject: One cute cream-white sheep jumping over a very simple low orange-brown wooden hurdle fence of two posts and two horizontal bars. The full sheep is visible above the fence, legs tucked; tiny green leaf tufts at the base, very few details. Meaning: crossing a hundred steps.\nText: none.",
+      "generatedSourcePath": "C:/Users/mechrevo/.codex/generated_images/01a13469-682b-7361-9143-f9cf5a2b592b/exec-cb3c1b7d-997d-44db-87c3-9c6e657b6f96.png",
+      "savedPath": "assets/achievement-icons-v2/sources/hundred-obstacles.png",
+      "sha256": "6ab85d2e981f8156b6c2b4bc09dcf6f8730056773e63491561b8610bb91d8c6f",
+      "tool": "built-in image_gen",
+      "transparentBackground": true
+    },
+    {
+      "id": "one-hundred-fifty-obstacles",
+      "prompt": "Use case: stylized-concept.\nAsset type: a single collectible achievement icon for a cozy touch-only pixel farm game.\nScene/backdrop: genuinely transparent background, no backdrop at all.\nStyle/medium: very crisp flat 2D pixel art; chunky visible square pixel clusters and a tiny limited palette; warm cream-white wool, peach-pink face, dark burnt orange-brown outlines 1-2 logical pixels thick, little fresh green leaves and warm golden highlights. Match a friendly retro sheep achievement collection, rendered as if designed on a 48x48 pixel grid then enlarged using nearest-neighbor. Solid hard edges. Absolutely no anti-aliasing, blur, soft gradient, 3D, glossy materials, shadows on a floor, border, medal frame, text, digits, logo, or watermark.\nComposition/framing: ONE compact, coherent square cutout centered with about 12 percent transparent margin on all sides, all parts fully inside the image. Strong simple silhouette and very few large details so it reads clearly when reduced to 28 pixels. No detached confetti or decorative dots.\nSubject: One cute cream-white sheep joyfully leaping forward, legs tucked and with one small bright green leaf close above its head. Directly below its feet: one tiny warm-golden hay mound and one small gray-brown stone, simple large pixel shapes. All elements make one tight square coherent icon. Meaning: always moving forward.\nText: none.",
+      "generatedSourcePath": "C:/Users/mechrevo/.codex/generated_images/01a13469-682b-7361-9143-f9cf5a2b592b/exec-98bebd47-0264-4d1c-972e-bf98d679f2c1.png",
+      "savedPath": "assets/achievement-icons-v2/sources/one-hundred-fifty-obstacles.png",
+      "sha256": "7ef278c79a29117913134473f190bbd3c57c0e11cce953edd4b755ebc4dcdff6",
+      "tool": "built-in image_gen",
+      "transparentBackground": true
+    },
+    {
+      "id": "twenty-skins",
+      "prompt": "Use case: stylized-concept.\nAsset type: a single collectible achievement icon for a cozy touch-only pixel farm game.\nScene/backdrop: genuinely transparent background, no backdrop at all.\nStyle/medium: very crisp flat 2D pixel art; chunky visible square pixel clusters and a tiny limited palette; warm cream-white wool, peach-pink face, dark burnt orange-brown outlines 1-2 logical pixels thick, little fresh green leaves and warm golden highlights. Match a friendly retro sheep achievement collection, rendered as if designed on a 48x48 pixel grid then enlarged using nearest-neighbor. Solid hard edges. Absolutely no anti-aliasing, blur, soft gradient, 3D, glossy materials, shadows on a floor, border, medal frame, text, digits, logo, or watermark.\nComposition/framing: ONE compact, coherent square cutout centered with about 12 percent transparent margin on all sides, all parts fully inside the image. Strong simple silhouette and very few large details so it reads clearly when reduced to 28 pixels. No detached confetti or decorative dots.\nSubject: Three adorable simple sheep faces in a tight fan-shaped group, cream-white center face, pale pink left face and pale green right face. Behind the faces a minimal warm brown clothes rail with two small hooks hints at a wardrobe. Keep faces large and clear, no full bodies, tiny simple details. Meaning: colorful wardrobe.\nText: none.",
+      "generatedSourcePath": "C:/Users/mechrevo/.codex/generated_images/01a13469-682b-7361-9143-f9cf5a2b592b/exec-c5618ab6-1bf0-4168-9a52-bed384f217db.png",
+      "savedPath": "assets/achievement-icons-v2/sources/twenty-skins.png",
+      "sha256": "90a9012d4f41223c7ca142065a6b04b2d006e2c3141b0f03576bc02cd66b34dd",
+      "tool": "built-in image_gen",
+      "transparentBackground": true
+    },
+    {
+      "id": "thirty-skins",
+      "prompt": "Use case: stylized-concept.\nAsset type: a single collectible achievement icon for a cozy touch-only pixel farm game.\nScene/backdrop: genuinely transparent background, no backdrop at all.\nStyle/medium: very crisp flat 2D pixel art; chunky visible square pixel clusters and a tiny limited palette; warm cream-white wool, peach-pink face, dark burnt orange-brown outlines 1-2 logical pixels thick, little fresh green leaves and warm golden highlights. Match a friendly retro sheep achievement collection, rendered as if designed on a 48x48 pixel grid then enlarged using nearest-neighbor. Solid hard edges. Absolutely no anti-aliasing, blur, soft gradient, 3D, glossy materials, shadows on a floor, border, medal frame, text, digits, logo, or watermark.\nComposition/framing: ONE compact, coherent square cutout centered with about 12 percent transparent margin on all sides, all parts fully inside the image. Strong simple silhouette and very few large details so it reads clearly when reduced to 28 pixels. No detached confetti or decorative dots.\nSubject: A small open-door warm orange-brown wooden wardrobe with just two broad colorful little capes inside, one pale pink and one pale green. A cute cream-white sheep peeks its smiling head from the lower center in front of the wardrobe. Simple large shapes, two open doors visible but compact. Meaning: a very full wardrobe.\nText: none.",
+      "generatedSourcePath": "C:/Users/mechrevo/.codex/generated_images/01a13469-682b-7361-9143-f9cf5a2b592b/exec-d5aed48e-4d39-42ff-81d9-8e15a5ec7652.png",
+      "savedPath": "assets/achievement-icons-v2/sources/thirty-skins.png",
+      "sha256": "a85cf1c4b9c468a6aa26e2974ab440587c7fbf1ca167632fbef868f9224150a1",
+      "tool": "built-in image_gen",
+      "transparentBackground": true
+    }
+  ]
+}

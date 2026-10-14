@@ -61,8 +61,8 @@ export class EnvironmentSystem {
     if (score !== undefined) this.themes.setScore(score);
     this.lastDistance = Number.isFinite(distancePx) ? Math.max(0, distancePx) : 0;
     const themeState = this.themes.visualAtDistance(this.lastDistance, this.reducedMotion);
-    this.weather.update(this.lastDistance, themeState.theme.allowedWeather);
-    this.parallax.update(this.lastDistance);
+    const weather = this.weather.update(this.lastDistance, themeState.theme.allowedWeather);
+    this.parallax.update(this.lastDistance, weather.weather === 'rain' ? weather.alpha : 0);
     this.reconcileChunks(this.lastDistance + viewportSizeFromScale(this.scene.scale).width);
     this.decorations.update(this.lastDistance);
   }

@@ -14,7 +14,7 @@ import { DeliverySelection } from './DeliverySelection';
 import { deliveryStore } from './DeliveryStore';
 import { deliveryChallengeStore } from './DeliveryChallengeStore';
 import { isDeliveryChallengeChapterId, type DeliveryChallengeSnapshot } from './DeliveryChallengeRun';
-import { deliveryBestRating, deliveryResultSummary, deliveryRouteLines, DELIVERY_EXPANSION_UI_TEXT } from './DeliveryPanelModel';
+import { deliveryBestRating, deliveryResultSummary, deliveryRouteLines, deliveryChapterPage, DELIVERY_EXPANSION_UI_TEXT } from './DeliveryPanelModel';
 import { deliveryPanelLayout, type DeliveryPanelLayout } from './DeliveryPanelLayout';
 import { DELIVERY_EXPANSION_UI_KEYS as ART } from './DeliveryExpansionUiAssets';
 import { deliveryFitArt, deliveryFrameArt } from './DeliveryPanelArt';
@@ -22,7 +22,7 @@ import { deliveryFitArt, deliveryFrameArt } from './DeliveryPanelArt';
 export type DeliveryPanelMode = 'select' | 'brief' | 'postcard' | 'success' | 'failure' | 'album';
 export interface DeliveryPanelActions { start: (chapterId: DeliveryChapterId) => void; exit?: () => void }
 /** Five chapters share one input lease; changing inner pages never unlocks the mailbox. */
-export function createDeliveryPanel(scene: Phaser.Scene, actions: DeliveryPanelActions, inMailbox = false, chapterId?: string) {
+export function createDeliveryPanel(scene: Phaser.Scene, actions: DeliveryPanelActions, inMailbox = false, chapterId?: string, parentOwner = 'mailbox') {
   const text = displayCanvasText(scene), muted = displayCanvasText(scene, '#8a725e'), pressed = new Set<string>();
   const selection = new DeliverySelection(chapterId);
   const names = ['blocker', 'back', 'start', 'card', 'previous', 'next', 'album', ...DELIVERY_CHAPTERS.map(chapter => 'chapter:' + chapter.id)];
@@ -30,6 +30,9 @@ export function createDeliveryPanel(scene: Phaser.Scene, actions: DeliveryPanelA
   let mode: DeliveryPanelMode = 'brief', visible = false, disposed = false, release: (() => void) | undefined;
   let cardReturn: DeliveryPanelMode = 'brief', geometry: DeliveryPanelLayout, boxes: ArtRect[] = [], saveFailed = false;
   let runResult: DeliveryChallengeSnapshot | undefined;
+  let residentNotice: string | undefined;
+  let albumPage = 0;
+  const album = () => deliveryChapterPage(DELIVERY_CHAPTERS.filter(item => item.challenge), albumPage, 3);
   const legacyPaper = () => scene.textures.exists(CONTENT_V2_KEYS.tripPaper) ? CONTENT_V2_KEYS.tripPaper : MAIL_PANEL_ART.key;
   const frame = (ctx: CanvasRenderingContext2D, key: string, box: ArtRect, edge?: number) => deliveryFrameArt(scene, ctx, key, box, edge);
   const surface = createDeliveryDisplayOverlay(scene, ctx => {
@@ -53,18 +56,18 @@ export function createDeliveryPanel(scene: Phaser.Scene, actions: DeliveryPanelA
     line(title, geometry.title, 18);
     if (mode === 'select') {
       selection.page.items.forEach((item, index) => {
-        const box = geometry.cards[index], chosen = selection.id === item.id;
-        ctx.save(); if (!chosen) ctx.globalAlpha = .88;
+        const box = geometry.cards[index], chosen = selection.id === item.id, unlocked = selection.canSelect(item.id);
+        ctx.save(); if (!unlocked) ctx.globalAlpha = .55; else if (!chosen) ctx.globalAlpha = .88;
         if (pressed.has('delivery-chapter:' + item.id)) ctx.translate(0, 1);
         frame(ctx, ART.frame, box);
         art(item.previewKey, { x: box.x + 12, y: box.y + 8, width: box.width - 24, height: 31 });
         line(item.title, { x: box.x + 7, y: box.y + 40, width: box.width - 14, height: 18 }, 13);
         deliveryRouteLines(item.itinerary, 14).slice(0, 2).forEach((value, i) => line(value, { x: box.x + 8, y: box.y + 59 + i * 13, width: box.width - 16, height: 14 }, 11));
         line('难度 ' + (item.difficultyLabel ?? '轻松'), { x: box.x + 8, y: box.y + 86, width: box.width - 16, height: 14 }, 11);
-        const completedLabel = completed.includes(item.id) ? '已通关' : '未通关';
+        const completedLabel = !unlocked ? '先完成上一段故事' : completed.includes(item.id) ? '已通关' : '未通关';
         if (isDeliveryChallengeChapterId(item.id)) {
           const rating = deliveryBestRating(true, record.chapters[item.id]), rowX = box.x + (box.width - 99) / 2;
-          line(completedLabel + ' · ' + (rating?.keepsake ? '已收藏' : '未收藏'), { x: box.x + 8, y: box.y + 101, width: box.width - 16, height: 14 }, 11, !chosen);
+          line(unlocked ? completedLabel + ' · ' + (rating?.keepsake ? '已收藏' : '未收藏') : completedLabel, { x: box.x + 8, y: box.y + 101, width: box.width - 16, height: 14 }, 12, !chosen);
           line('最佳', { x: rowX, y: box.y + 117, width: 24, height: 16 }, 11);
           stars([0, 1, 2].map(i => i < (rating?.stars ?? 0)), { x: rowX + 28, y: box.y + 117, width: 49, height: 16 }, 13);
           ctx.save(); if (!rating?.keepsake) { ctx.filter = 'grayscale(1)'; ctx.globalAlpha = .4; }
@@ -79,15 +82,21 @@ export function createDeliveryPanel(scene: Phaser.Scene, actions: DeliveryPanelA
       }
       if (record.saveFailed || deliveryStore.load().saveFailed) line('暂未保存', { ...geometry.card, x: geometry.card.x + 5, width: geometry.card.width - 10 }, 11, true);
     } else if (mode === 'album') {
-      const chapters = DELIVERY_CHAPTERS.filter(item => item.challenge);
+      const chapters = album().items;
       chapters.forEach((item, index) => {
         const box = geometry.albumSlots[index], collected = isDeliveryChallengeChapterId(item.id) && record.chapters[item.id]?.keepsake;
         ctx.save(); if (!collected) { ctx.filter = 'grayscale(1)'; ctx.globalAlpha = .42; }
         art(ART.slot, box); art(item.challenge!.keepsakeKey, { x: box.x + 13, y: box.y + 9, width: box.width - 26, height: box.height - 20 }); ctx.restore();
         if (!collected) art(ART.lock, { x: box.x + box.width - 26, y: box.y + box.height - 29, width: 18, height: 22 });
-        line(['小风车', '小雨伞', '小灯塔'][index], { x: box.x - 5, y: box.y + 101, width: box.width + 10, height: 17 }, 13);
+        const label = item.challenge!.keepsakeTitle ?? ({ 'windmill-invitation-v1': '小风车', 'rainy-umbrella-v1': '小雨伞', 'lighthouse-starlight-v1': '小灯塔' } as Record<string, string>)[item.id] ?? item.postcardTitle;
+        line(label, { x: box.x - 5, y: box.y + 101, width: box.width + 10, height: 17 }, 12);
         line(collected ? '已收藏' : '未收藏', { x: box.x - 5, y: box.y + 121, width: box.width + 10, height: 16 }, 11, !collected);
       });
+      line((album().index + 1) + '/' + album().count, { x: panel.x + panel.width - 127, y: panel.y + 9, width: 25, height: 21 }, 12);
+      for (const [name, key] of [['previous', ART.previous], ['next', ART.next]] as const) {
+        ctx.save(); if (!targets[names.indexOf(name)].input!.enabled) ctx.globalAlpha = .35;
+        art(key, geometry[name]); ctx.restore();
+      }
       line(record.saveFailed ? '暂未保存' : '先收集，再成功送达。', { x: panel.x + 24, y: panel.y + panel.height - 62, width: panel.width - 48, height: 16 }, 11, record.saveFailed);
     } else if (mode === 'success' && result) {
       const labels = ['送达', '四枚邮票', '隐藏纪念'], gap = 93;
@@ -103,7 +112,8 @@ export function createDeliveryPanel(scene: Phaser.Scene, actions: DeliveryPanelA
       line('投递邮票 ' + result.ordinary + '/5', { x: x + 24, y: panel.y + 122, width: width - 24, height: 21 }, 12);
       art(chapter.challenge!.keepsakeKey, { x, y: panel.y + 151, width: 21, height: 21 });
       line(result.hidden ? '纪念邮票 已找到' : '纪念邮票 未找到', { x: x + 24, y: panel.y + 151, width: width - 24, height: 21 }, 11);
-      if (saveFailed) line('暂未保存', { x: panel.x + 20, y: panel.y + panel.height - 62, width: panel.width - 40, height: 16 }, 11, true);
+      if (saveFailed || residentNotice) line(residentNotice ? residentNotice + (saveFailed ? ' · 暂未保存' : '') : '暂未保存',
+        { x: panel.x + 20, y: panel.y + panel.height - 62, width: panel.width - 40, height: 16 }, 12, saveFailed);
     } else if (mode === 'postcard' || mode === 'success') {
       const area = { x: panel.x + 26, y: panel.y + 43, width: panel.width - 52, height: panel.height - 124 - (saveFailed && mode === 'success' ? 17 : 0) };
       art(chapter.postcardKey, area);
@@ -134,7 +144,7 @@ export function createDeliveryPanel(scene: Phaser.Scene, actions: DeliveryPanelA
       }
       line('准备好了，就重新出发。', { x: panel.x + 24, y: panel.y + 169, width: panel.width - 48, height: 20 }, 12);
     }
-    const labels: Record<string, string> = { back: mode === 'postcard' ? '返回' : mode === 'album' || inMailbox && mode === 'brief' ? '返回章节' : '返回邮箱',
+    const labels: Record<string, string> = { back: mode === 'postcard' ? '返回' : inMailbox && parentOwner === 'residents' ? '返回居民' : mode === 'album' || inMailbox && mode === 'brief' ? '返回章节' : '返回邮箱',
       start: mode === 'brief' ? chapter.startLabel : '重新送一次', card: '查看明信片', album: '邮票册' };
     for (const name of ['back', 'start', 'card', 'album']) {
       const index = names.indexOf(name), target = targets[index]; if (!target.input?.enabled) continue;
@@ -144,10 +154,11 @@ export function createDeliveryPanel(scene: Phaser.Scene, actions: DeliveryPanelA
       line(labels[name], { x: box.x + (name === 'album' ? 34 : 7), y: box.y + 3, width: box.width - (name === 'album' ? 44 : 14), height: box.height - 6 }, 12); ctx.restore();
     }
     Object.assign(surface.canvas.dataset, { mode, chapterId: chapter.id, page: String(selection.page.index), pageCount: String(selection.page.count),
-      visibleChapterIds: JSON.stringify(mode === 'select' ? selection.page.items.map(item => item.id) : []), challenge: String(challenge),
+      visibleChapterIds: JSON.stringify(mode === 'select' ? selection.page.items.map(item => item.id) : mode === 'album' ? album().items.map(item => item.id) : []), challenge: String(challenge),
+      lockedChapterIds: JSON.stringify(DELIVERY_CHAPTERS.filter(item => !selection.canSelect(item.id)).map(item => item.id)), albumPage: String(album().index), albumPageCount: String(album().count),
       result: JSON.stringify(result ?? null), lines: JSON.stringify(lines), images: JSON.stringify(images), panel: JSON.stringify(panel),
       targets: JSON.stringify(boxes), targetNames: JSON.stringify(targets.map(target => target.name)), enabled: JSON.stringify(targets.map(target => !!target.input?.enabled)),
-      pressed: JSON.stringify([...pressed]), saved: String(!saveFailed), albumCollected: JSON.stringify(DELIVERY_CHAPTERS.filter(item => item.challenge).map(item => isDeliveryChallengeChapterId(item.id) && !!record.chapters[item.id]?.keepsake)) });
+      pressed: JSON.stringify([...pressed]), saved: String(!saveFailed), residentNotice: mode === 'success' ? residentNotice ?? '' : '', albumCollected: JSON.stringify(DELIVERY_CHAPTERS.filter(item => item.challenge).map(item => isDeliveryChallengeChapterId(item.id) && !!record.chapters[item.id]?.keepsake)) });
   });
   const layout = () => {
     geometry = deliveryPanelLayout(scene.scale.gameSize, safeUiInsets(scene));
@@ -161,28 +172,29 @@ export function createDeliveryPanel(scene: Phaser.Scene, actions: DeliveryPanelA
       const box = boxes[index], name = names[index]; target.setPosition(box.x + box.width / 2, box.y + box.height / 2).setSize(box.width, box.height);
       target.input!.hitArea.setSize(box.width, box.height);
       target.input!.enabled = visible && (name === 'blocker' || name === 'back' ||
-        name === 'start' && (mode === 'brief' || mode === 'success' || mode === 'failure') ||
+        name === 'start' && selection.canSelect(selection.id) && (mode === 'brief' || mode === 'success' || mode === 'failure') ||
         name === 'card' && (mode === 'success' && !!selection.chapter.challenge || mode === 'brief' && deliveryStore.load().completedIds.includes(selection.id)) ||
-        name === 'previous' && mode === 'select' && selection.page.hasPrevious || name === 'next' && mode === 'select' && selection.page.hasNext ||
-        name === 'album' && mode === 'select' || name.startsWith('chapter:') && mode === 'select' && pageIds.includes(name.slice(8) as DeliveryChapterId));
+        name === 'previous' && (mode === 'select' && selection.page.hasPrevious || mode === 'album' && album().hasPrevious) ||
+        name === 'next' && (mode === 'select' && selection.page.hasNext || mode === 'album' && album().hasNext) ||
+        name === 'album' && mode === 'select' || name.startsWith('chapter:') && mode === 'select' && pageIds.includes(name.slice(8) as DeliveryChapterId) && selection.canSelect(name.slice(8)));
     });
     surface.invalidate();
   };
   const sound = () => { const audio = scene.registry.get('audioSystem') as AudioSystem | undefined; audio?.initializeAfterGesture(); audio?.play('button'); };
-  const close = () => { if (!visible) return; visible = false; pressed.clear(); release?.(); release = undefined; layout(); surface.show(false); };
+  const close = () => { if (!visible) return; visible = false; residentNotice = undefined; pressed.clear(); release?.(); release = undefined; layout(); surface.show(false); };
   const activate = (name: string) => {
     pressed.clear();
     if (name === 'back') {
       if (mode === 'postcard') { mode = cardReturn; layout(); return; }
-      if (mode === 'album' || inMailbox && mode === 'brief') { mode = 'select'; layout(); return; }
+      if (mode === 'album' || inMailbox && parentOwner === 'mailbox' && mode === 'brief') { mode = 'select'; layout(); return; }
       close(); actions.exit?.(); return;
     }
-    if (name === 'start') { const id = selection.id; close(); actions.start(id); return; }
+    if (name === 'start') { const id = selection.id; if (!selection.canSelect(id)) return; close(); actions.start(id); return; }
     if (name === 'card') { cardReturn = mode; mode = 'postcard'; }
     if (name === 'album') mode = 'album';
-    if (name === 'previous') selection.movePage(-1);
-    if (name === 'next') selection.movePage(1);
-    if (name.startsWith('chapter:')) { selection.select(name.slice(8)); mode = 'brief'; }
+    if (name === 'previous') { if (mode === 'album') albumPage = Math.max(0, albumPage - 1); else selection.movePage(-1); }
+    if (name === 'next') { if (mode === 'album') albumPage = Math.min(album().count - 1, albumPage + 1); else selection.movePage(1); }
+    if (name.startsWith('chapter:') && selection.select(name.slice(8))) mode = 'brief';
     layout();
   };
   targets.forEach((target, index) => bindTouchTarget(scene, target, 1, 1, () => {
@@ -197,16 +209,19 @@ export function createDeliveryPanel(scene: Phaser.Scene, actions: DeliveryPanelA
   };
   scene.events.once('shutdown', clear); scene.events.once('destroy', clear);
   return {
-    show(next: DeliveryPanelMode, failedSave = false, selectedId?: string, result?: DeliveryChallengeSnapshot) {
-      if (visible || disposed) return; if (selectedId) selection.select(selectedId);
+    show(next: DeliveryPanelMode, failedSave = false, selectedId?: string, result?: DeliveryChallengeSnapshot, notice?: string) {
+      if (visible || disposed) return false;
+      if (selectedId && !selection.select(selectedId)) return false;
+      if (next !== 'select' && next !== 'album' && !selection.canSelect(selection.id)) return false;
       // Check all candidate text before taking the nested mailbox lease, so a failed font load cannot trap it.
       const chapter = selection.chapter;
       [...DELIVERY_EXPANSION_UI_TEXT, ...DELIVERY_CHAPTERS.flatMap(item => [item.title, item.itinerary, item.difficultyLabel ?? '轻松']),
         ...chapter.introduction, chapter.failureTitle, chapter.failureText, chapter.startLabel, chapter.postcardTitle, chapter.postcardText, chapter.successText,
-        '0123456789/ ·'].forEach(value => text.fitFontSize(value, 1, 12));
-      if (inMailbox) { const lease = acquireMenuModal(scene, 'delivery', targets, 'mailbox'); if (!lease) return; release = lease; }
-      mode = next; saveFailed = failedSave; runResult = result; visible = true; pressed.clear();
+        notice ?? '', '0123456789/ ·'].forEach(value => text.fitFontSize(value, 1, 12));
+      if (inMailbox) { const lease = acquireMenuModal(scene, 'delivery', targets, parentOwner); if (!lease) return false; release = lease; }
+      mode = next; saveFailed = failedSave; runResult = result; residentNotice = next === 'success' ? notice : undefined; visible = true; pressed.clear();
       try { layout(); surface.show(true); } catch (error) { close(); throw error; }
+      return true;
     },
     close, clear, get chapterId() { return selection.id; }, get visible() { return visible; },
   };

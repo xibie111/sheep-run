@@ -1,0 +1,34 @@
+{
+  "originalGeneratedPath": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a13559-c3a9-7620-b61f-8712d8536a34\\exec-25d55d0a-3f58-4433-9529-8df4ce143a98.png",
+  "workspaceSourcePath": "D:/DSH workspace/sheep-run/assets/delivery-menu-style-v2/sources/lighthouse-pasture-initial.png",
+  "sha256": "750003B07EC6BF36A0201AB4B9BB962CA88E27F75E8197DD777638692C3E60BD",
+  "originalSha256": "750003B07EC6BF36A0201AB4B9BB962CA88E27F75E8197DD777638692C3E60BD",
+  "bytes": 1882215,
+  "width": 1672,
+  "height": 941,
+  "generatedFileCreationTimeUtc": "2026-10-13T13:04:40.3870923Z",
+  "archivedAtUtc": "2026-10-13T13:08:21.4547937Z",
+  "tool": "image_gen.imagegen (built-in)",
+  "transparentBackground": false,
+  "prompt": "Use case: stylized-concept.\nAsset type: final full-bleed 16:9 opaque background for a cozy mobile pixel-art sheep game.\nPrimary request: redraw this scene in the SAME coarse blocky pixel-art visual language as the farm main menu in reference Image 1.\nReference roles: Image 1 is the sole STYLE reference: use its cheerful blocky rural game illustration, square stair-step edges, grouped rounded foliage, bold readable contours, restrained simple two or three tone shading. Image 2 is only a LAYOUT / PLACE reference; DO NOT inherit its dense microtexture, tiny foliage or photorealistic rendering.\nStyle and detail: every visible contour is a clear square-pixel staircase, confident big pixel clusters, simple broad grouped foliage, no leaf speckles, no antialiasing or smooth painted gradients. Night scenes stay clear and pleasantly readable; use blue teal lavender meadow colors with warm amber lamps, no black overlay. Lower visual complexity than Image 2 and consistent with Image 1.\nOutput: exactly ONE cohesive landscape scene, one full image, horizontal 16:9, edge-to-edge opaque pixels. No atlas, grid, collage, frames, UI, written words, labels, logos or watermark.\nScene: a coastal meadow at lavender twilight with a light peach sunset above a quiet sea on the RIGHT, distant pale blue coast. A large round pixel-cluster tree on the LEFT and a tiny cream farm cottage with orange roof and a warm square window, short simple wooden fence and very large rounded bushes. Rolling cool teal meadow, just a few big flowers at the margins. Preserve the sunset-coast identity of Image 2 but give it the friendly farm simplicity of Image 1. Sky is open lavender/peach flat color bands and two or three big stepped cloud shapes. No detailed town, stone cliffs, water glitter or tiny clouds. Gameplay composition invariant: distant horizon about 60% image height. A grass rim crosses FULL width at exactly 72% image height. An empty warm tan dirt road fills the FULL width from 72% to 96% image height; use a small bottom grass strip only below 96%. Road must be wide uninterrupted horizontal band, level, simple and quiet. Nothing on the road: no actor, object, fence, rock, flowers, mailbox, grass clumps, or branches in the road. Keep all scene objects ABOVE road, in background. Flat side-scrolling view with no perspective road into depth.\nNo characters anywhere. Limited broad colors, substantial quiet negative sky and road.",
+  "referenceImages": [
+    {
+      "index": 1,
+      "path": "D:/DSH workspace/sheep-run/assets/backgrounds/menu-pasture-v1.png",
+      "role": "sole style reference"
+    },
+    {
+      "index": 2,
+      "path": "D:/DSH workspace/sheep-run/assets/delivery-expansion-v1/chapters/runtime/lighthouse-pasture.png",
+      "role": "layout only reference"
+    }
+  ],
+  "validation": {
+    "visualInspection": true,
+    "menuStyleMatched": true,
+    "noAtlasTextUIGridBorder": true,
+    "noGalaxy": true,
+    "charactersCorrect": "not applicable",
+    "roadPlacement": "initial variant needs 72%-96% correction"
+  }
+}

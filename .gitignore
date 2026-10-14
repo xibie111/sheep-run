@@ -3,6 +3,7 @@
 /dist/
 /builds/
 /releases/
+/.qa-builds/
 /coverage/
 *.tsbuildinfo
 

@@ -1,0 +1,14 @@
+{
+  "generator": "built-in imagegen",
+  "createdOn": "2026-10-13",
+  "originalGeneratedFile": "C:/Users/mechrevo/.codex/generated_images/01a11765-ce6a-7320-bfe6-7f259fd85689/exec-f253f081-1712-4c5e-a3e2-bbff9c1ab942.png",
+  "copiedWithoutModification": true,
+  "sha256": "adb262a10c4f976ae2a87514c9a02909919c5e3d9be73ce9eed0534ae8748954",
+  "dimensions": { "width": 1448, "height": 1086 },
+  "prompt": "atlas.prompt.txt",
+  "frames": "frames.json",
+  "frameMeasurement": "For each of four row bands, project alpha >= 128 onto x; separate columns at transparent gaps longer than 18 pixels, then measure each group's occupied bounding box. Sixteen full subjects, not assumed equal-grid crops.",
+  "runtimeProcessing": "Crop measured subjects, uniformly fit bottom-aligned into authored logical canvases at 4x resolution; disable image smoothing and threshold alpha at 128. Original PNG remains unchanged.",
+  "columns": ["HayCart", "WaterTrough", "HangingLantern", "FlyingGoose"],
+  "rows": ["spring", "summer", "autumn", "winter"]
+}

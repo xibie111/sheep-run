@@ -1,0 +1,15 @@
+{
+  "id": "chef-v1",
+  "tool": "builtin-image_gen",
+  "transparent_background": true,
+  "prompt": "Use case: production-game-assets. Modify only the skin clothing on the reference game's existing cream sheep, keeping its character identity and fifteen different poses. Image 1 is sheep identity and pose-layout reference; image 2 is the same game's sailor costume reference for exact coarse pixel outline, compact outfit scale and palette, not its sailor design. The observed existing pasture game is warm hand-pixelated flat 2D.\nCharacter: round fluffy cream oval wool body, little peach square muzzle on the right, tiny dark eye, cocoa ear, FOUR short cocoa hooves; friendly sheep with no horns, arms, teeth or human hands. Face always clearly exposed. Same proportions and consistent outfit in every pose. Accessories stay compact and fully inside the cell. Do not turn sheep into another creature.\nOutput: one TRUE TRANSPARENT sprite sheet, exactly FIFTEEN complete full-body sprites in an even FIVE columns by THREE rows, landscape 5:3. Uniform scale, same body size, all sprites face RIGHT, generous clean transparent gaps between every sprite and rows, with outer margins. All art within its own cell; no clipping or adjacent overlap. No ground, backdrop, shadow, blur, glow, vignette, UI, text, labels, numbers, separators, grid lines or checkerboard. Hard square pixel edges, limited warm palette.\nExact row-major pose order:\nTop row: idle standing; run1 front leg forward/back leg behind extended stride; run2 opposite diagonal stride; run3 legs gather underneath compressed step; run4 next opposite long stride.\nMiddle row: jump with hooves tucked airborne; fall with front feet reaching downward; hit recoiling and squeezed eye with face still right; dash1 leaning forward trailing legs; dead lying sideways eyes closed.\nBottom row: idle2 gentle blink and breath; run5 push-off with front leg raised and back leg pushing; run6 passing phase with other foreleg raised; dash2 other extended forward stride; dead_settled relaxed low-head lying pose.\nAll SIX run poses MUST have visibly different leg/hoof silhouettes, not cloned standing art. All FIFTEEN poses unique, same outfit retained through jump, hit and lying down. This must be an animation sprite sheet, not six duplicate portraits. \nSkin theme: Cream fluffy sheep wearing a small ivory chef toque with cocoa outline and warm red neckerchief, compact cream apron along the body side with little cocoa button. Hat proportion modest, not tall enough to hide sheep or exceed cell. Four hooves and peach sheep face exposed. Same hat apron scarf throughout all15poses. No cookware, food, hand or text.",
+  "inspectedReferences": [
+    "D:/DSH workspace/sheep-run/assets/skins/generated-v1/white-source.png",
+    "D:/DSH workspace/sheep-run/assets/skins/runtime-v4/sailor-v1-sheet.png"
+  ],
+  "referenceRoles": [
+    "character identity and pose layout",
+    "costume pixel style only"
+  ],
+  "referenceAttachmentAttempted": true
+}

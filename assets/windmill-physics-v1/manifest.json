@@ -1,0 +1,102 @@
+{
+  "tool": "built-in image_gen",
+  "reference": "assets/delivery-expansion-v1/chapters/runtime/windmill-destination.png",
+  "referenceSha256": "1ca1e18423854b32e055431cfd101138ed7b80cc6a50554aedd620382d1e94a1",
+  "processing": "crop/alpha-trim, hard transparency, uniform nearest resize and transparent transport padding only",
+  "runtimeDependsOnExternalPaths": false,
+  "assets": [
+    {
+      "name": "backdrop",
+      "source": "assets\\windmill-physics-v1\\sources\\backdrop.png",
+      "sourceSize": [
+        1672,
+        941
+      ],
+      "sourceSha256": "31619e10c06f7c19569de103e79de2dbb4fdf8dc767f94b95cfc9e86df7ddc62",
+      "prompt": "assets\\windmill-physics-v1\\prompts\\backdrop.txt",
+      "promptSha256": "f7b7755bfc140410087d59c33dafece806fe17d2229b6821615fc8119eb79a15",
+      "crop": [
+        0,
+        0,
+        1672,
+        940
+      ],
+      "alphaTrim": null,
+      "fitted": [
+        960,
+        540
+      ],
+      "uniformScale": 0.5741626794258373,
+      "size": [
+        960,
+        540
+      ],
+      "runtime": "assets\\windmill-physics-v1\\runtime\\backdrop.png",
+      "runtimeSha256": "81f967ea8f6cb4e4dfaa023a44f21c6203234dfdccf6b67fe1a195465a6f53a8",
+      "groundBaseline": 389,
+      "alpha": "original opaque"
+    },
+    {
+      "name": "windmill",
+      "source": "assets\\windmill-physics-v1\\sources\\windmill.png",
+      "sourceSize": [
+        1214,
+        1295
+      ],
+      "sourceSha256": "059d16d9e31ba0677a0d474985632bc7934f6419992a3da9e61e7add00ac154f",
+      "prompt": "assets\\windmill-physics-v1\\prompts\\windmill.txt",
+      "promptSha256": "b28aa4b7864ea65c0363242e44170844791b62998d010541cbbb6905c6bbcb40",
+      "crop": null,
+      "alphaTrim": [
+        179,
+        25,
+        1036,
+        1241
+      ],
+      "fitted": [
+        361,
+        512
+      ],
+      "uniformScale": 0.42105263157894735,
+      "size": [
+        400,
+        512
+      ],
+      "runtime": "assets\\windmill-physics-v1\\runtime\\windmill.png",
+      "runtimeSha256": "01b847d0289f65dc3342f7910170c0b5a82f0c0d0b3b6932ce59b03d4d3b90ed",
+      "groundBaseline": 512,
+      "alpha": "generated alpha threshold96; hard 0/255"
+    },
+    {
+      "name": "grass",
+      "source": "assets\\windmill-physics-v1\\sources\\grass.png",
+      "sourceSize": [
+        2172,
+        724
+      ],
+      "sourceSha256": "c5e9bf68fc23aaf0f895ea03080490f6dc6b42bbaa721dcc9bfede37f1c3df31",
+      "prompt": "assets\\windmill-physics-v1\\prompts\\grass.txt",
+      "promptSha256": "699767c7c3e90969f2f2a71a7ade9b91021f2d71a6154f883ca96e0218ba3685",
+      "crop": null,
+      "alphaTrim": [
+        0,
+        404,
+        2172,
+        536
+      ],
+      "fitted": [
+        960,
+        58
+      ],
+      "uniformScale": 0.4419889502762431,
+      "size": [
+        960,
+        128
+      ],
+      "runtime": "assets\\windmill-physics-v1\\runtime\\grass.png",
+      "runtimeSha256": "ddbfebc6fc0ab3e83abdc4438472b027c8542aa00fee4958860b5ae346be46f2",
+      "groundBaseline": 128,
+      "alpha": "generated alpha threshold96; hard 0/255"
+    }
+  ]
+}

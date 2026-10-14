@@ -2,7 +2,9 @@ import { readFileSync } from "node:fs";
 import { inflateSync } from "node:zlib";
 import { describe, expect, it } from "vitest";
 import { ACHIEVEMENTS } from "./journeyBook";
-import { ACHIEVEMENT_ICON_ASSETS, achievementIconKey, createAchievementIconAssets } from "./achievementIconAssets";
+import { ACHIEVEMENT_ICON_ASSETS, achievementIconKey, achievementIconPath, createAchievementIconAssets } from "./achievementIconAssets";
+import { EXPANDED_ACHIEVEMENTS } from "./expandedAchievements";
+import { JOURNEY_MILESTONES_V3 } from "./journeyMilestonesV3";
 
 function alphaSamples(png: Buffer, width: number, height: number): number[] {
   const chunks: Buffer[] = [];
@@ -42,19 +44,35 @@ describe("local generated achievement icons", () => {
 
   it("rejects missing directories, missing catalog images and empty URLs instead of silently returning undefined", () => {
     expect(() => createAchievementIconAssets({})).toThrow(`Missing local achievement icon: ${ACHIEVEMENTS[0].id}`);
-    const urls = Object.fromEntries(ACHIEVEMENTS.map(a => [`../../assets/achievement-icons-v1/runtime/${a.id}.png`, `/local/${a.id}.png`]));
-    const last = ACHIEVEMENTS[ACHIEVEMENTS.length - 1], path = `../../assets/achievement-icons-v1/runtime/${last.id}.png`;
+    const urls = Object.fromEntries(ACHIEVEMENTS.map(a => [achievementIconPath(a.id), `/local/${a.id}.png`]));
+    const last = ACHIEVEMENTS[ACHIEVEMENTS.length - 1], path = achievementIconPath(last.id);
     delete urls[path];expect(() => createAchievementIconAssets(urls)).toThrow(`Missing local achievement icon: ${last.id}`);
     urls[path] = " ";expect(() => createAchievementIconAssets(urls)).toThrow(`Missing local achievement icon: ${last.id}`);
   });
 
   it.each(ACHIEVEMENTS)("ships a real 32 by 32 RGBA pixel PNG with transparent surroundings for $id", achievement => {
-    const png = readFileSync(new URL(`../../assets/achievement-icons-v1/runtime/${achievement.id}.png`, import.meta.url));
+    const png = readFileSync(new URL(achievementIconPath(achievement.id), import.meta.url));
     expect([...png.subarray(0, 8)]).toEqual([137, 80, 78, 71, 13, 10, 26, 10]);
     expect(png.toString("ascii", 12, 16)).toBe("IHDR");
     expect(png.readUInt32BE(16)).toBe(32);expect(png.readUInt32BE(20)).toBe(32);
     expect(png[24]).toBe(8);expect(png[25]).toBe(6);expect(png[28]).toBe(0);
     const alpha = alphaSamples(png, 32, 32);
     expect(alpha.some(value => value === 0)).toBe(true);expect(alpha.some(value => value > 0)).toBe(true);
+    if (EXPANDED_ACHIEVEMENTS.some(a => a.id === achievement.id) || JOURNEY_MILESTONES_V3.some(a => a.id === achievement.id)) {
+      expect(alpha.every(value => value === 0 || value === 255)).toBe(true);
+      expect(alpha.filter(value => value > 0).length).toBeGreaterThanOrEqual(80);
+      for (let index = 0; index < 32; index++) {
+        expect(alpha[index]).toBe(0); expect(alpha[31 * 32 + index]).toBe(0);
+        expect(alpha[index * 32]).toBe(0); expect(alpha[index * 32 + 31]).toBe(0);
+      }
+    }
+  });
+
+  it("preserves earlier v1/v2 artwork and routes each new milestone to v3", () => {
+    const added = new Set<string>(EXPANDED_ACHIEVEMENTS.map(a => a.id));
+    const milestones = new Set<string>(JOURNEY_MILESTONES_V3.map(a => a.id));
+    for (const achievement of ACHIEVEMENTS) {
+      expect(achievementIconPath(achievement.id)).toBe(`../../assets/achievement-icons-${milestones.has(achievement.id) ? "v3" : added.has(achievement.id) ? "v2" : "v1"}/runtime/${achievement.id}.png`);
+    }
   });
 });

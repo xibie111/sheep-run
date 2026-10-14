@@ -36,7 +36,7 @@ describe("sheep skin catalog", () => {
   });
 
   it("appends the eight approved single-currency purchases without ability fields", () => {
-    expect(SHEEP_SKINS.slice(22).map(({ id, label, unlock }) => ({ id, label, unlock }))).toEqual([
+    expect(SHEEP_SKINS.slice(22, 30).map(({ id, label, unlock }) => ({ id, label, unlock }))).toEqual([
       { id: "strawberry-v1", label: "草莓羊", unlock: { type: "star-purchase", amount: 40 } },
       { id: "lemon-v1", label: "柠檬羊", unlock: { type: "star-purchase", amount: 70 } },
       { id: "sailor-v1", label: "水手羊", unlock: { type: "star-purchase", amount: 100 } },

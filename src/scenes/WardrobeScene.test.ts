@@ -98,7 +98,8 @@ describe("WardrobeScene real purchase integration", () => {
   it("displays spendable balance separately from cumulative unlock requirements", () => {
     const { scene } = install({ totalStars: 70, spentStars: 70 });
     expect(named(scene, "wardrobe-available-stars").text).toBe("0");
-    expect(content(scene)).toContain("可用星星");
+    expect(content(scene)).not.toContain("可用星星");
+    expect(content(scene)).not.toContain("金币");
     select(scene, "black");
     expect(named(scene, "button:解锁").disabled).toBe(false);
     expect(content(scene)).toContain("累计星数达标解锁：10星星，不扣星星");

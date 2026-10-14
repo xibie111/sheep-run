@@ -1,0 +1,17 @@
+Use case: stylized-concept.
+Asset type: ONE production game sprite atlas PNG, genuinely transparent, precisely arranged 4 columns by 4 rows, sixteen independent pixel-art obstacle sprites.
+Primary request: create the new Sheep Run pasture obstacle atlas. Warm detailed flat 2D pixel-art farm style, orange-brown outlines, cream highlights, crisp square pixel clusters, no blur or antialiasing. Restrained lighting, no 3D volume, no cast shadows.
+
+Columns, identical type and proportions through all four rows:
+1. A compact SIDE-VIEW two-wheel wooden farm handcart carrying one low golden hay bale. Short handle, visible wood spokes, firm silhouette, width-to-height ratio about 2:1. It rests on its wheels; no grass underneath.
+2. A long LOW wooden livestock water trough, viewed from the side with a visible blue water strip, two short sturdy feet; width-to-height ratio about 4.5:1. Its entire silhouette is shallow, NOT a tall barrel or bucket.
+3. A small hanging warm amber farm lantern: short rope at top, wooden/metal rectangular casing and golden inset face, width-to-height about 0.8:1. No large light halo, no scenery, no support pole. It is an overhead ducking hazard.
+4. A cute FLYING white farm goose in SIDE VIEW, facing left, horizontal body with wings spread up, small orange beak and short feet, width-to-height about 1.4:1. It is clearly a goose, not a sheep, collectible, bell or star.
+
+Rows are seasons in this exact top-to-bottom order:
+Row 1 SPRING: tiny pink blossom and fresh green leaf accents on cart/trough/lantern; goose with a small green neck ribbon.
+Row 2 SUMMER: bright yellow hay and fresh green leaves, clean blue trough water; lantern with green ribbon; goose with a small blue neck ribbon.
+Row 3 AUTUMN: two orange maple leaves on wooden obstacles, warm red lantern ribbon; goose with a small orange neck ribbon.
+Row 4 WINTER: small clean white snow caps on cart/trough/lantern, pale icy-blue water strip; goose with a small red winter neck ribbon. Snow remains inside each sprite's intended proportions.
+
+Composition constraints: each of the 16 sprites sits in its own invisible equal-sized grid cell with generous transparent gutters. Center every sprite horizontally in its cell and keep its bottom inside the cell. The same obstacle type has the same silhouette size and foot baseline in every row; decorations are small. Exactly four sprites per row. No labels, typography, cell borders, checkerboard pattern, ground patches, detached particles or extra props. Truly transparent alpha everywhere outside the sixteen sprites. Output the atlas only.

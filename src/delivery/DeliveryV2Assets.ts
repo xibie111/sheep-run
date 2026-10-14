@@ -1,9 +1,9 @@
 import type Phaser from 'phaser';
-import duskUrl from '../../assets/content-update-v2/delivery/runtime/dusk-pasture.png?url';
-import fieldUrl from '../../assets/content-update-v2/delivery/runtime/field.png?url';
-import cottageUrl from '../../assets/content-update-v2/delivery/runtime/cottage.png?url';
-import endingUrl from '../../assets/content-update-v2/delivery/runtime/dinner-ending.png?url';
-import postcardUrl from '../../assets/content-update-v2/delivery/runtime/dinner-postcard.png?url';
+import duskUrl from '../../assets/delivery-menu-style-v2/runtime/dinner-dusk-pasture.png?url';
+import fieldUrl from '../../assets/delivery-menu-style-v2/runtime/dinner-field.png?url';
+import cottageUrl from '../../assets/delivery-menu-style-v2/runtime/dinner-cottage.png?url';
+import endingUrl from '../../assets/delivery-menu-style-v2/runtime/dinner-ending.png?url';
+import postcardUrl from '../../assets/delivery-menu-style-v2/runtime/dinner-postcard.png?url';
 import lunchboxUrl from '../../assets/content-update-v2/delivery/runtime/lunchbox.png?url';
 
 export const DELIVERY_V2_ASSETS = [

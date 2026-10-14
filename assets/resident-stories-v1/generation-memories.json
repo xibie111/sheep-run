@@ -1,0 +1,119 @@
+{
+  "version": 1,
+  "tool": "built-in image_gen",
+  "mode": "reference-guided illustration-story",
+  "transparent_background": false,
+  "source_pixels_modified": false,
+  "records": [
+    {
+      "id": "ahe-keepsake",
+      "prompt_path": "prompts/ahe-keepsake.txt",
+      "source_path": "sources/ahe-keepsake.png",
+      "original_path": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11779-ca99-7ee0-8fae-7afe4d9da33e\\exec-118dc006-7ced-463b-a29f-b37ef06c95e9.png",
+      "reference_paths": [
+        "D:/DSH workspace/sheep-run/assets/resident-stories-v1/sources/ahe.png",
+        "D:/DSH workspace/sheep-run/assets/skins/runtime-v1/white-sheet.png",
+        "D:/DSH workspace/sheep-run/assets/delivery-expansion-v1/chapters/runtime/windmill-ending.png"
+      ],
+      "requested_aspect": "16:9",
+      "started_at": "2026-10-13T08:28:43.035Z",
+      "completed_at": "2026-10-13T08:29:57.18Z",
+      "output_hint": "Generated images are saved to C:\\Users\\mechrevo\\.codex\\generated_images\\01a11779-ca99-7ee0-8fae-7afe4d9da33e as C:\\Users\\mechrevo\\.codex\\generated_images\\01a11779-ca99-7ee0-8fae-7afe4d9da33e\\exec-118dc006-7ced-463b-a29f-b37ef06c95e9.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "validation": {
+        "visual_review": "passed",
+        "subjects_consistent": true,
+        "no_text": true,
+        "complete_illustration": true,
+        "character_count": 2
+      },
+      "runtime_processing": "Not performed by this generation task; original retained, uniform 960x540 packing owned by parent task.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "564dafc37b5223cca6c104de38f677c618f2815f8960ced632483594247e1201",
+      "bytes": 2496113
+    },
+    {
+      "id": "xiaomu-keepsake",
+      "prompt_path": "prompts/xiaomu-keepsake.txt",
+      "source_path": "sources/xiaomu-keepsake.png",
+      "original_path": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11779-ca99-7ee0-8fae-7afe4d9da33e\\exec-fc2f8cd9-d27d-4861-b197-9888e5e8d556.png",
+      "reference_paths": [
+        "D:/DSH workspace/sheep-run/assets/resident-stories-v1/sources/xiaomu.png",
+        "D:/DSH workspace/sheep-run/assets/skins/runtime-v1/white-sheet.png",
+        "D:/DSH workspace/sheep-run/assets/delivery-expansion-v1/chapters/runtime/windmill-ending.png"
+      ],
+      "requested_aspect": "16:9",
+      "started_at": "2026-10-13T08:28:43.035Z",
+      "completed_at": "2026-10-13T08:30:55.527Z",
+      "output_hint": "Generated images are saved to C:\\Users\\mechrevo\\.codex\\generated_images\\01a11779-ca99-7ee0-8fae-7afe4d9da33e as C:\\Users\\mechrevo\\.codex\\generated_images\\01a11779-ca99-7ee0-8fae-7afe4d9da33e\\exec-fc2f8cd9-d27d-4861-b197-9888e5e8d556.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "validation": {
+        "visual_review": "passed",
+        "subjects_consistent": true,
+        "no_text": true,
+        "complete_illustration": true,
+        "character_count": 2
+      },
+      "runtime_processing": "Not performed by this generation task; original retained, uniform 960x540 packing owned by parent task.",
+      "width": 1672,
+      "height": 940,
+      "sha256": "d0ebbfb7d616ed010152280cbb7723d30d05fa646e34d126604376b0e385dc39",
+      "bytes": 2705322
+    },
+    {
+      "id": "adeng-keepsake",
+      "prompt_path": "prompts/adeng-keepsake.txt",
+      "source_path": "sources/adeng-keepsake.png",
+      "original_path": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11779-ca99-7ee0-8fae-7afe4d9da33e\\exec-13882544-1df6-4aa2-a543-550aaac11eb7.png",
+      "reference_paths": [
+        "D:/DSH workspace/sheep-run/assets/resident-stories-v1/sources/adeng.png",
+        "D:/DSH workspace/sheep-run/assets/skins/runtime-v1/white-sheet.png",
+        "D:/DSH workspace/sheep-run/assets/delivery-expansion-v1/chapters/runtime/windmill-ending.png"
+      ],
+      "requested_aspect": "16:9",
+      "started_at": "2026-10-13T08:28:43.035Z",
+      "completed_at": "2026-10-13T08:33:04.592Z",
+      "output_hint": "Generated images are saved to C:\\Users\\mechrevo\\.codex\\generated_images\\01a11779-ca99-7ee0-8fae-7afe4d9da33e as C:\\Users\\mechrevo\\.codex\\generated_images\\01a11779-ca99-7ee0-8fae-7afe4d9da33e\\exec-13882544-1df6-4aa2-a543-550aaac11eb7.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "validation": {
+        "visual_review": "passed",
+        "subjects_consistent": true,
+        "no_text": true,
+        "complete_illustration": true,
+        "character_count": 2
+      },
+      "runtime_processing": "Not performed by this generation task; original retained, uniform 960x540 packing owned by parent task.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "5bd01784403f9faffda866de36d7e691e746948cc1432da4a560cbf063dd4562",
+      "bytes": 2147219
+    },
+    {
+      "id": "group-photo",
+      "prompt_path": "prompts/group-photo.txt",
+      "source_path": "sources/group-photo.png",
+      "original_path": "C:\\Users\\mechrevo\\.codex\\generated_images\\01a11779-ca99-7ee0-8fae-7afe4d9da33e\\exec-6b8a0850-ed02-461b-b65b-9038c4e7fb66.png",
+      "reference_paths": [
+        "D:/DSH workspace/sheep-run/assets/resident-stories-v1/sources/ahe.png",
+        "D:/DSH workspace/sheep-run/assets/resident-stories-v1/sources/xiaomu.png",
+        "D:/DSH workspace/sheep-run/assets/resident-stories-v1/sources/adeng.png",
+        "D:/DSH workspace/sheep-run/assets/skins/runtime-v1/white-sheet.png",
+        "D:/DSH workspace/sheep-run/assets/delivery-expansion-v1/chapters/runtime/windmill-ending.png"
+      ],
+      "requested_aspect": "16:9",
+      "started_at": "2026-10-13T08:28:43.035Z",
+      "completed_at": "2026-10-13T08:33:53.297Z",
+      "output_hint": "Generated images are saved to C:\\Users\\mechrevo\\.codex\\generated_images\\01a11779-ca99-7ee0-8fae-7afe4d9da33e as C:\\Users\\mechrevo\\.codex\\generated_images\\01a11779-ca99-7ee0-8fae-7afe4d9da33e\\exec-6b8a0850-ed02-461b-b65b-9038c4e7fb66.png by default.\nIf you need to use a generated image at another path, copy it and leave the original in place unless the user explicitly asks you to delete it.\nThe generated image is already displayed to the user. There is no need to render it in the final response as a Markdown image or file link.",
+      "validation": {
+        "visual_review": "passed",
+        "subjects_consistent": true,
+        "no_text": true,
+        "complete_illustration": true,
+        "character_count": 4
+      },
+      "runtime_processing": "Not performed by this generation task; original retained, uniform 960x540 packing owned by parent task.",
+      "width": 1672,
+      "height": 941,
+      "sha256": "dfdfffb1cf7bb5dda97d0b6c543ac2ad4dad87b4855eb0a091c85335cbe4a871",
+      "bytes": 2451819
+    }
+  ]
+}

@@ -27,7 +27,10 @@ export class SceneryController {
       const valid = view.id === 'rainbow-v1' ? ctx.landscape.weather === 'sunny' && ctx.landscape.dayPhase !== 'night'
         : view.id === 'meteors-v1' ? ctx.landscape.dayPhase === 'night' && (ctx.landscape.weather !== 'rain' || ctx.landscape.weatherAlpha < .15)
         : ctx.landscape.theme !== 'winter' && ['sunset', 'night'].includes(ctx.landscape.dayPhase) && (ctx.landscape.weather !== 'rain' || ctx.landscape.weatherAlpha < .15);
-      if (age >= SCENERY_RULES.durationMs || !valid) { view.destroy(); this.active = undefined; return; }
+      if (age >= SCENERY_RULES.durationMs || !valid) {
+        view.destroy(); this.active = undefined;
+        this.schedule.finish(ctx.nowMs, exposure.complete); return;
+      }
       if (exposure.observe(ctx.deltaMs, view.update(age, ctx.viewport, ctx.landscape))) {
         const result = this.store.discover(view.id);
         if (result.added) this.notify(`遇见了${sceneryCard(view.id).title}，明信片已收好。`);
