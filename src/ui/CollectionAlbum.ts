@@ -117,7 +117,7 @@ export function attachCollectionAlbum(scene:Phaser.Scene,openReward:(id:RewardId
   const refresh=()=>{snapshot=collectionStore.load();const j=journeyStore.load(),active=open&&menuModalOwner(scene)==="collection";letter.input!.enabled=active&&Boolean(j.rewards[season]);complete.input!.enabled=active&&Boolean(j.rewards.all);surface.invalidate();};
   const setOpen=(value:boolean)=>{
     if(value){const lease=acquireMenuModal(scene,"collection",modalTargets);if(!lease)return;release=lease;}
-    open=value;if(value)snapshot=collectionStore.load();
+    open=value;if(value)snapshot=collectionStore.retrySave();
     modalTargets.forEach(target=>target.input!.enabled=value);
     scene.data.set("collection-album-open",value);pressed.clear();surface.invalidate();
     if(!value){release?.();release=undefined;}

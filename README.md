@@ -93,7 +93,7 @@ npm run preview
 
 ## Android 构建
 
-仓库包含 Android 原生工程，应用名称为「小羊快跑」，应用 ID 为 `com.sheeprun.game`，当前版本为 **1.0.4**。
+仓库包含 Android 原生工程，应用名称为「小羊快跑」，应用 ID 为 `com.sheeprun.game`，当前版本为 **1.0.5**。
 
 构建环境：
 

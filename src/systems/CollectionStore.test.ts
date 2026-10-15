@@ -16,11 +16,12 @@ describe("cosmetic collection persistence", () => {
     expect(values.get("sheep-run-save")).toBe("original gameplay save");
     expect(storage.getItem.mock.calls.every(([key]) => key===COLLECTION_STORAGE_KEY)).toBe(true);
   });
-  it.each(["invalid json", JSON.stringify({version:2,badges:[]}),JSON.stringify({version:1,badges:["future-badge"]})])("preserves an unreadable or future collection save", raw => {
+  it.each(["", "invalid json", JSON.stringify({version:2,badges:[]}),JSON.stringify({version:1,badges:["future-badge"]})])("preserves an unreadable or future collection save", raw => {
     const storage = {getItem:()=>raw,setItem:vi.fn()};
     const store = new CollectionStore(() => storage);
     expect(store.unlock("spring-flower")).toEqual({added:true,saved:false});
     expect(store.load()).toEqual({ids:["spring-flower"],saveFailed:true});
+    expect(store.retrySave()).toEqual({ids:["spring-flower"],saveFailed:true});
     expect(storage.setItem).not.toHaveBeenCalled();
   });
   it("keeps this session's collection when storage is denied", () => {
@@ -37,6 +38,55 @@ describe("cosmetic collection persistence", () => {
     denied=false;
     expect(store.unlock("spring-clover")).toEqual({added:true,saved:true});
     expect(new CollectionStore(()=>storage).load()).toEqual({ids:["spring-flower","spring-clover"],saveFailed:false});
+  });
+  it.each(["access", "read"])("keeps a pending badge unsaved after storage %s recovers until a duplicate pickup retries it", failure => {
+    let raw:string|null=null,denied=true;
+    const storage={
+      getItem:()=>{if(denied&&failure==="read")throw new Error("storage denied");return raw;},
+      setItem:vi.fn((_key:string,value:string)=>{raw=value;})
+    };
+    const store=new CollectionStore(()=>{if(denied&&failure==="access")throw new Error("storage denied");return storage;});
+    expect(store.unlock("spring-flower")).toEqual({added:true,saved:false});
+    denied=false;
+    expect(store.load()).toEqual({ids:["spring-flower"],saveFailed:true});
+    expect(raw).toBeNull();
+    expect(storage.setItem).not.toHaveBeenCalled();
+    expect(store.unlock("spring-flower")).toEqual({added:false,saved:true});
+    expect(store.unlock("spring-flower")).toEqual({added:false,saved:true});
+    expect(storage.setItem).toHaveBeenCalledTimes(1);
+    expect(new CollectionStore(()=>storage).load()).toEqual({ids:["spring-flower"],saveFailed:false});
+  });
+  it("retries the last badge without another unlock and stops writing once it is saved", () => {
+    const ids=COLLECTION_BADGES.map(badge=>badge.id),last=ids[ids.length-1];
+    let raw=JSON.stringify({version:1,badges:ids.slice(0,-1)}),denied=true;
+    const storage={getItem:()=>raw,setItem:vi.fn((_key:string,value:string)=>{if(denied)throw new Error("quota");raw=value;})};
+    const store=new CollectionStore(()=>storage);
+    expect(store.unlock(last)).toEqual({added:true,saved:false});
+    expect(store.retrySave()).toEqual({ids,saveFailed:true});
+    expect(JSON.parse(raw).badges).toEqual(ids.slice(0,-1));
+    denied=false;
+    expect(store.load()).toEqual({ids,saveFailed:true});
+    expect(storage.setItem).toHaveBeenCalledTimes(2);
+    expect(store.retrySave()).toEqual({ids,saveFailed:false});
+    expect(new CollectionStore(()=>storage).load()).toEqual({ids,saveFailed:false});
+    expect(store.retrySave()).toEqual({ids,saveFailed:false});
+    expect(store.unlock(last)).toEqual({added:false,saved:true});
+    expect(storage.setItem).toHaveBeenCalledTimes(3);
+  });
+  it("merges other saved badges when pending collection writes recover", () => {
+    let raw:string|null=null,denied=true;
+    const storage={getItem:()=>raw,setItem:vi.fn((_key:string,value:string)=>{if(denied)throw new Error("quota");raw=value;})};
+    const store=new CollectionStore(()=>storage);
+    expect(store.unlock("spring-flower")).toEqual({added:true,saved:false});
+    raw=JSON.stringify({version:1,badges:["summer-shell"]});
+    denied=false;
+    expect(store.retrySave()).toEqual({ids:["summer-shell","spring-flower"],saveFailed:false});
+    expect(new CollectionStore(()=>storage).load()).toEqual({ids:["summer-shell","spring-flower"],saveFailed:false});
+  });
+  it("does not create a save when retrying without a pending collection", () => {
+    const storage={getItem:()=>null,setItem:vi.fn()};
+    expect(new CollectionStore(()=>storage).retrySave()).toEqual({ids:[],saveFailed:false});
+    expect(storage.setItem).not.toHaveBeenCalled();
   });
 });
 describe("four-season hidden badges", () => {
