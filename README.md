@@ -1,5 +1,7 @@
 # 小羊快跑 · Sheep Run
 
+本目录维护安卓版及其网页构建依赖。微信小游戏已独立迁移至 `D:/codex workspace/sheep-run-wechat`，微信相关开发、构建和验证请在新目录进行。
+
 一款面向手机横屏的像素牧场跑酷游戏。带着小羊越过障碍、收集星星，在四季更替的牧场里寻找徽章、明信片和写给你的信。
 
 基于 **Phaser 4 + TypeScript + Vite**，同时提供 **Capacitor Android** 工程。
