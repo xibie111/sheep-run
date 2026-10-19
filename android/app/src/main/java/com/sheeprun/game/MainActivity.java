@@ -24,8 +24,8 @@ public class MainActivity extends BridgeActivity {
         super.onCreate(savedInstanceState);
         Window window = getWindow();
         WindowCompat.setDecorFitsSystemWindows(window, false);
-        window.setBackgroundDrawable(new ColorDrawable(Color.rgb(115, 185, 91)));
-        window.getDecorView().setBackgroundColor(Color.rgb(115, 185, 91));
+        window.setBackgroundDrawable(new ColorDrawable(Color.rgb(101, 182, 209)));
+        window.getDecorView().setBackgroundColor(Color.rgb(101, 182, 209));
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
             WindowManager.LayoutParams attributes = window.getAttributes();

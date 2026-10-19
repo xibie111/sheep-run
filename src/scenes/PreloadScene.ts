@@ -109,7 +109,6 @@ export class PreloadScene extends Phaser.Scene {
       return;
     }
     this.scene.start(SCENE.menu);
-    hideLoadingScreen();
   }
 
   private validateFonts(): void {

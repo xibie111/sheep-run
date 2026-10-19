@@ -16,7 +16,7 @@ export function createGameConfig(parent: HTMLElement): Phaser.Types.Core.GameCon
     parent,
     width: viewport.width,
     height: viewport.height,
-    backgroundColor: "#b4ddd1",
+    backgroundColor: "#65b6d1",
     callbacks: { postBoot: (game) => watchCanvasRounding(game, parent) },
     scene: [BootScene, PreloadScene, MenuScene, RunScene, PauseScene, WardrobeScene, ResultScene],
     scale: {

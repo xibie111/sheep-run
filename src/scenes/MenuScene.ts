@@ -10,6 +10,7 @@ import { attachJourneyBook } from "../ui/JourneyBook";
 import { journeyStore } from "../systems/JourneyStore";
 import { collectionStore } from "../systems/CollectionStore";
 import { attachMailbox } from "../ui/Mailbox";
+import { hideLoadingScreen } from "../ui/LoadingScreen";
 
 export class MenuScene extends Phaser.Scene {
   private openMailbox = false;
@@ -32,6 +33,15 @@ export class MenuScene extends Phaser.Scene {
     const journal = attachJourneyBook(this);
     attachCollectionAlbum(this, journal.openReward);
     attachMailbox(this, this.openMailbox);
+    // ScenePlugin.start queues the switch. Keep loading over the canvas until
+    // this menu's backdrop has actually been submitted to the renderer.
+    const finishLoading = (): void => {
+      if (!this.cameras.main.renderList.includes(background)) return;
+      this.game.events.off('postrender', finishLoading);
+      hideLoadingScreen();
+    };
+    this.game.events.on('postrender', finishLoading);
+    this.events.once('shutdown', () => this.game.events.off('postrender', finishLoading));
   }
   private startRun(): void { this.scene.start(SCENE.run); }
   private openWardrobe(): void { this.scene.start(SCENE.wardrobe); }

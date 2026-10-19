@@ -26,7 +26,7 @@ describe("loading screen ownership and real progress", () => {
   let frames: ReturnType<typeof vi.fn>;
   beforeEach(() => {
     vi.useFakeTimers();
-    vi.stubGlobal("window", { setInterval, clearInterval, matchMedia: () => ({ matches: false }) });
+    vi.stubGlobal("window", { setInterval, clearInterval, matchMedia: () => ({ matches: false }), addEventListener: vi.fn(), removeEventListener: vi.fn(), location: { reload: vi.fn() } });
     vi.stubGlobal("document", { hidden: false, addEventListener: vi.fn(), removeEventListener: vi.fn() });
     vi.stubGlobal("Image", class { complete = true; naturalWidth = 640; naturalHeight = 114; src = ""; onload = null; });
     frames = vi.fn(() => 42);
@@ -148,8 +148,21 @@ describe("loading screen ownership and real progress", () => {
     expect(retry).toHaveBeenCalledOnce();
     screen.destroy();
   });
+  it.each(['error', 'unhandledrejection'])('keeps a touch retry available for asynchronous startup %s and removes the handler after loading', event => {
+    const { screen, root, fire } = harness(); screen.show(); screen.show();
+    const calls = vi.mocked(window.addEventListener).mock.calls.filter(([type]) => type === event);
+    expect(calls).toHaveLength(1);
+    (calls[0][1] as EventListener)(new Event(event));
+    expect(root.hidden).toBe(false); expect(root.dataset).toMatchObject({ stage: 'error' });
+    fire('pointerdown'); fire('pointercancel'); fire('pointerup');
+    expect(window.location.reload).not.toHaveBeenCalled();
+    fire('pointerdown'); fire('pointerup'); expect(window.location.reload).toHaveBeenCalledOnce();
+    screen.hide();
+    expect(window.removeEventListener).toHaveBeenCalledWith(event, calls[0][1]);
+    screen.destroy();
+  });
   it("uses a static sheep when reduced motion is enabled", () => {
-    vi.stubGlobal("window", { setInterval, clearInterval, matchMedia: () => ({ matches: true }) });
+    vi.stubGlobal("window", { setInterval, clearInterval, matchMedia: () => ({ matches: true }), addEventListener: vi.fn(), removeEventListener: vi.fn() });
     const { screen, drawImage } = harness(); screen.show();
     expect(frames).not.toHaveBeenCalled();
     expect(drawImage).toHaveBeenCalledWith(expect.any(Object), 128, 16, 128, 112, 0, 0, 128, 112);

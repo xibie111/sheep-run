@@ -65,6 +65,8 @@ export class LoadingScreen {
     this.resize.observe(this.progress);
     this.renderProgress();
     document.addEventListener("visibilitychange", this.visibility);
+    window.addEventListener("error", this.startupError);
+    window.addEventListener("unhandledrejection", this.startupError);
     this.resume();
   }
   setProgress(value: number): void {
@@ -114,6 +116,7 @@ export class LoadingScreen {
     if (event.clientX >= box.left && event.clientX <= box.right && event.clientY >= box.top && event.clientY <= box.bottom) this.retryAction?.();
   };
   private readonly cancelPress = (): void => { this.owner = undefined; };
+  private readonly startupError = (): void => { this.showBootError(() => window.location.reload()); };
   private readonly visibility = (): void => {
     this.cancelPress();
     if (document.hidden) this.pause(); else this.resume();
@@ -171,6 +174,8 @@ export class LoadingScreen {
     this.active = false; this.pause(); this.cancelPress();
     this.resize.disconnect();
     document.removeEventListener("visibilitychange", this.visibility);
+    window.removeEventListener("error", this.startupError);
+    window.removeEventListener("unhandledrejection", this.startupError);
   }
 }
 

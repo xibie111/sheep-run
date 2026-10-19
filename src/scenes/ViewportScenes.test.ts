@@ -10,6 +10,7 @@ vi.mock("phaser", () => ({ default: {
   Display: { Color: { HexStringToColor: () => ({ color: 0 }) } },
 } }));
 vi.mock("../ui/UiLayout", () => ({ safeUiInsets: () => ({ ...safe }) }));
+vi.mock("../ui/LoadingScreen", () => ({ hideLoadingScreen: vi.fn() }));
 vi.mock("../ui/UiIcon", () => ({ addUiIcon: (scene: Harness, x: number, y: number, key: string, size: number) => scene.add.image(x, y, key).setDisplaySize(size, size) }));
 vi.mock("../systems/SaveSystem", () => ({ SaveSystem: { load: () => ({
   highScore: 25, totalStars: 10, coins: 20, selectedSkin: "white", unlockedSkins: ["white"],
@@ -37,6 +38,7 @@ import { ResultScene } from "./ResultScene";
 import { SCENE } from "../game/Constants";
 import type { ResultSceneData } from "../game/GameState";
 import { createTripCard } from '../content-v2';
+import { hideLoadingScreen } from '../ui/LoadingScreen';
 
 class Events {
   readonly listeners = new Map<string, Set<(...args: any[]) => void>>();
@@ -95,7 +97,8 @@ function makeHarness(SceneClass: typeof MenuScene | typeof WardrobeScene | typeo
   const canvas = { addEventListener: vi.fn(), removeEventListener: vi.fn() };
   const audio = { currentSettings: { music: true, sfx: true, musicVolume: 0.5, sfxVolume: 0.5 }, play: vi.fn(), initializeAfterGesture: vi.fn() };
   const harness = {
-    children, game: { canvas }, input: new Events(), events: new Events(),
+    children, game: { canvas, events: new Events() }, input: new Events(), events: new Events(),
+    cameras: { main: { renderList: [] as ObjectStub[] } },
     scale: Object.assign(new Events(), { gameSize: { width, height } }),
     registry: { get: () => audio, set: vi.fn() },
     scene: { start: vi.fn(), stop: vi.fn(), launch: vi.fn(), pause: vi.fn(), resume: vi.fn() },
@@ -153,6 +156,24 @@ function press(object: ObjectStub, wasTouch: boolean): void {
 afterEach(() => { Object.assign(safe, { left: 0, right: 0, top: 0, bottom: 0 }); vi.unstubAllGlobals(); });
 
 describe("scene viewport layout", () => {
+  it('keeps loading over the scene until the actual menu backdrop is rendered, and releases its listener on shutdown', () => {
+    vi.stubGlobal('document', { getElementById: () => null });
+    vi.mocked(hideLoadingScreen).mockClear();
+    const scene = makeHarness(MenuScene, 480, 270);
+    expect(hideLoadingScreen).not.toHaveBeenCalled();
+    scene.game.events.emit('postrender');
+    expect(hideLoadingScreen).not.toHaveBeenCalled();
+    scene.cameras.main.renderList = [scene.children.list[0]];
+    scene.game.events.emit('postrender');
+    expect(hideLoadingScreen).toHaveBeenCalledOnce();
+    scene.game.events.emit('postrender');
+    expect(hideLoadingScreen).toHaveBeenCalledOnce();
+    const interrupted = makeHarness(MenuScene, 480, 270);
+    interrupted.events.emit('shutdown');
+    interrupted.cameras.main.renderList = [interrupted.children.list[0]];
+    interrupted.game.events.emit('postrender');
+    expect(hideLoadingScreen).toHaveBeenCalledOnce();
+  });
   it.each([
     ["menu", MenuScene, "button:开始游戏", 225], ["wardrobe", WardrobeScene, "wardrobe-preview", 138],
     ["pause", PauseScene, "button:继续游戏", 116.625], ["result", ResultScene, "button:再跑一次", 222],
